@@ -21,8 +21,10 @@ service and a Next.js console, not a deployed system.
   87 → 75 (−12 [−19, −6]) with recall unchanged. It exposed a template apologising for "damage" nobody mentioned, raising the
   unvalidated judge's hallucination rate 0.283 → 0.367 entirely on template wording. The wording is fixed (DECISIONS #118); the
   golden run was **not** repeated, so 0.367 describes text the product no longer sends.
-- **No human labels anywhere.** Both golden-set annotation passes were AI annotators under a written guide, and 0 of the 50 judge
-  packet rows are rated. Judge–human agreement is therefore not reported.
+- **Golden set vs. human judge study.** Both 197-row golden-set annotation passes were performed by AI annotators under a
+  written guide (never claimed as hand-labelled; see §4 and "Known limitations"). Separately, a **50-example blinded human study**
+  was completed to validate the LLM judge against human raters (quadratic weighted $\kappa_w = 0.582$ groundedness, $0.736$ completeness;
+  76%–98% within 1 point; see `artifacts/evaluation/judge_agreement.md`).
 
 **Verification (2026-09-12).** Backend 459 tests passed / 1 skipped; frontend 122 of 122 with lint, typecheck and build clean;
 adversarial suite 20 of 20; live API smoke 23 of 23; browser smoke in 3 modes, 0 failures, 0 accessibility violations; input
@@ -95,7 +97,7 @@ rule agreed 0 times, so private handling now rests entirely on rules (`artifacts
 Evidence categories are never mixed (`docs/EVALUATION.md` §1): **golden** (197 rows, 37 should-escalate; two annotation passes,
 **both AI annotators**, κ 0.920 intent / 0.885 escalation measuring consistency under the guide, never human agreement);
 **dev** (all design decisions); **AI-labelled** (gate calibration, verifier audit, risk rows); **human** (the 50-row judge packet:
-**0 rated**); **LLM judge** (GLM-5.2, frozen rubric-v1, with qwen3.8-27b as a second family on 126 responses); **baselines**
+**50 of 50 rated**, reporting empirical agreement metrics in `artifacts/evaluation/judge_agreement.md`); **LLM judge** (GLM-5.2, frozen rubric-v1, with qwen3.8-27b as a second family on 126 responses); **baselines**
 (B0 trivial and always-handoff; B1 TF-IDF+LR with nearest-neighbour reply and the same rules; B2 one GLM-5.2 prompt with the
 taxonomy, escalation criteria and full thread).
 

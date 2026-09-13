@@ -42,7 +42,7 @@
 16. **Top five failures**: failure_analysis.md (LLM private-info over-flagging; two rule misses incl. the `<PHONE>` boundary bug; gate abstention/KB coverage; apps_services confusion; judge validity).
 17. **Misleading headline**: misleading_headline.md (12 points).
 18. **Latency/cost**: baseline_comparison.md; ResolveAI 1.553 calls and $0.002608 per message vs B2 1.071 calls / $0.002366; live latency from Phase 5 (p50 ~5.9 s) vs B2 live p50 6543.1 ms.
-19. **Reproducibility**: `python scripts/evaluate.py --cached` ran in 129.3 s (manifest: reproduction_manifest.json with SHA-256 of every input; golden hash asserted). Live mode: `--live`.
+19. **Reproducibility**: `python scripts/evaluate.py --cached` ran in 125.9 s (manifest: reproduction_manifest.json with SHA-256 of every input; golden hash asserted). Live mode: `--live`.
 20. **Tests**: tests/test_evaluation.py (metrics, bootstrap determinism, baseline fairness, judge parsing, rubric versioning, blinded ordering, agreement, artifact hashes, golden immutability, denominators) plus all earlier suites.
 21. **Files changed**: resolveai/evaluation/{records,metrics,bootstrap,baselines,systems,judge,slices,agreement,reporting}.py; scripts/evaluate.py; scripts/phase6/a-e; resolveai/agent/orchestrator.py (use_risk_llm switch, cached-token cost accounting); resolveai/llm/provider.py (cached token counters); docs/EVALUATION.md, docs/HUMAN_JUDGE_GUIDE.md, docs/DECISIONS.md, README.md; data/human_eval/; artifacts/evaluation/.
 22. **Known limitations**: see misleading_headline.md; the judge is unvalidated by a human; the second-family judge covers a subset; B2 is a plain prompt; the system under test is the frozen Phase 5 system, including the two rule bugs found here.

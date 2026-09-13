@@ -314,3 +314,9 @@ annotation guide and escalation policy are written for this project.
 
 AI assistance: this repository was built with an AI coding assistant, and the two golden-set annotation passes were performed by
 AI annotators under a written guide (see "Golden set" below and `data/golden/AGREEMENT_ANALYSIS.md`).
+
+## Submission Details
+
+- **Assignment**: Hiver SDE Intern Take-Home Assessment
+- **Submission Destination**: Repository link submitted to `anurag@hiverhq.com`
+- **Candidate Implementation**: Complete governed, evidence-grounded reference implementation with reproducible evaluation harness and interactive console.

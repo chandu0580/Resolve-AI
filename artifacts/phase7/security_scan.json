@@ -1,6 +1,6 @@
 {
- "committable_files": 758,
- "committable_bytes": 55729576,
+ "committable_files": 756,
+ "committable_bytes": 55706931,
  "committable_mb": 55.7,
  "largest_files": [
   {
@@ -50,7 +50,7 @@
   "LLM_API_KEY"
  ],
  "trace_files_scanned": 8,
- "trace_records_scanned": 1258,
+ "trace_records_scanned": 1283,
  "trace_records_with_pii": 0,
  ".env_committable": false,
  "findings": [],
