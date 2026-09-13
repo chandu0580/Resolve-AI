@@ -1,0 +1,2117 @@
+{
+ "note": "real responses from the in-process API with the configured LLM; traces written to a temporary directory",
+ "auto_handle": {
+  "request": {
+   "conversation": [
+    {
+     "role": "customer",
+     "text": "My iPhone keeps changing \"it\" to \"I.T\" whenever I type. How do I fix this autocorrect bug?"
+    }
+   ],
+   "metadata": {
+    "channel": "twitter",
+    "locale": "en-US"
+   }
+  },
+  "status": 200,
+  "headers": {
+   "x-request-id": "doc-example-auto_handle",
+   "x-trace-id": "356a3a03076242feb113e5318e66aa44"
+  },
+  "response": {
+   "request_id": "doc-example-auto_handle",
+   "trace_id": "356a3a03076242feb113e5318e66aa44",
+   "action": "AUTO_HANDLE",
+   "outcome": {
+    "action": "AUTO_HANDLE",
+    "what_happened": "Answered automatically with a verified reply grounded in 3 historical case(s).",
+    "why": "Clear 'keyboard_text_bug' issue with grounded troubleshooting steps and no risk flags. Evidence STRONG; verifier passed (evidence coverage 0.71); every output-gate check passed.",
+    "evidence_basis": "Cited cases: 2287602 (update, similarity 0.86, rank 2); 2573954 (update, similarity 0.89, rank 1); 2312398 (update, similarity 0.89, rank 3). 5 similar historical cases retrieved; top similarity 0.89; evidence STRONG (strong_consistent_evidence); resolution clusters: update x5; resolution confidence 0.97.",
+    "next_step": "Send the reply; re-open the case if the customer reports the fix did not work.",
+    "reason_code": "none",
+    "rule": "default_auto",
+    "policy_version": "policy-v3.1",
+    "autonomous_response_allowed": true,
+    "output_gate": {
+     "policy_allows_automation": true,
+     "no_blocking_risk_flag": true,
+     "intent_confidence_acceptable": true,
+     "evidence_sufficient": true,
+     "response_generated": true,
+     "response_verified": true,
+     "evidence_refs_exist": true,
+     "pii_guard": true,
+     "schema_valid": true
+    },
+    "blocking_checks": []
+   },
+   "response": {
+    "kind": "auto_reply",
+    "text": "Let's be sure your iPhone has the latest iOS installed. It includes fixes for autocorrect issues. You can check in Settings > General > About. We recommend backing up first, then installing the update. You can find the steps on our support site. Let us know if this helps!",
+    "sent_automatically": true,
+    "evidence_refs": [
+     {
+      "evidence_id": "2287602",
+      "thread_id": "2287603",
+      "source_row_id": "2287603",
+      "created_at": "2017-11-12 01:41:57+00:00",
+      "rank": 2,
+      "similarity": 0.862,
+      "retrieval_source": "pair",
+      "action_class": "update",
+      "resolution_bearing": true,
+      "outcome": "none"
+     },
+     {
+      "evidence_id": "2573954",
+      "thread_id": "2573955",
+      "source_row_id": "2573955",
+      "created_at": "2017-11-16 19:12:49+00:00",
+      "rank": 1,
+      "similarity": 0.894,
+      "retrieval_source": "pair",
+      "action_class": "update",
+      "resolution_bearing": true,
+      "outcome": "none"
+     },
+     {
+      "evidence_id": "2312398",
+      "thread_id": "2312400",
+      "source_row_id": "2312400",
+      "created_at": "2017-11-12 21:17:02+00:00",
+      "rank": 3,
+      "similarity": 0.885,
+      "retrieval_source": "pair",
+      "action_class": "update",
+      "resolution_bearing": true,
+      "outcome": "negative"
+     }
+    ],
+    "draft_attempts": 1
+   },
+   "intent": {
+    "intent": "keyboard_text_bug",
+    "confidence": 0.9693,
+    "top3": [
+     [
+      "keyboard_text_bug",
+      0.9693
+     ],
+     [
+      "account_store_repair",
+      0.0085
+     ],
+     [
+      "apps_services",
+      0.0065
+     ]
+    ],
+    "method": "embed_lr",
+    "confidence_band": "HIGH",
+    "calibrated": true,
+    "calibration": {
+     "method": "temperature",
+     "temperature": 1.5,
+     "dev_ece": 0.0355
+    },
+    "secondary_intents": [],
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "context_used": false,
+    "second_opinion": null,
+    "second_opinion_applied": false
+   },
+   "evidence": {
+    "query": "My iPhone keeps changing \"it\" to \"I.T\" whenever I type. How do fix this autocorrect bug? typing letter question mark box",
+    "query_intent": "keyboard_text_bug",
+    "retriever": "dense:bge-small:pair+rr+gatev3",
+    "items": [
+     {
+      "evidence_id": "2573954",
+      "thread_id": "2573955",
+      "source_row_id": "2573955",
+      "customer_message": "every time i type the letter ‘I’ it autocorrects it to: I️",
+      "brand_reply": "We've recently released an update to fix this. We do recommend creating a current backup of the data on your device before updating. Here's more about the new update: <url> Let us know if this helps. <url>",
+      "created_at": "2017-11-16 19:12:49+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 1,
+      "ranks": {
+       "pair": 24,
+       "boost_plain": 1,
+       "boost_intent": 1
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.8940892815589905,
+       "cos_reply": 0.0,
+       "cos_pair": 0.8588752150535583,
+       "rrf": 0.022727272727272728,
+       "outcome_bonus": 0.0,
+       "rerank": 0.8740000523090362,
+       "final": 0.09523809523809523
+      },
+      "quality": {
+       "semantic_relevance": 0.8940892815589905,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "keyboard_text_bug",
+       "resolution_relevance": true,
+       "action_class": "update",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "2287602",
+      "thread_id": "2287603",
+      "source_row_id": "2287603",
+      "customer_message": "how do I fix the “I.t” I just want to type “it” 😭😭",
+      "brand_reply": "Let's be sure we've got iOS 11.1.1 installed. It was released recently and includes some fixes for autocorrect issues. You can check that in Settings > General > About. If not, you can backup and install it now. How to back up: <url>",
+      "created_at": "2017-11-12 01:41:57+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 2,
+      "ranks": {
+       "pair": 22,
+       "boost_plain": 2,
+       "boost_intent": 2
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.8616318106651306,
+       "cos_reply": 0.0,
+       "cos_pair": 0.8603752255439758,
+       "rrf": 0.023809523809523808,
+       "outcome_bonus": 0.0,
+       "rerank": 0.8659149401187898,
+       "final": 0.09090909090909091
+      },
+      "quality": {
+       "semantic_relevance": 0.8616318106651306,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "keyboard_text_bug",
+       "resolution_relevance": true,
+       "action_class": "update",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "2312398",
+      "thread_id": "2312400",
+      "source_row_id": "2312400",
+      "customer_message": "WHY DOES AUTOCORRECT ALWAYS CHANGE \"it\" to \"I.T\" !?!?!?",
+      "brand_reply": "We want to help you with this issue. If you haven’t yet, please back up your device and update it to the latest version iOS 11.1.1.",
+      "created_at": "2017-11-12 21:17:02+00:00",
+      "outcome": "negative",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 3,
+      "ranks": {
+       "pair": 5,
+       "boost_plain": 3,
+       "boost_intent": 3
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.885057806968689,
+       "cos_reply": 0.0,
+       "cos_pair": 0.8849580883979797,
+       "rrf": 0.04,
+       "outcome_bonus": 0.0,
+       "rerank": 0.8646597545385359,
+       "final": 0.08695652173913043
+      },
+      "quality": {
+       "semantic_relevance": 0.885057806968689,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "keyboard_text_bug",
+       "resolution_relevance": true,
+       "action_class": "update",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "1773232",
+      "thread_id": "1773234",
+      "source_row_id": "1773234",
+      "customer_message": "This iPhone bug whenever I️ type the letter i (as in abcdefgh-i-jk...) is driving me nuts! please fix this!",
+      "brand_reply": "Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>",
+      "created_at": "2017-11-08 00:03:01+00:00",
+      "outcome": "positive",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 4,
+      "ranks": {
+       "pair": 16,
+       "boost_plain": 4,
+       "boost_intent": 4
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.8814731240272522,
+       "cos_reply": 0.0,
+       "cos_pair": 0.8638719320297241,
+       "rrf": 0.027777777777777776,
+       "outcome_bonus": 0.0,
+       "rerank": 0.8572835764169694,
+       "final": 0.08333333333333333
+      },
+      "quality": {
+       "semantic_relevance": 0.8814731240272522,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "keyboard_text_bug",
+       "resolution_relevance": true,
+       "action_class": "update",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "1585356",
+      "thread_id": "1585357",
+      "source_row_id": "1585357",
+      "customer_message": "why is “I” on my iPhone autocorrecting to an A and a box with a question mark in it?",
+      "brand_reply": "Thanks for reaching out. This workaround will help until this issue is resolved in a future update: <url>",
+      "created_at": "2017-11-04 17:16:47+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 5,
+      "ranks": {
+       "pair": 14,
+       "boost_plain": 5,
+       "boost_intent": 5
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.8950860500335693,
+       "cos_reply": 0.0,
+       "cos_pair": 0.8639749884605408,
+       "rrf": 0.029411764705882353,
+       "outcome_bonus": 0.0,
+       "rerank": 0.8527238646268844,
+       "final": 0.08
+      },
+      "quality": {
+       "semantic_relevance": 0.8950860500335693,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "keyboard_text_bug",
+       "resolution_relevance": true,
+       "action_class": "update",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     }
+    ],
+    "n_retrieved": 50,
+    "n_relevant": 5,
+    "sufficient": true,
+    "sufficiency_reason": "strong_consistent_evidence",
+    "sufficiency_level": "STRONG",
+    "resolution_confidence": 0.971,
+    "consistency": "consistent",
+    "resolution_candidates": [
+     {
+      "action_class": "update",
+      "representative_reply": "Let's be sure we've got iOS 11.1.1 installed. It was released recently and includes some fixes for autocorrect issues. You can check that in Settings > General > About. If not, you can backup and install it now. How to back up: <url>",
+      "representative_id": "2287602",
+      "evidence_ids": [
+       "2573954",
+       "2287602",
+       "2312398",
+       "1773232",
+       "1585356"
+      ],
+      "support_count": 5,
+      "mean_similarity": 0.883,
+      "positive_outcomes": 1,
+      "share": 1.0
+     }
+    ],
+    "signals": {
+     "n_retrieved": 5,
+     "n_relevant": 5,
+     "query_content_tokens": 15,
+     "query_symptom_tokens": 8,
+     "top_similarity": 0.8940892815589905,
+     "similarity_margin": 0.009031474590301514,
+     "intent_agreement": 1.0,
+     "modal_intent": "keyboard_text_bug",
+     "query_intent_agreement": 1.0,
+     "support_count": 5,
+     "resolution_bearing": 1,
+     "action_classes": {
+      "update": 5
+     },
+     "conflicting": false,
+     "same_customer_count": 0
+    },
+    "gate_version": "gate-v3",
+    "latency_ms": 1813.9641000002484
+   },
+   "risk": {
+    "safety_concern": false,
+    "security_concern": false,
+    "privacy_concern": false,
+    "account_access_risk": false,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": false,
+    "repeat_contact": false,
+    "sensitive_action_required": false,
+    "high_frustration": false,
+    "prompt_injection": false,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "Customer is asking how to fix an autocorrect issue on their iPhone where the word 'it' is changed to 'I.T'.",
+    "source": "llm+rules"
+   },
+   "verification": {
+    "verified": true,
+    "issues": [],
+    "severity": "none",
+    "evidence_refs": [
+     "2287602",
+     "2573954",
+     "2312398"
+    ],
+    "coverage": 0.706,
+    "method": "lexical+llm",
+    "attempts": 1
+   },
+   "clarification": null,
+   "handoff": null,
+   "conversation": {
+    "message": {
+     "message_id": "d22349172ca3",
+     "text": "My iPhone keeps changing \"it\" to \"I.T\" whenever I type. How do I fix this autocorrect bug?",
+     "pii_counts": {},
+     "language_hint": null,
+     "received_at": null
+    },
+    "context": {
+     "turns": [],
+     "truncated": false
+    }
+   },
+   "versions": {
+    "pipeline": "pipeline-v5.1",
+    "policy": "policy-v3.1",
+    "output_gate": "output-gate-v1",
+    "retrieval": "dense:bge-small:pair+rr+gatev3",
+    "evidence_gate": "gate-v3",
+    "rerank": "rerank-v1",
+    "classifier": "2d194e7e704f",
+    "prompts": {
+     "risk": "risk-flags-v2",
+     "draft": "draft-v2",
+     "verify": "verify-v2",
+     "second_opinion": "intent-second-opinion-v1"
+    },
+    "model": "glm-5.2",
+    "config_hash": "77fe3db81c69bf09"
+   },
+   "stage_status": {
+    "pii_redaction": "ok",
+    "context": "ok",
+    "intent": "ok",
+    "second_opinion": "skipped",
+    "retrieval": "ok",
+    "evidence_gate": "ok",
+    "risk": "ok",
+    "policy": "ok",
+    "draft": "ok",
+    "verification": "ok",
+    "output_gate": "ok"
+   },
+   "latency_ms": {
+    "pii_redaction": 0.1,
+    "context": 0.83,
+    "intent": 67430.57,
+    "second_opinion": 0.02,
+    "retrieval": 2256.57,
+    "evidence_gate": 0.0,
+    "risk": 5.38,
+    "policy": 0.07,
+    "draft": 6.82,
+    "verification": 5.62,
+    "output_gate": 0.15,
+    "total": 69718.77
+   },
+   "usage": {
+    "llm_calls": 3,
+    "live_calls": 0,
+    "cache_hits": 3,
+    "tokens_in": 1344,
+    "tokens_out": 1909,
+    "estimated_cost_usd": 0.007453,
+    "fallbacks": 0
+   }
+  },
+  "trace_excerpt": {
+   "trace_id": "356a3a03076242feb113e5318e66aa44",
+   "request_id": "doc-example-auto_handle",
+   "pipeline_version": "pipeline-v5.1",
+   "config_hash": "77fe3db81c69bf09",
+   "versions": {
+    "pipeline": "pipeline-v5.1",
+    "policy": "policy-v3.1",
+    "output_gate": "output-gate-v1",
+    "retrieval": "dense:bge-small:pair+rr+gatev3",
+    "evidence_gate": "gate-v3",
+    "rerank": "rerank-v1",
+    "classifier": "2d194e7e704f",
+    "model": "glm-5.2",
+    "config_hash": "77fe3db81c69bf09"
+   },
+   "request_meta": {
+    "channel": "twitter",
+    "locale": "en-US"
+   },
+   "final_decision": "AUTO_HANDLE",
+   "stage_status": {
+    "pii_redaction": "ok",
+    "context": "ok",
+    "intent": "ok",
+    "second_opinion": "skipped",
+    "retrieval": "ok",
+    "evidence_gate": "ok",
+    "risk": "ok",
+    "policy": "ok",
+    "draft": "ok",
+    "verification": "ok",
+    "output_gate": "ok"
+   },
+   "latency_ms": {
+    "pii_redaction": 0.1,
+    "context": 0.83,
+    "intent": 67430.57,
+    "second_opinion": 0.02,
+    "retrieval": 2256.57,
+    "evidence_gate": 0.0,
+    "risk": 5.38,
+    "policy": 0.07,
+    "draft": 6.82,
+    "verification": 5.62,
+    "output_gate": 0.15,
+    "total": 69718.77
+   },
+   "event_names": [
+    "request_received",
+    "pii_redacted",
+    "injection_checked",
+    "context_built",
+    "intent_predicted",
+    "retrieval_started",
+    "retrieval_completed",
+    "evidence_evaluated",
+    "risk_flags_extracted",
+    "escalation_decided",
+    "draft_generated",
+    "response_verified",
+    "output_allowed",
+    "response_returned"
+   ]
+  }
+ },
+ "clarification": {
+  "request": {
+   "conversation": [
+    {
+     "role": "customer",
+     "text": "My iPhone 8 on iOS 11.1.2 drains battery really fast since yesterday"
+    }
+   ],
+   "metadata": {
+    "channel": "twitter",
+    "locale": "en-US"
+   }
+  },
+  "status": 200,
+  "headers": {
+   "x-request-id": "doc-example-clarification",
+   "x-trace-id": "039eb620c281401fb1d73860b70d253b"
+  },
+  "response": {
+   "request_id": "doc-example-clarification",
+   "trace_id": "039eb620c281401fb1d73860b70d253b",
+   "action": "CLARIFICATION_REQUIRED",
+   "outcome": {
+    "action": "CLARIFICATION_REQUIRED",
+    "what_happened": "Asked the customer one clarifying question instead of answering.",
+    "why": "No proven historical resolution matches this issue closely enough to answer it without guessing. Evidence gate: INSUFFICIENT (weak_similarity).",
+    "evidence_basis": "5 similar historical cases retrieved; top similarity 0.83; evidence INSUFFICIENT (weak_similarity); resolution clusters: none; resolution confidence 0.20.",
+    "next_step": "Wait for the customer's reply (what you've already tried); the same pipeline runs again with the added detail.",
+    "reason_code": "insufficient_evidence",
+    "rule": "evidence_gate",
+    "policy_version": "policy-v3.1",
+    "autonomous_response_allowed": false,
+    "output_gate": {
+     "policy_allows_automation": false,
+     "no_blocking_risk_flag": true,
+     "intent_confidence_acceptable": true,
+     "evidence_sufficient": false,
+     "response_generated": false,
+     "response_verified": false,
+     "evidence_refs_exist": false,
+     "pii_guard": false,
+     "schema_valid": false
+    },
+    "blocking_checks": [
+     "policy_allows_automation",
+     "evidence_sufficient",
+     "response_generated",
+     "response_verified",
+     "evidence_refs_exist",
+     "pii_guard",
+     "schema_valid"
+    ]
+   },
+   "response": {
+    "kind": "clarifying_question",
+    "text": "We'd like to help with the battery. Could you tell us what you've already tried?",
+    "sent_automatically": false,
+    "evidence_refs": [],
+    "draft_attempts": 0
+   },
+   "intent": {
+    "intent": "battery_power",
+    "confidence": 0.9409,
+    "top3": [
+     [
+      "battery_power",
+      0.9409
+     ],
+     [
+      "performance_crash",
+      0.0222
+     ],
+     [
+      "general_complaint",
+      0.0087
+     ]
+    ],
+    "method": "embed_lr",
+    "confidence_band": "HIGH",
+    "calibrated": true,
+    "calibration": {
+     "method": "temperature",
+     "temperature": 1.5,
+     "dev_ece": 0.0355
+    },
+    "secondary_intents": [],
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "context_used": false,
+    "second_opinion": null,
+    "second_opinion_applied": false
+   },
+   "evidence": {
+    "query": "My iPhone 8 on iOS 11.1.2 drains battery really fast since yesterday not charging",
+    "query_intent": "battery_power",
+    "retriever": "dense:bge-small:pair+rr+gatev3",
+    "items": [
+     {
+      "evidence_id": "50073",
+      "thread_id": "50074",
+      "source_row_id": "50074",
+      "customer_message": "What did i wrong? Any version of ios 11 drains my battery. I have to charge It twice a day. Apple please....",
+      "brand_reply": "We'd like to help. Check out these steps on how to maximize your battery life: <url>",
+      "created_at": "2017-11-01 16:58:41+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 1,
+      "ranks": {
+       "pair": 38,
+       "boost_plain": 1,
+       "boost_intent": 1
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.8274126648902893,
+       "cos_reply": 0.0,
+       "cos_pair": 0.8002191781997681,
+       "rrf": 0.017241379310344827,
+       "outcome_bonus": 0.0,
+       "rerank": 0.8108992272615432,
+       "final": 0.09523809523809523
+      },
+      "quality": {
+       "semantic_relevance": 0.8274126648902893,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "battery_power",
+       "resolution_relevance": true,
+       "action_class": "article",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "245357",
+      "thread_id": "245358",
+      "source_row_id": "245358",
+      "customer_message": "#ios11 drains the battery really fast!!😰😭 had to charge 2 x a day compared to just 1 before the update same w/ my husbands ip7 😭",
+      "brand_reply": "Let's help improve this. Check out the suggestions shown here: <url> but keep us posted.",
+      "created_at": "2017-10-05 13:22:07+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 2,
+      "ranks": {
+       "pair": 28,
+       "boost_plain": 2,
+       "boost_intent": 2
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.8047988414764404,
+       "cos_reply": 0.0,
+       "cos_pair": 0.8056827187538147,
+       "rrf": 0.020833333333333332,
+       "outcome_bonus": 0.0,
+       "rerank": 0.8047502742052077,
+       "final": 0.09090909090909091
+      },
+      "quality": {
+       "semantic_relevance": 0.8047988414764404,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "battery_power",
+       "resolution_relevance": true,
+       "action_class": "article",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "1394014",
+      "thread_id": "1394016",
+      "source_row_id": "1394016",
+      "customer_message": "Battery draining faster than before after iOS 11.0.3 Update. Using iPhone 6s #Apple Can i expect a fix anytime soon?",
+      "brand_reply": "We'd love to look into this with you and go over options. Let us know if this guide helps: <url>",
+      "created_at": "2017-10-28 09:42:38+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 3,
+      "ranks": {
+       "pair": 19,
+       "boost_plain": 3,
+       "boost_intent": 3
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.8452272415161133,
+       "cos_reply": 0.0,
+       "cos_pair": 0.8155337572097778,
+       "rrf": 0.02564102564102564,
+       "outcome_bonus": 0.0,
+       "rerank": 0.6097129738330841,
+       "final": 0.08695652173913043
+      },
+      "quality": {
+       "semantic_relevance": 0.8452272415161133,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "battery_power",
+       "resolution_relevance": false,
+       "action_class": "article",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "2424348",
+      "thread_id": "2424349",
+      "source_row_id": "2424349",
+      "customer_message": "after my iOS updates my battery is not even lasting half the day.....Fix this issue!!!!",
+      "brand_reply": "We can definitely take a look into this for you. About how long has it been since you installed the last update? Are you using an Apple charger with your iPhone?",
+      "created_at": "2017-11-14 18:35:45+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 4,
+      "ranks": {
+       "pair": 46,
+       "boost_plain": 4,
+       "boost_intent": 4
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.800980269908905,
+       "cos_reply": 0.0,
+       "cos_pair": 0.7973763942718506,
+       "rrf": 0.015151515151515152,
+       "outcome_bonus": 0.0,
+       "rerank": 0.6089371930360794,
+       "final": 0.08333333333333333
+      },
+      "quality": {
+       "semantic_relevance": 0.800980269908905,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "battery_power",
+       "resolution_relevance": false,
+       "action_class": "update",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "1903504",
+      "thread_id": "1903507",
+      "source_row_id": "1903507",
+      "customer_message": "please explain why the ios11 update is draining so much battery and charges so slowly on my laptop?? #ios11 #ios11update <url>",
+      "brand_reply": "We'd love to help. Which version of iOS 11 are you running? Do you experience the same charging issues plugged into a power outlet?",
+      "created_at": "2017-10-18 11:38:57+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 5,
+      "ranks": {
+       "pair": 33,
+       "boost_plain": 5,
+       "boost_intent": 5
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.8237122893333435,
+       "cos_reply": 0.0,
+       "cos_pair": 0.8032267093658447,
+       "rrf": 0.018867924528301886,
+       "outcome_bonus": 0.0,
+       "rerank": 0.6027559786081315,
+       "final": 0.08
+      },
+      "quality": {
+       "semantic_relevance": 0.8237122893333435,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "battery_power",
+       "resolution_relevance": false,
+       "action_class": "update",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     }
+    ],
+    "n_retrieved": 50,
+    "n_relevant": 5,
+    "sufficient": false,
+    "sufficiency_reason": "weak_similarity",
+    "sufficiency_level": "INSUFFICIENT",
+    "resolution_confidence": 0.2,
+    "consistency": "no_resolution",
+    "resolution_candidates": [],
+    "signals": {
+     "n_retrieved": 5,
+     "n_relevant": 5,
+     "query_content_tokens": 12,
+     "query_symptom_tokens": 3,
+     "top_similarity": 0.8274126648902893,
+     "similarity_margin": -0.017814576625823975,
+     "intent_agreement": 1.0,
+     "modal_intent": "battery_power",
+     "query_intent_agreement": 1.0,
+     "support_count": 0,
+     "resolution_bearing": 0,
+     "action_classes": {},
+     "conflicting": false,
+     "same_customer_count": 0
+    },
+    "gate_version": "gate-v3",
+    "latency_ms": 89.9293000002217
+   },
+   "risk": {
+    "safety_concern": false,
+    "security_concern": false,
+    "privacy_concern": false,
+    "account_access_risk": false,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": false,
+    "repeat_contact": false,
+    "sensitive_action_required": false,
+    "high_frustration": false,
+    "prompt_injection": false,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "Customer reports iPhone 8 battery drains quickly since yesterday.",
+    "source": "llm+rules"
+   },
+   "verification": null,
+   "clarification": {
+    "reason_code": "insufficient_evidence",
+    "why": "No proven historical resolution matches this issue closely enough to answer it without guessing. Evidence gate: INSUFFICIENT (weak_similarity).",
+    "evidence_level": "INSUFFICIENT",
+    "evidence_reason": "weak_similarity",
+    "missing_information": [
+     "what you've already tried"
+    ],
+    "already_provided": [
+     "device",
+     "version",
+     "timing"
+    ],
+    "question": "We'd like to help with the battery. Could you tell us what you've already tried?",
+    "intent_hypothesis": "battery_power",
+    "intent_confidence": 0.941,
+    "confidence_band": "HIGH",
+    "alternatives": [
+     "performance_crash",
+     "general_complaint"
+    ],
+    "evidence_summary": "5 similar historical cases retrieved; top similarity 0.83; evidence INSUFFICIENT (weak_similarity); resolution clusters: none; resolution confidence 0.20.",
+    "trace_id": "039eb620c281401fb1d73860b70d253b",
+    "policy_version": "policy-v3.1"
+   },
+   "handoff": null,
+   "conversation": {
+    "message": {
+     "message_id": "1241ef818680",
+     "text": "My iPhone 8 on iOS 11.1.2 drains battery really fast since yesterday",
+     "pii_counts": {},
+     "language_hint": null,
+     "received_at": null
+    },
+    "context": {
+     "turns": [],
+     "truncated": false
+    }
+   },
+   "versions": {
+    "pipeline": "pipeline-v5.1",
+    "policy": "policy-v3.1",
+    "output_gate": "output-gate-v1",
+    "retrieval": "dense:bge-small:pair+rr+gatev3",
+    "evidence_gate": "gate-v3",
+    "rerank": "rerank-v1",
+    "classifier": "2d194e7e704f",
+    "prompts": {
+     "risk": "risk-flags-v2",
+     "draft": "draft-v2",
+     "verify": "verify-v2",
+     "second_opinion": "intent-second-opinion-v1"
+    },
+    "model": "glm-5.2",
+    "config_hash": "77fe3db81c69bf09"
+   },
+   "stage_status": {
+    "pii_redaction": "ok",
+    "context": "ok",
+    "intent": "ok",
+    "second_opinion": "skipped",
+    "retrieval": "ok",
+    "evidence_gate": "ok",
+    "risk": "ok",
+    "policy": "ok",
+    "draft": "skipped",
+    "verification": "skipped",
+    "output_gate": "ok"
+   },
+   "latency_ms": {
+    "pii_redaction": 0.31,
+    "context": 0.34,
+    "intent": 408.19,
+    "second_opinion": 0.01,
+    "retrieval": 973.66,
+    "evidence_gate": 0.0,
+    "risk": 17.05,
+    "policy": 6.02,
+    "draft": 0.0,
+    "verification": 0.0,
+    "output_gate": 1.35,
+    "total": 1417.8
+   },
+   "usage": {
+    "llm_calls": 1,
+    "live_calls": 0,
+    "cache_hits": 1,
+    "tokens_in": 332,
+    "tokens_out": 634,
+    "estimated_cost_usd": 0.002361,
+    "fallbacks": 0
+   }
+  },
+  "trace_excerpt": {
+   "trace_id": "039eb620c281401fb1d73860b70d253b",
+   "request_id": "doc-example-clarification",
+   "pipeline_version": "pipeline-v5.1",
+   "config_hash": "77fe3db81c69bf09",
+   "versions": {
+    "pipeline": "pipeline-v5.1",
+    "policy": "policy-v3.1",
+    "output_gate": "output-gate-v1",
+    "retrieval": "dense:bge-small:pair+rr+gatev3",
+    "evidence_gate": "gate-v3",
+    "rerank": "rerank-v1",
+    "classifier": "2d194e7e704f",
+    "model": "glm-5.2",
+    "config_hash": "77fe3db81c69bf09"
+   },
+   "request_meta": {
+    "channel": "twitter",
+    "locale": "en-US"
+   },
+   "final_decision": "CLARIFICATION_REQUIRED",
+   "stage_status": {
+    "pii_redaction": "ok",
+    "context": "ok",
+    "intent": "ok",
+    "second_opinion": "skipped",
+    "retrieval": "ok",
+    "evidence_gate": "ok",
+    "risk": "ok",
+    "policy": "ok",
+    "draft": "skipped",
+    "verification": "skipped",
+    "output_gate": "ok"
+   },
+   "latency_ms": {
+    "pii_redaction": 0.31,
+    "context": 0.34,
+    "intent": 408.19,
+    "second_opinion": 0.01,
+    "retrieval": 973.66,
+    "evidence_gate": 0.0,
+    "risk": 17.05,
+    "policy": 6.02,
+    "draft": 0.0,
+    "verification": 0.0,
+    "output_gate": 1.35,
+    "total": 1417.8
+   },
+   "event_names": [
+    "request_received",
+    "pii_redacted",
+    "injection_checked",
+    "context_built",
+    "intent_predicted",
+    "retrieval_started",
+    "retrieval_completed",
+    "evidence_evaluated",
+    "risk_flags_extracted",
+    "escalation_decided",
+    "decision_made",
+    "clarification_created",
+    "response_returned"
+   ]
+  }
+ },
+ "handoff": {
+  "request": {
+   "conversation": [
+    {
+     "role": "customer",
+     "text": "Someone logged into my Apple ID from another country and changed my password. I can't sign in anymore."
+    }
+   ],
+   "metadata": {
+    "channel": "twitter",
+    "locale": "en-US"
+   }
+  },
+  "status": 200,
+  "headers": {
+   "x-request-id": "doc-example-handoff",
+   "x-trace-id": "a72d09d4ba8d4d0a9ecff238149d11a4"
+  },
+  "response": {
+   "request_id": "doc-example-handoff",
+   "trace_id": "a72d09d4ba8d4d0a9ecff238149d11a4",
+   "action": "HUMAN_HANDOFF",
+   "outcome": {
+    "action": "HUMAN_HANDOFF",
+    "what_happened": "Handed the case to a human agent with a handoff packet; no autonomous answer was sent.",
+    "why": "Possible account security or device compromise; a human must verify before any advice is given.",
+    "evidence_basis": "5 similar historical cases retrieved; top similarity 0.79; evidence INSUFFICIENT (weak_similarity); resolution clusters: none; resolution confidence 0.20.",
+    "next_step": "Respond personally and immediately; follow the safety escalation procedure before any troubleshooting.",
+    "reason_code": "safety",
+    "rule": "security",
+    "policy_version": "policy-v3.1",
+    "autonomous_response_allowed": false,
+    "output_gate": {
+     "policy_allows_automation": false,
+     "no_blocking_risk_flag": false,
+     "intent_confidence_acceptable": true,
+     "evidence_sufficient": false,
+     "response_generated": false,
+     "response_verified": false,
+     "evidence_refs_exist": false,
+     "pii_guard": false,
+     "schema_valid": false
+    },
+    "blocking_checks": [
+     "policy_allows_automation",
+     "no_blocking_risk_flag",
+     "evidence_sufficient",
+     "response_generated",
+     "response_verified",
+     "evidence_refs_exist",
+     "pii_guard",
+     "schema_valid"
+    ]
+   },
+   "response": {
+    "kind": "handoff_notice",
+    "text": "Thanks for telling us, and we're sorry you're dealing with this. A member of our team will take this up with you directly right away.",
+    "sent_automatically": false,
+    "evidence_refs": [],
+    "draft_attempts": 0
+   },
+   "intent": {
+    "intent": "account_store_repair",
+    "confidence": 0.7976,
+    "top3": [
+     [
+      "account_store_repair",
+      0.7976
+     ],
+     [
+      "apps_services",
+      0.1204
+     ],
+     [
+      "keyboard_text_bug",
+      0.0272
+     ]
+    ],
+    "method": "embed_lr",
+    "confidence_band": "HIGH",
+    "calibrated": true,
+    "calibration": {
+     "method": "temperature",
+     "temperature": 1.5,
+     "dev_ece": 0.0355
+    },
+    "secondary_intents": [],
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "context_used": false,
+    "second_opinion": null,
+    "second_opinion_applied": false
+   },
+   "evidence": {
+    "query": "Someone logged into my Apple ID from another country and changed password. I can't sign in anymore.",
+    "query_intent": "account_store_repair",
+    "retriever": "dense:bge-small:pair+rr+gatev3",
+    "items": [
+     {
+      "evidence_id": "2487266",
+      "thread_id": "2487268",
+      "source_row_id": "2487268",
+      "customer_message": "Hi there, I forgot my password to my Apple ID, and my Ipad is locked. I dont have any possibility to enter my email.",
+      "brand_reply": "We want you to be able to use your iPad. Have you had a chance to try the steps here to reset your password: <url>",
+      "created_at": "2017-11-15 14:51:39+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 1,
+      "ranks": {
+       "pair": 17,
+       "boost_plain": 1,
+       "boost_intent": 1
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.7943053245544434,
+       "cos_reply": 0.0,
+       "cos_pair": 0.7473349571228027,
+       "rrf": 0.02702702702702703,
+       "outcome_bonus": 0.0,
+       "rerank": 0.7891906028747558,
+       "final": 0.09523809523809523
+      },
+      "quality": {
+       "semantic_relevance": 0.7943053245544434,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "account_store_repair",
+       "resolution_relevance": true,
+       "action_class": "reset",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "2120195",
+      "thread_id": "2120196",
+      "source_row_id": "2120196",
+      "customer_message": "My Iphone 128GB is in Activation Lock right now. I Forgot my Apple ID & Password. Please Help me...",
+      "brand_reply": "Thanks for reaching out. For steps to regain access to your Apple ID, check out the following: <url>",
+      "created_at": "2017-11-08 07:14:51+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 2,
+      "ranks": {
+       "pair": 21,
+       "boost_plain": 2,
+       "boost_intent": 2
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.7770633101463318,
+       "cos_reply": 0.0,
+       "cos_pair": 0.7417393326759338,
+       "rrf": 0.024390243902439025,
+       "outcome_bonus": 0.0,
+       "rerank": 0.7803069917201996,
+       "final": 0.09090909090909091
+      },
+      "quality": {
+       "semantic_relevance": 0.7770633101463318,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "account_store_repair",
+       "resolution_relevance": true,
+       "action_class": "article",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "687935",
+      "thread_id": "687937",
+      "source_row_id": "687937",
+      "customer_message": "I sold my iPhone and set it to factory setting. Now, the buyer still needs my Apple ID to sign in. Is there anything I could do?!",
+      "brand_reply": "Thank you for reaching out to us. Did you remove the iPhone from your account? To find out use the guidance under section \"Remove an iOS device, Apple Watch, or Mac you no longer have\" here: <url>",
+      "created_at": "2017-11-23 06:32:00+00:00",
+      "outcome": "positive",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 3,
+      "ranks": {
+       "pair": 4,
+       "boost_plain": 7,
+       "boost_intent": 3
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.793838381767273,
+       "cos_reply": 0.0,
+       "cos_pair": 0.767706036567688,
+       "rrf": 0.041666666666666664,
+       "outcome_bonus": 0.0,
+       "rerank": 0.6001699427604675,
+       "final": 0.08051529790660225
+      },
+      "quality": {
+       "semantic_relevance": 0.793838381767273,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "account_store_repair",
+       "resolution_relevance": false,
+       "action_class": "other",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "958212",
+      "thread_id": "958213",
+      "source_row_id": "958213",
+      "customer_message": "how do I reset my Apple ID password?",
+      "brand_reply": "We'd love to help. Take a look at the steps here: <url>",
+      "created_at": "2017-10-21 23:12:30+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": false,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 4,
+      "ranks": {
+       "pair": 16,
+       "boost_plain": 8,
+       "boost_intent": 4
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.8467710614204407,
+       "cos_reply": 0.0,
+       "cos_pair": 0.7489526271820068,
+       "rrf": 0.027777777777777776,
+       "outcome_bonus": 0.0,
+       "rerank": 0.5893580282926559,
+       "final": 0.07738095238095238
+      },
+      "quality": {
+       "semantic_relevance": 0.8467710614204407,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "account_store_repair",
+       "resolution_relevance": false,
+       "action_class": "article",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "usable"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "1721768",
+      "thread_id": "1721769",
+      "source_row_id": "1721769",
+      "customer_message": "hy, i have 2 apple id. And both of them are disabled. I've tried to reset password but still disabled. How to fix it? thanks",
+      "brand_reply": "For help with this, please reach out to an Apple ID specialist here: <url> <url>",
+      "created_at": "2017-10-17 18:34:32+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 5,
+      "ranks": {
+       "pair": 5,
+       "boost_plain": 9,
+       "boost_intent": 5
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.800216555595398,
+       "cos_reply": 0.0,
+       "cos_pair": 0.7652798295021057,
+       "rrf": 0.04,
+       "outcome_bonus": 0.0,
+       "rerank": 0.5797457518339156,
+       "final": 0.07448275862068965
+      },
+      "quality": {
+       "semantic_relevance": 0.800216555595398,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "account_store_repair",
+       "resolution_relevance": false,
+       "action_class": "other",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     }
+    ],
+    "n_retrieved": 50,
+    "n_relevant": 5,
+    "sufficient": false,
+    "sufficiency_reason": "weak_similarity",
+    "sufficiency_level": "INSUFFICIENT",
+    "resolution_confidence": 0.2,
+    "consistency": "no_resolution",
+    "resolution_candidates": [],
+    "signals": {
+     "n_retrieved": 5,
+     "n_relevant": 5,
+     "query_content_tokens": 12,
+     "query_symptom_tokens": 1,
+     "top_similarity": 0.7943053245544434,
+     "similarity_margin": 0.00046694278717041016,
+     "intent_agreement": 1.0,
+     "modal_intent": "account_store_repair",
+     "query_intent_agreement": 1.0,
+     "support_count": 0,
+     "resolution_bearing": 0,
+     "action_classes": {},
+     "conflicting": false,
+     "same_customer_count": 0
+    },
+    "gate_version": "gate-v3",
+    "latency_ms": 44.297699999788165
+   },
+   "risk": {
+    "safety_concern": false,
+    "security_concern": true,
+    "privacy_concern": false,
+    "account_access_risk": true,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": false,
+    "repeat_contact": false,
+    "sensitive_action_required": false,
+    "high_frustration": false,
+    "prompt_injection": false,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "",
+    "source": "rules"
+   },
+   "verification": null,
+   "clarification": null,
+   "handoff": {
+    "summary": "Customer now: Someone logged into my Apple ID from another country and changed my password. I can't sign in anymore.. Predicted intent account_store_repair (HIGH). Risk flags: security_concern, account_access_risk. Escalated: Possible account security or device compromise; a human must verify before any advice is given.",
+    "customer_issue": "Someone logged into my Apple ID from another country and changed my password. I can't sign in anymore.",
+    "intent": "account_store_repair",
+    "confidence": 0.7976,
+    "confidence_band": "HIGH",
+    "alternatives": [
+     "apps_services",
+     "keyboard_text_bug"
+    ],
+    "risk": {
+     "safety_concern": false,
+     "security_concern": true,
+     "privacy_concern": false,
+     "account_access_risk": true,
+     "payment_billing_risk": false,
+     "legal_or_media_threat": false,
+     "abusive_threatening": false,
+     "high_impact": false,
+     "needs_private_info": false,
+     "physical_damage": false,
+     "repeat_contact": false,
+     "sensitive_action_required": false,
+     "high_frustration": false,
+     "prompt_injection": false,
+     "is_actionable": true,
+     "insufficient_context": false,
+     "conflicting_evidence": false,
+     "summary": "",
+     "source": "rules"
+    },
+    "reason": {
+     "decision": "escalate",
+     "reason_code": "safety",
+     "reason": "Possible account security or device compromise; a human must verify before any advice is given.",
+     "rule": "security",
+     "policy_version": "policy-v3.1",
+     "clarification_allowed": false
+    },
+    "evidence_summary": "5 similar historical cases retrieved (4 with a substantive reply); top similarity 0.79; gate: INSUFFICIENT (weak_similarity), resolution confidence 0.20, 0 resolution cluster(s)",
+    "historical_examples": [
+     {
+      "evidence_id": "2487266",
+      "thread_id": "2487268",
+      "customer_message": "Hi there, I forgot my password to my Apple ID, and my Ipad is locked. I dont have any possibility to enter my email.",
+      "brand_reply": "We want you to be able to use your iPad. Have you had a chance to try the steps here to reset your password: <url>",
+      "outcome": "none",
+      "similarity": 0.794,
+      "action_class": "reset"
+     },
+     {
+      "evidence_id": "2120195",
+      "thread_id": "2120196",
+      "customer_message": "My Iphone 128GB is in Activation Lock right now. I Forgot my Apple ID & Password. Please Help me...",
+      "brand_reply": "Thanks for reaching out. For steps to regain access to your Apple ID, check out the following: <url>",
+      "outcome": "none",
+      "similarity": 0.777,
+      "action_class": "article"
+     },
+     {
+      "evidence_id": "687935",
+      "thread_id": "687937",
+      "customer_message": "I sold my iPhone and set it to factory setting. Now, the buyer still needs my Apple ID to sign in. Is there anything I could do?!",
+      "brand_reply": "Thank you for reaching out to us. Did you remove the iPhone from your account? To find out use the guidance under section \"Remove an iOS device, Apple Watch, or Mac you no longer have\" here: <url>",
+      "outcome": "positive",
+      "similarity": 0.794,
+      "action_class": "other"
+     },
+     {
+      "evidence_id": "958212",
+      "thread_id": "958213",
+      "customer_message": "how do I reset my Apple ID password?",
+      "brand_reply": "We'd love to help. Take a look at the steps here: <url>",
+      "outcome": "none",
+      "similarity": 0.847,
+      "action_class": "article"
+     },
+     {
+      "evidence_id": "1721768",
+      "thread_id": "1721769",
+      "customer_message": "hy, i have 2 apple id. And both of them are disabled. I've tried to reset password but still disabled. How to fix it? thanks",
+      "brand_reply": "For help with this, please reach out to an Apple ID specialist here: <url> <url>",
+      "outcome": "none",
+      "similarity": 0.8,
+      "action_class": "other"
+     }
+    ],
+    "evidence_sufficient": false,
+    "evidence_reason": "weak_similarity",
+    "evidence_level": "INSUFFICIENT",
+    "resolution_confidence": 0.2,
+    "resolution_candidates": [],
+    "recommended_next_action": "Respond personally and immediately; follow the safety escalation procedure before any troubleshooting.",
+    "unresolved_questions": [
+     "Which device model?",
+     "Which software version?",
+     "What exactly is happening?"
+    ],
+    "suggested_opening": "Thanks for telling us, and we're sorry you're dealing with this. A member of our team will take this up with you directly right away.",
+    "draft_if_any": null,
+    "trace_id": "a72d09d4ba8d4d0a9ecff238149d11a4",
+    "policy_version": "policy-v3.1",
+    "evidence": [
+     {
+      "evidence_id": "2487266",
+      "thread_id": "2487268",
+      "source_row_id": "2487268",
+      "customer_message": "Hi there, I forgot my password to my Apple ID, and my Ipad is locked. I dont have any possibility to enter my email.",
+      "brand_reply": "We want you to be able to use your iPad. Have you had a chance to try the steps here to reset your password: <url>",
+      "created_at": "2017-11-15 14:51:39+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 1,
+      "ranks": {
+       "pair": 17,
+       "boost_plain": 1,
+       "boost_intent": 1
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.7943053245544434,
+       "cos_reply": 0.0,
+       "cos_pair": 0.7473349571228027,
+       "rrf": 0.02702702702702703,
+       "outcome_bonus": 0.0,
+       "rerank": 0.7891906028747558,
+       "final": 0.09523809523809523
+      },
+      "quality": {
+       "semantic_relevance": 0.7943053245544434,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "account_store_repair",
+       "resolution_relevance": true,
+       "action_class": "reset",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "2120195",
+      "thread_id": "2120196",
+      "source_row_id": "2120196",
+      "customer_message": "My Iphone 128GB is in Activation Lock right now. I Forgot my Apple ID & Password. Please Help me...",
+      "brand_reply": "Thanks for reaching out. For steps to regain access to your Apple ID, check out the following: <url>",
+      "created_at": "2017-11-08 07:14:51+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 2,
+      "ranks": {
+       "pair": 21,
+       "boost_plain": 2,
+       "boost_intent": 2
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.7770633101463318,
+       "cos_reply": 0.0,
+       "cos_pair": 0.7417393326759338,
+       "rrf": 0.024390243902439025,
+       "outcome_bonus": 0.0,
+       "rerank": 0.7803069917201996,
+       "final": 0.09090909090909091
+      },
+      "quality": {
+       "semantic_relevance": 0.7770633101463318,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "account_store_repair",
+       "resolution_relevance": true,
+       "action_class": "article",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "687935",
+      "thread_id": "687937",
+      "source_row_id": "687937",
+      "customer_message": "I sold my iPhone and set it to factory setting. Now, the buyer still needs my Apple ID to sign in. Is there anything I could do?!",
+      "brand_reply": "Thank you for reaching out to us. Did you remove the iPhone from your account? To find out use the guidance under section \"Remove an iOS device, Apple Watch, or Mac you no longer have\" here: <url>",
+      "created_at": "2017-11-23 06:32:00+00:00",
+      "outcome": "positive",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 3,
+      "ranks": {
+       "pair": 4,
+       "boost_plain": 7,
+       "boost_intent": 3
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.793838381767273,
+       "cos_reply": 0.0,
+       "cos_pair": 0.767706036567688,
+       "rrf": 0.041666666666666664,
+       "outcome_bonus": 0.0,
+       "rerank": 0.6001699427604675,
+       "final": 0.08051529790660225
+      },
+      "quality": {
+       "semantic_relevance": 0.793838381767273,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "account_store_repair",
+       "resolution_relevance": false,
+       "action_class": "other",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "958212",
+      "thread_id": "958213",
+      "source_row_id": "958213",
+      "customer_message": "how do I reset my Apple ID password?",
+      "brand_reply": "We'd love to help. Take a look at the steps here: <url>",
+      "created_at": "2017-10-21 23:12:30+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": false,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 4,
+      "ranks": {
+       "pair": 16,
+       "boost_plain": 8,
+       "boost_intent": 4
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.8467710614204407,
+       "cos_reply": 0.0,
+       "cos_pair": 0.7489526271820068,
+       "rrf": 0.027777777777777776,
+       "outcome_bonus": 0.0,
+       "rerank": 0.5893580282926559,
+       "final": 0.07738095238095238
+      },
+      "quality": {
+       "semantic_relevance": 0.8467710614204407,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "account_store_repair",
+       "resolution_relevance": false,
+       "action_class": "article",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "usable"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     },
+     {
+      "evidence_id": "1721768",
+      "thread_id": "1721769",
+      "source_row_id": "1721769",
+      "customer_message": "hy, i have 2 apple id. And both of them are disabled. I've tried to reset password but still disabled. How to fix it? thanks",
+      "brand_reply": "For help with this, please reach out to an Apple ID specialist here: <url> <url>",
+      "created_at": "2017-10-17 18:34:32+00:00",
+      "outcome": "none",
+      "dm_handoff": false,
+      "substantive": true,
+      "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+      "retrieval_source": "pair",
+      "rank": 5,
+      "ranks": {
+       "pair": 5,
+       "boost_plain": 9,
+       "boost_intent": 5
+      },
+      "scores": {
+       "bm25": 0.0,
+       "dense": 0.800216555595398,
+       "cos_reply": 0.0,
+       "cos_pair": 0.7652798295021057,
+       "rrf": 0.04,
+       "outcome_bonus": 0.0,
+       "rerank": 0.5797457518339156,
+       "final": 0.07448275862068965
+      },
+      "quality": {
+       "semantic_relevance": 0.800216555595398,
+       "lexical_relevance": 0.0,
+       "intent_match": true,
+       "candidate_intent": "account_store_repair",
+       "resolution_relevance": false,
+       "action_class": "other",
+       "temporal_eligible": true,
+       "same_customer": false,
+       "quality": "strong"
+      },
+      "source": {
+       "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+       "brand": "AppleSupport",
+       "preprocessing_version": "2.0",
+       "kb_hash": "a7cb62f5f61976fc0cf258f0"
+      }
+     }
+    ]
+   },
+   "conversation": {
+    "message": {
+     "message_id": "b07c90cddc80",
+     "text": "Someone logged into my Apple ID from another country and changed my password. I can't sign in anymore.",
+     "pii_counts": {},
+     "language_hint": null,
+     "received_at": null
+    },
+    "context": {
+     "turns": [],
+     "truncated": false
+    }
+   },
+   "versions": {
+    "pipeline": "pipeline-v5.1",
+    "policy": "policy-v3.1",
+    "output_gate": "output-gate-v1",
+    "retrieval": "dense:bge-small:pair+rr+gatev3",
+    "evidence_gate": "gate-v3",
+    "rerank": "rerank-v1",
+    "classifier": "2d194e7e704f",
+    "prompts": {
+     "risk": "risk-flags-v2",
+     "draft": "draft-v2",
+     "verify": "verify-v2",
+     "second_opinion": "intent-second-opinion-v1"
+    },
+    "model": "glm-5.2",
+    "config_hash": "77fe3db81c69bf09"
+   },
+   "stage_status": {
+    "pii_redaction": "ok",
+    "context": "ok",
+    "intent": "ok",
+    "second_opinion": "skipped",
+    "retrieval": "ok",
+    "evidence_gate": "ok",
+    "risk": "fallback",
+    "policy": "ok",
+    "draft": "skipped",
+    "verification": "skipped",
+    "output_gate": "ok",
+    "handoff": "ok"
+   },
+   "latency_ms": {
+    "pii_redaction": 0.1,
+    "context": 0.66,
+    "intent": 724.72,
+    "second_opinion": 0.03,
+    "retrieval": 200.38,
+    "evidence_gate": 0.0,
+    "risk": 0.9,
+    "policy": 0.06,
+    "draft": 0.0,
+    "verification": 0.0,
+    "output_gate": 0.88,
+    "handoff": 0.53,
+    "total": 932.56
+   },
+   "usage": {
+    "llm_calls": 0,
+    "live_calls": 0,
+    "cache_hits": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "estimated_cost_usd": 0.0,
+    "fallbacks": 0
+   }
+  },
+  "trace_excerpt": {
+   "trace_id": "a72d09d4ba8d4d0a9ecff238149d11a4",
+   "request_id": "doc-example-handoff",
+   "pipeline_version": "pipeline-v5.1",
+   "config_hash": "77fe3db81c69bf09",
+   "versions": {
+    "pipeline": "pipeline-v5.1",
+    "policy": "policy-v3.1",
+    "output_gate": "output-gate-v1",
+    "retrieval": "dense:bge-small:pair+rr+gatev3",
+    "evidence_gate": "gate-v3",
+    "rerank": "rerank-v1",
+    "classifier": "2d194e7e704f",
+    "model": "glm-5.2",
+    "config_hash": "77fe3db81c69bf09"
+   },
+   "request_meta": {
+    "channel": "twitter",
+    "locale": "en-US"
+   },
+   "final_decision": "HUMAN_HANDOFF",
+   "stage_status": {
+    "pii_redaction": "ok",
+    "context": "ok",
+    "intent": "ok",
+    "second_opinion": "skipped",
+    "retrieval": "ok",
+    "evidence_gate": "ok",
+    "risk": "fallback",
+    "policy": "ok",
+    "draft": "skipped",
+    "verification": "skipped",
+    "output_gate": "ok",
+    "handoff": "ok"
+   },
+   "latency_ms": {
+    "pii_redaction": 0.1,
+    "context": 0.66,
+    "intent": 724.72,
+    "second_opinion": 0.03,
+    "retrieval": 200.38,
+    "evidence_gate": 0.0,
+    "risk": 0.9,
+    "policy": 0.06,
+    "draft": 0.0,
+    "verification": 0.0,
+    "output_gate": 0.88,
+    "handoff": 0.53,
+    "total": 932.56
+   },
+   "event_names": [
+    "request_received",
+    "pii_redacted",
+    "injection_checked",
+    "context_built",
+    "intent_predicted",
+    "retrieval_started",
+    "retrieval_completed",
+    "evidence_evaluated",
+    "risk_flags_extracted",
+    "escalation_decided",
+    "decision_made",
+    "handoff_created",
+    "response_returned"
+   ]
+  }
+ },
+ "errors": {
+  "invalid_json": {
+   "status": 400,
+   "body": {
+    "error_code": "invalid_json",
+    "message": "The request body is not valid JSON.",
+    "request_id": "3f4f4dc453824ca7a27e57eb141bd628",
+    "trace_id": null,
+    "details": null
+   }
+  },
+  "validation_error": {
+   "status": 422,
+   "body": {
+    "error_code": "validation_error",
+    "message": "The request does not match the API schema.",
+    "request_id": "6e946e35a5a346f682f12a3d97e8cf12",
+    "trace_id": null,
+    "details": [
+     {
+      "loc": [
+       "body",
+       "evidence"
+      ],
+      "type": "extra_forbidden",
+      "msg": "Extra inputs are not permitted"
+     }
+    ]
+   }
+  },
+  "invalid_conversation": {
+   "status": 400,
+   "body": {
+    "error_code": "invalid_conversation",
+    "message": "The last turn must be the customer message to handle.",
+    "request_id": "5fc20efadbae46d6a0d8d42e4218faca",
+    "trace_id": null,
+    "details": null
+   }
+  },
+  "input_too_large": {
+   "status": 413,
+   "body": {
+    "error_code": "input_too_large",
+    "message": "The conversation exceeds the configured input limits; nothing was processed.",
+    "request_id": "8b554decee7b4a618caedc1f4aff1825",
+    "trace_id": null,
+    "details": [
+     "customer message has 2500 characters (max 2000)"
+    ]
+   }
+  },
+  "trace_not_found": {
+   "status": 404,
+   "body": {
+    "error_code": "trace_not_found",
+    "message": "No trace with this id exists in the trace store.",
+    "request_id": "d582f890a3ed45e9b0ccc25d265cab76",
+    "trace_id": "00000000000000000000000000000000",
+    "details": null
+   }
+  }
+ },
+ "health": {
+  "status": "ok",
+  "service": "resolveai",
+  "version": "0.7.0",
+  "env": "test",
+  "uptime_s": 74.4
+ },
+ "ready": {
+  "ready": true,
+  "components": {
+   "agent": {
+    "state": "loaded"
+   },
+   "knowledge_base": {
+    "ok": true,
+    "rows": 17875,
+    "dense_indexes": 2
+   },
+   "intent_classifier": {
+    "ok": true,
+    "artifact": "2d194e7e704f"
+   },
+   "evidence_gate": {
+    "ok": true,
+    "version": "gate-v3",
+    "policy": "policy-v3.1"
+   },
+   "llm": {
+    "status": "configured",
+    "model": "glm-5.2",
+    "checked_live": false,
+    "note": "readiness never calls the model; if it is down the agent falls back to handoff"
+   },
+   "trace_store": {
+    "ok": true
+   }
+  }
+ },
+ "config": {
+  "service": {
+   "env": "test",
+   "cors_origins": [
+    "http://localhost:3000"
+   ],
+   "use_llm": false,
+   "write_traces": true,
+   "trace_store": {
+    "kind": "jsonl files",
+    "dir": "(outside repository)"
+   },
+   "rate_limit_per_minute": 10000,
+   "max_queue": 8,
+   "docs_enabled": true,
+   "limits": {
+    "max_body_bytes": 64000,
+    "max_message_chars": 2000,
+    "max_turn_chars": 2000,
+    "max_turns": 20,
+    "max_total_chars": 12000
+   }
+  },
+  "llm": {
+   "configured": true,
+   "enabled": false,
+   "model": "glm-5.2",
+   "provider": "openai_compatible",
+   "temperature": 0.0,
+   "timeout_s": 30.0,
+   "max_retries": 1
+  },
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "brand": "AppleSupport",
+  "agent_state": "loaded",
+  "versions": {
+   "pipeline": "pipeline-v5.1",
+   "policy": "policy-v3.1",
+   "output_gate": "output-gate-v1",
+   "retrieval": "dense:bge-small:pair+rr+gatev3",
+   "evidence_gate": "gate-v3",
+   "rerank": "rerank-v1",
+   "classifier": "2d194e7e704f",
+   "prompts": {
+    "risk": "risk-flags-v2",
+    "draft": "draft-v2",
+    "verify": "verify-v2",
+    "second_opinion": "intent-second-opinion-v1"
+   },
+   "model": "glm-5.2",
+   "config_hash": "77fe3db81c69bf09"
+  }
+ }
+}

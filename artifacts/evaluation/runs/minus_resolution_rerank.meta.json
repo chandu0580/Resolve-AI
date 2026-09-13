@@ -1,0 +1,22 @@
+{
+ "system": "minus_resolution_rerank",
+ "description": "Phase 2 retrieval: customer index, no rerank, gate-v2",
+ "config": {
+  "use_llm": true,
+  "use_second_opinion": true,
+  "use_llm_verifier": true,
+  "max_draft_attempts": 2,
+  "share_query_embedding": true,
+  "write_traces": false,
+  "risk_short_circuit": true,
+  "use_risk_llm": true,
+  "risk_schema": "compact",
+  "draft_version": "v2",
+  "retriever": "dense:bge-small:customer+subst+gatev2",
+  "second_opinion_policy": "llm_conf_0.7"
+ },
+ "n": 197,
+ "failed": 0,
+ "wall_seconds": 8.6,
+ "golden_sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9"
+}

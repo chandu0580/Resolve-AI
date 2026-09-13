@@ -1,0 +1,191 @@
+{
+ "release_run": {
+  "source": "artifacts/final/evaluation/runs/final_release.jsonl",
+  "automatic_responses": 12,
+  "drafted": 5,
+  "templates": 7,
+  "failed": [],
+  "rows": [
+   {
+    "gid": "g005",
+    "kind": "drafted",
+    "evidence_level": "STRONG",
+    "citations": 2,
+    "checks": {
+     "has_citations": true,
+     "citations_are_retrieved_cases": true,
+     "evidence_sufficient": true,
+     "verified": true,
+     "not_annotated_for_escalation": true
+    },
+    "passed": true
+   },
+   {
+    "gid": "g011",
+    "kind": "drafted",
+    "evidence_level": "STRONG",
+    "citations": 1,
+    "checks": {
+     "has_citations": true,
+     "citations_are_retrieved_cases": true,
+     "evidence_sufficient": true,
+     "verified": true,
+     "not_annotated_for_escalation": true
+    },
+    "passed": true
+   },
+   {
+    "gid": "g032",
+    "kind": "drafted",
+    "evidence_level": "STRONG",
+    "citations": 1,
+    "checks": {
+     "has_citations": true,
+     "citations_are_retrieved_cases": true,
+     "evidence_sufficient": true,
+     "verified": true,
+     "not_annotated_for_escalation": true
+    },
+    "passed": true
+   },
+   {
+    "gid": "g061",
+    "kind": "drafted",
+    "evidence_level": "STRONG",
+    "citations": 1,
+    "checks": {
+     "has_citations": true,
+     "citations_are_retrieved_cases": true,
+     "evidence_sufficient": true,
+     "verified": true,
+     "not_annotated_for_escalation": true
+    },
+    "passed": true
+   },
+   {
+    "gid": "g066",
+    "kind": "template",
+    "evidence_level": "INSUFFICIENT",
+    "citations": 0,
+    "checks": {
+     "no_citations": true,
+     "fixed_template_text": true,
+     "not_annotated_for_escalation": true
+    },
+    "passed": true
+   },
+   {
+    "gid": "g071",
+    "kind": "drafted",
+    "evidence_level": "STRONG",
+    "citations": 1,
+    "checks": {
+     "has_citations": true,
+     "citations_are_retrieved_cases": true,
+     "evidence_sufficient": true,
+     "verified": true,
+     "not_annotated_for_escalation": true
+    },
+    "passed": true
+   },
+   {
+    "gid": "g091",
+    "kind": "template",
+    "evidence_level": "INSUFFICIENT",
+    "citations": 0,
+    "checks": {
+     "no_citations": true,
+     "fixed_template_text": true,
+     "not_annotated_for_escalation": true
+    },
+    "passed": true
+   },
+   {
+    "gid": "g095",
+    "kind": "template",
+    "evidence_level": "INSUFFICIENT",
+    "citations": 0,
+    "checks": {
+     "no_citations": true,
+     "fixed_template_text": true,
+     "not_annotated_for_escalation": true
+    },
+    "passed": true
+   },
+   {
+    "gid": "g100",
+    "kind": "template",
+    "evidence_level": "INSUFFICIENT",
+    "citations": 0,
+    "checks": {
+     "no_citations": true,
+     "fixed_template_text": true,
+     "not_annotated_for_escalation": true
+    },
+    "passed": true
+   },
+   {
+    "gid": "g139",
+    "kind": "template",
+    "evidence_level": "INSUFFICIENT",
+    "citations": 0,
+    "checks": {
+     "no_citations": true,
+     "fixed_template_text": true,
+     "not_annotated_for_escalation": true
+    },
+    "passed": true
+   },
+   {
+    "gid": "g140",
+    "kind": "template",
+    "evidence_level": "INSUFFICIENT",
+    "citations": 0,
+    "checks": {
+     "no_citations": true,
+     "fixed_template_text": true,
+     "not_annotated_for_escalation": true
+    },
+    "passed": true
+   },
+   {
+    "gid": "g150",
+    "kind": "template",
+    "evidence_level": "INSUFFICIENT",
+    "citations": 0,
+    "checks": {
+     "no_citations": true,
+     "fixed_template_text": true,
+     "not_annotated_for_escalation": true
+    },
+    "passed": true
+   }
+  ]
+ },
+ "captured_api_responses": {
+  "automatic_responses": 1,
+  "failed": [],
+  "rows": [
+   {
+    "fixture": "resolve_A_grounded_auto_handle.json",
+    "kind": "drafted",
+    "citations": 3,
+    "trace_checked": true,
+    "checks": {
+     "output_gate_all_passed": true,
+     "has_citations": true,
+     "citations_are_retrieved_cases": true,
+     "evidence_sufficient": true,
+     "verified": true,
+     "trace_final_decision": true,
+     "trace_records_verification_and_gate": true,
+     "trace_retrieved_the_cited_cases": true,
+     "trace_stores_no_reply_text": true
+    },
+    "passed": true
+   }
+  ]
+ },
+ "note": "Grounded means supported by retrieved historical cases and verified; it does not mean the fix solved the customer's problem.",
+ "passed": true
+}

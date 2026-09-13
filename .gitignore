@@ -1,0 +1,30 @@
+.env
+__pycache__/
+*.pyc
+data/raw/
+data/processed/*.parquet
+data/processed/full_*.csv
+.cache/
+*.faiss
+.venv/
+# Phase 0 large local-only files
+artifacts/dataset_recon/threads.parquet
+# runtime audit traces at the repository root only (an unanchored `traces/` also hid frontend/app/traces/)
+/traces/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.cache/retrieval_bench/
+data/processed/silver_train.csv
+artifacts/agent/traces/
+artifacts/resolution/traces/
+artifacts/resolution/traces_dev/
+artifacts/resolution/_*.log
+artifacts/phase7/_*.log
+artifacts/evaluation/_*.log
+# console logs of long runs (the results they produced are the committed artifacts)
+artifacts/**/_*.log
+artifacts/phase9/evaluation_cached_check.log
+# Browser-smoke screenshots for the product passes: the smoke's JSON results are the evidence (routes, axe violations,
+# failures) and stay committed; the full-page PNGs are ~470 KB each and go stale on every UI change.
+artifacts/product/hardening/smoke/screenshots/

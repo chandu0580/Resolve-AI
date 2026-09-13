@@ -1,0 +1,766 @@
+{
+ "request_id": "fixture-C",
+ "trace_id": "758ad468eb924286ad5cac9a1c02de20",
+ "action": "HUMAN_HANDOFF",
+ "outcome": {
+  "action": "HUMAN_HANDOFF",
+  "what_happened": "Handed the case to a human agent with a handoff packet; no autonomous answer was sent.",
+  "why": "Possible account security or device compromise; a human must verify before any advice is given.",
+  "evidence_basis": "5 similar historical cases retrieved; top similarity 0.79; evidence INSUFFICIENT (weak_similarity); resolution clusters: none; resolution confidence 0.20.",
+  "next_step": "Respond personally and immediately; follow the safety escalation procedure before any troubleshooting.",
+  "reason_code": "safety",
+  "rule": "security",
+  "policy_version": "policy-v3.1",
+  "autonomous_response_allowed": false,
+  "output_gate": {
+   "policy_allows_automation": false,
+   "no_blocking_risk_flag": false,
+   "intent_confidence_acceptable": true,
+   "evidence_sufficient": false,
+   "response_generated": false,
+   "response_verified": false,
+   "evidence_refs_exist": false,
+   "pii_guard": false,
+   "schema_valid": false
+  },
+  "blocking_checks": [
+   "policy_allows_automation",
+   "no_blocking_risk_flag",
+   "evidence_sufficient",
+   "response_generated",
+   "response_verified",
+   "evidence_refs_exist",
+   "pii_guard",
+   "schema_valid"
+  ]
+ },
+ "response": {
+  "kind": "handoff_notice",
+  "text": "Thanks for telling us, and we're sorry you're dealing with this. A member of our team will take this up with you directly right away.",
+  "sent_automatically": false,
+  "evidence_refs": [],
+  "draft_attempts": 0
+ },
+ "intent": {
+  "intent": "account_store_repair",
+  "confidence": 0.7976,
+  "top3": [
+   [
+    "account_store_repair",
+    0.7976
+   ],
+   [
+    "apps_services",
+    0.1204
+   ],
+   [
+    "keyboard_text_bug",
+    0.0272
+   ]
+  ],
+  "method": "embed_lr",
+  "confidence_band": "HIGH",
+  "calibrated": true,
+  "calibration": {
+   "method": "temperature",
+   "temperature": 1.5,
+   "dev_ece": 0.0355
+  },
+  "secondary_intents": [],
+  "multi_intent": false,
+  "insufficient_context": false,
+  "taxonomy_gap": false,
+  "context_used": false,
+  "second_opinion": null,
+  "second_opinion_applied": false
+ },
+ "evidence": {
+  "query": "Someone logged into my Apple ID from another country and changed password. I can't sign in anymore.",
+  "query_intent": "account_store_repair",
+  "retriever": "dense:bge-small:pair+rr+gatev3",
+  "items": [
+   {
+    "evidence_id": "2487266",
+    "thread_id": "2487268",
+    "source_row_id": "2487268",
+    "customer_message": "Hi there, I forgot my password to my Apple ID, and my Ipad is locked. I dont have any possibility to enter my email.",
+    "brand_reply": "We want you to be able to use your iPad. Have you had a chance to try the steps here to reset your password: <url>",
+    "created_at": "2017-11-15 14:51:39+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 1,
+    "ranks": {
+     "pair": 17,
+     "boost_plain": 1,
+     "boost_intent": 1
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.7943053245544434,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7473349571228027,
+     "rrf": 0.02702702702702703,
+     "outcome_bonus": 0.0,
+     "rerank": 0.7891906028747558,
+     "final": 0.09523809523809523
+    },
+    "quality": {
+     "semantic_relevance": 0.7943053245544434,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "account_store_repair",
+     "resolution_relevance": true,
+     "action_class": "reset",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "2120195",
+    "thread_id": "2120196",
+    "source_row_id": "2120196",
+    "customer_message": "My Iphone 128GB is in Activation Lock right now. I Forgot my Apple ID & Password. Please Help me...",
+    "brand_reply": "Thanks for reaching out. For steps to regain access to your Apple ID, check out the following: <url>",
+    "created_at": "2017-11-08 07:14:51+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 2,
+    "ranks": {
+     "pair": 21,
+     "boost_plain": 2,
+     "boost_intent": 2
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.7770633101463318,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7417393326759338,
+     "rrf": 0.024390243902439025,
+     "outcome_bonus": 0.0,
+     "rerank": 0.7803069917201996,
+     "final": 0.09090909090909091
+    },
+    "quality": {
+     "semantic_relevance": 0.7770633101463318,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "account_store_repair",
+     "resolution_relevance": true,
+     "action_class": "article",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "687935",
+    "thread_id": "687937",
+    "source_row_id": "687937",
+    "customer_message": "I sold my iPhone and set it to factory setting. Now, the buyer still needs my Apple ID to sign in. Is there anything I could do?!",
+    "brand_reply": "Thank you for reaching out to us. Did you remove the iPhone from your account? To find out use the guidance under section \"Remove an iOS device, Apple Watch, or Mac you no longer have\" here: <url>",
+    "created_at": "2017-11-23 06:32:00+00:00",
+    "outcome": "positive",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 3,
+    "ranks": {
+     "pair": 4,
+     "boost_plain": 7,
+     "boost_intent": 3
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.793838381767273,
+     "cos_reply": 0.0,
+     "cos_pair": 0.767706036567688,
+     "rrf": 0.041666666666666664,
+     "outcome_bonus": 0.0,
+     "rerank": 0.6001699427604675,
+     "final": 0.08051529790660225
+    },
+    "quality": {
+     "semantic_relevance": 0.793838381767273,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "account_store_repair",
+     "resolution_relevance": false,
+     "action_class": "other",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "958212",
+    "thread_id": "958213",
+    "source_row_id": "958213",
+    "customer_message": "how do I reset my Apple ID password?",
+    "brand_reply": "We'd love to help. Take a look at the steps here: <url>",
+    "created_at": "2017-10-21 23:12:30+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": false,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 4,
+    "ranks": {
+     "pair": 16,
+     "boost_plain": 8,
+     "boost_intent": 4
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.8467710614204407,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7489526271820068,
+     "rrf": 0.027777777777777776,
+     "outcome_bonus": 0.0,
+     "rerank": 0.5893580282926559,
+     "final": 0.07738095238095238
+    },
+    "quality": {
+     "semantic_relevance": 0.8467710614204407,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "account_store_repair",
+     "resolution_relevance": false,
+     "action_class": "article",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "usable"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "1721768",
+    "thread_id": "1721769",
+    "source_row_id": "1721769",
+    "customer_message": "hy, i have 2 apple id. And both of them are disabled. I've tried to reset password but still disabled. How to fix it? thanks",
+    "brand_reply": "For help with this, please reach out to an Apple ID specialist here: <url> <url>",
+    "created_at": "2017-10-17 18:34:32+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 5,
+    "ranks": {
+     "pair": 5,
+     "boost_plain": 9,
+     "boost_intent": 5
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.800216555595398,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7652798295021057,
+     "rrf": 0.04,
+     "outcome_bonus": 0.0,
+     "rerank": 0.5797457518339156,
+     "final": 0.07448275862068965
+    },
+    "quality": {
+     "semantic_relevance": 0.800216555595398,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "account_store_repair",
+     "resolution_relevance": false,
+     "action_class": "other",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   }
+  ],
+  "n_retrieved": 50,
+  "n_relevant": 5,
+  "sufficient": false,
+  "sufficiency_reason": "weak_similarity",
+  "sufficiency_level": "INSUFFICIENT",
+  "resolution_confidence": 0.2,
+  "consistency": "no_resolution",
+  "resolution_candidates": [],
+  "signals": {
+   "n_retrieved": 5,
+   "n_relevant": 5,
+   "query_content_tokens": 12,
+   "query_symptom_tokens": 1,
+   "top_similarity": 0.7943053245544434,
+   "similarity_margin": 0.00046694278717041016,
+   "intent_agreement": 1.0,
+   "modal_intent": "account_store_repair",
+   "query_intent_agreement": 1.0,
+   "support_count": 0,
+   "resolution_bearing": 0,
+   "action_classes": {},
+   "conflicting": false,
+   "same_customer_count": 0
+  },
+  "gate_version": "gate-v3",
+  "latency_ms": 33.849800000098185
+ },
+ "risk": {
+  "safety_concern": false,
+  "security_concern": true,
+  "privacy_concern": false,
+  "account_access_risk": true,
+  "payment_billing_risk": false,
+  "legal_or_media_threat": false,
+  "abusive_threatening": false,
+  "high_impact": false,
+  "needs_private_info": false,
+  "physical_damage": false,
+  "repeat_contact": false,
+  "sensitive_action_required": false,
+  "high_frustration": false,
+  "prompt_injection": false,
+  "is_actionable": true,
+  "insufficient_context": false,
+  "conflicting_evidence": false,
+  "summary": "",
+  "source": "rules"
+ },
+ "verification": null,
+ "clarification": null,
+ "handoff": {
+  "summary": "Customer now: Someone logged into my Apple ID from another country and changed my password. I can't sign in anymore.. Predicted intent account_store_repair (HIGH). Risk flags: security_concern, account_access_risk. Escalated: Possible account security or device compromise; a human must verify before any advice is given.",
+  "customer_issue": "Someone logged into my Apple ID from another country and changed my password. I can't sign in anymore.",
+  "intent": "account_store_repair",
+  "confidence": 0.7976,
+  "confidence_band": "HIGH",
+  "alternatives": [
+   "apps_services",
+   "keyboard_text_bug"
+  ],
+  "risk": {
+   "safety_concern": false,
+   "security_concern": true,
+   "privacy_concern": false,
+   "account_access_risk": true,
+   "payment_billing_risk": false,
+   "legal_or_media_threat": false,
+   "abusive_threatening": false,
+   "high_impact": false,
+   "needs_private_info": false,
+   "physical_damage": false,
+   "repeat_contact": false,
+   "sensitive_action_required": false,
+   "high_frustration": false,
+   "prompt_injection": false,
+   "is_actionable": true,
+   "insufficient_context": false,
+   "conflicting_evidence": false,
+   "summary": "",
+   "source": "rules"
+  },
+  "reason": {
+   "decision": "escalate",
+   "reason_code": "safety",
+   "reason": "Possible account security or device compromise; a human must verify before any advice is given.",
+   "rule": "security",
+   "policy_version": "policy-v3.1",
+   "clarification_allowed": false
+  },
+  "evidence_summary": "5 similar historical cases retrieved (4 with a substantive reply); top similarity 0.79; gate: INSUFFICIENT (weak_similarity), resolution confidence 0.20, 0 resolution cluster(s)",
+  "historical_examples": [
+   {
+    "evidence_id": "2487266",
+    "thread_id": "2487268",
+    "customer_message": "Hi there, I forgot my password to my Apple ID, and my Ipad is locked. I dont have any possibility to enter my email.",
+    "brand_reply": "We want you to be able to use your iPad. Have you had a chance to try the steps here to reset your password: <url>",
+    "outcome": "none",
+    "similarity": 0.794,
+    "action_class": "reset"
+   },
+   {
+    "evidence_id": "2120195",
+    "thread_id": "2120196",
+    "customer_message": "My Iphone 128GB is in Activation Lock right now. I Forgot my Apple ID & Password. Please Help me...",
+    "brand_reply": "Thanks for reaching out. For steps to regain access to your Apple ID, check out the following: <url>",
+    "outcome": "none",
+    "similarity": 0.777,
+    "action_class": "article"
+   },
+   {
+    "evidence_id": "687935",
+    "thread_id": "687937",
+    "customer_message": "I sold my iPhone and set it to factory setting. Now, the buyer still needs my Apple ID to sign in. Is there anything I could do?!",
+    "brand_reply": "Thank you for reaching out to us. Did you remove the iPhone from your account? To find out use the guidance under section \"Remove an iOS device, Apple Watch, or Mac you no longer have\" here: <url>",
+    "outcome": "positive",
+    "similarity": 0.794,
+    "action_class": "other"
+   },
+   {
+    "evidence_id": "958212",
+    "thread_id": "958213",
+    "customer_message": "how do I reset my Apple ID password?",
+    "brand_reply": "We'd love to help. Take a look at the steps here: <url>",
+    "outcome": "none",
+    "similarity": 0.847,
+    "action_class": "article"
+   },
+   {
+    "evidence_id": "1721768",
+    "thread_id": "1721769",
+    "customer_message": "hy, i have 2 apple id. And both of them are disabled. I've tried to reset password but still disabled. How to fix it? thanks",
+    "brand_reply": "For help with this, please reach out to an Apple ID specialist here: <url> <url>",
+    "outcome": "none",
+    "similarity": 0.8,
+    "action_class": "other"
+   }
+  ],
+  "evidence_sufficient": false,
+  "evidence_reason": "weak_similarity",
+  "evidence_level": "INSUFFICIENT",
+  "resolution_confidence": 0.2,
+  "resolution_candidates": [],
+  "recommended_next_action": "Respond personally and immediately; follow the safety escalation procedure before any troubleshooting.",
+  "unresolved_questions": [
+   "Which device model?",
+   "Which software version?",
+   "What exactly is happening?"
+  ],
+  "suggested_opening": "Thanks for telling us, and we're sorry you're dealing with this. A member of our team will take this up with you directly right away.",
+  "draft_if_any": null,
+  "trace_id": "758ad468eb924286ad5cac9a1c02de20",
+  "policy_version": "policy-v3.1",
+  "evidence": [
+   {
+    "evidence_id": "2487266",
+    "thread_id": "2487268",
+    "source_row_id": "2487268",
+    "customer_message": "Hi there, I forgot my password to my Apple ID, and my Ipad is locked. I dont have any possibility to enter my email.",
+    "brand_reply": "We want you to be able to use your iPad. Have you had a chance to try the steps here to reset your password: <url>",
+    "created_at": "2017-11-15 14:51:39+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 1,
+    "ranks": {
+     "pair": 17,
+     "boost_plain": 1,
+     "boost_intent": 1
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.7943053245544434,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7473349571228027,
+     "rrf": 0.02702702702702703,
+     "outcome_bonus": 0.0,
+     "rerank": 0.7891906028747558,
+     "final": 0.09523809523809523
+    },
+    "quality": {
+     "semantic_relevance": 0.7943053245544434,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "account_store_repair",
+     "resolution_relevance": true,
+     "action_class": "reset",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "2120195",
+    "thread_id": "2120196",
+    "source_row_id": "2120196",
+    "customer_message": "My Iphone 128GB is in Activation Lock right now. I Forgot my Apple ID & Password. Please Help me...",
+    "brand_reply": "Thanks for reaching out. For steps to regain access to your Apple ID, check out the following: <url>",
+    "created_at": "2017-11-08 07:14:51+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 2,
+    "ranks": {
+     "pair": 21,
+     "boost_plain": 2,
+     "boost_intent": 2
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.7770633101463318,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7417393326759338,
+     "rrf": 0.024390243902439025,
+     "outcome_bonus": 0.0,
+     "rerank": 0.7803069917201996,
+     "final": 0.09090909090909091
+    },
+    "quality": {
+     "semantic_relevance": 0.7770633101463318,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "account_store_repair",
+     "resolution_relevance": true,
+     "action_class": "article",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "687935",
+    "thread_id": "687937",
+    "source_row_id": "687937",
+    "customer_message": "I sold my iPhone and set it to factory setting. Now, the buyer still needs my Apple ID to sign in. Is there anything I could do?!",
+    "brand_reply": "Thank you for reaching out to us. Did you remove the iPhone from your account? To find out use the guidance under section \"Remove an iOS device, Apple Watch, or Mac you no longer have\" here: <url>",
+    "created_at": "2017-11-23 06:32:00+00:00",
+    "outcome": "positive",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 3,
+    "ranks": {
+     "pair": 4,
+     "boost_plain": 7,
+     "boost_intent": 3
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.793838381767273,
+     "cos_reply": 0.0,
+     "cos_pair": 0.767706036567688,
+     "rrf": 0.041666666666666664,
+     "outcome_bonus": 0.0,
+     "rerank": 0.6001699427604675,
+     "final": 0.08051529790660225
+    },
+    "quality": {
+     "semantic_relevance": 0.793838381767273,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "account_store_repair",
+     "resolution_relevance": false,
+     "action_class": "other",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "958212",
+    "thread_id": "958213",
+    "source_row_id": "958213",
+    "customer_message": "how do I reset my Apple ID password?",
+    "brand_reply": "We'd love to help. Take a look at the steps here: <url>",
+    "created_at": "2017-10-21 23:12:30+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": false,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 4,
+    "ranks": {
+     "pair": 16,
+     "boost_plain": 8,
+     "boost_intent": 4
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.8467710614204407,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7489526271820068,
+     "rrf": 0.027777777777777776,
+     "outcome_bonus": 0.0,
+     "rerank": 0.5893580282926559,
+     "final": 0.07738095238095238
+    },
+    "quality": {
+     "semantic_relevance": 0.8467710614204407,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "account_store_repair",
+     "resolution_relevance": false,
+     "action_class": "article",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "usable"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "1721768",
+    "thread_id": "1721769",
+    "source_row_id": "1721769",
+    "customer_message": "hy, i have 2 apple id. And both of them are disabled. I've tried to reset password but still disabled. How to fix it? thanks",
+    "brand_reply": "For help with this, please reach out to an Apple ID specialist here: <url> <url>",
+    "created_at": "2017-10-17 18:34:32+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 5,
+    "ranks": {
+     "pair": 5,
+     "boost_plain": 9,
+     "boost_intent": 5
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.800216555595398,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7652798295021057,
+     "rrf": 0.04,
+     "outcome_bonus": 0.0,
+     "rerank": 0.5797457518339156,
+     "final": 0.07448275862068965
+    },
+    "quality": {
+     "semantic_relevance": 0.800216555595398,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "account_store_repair",
+     "resolution_relevance": false,
+     "action_class": "other",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   }
+  ]
+ },
+ "conversation": {
+  "message": {
+   "message_id": "b07c90cddc80",
+   "text": "Someone logged into my Apple ID from another country and changed my password. I can't sign in anymore.",
+   "pii_counts": {},
+   "language_hint": null,
+   "received_at": null
+  },
+  "context": {
+   "turns": [],
+   "truncated": false
+  }
+ },
+ "versions": {
+  "pipeline": "pipeline-v5.1",
+  "policy": "policy-v3.1",
+  "output_gate": "output-gate-v1",
+  "retrieval": "dense:bge-small:pair+rr+gatev3",
+  "evidence_gate": "gate-v3",
+  "rerank": "rerank-v1",
+  "classifier": "2d194e7e704f",
+  "prompts": {
+   "risk": "risk-flags-v2",
+   "draft": "draft-v2",
+   "verify": "verify-v2",
+   "second_opinion": "intent-second-opinion-v1"
+  },
+  "model": "glm-5.2",
+  "config_hash": "77fe3db81c69bf09"
+ },
+ "stage_status": {
+  "pii_redaction": "ok",
+  "context": "ok",
+  "intent": "ok",
+  "second_opinion": "skipped",
+  "retrieval": "ok",
+  "evidence_gate": "ok",
+  "risk": "fallback",
+  "policy": "ok",
+  "draft": "skipped",
+  "verification": "skipped",
+  "output_gate": "ok",
+  "handoff": "ok"
+ },
+ "latency_ms": {
+  "pii_redaction": 0.1,
+  "context": 1.03,
+  "intent": 98.76,
+  "second_opinion": 0.01,
+  "retrieval": 164.36,
+  "evidence_gate": 0.0,
+  "risk": 1.27,
+  "policy": 0.04,
+  "draft": 0.0,
+  "verification": 0.0,
+  "output_gate": 0.03,
+  "handoff": 0.36,
+  "total": 268.25
+ },
+ "usage": {
+  "llm_calls": 0,
+  "live_calls": 0,
+  "cache_hits": 0,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "estimated_cost_usd": 0.0,
+  "fallbacks": 0
+ }
+}

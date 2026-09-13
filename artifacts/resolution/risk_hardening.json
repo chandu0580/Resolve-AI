@@ -1,0 +1,217 @@
+{
+ "n": 40,
+ "dev_seed": 47,
+ "model": "glm-5.2",
+ "results": {
+  "v1_full_900": {
+   "schema": "full",
+   "max_tokens": 900,
+   "n": 40,
+   "n_live": 40,
+   "fallback_rate": 0.325,
+   "unknown_flags_dropped": 0,
+   "retry_rate": 0.425,
+   "latency_ms": {
+    "p50": 9129.0,
+    "p95": 23620.0
+   },
+   "tokens_out_mean": 1083.3,
+   "tokens_in_mean": 680.7,
+   "flags_raised_mean": 0.9,
+   "examples": [
+    {
+     "status": "ok",
+     "flags": [],
+     "tokens_out": 896
+    },
+    {
+     "status": "fallback",
+     "flags": [
+      "high_impact"
+     ],
+     "tokens_out": 1800
+    },
+    {
+     "status": "ok",
+     "flags": [],
+     "tokens_out": 520
+    },
+    {
+     "status": "ok",
+     "flags": [
+      "physical_damage",
+      "repeat_contact"
+     ],
+     "tokens_out": 1646
+    },
+    {
+     "status": "ok",
+     "flags": [],
+     "tokens_out": 552
+    },
+    {
+     "status": "ok",
+     "flags": [],
+     "tokens_out": 853
+    },
+    {
+     "status": "fallback",
+     "flags": [],
+     "tokens_out": 1800
+    },
+    {
+     "status": "ok",
+     "flags": [
+      "high_frustration",
+      "needs_private_info"
+     ],
+     "tokens_out": 841
+    }
+   ]
+  },
+  "v2_compact_900": {
+   "schema": "compact",
+   "max_tokens": 900,
+   "n": 40,
+   "n_live": 40,
+   "fallback_rate": 0.0,
+   "unknown_flags_dropped": 0,
+   "retry_rate": 0.2,
+   "latency_ms": {
+    "p50": 7486.0,
+    "p95": 24318.0
+   },
+   "tokens_out_mean": 684.5,
+   "tokens_in_mean": 444.3,
+   "flags_raised_mean": 1.2,
+   "examples": [
+    {
+     "status": "ok",
+     "flags": [],
+     "tokens_out": 697
+    },
+    {
+     "status": "ok",
+     "flags": [
+      "high_frustration",
+      "high_impact",
+      "repeat_contact"
+     ],
+     "tokens_out": 641
+    },
+    {
+     "status": "ok",
+     "flags": [],
+     "tokens_out": 446
+    },
+    {
+     "status": "ok",
+     "flags": [
+      "physical_damage",
+      "repeat_contact"
+     ],
+     "tokens_out": 367
+    },
+    {
+     "status": "ok",
+     "flags": [
+      "account_access_risk"
+     ],
+     "tokens_out": 651
+    },
+    {
+     "status": "ok",
+     "flags": [],
+     "tokens_out": 545
+    },
+    {
+     "status": "ok",
+     "flags": [],
+     "tokens_out": 1591
+    },
+    {
+     "status": "ok",
+     "flags": [
+      "high_frustration"
+     ],
+     "tokens_out": 1678
+    }
+   ]
+  },
+  "v2_compact_600": {
+   "schema": "compact",
+   "max_tokens": 600,
+   "n": 40,
+   "n_live": 40,
+   "fallback_rate": 0.25,
+   "unknown_flags_dropped": 0,
+   "retry_rate": 0.425,
+   "latency_ms": {
+    "p50": 9150.0,
+    "p95": 17266.0
+   },
+   "tokens_out_mean": 700.4,
+   "tokens_in_mean": 548.9,
+   "flags_raised_mean": 0.85,
+   "examples": [
+    {
+     "status": "fallback",
+     "flags": [],
+     "tokens_out": 1200
+    },
+    {
+     "status": "ok",
+     "flags": [
+      "high_frustration",
+      "high_impact",
+      "repeat_contact"
+     ],
+     "tokens_out": 368
+    },
+    {
+     "status": "ok",
+     "flags": [],
+     "tokens_out": 361
+    },
+    {
+     "status": "ok",
+     "flags": [
+      "physical_damage",
+      "repeat_contact"
+     ],
+     "tokens_out": 456
+    },
+    {
+     "status": "ok",
+     "flags": [],
+     "tokens_out": 456
+    },
+    {
+     "status": "ok",
+     "flags": [],
+     "tokens_out": 512
+    },
+    {
+     "status": "fallback",
+     "flags": [],
+     "tokens_out": 1200
+    },
+    {
+     "status": "ok",
+     "flags": [
+      "high_frustration"
+     ],
+     "tokens_out": 1066
+    }
+   ]
+  }
+ },
+ "v1_vs_v2_agreement": {
+  "n_compared": 27,
+  "mean_jaccard_v1_v2": 0.848,
+  "exact_match_rate": 0.704,
+  "v1_only_flag_rows": 5,
+  "v2_only_flag_rows": 13
+ },
+ "note": "DEV messages disjoint from golden; the golden set is never used for tuning. Rules-only flags are OR-merged in every variant, so the LLM only adds flags."
+}

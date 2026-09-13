@@ -1,0 +1,105 @@
+{
+  "frozen_at": "2026-09-10T07:46:06+00:00",
+  "file": "golden_final.csv",
+  "sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9",
+  "rows": 197,
+  "guide_version": "1.1",
+  "guide_sha256": "90b770cfa51923f849d8069437e60bcfc4233541b5ec948c34cb4b91710884b6",
+  "source_split": "holdout (temporal, final 5 days), never in kb",
+  "sampling": {
+    "holdout_rows": 8943,
+    "sampled": 197,
+    "strata": {
+      "multi_turn": 40,
+      "short": 20,
+      "intent:general_complaint": 20,
+      "intent:performance_crash": 15,
+      "intent:apps_services": 12,
+      "intent:battery_power": 12,
+      "intent:hardware_damage": 11,
+      "intent:data_loss_sync": 11,
+      "intent:account_store_repair": 10,
+      "intent:connectivity": 9,
+      "intent:keyboard_text_bug": 9,
+      "intent:non_english": 9,
+      "edge:safety": 4,
+      "edge:pii": 3,
+      "edge:abuse_no_symptom": 3,
+      "edge:non_english": 3,
+      "edge:legal": 3,
+      "edge:closure": 3
+    },
+    "weak_label_distribution_holdout": {
+      "general_complaint": 0.381,
+      "performance_crash": 0.168,
+      "battery_power": 0.095,
+      "apps_services": 0.09,
+      "hardware_damage": 0.071,
+      "data_loss_sync": 0.061,
+      "account_store_repair": 0.043,
+      "connectivity": 0.04,
+      "keyboard_text_bug": 0.031,
+      "non_english": 0.023
+    },
+    "weak_label_distribution_sample": {
+      "general_complaint": 0.32,
+      "performance_crash": 0.137,
+      "apps_services": 0.096,
+      "hardware_damage": 0.081,
+      "non_english": 0.076,
+      "battery_power": 0.071,
+      "keyboard_text_bug": 0.056,
+      "data_loss_sync": 0.056,
+      "account_store_repair": 0.056,
+      "connectivity": 0.051
+    },
+    "multi_turn_share": 0.244,
+    "customer_seen_in_kb_share": 0.127,
+    "seed": 42
+  },
+  "annotation": {
+    "annotator_A": "Claude, main session, guide v1.0",
+    "annotator_B": "Claude, isolated agent session given only guide v1.0 + unlabelled rows",
+    "provenance_statement": "Annotator B was an isolated AI annotator, not an independent human. Cohen's kappa must never be described as human-human agreement; it is evidence of consistency under the annotation guide. Human adjudication of disagreements is the credibility step.",
+    "v1_0_agreement": {
+      "n": 197,
+      "intent_kappa": 0.92,
+      "intent_agreement": 0.929,
+      "escalation_kappa": 0.885,
+      "escalation_agreement": 0.964,
+      "reason_agreement_when_both_escalate": 0.971,
+      "disagreements": 21
+    },
+    "v1_1_adjudication": "scripts/phase1/d2_apply_v11.py (rules R1-R7), diff in golden_v11_diff.csv, report in ADJUDICATION_REPORT.md"
+  },
+  "label_distribution": {
+    "intent": {
+      "apps_services": 38,
+      "performance_crash": 26,
+      "other": 20,
+      "data_loss_sync": 17,
+      "account_store_repair": 16,
+      "battery_power": 16,
+      "keyboard_text_bug": 16,
+      "general_complaint": 14,
+      "connectivity": 14,
+      "non_english": 13,
+      "hardware_damage": 7
+    },
+    "should_escalate_true": 37,
+    "escalation_reason": {
+      "repeat_contact": 14,
+      "private_info": 13,
+      "hardware": 5,
+      "safety": 4,
+      "vague_hostile": 1
+    },
+    "flags": {
+      "taxonomy_gap": 7,
+      "insufficient_context": 18,
+      "multi_intent": 10,
+      "evidence_unavailable": 31
+    }
+  },
+  "invariant": "Frozen. Model development must never modify this file; resolveai.evaluation.golden.load_golden verifies the hash."
+}

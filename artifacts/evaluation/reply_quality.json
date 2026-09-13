@@ -1,0 +1,953 @@
+{
+ "primary": {
+  "judge_model": "glm-5.2",
+  "systems": {
+   "resolveai_full": {
+    "n_scored": 197,
+    "n_parsed": 194,
+    "judge_failures": 3,
+    "means": {
+     "groundedness": 4.284,
+     "relevance": 3.361,
+     "actionability": 2.928,
+     "completeness": 2.567,
+     "policy_compliance": 4.485,
+     "tone": 4.376
+    },
+    "bootstrap": {
+     "groundedness": {
+      "point": 4.2835,
+      "ci_low": 4.1237,
+      "ci_high": 4.4381,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "relevance": {
+      "point": 3.3608,
+      "ci_low": 3.2062,
+      "ci_high": 3.5206,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "actionability": {
+      "point": 2.9278,
+      "ci_low": 2.7834,
+      "ci_high": 3.0876,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "completeness": {
+      "point": 2.567,
+      "ci_low": 2.4433,
+      "ci_high": 2.6959,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_compliance": {
+      "point": 4.4845,
+      "ci_low": 4.3969,
+      "ci_high": 4.5773,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "tone": {
+      "point": 4.3763,
+      "ci_low": 4.2835,
+      "ci_high": 4.4639,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "hallucination": {
+      "point": 0.2165,
+      "ci_low": 0.1598,
+      "ci_high": 0.2733,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_violation": {
+      "point": 0.0155,
+      "ci_low": 0.0,
+      "ci_high": 0.0361,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "rates": {
+     "groundedness_share_ge4": 0.778,
+     "relevance_share_ge4": 0.438,
+     "actionability_share_ge4": 0.356,
+     "completeness_share_ge4": 0.155,
+     "policy_compliance_share_ge4": 0.933,
+     "tone_share_ge4": 0.938,
+     "hallucination": 0.216,
+     "policy_violation": 0.015
+    },
+    "by_response_kind": {
+     "handoff": {
+      "n": 119,
+      "groundedness": 4.33,
+      "relevance": 3.13,
+      "actionability": 2.53,
+      "completeness": 2.26,
+      "policy_compliance": 4.17,
+      "tone": 4.27,
+      "hallucination": 0.218
+     },
+     "clarify": {
+      "n": 66,
+      "groundedness": 4.17,
+      "relevance": 3.61,
+      "actionability": 3.53,
+      "completeness": 2.95,
+      "policy_compliance": 4.98,
+      "tone": 4.55,
+      "hallucination": 0.242
+     },
+     "troubleshoot": {
+      "n": 5,
+      "groundedness": 4.2,
+      "relevance": 5.0,
+      "actionability": 4.0,
+      "completeness": 3.8,
+      "policy_compliance": 5.0,
+      "tone": 4.8,
+      "hallucination": 0.0
+     },
+     "canned": {
+      "n": 4,
+      "groundedness": 5.0,
+      "relevance": 4.0,
+      "actionability": 3.5,
+      "completeness": 3.75,
+      "policy_compliance": 5.0,
+      "tone": 4.25,
+      "hallucination": 0.0
+     }
+    }
+   },
+   "B0_trivial": {
+    "n_scored": 197,
+    "n_parsed": 197,
+    "judge_failures": 0,
+    "means": {
+     "groundedness": 4.985,
+     "relevance": 3.259,
+     "actionability": 3.782,
+     "completeness": 2.787,
+     "policy_compliance": 4.858,
+     "tone": 4.437
+    },
+    "bootstrap": {
+     "groundedness": {
+      "point": 4.9848,
+      "ci_low": 4.9645,
+      "ci_high": 5.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "relevance": {
+      "point": 3.2589,
+      "ci_low": 3.132,
+      "ci_high": 3.3959,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "actionability": {
+      "point": 3.7817,
+      "ci_low": 3.6751,
+      "ci_high": 3.8832,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "completeness": {
+      "point": 2.7868,
+      "ci_low": 2.6853,
+      "ci_high": 2.8782,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_compliance": {
+      "point": 4.8579,
+      "ci_low": 4.7868,
+      "ci_high": 4.9137,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "tone": {
+      "point": 4.4365,
+      "ci_low": 4.3401,
+      "ci_high": 4.5279,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "hallucination": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_violation": {
+      "point": 0.0051,
+      "ci_low": 0.0,
+      "ci_high": 0.0152,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "rates": {
+     "groundedness_share_ge4": 1.0,
+     "relevance_share_ge4": 0.487,
+     "actionability_share_ge4": 0.751,
+     "completeness_share_ge4": 0.132,
+     "policy_compliance_share_ge4": 0.995,
+     "tone_share_ge4": 0.898,
+     "hallucination": 0.0,
+     "policy_violation": 0.005
+    },
+    "by_response_kind": {
+     "canned": {
+      "n": 197,
+      "groundedness": 4.98,
+      "relevance": 3.26,
+      "actionability": 3.78,
+      "completeness": 2.79,
+      "policy_compliance": 4.86,
+      "tone": 4.44,
+      "hallucination": 0.0
+     }
+    }
+   },
+   "B1_simple_ml": {
+    "n_scored": 197,
+    "n_parsed": 176,
+    "judge_failures": 21,
+    "means": {
+     "groundedness": 4.284,
+     "relevance": 3.108,
+     "actionability": 3.142,
+     "completeness": 2.574,
+     "policy_compliance": 4.568,
+     "tone": 4.153
+    },
+    "bootstrap": {
+     "groundedness": {
+      "point": 4.2841,
+      "ci_low": 4.0851,
+      "ci_high": 4.4602,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "relevance": {
+      "point": 3.108,
+      "ci_low": 2.892,
+      "ci_high": 3.3068,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "actionability": {
+      "point": 3.142,
+      "ci_low": 2.9773,
+      "ci_high": 3.3068,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "completeness": {
+      "point": 2.5739,
+      "ci_low": 2.392,
+      "ci_high": 2.7273,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_compliance": {
+      "point": 4.5682,
+      "ci_low": 4.4602,
+      "ci_high": 4.6705,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "tone": {
+      "point": 4.1534,
+      "ci_low": 4.0341,
+      "ci_high": 4.2558,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "hallucination": {
+      "point": 0.1705,
+      "ci_low": 0.1192,
+      "ci_high": 0.233,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_violation": {
+      "point": 0.0398,
+      "ci_low": 0.0114,
+      "ci_high": 0.0682,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "rates": {
+     "groundedness_share_ge4": 0.795,
+     "relevance_share_ge4": 0.386,
+     "actionability_share_ge4": 0.443,
+     "completeness_share_ge4": 0.239,
+     "policy_compliance_share_ge4": 0.926,
+     "tone_share_ge4": 0.79,
+     "hallucination": 0.17,
+     "policy_violation": 0.04
+    },
+    "by_response_kind": {
+     "handoff": {
+      "n": 53,
+      "groundedness": 4.94,
+      "relevance": 2.83,
+      "actionability": 2.57,
+      "completeness": 2.13,
+      "policy_compliance": 4.26,
+      "tone": 4.09,
+      "hallucination": 0.019
+     },
+     "copy": {
+      "n": 117,
+      "groundedness": 4.05,
+      "relevance": 3.24,
+      "actionability": 3.38,
+      "completeness": 2.76,
+      "policy_compliance": 4.79,
+      "tone": 4.18,
+      "hallucination": 0.214
+     },
+     "canned": {
+      "n": 6,
+      "groundedness": 3.0,
+      "relevance": 3.0,
+      "actionability": 3.67,
+      "completeness": 2.83,
+      "policy_compliance": 3.0,
+      "tone": 4.17,
+      "hallucination": 0.667
+     }
+    }
+   },
+   "B2_direct_llm": {
+    "n_scored": 197,
+    "n_parsed": 194,
+    "judge_failures": 3,
+    "means": {
+     "groundedness": 3.227,
+     "relevance": 4.629,
+     "actionability": 4.077,
+     "completeness": 3.505,
+     "policy_compliance": 4.943,
+     "tone": 4.851
+    },
+    "bootstrap": {
+     "groundedness": {
+      "point": 3.2268,
+      "ci_low": 3.0155,
+      "ci_high": 3.4383,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "relevance": {
+      "point": 4.6289,
+      "ci_low": 4.5256,
+      "ci_high": 4.7216,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "actionability": {
+      "point": 4.0773,
+      "ci_low": 3.9845,
+      "ci_high": 4.1701,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "completeness": {
+      "point": 3.5052,
+      "ci_low": 3.3969,
+      "ci_high": 3.5981,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_compliance": {
+      "point": 4.9433,
+      "ci_low": 4.8918,
+      "ci_high": 4.9845,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "tone": {
+      "point": 4.8505,
+      "ci_low": 4.804,
+      "ci_high": 4.8969,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "hallucination": {
+      "point": 0.5258,
+      "ci_low": 0.4536,
+      "ci_high": 0.5929,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_violation": {
+      "point": 0.0103,
+      "ci_low": 0.0,
+      "ci_high": 0.0258,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "rates": {
+     "groundedness_share_ge4": 0.443,
+     "relevance_share_ge4": 0.928,
+     "actionability_share_ge4": 0.861,
+     "completeness_share_ge4": 0.469,
+     "policy_compliance_share_ge4": 0.99,
+     "tone_share_ge4": 1.0,
+     "hallucination": 0.526,
+     "policy_violation": 0.01
+    },
+    "by_response_kind": {
+     "handoff": {
+      "n": 46,
+      "groundedness": 4.78,
+      "relevance": 4.74,
+      "actionability": 4.02,
+      "completeness": 3.61,
+      "policy_compliance": 4.93,
+      "tone": 4.93,
+      "hallucination": 0.043
+     },
+     "llm_direct": {
+      "n": 148,
+      "groundedness": 2.74,
+      "relevance": 4.59,
+      "actionability": 4.09,
+      "completeness": 3.47,
+      "policy_compliance": 4.95,
+      "tone": 4.82,
+      "hallucination": 0.676
+     }
+    }
+   },
+   "offline_weak_drafts": {
+    "n_scored": 14,
+    "n_parsed": 14,
+    "judge_failures": 0,
+    "means": {
+     "groundedness": 4.5,
+     "relevance": 4.786,
+     "actionability": 4.214,
+     "completeness": 3.643,
+     "policy_compliance": 4.929,
+     "tone": 4.857
+    },
+    "bootstrap": {
+     "groundedness": {
+      "point": 4.5,
+      "ci_low": 4.0,
+      "ci_high": 4.8571,
+      "n": 14,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "relevance": {
+      "point": 4.7857,
+      "ci_low": 4.4286,
+      "ci_high": 5.0,
+      "n": 14,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "actionability": {
+      "point": 4.2143,
+      "ci_low": 3.7143,
+      "ci_high": 4.6429,
+      "n": 14,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "completeness": {
+      "point": 3.6429,
+      "ci_low": 3.2857,
+      "ci_high": 3.9286,
+      "n": 14,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_compliance": {
+      "point": 4.9286,
+      "ci_low": 4.7857,
+      "ci_high": 5.0,
+      "n": 14,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "tone": {
+      "point": 4.8571,
+      "ci_low": 4.6429,
+      "ci_high": 5.0,
+      "n": 14,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "hallucination": {
+      "point": 0.0714,
+      "ci_low": 0.0,
+      "ci_high": 0.2143,
+      "n": 14,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_violation": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 14,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "rates": {
+     "groundedness_share_ge4": 0.929,
+     "relevance_share_ge4": 0.929,
+     "actionability_share_ge4": 0.857,
+     "completeness_share_ge4": 0.714,
+     "policy_compliance_share_ge4": 1.0,
+     "tone_share_ge4": 1.0,
+     "hallucination": 0.071,
+     "policy_violation": 0.0
+    },
+    "by_response_kind": {
+     "troubleshoot": {
+      "n": 14,
+      "groundedness": 4.5,
+      "relevance": 4.79,
+      "actionability": 4.21,
+      "completeness": 3.64,
+      "policy_compliance": 4.93,
+      "tone": 4.86,
+      "hallucination": 0.071
+     }
+    }
+   }
+  }
+ },
+ "secondary_cross_family": {
+  "judge_model": "qwen/qwen3.8-27b",
+  "systems": {
+   "resolveai_full": {
+    "n_scored": 43,
+    "n_parsed": 43,
+    "judge_failures": 0,
+    "means": {
+     "groundedness": 4.605,
+     "relevance": 3.488,
+     "actionability": 3.326,
+     "completeness": 2.86,
+     "policy_compliance": 4.837,
+     "tone": 4.372
+    },
+    "bootstrap": {
+     "groundedness": {
+      "point": 4.6047,
+      "ci_low": 4.3256,
+      "ci_high": 4.8372,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "relevance": {
+      "point": 3.4884,
+      "ci_low": 3.1628,
+      "ci_high": 3.7907,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "actionability": {
+      "point": 3.3256,
+      "ci_low": 3.0698,
+      "ci_high": 3.5814,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "completeness": {
+      "point": 2.8605,
+      "ci_low": 2.5581,
+      "ci_high": 3.186,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_compliance": {
+      "point": 4.8372,
+      "ci_low": 4.6279,
+      "ci_high": 4.9767,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "tone": {
+      "point": 4.3721,
+      "ci_low": 4.2093,
+      "ci_high": 4.5349,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "hallucination": {
+      "point": 0.0698,
+      "ci_low": 0.0,
+      "ci_high": 0.1395,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_violation": {
+      "point": 0.0233,
+      "ci_low": 0.0,
+      "ci_high": 0.0698,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "rates": {
+     "groundedness_share_ge4": 0.907,
+     "relevance_share_ge4": 0.558,
+     "actionability_share_ge4": 0.581,
+     "completeness_share_ge4": 0.279,
+     "policy_compliance_share_ge4": 0.977,
+     "tone_share_ge4": 0.953,
+     "hallucination": 0.07,
+     "policy_violation": 0.023
+    },
+    "by_response_kind": {
+     "handoff": {
+      "n": 19,
+      "groundedness": 4.42,
+      "relevance": 3.16,
+      "actionability": 3.16,
+      "completeness": 2.26,
+      "policy_compliance": 4.84,
+      "tone": 4.26,
+      "hallucination": 0.158
+     },
+     "troubleshoot": {
+      "n": 5,
+      "groundedness": 4.4,
+      "relevance": 4.8,
+      "actionability": 4.0,
+      "completeness": 4.0,
+      "policy_compliance": 5.0,
+      "tone": 4.4,
+      "hallucination": 0.0
+     },
+     "clarify": {
+      "n": 15,
+      "groundedness": 4.8,
+      "relevance": 3.4,
+      "actionability": 3.27,
+      "completeness": 3.0,
+      "policy_compliance": 5.0,
+      "tone": 4.53,
+      "hallucination": 0.0
+     },
+     "canned": {
+      "n": 4,
+      "groundedness": 5.0,
+      "relevance": 3.75,
+      "actionability": 3.5,
+      "completeness": 3.75,
+      "policy_compliance": 4.0,
+      "tone": 4.25,
+      "hallucination": 0.0
+     }
+    }
+   },
+   "B1_simple_ml": {
+    "n_scored": 43,
+    "n_parsed": 43,
+    "judge_failures": 0,
+    "means": {
+     "groundedness": 4.419,
+     "relevance": 3.302,
+     "actionability": 3.163,
+     "completeness": 2.791,
+     "policy_compliance": 4.605,
+     "tone": 4.209
+    },
+    "bootstrap": {
+     "groundedness": {
+      "point": 4.4186,
+      "ci_low": 3.9767,
+      "ci_high": 4.7907,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "relevance": {
+      "point": 3.3023,
+      "ci_low": 2.907,
+      "ci_high": 3.6983,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "actionability": {
+      "point": 3.1628,
+      "ci_low": 2.8372,
+      "ci_high": 3.5116,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "completeness": {
+      "point": 2.7907,
+      "ci_low": 2.4186,
+      "ci_high": 3.1628,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_compliance": {
+      "point": 4.6047,
+      "ci_low": 4.2326,
+      "ci_high": 4.907,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "tone": {
+      "point": 4.2093,
+      "ci_low": 4.0233,
+      "ci_high": 4.3721,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "hallucination": {
+      "point": 0.1395,
+      "ci_low": 0.0465,
+      "ci_high": 0.2558,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_violation": {
+      "point": 0.093,
+      "ci_low": 0.0233,
+      "ci_high": 0.186,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "rates": {
+     "groundedness_share_ge4": 0.86,
+     "relevance_share_ge4": 0.488,
+     "actionability_share_ge4": 0.465,
+     "completeness_share_ge4": 0.256,
+     "policy_compliance_share_ge4": 0.907,
+     "tone_share_ge4": 0.907,
+     "hallucination": 0.14,
+     "policy_violation": 0.093
+    },
+    "by_response_kind": {
+     "handoff": {
+      "n": 9,
+      "groundedness": 4.56,
+      "relevance": 3.11,
+      "actionability": 2.67,
+      "completeness": 2.11,
+      "policy_compliance": 4.89,
+      "tone": 4.0,
+      "hallucination": 0.111
+     },
+     "copy": {
+      "n": 30,
+      "groundedness": 4.47,
+      "relevance": 3.43,
+      "actionability": 3.3,
+      "completeness": 3.0,
+      "policy_compliance": 4.73,
+      "tone": 4.33,
+      "hallucination": 0.133
+     },
+     "canned": {
+      "n": 4,
+      "groundedness": 3.75,
+      "relevance": 2.75,
+      "actionability": 3.25,
+      "completeness": 2.75,
+      "policy_compliance": 3.0,
+      "tone": 3.75,
+      "hallucination": 0.25
+     }
+    }
+   },
+   "B2_direct_llm": {
+    "n_scored": 43,
+    "n_parsed": 43,
+    "judge_failures": 0,
+    "means": {
+     "groundedness": 3.163,
+     "relevance": 3.837,
+     "actionability": 3.279,
+     "completeness": 2.93,
+     "policy_compliance": 4.814,
+     "tone": 4.465
+    },
+    "bootstrap": {
+     "groundedness": {
+      "point": 3.1628,
+      "ci_low": 2.6977,
+      "ci_high": 3.6047,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "relevance": {
+      "point": 3.8372,
+      "ci_low": 3.5349,
+      "ci_high": 4.1395,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "actionability": {
+      "point": 3.2791,
+      "ci_low": 2.9767,
+      "ci_high": 3.5581,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "completeness": {
+      "point": 2.9302,
+      "ci_low": 2.6279,
+      "ci_high": 3.2093,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_compliance": {
+      "point": 4.814,
+      "ci_low": 4.5349,
+      "ci_high": 5.0,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "tone": {
+      "point": 4.4651,
+      "ci_low": 4.2791,
+      "ci_high": 4.6512,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "hallucination": {
+      "point": 0.5116,
+      "ci_low": 0.3721,
+      "ci_high": 0.6744,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_violation": {
+      "point": 0.0465,
+      "ci_low": 0.0,
+      "ci_high": 0.1163,
+      "n": 43,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "rates": {
+     "groundedness_share_ge4": 0.488,
+     "relevance_share_ge4": 0.651,
+     "actionability_share_ge4": 0.465,
+     "completeness_share_ge4": 0.233,
+     "policy_compliance_share_ge4": 0.953,
+     "tone_share_ge4": 0.953,
+     "hallucination": 0.512,
+     "policy_violation": 0.047
+    },
+    "by_response_kind": {
+     "llm_direct": {
+      "n": 36,
+      "groundedness": 2.94,
+      "relevance": 3.81,
+      "actionability": 3.42,
+      "completeness": 2.97,
+      "policy_compliance": 4.78,
+      "tone": 4.44,
+      "hallucination": 0.611
+     },
+     "handoff": {
+      "n": 7,
+      "groundedness": 4.29,
+      "relevance": 4.0,
+      "actionability": 2.57,
+      "completeness": 2.71,
+      "policy_compliance": 5.0,
+      "tone": 4.57,
+      "hallucination": 0.0
+     }
+    }
+   }
+  }
+ },
+ "rubric_version": "rubric-v1",
+ "dimensions": [
+  "groundedness",
+  "relevance",
+  "actionability",
+  "completeness",
+  "policy_compliance",
+  "tone"
+ ],
+ "binary": [
+  "hallucination",
+  "policy_violation"
+ ]
+}

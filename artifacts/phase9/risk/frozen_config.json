@@ -1,0 +1,11 @@
+{
+ "decision": "keep production risk extraction (V0): risk-flags-v2 prompt, model flags OR-merged with the deterministic rules, no corroboration",
+ "risk_schema": "compact",
+ "risk_corroborate": [],
+ "selected_variant": "V0",
+ "decided_on": "DEV only (240 holdout messages, golden excluded, seed 51); disagreement rows labelled by an AI annotator under ANNOTATION_GUIDE v1.1",
+ "rule": "pre-registered in scripts/phase9/b_risk_dev_metrics.py before any result existed; applied without modification",
+ "result": "no candidate passed: V2 and V4 lose 22 true escalations (the rules miss most explicitly stated prior attempts); V3 removes 11 unnecessary handoffs (20 of 22 removed handoffs correctly, Wilson 95% [0.72, 0.98]) but adds 2 new missed escalations, one more than the rule allows",
+ "evidence": ["artifacts/phase9/risk/risk_dev_report.md", "artifacts/phase9/risk/risk_dev_report.json", "artifacts/phase9/risk/dev_runs.jsonl", "data/dev/phase9_risk_labels.json"],
+ "frozen_before_golden": true
+}

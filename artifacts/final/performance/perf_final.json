@@ -1,0 +1,781 @@
+{
+ "protocol": "no_model      AgentConfig(use_llm=False): redaction, context, classifier, retrieval, gate, rules, policy, clarify/handoff\n  cached_model  the configured model behind the SHA-256 response cache; an unmeasured warm pass fills the cache, the measured pass replays it\n  live_random   NO cache, the production request budget (45 s), n_live random fresh DEV messages: the representative traffic mix\n  live_draft    NO cache, 45 s budget, DEV messages selected because the no-model pass found SUFFICIENT or STRONG evidence, the only\n                messages that can reach drafting. Conditional on the evidence gate and dominated by one issue, so NOT representative; it\n                exists to measure draft and verification latency. If no request drafts, the report says so instead of estimating.\nBefore every measured pass the embedding memo and the query-vector cache are cleared (the Phase 9 profiler artifact).\nPer mode: total and per-stage p50 / p95, p99 only when n >= 100 (otherwise the maximum is shown), model calls, live calls, cache hits,\ninput and output tokens, estimated cost at the list price the orchestrator uses, and how many requests drafted and verified with the model\n(a canned template marks verification \"ok\" with 0 ms, so a model-verified request is one whose verification stage took time).",
+ "machine_note": "single local CPU process; the model runs behind a remote OpenAI-compatible proxy",
+ "price_per_million_tokens_usd": {
+  "input": 1.0,
+  "output": 3.2,
+  "note": "GLM-5.2 list price; the proxy's real billing is unknown"
+ },
+ "dev_pool_rows": 1953,
+ "seed": 55,
+ "no_model": {
+  "n": 100,
+  "total_ms": {
+   "n": 100,
+   "p50": 172.6,
+   "p95": 374.0,
+   "p99": 456.9,
+   "max": 494.3,
+   "mean": 195.8
+  },
+  "stages_ms": {
+   "pii_redaction": {
+    "n": 100,
+    "p50": 0.1,
+    "p95": 0.4,
+    "p99": 0.8,
+    "max": 1.4,
+    "mean": 0.2
+   },
+   "context": {
+    "n": 100,
+    "p50": 0.2,
+    "p95": 0.6,
+    "p99": 0.8,
+    "max": 1.5,
+    "mean": 0.2
+   },
+   "intent": {
+    "n": 100,
+    "p50": 84.2,
+    "p95": 189.4,
+    "p99": 272.2,
+    "max": 291.7,
+    "mean": 95.5
+   },
+   "second_opinion": {
+    "n": 100,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "retrieval": {
+    "n": 100,
+    "p50": 97.4,
+    "p95": 198.5,
+    "p99": 304.9,
+    "max": 325.1,
+    "mean": 97.3
+   },
+   "evidence_gate": {
+    "n": 100,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "risk": {
+    "n": 100,
+    "p50": 0.9,
+    "p95": 2.2,
+    "p99": 2.7,
+    "max": 2.7,
+    "mean": 1.0
+   },
+   "policy": {
+    "n": 100,
+    "p50": 0.0,
+    "p95": 0.1,
+    "p99": 0.2,
+    "max": 0.3,
+    "mean": 0.0
+   },
+   "draft": {
+    "n": 100,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.1,
+    "max": 0.1,
+    "mean": 0.0
+   },
+   "verification": {
+    "n": 100,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "output_gate": {
+    "n": 100,
+    "p50": 0.0,
+    "p95": 0.1,
+    "p99": 0.1,
+    "max": 0.1,
+    "mean": 0.0
+   },
+   "handoff": {
+    "n": 35,
+    "p50": 0.2,
+    "p95": 0.3,
+    "p99": null,
+    "max": 0.6,
+    "mean": 0.2
+   },
+   "total": {
+    "n": 100,
+    "p50": 172.6,
+    "p95": 374.0,
+    "p99": 456.9,
+    "max": 494.3,
+    "mean": 195.8
+   }
+  },
+  "llm_calls_per_request": {
+   "n": 100,
+   "p50": 0.0,
+   "p95": 0.0,
+   "p99": 0.0,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  "mean_llm_calls": 0.0,
+  "live_calls_total": 0,
+  "cache_hits_total": 0,
+  "cache_hit_rate": null,
+  "tokens_in_per_request": {
+   "n": 100,
+   "p50": 0.0,
+   "p95": 0.0,
+   "p99": 0.0,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  "tokens_out_per_request": {
+   "n": 100,
+   "p50": 0.0,
+   "p95": 0.0,
+   "p99": 0.0,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  "cost_usd_per_request": {
+   "mean": 0.0,
+   "p50": 0.0,
+   "p95": 0.0
+  },
+  "timeouts": 0,
+  "retries": 0,
+  "budget_exhausted": 0,
+  "actions": {
+   "CLARIFICATION_REQUIRED": 62,
+   "HUMAN_HANDOFF": 35,
+   "AUTO_HANDLE": 3
+  },
+  "reasons": {
+   "low_confidence": 22,
+   "insufficient_context": 13,
+   "insufficient_evidence": 30,
+   "private_info": 7,
+   "payment_billing": 7,
+   "repeat_contact": 6,
+   "hardware": 9,
+   "none": 3,
+   "vague_hostile": 1,
+   "account_access": 1,
+   "llm_unavailable": 1
+  },
+  "evidence_levels": {
+   "INSUFFICIENT": 85,
+   "WEAK": 14,
+   "STRONG": 1
+  },
+  "model_drafted_and_verified": 0,
+  "draft_stage_ms": {
+   "n": 0
+  },
+  "verification_stage_ms": {
+   "n": 0
+  },
+  "total_ms_when_drafted": {
+   "n": 0
+  }
+ },
+ "cached_model": {
+  "n": 100,
+  "total_ms": {
+   "n": 100,
+   "p50": 256.3,
+   "p95": 635.1,
+   "p99": 1127.1,
+   "max": 3757.7,
+   "mean": 324.1
+  },
+  "stages_ms": {
+   "pii_redaction": {
+    "n": 100,
+    "p50": 0.1,
+    "p95": 0.4,
+    "p99": 1.3,
+    "max": 6.1,
+    "mean": 0.2
+   },
+   "context": {
+    "n": 100,
+    "p50": 0.2,
+    "p95": 0.7,
+    "p99": 1.3,
+    "max": 2.7,
+    "mean": 0.3
+   },
+   "intent": {
+    "n": 100,
+    "p50": 109.8,
+    "p95": 281.7,
+    "p99": 1065.6,
+    "max": 2485.6,
+    "mean": 159.2
+   },
+   "second_opinion": {
+    "n": 100,
+    "p50": 14.1,
+    "p95": 37.5,
+    "p99": 42.2,
+    "max": 68.5,
+    "mean": 13.5
+   },
+   "retrieval": {
+    "n": 100,
+    "p50": 124.1,
+    "p95": 246.6,
+    "p99": 536.4,
+    "max": 1237.5,
+    "mean": 135.2
+   },
+   "evidence_gate": {
+    "n": 100,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "risk": {
+    "n": 100,
+    "p50": 14.5,
+    "p95": 30.9,
+    "p99": 64.2,
+    "max": 68.8,
+    "mean": 13.4
+   },
+   "policy": {
+    "n": 100,
+    "p50": 0.0,
+    "p95": 0.1,
+    "p99": 0.1,
+    "max": 0.2,
+    "mean": 0.0
+   },
+   "draft": {
+    "n": 100,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.2,
+    "max": 1.8,
+    "mean": 0.0
+   },
+   "verification": {
+    "n": 100,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.1,
+    "max": 12.8,
+    "mean": 0.1
+   },
+   "output_gate": {
+    "n": 100,
+    "p50": 0.0,
+    "p95": 0.1,
+    "p99": 0.3,
+    "max": 0.5,
+    "mean": 0.0
+   },
+   "handoff": {
+    "n": 63,
+    "p50": 0.2,
+    "p95": 0.5,
+    "p99": null,
+    "max": 1.0,
+    "mean": 0.2
+   },
+   "total": {
+    "n": 100,
+    "p50": 256.3,
+    "p95": 635.1,
+    "p99": 1127.1,
+    "max": 3757.7,
+    "mean": 324.1
+   }
+  },
+  "llm_calls_per_request": {
+   "n": 100,
+   "p50": 2.0,
+   "p95": 3.0,
+   "p99": 3.0,
+   "max": 3.0,
+   "mean": 1.7
+  },
+  "mean_llm_calls": 1.66,
+  "live_calls_total": 0,
+  "cache_hits_total": 166,
+  "cache_hit_rate": 1.0,
+  "tokens_in_per_request": {
+   "n": 100,
+   "p50": 806.0,
+   "p95": 1298.2,
+   "p99": 1451.1,
+   "max": 1559.0,
+   "mean": 725.4
+  },
+  "tokens_out_per_request": {
+   "n": 100,
+   "p50": 608.0,
+   "p95": 1498.4,
+   "p99": 1744.5,
+   "max": 1889.0,
+   "mean": 617.7
+  },
+  "cost_usd_per_request": {
+   "mean": 0.002702,
+   "p50": 0.002641,
+   "p95": 0.006288
+  },
+  "timeouts": 0,
+  "retries": 0,
+  "budget_exhausted": 0,
+  "actions": {
+   "HUMAN_HANDOFF": 63,
+   "CLARIFICATION_REQUIRED": 34,
+   "AUTO_HANDLE": 3
+  },
+  "reasons": {
+   "payment_billing": 11,
+   "low_confidence": 12,
+   "insufficient_evidence": 23,
+   "hardware": 13,
+   "private_info": 6,
+   "account_access": 4,
+   "repeat_contact": 15,
+   "insufficient_context": 7,
+   "vague_hostile": 4,
+   "taxonomy_gap_risk": 1,
+   "none": 3,
+   "safety": 1
+  },
+  "evidence_levels": {
+   "INSUFFICIENT": 86,
+   "WEAK": 13,
+   "STRONG": 1
+  },
+  "model_drafted_and_verified": 1,
+  "draft_stage_ms": {
+   "n": 1,
+   "p50": 1.8,
+   "p95": 1.8,
+   "p99": null,
+   "max": 1.8,
+   "mean": 1.8
+  },
+  "verification_stage_ms": {
+   "n": 1,
+   "p50": 12.8,
+   "p95": 12.8,
+   "p99": null,
+   "max": 12.8,
+   "mean": 12.8
+  },
+  "total_ms_when_drafted": {
+   "n": 1,
+   "p50": 231.0,
+   "p95": 231.0,
+   "p99": null,
+   "max": 231.0,
+   "mean": 231.0
+  }
+ },
+ "live_draft_selection": {
+  "scanned": 1357,
+  "selected": 20,
+  "rule": "no-model evidence level SUFFICIENT or STRONG"
+ },
+ "live_random": {
+  "n": 40,
+  "total_ms": {
+   "n": 40,
+   "p50": 4166.9,
+   "p95": 14210.6,
+   "p99": null,
+   "max": 19498.1,
+   "mean": 5418.1
+  },
+  "stages_ms": {
+   "pii_redaction": {
+    "n": 40,
+    "p50": 0.1,
+    "p95": 0.4,
+    "p99": null,
+    "max": 0.8,
+    "mean": 0.1
+   },
+   "context": {
+    "n": 40,
+    "p50": 0.1,
+    "p95": 0.5,
+    "p99": null,
+    "max": 0.6,
+    "mean": 0.2
+   },
+   "intent": {
+    "n": 40,
+    "p50": 77.0,
+    "p95": 111.2,
+    "p99": null,
+    "max": 598.5,
+    "mean": 84.8
+   },
+   "second_opinion": {
+    "n": 40,
+    "p50": 1279.5,
+    "p95": 6421.0,
+    "p99": null,
+    "max": 9046.5,
+    "mean": 1989.9
+   },
+   "retrieval": {
+    "n": 40,
+    "p50": 74.7,
+    "p95": 231.3,
+    "p99": null,
+    "max": 898.4,
+    "mean": 108.9
+   },
+   "evidence_gate": {
+    "n": 40,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": null,
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "risk": {
+    "n": 40,
+    "p50": 2413.2,
+    "p95": 12167.4,
+    "p99": null,
+    "max": 13048.7,
+    "mean": 3232.5
+   },
+   "policy": {
+    "n": 40,
+    "p50": 0.0,
+    "p95": 0.1,
+    "p99": null,
+    "max": 0.1,
+    "mean": 0.0
+   },
+   "draft": {
+    "n": 40,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": null,
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "verification": {
+    "n": 40,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": null,
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "output_gate": {
+    "n": 40,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": null,
+    "max": 0.1,
+    "mean": 0.0
+   },
+   "handoff": {
+    "n": 21,
+    "p50": 0.2,
+    "p95": 0.2,
+    "p99": null,
+    "max": 0.3,
+    "mean": 0.2
+   },
+   "total": {
+    "n": 40,
+    "p50": 4166.9,
+    "p95": 14210.6,
+    "p99": null,
+    "max": 19498.1,
+    "mean": 5418.1
+   }
+  },
+  "llm_calls_per_request": {
+   "n": 40,
+   "p50": 1.5,
+   "p95": 4.0,
+   "p99": null,
+   "max": 4.0,
+   "mean": 1.7
+  },
+  "mean_llm_calls": 1.675,
+  "live_calls_total": 67,
+  "cache_hits_total": 0,
+  "cache_hit_rate": 0.0,
+  "tokens_in_per_request": {
+   "n": 40,
+   "p50": 621.0,
+   "p95": 1658.6,
+   "p99": null,
+   "max": 2070.0,
+   "mean": 738.0
+  },
+  "tokens_out_per_request": {
+   "n": 40,
+   "p50": 489.0,
+   "p95": 2227.2,
+   "p99": null,
+   "max": 3250.0,
+   "mean": 698.1
+  },
+  "cost_usd_per_request": {
+   "mean": 0.002972,
+   "p50": 0.002203,
+   "p95": 0.008264
+  },
+  "timeouts": 0,
+  "retries": 0,
+  "budget_exhausted": 0,
+  "actions": {
+   "HUMAN_HANDOFF": 21,
+   "CLARIFICATION_REQUIRED": 19
+  },
+  "reasons": {
+   "repeat_contact": 5,
+   "insufficient_context": 2,
+   "hardware": 3,
+   "insufficient_evidence": 16,
+   "low_confidence": 7,
+   "private_info": 2,
+   "payment_billing": 4,
+   "vague_hostile": 1
+  },
+  "evidence_levels": {
+   "INSUFFICIENT": 35,
+   "WEAK": 5
+  },
+  "model_drafted_and_verified": 0,
+  "draft_stage_ms": {
+   "n": 0
+  },
+  "verification_stage_ms": {
+   "n": 0
+  },
+  "total_ms_when_drafted": {
+   "n": 0
+  }
+ },
+ "live_draft": {
+  "n": 20,
+  "total_ms": {
+   "n": 20,
+   "p50": 6277.1,
+   "p95": 18224.0,
+   "p99": null,
+   "max": 32619.5,
+   "mean": 7674.6
+  },
+  "stages_ms": {
+   "pii_redaction": {
+    "n": 20,
+    "p50": 0.1,
+    "p95": 0.4,
+    "p99": null,
+    "max": 1.0,
+    "mean": 0.2
+   },
+   "context": {
+    "n": 20,
+    "p50": 0.1,
+    "p95": 0.5,
+    "p99": null,
+    "max": 0.7,
+    "mean": 0.2
+   },
+   "intent": {
+    "n": 20,
+    "p50": 106.2,
+    "p95": 238.3,
+    "p99": null,
+    "max": 330.9,
+    "mean": 118.7
+   },
+   "second_opinion": {
+    "n": 20,
+    "p50": 0.0,
+    "p95": 2938.7,
+    "p99": null,
+    "max": 6085.2,
+    "mean": 717.6
+   },
+   "retrieval": {
+    "n": 20,
+    "p50": 106.0,
+    "p95": 274.1,
+    "p99": null,
+    "max": 462.3,
+    "mean": 130.5
+   },
+   "evidence_gate": {
+    "n": 20,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": null,
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "risk": {
+    "n": 20,
+    "p50": 2574.9,
+    "p95": 5871.2,
+    "p99": null,
+    "max": 6278.4,
+    "mean": 2535.3
+   },
+   "policy": {
+    "n": 20,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": null,
+    "max": 0.1,
+    "mean": 0.0
+   },
+   "draft": {
+    "n": 20,
+    "p50": 0.0,
+    "p95": 11509.2,
+    "p99": null,
+    "max": 12107.5,
+    "mean": 2146.7
+   },
+   "verification": {
+    "n": 20,
+    "p50": 0.0,
+    "p95": 3830.8,
+    "p99": null,
+    "max": 8286.3,
+    "mean": 1137.6
+   },
+   "output_gate": {
+    "n": 20,
+    "p50": 0.1,
+    "p95": 0.2,
+    "p99": null,
+    "max": 0.2,
+    "mean": 0.1
+   },
+   "handoff": {
+    "n": 8,
+    "p50": 0.2,
+    "p95": 0.2,
+    "p99": null,
+    "max": 0.3,
+    "mean": 0.2
+   },
+   "total": {
+    "n": 20,
+    "p50": 6277.1,
+    "p95": 18224.0,
+    "p99": null,
+    "max": 32619.5,
+    "mean": 7674.6
+   }
+  },
+  "llm_calls_per_request": {
+   "n": 20,
+   "p50": 2.5,
+   "p95": 5.2,
+   "p99": null,
+   "max": 8.0,
+   "mean": 2.4
+  },
+  "mean_llm_calls": 2.4,
+  "live_calls_total": 48,
+  "cache_hits_total": 0,
+  "cache_hit_rate": 0.0,
+  "tokens_in_per_request": {
+   "n": 20,
+   "p50": 895.0,
+   "p95": 1692.2,
+   "p99": null,
+   "max": 2892.0,
+   "mean": 935.2
+  },
+  "tokens_out_per_request": {
+   "n": 20,
+   "p50": 769.5,
+   "p95": 3436.3,
+   "p99": null,
+   "max": 5133.0,
+   "mean": 1091.0
+  },
+  "cost_usd_per_request": {
+   "mean": 0.004426,
+   "p50": 0.0036,
+   "p95": 0.012688
+  },
+  "timeouts": 0,
+  "retries": 0,
+  "budget_exhausted": 0,
+  "actions": {
+   "AUTO_HANDLE": 8,
+   "CLARIFICATION_REQUIRED": 4,
+   "HUMAN_HANDOFF": 8
+  },
+  "reasons": {
+   "none": 8,
+   "low_confidence": 4,
+   "llm_unavailable": 1,
+   "repeat_contact": 5,
+   "payment_billing": 1,
+   "taxonomy_gap_risk": 1
+  },
+  "evidence_levels": {
+   "STRONG": 18,
+   "INSUFFICIENT": 2
+  },
+  "model_drafted_and_verified": 8,
+  "draft_stage_ms": {
+   "n": 8,
+   "p50": 2992.3,
+   "p95": 9204.1,
+   "p99": null,
+   "max": 12107.5,
+   "mean": 3932.1
+  },
+  "verification_stage_ms": {
+   "n": 8,
+   "p50": 1842.0,
+   "p95": 6644.8,
+   "p99": null,
+   "max": 8286.3,
+   "mean": 2844.0
+  },
+  "total_ms_when_drafted": {
+   "n": 8,
+   "p50": 10669.0,
+   "p95": 26099.7,
+   "p99": null,
+   "max": 32619.5,
+   "mean": 12256.8
+  }
+ },
+ "wall_seconds": 1107.5
+}

@@ -1,0 +1,90 @@
+{
+ "mode": "api-down",
+ "base": "http://127.0.0.1:3100",
+ "started": "2026-09-11T09:07:06.002Z",
+ "browser": "msedge 152.0.4191.66",
+ "scenarios": [],
+ "routes": [
+  {
+   "name": "api-down-overview",
+   "route": "/",
+   "status": 200,
+   "h1": "Overview",
+   "alerts": [
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol",
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol"
+   ]
+  },
+  {
+   "name": "api-down-traces",
+   "route": "/traces",
+   "status": 200,
+   "h1": "Traces",
+   "alerts": [
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol"
+   ]
+  },
+  {
+   "name": "api-down-evaluation",
+   "route": "/evaluation",
+   "status": 200,
+   "h1": "Evaluation",
+   "alerts": [
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol"
+   ]
+  },
+  {
+   "name": "api-down-simulate",
+   "route": "/simulate",
+   "status": 200,
+   "h1": "Try ResolveAI",
+   "alerts": [
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol"
+   ]
+  }
+ ],
+ "interactions": [
+  {
+   "name": "sidebar agent status shows API unavailable",
+   "ok": true
+  }
+ ],
+ "axe": [
+  {
+   "name": "api-down-overview",
+   "url": "http://127.0.0.1:3100/",
+   "violations": []
+  }
+ ],
+ "overflow": [],
+ "consoleErrors": [
+  {
+   "url": "http://127.0.0.1:3100/",
+   "text": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+  },
+  {
+   "url": "http://127.0.0.1:3100/traces",
+   "text": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+  },
+  {
+   "url": "http://127.0.0.1:3100/evaluation",
+   "text": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+  },
+  {
+   "url": "http://127.0.0.1:3100/simulate",
+   "text": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+  }
+ ],
+ "failures": [],
+ "finished": "2026-09-11T09:07:20.465Z",
+ "summary": {
+  "routes": 4,
+  "scenarios": 0,
+  "scenarioFailures": 0,
+  "interactionsFailed": [],
+  "axeViolations": 0,
+  "pagesWithOverflow": 0,
+  "consoleErrors": 4,
+  "failures": 0
+ }
+}

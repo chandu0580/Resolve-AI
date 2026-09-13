@@ -1,0 +1,443 @@
+example_id,conversation,evidence,candidate_response,human_groundedness,human_relevance,human_actionability,human_completeness,human_policy_compliance,human_tone,human_hallucination,human_policy_violation,human_notes
+ex04f99ade,"Earlier thread (oldest first):
+brand: Thanks for reaching out an including the photo for us! We can definitely look into this further with you. Let us know if this helps: <url>
+customer: It's still not working any site social media related crashes talking a ""secure connection to the server""
+customer: App or website. Even when I used Google chrome. It's the phone
+brand: Does this happen when using both Wi-Fi and cellular data?
+Current customer message: Yes today when I went to Apple for help everything worked once connected to the Apple store WiFi and as soon as I left it started acting stupid again","[E1] customer: I already connected my iPhone to a cellular data and try different wifi networks but it still doesn’t work in apple store app ... but the order page in apple website works fine .. there’s an issue in 
+     brand reply: If it's having trouble, then we would suggest that you remove the app and re-download it to see if it connects. If not, then let us know: <url>
+[E2] customer: dear Lord the new OS is buggy. How do you miss that the WiFi toggle in the command center doesn’t work?? #iphone
+     brand reply: You're in the right place for help. May we get a description of what happens when trying to toggle Wi-Fi in control center?
+[E3] customer: This new iOS totally sucks. The whole Wi-Fi turning itself back on every time I change locations... why ? Who wanted that?
+     brand reply: Are you turning Wi-Fi off from Settings? If using Control Panel, that is expected. Check <url> for details.
+[E4] customer: Hey ive just updated my MacBook and now it won’t connect next to any WiFi. Is this a problem everyone’s having?
+     brand reply: Hey there. Let’s work together to get your MacBook connected to Wi-Fi. Since noticing this, have you had a chance to restart? This may seem like a simple step, but giving your MacBook a fresh start can resolve minor issues.
+[E5] customer: ever since I’ve updated to the new iOS my WiFi has been shit on my iPhone & iPad, but everything else I have connected is fine. When I FaceTime people it just says reconnecting or disconnects...
+     brand reply: We’d like to help get you back to enjoying your devices. Does this happen with every Wi-Fi network you connect with?",We'd like to help with this. A member of our team will follow up with you directly.,4,4,4,4,4,4,0,0,
+ex075a8969,Current customer message: Anyone ever seen a MacBook do this? Only happens for a split second when I exit standby and pretty sure it only started doing it since I updated to High Sierra. ? <url>,"[E1] customer: I did that, but its still happening on my iPhone, iPad Pro, iMac, and MacBook Pro. Its infuriating.
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E2] customer: Does anyone else's MacBook Pro crash several times daily after updating to High Sierra? Losing an insane amount of work daily for not saving every 5 minutes.
+     brand reply: That's not the type of experience that we'd like for you to have while using your computer. Does this occur while performing a particular task or using a certain application?
+[E3] customer: MacBook just crashed on me. This is beginning to be an expensive holiday season.. help 😩
+     brand reply: You're in the right place for help, and we're glad to lend a hand. Is your Mac unable to power on, or are you having another specific issue? What specific MacBook are you using and what macOS is running?
+[E4] customer: Second time in a day and more than ten times in a week that #iMac freezes after update to #highSierra. #macOS #highSierra sucks!
+     brand reply: Hey, we want to help you get your Mac back up and running smoothly. Does this happen while using any apps in particular?
+[E5] customer: When I restart my mac it works fine, but after a while it happens again.
+     brand reply: Which version of macOS do you have installed on your Mac? You'll see this by going to the  > About This Mac > Overview.","We'd like to help. Could you tell us which device you have, which software version it's on, and exactly what's happening?",5,4,4,4,4,5,0,0,
+ex0a913a82,Current customer message: Can I use my wired printer having USB on my MacBook pro which has has c type?..Pls suggest if USB hub and c-type to USB female will work for it?,No historical evidence was available to the system.,"Hi! Yes, you can use a USB-C to USB adapter (also called a USB-C to USB-A adapter) to connect your wired printer to your MacBook Pro. A USB hub with USB-C input would also work. Just plug the adapter into your Mac, then connect your printer's USB cable to it. Let us know if you n",3,5,5,4,5,5,0,0,
+ex0abb5c27,"Current customer message: hey there, what do I️ need to do to fix the question mark in a box and exclamation point that pops up when I️ use the “I️” word?? #QTA","[E1] customer: why does every time I️ it makes that exclamation point and a box with a question mark in it?
+     brand reply: We're happy to help. Check out this article for steps to help with this issue: <url>
+[E2] customer: So I️ typed “I️” and corrects it to A and a question mark? What? This is new to me since 11.1 update today. 👀👀👀 <url>
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url> <url>
+[E3] customer: then why are my I️ showing up as a question mark and a A with a box around it. I️ 🤬🤬🤬🤮 I️ <url>
+     brand reply: Hello. Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E4] customer: you need to fix the ‘ I️ ‘ from doing that box with the question mark.
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E5] customer: every time i️ go to use the “i️” button it turns to the exclamation point and question mark. i’m fed up with Apple making phones not work & act up when new phones are on the market.
+     brand reply: To help resolve this issue we recommend backing up, then updating to iOS 11.1.1. You can learn more about this issue, and how to update, here: <url>",Here’s what you can do to work around the issue until it’s fixed in a future software update. You can find the steps on our support site.,5,5,3,3,5,5,0,0,
+ex0c78db74,Current customer message: thanks to ur senior developers I am stranded in Thailand without cellular access on my iPhoneX 😡🤬😩😤 case <PHONE> they erroneously transferred my # back to my 7... IN THE STATES!!,"[E1] customer: you lost my #iPhoneX and you have no support. I called all your numbers. So unprofessional. I am just angry right now for using your service and not or #support #CustomerService #delivery #angry #sad 
+     brand reply: Thanks for reaching out to us. We'd like to help get you in contact with our Apple Online Store Support for further help. Check out this link to contact them: <url>
+[E2] customer: I attempted to update my iPhone, the shit froze on the apple logo screen & now I'm without a phone. thank you 😁
+     brand reply: Hi. We're here for you. Have you check out the steps under ""if the update doesn't complete"" here: <url>
+[E3] customer: really must have something against the capital “I️” First, it was their naming convention, now, this stupid #iPhone glitch. #StopIt
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E4] customer: Hey not sure if you heard, but the #iPhoneX came out today. Maybe fix the activation server? Now, please. <url>
+     brand reply: Let's work together to your iPhone X activated so you can start enjoying it. Let us know in what country you're located to start.
+[E5] customer: so upset from you people. I just came from Kansas City apple branch. They told you have to have social security number to reserve the new I phone X. And I am international student and want to get one.
+     brand reply: We’d like to get you in touch with our Apple Online Store team for further assistance. <url> The iPhone X has created high demand for this team. If you're unable to get through on the first try, please keep trying. We appreciate your patience.","We'd like to help. Could you tell us which device you have, which software version it's on, and exactly what's happening?",5,5,3,3,5,5,0,0,
+ex13e58acd,"Current customer message: Fallas en Mail y Contactos con actualización MacOS High Sierra. Mail me borró las ""firmas"" de todas las cuentas. En Contactos mientras doy de alta un nuevo contacto se sale de la pantalla de captura","[E1] customer: Hola ! Me llegó un mail con esta compra que NO realicé. 😕 Necesito el IP desde donde se originó la misma. <url>
+     brand reply: Hey there! Questions about purchases should be directed towards our iTunes Support team: <url>
+[E2] customer: Eita, , esse High Sierra atrapalhando meu trabalho, deixando TUDO mais lento e derrubando os aplicativos abertos. Só estou esperando acabar o projeto atual e volto para o El Capitan.
+     brand reply: Since our Twitter support is available in English, get help at <url> or join <url>
+[E3] customer: Oye aplicate y ya arregla el bug del bluetooth.
+     brand reply: We offer support via Twitter in English. Get help in Spanish here: <url> or join: <url>
+[E4] customer: Cómo se hace una captura de pantalla en IOS??
+     brand reply: We offer support via Twitter in English. Get help in Spanish here: <url> or join <url>
+[E5] customer: Menuda santa mierda la última actualización de IOS... que desastre.... no se puede ni usar el móvil 😵😔🔪
+     brand reply: We offer support via Twitter in English. Get help in Spanish here: <url> or join <url>",We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact,5,5,5,4,5,5,0,0,
+ex1a00d908,"Earlier thread (oldest first):
+customer: is there a trick to deleting apps now? whenever I press and hold I only get an option to share it 🤔
+brand: We can help with this. It sounds like you're encountering 3D Touch. You'll want to do a lighter tap and hold to delete the apps from the Home screen in this fashion. You can also adjust 3D Touch's sensitivity from Settings > General > Accessibility > 3D Touch, if needed.
+Current customer message: Thank you!",No historical evidence was available to the system.,You're welcome! We're glad we could help. Feel free to reach out anytime if you have more questions. 😊,5,5,3,5,5,5,0,0,
+ex1b0c2f96,Current customer message: iOS 11.1.2 has left my phone unusable:,No historical evidence was available to the system.,"I'm sorry to hear iOS 11.1.2 has made your phone unusable. We'd like to help get this sorted. Can you tell us more about what's happening? For example, is it freezing, crashing, or not starting up? The more details you share, the better we can assist.",5,5,5,4,5,5,0,0,
+ex1cf64bfa,Current customer message: Something is wrong with my phone. I’m on my old phone but my new phone (the X) keep restarting like wtf,"[E1] customer: hey , your new update is crap. my iPhone SE is a year old and I’ve had to restart it at least 8 times today. constant freezing.
+     brand reply: Hey there! Thank you for contacting us for support. Does this behavior occur within a particular app or randomly?
+[E2] customer: Ever since I got the iPhone update my phone won’t stop freezing. Thx
+     brand reply: Hello. We’re available to assist with your iPhone. Which app are you using when this happens?
+[E3] customer: so I update my iPhone 7 and a couple days later, my phone freezes, shuts down and keeps doing this. Nope I’m not buying the X
+     brand reply: We can help with the iPhone performance. Could you tell us what iOS version you're currently on? <url>
+[E4] customer: Anybody else having iPhone issues after this new update? My phone keeps on freezing 😫 the time disappears <url>
+     brand reply: Let's work on this together. When exactly did you start to notice this happening? Which device are you using?
+[E5] customer: My phone keeps on freezing for like a couple of minutes constantly. Shutdown/restarts don’t work. iPhone 7 -32GB
+     brand reply: Your iPhone is important to you; we'll do all we can to help. To start, may we know what iOS version is currently installed?","We'd like to look into this with you. Because we'll need some details about your device or account, a member of our team will follow up with you directly.",3,4,2,2,4,5,1,0,
+ex233b18a5,Current customer message: I updated my iOS and lost all my pictures from my first two days in Rome. I’m so mad st y’all,"[E1] customer: lost all my sentimental pictures due to your update🖕🏼😡😡😡 #ShouldWarnToBackUp
+     brand reply: We can work together to figure this out. Do you have your photos synced with iCloud? Check here: <url>
+[E2] customer: Wow okay updated my phone and magically lost 800 photos. Cool really cool
+     brand reply: We'd like to look into this with you! Do you use iCloud Photo Library? Have you connected to Wi-Fi since installing the update?
+[E3] customer: Bro I backed up my phone and had to restore it. Now my pictures are gone. Fuck you
+     brand reply: We understand the importance of having all of your photos, and we want to help! What model of iOS device are you using? Was this an iCloud Backup or an iTunes Backup? <url>
+[E4] customer: Really regretting updating to the new iOS. My phone has more glitches and is slower than ever. I’m done with you
+     brand reply: We want to see how we can help you with your iPhone. Can you tell us what you mean by glitches?
+[E5] customer: please explain why i updated my phone and now i only have 20 fucking pictures 😡😡😡
+     brand reply: We'll do all we can to assist. At Settings > General > About > Available, how much space is listed? Are you using iCloud Photo Library?",We'd like to help with this. A member of our team will follow up with you directly.,3,4,2,2,4,5,1,0,
+ex23896bca,Current customer message: help me fix my mac,"[E1] customer: Can you please help me fixing this in my mac! <url>
+     brand reply: We’re happy to help get your MacBook Pro starting up. Take a look at this article and let us know if that resolves your issue: <url>
+[E2] customer: MacBook just crashed on me. This is beginning to be an expensive holiday season.. help 😩
+     brand reply: You're in the right place for help, and we're glad to lend a hand. Is your Mac unable to power on, or are you having another specific issue? What specific MacBook are you using and what macOS is running?
+[E3] customer: Need to find myself a Mac Daddy. Read: someone to buy me a new computer because mine just crashed on me.
+     brand reply: Please tell us more about what you're experiencing with your Mac. We'd be more than happy to help.
+[E4] customer: hi my MacBook did an automatic software update and now won't start up please can you help cos I can't afford this
+     brand reply: Thanks for reaching out to us. We're here to help get your Mac started up. What are you seeing on the screen when you start the Mac up?
+[E5] customer: wassup man I️ tried to update my MacBook an my shit crashed 🤦🏽‍♂️
+     brand reply: We can help! Let us know what you currently see on screen & we'll go from there.","We'd like to look into this with you. Because we'll need some details about your device or account, a member of our team will follow up with you directly.",3,4,2,2,4,5,1,0,
+ex2b64f55b,"Earlier thread (oldest first):
+customer: can you update something so my phone doesn’t keep shutting off every 15 seconds please?!
+brand: We’ll do everything we can to help you sort this out as quickly as possible. This article goes over how to resolve the problem with your iPhone restarting on its own: <url>
+Current customer message: Thank you!!","[E1] customer: I don't understand how can come out with a new phone every two seconds but they can't send us an update to fix the dumb bug. It's been way too long and I'm over it.
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E2] customer: I️ am tired of my phone doing I️t. Any help?
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url> <url>
+[E3] customer: So when is releasing the update to fix our phones because I’m getting tired of this: “I️” and my phone slowing down.
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E4] customer: IM SICK AND TIRED OF MY PHONE CHANGING I TO I️ AND NOT HAVING A SOLUTION fix this pls
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E5] customer: your latest software update makes my phone freeze and turn off every 15 minutes. How can this be fixed?
+     brand reply: We'd like to help with this. What model phone are you using and what's the exact iOS version?","You're welcome! If anything else comes up, we're here to help.",5,5,3,5,5,5,0,0,
+ex2db71298,Current customer message: Why does the iPhone have “I.T” as the autocorrect for “it”??!,"[E1] customer: every time i type the letter ‘I’ it autocorrects it to: I️
+     brand reply: We've recently released an update to fix this. We do recommend creating a current backup of the data on your device before updating. Here's more about the new update: <url> Let us know if this helps. <url>
+[E2] customer: why is “I” on my iPhone autocorrecting to an A and a box with a question mark in it?
+     brand reply: Thanks for reaching out. This workaround will help until this issue is resolved in a future update: <url>
+[E3] customer: how do I fix the “I.t” I just want to type “it” 😭😭
+     brand reply: Let's be sure we've got iOS 11.1.1 installed. It was released recently and includes some fixes for autocorrect issues. You can check that in Settings > General > About. If not, you can backup and install it now. How to back up: <url>
+[E4] customer: WHY DOES AUTOCORRECT ALWAYS CHANGE ""it"" to ""I.T"" !?!?!?
+     brand reply: We want to help you with this issue. If you haven’t yet, please back up your device and update it to the latest version iOS 11.1.1.
+[E5] customer: Why is my phone autocorrecting the word it to spell i.t ?
+     brand reply: Thanks for reaching out! Check out this article for information on managing autocorrect: <url>",We've recently released an update to fix this. We do recommend creating a current backup of your data on your device before updating. Let us know if this helps.,5,5,5,4,5,5,0,0,
+ex30e074ee,"Earlier thread (oldest first):
+customer: why don’t the activity rings on my Apple Watch sync with the Workout app for walking!?!!?
+brand: Let's look into this together. When you start walking do you start the workout in the Workout app? Here's an article to help with this: <url>
+Current customer message: Yes, I’ve used this app for two years.","[E1] customer: This is the second time I’ve deleted and reinstalled. It seems to be refreshing the timeline for now.
+     brand reply: To verify, have you checked to make sure the app is updated from the App Store?
+[E2] customer: Yes I have, I have even deleted apps and still the notification won't disappear
+     brand reply: Thank you for letting us know that. Please DM us with which iPhone you have. <url>
+[E3] customer: Yes, it happens constantly and has done through several software updates. It's a great app otherwise!
+     brand reply: So we're on the same page, can you tell us what iOS version you're using? Also, does restarting the device help?
+[E4] customer: No I haven’t. I’m using iPhone 7 Plus
+     brand reply: Any issues browsing in Safari? What about trying a restart: <url>
+[E5] customer: Well that seems to have worked so far. Thanks for the response 👍🏻👍🏻 I am happy I can use I again...
+     brand reply: We're glad you're able to use it as well. Please feel free to reach out to us anytime you need assistance.",We'd like to help with this. A member of our team will follow up with you directly.,3,3,2,2,4,5,1,0,
+ex3579be49,"Earlier thread (oldest first):
+customer: I️ used lomography 100 speed film for the last pics I’ve posted. Honestly I️ wasn’t so crazy about it. I️ highly doubt I’ll use it again. 🤷🏽‍♀️
+Current customer message: Why tf is this glitch still fuckn up? what do I️ need to do. This shit is annoying. 😩","[E1] customer: this i️ glitch is fuckin me up
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E2] customer: Yeah that’s some bull. I’m sick of this glitch. needs to fix it NOW! <url>
+     brand reply: Let's take a look at this. We'd like to have you try the following steps and let us know if it helps: <url>
+[E3] customer: When is this stupid glitch going to go away ????!!!!! I️ hate
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E4] customer: When is going to fix this damn glitch . I’m so over it now 🙄🙄🙄
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E5] customer: Okay seriously FIX THIS STUPID GLITCH. <url>
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>",We understand how frustrating this is. Here's what you can do to work around the issue until it's fixed in a future software update: check the steps on our support site. Let us know if that helps!,5,5,3,3,5,5,0,0,
+ex36a91c41,"Earlier thread (oldest first):
+customer: my Bluetooth doesn’t work
+brand: We can help with your Bluetooth! Tell us what's not working with it, please. Are you getting an error?
+customer: My iPhone
+brand: Would you please tell us more about what you're experiencing with your iPhone and Bluetooth? We'd like to help if we can.
+Current customer message: I can’t sync up with anything","[E1] customer: It says connected but it won’t load anything??
+     brand reply: What error messages are you getting when you try to use the internet while on Wi-Fi? Does this happen with multiple networks?
+[E2] customer: Nono. Even after multiple restart it won’t connect... 😰 <url>
+     brand reply: Let's check this out. Have you tried different internet connections?
+[E3] customer: But I still can't get my music synced. MY music.
+     brand reply: When you connect your iPod to iTunes, does the screen show Sync Music like in step 5 of this article? <url>
+[E4] customer: I’m unable to sync my notes from one of my Macs to iPad or other Mac. Is iCloud down?? Tried various different things.
+     brand reply: iCloud is up and running: <url> Tell us what happens when you try to sync Notes, and we’ll help out.
+[E5] customer: help !! I can’t sync my new iPod so can’t get all my music into it 😩😩😩😩 it’s driving me CRAZY
+     brand reply: Help is here! Let's get your music synced to your new iPod together. To start, what happens when you try to connect with iTunes? Are you receiving any messages on your computer screen or on your iPod?",What error messages are you getting when you try to use the internet while on Wi-Fi? Does this happen with multiple networks?,4,2,2,2,5,5,0,0,
+ex39361d0e,Current customer message: my iPad Pro touch screen stopped working not had it 12 months but no receipt - I'm screwed aren't I,"[E1] customer: any idea why the touch screen on my iPhone7 has just decided to stop working lock still works just not the screen
+     brand reply: We're here for you. When using the device unlocked, do you experience any issues? Anything on the display?
+[E2] customer: My 6 month old IPhone 6 touch screen is unresponsive. please help!
+     brand reply: We're happy to help. What version of iOS are you currently running? Find that in Settings > General > About.
+[E3] customer: My touchscreen stops working randomly
+     brand reply: We want to help. What device and version of iOS is this issue occurring with?
+[E4] customer: what have you done to #iOS upgraded my mums iPad #broken <url>
+     brand reply: We're here to help. Just to confirm. Does the iPad not boot past the Apple logo after updating?
+[E5] customer: guys I’ve had this iPad Pro 6 weeks and the screen has bowed out - very disappointing <url>
+     brand reply: Thanks for reaching out to us. Please send us a DM and we can follow up with you there. <url>",We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.,3,4,2,2,4,5,1,0,
+ex39bc40ba,Current customer message: I have an open case and it is falling on deaf ears. My 17 MBP keeps frying (smoke & all) my USB SD card readers. Please help!,"[E1] customer: Thank you for your offer to help. Checked your forum & found the solution in cleaning out my ports. Your hardware is bulletproof 😉
+     brand reply: Nice work! If you need us down the road, message us. We're here from 5am until 8pm Pacific time, and always happy to help.
+[E2] customer: This is most definitely not the time for my MacBook to die on me... please help me! <url>
+     brand reply: We’re here for you. To be sure we’re on the same page, will your MacBook not power on?
+[E3] customer: Sadly, if doesn’t get this software issue fixed, I’m jumping to the note 8. My battery won’t last even 7 hours. 😢
+     brand reply: We'd be glad to work with you to figure out what's happening. Let's start with these steps: <url>
+[E4] customer: It refuses to recognize the charger is in the phone unless I push it in hard, and then when I let it go, it pretends like it got jarred loose out of the port.
+     brand reply: Have you checked for any debris in your charging port? Is there another charger that you can use with your iPhone to see if the issue persists?
+[E5] customer: I’ve been having the same issue. Plus this keeps popping up every 2 secs. It’s the charger the phone came with!! 🤦🏻‍♀️😔 <url>
+     brand reply: Let's get you some help with that! If you haven't seen it already, please check out the info here: <url>",We'd like to help with this. A member of our team will follow up with you directly.,4,5,2,2,4,5,0,0,
+ex411fcea8,Current customer message: why ios 11.1.2 often self rebooting? It back to passcode again,"[E1] customer: Thanks for this but before I updated to #iOS11 I didn’t ever have a problem. So far today I’ve rebooted 4 times
+     brand reply: Have you had a chance to follow the steps listed in that article to help resolve the issue?
+[E2] customer: iPhone 8, I’ve rebooted and it’s still persisting
+     brand reply: Have you noticed if this is happening while you are in the app or while you are listening to music and using other apps?
+[E3] customer: iOS 11.1.1 and yes, it’s turned off in settings but when I reboot it comes back on. Phone model is iPhone 8+
+     brand reply: Thank you! So you're not touching the Bluetooth quick-disconnect button in the Control Center at all, you only use the power button in Settings > Bluetooth to turn it on/off, is that right?
+[E4] customer: I hate #iOS11 so much. It just keeps rebooting my #iPhone. Anyone else have the same problem?
+     brand reply: This is certainly not the behavior we want you to experience. Could you tell us which iPhone and iOS 11 version you're using?
+[E5] customer: Thanks for auto updating me to iOS11, then bricking my password app. Now totally screwed! Will go when I upgrade.
+     brand reply: We want to help you out as much as possible. If an app stops working, take a look at this article for help: <url>",Have you had a chance to follow the steps listed in that article to help resolve the issue?,3,4,3,3,4,5,0,0,
+ex4bae1d5e,Current customer message: fix the fcking I problem I’m tired of seeing question marks on my damn timeline,No historical evidence was available to the system.,"We're sorry for the frustration! That 'I' showing as a question mark is a known issue. Try going to Settings > General > Keyboard > Text Replacement, and add 'I' as both the phrase and shortcut. Updating to the latest iOS version can also help. Let us know if that works!",1,5,4,4,3,5,1,0,
+ex4d151220,"Current customer message: hey, i’m having an issue with my emojis",No historical evidence was available to the system.,"Hi! We'd love to help with your emojis. Could you share a bit more about what's happening? For example, are they not displaying correctly, missing from your keyboard, or something else? The more detail you can provide, the better we can assist!",5,5,5,4,5,5,0,0,
+ex585af068,"Earlier thread (oldest first):
+customer: Pues yo ayer estuve intentando hacerlo. Pero siempre error 3194 Así que no se como hacer retorno a 10.3.3
+customer: se supone que todavía está firmada.
+customer: Pues a mi me da de que aunque aparezca como firmada, no es posible instalar en mi 6s. Toda una pena, puesto que mi móvil dura cargado unas 4 horas. Antes haciendo lo mismo todo el día. Es inadmisible lo que están haciéndonos los de <url>
+customer: Pudiste restaurarlo? A mi me sale el mismo error igual se supone que sigue firmado
+Current customer message: tengo el iPhone 7 plus, no me permiten ni descargar el archivo iPSW","[E1] customer: Odio iOS11 mi iPhone no prende. Pónganse a trabajar, soluciones los problemas!!!
+     brand reply: We offer support via Twitter in English. Get help in Spanish here: <url> or join <url>
+[E2] customer: só tenho 5 meses de uso do iPhone 7 , e já está apresentando problema 😡
+     brand reply: Since our Twitter support is available in English, get help at <url> or join <url>
+[E3] customer: Con iOs 11.1 se soluciona el problema de la batería ??? Seguro??? 🤬🤬 <url>
+     brand reply: We offer support via Twitter in English. Contact us for help in your preferred language here: <url>
+[E4] customer: Ainda tenho drenagem negativa dab#Bateria do #Iphone7Plus que está no #IOS 11.1.1 corrija por favor
+     brand reply: Since our Twitter support is available in English, get help at <url> or join <url>
+[E5] customer: Recuerdo con gran emoción cuando la batería de mi #iPhone duraba todo el día y más... desde #ios11 no llego ni a las 7 de la tarde... y la actualización 111 no cambio nada ... :(
+     brand reply: We offer support via Twitter in English. Get help in Spanish here: <url> or join <url>",We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact,5,4,5,3,5,5,0,0,
+ex59d6868f,Current customer message: Que se passe-t-il avec #Apple music ?? Impossible de se connecter. Écran blanc.. <url>,"[E1] customer: IOS 11 c’est un véritable carnage pour la batterie mais c’est du jamais vu je charge mon tel 3 à 4 fois/jour
+     brand reply: We offer support via Twitter in English. Contact an advisor for help in your preferred language here: <url>
+[E2] customer: Oye aplicate y ya arregla el bug del bluetooth.
+     brand reply: We offer support via Twitter in English. Get help in Spanish here: <url> or join: <url>
+[E3] customer: Bon ça va 2min avec le wifi et le Bluetooth qui s’activent tout seuls la . Votre iOS 11 de merde la
+     brand reply: We offer support via Twitter in English. Contact us for help in your preferred language here: <url>
+[E4] customer: nuevo parche de IOS y Apple Music dejo de funcionar ...
+     brand reply: We offer support via Twitter in English. Get help in Spanish here: <url> or join <url>
+[E5] customer: Só queria comprar umas musicas, já que o iTunes bugou no computador
+     brand reply: Since our Twitter support is available in English, get help at <url> or join <url>",We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact,5,4,5,3,5,5,0,0,
+ex5c8e88b5,Current customer message: iOS 11.1.2 has left my phone unusable:,"[E1] customer: the new update glitches my phone all the time. Fix that
+     brand reply: Let's get this figured out. Have you tried to restart? Have you backed up and updated to iOS 11.0.2? <url>
+[E2] customer: aye bruh my phone done froze like 5 times under the IOS update was up with that y'all straight?
+     brand reply: We're here to help. Is this happening with a specific app? Do you have iOS 11.0.3? When did you install the update?
+[E3] customer: why don’t you fix the update that you forced me to get. Restarting my phone isn’t fun. #hellodroid #byeiphone
+     brand reply: Let us help out. Tell us more details about what you're experiencing. Also, which version of iOS 11 are you running?
+[E4] customer: this update has my phone glitching, freezing, shutting off, not responding, and just entirely not working fix this please
+     brand reply: We know how essential it is to have your device performing as expected. Can you provide which iOS version you're using?
+[E5] customer: My phone is glitching so much. Freezing and everything out of NOWEHRE! What the fuck
+     brand reply: Let's work together to figure this out. What iPhone model and iOS version do you have?","We'd like to help. Which device and iOS version are you on, and does the freezing or restarting happen in one app or everywhere?",5,5,5,4,5,5,0,0,
+ex60a6b5a0,Current customer message: Why are there pics in my phone that i can’t even use this is retarded,"[E1] customer: Dear please fix the “I” problem. We pay you too much damn good money to have us out here looking stupid. Fix the software without us having to do some hack. Thank you - A potential Samsung Customer
+     brand reply: An update has been released to assist with this issue. If you haven’t yet, please back up your device and update it to iOS 11.1.1. For more info, check out: <url>
+[E2] customer: FIX THIS FUCKING “I️ ❔” BULLSHIT
+     brand reply: An update has been released to assist with this issue. If you haven’t yet, please back up your device and update it to iOS 11.1.2. For more info, check out: <url>
+[E3] customer: y’all smoking dick man this pose to be the best phone I️ can’t even use the letter I️ Wtf man
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E4] customer: Bro my phone was not acting up with the letter i until today wtf
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url> <url>
+[E5] customer: Alright #iPhone users, what is this nonsense and why am I seeing it everywhere!? <url>
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>",We'd like to help. Could you tell us which device you have and exactly what's happening?,5,3,3,3,5,5,0,0,
+ex61130a1c,Current customer message: is this you? <url>,"[E1] customer: <url>
+     brand reply: We’re here for you. Here’s a work around for the issue until it’s fixed in a future software update: <url>
+[E2] customer: hey guys, is this real? <url>
+     brand reply: We're here for you. Check out this article for help identifying legitimate emails: <url>
+[E3] customer: Yo why is this happening? <url>
+     brand reply: We can partner with you on this. Check out these steps for help with what you're seeing: <url>
+[E4] customer: what’s going on <url>
+     brand reply: Let's help get this resolved. Check out the steps here: <url> and keep us posted.
+[E5] customer: I’m assuming this isn’t really you. <url>
+     brand reply: Thanks for reaching out. You're right! This isn't from us. We recommend reporting this message by following the steps in this link: <url>","Thanks for telling us, and we're sorry you're dealing with this. A member of our team will take this up with you directly right away.",2,2,1,1,3,5,1,0,
+ex61f3d1f8,"Current customer message: Hi there, since I 've update my Mac pro late 2013 (GPU AMD FirePro D300 ) to OS El Capitan I 'm experimenting sporadicly freezes of the computer that force me to turn it off by pressing the power button :( Do you have any solution to this annoying issue ? Thanks","[E1] customer: my macbook pro won't turn on but i can hear it try to start up but it can't. Tried doing the shift, cmd, opt, power thing and nothing is working
+     brand reply: Let's see what we can do to get this resolved. Sounds like you reset the SMC on your Mac. This is a great and important step for this issue so we want to make sure you followed our recommended steps. Did you complete the exact steps here: <url>
+[E2] customer: My MacBook keeps freezing during installation of the new update and I have no idea what to do tbh
+     brand reply: Let's help. When are you seeing the freezing occur? What do you see on the display? What do you do when it freezes?
+[E3] customer: It’s an MLH32N/A on the latest public release of High Sierra. I tried a restart, resetting the SMC and tapping the Touchbar a couple of times 😉
+     brand reply: Is macOS 10.13.1 installed and are there any updates showing ready to download in your Mac's App Store > Updates section? Have you tried testing for the same issue in another app or in macOS Recovery mode?
+[E4] customer: MacBook just crashed on me. This is beginning to be an expensive holiday season.. help 😩
+     brand reply: You're in the right place for help, and we're glad to lend a hand. Is your Mac unable to power on, or are you having another specific issue? What specific MacBook are you using and what macOS is running?
+[E5] customer: Made me update the software on my MacBook Pro and now it keeps crashing wtf
+     brand reply: We want to help, as that's not the experience we want for you. When you power up your device, does it boot to the user screen or is something else happening?","We'd like to help. Could you tell us which device you have, which software version it's on, and exactly what's happening?",5,5,4,4,5,5,0,0,
+ex67522283,"Current customer message: Alright, real talk. Has ’s service been down a bit in St. George, UT or is not so secretly sabotaging my 6S+ now that the newer phones are out??","[E1] customer: I’ve updated my 6s, now it’s slow and glitchy. Can’t expect ppl to buy these phones and then only let them work for 18 months😓
+     brand reply: We'd be happy to look into this with you. Can you let us know the exact version of the iOS you're running?
+[E2] customer: Ya that one and thanks! Actually I just noticed there is an update so maybe that’s why. I can try that when I’m in WiFi and get back to you. LOVING the 7plus!
+     brand reply: We look forward to hearing how this turns out for you and we're glad you're enjoying your iPhone 7 Plus.
+[E3] customer: It's on the latest version of iOS, already checked for carrier updates and even restarted it. I noticed that my phone lags sometimes too.
+     brand reply: Great troubleshooting so far. We're happy to continue with you. Does this usually happen in the same areas?
+[E4] customer: My phone was working just fine until the new one came out. Thx
+     brand reply: We want to hear more. What's going on with your iPhone? Fill us in and we'll see how we can help.
+[E5] customer: This is probably ‘s worst fucking update. You guys suck. I need a new phone right now.
+     brand reply: We want to help improve your experience with your iPhone. What type of issues are you experiencing?",We'd be happy to look into this with you. Can you let us know the exact version of the iOS you're running?,5,5,5,4,5,5,0,0,
+ex6d588182,"Earlier thread (oldest first):
+customer: Home app only works on 1 device at a time. What kind of garbage is this?
+brand: Thanks for reaching out. Can you tell us a bit more about what's happening? You can learn more about the Home app and how it works here: <url>
+Current customer message: Both have Keychain and Home turned on in iCloud settings. Tried turning off/on, rebooting. No change.","[E1] customer: Why can’t I turn off the iCloud backup ? <url>
+     brand reply: Let's look into this together. We see that you're connected to cellular data? Do you experience the same issue when connected to a Wi-Fi network?
+[E2] customer: Sadly, it does not help. I am on WiFi, plugged in, have plenty of storage and iCloud backup is available.
+     brand reply: What message or error do you receive when it times-out and stops?
+[E3] customer: Thanks for responding! I’ve updated and turned my iCloud Photo Library off then back on that seemed to help. 😁
+     brand reply: Wonderful! Please let us know if we can be of any other assistance.
+[E4] customer: help me with icloud ! 😩
+     brand reply: We'd love to help. Which device are you using with iCloud? What do you need assistance with?
+[E5] customer: Been like this since ios11 update. Works if home screen isn’t locked but if locked I get no calls or txts or notifications. #nothappy
+     brand reply: You mentioned doing the iOS 11 update, what is the exact version of iOS that you are on? You can find out by going to Settings > General > About.",Let's look into this together. We see that you're connected to cellular data? Do you experience the same issue when connected to a Wi-Fi network?,4,2,3,2,5,5,1,0,
+ex6e2f511c,"Current customer message: Dear why is it when a new IOS update comes out after new phone released, battery life NEVER stays the same. Dies faster. I have 95% on low power mode and now 89% from twitting this",No historical evidence was available to the system.,"We understand the frustration with battery life after updating. It can take a day or two for things to settle as the system reindexes. Check Settings > Battery to see which apps are using the most power, and let us know if it persists!",2,4,4,3,5,5,1,0,
+ex70439bf9,"Current customer message: Y cant “remove download” simply mean get it off my phone, stop showin me whats not downloaded on my phone, and not HIDE the track????",No historical evidence was available to the system.,"We hear you — that can be confusing! ""Remove Download"" takes the downloaded file off your device, but the track stays visible in your library. To fully remove a song, tap the ••• next to it and choose Delete from Library. Let us know if that helps!",5,5,5,5,5,5,0,0,
+ex7b2956a0,Current customer message: fix the fcking I problem I’m tired of seeing question marks on my damn timeline,"[E1] customer: Okay what the fuck is up with anytime you try to type “i” it autocorrects to that A with a question mark box thing ?!?!?!?!
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E2] customer: Apple you on games... why everytime I️ type I️ does it do that shit with the question mark and in the box?
+     brand reply: Help is here to resolve that for you. We recently released an iOS update, 11.1.1, that contains a fix for autocorrect issues. Let’s be sure to back up your device prior to updating. How to back up: <url>
+[E3] customer: I updated my phone and STILL keep seeing these damn squares with the question marks!!! Please fix this !
+     brand reply: Let's take a look. Before we start, check out this article on autocorrect: <url>
+[E4] customer: WHY ARE QUESTION MARK BOXES POPPING UP WHEN I️ WRITE STUFF!!!!????? FIX IT
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E5] customer: please fix the “I️” problem please. So sick of these question mark boxes ruining everything!!!!!!
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>",Here's what you can do to work around the issue until it's fixed in a future software update: follow the steps on our support site. We've also released an iOS update that contains a fix for autocorrect issues. Be sure to back up your device prior to updating.,5,5,4,4,5,5,0,0,
+ex87bb3218,Current customer message: hey could you guys add an app for the Apple Watch that when you lose your phone it acts like sonar and it beeps the closer you get to it? My wife constantly loses her phone and I’m sure Shes not the only one who has this problem,"[E1] customer: . really needs to add the Notes app to WatchOS. I️ have the Series 3 with cellular and I️ want to leave my phone at home but always have to take it because I️ need my notes for shopping. This seems so
+     brand reply: We're here to help. You can leave feedback for us on this feature here: <url>
+[E2] customer: Thank you! The problem was the update downloaded & installed but the watch didn’t auto restart so the Radio app didn’t appear. I just restarted it & it’s there now. 😉
+     brand reply: You're welcome. Reach us back if you have any other questions.
+[E3] customer: Yes. Even after repairing devices. It happens intermittently, just an hour ago it was going on and off every 10 seconds. The only device without an issue is Apple Watch.
+     brand reply: What happens if you completely unpair all of the devices and then pair them back and test one at a time with your iPhone X?
+[E4] customer: , before releasing new any new OS, it’d be great if you could fix the sluggishness and bugs of existing ones like #iOS11 and #WatchOS4. Still battery drains on my 6S and chunky animation while switchi
+     brand reply: Thanks for reaching out to us for support. We would love to help you. When you have a free moment, can you please tell us which version of iOS you are currently running on your iPhone 6S?
+[E5] customer: Will you add a podcast app to Apple Watch 3? Also, I’d like to stream pods and music through cellular without my phone.
+     brand reply: We want to hear your ideas. Leave us feedback for both of those devices here: <url>",We're here to help. You can leave feedback for us on this feature here: <url>,5,5,5,4,5,5,0,0,
+ex90b522d3,"Earlier thread (oldest first):
+customer: Seems iOS 11.2 #Camera has a focus issue. Just in time for my cousins wedding tonight. Guess I won't be taking any pics. #AppleFail #iPhoneX
+Current customer message: Same here - hope 11.2.1 will come soon and fix this. No chance of solving this one with any of the usual tricks.","[E1] customer: really needs to fix this bug. ( I️ ) c’mon now! Any other time were getting updates for bugs every other day...
+     brand reply: We'd love to help! This issue should be resolved with the 11.1.1 update. Is your device currently running that version? If not, please try updating to that (make sure to back up first, just in case) and let us know if the behavior continues.
+[E2] customer: Nope 11.0.1 - but I see the update. Maybe that will help. Thanks for being so responsive!
+     brand reply: You’re welcome! Let us know if updating helps and we will continue from there.
+[E3] customer: can you fix the I️ bug for God’s sake? I’m on 11.1 and it still happens!
+     brand reply: Hi there. We recently released an iOS update, 11.1.1, that contains a fix for autocorrect issues. Let’s be sure to back up your device prior to updating. How to back up: <url>
+[E4] customer: Thank you.. any news regarding the new update that will solve the whole problem?
+     brand reply: You’re welcome. For software updates, continue to check your settings under Settings > General > Software Update
+[E5] customer: interesting... I hope fixed this glitch soon 😬 <url>
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>","We'd love to help! This issue should be resolved with the 11.1.1 update. Is your device currently running that version? If not, please try updating to that (make sure to back up first, just in case) and let us know if the behavior continues.",1,1,1,1,5,5,1,0,
+exaa03e88c,"Current customer message: What happens to technical support in Brazil? They lied to me! Of all the companies the only one not expecting this was . Brazil fail! repair number <LONG_ID>. I am very very disappointed. But that's my problem, said Apple Brazil.","[E1] customer: you have another scam out there. Phone number <PHONE> is stating they are apple support. Actually a car service in NJ.
+     brand reply: We understand the concern when receiving communication like this. We've got some great resources where you can learn how to spot and report phishing, check this out: <url>
+[E2] customer: I cannot enter the recovery mode, and I assume that I lost my important data and projects. Is there any solution for that? Your new software unfortunately become unreliable! I have been with apple for
+     brand reply: We'd be happy to help out with this. Is your Mac backed up to Time Machine or any other data protection software? Do you still see that screen when booting it up, or has it moved past that now?
+[E3] customer: And! I don't speak English. But i would like support here. Can you speak Russian #Apple?😋
+     brand reply: We offer support via Twitter in English. Contact us for help in your preferred language here: <url>
+[E4] customer: - Love apple products but disappointed with iphone X issues. Please fix those! I’ve sent several reports and no response!
+     brand reply: Hi there. We'd be happy to help with your new iPhone X. Please tell us what issues you're having with it.
+[E5] customer: Nothing says ""0 F's Given"" like an alert that your iPhone X ""Trade Up"" order may be cancelled because they didn't receive the old phone. The NEW phone hasn't even arrived! It has been in Chinese custo
+     brand reply: Let's get you in touch with an Apple Online Store Advisor for further assistance at: <url>",We'd like to help with this. A member of our team will follow up with you directly.,5,3,2,2,5,5,0,0,
+exaa53c772,Current customer message: Anyone else have problems with the #iPhone randomly closing when typing a response to texts from the lock screen?? And it doesn’t save what you typed! #annoying #fixit T,"[E1] customer: I’m gonna need to fix the problems with iMessage. It force closes almost every time I open it.
+     brand reply: Let's work together to get this fixed. Is Messages the only app you're experiencing this issue with?
+[E2] customer: my iPhone 8 Plus is broken. Whenever I get a text messsge my screen doesn’t shut off by it stays on until you press the lock button, its meant to shut off after 1 min but it doesn’t, it stayed unlocke
+     brand reply: Let's get a closer look at what's happening here with your iPhone. Just so we can get started, does this happen every time you use the Messages app? Do you see this with other apps as well?
+[E3] customer: hello. Any idea why many of my messages on the lock screen keep coming through like this? Many thanks. <url>
+     brand reply: Thanks for reaching out about notifications. Does this happen with only notifications from a specific app?
+[E4] customer: Damn, mine just does weird shit, the most annoying is when it stops putting my music on my lock screen 😩
+     brand reply: We want to look into this with you. Which iPhone and iOS version are you using?
+[E5] customer: My touchscreen stops working randomly
+     brand reply: We want to help. What device and version of iOS is this issue occurring with?","We'd like to help. Which app or service is affected, which device and iOS version are you on, and what exactly happens when you open it?",5,5,4,4,5,5,0,0,
+exb047608c,"Current customer message: how do I get podcast app to stop automatically downloading every available episode. Streaming is good, I keep running out of storage because of podcast always downloading. Help!",No historical evidence was available to the system.,"Hi there! You can turn off automatic downloads by going to Settings > Podcasts, then toggle off ""Automatic Downloads."" You can also manage this per show in the Podcasts app by tapping the show, then the three dots, and adjusting download settings. Let us know if that helps!",5,5,5,5,5,5,0,0,
+exb0aa2ec1,Current customer message: why ios 11.1.2 often self rebooting? It back to passcode again,No historical evidence was available to the system.,"Sorry to hear your iPhone keeps restarting on its own. Let's try a few steps: update to the latest iOS version, and try resetting all settings (Settings > General > Reset > Reset All Settings). If it continues, please DM us so we can look into this further.",3,5,4,3,5,5,1,0,
+exb75bc04a,Current customer message: Proofreading <url>,"[E1] customer: EXPLAIN <url>
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E2] customer: <url>
+     brand reply: We can help. Here’s a work around for the issue until it’s fixed in a future software update: <url>
+[E3] customer: <url>
+     brand reply: We’re here for you. Here’s a work around for the issue until it’s fixed in a future software update: <url>
+[E4] customer: FIX THIS. <url>
+     brand reply: Check out this article for more details on that behavior, including how to address it: <url>
+[E5] customer: <url>
+     brand reply: Got it. Check out this link to resolve that error message: <url>","We'd like to help. Could you tell us which device you have, which software version it's on, and exactly what's happening?",5,4,4,4,5,5,0,0,
+exbaf2b751,Current customer message: Same ISSUE !!! <url>,No historical evidence was available to the system.,"We'd like to help with this! Could you tell us more about the issue you're experiencing and which device you're using? The more details you share, the better we can assist.",5,5,4,4,5,5,0,0,
+exbfdd336a,"Earlier thread (oldest first):
+customer: Is there no way I can use a direct email to talk with a member of customer services please?
+brand: Thanks for reaching out to us for support. We would love to help you. When you have a free moment, please check out the following link to learn about the various ways that you can contact us: <url>
+customer: I just need a customer service email? Can you send this please? I am a uk customer
+brand: We can provide support via Chat, Phone and Twitter. You will be connecting directly with a real person who will be happy to assist. DM us and we'll assist from there. <url>
+Current customer message: It’s ok thank you, all sorted now!",No historical evidence was available to the system.,"That's wonderful to hear! We're so glad everything is sorted. If you ever need help in the future, don't hesitate to reach out. Have a great day! 😊",5,5,3,5,5,5,0,0,
+exc2b19f7d,"Current customer message: Updated the IOS on my iphone 5S and, just as others warned, it seems to have halved the battery life. Bad bad #notmynextphone","[E1] customer: I’ve updated my iPhone to iOS 11.0.3 and the battery life is still poor. Brightness is on low, location off, auto-refresh off.
+     brand reply: How long ago did you update? Have you checked that all of your apps are up-to-date?
+[E2] customer: what’s up with iOS11 my battery life sucks butt now smh
+     brand reply: Hi there! Can you give us an example of what's going on?
+[E3] customer: battery life is degrading after latest iOS update ... could you please advise on how I can downgrade to the previous version?
+     brand reply: We'd be happy to look into the issues your facing. What's going on with your iPhone?
+[E4] customer: having a lot less battery life on my iPhone after the last update. Can you help me?
+     brand reply: We'd be glad to! Just to confirm, are you using iOS 11.1 on your device now?
+[E5] customer: Whats up with these faulty updates? IOS 11.0.2 battery life sucks
+     brand reply: We'd be happy to look into what's going on. Which device are you noticing that on?","We'd like to help with the battery. Which iPhone do you have, which iOS version is installed (Settings > General > About), and when did the drain start?",5,5,5,4,5,5,0,0,
+excb07e3f8,Current customer message: should we be worried about the ROOT issue? How do we fix?,"[E1] customer: what’s going on? How do we fix this? <url>
+     brand reply: Let's get this working for you. Have a look at this article and see if it helps: <url>
+[E2] customer: Just concerned about my end. I did the update install and see no issues. Thanks!
+     brand reply: We're glad to hear that. If we can help with anything else, just let us know.
+[E3] customer: The problem has seemed to resolve itself. Thanks so much for replying. If I have any further problems I will message.
+     brand reply: That's great news! Thanks for keeping us updated. If you run into any other issues, please let us know. Have a great weekend.
+[E4] customer: Thank you. It rebooted and seems to run fine in safe mode.
+     brand reply: Thank you for testing that. Booting into safe mode does go through a few internal checks. Let’s test booting the computer up like normal now that we have tried safe mode and see if it is still have the same problems please.
+[E5] customer: how do we fix this? I️ I️ iiiii
+     brand reply: iOS 11.1.1 was recently released and it includes a fix for autocorrect issues. Be sure to back up your device prior to updating, and let us know if the issue persists afterwards.",Let's get this working for you. Have a look at this article and see if it helps: <url>,5,3,3,3,5,5,0,0,
+exd6af732b,Current customer message: Anyone ever seen a MacBook do this? Only happens for a split second when I exit standby and pretty sure it only started doing it since I updated to High Sierra. ? <url>,"[E1] customer: #MacbookPro has been doing this on cycle none stop. Not sure what is happening. Any help? Purple ish screen <url>
+     brand reply: Thanks for reaching out to us. We’ll be happy to help out. Have you had a chance to restart your MacBook?
+[E2] customer: Thanks a lot for your reply. What I had, was the blinking question mark on the screen and the Mac did not react at all. It happened after downloading High Sierra. I solved connecting an external backu
+     brand reply: We are glad you got that worked out. We are also happy to help if you should still want to move to High Sierra. Keep us posted.
+[E3] customer: Rest NVRAM... MacBook boots into recovery mode. this is getting old. No issues until #HighSierra upgrade. Can’t go back to Sierra.
+     brand reply: That's something we'll want to look into. Was this continually loading to recovery each time you try to start up?
+[E4] customer: Does anyone else's MacBook Pro crash several times daily after updating to High Sierra? Losing an insane amount of work daily for not saving every 5 minutes.
+     brand reply: That's not the type of experience that we'd like for you to have while using your computer. Does this occur while performing a particular task or using a certain application?
+[E5] customer: It’s an MLH32N/A on the latest public release of High Sierra. I tried a restart, resetting the SMC and tapping the Touchbar a couple of times 😉
+     brand reply: Is macOS 10.13.1 installed and are there any updates showing ready to download in your Mac's App Store > Updates section? Have you tried testing for the same issue in another app or in macOS Recovery mode?",Thanks for reaching out to us. We’ll be happy to help out. Have you had a chance to restart your MacBook?,4,5,3,3,5,5,0,0,
+exd7216461,Current customer message: y’all ever gonna fix the i?,"[E1] customer: Okay what the fuck is up with anytime you try to type “i” it autocorrects to that A with a question mark box thing ?!?!?!?!
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E2] customer: ok we are tired of see the stupid question mark box when someone types ""I"" fix it
+     brand reply: Thank you for reaching out to us. We know how important it is to have this resolved as quickly as possible. To start, have you updated your device to 11.1.1? You can update your device by following these steps: <url>
+[E3] customer: Apple you on games... why everytime I️ type I️ does it do that shit with the question mark and in the box?
+     brand reply: Help is here to resolve that for you. We recently released an iOS update, 11.1.1, that contains a fix for autocorrect issues. Let’s be sure to back up your device prior to updating. How to back up: <url>
+[E4] customer: want tell me why I️ can’t type the letter “ I “ without having to cancel the autocorrect?
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url> <url>
+[E5] customer: why is “I” on my iPhone autocorrecting to an A and a box with a question mark in it?
+     brand reply: Thanks for reaching out. This workaround will help until this issue is resolved in a future update: <url>","Thanks for reaching out. We know how important it is to have this resolved. To start, have you updated your device to iOS 11.1.1? You can update by following the steps on our support site.",5,5,4,4,5,5,0,0,
+exd8d95272,"Current customer message: You'd think that —a company with virtually unlimited resources—could get services right. Other, much smaller, teams can do it. #WTAF #AppleFail #ApplePhotos … <url>","[E1] customer: l really hope you fix the I situation soon. it’s hard to do business with this issue. #imlosingmoney #appleisstillmakingmoney
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E2] customer: Really???? #ipad #Apple <url>
+     brand reply: We are here to help. Let's take a look at the steps in this article. <url> <url>
+[E3] customer: The good folks at #Apple Mission Viejo took care of me. Great support on a launch day...made good on a bad situation.
+     brand reply: We're glad to hear that. If you need us down the road, we're only a tweet away. Have a great day.
+[E4] customer: Bi cümleyi ingilizceye çevirmeye üşenen Apple dan telefonu onarmasını beklemek 🚬
+     brand reply: We offer support via Twitter in English. Contact us for help in your preferred language here: <url>
+[E5] customer: Considering not buying any #appleproducts anymore getting help is not easy anymore
+     brand reply: We're happy to help you. Let us know what's going on and we can go from there.",We'd like to help with this. A member of our team will follow up with you directly.,5,4,3,3,5,5,0,0,
+exdf2c4f5c,Current customer message: WHY DOES MY PHONE DIE ON 25%,"[E1] customer: My phone be dying on 40% wtf
+     brand reply: We want to make sure your iPhone is working properly. Which iPhone, and exact iOS version are you running?
+[E2] customer: ayy why my phone really gonna die on 70%? And then when I turn it back on it’s at 10%?? 😫
+     brand reply: We're here to help. Which iOS version are you currently running? You can find that from Settings > General > About
+[E3] customer: can you let me know why my phone did at 50 percent? Because I'm frustrated.
+     brand reply: We want you to be able to count on your iPhone; we'll do all we can to help. To start, Does this happen when using your device in cold or hot conditions? Learn more about how temperature can affect your device: <url>
+[E4] customer: my phone has been dying on 40% recently so....wtf is good
+     brand reply: We'll help you sort out the battery issues. Which iPhone do you have?
+[E5] customer: Hey why does my iPhone keep dying with 30% battery left? This has been an ongoing problem which you can’t seem to fix.
+     brand reply: We'd like to look into this with you. To get started, let us know how long you've been experiencing this.","We want to make sure your iPhone is working properly. Which iPhone, and exact iOS version are you running?",5,5,4,4,5,5,0,0,
+exe95c4a22,Current customer message: is this you? <url>,"[E1] customer: is this really you?? <url>
+     brand reply: We're glad you reached out to us. We can definitely help. This email looks like a phishing attempt. We'd recommend looking at the following article for tips on identifying and reporting this type of message: <url>
+[E2] customer: what’s this ? <url>
+     brand reply: Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>
+[E3] customer: is this real? <url>
+     brand reply: Good catch! This looks like a phishing attempt. You can report it using the details here: <url>
+[E4] customer: is it true? <url>
+     brand reply: That's likely a phishing attempt. You can find out more about this type of thing and how to respond here: <url>
+[E5] customer: what is this? <url>
+     brand reply: Let’s work together on this situation. Which iPhone are you using? Does this happen every time you open the Phone App?",We're glad you reached out to us. We can definitely help. This email looks like a phishing attempt. We'd recommend looking at the following article for tips on identifying and reporting this type of message: <url>,5,5,5,4,5,5,0,0,
+exf4e2af1a,Current customer message: I updated my iOS and lost all my pictures from my first two days in Rome. I’m so mad st y’all,"[E1] customer: lost all my sentimental pictures due to your update🖕🏼😡😡😡 #ShouldWarnToBackUp
+     brand reply: We can work together to figure this out. Do you have your photos synced with iCloud? Check here: <url>
+[E2] customer: Bro I backed up my phone and had to restore it. Now my pictures are gone. Fuck you
+     brand reply: We understand the importance of having all of your photos, and we want to help! What model of iOS device are you using? Was this an iCloud Backup or an iTunes Backup? <url>
+[E3] customer: all of my pictures and music deleted.i get the whole ""the old phones glitch wen the new ones come out"" but this is ridiculous
+     brand reply: This isn't expected behavior. Let's figure this out. Have you restarted since this happened? What's your iOS version?
+[E4] customer: all my pictures deleted out my phone and I’m sad af. Wassup ?
+     brand reply: We're here for you! Do you use iCloud Photo Library? Did anything happen before you noticed your photos missing, like restarting or closing an application?
+[E5] customer: All messages but one gone. Contacts (except this one), most photo albums, and all videos gone. Wtf <url>
+     brand reply: Hi there. We'd love to help out. What version of iOS is on your device under Settings > General > About > Version?",Thanks for the steps you've already tried. A member of our team will pick this up with you directly so we can dig deeper.,3,5,2,2,5,5,1,0,
+exf847b080,"Earlier thread (oldest first):
+brand: Thanks for reaching out an including the photo for us! We can definitely look into this further with you. Let us know if this helps: <url>
+customer: It's still not working any site social media related crashes talking a ""secure connection to the server""
+customer: App or website. Even when I used Google chrome. It's the phone
+brand: Does this happen when using both Wi-Fi and cellular data?
+Current customer message: Yes today when I went to Apple for help everything worked once connected to the Apple store WiFi and as soon as I left it started acting stupid again","[E1] customer: iOS 11 is CONSTANTLY turning on my WiFi, when I’ve intentionally turned it off. Anyone else having this issue?
+     brand reply: Wi-Fi in Control Center on iOS 11 has changed a bit, check out: <url>
+[E2] customer: I swipe up from the bottom of the screen to use Control Center. I switch the wifi and BlueTooth buttons (Bluetooth doesn’t turn itself on).
+     brand reply: That's expected in iOS 11 as the Wi-Fi is just disconnecting. Check this article for more info: <url>
+[E3] customer: Aargh! iOS 11 has a stupid bug. I turned off my WiFi before bed and when I woke up it had turned itself on. Second time now.😡
+     brand reply: Hello. We can help. It's understandable to want these features tuned off when not in use. Did you use the Control Center to turn off Wi-Fi or did you do it via the Settings app?
+[E4] customer: dear Lord the new OS is buggy. How do you miss that the WiFi toggle in the command center doesn’t work?? #iphone
+     brand reply: You're in the right place for help. May we get a description of what happens when trying to toggle Wi-Fi in control center?
+[E5] customer: I already connected my iPhone to a cellular data and try different wifi networks but it still doesn’t work in apple store app ... but the order page in apple website works fine .. there’s an issue in 
+     brand reply: If it's having trouble, then we would suggest that you remove the app and re-download it to see if it connects. If not, then let us know: <url>",Thanks for the steps you've already tried. A member of our team will pick this up with you directly so we can dig deeper.,3,4,2,2,5,5,1,0,

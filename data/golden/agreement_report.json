@@ -1,0 +1,25 @@
+{
+  "provenance": "Annotator B was an isolated AI annotator, not an independent human. Cohen's kappa must never be described as human-human agreement; it is evidence of consistency under the annotation guide. Human adjudication of disagreements is the credibility step.",
+  "n": 197,
+  "intent_kappa": 0.92,
+  "intent_agreement": 0.929,
+  "escalation_kappa": 0.885,
+  "escalation_agreement": 0.964,
+  "reason_agreement_when_both_escalate": 0.971,
+  "disagreements": 21,
+  "intent_only_disagreements": 14,
+  "escalation_only_disagreements": 7,
+  "both": 0,
+  "intent_confusions": {
+    "apps_services -> other": 2,
+    "connectivity -> hardware_damage": 2,
+    "apps_services -> performance_crash": 2,
+    "apps_services -> keyboard_text_bug": 1,
+    "account_store_repair -> hardware_damage": 1,
+    "connectivity -> apps_services": 1,
+    "general_complaint -> apps_services": 1,
+    "general_complaint -> keyboard_text_bug": 1,
+    "general_complaint -> performance_crash": 1,
+    "other -> general_complaint": 1
+  }
+}

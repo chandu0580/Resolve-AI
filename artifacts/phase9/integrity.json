@@ -1,0 +1,38 @@
+{
+ "phase7_hash_snapshot": {
+  "files_checked": 115,
+  "changed": [],
+  "missing": [],
+  "golden_sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9",
+  "golden_matches_freeze_manifest": true,
+  "passed": true
+ },
+ "frozen_locations": [
+  "data/golden",
+  "data/human_eval",
+  "data/processed",
+  "artifacts/evaluation",
+  "artifacts/phase7",
+  "artifacts/phase8",
+  "artifacts/resolution",
+  "artifacts/agent",
+  "artifacts/intelligence",
+  "artifacts/retrieval",
+  "resolveai/models",
+  "resolveai/retrieval/gate_config.json",
+  "resolveai/retrieval/gate_v3_config.json",
+  "resolveai/retrieval/rerank_weights.json",
+  "resolveai/agent/second_opinion_policy.json",
+  "data/demo/scenarios.json"
+ ],
+ "modified_after_phase9_start": [],
+ "security_scan": {
+  "passed": true,
+  "committable_files": 605,
+  "trace_records_scanned": 747,
+  "trace_records_with_pii": 0,
+  "env_committable": false,
+  "findings": []
+ },
+ "passed": true
+}

@@ -1,0 +1,180 @@
+{
+ "silver-v1": {
+  "version": "silver-v1",
+  "n": 60,
+  "precision_by_band": {
+   "HIGH": {
+    "precision": 0.65,
+    "n": 20
+   },
+   "MEDIUM": {
+    "precision": 0.35,
+    "n": 20
+   },
+   "LOW": {
+    "precision": 0.4,
+    "n": 20
+   }
+  },
+  "estimated_precision_all_train": 0.52,
+  "estimated_precision_training_rows_high_medium": 0.58,
+  "examples_wrong": [
+   {
+    "customer_tweet_id": 2303444,
+    "band": "HIGH",
+    "silver": "non_english",
+    "human": "data_loss_sync",
+    "message": "thanks for your update which erased all my music (seed 'el ' matched inside an English word)"
+   },
+   {
+    "customer_tweet_id": 1585322,
+    "band": "HIGH",
+    "silver": "non_english",
+    "human": "keyboard_text_bug",
+    "message": "I\ufe0f I\ufe0f I\ufe0f WANT ANSWERS (glyph counted as non-ASCII)"
+   },
+   {
+    "customer_tweet_id": 1924716,
+    "band": "HIGH",
+    "silver": "battery_power",
+    "human": "other",
+    "message": "rip a flap of skin off switching the charger cord (joke; 'charg' seed)"
+   },
+   {
+    "customer_tweet_id": 2852306,
+    "band": "LOW",
+    "silver": "general_complaint",
+    "human": "battery_power",
+    "message": "help! My iPhone won't turn on"
+   }
+  ],
+  "note": "v1 numbers recorded from the same 60 rows before the v2 fixes; the v1 CSV was overwritten by the v2 run."
+ },
+ "silver-v2": {
+  "version": "silver-v2",
+  "n": 60,
+  "precision_by_band": {
+   "HIGH": {
+    "precision": 0.818,
+    "n": 22
+   },
+   "LOW": {
+    "precision": 0.308,
+    "n": 26
+   },
+   "MEDIUM": {
+    "precision": 0.333,
+    "n": 12
+   }
+  },
+  "estimated_precision_all_train": 0.549,
+  "estimated_precision_training_rows_high_medium": 0.711,
+  "examples_wrong": [
+   {
+    "customer_tweet_id": 2261581,
+    "band": "LOW",
+    "silver": "general_complaint",
+    "human": "performance_crash",
+    "message": "What\u2019s wrong with the iPhone period? Mine keep glitching and it\u2019s making me mad\ud83e\udd26\ud83c\udffd\u200d\u2640\ufe0f <url>"
+   },
+   {
+    "customer_tweet_id": 1924716,
+    "band": "LOW",
+    "silver": "general_complaint",
+    "human": "other",
+    "message": "Anyone else rip a flap of skin off their fingers when switching out the charger extension cord? No? Just me that\u2019s incompetent? \ud83d\ude2b"
+   },
+   {
+    "customer_tweet_id": 2774292,
+    "band": "LOW",
+    "silver": "general_complaint",
+    "human": "data_loss_sync",
+    "message": "Understandable. I was using Microsoft Word. My laptop updated to the newest system and when it came back on, my work was gone! Interesting thing is that it reco"
+   },
+   {
+    "customer_tweet_id": 1979944,
+    "band": "LOW",
+    "silver": "general_complaint",
+    "human": "performance_crash",
+    "message": "ay man yall wrong for freezing my phone and deleting all my messages!"
+   },
+   {
+    "customer_tweet_id": 2299868,
+    "band": "HIGH",
+    "silver": "performance_crash",
+    "human": "apps_services",
+    "message": "Only podcasts were effected. I was using the second to most recent version, I updated after it happened in the vain hopes it was a glitch an update could fix. I"
+   },
+   {
+    "customer_tweet_id": 1681698,
+    "band": "HIGH",
+    "silver": "connectivity",
+    "human": "other",
+    "message": ", iOS needs a way to turn off cellular data roaming while in airplane mode."
+   },
+   {
+    "customer_tweet_id": 1657754,
+    "band": "LOW",
+    "silver": "general_complaint",
+    "human": "keyboard_text_bug",
+    "message": "Hi only like 1/2 my emojis are loading since the update cc"
+   },
+   {
+    "customer_tweet_id": 2303444,
+    "band": "LOW",
+    "silver": "general_complaint",
+    "human": "data_loss_sync",
+    "message": "Dear - thanks for your #iphone #ios update which now not only made my phone work even worse but also erased all my music. #killingme"
+   },
+   {
+    "customer_tweet_id": 2060172,
+    "band": "HIGH",
+    "silver": "battery_power",
+    "human": "performance_crash",
+    "message": "IOS 11 so trash. My phone intermittently restarts itself and it\u2019s a iPhone 7 Plus. Battery life is worse. \ud83d\udeae\ud83d\udeae\ud83d\udeae"
+   },
+   {
+    "customer_tweet_id": 2834443,
+    "band": "MEDIUM",
+    "silver": "general_complaint",
+    "human": "apps_services",
+    "message": "pls help! I purchased this album but I can't listen to it \ud83d\ude2d <url>"
+   },
+   {
+    "customer_tweet_id": 2779285,
+    "band": "MEDIUM",
+    "silver": "connectivity",
+    "human": "other",
+    "message": "Thank you for that. Didn't realize it was public. I removed tweet. How would she connect with you?"
+   },
+   {
+    "customer_tweet_id": 2040124,
+    "band": "MEDIUM",
+    "silver": "general_complaint",
+    "human": "performance_crash",
+    "message": "What a joke tried updating software now cannot use iPod!!! DO NOT UPDATE TO 11.1!!!!!!!!!!!!"
+   },
+   {
+    "customer_tweet_id": 1691697,
+    "band": "MEDIUM",
+    "silver": "performance_crash",
+    "human": "keyboard_text_bug",
+    "message": "Just wondering if you could fix the glitch so that we can actually type the letter that comes after H"
+   },
+   {
+    "customer_tweet_id": 2366207,
+    "band": "MEDIUM",
+    "silver": "keyboard_text_bug",
+    "human": "battery_power",
+    "message": "That iOS update fixed my iPhone\u2019s keyboard but evicerated its battery life. \ud83d\ude3e"
+   },
+   {
+    "customer_tweet_id": 1451567,
+    "band": "MEDIUM",
+    "silver": "other",
+    "human": "account_store_repair",
+    "message": "I\u2019m really really excited to pick up my iPhone X from Covent Garden tomorrow... but not sure I can make my allotted time slot any more! Can I come earlier/later"
+   }
+  ]
+ }
+}

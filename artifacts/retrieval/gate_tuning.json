@@ -1,0 +1,106 @@
+{
+  "objective": "max coverage s.t. precision(hit@5|sufficient) >= 0.80 on DEV, >= 20 sufficient refs",
+  "grid_size": 72,
+  "chosen": {
+    "relevance_floor": 0.35,
+    "support_similarity": 0.85,
+    "min_support": 3,
+    "min_intent_agreement": 0.4,
+    "precision": 0.4,
+    "coverage": 0.1,
+    "n_sufficient_with_ref": 5
+  },
+  "feasible": 0,
+  "top10": [
+    {
+      "relevance_floor": 0.35,
+      "support_similarity": 0.55,
+      "min_support": 1,
+      "min_intent_agreement": 0.4,
+      "precision": 0.3111,
+      "coverage": 0.554,
+      "n_sufficient_with_ref": 45
+    },
+    {
+      "relevance_floor": 0.35,
+      "support_similarity": 0.55,
+      "min_support": 1,
+      "min_intent_agreement": 0.6,
+      "precision": 0.2414,
+      "coverage": 0.424,
+      "n_sufficient_with_ref": 29
+    },
+    {
+      "relevance_floor": 0.35,
+      "support_similarity": 0.55,
+      "min_support": 2,
+      "min_intent_agreement": 0.4,
+      "precision": 0.3111,
+      "coverage": 0.554,
+      "n_sufficient_with_ref": 45
+    },
+    {
+      "relevance_floor": 0.35,
+      "support_similarity": 0.55,
+      "min_support": 2,
+      "min_intent_agreement": 0.6,
+      "precision": 0.2414,
+      "coverage": 0.424,
+      "n_sufficient_with_ref": 29
+    },
+    {
+      "relevance_floor": 0.35,
+      "support_similarity": 0.55,
+      "min_support": 3,
+      "min_intent_agreement": 0.4,
+      "precision": 0.3111,
+      "coverage": 0.554,
+      "n_sufficient_with_ref": 45
+    },
+    {
+      "relevance_floor": 0.35,
+      "support_similarity": 0.55,
+      "min_support": 3,
+      "min_intent_agreement": 0.6,
+      "precision": 0.2414,
+      "coverage": 0.424,
+      "n_sufficient_with_ref": 29
+    },
+    {
+      "relevance_floor": 0.35,
+      "support_similarity": 0.65,
+      "min_support": 1,
+      "min_intent_agreement": 0.4,
+      "precision": 0.3023,
+      "coverage": 0.532,
+      "n_sufficient_with_ref": 43
+    },
+    {
+      "relevance_floor": 0.35,
+      "support_similarity": 0.65,
+      "min_support": 1,
+      "min_intent_agreement": 0.6,
+      "precision": 0.25,
+      "coverage": 0.41,
+      "n_sufficient_with_ref": 28
+    },
+    {
+      "relevance_floor": 0.35,
+      "support_similarity": 0.65,
+      "min_support": 2,
+      "min_intent_agreement": 0.4,
+      "precision": 0.3023,
+      "coverage": 0.532,
+      "n_sufficient_with_ref": 43
+    },
+    {
+      "relevance_floor": 0.35,
+      "support_similarity": 0.65,
+      "min_support": 2,
+      "min_intent_agreement": 0.6,
+      "precision": 0.25,
+      "coverage": 0.41,
+      "n_sufficient_with_ref": 28
+    }
+  ]
+}

@@ -1,0 +1,1874 @@
+[
+ {
+  "gid": "g000",
+  "packet": {
+   "summary": "Customer now: my headphone jack on my phone wasn\u2019t working for months and today it started to work but my speaker stopped, anyway to get it off of headphones when nothing is plugged in to it?. Predicted intent battery_power (LOW). Risk flags: physical_damage. Escalated: Physical damage or a repair decision cannot be resolved with a public reply.",
+   "customer_issue": "my headphone jack on my phone wasn\u2019t working for months and today it started to work but my speaker stopped, anyway to get it off of headphones when nothing is plugged in to it?",
+   "intent": "battery_power",
+   "confidence": 0.1966,
+   "confidence_band": "LOW",
+   "alternatives": [
+    "hardware_damage",
+    "account_store_repair"
+   ],
+   "risk": {
+    "safety_concern": false,
+    "security_concern": false,
+    "privacy_concern": false,
+    "account_access_risk": false,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": true,
+    "repeat_contact": false,
+    "sensitive_action_required": false,
+    "high_frustration": false,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "Customer reports phone is stuck in headphone mode with no headphones plugged in and the speaker has stopped working after months of headphone jack issues.",
+    "source": "llm+rules"
+   },
+   "reason": {
+    "decision": "escalate",
+    "reason_code": "hardware",
+    "reason": "Physical damage or a repair decision cannot be resolved with a public reply.",
+    "rule": "hardware",
+    "policy_version": "policy-v2",
+    "clarification_allowed": false
+   },
+   "evidence_summary": "5 similar historical cases retrieved (5 with a substantive reply); top similarity 0.83; gate: weak_similarity",
+   "historical_examples": [
+    {
+     "evidence_id": "1474732",
+     "thread_id": "1474733",
+     "customer_message": "I can't hear any sound on my phone with earbuds, I think the jack is broken. What should I do?",
+     "brand_reply": "Let's see if we can get your sound back. Do you see physical damage on the jack? Do other headphones work?",
+     "outcome": "none",
+     "similarity": 0.833,
+     "action_class": "ask_info"
+    },
+    {
+     "evidence_id": "1326035",
+     "thread_id": "1326036",
+     "customer_message": "Ugh my phone has gave me the worst luck this week now my headphones aren\u2019t being recognized what next ?",
+     "brand_reply": "We'd like to help! What kind of headphones are you attempting to connect with?",
+     "outcome": "none",
+     "similarity": 0.8,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "2013905",
+     "thread_id": "2013906",
+     "customer_message": "I don\u2019t understand how I take care of my headphones and they randomly stop working",
+     "brand_reply": "We want to help. What type of headphones are these, and what model of device do you use them with?",
+     "outcome": "none",
+     "similarity": 0.788,
+     "action_class": "ask_info"
+    },
+    {
+     "evidence_id": "1175565",
+     "thread_id": "1175566",
+     "customer_message": "I just started using my earphones today and the right ear is already not working..I don't need this today",
+     "brand_reply": "We can help! Tell us which kind of earphones you're using please.",
+     "outcome": "none",
+     "similarity": 0.785,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "1007794",
+     "thread_id": "1007792",
+     "customer_message": "Nope, like I said, I get sound on speaker from everything except the phone. but I've also managed to fix it. thanks for answering though",
+     "brand_reply": "Great, we're glad to hear that you were able to get that taken care of! Thanks for keeping us posted.",
+     "outcome": "none",
+     "similarity": 0.773,
+     "action_class": "other"
+    }
+   ],
+   "evidence_sufficient": false,
+   "evidence_reason": "weak_similarity",
+   "recommended_next_action": "Move to DM, confirm the damage, and offer repair/service options.",
+   "unresolved_questions": [
+    "Which device model?",
+    "Which software version?",
+    "When did it start (before/after an update)?"
+   ],
+   "suggested_opening": "We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.",
+   "draft_if_any": null,
+   "trace_id": "daeff73baa0144209a23714efb15904c",
+   "policy_version": "policy-v2",
+   "evidence": [
+    {
+     "evidence_id": "1474732",
+     "thread_id": "1474733",
+     "source_row_id": "1474733",
+     "customer_message": "I can't hear any sound on my phone with earbuds, I think the jack is broken. What should I do?",
+     "brand_reply": "Let's see if we can get your sound back. Do you see physical damage on the jack? Do other headphones work?",
+     "created_at": "2017-11-02 19:15:09+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 1,
+     "ranks": {
+      "dense": 1
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8331907391548157,
+      "rrf": 0.047619047619047616,
+      "outcome_bonus": 0.0,
+      "final": 0.047619047619047616
+     },
+     "quality": {
+      "semantic_relevance": 0.8331907391548157,
+      "lexical_relevance": 0.0,
+      "intent_match": false,
+      "candidate_intent": "hardware_damage",
+      "resolution_relevance": true,
+      "action_class": "ask_info",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1326035",
+     "thread_id": "1326036",
+     "source_row_id": "1326036",
+     "customer_message": "Ugh my phone has gave me the worst luck this week now my headphones aren\u2019t being recognized what next ?",
+     "brand_reply": "We'd like to help! What kind of headphones are you attempting to connect with?",
+     "created_at": "2017-10-16 03:45:32+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 2,
+     "ranks": {
+      "dense": 6
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7997727990150452,
+      "rrf": 0.038461538461538464,
+      "outcome_bonus": 0.0,
+      "final": 0.038461538461538464
+     },
+     "quality": {
+      "semantic_relevance": 0.7997727990150452,
+      "lexical_relevance": 0.0,
+      "intent_match": false,
+      "candidate_intent": "general_complaint",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2013905",
+     "thread_id": "2013906",
+     "source_row_id": "2013906",
+     "customer_message": "I don\u2019t understand how I take care of my headphones and they randomly stop working",
+     "brand_reply": "We want to help. What type of headphones are these, and what model of device do you use them with?",
+     "created_at": "2017-10-30 19:19:05+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 3,
+     "ranks": {
+      "dense": 9
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7875291109085083,
+      "rrf": 0.034482758620689655,
+      "outcome_bonus": 0.0,
+      "final": 0.034482758620689655
+     },
+     "quality": {
+      "semantic_relevance": 0.7875291109085083,
+      "lexical_relevance": 0.0,
+      "intent_match": false,
+      "candidate_intent": "general_complaint",
+      "resolution_relevance": true,
+      "action_class": "ask_info",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1175565",
+     "thread_id": "1175566",
+     "source_row_id": "1175566",
+     "customer_message": "I just started using my earphones today and the right ear is already not working..I don't need this today",
+     "brand_reply": "We can help! Tell us which kind of earphones you're using please.",
+     "created_at": "2017-10-24 20:26:26+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 4,
+     "ranks": {
+      "dense": 10
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7845547795295715,
+      "rrf": 0.03333333333333333,
+      "outcome_bonus": 0.0,
+      "final": 0.03333333333333333
+     },
+     "quality": {
+      "semantic_relevance": 0.7845547795295715,
+      "lexical_relevance": 0.0,
+      "intent_match": false,
+      "candidate_intent": "general_complaint",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1007794",
+     "thread_id": "1007792",
+     "source_row_id": "1007792",
+     "customer_message": "Nope, like I said, I get sound on speaker from everything except the phone. but I've also managed to fix it. thanks for answering though",
+     "brand_reply": "Great, we're glad to hear that you were able to get that taken care of! Thanks for keeping us posted.",
+     "created_at": "2017-10-22 20:43:54+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 5,
+     "ranks": {
+      "dense": 19
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7728488445281982,
+      "rrf": 0.02564102564102564,
+      "outcome_bonus": 0.0,
+      "final": 0.02564102564102564
+     },
+     "quality": {
+      "semantic_relevance": 0.7728488445281982,
+      "lexical_relevance": 0.0,
+      "intent_match": false,
+      "candidate_intent": "general_complaint",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "gid": "g002",
+  "packet": {
+   "summary": "Customer now: all most 22 days has passed & no outcome in my case (<PHONE>).. Predicted intent account_store_repair (MEDIUM). Risk flags: none. Escalated: Resolving this needs account, order, case or device identifiers that must be shared privately.",
+   "customer_issue": "all most 22 days has passed & no outcome in my case (<PHONE>).",
+   "intent": "account_store_repair",
+   "confidence": 0.2601,
+   "confidence_band": "MEDIUM",
+   "alternatives": [
+    "battery_power",
+    "account_store_repair"
+   ],
+   "risk": {
+    "safety_concern": false,
+    "security_concern": false,
+    "privacy_concern": false,
+    "account_access_risk": false,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": false,
+    "repeat_contact": false,
+    "sensitive_action_required": false,
+    "high_frustration": false,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "",
+    "source": "fallback"
+   },
+   "reason": {
+    "decision": "escalate",
+    "reason_code": "private_info",
+    "reason": "Resolving this needs account, order, case or device identifiers that must be shared privately.",
+    "rule": "private_info",
+    "policy_version": "policy-v2",
+    "clarification_allowed": false
+   },
+   "evidence_summary": "5 similar historical cases retrieved (2 with a substantive reply); top similarity 0.72; gate: weak_similarity",
+   "historical_examples": [
+    {
+     "evidence_id": "2439715",
+     "thread_id": "2439716",
+     "customer_message": "is there a reason my phone hasn't let me make calls or texts for the past 48 hours?! Can't even call the Apple Store to fix it ...",
+     "brand_reply": "We're here to help and ready to work towards a resolution with you. To help get us started, tell us a little more about what's going on? For instance are you having issues receiving calls and texts as well? Does the iPhone show it has service?",
+     "outcome": "none",
+     "similarity": 0.724,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "2263549",
+     "thread_id": "2263550",
+     "customer_message": "I\ufe0f have the same problem in less than a couple hours my phone life will go from 100% to 20% even if I\u2019m not doing much at all... it\u2019s really a pain \ud83d\ude12\ud83d\ude2b",
+     "brand_reply": "Battery life is important, so we\u2019d like to offer some assistance. When did this start? Which exact iOS version are you running? You can check under Settings > General > About. <url>",
+     "outcome": "positive",
+     "similarity": 0.72,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "2425852",
+     "thread_id": "2425853",
+     "customer_message": "my phone has officially died. not receiving any calls or texts. i hate you",
+     "brand_reply": "We're here to help. Let's take this to DM so we can better assist you. <url>",
+     "outcome": "none",
+     "similarity": 0.73,
+     "action_class": "dm_handoff"
+    },
+    {
+     "evidence_id": "413118",
+     "thread_id": "413119",
+     "customer_message": "Need URGENT help!!Case 100317986821. Locked out of phone for 5 days while abroad. Nobody can help.",
+     "brand_reply": "We're happy to take a look at your case. Meet us in DM to get started. <url>",
+     "outcome": "none",
+     "similarity": 0.718,
+     "action_class": "article"
+    },
+    {
+     "evidence_id": "188174",
+     "thread_id": "188175",
+     "customer_message": "my phone has died on 20% for the last time someone needs to send me a new phone <url>",
+     "brand_reply": "We'd like to look into this with you. Send us a DM by clicking on the link below. We'll continue there. <url>",
+     "outcome": "none",
+     "similarity": 0.704,
+     "action_class": "dm_handoff"
+    }
+   ],
+   "evidence_sufficient": false,
+   "evidence_reason": "weak_similarity",
+   "recommended_next_action": "Move to DM and collect the identifiers listed under unresolved questions.",
+   "unresolved_questions": [
+    "Which device model?",
+    "Which software version?"
+   ],
+   "suggested_opening": "We'd like to look into this with you. Because we'll need some details about your device or account, a member of our team will follow up with you directly.",
+   "draft_if_any": null,
+   "trace_id": "6acc353dbee640da9dbb7499a5809d06",
+   "policy_version": "policy-v2",
+   "evidence": [
+    {
+     "evidence_id": "2439715",
+     "thread_id": "2439716",
+     "source_row_id": "2439716",
+     "customer_message": "is there a reason my phone hasn't let me make calls or texts for the past 48 hours?! Can't even call the Apple Store to fix it ...",
+     "brand_reply": "We're here to help and ready to work towards a resolution with you. To help get us started, tell us a little more about what's going on? For instance are you having issues receiving calls and texts as well? Does the iPhone show it has service?",
+     "created_at": "2017-11-14 22:12:59+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 1,
+     "ranks": {
+      "dense": 10,
+      "boost_plain": 2,
+      "boost_intent": 1
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7239713072776794,
+      "rrf": 0.03333333333333333,
+      "outcome_bonus": 0.0,
+      "final": 0.03252247488101534
+     },
+     "quality": {
+      "semantic_relevance": 0.7239713072776794,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "account_store_repair",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2263549",
+     "thread_id": "2263550",
+     "source_row_id": "2263550",
+     "customer_message": "I\ufe0f have the same problem in less than a couple hours my phone life will go from 100% to 20% even if I\u2019m not doing much at all... it\u2019s really a pain \ud83d\ude12\ud83d\ude2b",
+     "brand_reply": "Battery life is important, so we\u2019d like to offer some assistance. When did this start? Which exact iOS version are you running? You can check under Settings > General > About. <url>",
+     "created_at": "2017-11-20 23:18:06+00:00",
+     "outcome": "positive",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 2,
+     "ranks": {
+      "dense": 12,
+      "boost_plain": 3,
+      "boost_intent": 2
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7196803689002991,
+      "rrf": 0.03125,
+      "outcome_bonus": 0.0,
+      "final": 0.03200204813108039
+     },
+     "quality": {
+      "semantic_relevance": 0.7196803689002991,
+      "lexical_relevance": 0.0,
+      "intent_match": false,
+      "candidate_intent": "battery_power",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2425852",
+     "thread_id": "2425853",
+     "source_row_id": "2425853",
+     "customer_message": "my phone has officially died. not receiving any calls or texts. i hate you",
+     "brand_reply": "We're here to help. Let's take this to DM so we can better assist you. <url>",
+     "created_at": "2017-11-14 19:01:42+00:00",
+     "outcome": "none",
+     "dm_handoff": true,
+     "substantive": false,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 3,
+     "ranks": {
+      "dense": 7,
+      "boost_plain": 25,
+      "boost_intent": 3
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7296801805496216,
+      "rrf": 0.037037037037037035,
+      "outcome_bonus": 0.0,
+      "final": 0.027637721755368813
+     },
+     "quality": {
+      "semantic_relevance": 0.7296801805496216,
+      "lexical_relevance": 0.0,
+      "intent_match": false,
+      "candidate_intent": "battery_power",
+      "resolution_relevance": false,
+      "action_class": "dm_handoff",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "413118",
+     "thread_id": "413119",
+     "source_row_id": "413119",
+     "customer_message": "Need URGENT help!!Case 100317986821. Locked out of phone for 5 days while abroad. Nobody can help.",
+     "brand_reply": "We're happy to take a look at your case. Meet us in DM to get started. <url>",
+     "created_at": "2017-10-10 00:59:45+00:00",
+     "outcome": "none",
+     "dm_handoff": true,
+     "substantive": false,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 4,
+     "ranks": {
+      "dense": 14,
+      "boost_plain": 29,
+      "boost_intent": 4
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7177232503890991,
+      "rrf": 0.029411764705882353,
+      "outcome_bonus": 0.0,
+      "final": 0.026860955056179775
+     },
+     "quality": {
+      "semantic_relevance": 0.7177232503890991,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "account_store_repair",
+      "resolution_relevance": false,
+      "action_class": "article",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "188174",
+     "thread_id": "188175",
+     "source_row_id": "188175",
+     "customer_message": "my phone has died on 20% for the last time someone needs to send me a new phone <url>",
+     "brand_reply": "We'd like to look into this with you. Send us a DM by clicking on the link below. We'll continue there. <url>",
+     "created_at": "2017-10-04 03:20:48+00:00",
+     "outcome": "none",
+     "dm_handoff": true,
+     "substantive": false,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 5,
+     "ranks": {
+      "dense": 36,
+      "boost_plain": 44,
+      "boost_intent": 5
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7044697999954224,
+      "rrf": 0.017857142857142856,
+      "outcome_bonus": 0.0,
+      "final": 0.025
+     },
+     "quality": {
+      "semantic_relevance": 0.7044697999954224,
+      "lexical_relevance": 0.0,
+      "intent_match": false,
+      "candidate_intent": "battery_power",
+      "resolution_relevance": false,
+      "action_class": "dm_handoff",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "gid": "g003",
+  "packet": {
+   "summary": "Customer earlier: My phones Operating System was the last version of ios10 (10.03 maybe). Yesterday I faced lags on various applications and 1-3; Brand earlier: Thanks for reaching out and providing detailed information. We want to help. Did you back up your phone before updating? Do you have a computer with iTunes on it?; Customer now: I did not back up before updating. Yes i have a macbook. Predicted intent performance_crash (MEDIUM). Risk flags: repeat_contact. Escalated: Customer has already tried the standard steps or the thread is deep without progress; public troubleshooting is unlikely to help.",
+   "customer_issue": "I did not back up before updating. Yes i have a macbook",
+   "intent": "performance_crash",
+   "confidence": 0.2299,
+   "confidence_band": "MEDIUM",
+   "alternatives": [
+    "account_store_repair",
+    "keyboard_text_bug"
+   ],
+   "risk": {
+    "safety_concern": false,
+    "security_concern": false,
+    "privacy_concern": false,
+    "account_access_risk": false,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": false,
+    "repeat_contact": true,
+    "sensitive_action_required": false,
+    "high_frustration": false,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "Customer confirms they did not back up their phone before updating but has a MacBook available for further troubleshooting.",
+    "source": "llm+rules"
+   },
+   "reason": {
+    "decision": "escalate",
+    "reason_code": "repeat_contact",
+    "reason": "Customer has already tried the standard steps or the thread is deep without progress; public troubleshooting is unlikely to help.",
+    "rule": "repeat_contact",
+    "policy_version": "policy-v2",
+    "clarification_allowed": false
+   },
+   "evidence_summary": "5 similar historical cases retrieved (5 with a substantive reply); top similarity 0.84; gate: weak_similarity",
+   "historical_examples": [
+    {
+     "evidence_id": "656278",
+     "thread_id": "656279",
+     "customer_message": "wassup man I\ufe0f tried to update my MacBook an my shit crashed \ud83e\udd26\ud83c\udffd\u200d\u2642\ufe0f",
+     "brand_reply": "We can help! Let us know what you currently see on screen & we'll go from there.",
+     "outcome": "none",
+     "similarity": 0.838,
+     "action_class": "ask_info"
+    },
+    {
+     "evidence_id": "1531298",
+     "thread_id": "1531299",
+     "customer_message": "I have a brand new MacBook Pro and excel crashed last night. We gonna fight bc I didn't starve myself for this shit",
+     "brand_reply": "We can help. How frequently does the app crash? Did you receive an error message? Has the computer been restarted?",
+     "outcome": "none",
+     "similarity": 0.804,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "620079",
+     "thread_id": "620080",
+     "customer_message": "MacBook just crashed on me. This is beginning to be an expensive holiday season.. help \ud83d\ude29",
+     "brand_reply": "You're in the right place for help, and we're glad to lend a hand. Is your Mac unable to power on, or are you having another specific issue? What specific MacBook are you using and what macOS is running?",
+     "outcome": "positive",
+     "similarity": 0.784,
+     "action_class": "ask_info"
+    },
+    {
+     "evidence_id": "2356609",
+     "thread_id": "2356610",
+     "customer_message": "HELP. I tried updating my MacBook Pro and it told me it wasn't able to update and it's been stuck on this screen for 10 minutes.",
+     "brand_reply": "Thanks for reaching out. We want to be sure you can update your MacBook Pro as you'd expect. We're happy to help you. Can you tell us what the specific error message is, please?",
+     "outcome": "none",
+     "similarity": 0.783,
+     "action_class": "update"
+    },
+    {
+     "evidence_id": "152860",
+     "thread_id": "152861",
+     "customer_message": "\ud83e\udd2cjust tried to update my MacBook \ud83d\udcbb to IOS Sierra and it fried it\ud83d\ude21 the software was corrupted and now it boot up it just restarts itself \ud83e\udd2c",
+     "brand_reply": "We want to be sure that you can use your MacBook as you'd expect after the update. We can help! Are you able to boot into safe mode? This article explains the process: <url>",
+     "outcome": "none",
+     "similarity": 0.78,
+     "action_class": "update"
+    }
+   ],
+   "evidence_sufficient": false,
+   "evidence_reason": "weak_similarity",
+   "recommended_next_action": "Read the thread first; do not repeat the steps already tried; consider a case or callback.",
+   "unresolved_questions": [
+    "Which device model?",
+    "Which software version?",
+    "When did it start (before/after an update)?"
+   ],
+   "suggested_opening": "Thanks for the steps you've already tried. A member of our team will pick this up with you directly so we can dig deeper.",
+   "draft_if_any": null,
+   "trace_id": "be06cff9c71c4229ad17bf738c2b220c",
+   "policy_version": "policy-v2",
+   "evidence": [
+    {
+     "evidence_id": "656278",
+     "thread_id": "656279",
+     "source_row_id": "656279",
+     "customer_message": "wassup man I\ufe0f tried to update my MacBook an my shit crashed \ud83e\udd26\ud83c\udffd\u200d\u2642\ufe0f",
+     "brand_reply": "We can help! Let us know what you currently see on screen & we'll go from there.",
+     "created_at": "2017-11-22 22:29:26+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 1,
+     "ranks": {
+      "dense": 1,
+      "boost_plain": 1,
+      "boost_intent": 1
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8382306694984436,
+      "rrf": 0.047619047619047616,
+      "outcome_bonus": 0.0,
+      "final": 0.03278688524590164
+     },
+     "quality": {
+      "semantic_relevance": 0.8382306694984436,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "performance_crash",
+      "resolution_relevance": true,
+      "action_class": "ask_info",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1531298",
+     "thread_id": "1531299",
+     "source_row_id": "1531299",
+     "customer_message": "I have a brand new MacBook Pro and excel crashed last night. We gonna fight bc I didn't starve myself for this shit",
+     "brand_reply": "We can help. How frequently does the app crash? Did you receive an error message? Has the computer been restarted?",
+     "created_at": "2017-11-03 15:27:33+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 2,
+     "ranks": {
+      "dense": 4,
+      "boost_plain": 2,
+      "boost_intent": 2
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8037202954292297,
+      "rrf": 0.041666666666666664,
+      "outcome_bonus": 0.0,
+      "final": 0.03225806451612903
+     },
+     "quality": {
+      "semantic_relevance": 0.8037202954292297,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "performance_crash",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "620079",
+     "thread_id": "620080",
+     "source_row_id": "620080",
+     "customer_message": "MacBook just crashed on me. This is beginning to be an expensive holiday season.. help \ud83d\ude29",
+     "brand_reply": "You're in the right place for help, and we're glad to lend a hand. Is your Mac unable to power on, or are you having another specific issue? What specific MacBook are you using and what macOS is running?",
+     "created_at": "2017-11-22 16:15:12+00:00",
+     "outcome": "positive",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 3,
+     "ranks": {
+      "dense": 13,
+      "boost_plain": 6,
+      "boost_intent": 3
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7839025259017944,
+      "rrf": 0.030303030303030304,
+      "outcome_bonus": 0.0,
+      "final": 0.031024531024531024
+     },
+     "quality": {
+      "semantic_relevance": 0.7839025259017944,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "performance_crash",
+      "resolution_relevance": true,
+      "action_class": "ask_info",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2356609",
+     "thread_id": "2356610",
+     "source_row_id": "2356610",
+     "customer_message": "HELP. I tried updating my MacBook Pro and it told me it wasn't able to update and it's been stuck on this screen for 10 minutes.",
+     "brand_reply": "Thanks for reaching out. We want to be sure you can update your MacBook Pro as you'd expect. We're happy to help you. Can you tell us what the specific error message is, please?",
+     "created_at": "2017-11-13 18:49:54+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 4,
+     "ranks": {
+      "dense": 16,
+      "boost_plain": 8,
+      "boost_intent": 4
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7825103998184204,
+      "rrf": 0.027777777777777776,
+      "outcome_bonus": 0.0,
+      "final": 0.030330882352941176
+     },
+     "quality": {
+      "semantic_relevance": 0.7825103998184204,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "performance_crash",
+      "resolution_relevance": true,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "152860",
+     "thread_id": "152861",
+     "source_row_id": "152861",
+     "customer_message": "\ud83e\udd2cjust tried to update my MacBook \ud83d\udcbb to IOS Sierra and it fried it\ud83d\ude21 the software was corrupted and now it boot up it just restarts itself \ud83e\udd2c",
+     "brand_reply": "We want to be sure that you can use your MacBook as you'd expect after the update. We can help! Are you able to boot into safe mode? This article explains the process: <url>",
+     "created_at": "2017-11-24 15:29:00+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 5,
+     "ranks": {
+      "dense": 19,
+      "boost_plain": 10,
+      "boost_intent": 5
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7803406715393066,
+      "rrf": 0.02564102564102564,
+      "outcome_bonus": 0.0,
+      "final": 0.02967032967032967
+     },
+     "quality": {
+      "semantic_relevance": 0.7803406715393066,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "performance_crash",
+      "resolution_relevance": true,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "gid": "g005",
+  "packet": {
+   "summary": "Customer now: fix the fcking I problem I\u2019m tired of seeing question marks on my damn timeline. Predicted intent keyboard_text_bug (HIGH). Risk flags: high_frustration. Escalated: The generated reply could not be verified against the evidence after a corrective retry; escalating.",
+   "customer_issue": "fix the fcking I problem I\u2019m tired of seeing question marks on my damn timeline",
+   "intent": "keyboard_text_bug",
+   "confidence": 0.8895,
+   "confidence_band": "HIGH",
+   "alternatives": [
+    "general_complaint",
+    "performance_crash"
+   ],
+   "risk": {
+    "safety_concern": false,
+    "security_concern": false,
+    "privacy_concern": false,
+    "account_access_risk": false,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": false,
+    "repeat_contact": false,
+    "sensitive_action_required": false,
+    "high_frustration": true,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "Customer is frustrated by question marks appearing on their timeline and wants the display issue resolved.",
+    "source": "llm+rules"
+   },
+   "reason": {
+    "decision": "escalate",
+    "reason_code": "verification_failed",
+    "reason": "The generated reply could not be verified against the evidence after a corrective retry; escalating.",
+    "rule": "verifier",
+    "policy_version": "policy-v2",
+    "clarification_allowed": false
+   },
+   "evidence_summary": "5 similar historical cases retrieved (5 with a substantive reply); top similarity 0.89; gate: strong_consistent_evidence",
+   "historical_examples": [
+    {
+     "evidence_id": "1746001",
+     "thread_id": "1746002",
+     "customer_message": "please fix the \u201cI\ufe0f\u201d problem please. So sick of these question mark boxes ruining everything!!!!!!",
+     "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+     "outcome": "none",
+     "similarity": 0.886,
+     "action_class": "update"
+    },
+    {
+     "evidence_id": "1618277",
+     "thread_id": "1618278",
+     "customer_message": "Please fix this question mark whenever i type the letter \u201ci\u201d",
+     "brand_reply": "We are aware of this issue and are working hard to find a resolution. We do have a workaround: <url>",
+     "outcome": "none",
+     "similarity": 0.883,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "2343853",
+     "thread_id": "2343854",
+     "customer_message": "y\u2019all need to fix this fucking problem. i\ufe0fm tired of seeing that question mark in a box every time i write something",
+     "brand_reply": "We want to help you with this issue. If you haven\u2019t yet, please back up your device and update it to the latest version iOS 11.1.1. For more info about this update, check out: <url>",
+     "outcome": "none",
+     "similarity": 0.881,
+     "action_class": "update"
+    },
+    {
+     "evidence_id": "1677901",
+     "thread_id": "1677902",
+     "customer_message": "y\u2019all better fix these question marks that keep popping up whenever I\ufe0f try to use a damn I\ufe0f",
+     "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+     "outcome": "none",
+     "similarity": 0.881,
+     "action_class": "update"
+    },
+    {
+     "evidence_id": "1774891",
+     "thread_id": "1774892",
+     "customer_message": "Why the fuck do I\ufe0f keep seeing these fucking boxes with question marks on my timeline!? This shit is pissing me off. Y\u2019all better fix this shit",
+     "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+     "outcome": "none",
+     "similarity": 0.879,
+     "action_class": "update"
+    }
+   ],
+   "evidence_sufficient": true,
+   "evidence_reason": "strong_consistent_evidence",
+   "recommended_next_action": "The generated draft was rejected by the verifier; write the reply manually using the historical examples below.",
+   "unresolved_questions": [
+    "Which device model?",
+    "Which software version?"
+   ],
+   "suggested_opening": "We'd like to help with this. A member of our team will follow up with you directly.",
+   "draft_if_any": "We hear you and want to help with this issue. Please back up your device and update to the latest version of iOS to resolve the letter 'i' showing as a question mark box. Let us know if you need help!",
+   "trace_id": "260ce181714141b0911162d58f073958",
+   "policy_version": "policy-v2",
+   "evidence": [
+    {
+     "evidence_id": "1746001",
+     "thread_id": "1746002",
+     "source_row_id": "1746002",
+     "customer_message": "please fix the \u201cI\ufe0f\u201d problem please. So sick of these question mark boxes ruining everything!!!!!!",
+     "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+     "created_at": "2017-11-07 15:04:50+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 1,
+     "ranks": {
+      "dense": 1,
+      "boost_plain": 1,
+      "boost_intent": 1
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8864642381668091,
+      "rrf": 0.047619047619047616,
+      "outcome_bonus": 0.0,
+      "final": 0.09523809523809523
+     },
+     "quality": {
+      "semantic_relevance": 0.8864642381668091,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "keyboard_text_bug",
+      "resolution_relevance": true,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1618277",
+     "thread_id": "1618278",
+     "source_row_id": "1618278",
+     "customer_message": "Please fix this question mark whenever i type the letter \u201ci\u201d",
+     "brand_reply": "We are aware of this issue and are working hard to find a resolution. We do have a workaround: <url>",
+     "created_at": "2017-11-05 05:34:38+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 2,
+     "ranks": {
+      "dense": 3,
+      "boost_plain": 2,
+      "boost_intent": 2
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8825108408927917,
+      "rrf": 0.043478260869565216,
+      "outcome_bonus": 0.0,
+      "final": 0.09090909090909091
+     },
+     "quality": {
+      "semantic_relevance": 0.8825108408927917,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "keyboard_text_bug",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2343853",
+     "thread_id": "2343854",
+     "source_row_id": "2343854",
+     "customer_message": "y\u2019all need to fix this fucking problem. i\ufe0fm tired of seeing that question mark in a box every time i write something",
+     "brand_reply": "We want to help you with this issue. If you haven\u2019t yet, please back up your device and update it to the latest version iOS 11.1.1. For more info about this update, check out: <url>",
+     "created_at": "2017-11-13 12:22:46+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 3,
+     "ranks": {
+      "dense": 4,
+      "boost_plain": 3,
+      "boost_intent": 3
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8813305497169495,
+      "rrf": 0.041666666666666664,
+      "outcome_bonus": 0.0,
+      "final": 0.08695652173913043
+     },
+     "quality": {
+      "semantic_relevance": 0.8813305497169495,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "keyboard_text_bug",
+      "resolution_relevance": true,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1677901",
+     "thread_id": "1677902",
+     "source_row_id": "1677902",
+     "customer_message": "y\u2019all better fix these question marks that keep popping up whenever I\ufe0f try to use a damn I\ufe0f",
+     "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+     "created_at": "2017-11-06 09:05:18+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 4,
+     "ranks": {
+      "dense": 6,
+      "boost_plain": 4,
+      "boost_intent": 4
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8807753920555115,
+      "rrf": 0.038461538461538464,
+      "outcome_bonus": 0.0,
+      "final": 0.08333333333333333
+     },
+     "quality": {
+      "semantic_relevance": 0.8807753920555115,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "keyboard_text_bug",
+      "resolution_relevance": true,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1774891",
+     "thread_id": "1774892",
+     "source_row_id": "1774892",
+     "customer_message": "Why the fuck do I\ufe0f keep seeing these fucking boxes with question marks on my timeline!? This shit is pissing me off. Y\u2019all better fix this shit",
+     "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+     "created_at": "2017-11-08 02:40:07+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 5,
+     "ranks": {
+      "dense": 7,
+      "boost_plain": 5,
+      "boost_intent": 5
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8787015676498413,
+      "rrf": 0.037037037037037035,
+      "outcome_bonus": 0.0,
+      "final": 0.08
+     },
+     "quality": {
+      "semantic_relevance": 0.8787015676498413,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "keyboard_text_bug",
+      "resolution_relevance": true,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "gid": "g006",
+  "packet": {
+   "summary": "Customer earlier: found a bug <url>; Brand earlier: It looks like your video hasn't come through on our end, but we'd like to help regardless. What's happening exactly in your device and which model do you have? Also, which exact iOS version is install\u2026; Customer now: iPhone 7 iOS 11.1.2. Settings trying to change my email signature. Click on it and crash.. Predicted intent apps_services (MEDIUM). Risk flags: sensitive_action_required. Escalated: Billing, refund, order or account changes need a human with account access.",
+   "customer_issue": "iPhone 7 iOS 11.1.2. Settings trying to change my email signature. Click on it and crash.",
+   "intent": "apps_services",
+   "confidence": 0.6109,
+   "confidence_band": "MEDIUM",
+   "alternatives": [
+    "keyboard_text_bug",
+    "account_store_repair"
+   ],
+   "risk": {
+    "safety_concern": false,
+    "security_concern": false,
+    "privacy_concern": false,
+    "account_access_risk": false,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": false,
+    "repeat_contact": false,
+    "sensitive_action_required": true,
+    "high_frustration": false,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "Customer reports the Settings app crashes when attempting to change their email signature on an iPhone 7 running iOS 11.1.2.",
+    "source": "llm+rules"
+   },
+   "reason": {
+    "decision": "escalate",
+    "reason_code": "payment_billing",
+    "reason": "Billing, refund, order or account changes need a human with account access.",
+    "rule": "payment_billing",
+    "policy_version": "policy-v2",
+    "clarification_allowed": false
+   },
+   "evidence_summary": "5 similar historical cases retrieved (4 with a substantive reply); top similarity 0.80; gate: weak_similarity",
+   "historical_examples": [
+    {
+     "evidence_id": "1007775",
+     "thread_id": "1007777",
+     "customer_message": "My email no longer works (amongst other things) on my iPhone since I updated to IOS 11.0.3 \ud83d\ude10 is there a patch ? #ios11",
+     "brand_reply": "Let\u2019s team up on this situation with your email. What email provider do you use? Are you unable to both send and receive email?",
+     "outcome": "positive",
+     "similarity": 0.802,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "643244",
+     "thread_id": "643246",
+     "customer_message": "Anybody else get that error in mail on #ios11 <url>",
+     "brand_reply": "Thanks for reaching out to us. We can happily help to resolve this issue. Which iPhone & version of iOS do you have currently?",
+     "outcome": "none",
+     "similarity": 0.771,
+     "action_class": "ask_info"
+    },
+    {
+     "evidence_id": "1420125",
+     "thread_id": "1420123",
+     "customer_message": "I managed to re-add but the issue persists. It does not show any email. I'm on iPhone 6 iOS 11.1",
+     "brand_reply": "You mentioned that this issue had been going on for a while; do you recall when it initially began? Did it happen before iOS 11?",
+     "outcome": "positive",
+     "similarity": 0.77,
+     "action_class": "update"
+    },
+    {
+     "evidence_id": "2125083",
+     "thread_id": "2125084",
+     "customer_message": "when are you going to fix the I\ufe0f issue? I\ufe0f can\u2019t write emails from my phone because of this garbage.",
+     "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+     "outcome": "none",
+     "similarity": 0.77,
+     "action_class": "update"
+    },
+    {
+     "evidence_id": "1910309",
+     "thread_id": "1910311",
+     "customer_message": ". #iOS11 bug report. 4 line signature on (1 of 4) email accounts. Not able to edit signature. Screen closes when text selected. \ud83d\ude1e",
+     "brand_reply": "We'd like to look into this with you. DM us which version of iOS 11 you have and if restarting helps at all. We'll help there. <url>",
+     "outcome": "none",
+     "similarity": 0.838,
+     "action_class": "update"
+    }
+   ],
+   "evidence_sufficient": false,
+   "evidence_reason": "weak_similarity",
+   "recommended_next_action": "Move to DM, confirm order/subscription details in the billing system, then resolve.",
+   "unresolved_questions": [
+    "Which device model?",
+    "Which software version?",
+    "Which app or service exactly?"
+   ],
+   "suggested_opening": "We'd like to look at this with you. Because it involves your account details, a member of our team will follow up with you directly.",
+   "draft_if_any": null,
+   "trace_id": "988c5bd94eb54ff5bccfdfb5104f384d",
+   "policy_version": "policy-v2",
+   "evidence": [
+    {
+     "evidence_id": "1007775",
+     "thread_id": "1007777",
+     "source_row_id": "1007777",
+     "customer_message": "My email no longer works (amongst other things) on my iPhone since I updated to IOS 11.0.3 \ud83d\ude10 is there a patch ? #ios11",
+     "brand_reply": "Let\u2019s team up on this situation with your email. What email provider do you use? Are you unable to both send and receive email?",
+     "created_at": "2017-10-22 19:33:14+00:00",
+     "outcome": "positive",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 1,
+     "ranks": {
+      "dense": 5,
+      "boost_plain": 1,
+      "boost_intent": 1
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8022438287734985,
+      "rrf": 0.04,
+      "outcome_bonus": 0.0,
+      "final": 0.03278688524590164
+     },
+     "quality": {
+      "semantic_relevance": 0.8022438287734985,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "643244",
+     "thread_id": "643246",
+     "source_row_id": "643246",
+     "customer_message": "Anybody else get that error in mail on #ios11 <url>",
+     "brand_reply": "Thanks for reaching out to us. We can happily help to resolve this issue. Which iPhone & version of iOS do you have currently?",
+     "created_at": "2017-10-23 11:18:47+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 2,
+     "ranks": {
+      "dense": 29,
+      "boost_plain": 9,
+      "boost_intent": 2
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7713816165924072,
+      "rrf": 0.02040816326530612,
+      "outcome_bonus": 0.0,
+      "final": 0.030621785881252923
+     },
+     "quality": {
+      "semantic_relevance": 0.7713816165924072,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": true,
+      "action_class": "ask_info",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1420125",
+     "thread_id": "1420123",
+     "source_row_id": "1420123",
+     "customer_message": "I managed to re-add but the issue persists. It does not show any email. I'm on iPhone 6 iOS 11.1",
+     "brand_reply": "You mentioned that this issue had been going on for a while; do you recall when it initially began? Did it happen before iOS 11?",
+     "created_at": "2017-11-02 08:44:17+00:00",
+     "outcome": "positive",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 3,
+     "ranks": {
+      "dense": 32,
+      "boost_plain": 10,
+      "boost_intent": 3
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7700974345207214,
+      "rrf": 0.019230769230769232,
+      "outcome_bonus": 0.0,
+      "final": 0.030158730158730156
+     },
+     "quality": {
+      "semantic_relevance": 0.7700974345207214,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": true,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2125083",
+     "thread_id": "2125084",
+     "source_row_id": "2125084",
+     "customer_message": "when are you going to fix the I\ufe0f issue? I\ufe0f can\u2019t write emails from my phone because of this garbage.",
+     "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+     "created_at": "2017-11-08 16:59:26+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 4,
+     "ranks": {
+      "dense": 34,
+      "boost_plain": 12,
+      "boost_intent": 4
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7696211338043213,
+      "rrf": 0.018518518518518517,
+      "outcome_bonus": 0.0,
+      "final": 0.029513888888888888
+     },
+     "quality": {
+      "semantic_relevance": 0.7696211338043213,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": true,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1910309",
+     "thread_id": "1910311",
+     "source_row_id": "1910311",
+     "customer_message": ". #iOS11 bug report. 4 line signature on (1 of 4) email accounts. Not able to edit signature. Screen closes when text selected. \ud83d\ude1e",
+     "brand_reply": "We'd like to look into this with you. DM us which version of iOS 11 you have and if restarting helps at all. We'll help there. <url>",
+     "created_at": "2017-10-24 22:00:22+00:00",
+     "outcome": "none",
+     "dm_handoff": true,
+     "substantive": false,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 5,
+     "ranks": {
+      "dense": 1,
+      "boost_plain": 20,
+      "boost_intent": 5
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8384465575218201,
+      "rrf": 0.047619047619047616,
+      "outcome_bonus": 0.0,
+      "final": 0.027884615384615386
+     },
+     "quality": {
+      "semantic_relevance": 0.8384465575218201,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": false,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "gid": "g007",
+  "packet": {
+   "summary": "Customer earlier: why can\u2019t my sister listen to music she bought on itunes when i have individual apple music ? / we\u2019re both using the same apple id. she doesn\u2019t have an apple music so she\u2019s just listening to a song she BOUGHT on itunes yesterday . i pay for individual apple music monthly . w; Brand earlier: Thanks. Does she get an error message when she tries to play the song?; Customer now: she said she can listen to the songs unless i\u2019m listening to apple music on my phone . we both get a message that says \u201clooks like you\u2019re listening on another device\u201d. Predicted intent apps_services (HIGH). Risk flags: account_access_risk, high_frustration. Escalated: Account access or identity verification is involved; must move to a private, verified channel.",
+   "customer_issue": "she said she can listen to the songs unless i\u2019m listening to apple music on my phone . we both get a message that says \u201clooks like you\u2019re listening on another device\u201d",
+   "intent": "apps_services",
+   "confidence": 0.7796,
+   "confidence_band": "HIGH",
+   "alternatives": [
+    "connectivity",
+    "hardware_damage"
+   ],
+   "risk": {
+    "safety_concern": false,
+    "security_concern": false,
+    "privacy_concern": false,
+    "account_access_risk": true,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": false,
+    "repeat_contact": false,
+    "sensitive_action_required": false,
+    "high_frustration": true,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "Customer reports that sharing an Apple ID causes a concurrent-listening conflict between Apple Music and purchased iTunes songs.",
+    "source": "llm+rules"
+   },
+   "reason": {
+    "decision": "escalate",
+    "reason_code": "account_access",
+    "reason": "Account access or identity verification is involved; must move to a private, verified channel.",
+    "rule": "account_access",
+    "policy_version": "policy-v2",
+    "clarification_allowed": false
+   },
+   "evidence_summary": "5 similar historical cases retrieved (5 with a substantive reply); top similarity 0.83; gate: weak_similarity",
+   "historical_examples": [
+    {
+     "evidence_id": "1520465",
+     "thread_id": "1520467",
+     "customer_message": "why is Apple Music saying I\u2019m listening on more than 1 device when I\u2019m not!",
+     "brand_reply": "We'd like to help. What device are you using Apple Music with?",
+     "outcome": "none",
+     "similarity": 0.827,
+     "action_class": "ask_info"
+    },
+    {
+     "evidence_id": "1295128",
+     "thread_id": "1295129",
+     "customer_message": "I am also having issues with Apple Music. My family can\u2019t access our family share #applemusic",
+     "brand_reply": "We\u2019re investigating and will update our System Status page as more info becomes available: <url>",
+     "outcome": "none",
+     "similarity": 0.791,
+     "action_class": "update"
+    },
+    {
+     "evidence_id": "428730",
+     "thread_id": "428728",
+     "customer_message": "Nope. Happens frequently with Spotify and Podcasts. I don\u2019t use Apple Music \ud83c\udfa7 \u274c",
+     "brand_reply": "Can you let us know what version of iOS 11 you\u2019re using? To check the version number just go to Settings > General > About.",
+     "outcome": "none",
+     "similarity": 0.784,
+     "action_class": "update"
+    },
+    {
+     "evidence_id": "1266514",
+     "thread_id": "1266515",
+     "customer_message": "Bruh wtf is wrong with my Apple Music wont add new music. if yalls don\u2019t fix I\u2019m switching back to",
+     "brand_reply": "We want to get your Apple Music working again. To start, can you tell us which iPhone and iOS version you're using?",
+     "outcome": "none",
+     "similarity": 0.781,
+     "action_class": "ask_info"
+    },
+    {
+     "evidence_id": "2294633",
+     "thread_id": "2294632",
+     "customer_message": "Version 11.1.1(15B150) I happened to be listening to Apple Music when those things started occurring",
+     "brand_reply": "Do you have to do anything specific to get the iPhone to respond again or do you just give it time to return to normal? Is it the Music app that is becoming unresponsive or other apps you're using while listening to Apple Music?",
+     "outcome": "none",
+     "similarity": 0.778,
+     "action_class": "ask_info"
+    }
+   ],
+   "evidence_sufficient": false,
+   "evidence_reason": "weak_similarity",
+   "recommended_next_action": "Move to DM, verify identity per the account-recovery procedure, then act.",
+   "unresolved_questions": [
+    "Which device model?",
+    "Which software version?",
+    "Which app or service exactly?"
+   ],
+   "suggested_opening": "To keep your account safe we need to help with this privately. A member of our team will follow up with you directly.",
+   "draft_if_any": null,
+   "trace_id": "aa1d39494db74b12ba80e1c961441a42",
+   "policy_version": "policy-v2",
+   "evidence": [
+    {
+     "evidence_id": "1520465",
+     "thread_id": "1520467",
+     "source_row_id": "1520467",
+     "customer_message": "why is Apple Music saying I\u2019m listening on more than 1 device when I\u2019m not!",
+     "brand_reply": "We'd like to help. What device are you using Apple Music with?",
+     "created_at": "2017-11-03 11:18:17+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 1,
+     "ranks": {
+      "dense": 1,
+      "boost_plain": 1,
+      "boost_intent": 1
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8274616599082947,
+      "rrf": 0.047619047619047616,
+      "outcome_bonus": 0.0,
+      "final": 0.09523809523809523
+     },
+     "quality": {
+      "semantic_relevance": 0.8274616599082947,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": true,
+      "action_class": "ask_info",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1295128",
+     "thread_id": "1295129",
+     "source_row_id": "1295129",
+     "customer_message": "I am also having issues with Apple Music. My family can\u2019t access our family share #applemusic",
+     "brand_reply": "We\u2019re investigating and will update our System Status page as more info becomes available: <url>",
+     "created_at": "2017-10-26 20:23:37+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 2,
+     "ranks": {
+      "dense": 2,
+      "boost_plain": 2,
+      "boost_intent": 2
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7913931608200073,
+      "rrf": 0.045454545454545456,
+      "outcome_bonus": 0.0,
+      "final": 0.09090909090909091
+     },
+     "quality": {
+      "semantic_relevance": 0.7913931608200073,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": true,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "428730",
+     "thread_id": "428728",
+     "source_row_id": "428728",
+     "customer_message": "Nope. Happens frequently with Spotify and Podcasts. I don\u2019t use Apple Music \ud83c\udfa7 \u274c",
+     "brand_reply": "Can you let us know what version of iOS 11 you\u2019re using? To check the version number just go to Settings > General > About.",
+     "created_at": "2017-10-10 20:56:15+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 3,
+     "ranks": {
+      "dense": 3,
+      "boost_plain": 3,
+      "boost_intent": 3
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7837374210357666,
+      "rrf": 0.043478260869565216,
+      "outcome_bonus": 0.0,
+      "final": 0.08695652173913043
+     },
+     "quality": {
+      "semantic_relevance": 0.7837374210357666,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": true,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1266514",
+     "thread_id": "1266515",
+     "source_row_id": "1266515",
+     "customer_message": "Bruh wtf is wrong with my Apple Music wont add new music. if yalls don\u2019t fix I\u2019m switching back to",
+     "brand_reply": "We want to get your Apple Music working again. To start, can you tell us which iPhone and iOS version you're using?",
+     "created_at": "2017-10-26 05:19:45+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 4,
+     "ranks": {
+      "dense": 4,
+      "boost_plain": 4,
+      "boost_intent": 4
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7811273336410522,
+      "rrf": 0.041666666666666664,
+      "outcome_bonus": 0.0,
+      "final": 0.08333333333333333
+     },
+     "quality": {
+      "semantic_relevance": 0.7811273336410522,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": true,
+      "action_class": "ask_info",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2294633",
+     "thread_id": "2294632",
+     "source_row_id": "2294632",
+     "customer_message": "Version 11.1.1(15B150) I happened to be listening to Apple Music when those things started occurring",
+     "brand_reply": "Do you have to do anything specific to get the iPhone to respond again or do you just give it time to return to normal? Is it the Music app that is becoming unresponsive or other apps you're using while listening to Apple Music?",
+     "created_at": "2017-11-12 08:53:14+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small+subst",
+     "rank": 5,
+     "ranks": {
+      "dense": 5,
+      "boost_plain": 5,
+      "boost_intent": 5
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7775956392288208,
+      "rrf": 0.04,
+      "outcome_bonus": 0.0,
+      "final": 0.08
+     },
+     "quality": {
+      "semantic_relevance": 0.7775956392288208,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": true,
+      "action_class": "ask_info",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    }
+   ]
+  }
+ }
+]

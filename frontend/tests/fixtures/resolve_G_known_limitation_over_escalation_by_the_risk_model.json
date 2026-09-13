@@ -1,0 +1,775 @@
+{
+ "request_id": "fixture-G",
+ "trace_id": "e5e6159568cb4c09b1ecf8556726f881",
+ "action": "HUMAN_HANDOFF",
+ "outcome": {
+  "action": "HUMAN_HANDOFF",
+  "what_happened": "Handed the case to a human agent with a handoff packet; no autonomous answer was sent.",
+  "why": "Customer has already tried the standard steps or the thread is deep without progress; public troubleshooting is unlikely to help.",
+  "evidence_basis": "5 similar historical cases retrieved; top similarity 0.94; evidence INSUFFICIENT (insufficient_query); resolution clusters: update x1; resolution confidence 0.00.",
+  "next_step": "Read the thread first; do not repeat the steps already tried; consider a case or callback.",
+  "reason_code": "repeat_contact",
+  "rule": "repeat_contact",
+  "policy_version": "policy-v3.1",
+  "autonomous_response_allowed": false,
+  "output_gate": {
+   "policy_allows_automation": false,
+   "no_blocking_risk_flag": true,
+   "intent_confidence_acceptable": false,
+   "evidence_sufficient": false,
+   "response_generated": false,
+   "response_verified": false,
+   "evidence_refs_exist": false,
+   "pii_guard": false,
+   "schema_valid": false
+  },
+  "blocking_checks": [
+   "policy_allows_automation",
+   "intent_confidence_acceptable",
+   "evidence_sufficient",
+   "response_generated",
+   "response_verified",
+   "evidence_refs_exist",
+   "pii_guard",
+   "schema_valid"
+  ]
+ },
+ "response": {
+  "kind": "handoff_notice",
+  "text": "Thanks for the steps you've already tried. A member of our team will pick this up with you directly so we can dig deeper.",
+  "sent_automatically": false,
+  "evidence_refs": [],
+  "draft_attempts": 0
+ },
+ "intent": {
+  "intent": "battery_power",
+  "confidence": 0.188,
+  "top3": [
+   [
+    "battery_power",
+    0.188
+   ],
+   [
+    "general_complaint",
+    0.1584
+   ],
+   [
+    "hardware_damage",
+    0.1469
+   ]
+  ],
+  "method": "embed_lr",
+  "confidence_band": "LOW",
+  "calibrated": true,
+  "calibration": {
+   "method": "temperature",
+   "temperature": 1.5,
+   "dev_ece": 0.0355
+  },
+  "secondary_intents": [],
+  "multi_intent": false,
+  "insufficient_context": true,
+  "taxonomy_gap": false,
+  "context_used": false,
+  "second_opinion": null,
+  "second_opinion_applied": false
+ },
+ "evidence": {
+  "query": "still not working",
+  "query_intent": null,
+  "retriever": "dense:bge-small:pair+rr+gatev3",
+  "items": [
+   {
+    "evidence_id": "2127287",
+    "thread_id": "2127285",
+    "source_row_id": "2127285",
+    "customer_message": "still doesn’t work",
+    "brand_reply": "We recently released iOS 11.1.1. We'd recommend backing up your device and updating the system as outlined here: <url>",
+    "created_at": "2017-11-09 22:12:40+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 1,
+    "ranks": {
+     "pair": 29
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.9370161294937134,
+     "cos_reply": 0.0,
+     "cos_pair": 0.715423583984375,
+     "rrf": 0.02040816326530612,
+     "outcome_bonus": 0.0,
+     "rerank": 0.7191115413188933,
+     "final": 0.7191115413188933
+    },
+    "quality": {
+     "semantic_relevance": 0.9370161294937134,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "general_complaint",
+     "resolution_relevance": true,
+     "action_class": "update",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "1758938",
+    "thread_id": "1758939",
+    "source_row_id": "1758939",
+    "customer_message": "fix this update shit I’m I️ not working",
+    "brand_reply": "Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>",
+    "created_at": "2017-11-07 14:59:22+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 2,
+    "ranks": {
+     "pair": 22
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.7645409107208252,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7232258915901184,
+     "rrf": 0.023809523809523808,
+     "outcome_bonus": 0.0,
+     "rerank": 0.6711957916498185,
+     "final": 0.6711957916498185
+    },
+    "quality": {
+     "semantic_relevance": 0.7645409107208252,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "general_complaint",
+     "resolution_relevance": true,
+     "action_class": "update",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "1281104",
+    "thread_id": "1281105",
+    "source_row_id": "1281105",
+    "customer_message": "Nono. Even after multiple restart it won’t connect... 😰 <url>",
+    "brand_reply": "Let's check this out. Have you tried different internet connections?",
+    "created_at": "2017-10-17 13:09:42+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 3,
+    "ranks": {
+     "pair": 33
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.7419432401657104,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7131068110466003,
+     "rrf": 0.018867924528301886,
+     "outcome_bonus": 0.0,
+     "rerank": 0.6575568368196487,
+     "final": 0.6575568368196487
+    },
+    "quality": {
+     "semantic_relevance": 0.7419432401657104,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "performance_crash",
+     "resolution_relevance": true,
+     "action_class": "article",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "1622324",
+    "thread_id": "1622323",
+    "source_row_id": "1622323",
+    "customer_message": "Nope, still doesn’t work",
+    "brand_reply": "Are you using the Music app or a different app for music? Let's also try a restart. This link will help: <url>",
+    "created_at": "2017-10-17 16:15:06+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 4,
+    "ranks": {
+     "pair": 12
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.885438084602356,
+     "cos_reply": 0.0,
+     "cos_pair": 0.735592246055603,
+     "rrf": 0.03125,
+     "outcome_bonus": 0.0,
+     "rerank": 0.5177513911247253,
+     "final": 0.5177513911247253
+    },
+    "quality": {
+     "semantic_relevance": 0.885438084602356,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "general_complaint",
+     "resolution_relevance": false,
+     "action_class": "restart",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "2141589",
+    "thread_id": "2141587",
+    "source_row_id": "2141587",
+    "customer_message": "I have done everything and it’s not working still",
+    "brand_reply": "We always want to make sure you get a great experience from us. Please contact our billing support: <url>",
+    "created_at": "2017-11-08 23:40:52+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 5,
+    "ranks": {
+     "pair": 11
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.8117035627365112,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7360630035400391,
+     "rrf": 0.03225806451612903,
+     "outcome_bonus": 0.0,
+     "rerank": 0.4790619978427887,
+     "final": 0.4790619978427887
+    },
+    "quality": {
+     "semantic_relevance": 0.8117035627365112,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "general_complaint",
+     "resolution_relevance": false,
+     "action_class": "other",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   }
+  ],
+  "n_retrieved": 50,
+  "n_relevant": 5,
+  "sufficient": false,
+  "sufficiency_reason": "insufficient_query",
+  "sufficiency_level": "INSUFFICIENT",
+  "resolution_confidence": 0.0,
+  "consistency": "consistent",
+  "resolution_candidates": [
+   {
+    "action_class": "update",
+    "representative_reply": "We recently released iOS 11.1.1. We'd recommend backing up your device and updating the system as outlined here: <url>",
+    "representative_id": "2127287",
+    "evidence_ids": [
+     "2127287"
+    ],
+    "support_count": 1,
+    "mean_similarity": 0.937,
+    "positive_outcomes": 0,
+    "share": 1.0
+   }
+  ],
+  "signals": {
+   "n_retrieved": 5,
+   "n_relevant": 5,
+   "query_content_tokens": 3,
+   "query_symptom_tokens": 0,
+   "top_similarity": 0.9370161294937134,
+   "similarity_margin": 0.19507288932800293,
+   "intent_agreement": 0.8,
+   "modal_intent": "general_complaint",
+   "query_intent_agreement": null,
+   "support_count": 1,
+   "resolution_bearing": 0,
+   "action_classes": {
+    "update": 1
+   },
+   "conflicting": false,
+   "same_customer_count": 0
+  },
+  "gate_version": "gate-v3",
+  "latency_ms": 70.19299999956274
+ },
+ "risk": {
+  "safety_concern": false,
+  "security_concern": false,
+  "privacy_concern": false,
+  "account_access_risk": false,
+  "payment_billing_risk": false,
+  "legal_or_media_threat": false,
+  "abusive_threatening": false,
+  "high_impact": false,
+  "needs_private_info": false,
+  "physical_damage": false,
+  "repeat_contact": true,
+  "sensitive_action_required": false,
+  "high_frustration": false,
+  "prompt_injection": false,
+  "is_actionable": true,
+  "insufficient_context": true,
+  "conflicting_evidence": false,
+  "summary": "Customer reports an ongoing issue that remains unresolved.",
+  "source": "llm+rules"
+ },
+ "verification": null,
+ "clarification": null,
+ "handoff": {
+  "summary": "Customer now: still not working. Predicted intent battery_power (LOW). Risk flags: repeat_contact, insufficient_context. Escalated: Customer has already tried the standard steps or the thread is deep without progress; public troubleshooting is unlikely to help.",
+  "customer_issue": "still not working",
+  "intent": "battery_power",
+  "confidence": 0.188,
+  "confidence_band": "LOW",
+  "alternatives": [
+   "general_complaint",
+   "hardware_damage"
+  ],
+  "risk": {
+   "safety_concern": false,
+   "security_concern": false,
+   "privacy_concern": false,
+   "account_access_risk": false,
+   "payment_billing_risk": false,
+   "legal_or_media_threat": false,
+   "abusive_threatening": false,
+   "high_impact": false,
+   "needs_private_info": false,
+   "physical_damage": false,
+   "repeat_contact": true,
+   "sensitive_action_required": false,
+   "high_frustration": false,
+   "prompt_injection": false,
+   "is_actionable": true,
+   "insufficient_context": true,
+   "conflicting_evidence": false,
+   "summary": "Customer reports an ongoing issue that remains unresolved.",
+   "source": "llm+rules"
+  },
+  "reason": {
+   "decision": "escalate",
+   "reason_code": "repeat_contact",
+   "reason": "Customer has already tried the standard steps or the thread is deep without progress; public troubleshooting is unlikely to help.",
+   "rule": "repeat_contact",
+   "policy_version": "policy-v3.1",
+   "clarification_allowed": false
+  },
+  "evidence_summary": "5 similar historical cases retrieved (5 with a substantive reply); top similarity 0.94; gate: INSUFFICIENT (insufficient_query), resolution confidence 0.00, 1 resolution cluster(s)",
+  "historical_examples": [
+   {
+    "evidence_id": "2127287",
+    "thread_id": "2127285",
+    "customer_message": "still doesn’t work",
+    "brand_reply": "We recently released iOS 11.1.1. We'd recommend backing up your device and updating the system as outlined here: <url>",
+    "outcome": "none",
+    "similarity": 0.937,
+    "action_class": "update"
+   },
+   {
+    "evidence_id": "1758938",
+    "thread_id": "1758939",
+    "customer_message": "fix this update shit I’m I️ not working",
+    "brand_reply": "Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>",
+    "outcome": "none",
+    "similarity": 0.765,
+    "action_class": "update"
+   },
+   {
+    "evidence_id": "1281104",
+    "thread_id": "1281105",
+    "customer_message": "Nono. Even after multiple restart it won’t connect... 😰 <url>",
+    "brand_reply": "Let's check this out. Have you tried different internet connections?",
+    "outcome": "none",
+    "similarity": 0.742,
+    "action_class": "article"
+   },
+   {
+    "evidence_id": "1622324",
+    "thread_id": "1622323",
+    "customer_message": "Nope, still doesn’t work",
+    "brand_reply": "Are you using the Music app or a different app for music? Let's also try a restart. This link will help: <url>",
+    "outcome": "none",
+    "similarity": 0.885,
+    "action_class": "restart"
+   },
+   {
+    "evidence_id": "2141589",
+    "thread_id": "2141587",
+    "customer_message": "I have done everything and it’s not working still",
+    "brand_reply": "We always want to make sure you get a great experience from us. Please contact our billing support: <url>",
+    "outcome": "none",
+    "similarity": 0.812,
+    "action_class": "other"
+   }
+  ],
+  "evidence_sufficient": false,
+  "evidence_reason": "insufficient_query",
+  "evidence_level": "INSUFFICIENT",
+  "resolution_confidence": 0.0,
+  "resolution_candidates": [
+   {
+    "action_class": "update",
+    "representative_reply": "We recently released iOS 11.1.1. We'd recommend backing up your device and updating the system as outlined here: <url>",
+    "representative_id": "2127287",
+    "evidence_ids": [
+     "2127287"
+    ],
+    "support_count": 1,
+    "mean_similarity": 0.937,
+    "positive_outcomes": 0,
+    "share": 1.0
+   }
+  ],
+  "recommended_next_action": "Read the thread first; do not repeat the steps already tried; consider a case or callback.",
+  "unresolved_questions": [
+   "What is the actual issue? (the message did not state one)",
+   "Which device model?",
+   "Which software version?",
+   "What exactly is happening?"
+  ],
+  "suggested_opening": "Thanks for the steps you've already tried. A member of our team will pick this up with you directly so we can dig deeper.",
+  "draft_if_any": null,
+  "trace_id": "e5e6159568cb4c09b1ecf8556726f881",
+  "policy_version": "policy-v3.1",
+  "evidence": [
+   {
+    "evidence_id": "2127287",
+    "thread_id": "2127285",
+    "source_row_id": "2127285",
+    "customer_message": "still doesn’t work",
+    "brand_reply": "We recently released iOS 11.1.1. We'd recommend backing up your device and updating the system as outlined here: <url>",
+    "created_at": "2017-11-09 22:12:40+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 1,
+    "ranks": {
+     "pair": 29
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.9370161294937134,
+     "cos_reply": 0.0,
+     "cos_pair": 0.715423583984375,
+     "rrf": 0.02040816326530612,
+     "outcome_bonus": 0.0,
+     "rerank": 0.7191115413188933,
+     "final": 0.7191115413188933
+    },
+    "quality": {
+     "semantic_relevance": 0.9370161294937134,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "general_complaint",
+     "resolution_relevance": true,
+     "action_class": "update",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "1758938",
+    "thread_id": "1758939",
+    "source_row_id": "1758939",
+    "customer_message": "fix this update shit I’m I️ not working",
+    "brand_reply": "Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>",
+    "created_at": "2017-11-07 14:59:22+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 2,
+    "ranks": {
+     "pair": 22
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.7645409107208252,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7232258915901184,
+     "rrf": 0.023809523809523808,
+     "outcome_bonus": 0.0,
+     "rerank": 0.6711957916498185,
+     "final": 0.6711957916498185
+    },
+    "quality": {
+     "semantic_relevance": 0.7645409107208252,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "general_complaint",
+     "resolution_relevance": true,
+     "action_class": "update",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "1281104",
+    "thread_id": "1281105",
+    "source_row_id": "1281105",
+    "customer_message": "Nono. Even after multiple restart it won’t connect... 😰 <url>",
+    "brand_reply": "Let's check this out. Have you tried different internet connections?",
+    "created_at": "2017-10-17 13:09:42+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 3,
+    "ranks": {
+     "pair": 33
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.7419432401657104,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7131068110466003,
+     "rrf": 0.018867924528301886,
+     "outcome_bonus": 0.0,
+     "rerank": 0.6575568368196487,
+     "final": 0.6575568368196487
+    },
+    "quality": {
+     "semantic_relevance": 0.7419432401657104,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "performance_crash",
+     "resolution_relevance": true,
+     "action_class": "article",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "1622324",
+    "thread_id": "1622323",
+    "source_row_id": "1622323",
+    "customer_message": "Nope, still doesn’t work",
+    "brand_reply": "Are you using the Music app or a different app for music? Let's also try a restart. This link will help: <url>",
+    "created_at": "2017-10-17 16:15:06+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 4,
+    "ranks": {
+     "pair": 12
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.885438084602356,
+     "cos_reply": 0.0,
+     "cos_pair": 0.735592246055603,
+     "rrf": 0.03125,
+     "outcome_bonus": 0.0,
+     "rerank": 0.5177513911247253,
+     "final": 0.5177513911247253
+    },
+    "quality": {
+     "semantic_relevance": 0.885438084602356,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "general_complaint",
+     "resolution_relevance": false,
+     "action_class": "restart",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "2141589",
+    "thread_id": "2141587",
+    "source_row_id": "2141587",
+    "customer_message": "I have done everything and it’s not working still",
+    "brand_reply": "We always want to make sure you get a great experience from us. Please contact our billing support: <url>",
+    "created_at": "2017-11-08 23:40:52+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 5,
+    "ranks": {
+     "pair": 11
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.8117035627365112,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7360630035400391,
+     "rrf": 0.03225806451612903,
+     "outcome_bonus": 0.0,
+     "rerank": 0.4790619978427887,
+     "final": 0.4790619978427887
+    },
+    "quality": {
+     "semantic_relevance": 0.8117035627365112,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "general_complaint",
+     "resolution_relevance": false,
+     "action_class": "other",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   }
+  ]
+ },
+ "conversation": {
+  "message": {
+   "message_id": "ec7359f118b8",
+   "text": "still not working",
+   "pii_counts": {},
+   "language_hint": null,
+   "received_at": null
+  },
+  "context": {
+   "turns": [],
+   "truncated": false
+  }
+ },
+ "versions": {
+  "pipeline": "pipeline-v5.1",
+  "policy": "policy-v3.1",
+  "output_gate": "output-gate-v1",
+  "retrieval": "dense:bge-small:pair+rr+gatev3",
+  "evidence_gate": "gate-v3",
+  "rerank": "rerank-v1",
+  "classifier": "2d194e7e704f",
+  "prompts": {
+   "risk": "risk-flags-v2",
+   "draft": "draft-v2",
+   "verify": "verify-v2",
+   "second_opinion": "intent-second-opinion-v1"
+  },
+  "model": "glm-5.2",
+  "config_hash": "77fe3db81c69bf09"
+ },
+ "stage_status": {
+  "pii_redaction": "ok",
+  "context": "ok",
+  "intent": "ok",
+  "second_opinion": "skipped",
+  "retrieval": "ok",
+  "evidence_gate": "ok",
+  "risk": "ok",
+  "policy": "ok",
+  "draft": "skipped",
+  "verification": "skipped",
+  "output_gate": "ok",
+  "handoff": "ok"
+ },
+ "latency_ms": {
+  "pii_redaction": 0.06,
+  "context": 0.06,
+  "intent": 84.99,
+  "second_opinion": 0.01,
+  "retrieval": 70.37,
+  "evidence_gate": 0.0,
+  "risk": 23.93,
+  "policy": 0.05,
+  "draft": 0.0,
+  "verification": 0.0,
+  "output_gate": 0.04,
+  "handoff": 0.22,
+  "total": 181.05
+ },
+ "usage": {
+  "llm_calls": 1,
+  "live_calls": 0,
+  "cache_hits": 1,
+  "tokens_in": 317,
+  "tokens_out": 492,
+  "estimated_cost_usd": 0.001891,
+  "fallbacks": 0
+ }
+}

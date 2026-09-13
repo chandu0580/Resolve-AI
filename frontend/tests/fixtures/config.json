@@ -1,0 +1,53 @@
+{
+ "service": {
+  "env": "test",
+  "cors_origins": [
+   "http://localhost:3000"
+  ],
+  "use_llm": false,
+  "write_traces": true,
+  "trace_store": {
+   "kind": "jsonl files",
+   "dir": "(outside repository)"
+  },
+  "rate_limit_per_minute": 10000,
+  "max_queue": 8,
+  "docs_enabled": true,
+  "limits": {
+   "max_body_bytes": 64000,
+   "max_message_chars": 2000,
+   "max_turn_chars": 2000,
+   "max_turns": 20,
+   "max_total_chars": 12000
+  }
+ },
+ "llm": {
+  "configured": true,
+  "enabled": false,
+  "model": "glm-5.2",
+  "provider": "openai_compatible",
+  "temperature": 0.0,
+  "timeout_s": 30.0,
+  "max_retries": 1
+ },
+ "embedding_model": "BAAI/bge-small-en-v1.5",
+ "brand": "AppleSupport",
+ "agent_state": "loaded",
+ "versions": {
+  "pipeline": "pipeline-v5.1",
+  "policy": "policy-v3.1",
+  "output_gate": "output-gate-v1",
+  "retrieval": "dense:bge-small:pair+rr+gatev3",
+  "evidence_gate": "gate-v3",
+  "rerank": "rerank-v1",
+  "classifier": "2d194e7e704f",
+  "prompts": {
+   "risk": "risk-flags-v2",
+   "draft": "draft-v2",
+   "verify": "verify-v2",
+   "second_opinion": "intent-second-opinion-v1"
+  },
+  "model": "glm-5.2",
+  "config_hash": "77fe3db81c69bf09"
+ }
+}

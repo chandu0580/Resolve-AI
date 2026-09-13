@@ -1,0 +1,50 @@
+{
+  "version": "silver-v2",
+  "train_rows": 18000,
+  "dev_rows": 800,
+  "train_intent_distribution": {
+    "general_complaint": 8075,
+    "keyboard_text_bug": 2513,
+    "battery_power": 1614,
+    "apps_services": 1495,
+    "performance_crash": 978,
+    "account_store_repair": 696,
+    "connectivity": 686,
+    "data_loss_sync": 640,
+    "hardware_damage": 562,
+    "other": 445,
+    "non_english": 296
+  },
+  "dev_intent_distribution": {
+    "general_complaint": 387,
+    "apps_services": 105,
+    "battery_power": 46,
+    "hardware_damage": 45,
+    "keyboard_text_bug": 41,
+    "account_store_repair": 39,
+    "data_loss_sync": 34,
+    "performance_crash": 34,
+    "connectivity": 27,
+    "non_english": 21,
+    "other": 21
+  },
+  "train_band": {
+    "HIGH": 8403,
+    "LOW": 7205,
+    "MEDIUM": 2392
+  },
+  "train_source": {
+    "vote": 10668,
+    "fallback": 7205,
+    "rule:non_english": 89,
+    "rule:other": 38
+  },
+  "coverage_high_or_medium": 0.5997,
+  "confidence_quantiles": {
+    "0.1": 0.3,
+    "0.25": 0.3,
+    "0.5": 0.71,
+    "0.75": 0.95,
+    "0.9": 0.95
+  }
+}

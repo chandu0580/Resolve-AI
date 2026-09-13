@@ -1,0 +1,834 @@
+[
+ {
+  "gid": "g000",
+  "message": "my headphone jack on my phone wasn\u2019t working for months and today it started to work but my speaker stopped, anyway to get it off of headphones when nothing is plugged in to it?",
+  "level": "INSUFFICIENT",
+  "reason": "weak_similarity",
+  "resolution_confidence": 0.2,
+  "consistency": "no_resolution",
+  "signals": {
+   "n_retrieved": 5,
+   "n_relevant": 5,
+   "query_content_tokens": 19,
+   "query_symptom_tokens": 3,
+   "top_similarity": 0.8058636784553528,
+   "similarity_margin": 0.06721526384353638,
+   "intent_agreement": 1.0,
+   "modal_intent": "connectivity",
+   "query_intent_agreement": 1.0,
+   "support_count": 0,
+   "resolution_bearing": 0,
+   "action_classes": {},
+   "conflicting": false,
+   "same_customer_count": 0
+  },
+  "resolution_candidates": [],
+  "items": [
+   {
+    "evidence_id": "2526339",
+    "source": "pair",
+    "action_class": "dm_handoff",
+    "cos_customer": 0.806,
+    "cos_pair": 0.782,
+    "rerank": 0.391,
+    "customer_message": "My airpods were working fine yesterday and then when i went to go listen to music on then today there was no light on the inside of the case and they didn\u2019t connect to my phone I\u2019ve had these for just over 1 month",
+    "brand_reply": "Thanks for reaching out to us for support. We would love to help you. Please DM us so that we can look into this together. <url>",
+    "created_at": "2017-11-16 02:59:25+00:00"
+   },
+   {
+    "evidence_id": "1890302",
+    "source": "pair",
+    "action_class": "dm_handoff",
+    "cos_customer": 0.754,
+    "cos_pair": 0.752,
+    "rerank": 0.366,
+    "customer_message": "my headphones (lightning connector) have broke! I only got them with my new iPhone7 in June. Do they come with a warranty?",
+    "brand_reply": "Our products come with a one-year limited warranty. What country are you in? Let us know in DM; we\u2019ll get you the best options. <url>",
+    "created_at": "2017-10-22 16:54:40+00:00"
+   },
+   {
+    "evidence_id": "1783103",
+    "source": "pair",
+    "action_class": "dm_handoff",
+    "cos_customer": 0.739,
+    "cos_pair": 0.773,
+    "rerank": 0.365,
+    "customer_message": "my Bluetooth headphones even my original iPhone headphone stops working properly (sound too low)after updating to IOS 11",
+    "brand_reply": "Thanks for reaching out about your audio. We understand you cannot use any headphones. What about speakerphone? Send us a DM. <url>",
+    "created_at": "2017-10-11 01:55:10+00:00"
+   },
+   {
+    "evidence_id": "2533273",
+    "source": "pair",
+    "action_class": "dm_handoff",
+    "cos_customer": 0.752,
+    "cos_pair": 0.754,
+    "rerank": 0.362,
+    "customer_message": "I updated to the new IOS and left my bluetooth headphones plugged in; In conclusion i messed the hearing settings up. HEEEEELLLLP",
+    "brand_reply": "We'd like to help. Let's take this to DM and we'll explore ways to provide you assistance. <url>",
+    "created_at": "2017-10-30 05:10:40+00:00"
+   },
+   {
+    "evidence_id": "309971",
+    "source": "pair",
+    "action_class": "dm_handoff",
+    "cos_customer": 0.713,
+    "cos_pair": 0.738,
+    "rerank": 0.342,
+    "customer_message": "\u00a3150 and a 5 week wait for AirPods. Finally arrived and they don\u2019t work properly. Connect but no sound. Help please.",
+    "brand_reply": "Hi. We're here for you. DM us and we can take a closer look there. <url>",
+    "created_at": "2017-10-06 22:59:21+00:00"
+   }
+  ]
+ },
+ {
+  "gid": "g001",
+  "message": "this iOS update SUCKS!!!!!!!! Phone freezes literally every 5 minutes. Seriously considering getting rid of my iPhone.",
+  "level": "WEAK",
+  "reason": "insufficient_resolution_evidence",
+  "resolution_confidence": 0.2,
+  "consistency": "no_resolution",
+  "signals": {
+   "n_retrieved": 5,
+   "n_relevant": 5,
+   "query_content_tokens": 14,
+   "query_symptom_tokens": 2,
+   "top_similarity": 0.8610263466835022,
+   "similarity_margin": -0.022958457469940186,
+   "intent_agreement": 1.0,
+   "modal_intent": "performance_crash",
+   "query_intent_agreement": 1.0,
+   "support_count": 0,
+   "resolution_bearing": 0,
+   "action_classes": {},
+   "conflicting": false,
+   "same_customer_count": 0
+  },
+  "resolution_candidates": [],
+  "items": [
+   {
+    "evidence_id": "2300888",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.861,
+    "cos_pair": 0.855,
+    "rerank": 0.643,
+    "customer_message": "#iOS11 is the worst phone OS ever! fix this crap! Really considering going to another platform after more than 10 years of being a loyal customer. It is full of glitches! <url>",
+    "brand_reply": "We completely undestand wanting to have a smooth experience with the update. We want to help with just that. Have you restarted your iPhone yet? <url>",
+    "created_at": "2017-11-12 14:00:29+00:00"
+   },
+   {
+    "evidence_id": "109766",
+    "source": "pair",
+    "action_class": "other",
+    "cos_customer": 0.887,
+    "cos_pair": 0.854,
+    "rerank": 0.638,
+    "customer_message": "After the #iphone update I feel owes me a new phone! My screen keeps freezing and the apps run so damn slow! Such a terrible update",
+    "brand_reply": "Let's help get your iPhone working as expected. What's the version of iOS installed? Which apps are in use the most when you experience this issue? Does this persist after rebooting?",
+    "created_at": "2017-11-23 12:39:15+00:00"
+   },
+   {
+    "evidence_id": "771956",
+    "source": "pair",
+    "action_class": "ask_info",
+    "cos_customer": 0.884,
+    "cos_pair": 0.85,
+    "rerank": 0.634,
+    "customer_message": "new update has my phone messing up and freezing! Hate this!!!!",
+    "brand_reply": "Hey, thanks for bringing this to our attention. We'd like to help. What device and iOS version are you currently running?",
+    "created_at": "2017-10-12 00:35:43+00:00"
+   },
+   {
+    "evidence_id": "196147",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.896,
+    "cos_pair": 0.851,
+    "rerank": 0.633,
+    "customer_message": "This IOS 11.0.2 update is trash. get it together! Phone has been freezing all day, apps tripping. I\u2019m livid. <url>",
+    "brand_reply": "We're here for you. Is this happening with all apps or specific apps? Have you restarted your phone since updating?",
+    "created_at": "2017-10-04 21:59:22+00:00"
+   },
+   {
+    "evidence_id": "1295063",
+    "source": "pair",
+    "action_class": "other",
+    "cos_customer": 0.882,
+    "cos_pair": 0.854,
+    "rerank": 0.632,
+    "customer_message": "Fed up with this #iOs11 update \ud83d\ude21\ud83d\ude21\ud83d\ude21. My iPhone 7 freezes all the time. you guys should start allowing people to downgrade software",
+    "brand_reply": "We'd like to work with you. Are you noticing the issue mainly with apps or throughout the phone?",
+    "created_at": "2017-10-26 20:32:32+00:00"
+   }
+  ]
+ },
+ {
+  "gid": "g002",
+  "message": "all most 22 days has passed & no outcome in my case (<PHONE>).",
+  "level": "INSUFFICIENT",
+  "reason": "insufficient_query",
+  "resolution_confidence": 0.0,
+  "consistency": "no_resolution",
+  "signals": {
+   "n_retrieved": 5,
+   "n_relevant": 5,
+   "query_content_tokens": 8,
+   "query_symptom_tokens": 0,
+   "top_similarity": 0.7322118282318115,
+   "similarity_margin": 0.01813673973083496,
+   "intent_agreement": 1.0,
+   "modal_intent": "general_complaint",
+   "query_intent_agreement": 1.0,
+   "support_count": 0,
+   "resolution_bearing": 0,
+   "action_classes": {},
+   "conflicting": false,
+   "same_customer_count": 0
+  },
+  "resolution_candidates": [],
+  "items": [
+   {
+    "evidence_id": "2141589",
+    "source": "pair",
+    "action_class": "other",
+    "cos_customer": 0.732,
+    "cos_pair": 0.679,
+    "rerank": 0.537,
+    "customer_message": "I have done everything and it\u2019s not working still",
+    "brand_reply": "We always want to make sure you get a great experience from us. Please contact our billing support: <url>",
+    "created_at": "2017-11-08 23:40:52+00:00"
+   },
+   {
+    "evidence_id": "2113917",
+    "source": "pair",
+    "action_class": "other",
+    "cos_customer": 0.724,
+    "cos_pair": 0.68,
+    "rerank": 0.529,
+    "customer_message": "30 mins on phone. no joy",
+    "brand_reply": "We can assist here as well. What can we help with?",
+    "created_at": "2017-11-08 14:48:21+00:00"
+   },
+   {
+    "evidence_id": "1187752",
+    "source": "pair",
+    "action_class": "other",
+    "cos_customer": 0.714,
+    "cos_pair": 0.677,
+    "rerank": 0.528,
+    "customer_message": "I\u2019ve had no service for a week straight and I\u2019ve only had this phone for a year and two months.",
+    "brand_reply": "That's not what we like to here. Let's partner together to resolve this. Look here: <url>",
+    "created_at": "2017-10-24 23:57:22+00:00"
+   },
+   {
+    "evidence_id": "1106625",
+    "source": "pair",
+    "action_class": "article",
+    "cos_customer": 0.706,
+    "cos_pair": 0.683,
+    "rerank": 0.525,
+    "customer_message": "but that text/call never comes. The link to check the status just sends me back to request a reset again from scratch.",
+    "brand_reply": "Thanks for reaching out. Take a look at this helpful article here: <url>",
+    "created_at": "2017-10-24 00:37:05+00:00"
+   },
+   {
+    "evidence_id": "2523451",
+    "source": "pair",
+    "action_class": "other",
+    "cos_customer": 0.706,
+    "cos_pair": 0.671,
+    "rerank": 0.523,
+    "customer_message": "My phone doesn't even ring anymore. It just pops up that I've missed a call",
+    "brand_reply": "Hello! Have you checked the side of the phone to ensure the mute button isn't set?",
+    "created_at": "2017-11-16 01:35:16+00:00"
+   }
+  ]
+ },
+ {
+  "gid": "g003",
+  "message": "I did not back up before updating. Yes i have a macbook",
+  "level": "INSUFFICIENT",
+  "reason": "weak_similarity",
+  "resolution_confidence": 0.2,
+  "consistency": "no_resolution",
+  "signals": {
+   "n_retrieved": 5,
+   "n_relevant": 5,
+   "query_content_tokens": 7,
+   "query_symptom_tokens": 1,
+   "top_similarity": 0.7825103998184204,
+   "similarity_margin": -0.0013920068740844727,
+   "intent_agreement": 1.0,
+   "modal_intent": "performance_crash",
+   "query_intent_agreement": 1.0,
+   "support_count": 0,
+   "resolution_bearing": 0,
+   "action_classes": {},
+   "conflicting": false,
+   "same_customer_count": 0
+  },
+  "resolution_candidates": [],
+  "items": [
+   {
+    "evidence_id": "2356609",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.783,
+    "cos_pair": 0.785,
+    "rerank": 0.801,
+    "customer_message": "HELP. I tried updating my MacBook Pro and it told me it wasn't able to update and it's been stuck on this screen for 10 minutes.",
+    "brand_reply": "Thanks for reaching out. We want to be sure you can update your MacBook Pro as you'd expect. We're happy to help you. Can you tell us what the specific error message is, please?",
+    "created_at": "2017-11-13 18:49:54+00:00"
+   },
+   {
+    "evidence_id": "656278",
+    "source": "pair",
+    "action_class": "ask_info",
+    "cos_customer": 0.838,
+    "cos_pair": 0.821,
+    "rerank": 0.607,
+    "customer_message": "wassup man I\ufe0f tried to update my MacBook an my shit crashed \ud83e\udd26\ud83c\udffd\u200d\u2642\ufe0f",
+    "brand_reply": "We can help! Let us know what you currently see on screen & we'll go from there.",
+    "created_at": "2017-11-22 22:29:26+00:00"
+   },
+   {
+    "evidence_id": "620079",
+    "source": "pair",
+    "action_class": "ask_info",
+    "cos_customer": 0.784,
+    "cos_pair": 0.772,
+    "rerank": 0.599,
+    "customer_message": "MacBook just crashed on me. This is beginning to be an expensive holiday season.. help \ud83d\ude29",
+    "brand_reply": "You're in the right place for help, and we're glad to lend a hand. Is your Mac unable to power on, or are you having another specific issue? What specific MacBook are you using and what macOS is running?",
+    "created_at": "2017-11-22 16:15:12+00:00"
+   },
+   {
+    "evidence_id": "656246",
+    "source": "pair",
+    "action_class": "other",
+    "cos_customer": 0.755,
+    "cos_pair": 0.779,
+    "rerank": 0.575,
+    "customer_message": "Made me update the software on my MacBook Pro and now it keeps crashing wtf",
+    "brand_reply": "We want to help, as that's not the experience we want for you. When you power up your device, does it boot to the user screen or is something else happening?",
+    "created_at": "2017-11-20 21:56:22+00:00"
+   },
+   {
+    "evidence_id": "2517038",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.745,
+    "cos_pair": 0.783,
+    "rerank": 0.564,
+    "customer_message": "So, I\u2019m stuck here . My MacBook will not boot at all. Any suggestions? <url>",
+    "brand_reply": "We're here for you. Did this screen appear after updating your Mac?",
+    "created_at": "2017-11-15 23:03:15+00:00"
+   }
+  ]
+ },
+ {
+  "gid": "g005",
+  "message": "fix the fcking I problem I\u2019m tired of seeing question marks on my damn timeline",
+  "level": "STRONG",
+  "reason": "strong_consistent_evidence",
+  "resolution_confidence": 0.97,
+  "consistency": "consistent",
+  "signals": {
+   "n_retrieved": 5,
+   "n_relevant": 5,
+   "query_content_tokens": 15,
+   "query_symptom_tokens": 6,
+   "top_similarity": 0.8713228106498718,
+   "similarity_margin": 0.05632263422012329,
+   "intent_agreement": 1.0,
+   "modal_intent": "keyboard_text_bug",
+   "query_intent_agreement": 1.0,
+   "support_count": 3,
+   "resolution_bearing": 1,
+   "action_classes": {
+    "update": 3
+   },
+   "conflicting": false,
+   "same_customer_count": 0
+  },
+  "resolution_candidates": [
+   {
+    "action_class": "update",
+    "representative_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+    "representative_id": "1746001",
+    "evidence_ids": [
+     "1691799",
+     "2144116",
+     "1746001"
+    ],
+    "support_count": 3,
+    "mean_similarity": 0.878,
+    "positive_outcomes": 1,
+    "share": 1.0
+   }
+  ],
+  "items": [
+   {
+    "evidence_id": "1691799",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.871,
+    "cos_pair": 0.877,
+    "rerank": 0.847,
+    "customer_message": "Okay what the fuck is up with anytime you try to type \u201ci\u201d it autocorrects to that A with a question mark box thing ?!?!?!?!",
+    "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+    "created_at": "2017-11-06 18:50:54+00:00"
+   },
+   {
+    "evidence_id": "2193441",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.798,
+    "cos_pair": 0.839,
+    "rerank": 0.835,
+    "customer_message": "Apple you on games... why everytime I\ufe0f type I\ufe0f does it do that shit with the question mark and in the box?",
+    "brand_reply": "Help is here to resolve that for you. We recently released an iOS update, 11.1.1, that contains a fix for autocorrect issues. Let\u2019s be sure to back up your device prior to updating. How to back up: <url>",
+    "created_at": "2017-11-09 16:15:00+00:00"
+   },
+   {
+    "evidence_id": "1583066",
+    "source": "pair",
+    "action_class": "article",
+    "cos_customer": 0.815,
+    "cos_pair": 0.839,
+    "rerank": 0.816,
+    "customer_message": "I updated my phone and STILL keep seeing these damn squares with the question marks!!! Please fix this !",
+    "brand_reply": "Let's take a look. Before we start, check out this article on autocorrect: <url>",
+    "created_at": "2017-11-04 16:20:58+00:00"
+   },
+   {
+    "evidence_id": "2144116",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.876,
+    "cos_pair": 0.855,
+    "rerank": 0.703,
+    "customer_message": "WHY ARE QUESTION MARK BOXES POPPING UP WHEN I\ufe0f WRITE STUFF!!!!????? FIX IT",
+    "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+    "created_at": "2017-11-08 21:12:54+00:00"
+   },
+   {
+    "evidence_id": "1746001",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.886,
+    "cos_pair": 0.867,
+    "rerank": 0.7,
+    "customer_message": "please fix the \u201cI\ufe0f\u201d problem please. So sick of these question mark boxes ruining everything!!!!!!",
+    "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+    "created_at": "2017-11-07 15:04:50+00:00"
+   }
+  ]
+ },
+ {
+  "gid": "g011",
+  "message": "Why tf is this glitch still fuckn up? what do I\ufe0f need to do. This shit is annoying. \ud83d\ude29",
+  "level": "STRONG",
+  "reason": "strong_consistent_evidence",
+  "resolution_confidence": 0.909,
+  "consistency": "consistent",
+  "signals": {
+   "n_retrieved": 5,
+   "n_relevant": 5,
+   "query_content_tokens": 10,
+   "query_symptom_tokens": 2,
+   "top_similarity": 0.865371584892273,
+   "similarity_margin": -0.013076305389404297,
+   "intent_agreement": 1.0,
+   "modal_intent": "performance_crash",
+   "query_intent_agreement": 0.0,
+   "support_count": 5,
+   "resolution_bearing": 0,
+   "action_classes": {
+    "update": 4,
+    "article": 1
+   },
+   "conflicting": false,
+   "same_customer_count": 0
+  },
+  "resolution_candidates": [
+   {
+    "action_class": "update",
+    "representative_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+    "representative_id": "2152213",
+    "evidence_ids": [
+     "1698591",
+     "1688553",
+     "2152213",
+     "2143347"
+    ],
+    "support_count": 4,
+    "mean_similarity": 0.877,
+    "positive_outcomes": 0,
+    "share": 0.8
+   },
+   {
+    "action_class": "article",
+    "representative_reply": "Let's take a look at this. We'd like to have you try the following steps and let us know if it helps: <url>",
+    "representative_id": "1632373",
+    "evidence_ids": [
+     "1632373"
+    ],
+    "support_count": 1,
+    "mean_similarity": 0.893,
+    "positive_outcomes": 0,
+    "share": 0.2
+   }
+  ],
+  "items": [
+   {
+    "evidence_id": "1698591",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.865,
+    "cos_pair": 0.902,
+    "rerank": 0.751,
+    "customer_message": "this i\ufe0f glitch is fuckin me up",
+    "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+    "created_at": "2017-11-06 22:45:49+00:00"
+   },
+   {
+    "evidence_id": "1632373",
+    "source": "pair",
+    "action_class": "article",
+    "cos_customer": 0.893,
+    "cos_pair": 0.872,
+    "rerank": 0.742,
+    "customer_message": "Yeah that\u2019s some bull. I\u2019m sick of this glitch. needs to fix it NOW! <url>",
+    "brand_reply": "Let's take a look at this. We'd like to have you try the following steps and let us know if it helps: <url>",
+    "created_at": "2017-11-05 17:01:00+00:00"
+   },
+   {
+    "evidence_id": "1688553",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.878,
+    "cos_pair": 0.893,
+    "rerank": 0.604,
+    "customer_message": "When is this stupid glitch going to go away ????!!!!! I\ufe0f hate",
+    "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+    "created_at": "2017-11-06 17:29:56+00:00"
+   },
+   {
+    "evidence_id": "2152213",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.886,
+    "cos_pair": 0.874,
+    "rerank": 0.602,
+    "customer_message": "When is going to fix this damn glitch . I\u2019m so over it now \ud83d\ude44\ud83d\ude44\ud83d\ude44",
+    "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+    "created_at": "2017-11-09 01:18:22+00:00"
+   },
+   {
+    "evidence_id": "2143347",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.88,
+    "cos_pair": 0.879,
+    "rerank": 0.6,
+    "customer_message": "Okay seriously FIX THIS STUPID GLITCH. <url>",
+    "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+    "created_at": "2017-11-08 21:00:19+00:00"
+   }
+  ]
+ },
+ {
+  "gid": "g020",
+  "message": "another keyboard glitch. Fix I.T",
+  "level": "WEAK",
+  "reason": "weak_resolution_evidence",
+  "resolution_confidence": 0.883,
+  "consistency": "consistent",
+  "signals": {
+   "n_retrieved": 5,
+   "n_relevant": 5,
+   "query_content_tokens": 11,
+   "query_symptom_tokens": 9,
+   "top_similarity": 0.8825880885124207,
+   "similarity_margin": 0.08799558877944946,
+   "intent_agreement": 1.0,
+   "modal_intent": "keyboard_text_bug",
+   "query_intent_agreement": 1.0,
+   "support_count": 2,
+   "resolution_bearing": 0,
+   "action_classes": {
+    "update": 2
+   },
+   "conflicting": false,
+   "same_customer_count": 0
+  },
+  "resolution_candidates": [
+   {
+    "action_class": "update",
+    "representative_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+    "representative_id": "1648346",
+    "evidence_ids": [
+     "1648346",
+     "1691799"
+    ],
+    "support_count": 2,
+    "mean_similarity": 0.867,
+    "positive_outcomes": 0,
+    "share": 1.0
+   }
+  ],
+  "items": [
+   {
+    "evidence_id": "1648346",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.883,
+    "cos_pair": 0.849,
+    "rerank": 0.844,
+    "customer_message": "I\u2019m gonna need to fix this keyboard issue with the letters and question mark",
+    "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+    "created_at": "2017-11-05 20:15:14+00:00"
+   },
+   {
+    "evidence_id": "2193441",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.791,
+    "cos_pair": 0.835,
+    "rerank": 0.832,
+    "customer_message": "Apple you on games... why everytime I\ufe0f type I\ufe0f does it do that shit with the question mark and in the box?",
+    "brand_reply": "Help is here to resolve that for you. We recently released an iOS update, 11.1.1, that contains a fix for autocorrect issues. Let\u2019s be sure to back up your device prior to updating. How to back up: <url>",
+    "created_at": "2017-11-09 16:15:00+00:00"
+   },
+   {
+    "evidence_id": "2492340",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.795,
+    "cos_pair": 0.826,
+    "rerank": 0.822,
+    "customer_message": "can you fix the heinous \u201cI\ufe0f\u201d issue because it\u2019s starting to look like I\u2019m typing in Windings via",
+    "brand_reply": "That issue has been fixed. If your I\u2019s are still getting auto-corrected to question marks in a box when you type, that would mean you're still using an old version of software on your device. Get your device up to date in Settings > General > Software Update.",
+    "created_at": "2017-11-15 17:31:20+00:00"
+   },
+   {
+    "evidence_id": "1078794",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.819,
+    "cos_pair": 0.821,
+    "rerank": 0.815,
+    "customer_message": "want tell me why I\ufe0f can\u2019t type the letter \u201c I \u201c without having to cancel the autocorrect?",
+    "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url> <url>",
+    "created_at": "2017-11-07 16:18:36+00:00"
+   },
+   {
+    "evidence_id": "1691799",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.851,
+    "cos_pair": 0.845,
+    "rerank": 0.682,
+    "customer_message": "Okay what the fuck is up with anytime you try to type \u201ci\u201d it autocorrects to that A with a question mark box thing ?!?!?!?!",
+    "brand_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>",
+    "created_at": "2017-11-06 18:50:54+00:00"
+   }
+  ]
+ },
+ {
+  "gid": "g031",
+  "message": "Hi, are you thinking of doing anything to solve the battery problem? Got worse after every update. My iPhone 6 died because of you and I\u2019m very angry!",
+  "level": "WEAK",
+  "reason": "insufficient_resolution_evidence",
+  "resolution_confidence": 0.2,
+  "consistency": "no_resolution",
+  "signals": {
+   "n_retrieved": 5,
+   "n_relevant": 5,
+   "query_content_tokens": 19,
+   "query_symptom_tokens": 2,
+   "top_similarity": 0.9198957681655884,
+   "similarity_margin": 0.019019901752471924,
+   "intent_agreement": 1.0,
+   "modal_intent": "battery_power",
+   "query_intent_agreement": 1.0,
+   "support_count": 0,
+   "resolution_bearing": 0,
+   "action_classes": {},
+   "conflicting": false,
+   "same_customer_count": 0
+  },
+  "resolution_candidates": [],
+  "items": [
+   {
+    "evidence_id": "628038",
+    "source": "pair",
+    "action_class": "ask_info",
+    "cos_customer": 0.92,
+    "cos_pair": 0.927,
+    "rerank": 0.671,
+    "customer_message": "wow! I am so frustrated with the latest update! My battery is dying incredibly fast and my iPhone6 is not working well at all. Thx.",
+    "brand_reply": "All day battery life is important and we'd like to get to the bottom of this together. So we're on the same page, what iOS version you using? Here's how to find it: <url>",
+    "created_at": "2017-11-14 18:28:09+00:00"
+   },
+   {
+    "evidence_id": "1773455",
+    "source": "pair",
+    "action_class": "ask_info",
+    "cos_customer": 0.895,
+    "cos_pair": 0.919,
+    "rerank": 0.654,
+    "customer_message": "please tell me there\u2019s a known issue causing iPhone 7 batteries to be so shit. I\u2019ve never had a phone battery this bad, ever.",
+    "brand_reply": "Battery life is important. We\u2019d like to help. When did this start? Which exact iOS version are you using?",
+    "created_at": "2017-11-08 02:19:50+00:00"
+   },
+   {
+    "evidence_id": "310813",
+    "source": "pair",
+    "action_class": "ask_info",
+    "cos_customer": 0.901,
+    "cos_pair": 0.915,
+    "rerank": 0.654,
+    "customer_message": "Okay how about fixing iOS 11\u2019s battery problems. Charging 3x a day is an absolute joke. #wallhugger #backtosamsung",
+    "brand_reply": "We're happy to help. Can you tell us the specific iOS version you are currently using please?",
+    "created_at": "2017-10-06 23:34:57+00:00"
+   },
+   {
+    "evidence_id": "2771859",
+    "source": "pair",
+    "action_class": "other",
+    "cos_customer": 0.871,
+    "cos_pair": 0.926,
+    "rerank": 0.652,
+    "customer_message": "Oh goodie another #iPhone update that will \ud83e\udd2c\ud83e\udd2c\ud83e\udd2cmy obsolete #iPhone6splus. Thanks your the best! Update my OS back to 10! #crapbattery #crapOS11",
+    "brand_reply": "We\u2019d like to look into this. When did you begin to notice the issues with battery life? Have specific apps displayed battery issues more than others?",
+    "created_at": "2017-11-21 05:46:38+00:00"
+   },
+   {
+    "evidence_id": "1734381",
+    "source": "pair",
+    "action_class": "ask_info",
+    "cos_customer": 0.84,
+    "cos_pair": 0.913,
+    "rerank": 0.634,
+    "customer_message": "this iOS update is killing my battery! Is there an update coming soon to fix all the nonsense the update caused?",
+    "brand_reply": "We know how vital battery life is. Let's look work together. Can you provide us which device and iOS you're using?",
+    "created_at": "2017-11-07 03:57:40+00:00"
+   }
+  ]
+ },
+ {
+  "gid": "g032",
+  "message": "Why does the iPhone have \u201cI.T\u201d as the autocorrect for \u201cit\u201d??!",
+  "level": "STRONG",
+  "reason": "strong_consistent_evidence",
+  "resolution_confidence": 0.895,
+  "consistency": "consistent",
+  "signals": {
+   "n_retrieved": 5,
+   "n_relevant": 5,
+   "query_content_tokens": 9,
+   "query_symptom_tokens": 7,
+   "top_similarity": 0.8689983487129211,
+   "similarity_margin": 0.030130505561828613,
+   "intent_agreement": 1.0,
+   "modal_intent": "keyboard_text_bug",
+   "query_intent_agreement": 1.0,
+   "support_count": 4,
+   "resolution_bearing": 0,
+   "action_classes": {
+    "update": 3,
+    "article": 1
+   },
+   "conflicting": false,
+   "same_customer_count": 0
+  },
+  "resolution_candidates": [
+   {
+    "action_class": "update",
+    "representative_reply": "We've recently released an update to fix this. We do recommend creating a current backup of the data on your device before updating. Here's more about the new update: <url> Let us know if this helps. <url>",
+    "representative_id": "2573954",
+    "evidence_ids": [
+     "2573954",
+     "1585356",
+     "2312398"
+    ],
+    "support_count": 3,
+    "mean_similarity": 0.879,
+    "positive_outcomes": 0,
+    "share": 0.75
+   },
+   {
+    "action_class": "article",
+    "representative_reply": "Thanks for reaching out! Check out this article for information on managing autocorrect: <url>",
+    "representative_id": "1537678",
+    "evidence_ids": [
+     "1537678"
+    ],
+    "support_count": 1,
+    "mean_similarity": 0.894,
+    "positive_outcomes": 0,
+    "share": 0.25
+   }
+  ],
+  "items": [
+   {
+    "evidence_id": "2573954",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.869,
+    "cos_pair": 0.863,
+    "rerank": 0.866,
+    "customer_message": "every time i type the letter \u2018I\u2019 it autocorrects it to: I\ufe0f",
+    "brand_reply": "We've recently released an update to fix this. We do recommend creating a current backup of the data on your device before updating. Here's more about the new update: <url> Let us know if this helps. <url>",
+    "created_at": "2017-11-16 19:12:49+00:00"
+   },
+   {
+    "evidence_id": "1585356",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.903,
+    "cos_pair": 0.892,
+    "rerank": 0.862,
+    "customer_message": "why is \u201cI\u201d on my iPhone autocorrecting to an A and a box with a question mark in it?",
+    "brand_reply": "Thanks for reaching out. This workaround will help until this issue is resolved in a future update: <url>",
+    "created_at": "2017-11-04 17:16:47+00:00"
+   },
+   {
+    "evidence_id": "2287602",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.839,
+    "cos_pair": 0.862,
+    "rerank": 0.858,
+    "customer_message": "how do I fix the \u201cI.t\u201d I just want to type \u201cit\u201d \ud83d\ude2d\ud83d\ude2d",
+    "brand_reply": "Let's be sure we've got iOS 11.1.1 installed. It was released recently and includes some fixes for autocorrect issues. You can check that in Settings > General > About. If not, you can backup and install it now. How to back up: <url>",
+    "created_at": "2017-11-12 01:41:57+00:00"
+   },
+   {
+    "evidence_id": "2312398",
+    "source": "pair",
+    "action_class": "update",
+    "cos_customer": 0.865,
+    "cos_pair": 0.871,
+    "rerank": 0.854,
+    "customer_message": "WHY DOES AUTOCORRECT ALWAYS CHANGE \"it\" to \"I.T\" !?!?!?",
+    "brand_reply": "We want to help you with this issue. If you haven\u2019t yet, please back up your device and update it to the latest version iOS 11.1.1.",
+    "created_at": "2017-11-12 21:17:02+00:00"
+   },
+   {
+    "evidence_id": "1537678",
+    "source": "pair",
+    "action_class": "article",
+    "cos_customer": 0.894,
+    "cos_pair": 0.871,
+    "rerank": 0.853,
+    "customer_message": "Why is my phone autocorrecting the word it to spell i.t ?",
+    "brand_reply": "Thanks for reaching out! Check out this article for information on managing autocorrect: <url>",
+    "created_at": "2017-10-17 01:38:49+00:00"
+   }
+  ]
+ }
+]

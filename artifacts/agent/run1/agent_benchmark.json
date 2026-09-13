@@ -1,0 +1,205 @@
+{
+ "n": 197,
+ "intent": {
+  "accuracy": 0.8325,
+  "macro_f1": 0.8423,
+  "second_opinion_applied": 60
+ },
+ "escalation": {
+  "precision": 0.3241,
+  "recall": 0.9459,
+  "f1": 0.4828,
+  "confusion_gold_x_pred": [
+   [
+    87,
+    73
+   ],
+   [
+    2,
+    35
+   ]
+  ],
+  "note": "positive = HUMAN_HANDOFF; gold positive = should_escalate. CLARIFICATION counts as not-handoff.",
+  "non_autonomous_as_positive": {
+   "precision": 0.2056,
+   "recall": 1.0,
+   "f1": 0.341
+  },
+  "baseline_always_escalate": {
+   "precision": 0.1878,
+   "recall": 1.0,
+   "f1": 0.3162
+  },
+  "baseline_never_escalate": {
+   "precision": 0.0,
+   "recall": 0.0,
+   "f1": 0.0
+  }
+ },
+ "rates": {
+  "AUTO_HANDLE": 0.0863,
+  "CLARIFICATION_REQUIRED": 0.3655,
+  "HUMAN_HANDOFF": 0.5482,
+  "insufficient_evidence_rate": 0.9391,
+  "reason_codes": {
+   "hardware": 5,
+   "low_confidence": 33,
+   "private_info": 13,
+   "repeat_contact": 22,
+   "llm_unavailable": 5,
+   "payment_billing": 15,
+   "account_access": 8,
+   "insufficient_evidence": 41,
+   "safety": 9,
+   "vague_hostile": 8,
+   "none": 17,
+   "insufficient_context": 4,
+   "legal_media": 4,
+   "conflicting_evidence": 9,
+   "verification_failed": 2,
+   "abusive_threatening": 2
+  },
+  "evidence_reasons": {
+   "weak_similarity": 135,
+   "insufficient_resolution_evidence": 26,
+   "strong_consistent_evidence": 12,
+   "conflicting_evidence": 17,
+   "insufficient_query": 7
+  }
+ },
+ "response": {
+  "auto_replies": 17,
+  "drafts_generated": 19,
+  "verified_share_of_drafts": 0.8947,
+  "mean_evidence_coverage_auto": 1.0,
+  "auto_with_evidence_refs": 1,
+  "redraft_share": 0.1053,
+  "verification_issue_counts": {
+   "llm_support_check": 2
+  },
+  "auto_on_gold_should_escalate": 0,
+  "policy_compliance_lexical": 1.0
+ },
+ "baseline": {
+  "canned_reply": "We'd love to help. DM us the details and we'll go from there.",
+  "escalation": "never (always replies)",
+  "intent": "majority class",
+  "note": "message -> canned DM line, no retrieval, no verification; it 'auto-handles' 100% and is safe only because it says nothing"
+ },
+ "slices": {
+  "short": {
+   "n": 45,
+   "auto_rate": 0.089,
+   "handoff_rate": 0.556,
+   "intent_acc": 0.667,
+   "escalation_recall": 1.0
+  },
+  "multi_turn": {
+   "n": 48,
+   "auto_rate": 0.104,
+   "handoff_rate": 0.792,
+   "intent_acc": 0.812,
+   "escalation_recall": 1.0
+  },
+  "multi_intent": {
+   "n": 10,
+   "auto_rate": 0.0,
+   "handoff_rate": 0.4,
+   "intent_acc": 0.7,
+   "escalation_recall": 1.0
+  },
+  "insufficient_context": {
+   "n": 18,
+   "auto_rate": 0.0,
+   "handoff_rate": 0.556,
+   "intent_acc": 0.667,
+   "escalation_recall": 0.5
+  },
+  "taxonomy_gap": {
+   "n": 7,
+   "auto_rate": 0.0,
+   "handoff_rate": 0.714,
+   "intent_acc": 1.0,
+   "escalation_recall": 1.0
+  },
+  "customer_seen_in_kb": {
+   "n": 25,
+   "auto_rate": 0.08,
+   "handoff_rate": 0.56,
+   "intent_acc": 0.8,
+   "escalation_recall": 1.0
+  }
+ },
+ "latency_ms": {
+  "context": {
+   "p50": 0.1,
+   "p95": 0.4,
+   "n": 197
+  },
+  "intent": {
+   "p50": 47.8,
+   "p95": 91.9,
+   "n": 197
+  },
+  "second_opinion": {
+   "p50": 1.6,
+   "p95": 3.7,
+   "n": 197
+  },
+  "retrieval": {
+   "p50": 54.8,
+   "p95": 113.3,
+   "n": 197
+  },
+  "risk": {
+   "p50": 10510.1,
+   "p95": 18802.7,
+   "n": 197
+  },
+  "policy": {
+   "p50": 0.0,
+   "p95": 0.1,
+   "n": 197
+  },
+  "draft": {
+   "p50": 0.0,
+   "p95": 0.1,
+   "n": 197
+  },
+  "verification": {
+   "p50": 0.0,
+   "p95": 0.0,
+   "n": 197
+  },
+  "output_gate": {
+   "p50": 0.0,
+   "p95": 0.1,
+   "n": 197
+  },
+  "handoff": {
+   "p50": 0.1,
+   "p95": 0.2,
+   "n": 108
+  },
+  "total": {
+   "p50": 10874.8,
+   "p95": 25114.2,
+   "n": 197
+  }
+ },
+ "usage": {
+  "llm_calls_per_message": 2.437,
+  "live_calls_per_message": 1.665,
+  "cache_hit_rate": 0.3167,
+  "tokens_in_per_message": 734.4,
+  "tokens_out_per_message": 1186.6,
+  "estimated_cost_usd_per_message": 0.004532,
+  "fallbacks": 54,
+  "calls_by_action": {
+   "HUMAN_HANDOFF": 2.48,
+   "CLARIFICATION_REQUIRED": 2.43,
+   "AUTO_HANDLE": 2.18
+  },
+  "wall_seconds": 2205.8
+ }
+}

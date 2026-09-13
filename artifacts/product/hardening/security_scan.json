@@ -1,0 +1,58 @@
+{
+ "committable_files": 730,
+ "committable_bytes": 55271519,
+ "committable_mb": 55.3,
+ "largest_files": [
+  {
+   "file": "data/processed/apple_pairs.csv",
+   "mb": 8.01
+  },
+  {
+   "file": "artifacts/phase9/smoke/screenshots/knowledge.png",
+   "mb": 0.77
+  },
+  {
+   "file": "artifacts/phase8/screenshots/knowledge.png",
+   "mb": 0.77
+  },
+  {
+   "file": "artifacts/phase9/smoke/screenshots/narrow-evaluation.png",
+   "mb": 0.7
+  },
+  {
+   "file": "artifacts/phase8/screenshots/narrow-evaluation.png",
+   "mb": 0.7
+  },
+  {
+   "file": "artifacts/phase9/smoke/screenshots/evaluation.png",
+   "mb": 0.7
+  },
+  {
+   "file": "artifacts/phase8/screenshots/evaluation.png",
+   "mb": 0.7
+  },
+  {
+   "file": "artifacts/final/smoke/screenshots/evaluation.png",
+   "mb": 0.7
+  },
+  {
+   "file": "artifacts/phase9/smoke/screenshots/tablet-evaluation.png",
+   "mb": 0.69
+  },
+  {
+   "file": "artifacts/phase8/screenshots/tablet-evaluation.png",
+   "mb": 0.69
+  }
+ ],
+ "env_secret_variables_checked": [
+  "GEMINI_API_KEY",
+  "GROQ_API_KEY",
+  "LLM_API_KEY"
+ ],
+ "trace_files_scanned": 7,
+ "trace_records_scanned": 927,
+ "trace_records_with_pii": 0,
+ ".env_committable": false,
+ "findings": [],
+ "passed": true
+}

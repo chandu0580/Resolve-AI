@@ -1,0 +1,1175 @@
+{
+ "dev": {
+  "A_customer_v2": {
+   "n": 500,
+   "n_ref": 67,
+   "recall@1": 0.1791,
+   "recall@3": 0.194,
+   "recall@5": 0.209,
+   "mrr": 0.1903,
+   "resolution_bearing@1": 0.16,
+   "resolution_bearing@3": 0.366,
+   "resolution_bearing@5": 0.51,
+   "resolution_mrr": 0.2847,
+   "same_intent@5": 0.878,
+   "sufficient_rate": 0.062,
+   "levels": {
+    "INSUFFICIENT": 469,
+    "SUFFICIENT": 31
+   },
+   "reasons": {
+    "weak_similarity": 296,
+    "insufficient_resolution_evidence": 87,
+    "conflicting_evidence": 59,
+    "strong_consistent_evidence": 31,
+    "insufficient_query": 26,
+    "ambiguous_intent": 1
+   },
+   "consistency": {
+    "no_resolution": 500
+   },
+   "gate_precision_same_resolution_hit@5": 0.0,
+   "gate_precision_resolution_bearing@5": 0.9032,
+   "dual_share_of_top5": 0.0,
+   "latency_ms": {
+    "p50": 74.9,
+    "p95": 156.4
+   },
+   "slices": {
+    "short": {
+     "n": 60,
+     "recall@5": 0.1429,
+     "resolution_bearing@5": 0.6667,
+     "sufficient_rate": 0.033
+    },
+    "multi_turn": {
+     "n": 167,
+     "recall@5": 0.1333,
+     "resolution_bearing@5": 0.5689,
+     "sufficient_rate": 0.036
+    },
+    "first_turn": {
+     "n": 333,
+     "recall@5": 0.2308,
+     "resolution_bearing@5": 0.4805,
+     "sufficient_rate": 0.075
+    },
+    "customer_seen_in_kb": {
+     "n": 81,
+     "recall@5": 0.1,
+     "resolution_bearing@5": 0.5556,
+     "sufficient_rate": 0.049
+    }
+   }
+  },
+  "B_reply_v2": {
+   "n": 500,
+   "n_ref": 67,
+   "recall@1": 0.0149,
+   "recall@3": 0.0299,
+   "recall@5": 0.0299,
+   "mrr": 0.0224,
+   "resolution_bearing@1": 0.108,
+   "resolution_bearing@3": 0.214,
+   "resolution_bearing@5": 0.34,
+   "resolution_mrr": 0.1827,
+   "same_intent@5": 0.782,
+   "sufficient_rate": 0.0,
+   "levels": {
+    "INSUFFICIENT": 500
+   },
+   "reasons": {
+    "weak_similarity": 470,
+    "insufficient_query": 26,
+    "insufficient_resolution_evidence": 4
+   },
+   "consistency": {
+    "no_resolution": 500
+   },
+   "gate_precision_same_resolution_hit@5": null,
+   "gate_precision_resolution_bearing@5": null,
+   "dual_share_of_top5": 0.0,
+   "latency_ms": {
+    "p50": 15.7,
+    "p95": 45.5
+   },
+   "slices": {
+    "short": {
+     "n": 60,
+     "recall@5": 0.0,
+     "resolution_bearing@5": 0.4167,
+     "sufficient_rate": 0.0
+    },
+    "multi_turn": {
+     "n": 167,
+     "recall@5": 0.0,
+     "resolution_bearing@5": 0.3473,
+     "sufficient_rate": 0.0
+    },
+    "first_turn": {
+     "n": 333,
+     "recall@5": 0.0385,
+     "resolution_bearing@5": 0.3363,
+     "sufficient_rate": 0.0
+    },
+    "customer_seen_in_kb": {
+     "n": 81,
+     "recall@5": 0.2,
+     "resolution_bearing@5": 0.4074,
+     "sufficient_rate": 0.0
+    }
+   }
+  },
+  "B2_pair_v2": {
+   "n": 500,
+   "n_ref": 67,
+   "recall@1": 0.194,
+   "recall@3": 0.194,
+   "recall@5": 0.209,
+   "mrr": 0.197,
+   "resolution_bearing@1": 0.228,
+   "resolution_bearing@3": 0.392,
+   "resolution_bearing@5": 0.504,
+   "resolution_mrr": 0.3237,
+   "same_intent@5": 0.834,
+   "sufficient_rate": 0.022,
+   "levels": {
+    "INSUFFICIENT": 489,
+    "SUFFICIENT": 11
+   },
+   "reasons": {
+    "weak_similarity": 388,
+    "insufficient_resolution_evidence": 49,
+    "insufficient_query": 26,
+    "conflicting_evidence": 25,
+    "strong_consistent_evidence": 11,
+    "ambiguous_intent": 1
+   },
+   "consistency": {
+    "no_resolution": 500
+   },
+   "gate_precision_same_resolution_hit@5": 0.0,
+   "gate_precision_resolution_bearing@5": 1.0,
+   "dual_share_of_top5": 0.0,
+   "latency_ms": {
+    "p50": 13.9,
+    "p95": 36.8
+   },
+   "slices": {
+    "short": {
+     "n": 60,
+     "recall@5": 0.1429,
+     "resolution_bearing@5": 0.6,
+     "sufficient_rate": 0.0
+    },
+    "multi_turn": {
+     "n": 167,
+     "recall@5": 0.1333,
+     "resolution_bearing@5": 0.5509,
+     "sufficient_rate": 0.006
+    },
+    "first_turn": {
+     "n": 333,
+     "recall@5": 0.2308,
+     "resolution_bearing@5": 0.4805,
+     "sufficient_rate": 0.03
+    },
+    "customer_seen_in_kb": {
+     "n": 81,
+     "recall@5": 0.1,
+     "resolution_bearing@5": 0.5185,
+     "sufficient_rate": 0.012
+    }
+   }
+  },
+  "C_dual_customer_reply_v2": {
+   "n": 500,
+   "n_ref": 67,
+   "recall@1": 0.1194,
+   "recall@3": 0.2239,
+   "recall@5": 0.2239,
+   "mrr": 0.1692,
+   "resolution_bearing@1": 0.138,
+   "resolution_bearing@3": 0.296,
+   "resolution_bearing@5": 0.412,
+   "resolution_mrr": 0.2319,
+   "same_intent@5": 0.842,
+   "sufficient_rate": 0.008,
+   "levels": {
+    "INSUFFICIENT": 496,
+    "SUFFICIENT": 4
+   },
+   "reasons": {
+    "weak_similarity": 398,
+    "insufficient_resolution_evidence": 46,
+    "insufficient_query": 26,
+    "conflicting_evidence": 24,
+    "strong_consistent_evidence": 4,
+    "ambiguous_intent": 2
+   },
+   "consistency": {
+    "no_resolution": 500
+   },
+   "gate_precision_same_resolution_hit@5": 0.0,
+   "gate_precision_resolution_bearing@5": 1.0,
+   "dual_share_of_top5": 0.212,
+   "latency_ms": {
+    "p50": 26.5,
+    "p95": 119.6
+   },
+   "slices": {
+    "short": {
+     "n": 60,
+     "recall@5": 0.1429,
+     "resolution_bearing@5": 0.5333,
+     "sufficient_rate": 0.0
+    },
+    "multi_turn": {
+     "n": 167,
+     "recall@5": 0.1333,
+     "resolution_bearing@5": 0.4671,
+     "sufficient_rate": 0.0
+    },
+    "first_turn": {
+     "n": 333,
+     "recall@5": 0.25,
+     "resolution_bearing@5": 0.3844,
+     "sufficient_rate": 0.012
+    },
+    "customer_seen_in_kb": {
+     "n": 81,
+     "recall@5": 0.2,
+     "resolution_bearing@5": 0.4691,
+     "sufficient_rate": 0.0
+    }
+   }
+  },
+  "C2_dual_customer_pair_v2": {
+   "n": 500,
+   "n_ref": 67,
+   "recall@1": 0.194,
+   "recall@3": 0.209,
+   "recall@5": 0.209,
+   "mrr": 0.199,
+   "resolution_bearing@1": 0.204,
+   "resolution_bearing@3": 0.388,
+   "resolution_bearing@5": 0.512,
+   "resolution_mrr": 0.3136,
+   "same_intent@5": 0.852,
+   "sufficient_rate": 0.058,
+   "levels": {
+    "INSUFFICIENT": 471,
+    "SUFFICIENT": 29
+   },
+   "reasons": {
+    "weak_similarity": 331,
+    "insufficient_resolution_evidence": 70,
+    "conflicting_evidence": 43,
+    "strong_consistent_evidence": 29,
+    "insufficient_query": 26,
+    "ambiguous_intent": 1
+   },
+   "consistency": {
+    "no_resolution": 500
+   },
+   "gate_precision_same_resolution_hit@5": 0.0,
+   "gate_precision_resolution_bearing@5": 0.9655,
+   "dual_share_of_top5": 0.82,
+   "latency_ms": {
+    "p50": 27.3,
+    "p95": 70.8
+   },
+   "slices": {
+    "short": {
+     "n": 60,
+     "recall@5": 0.1429,
+     "resolution_bearing@5": 0.5667,
+     "sufficient_rate": 0.017
+    },
+    "multi_turn": {
+     "n": 167,
+     "recall@5": 0.1333,
+     "resolution_bearing@5": 0.521,
+     "sufficient_rate": 0.018
+    },
+    "first_turn": {
+     "n": 333,
+     "recall@5": 0.2308,
+     "resolution_bearing@5": 0.5075,
+     "sufficient_rate": 0.078
+    },
+    "customer_seen_in_kb": {
+     "n": 81,
+     "recall@5": 0.1,
+     "resolution_bearing@5": 0.5679,
+     "sufficient_rate": 0.025
+    }
+   }
+  },
+  "D_B2_pair_rr_v3__loosest_gate": {
+   "n": 500,
+   "n_ref": 67,
+   "recall@1": 0.1642,
+   "recall@3": 0.194,
+   "recall@5": 0.209,
+   "mrr": 0.1779,
+   "resolution_bearing@1": 0.776,
+   "resolution_bearing@3": 0.776,
+   "resolution_bearing@5": 0.776,
+   "resolution_mrr": 0.776,
+   "same_intent@5": 0.934,
+   "sufficient_rate": 0.048,
+   "levels": {
+    "INSUFFICIENT": 433,
+    "WEAK": 43,
+    "STRONG": 22,
+    "SUFFICIENT": 2
+   },
+   "reasons": {
+    "weak_similarity": 302,
+    "insufficient_query": 128,
+    "strong_consistent_evidence": 24,
+    "insufficient_resolution_evidence": 22,
+    "weak_resolution_evidence": 21,
+    "no_relevant_evidence": 3
+   },
+   "consistency": {
+    "no_resolution": 442,
+    "consistent": 58
+   },
+   "gate_precision_same_resolution_hit@5": 0.0,
+   "gate_precision_resolution_bearing@5": 1.0,
+   "dual_share_of_top5": 0.0,
+   "latency_ms": {
+    "p50": 19.2,
+    "p95": 41.2
+   },
+   "slices": {
+    "short": {
+     "n": 60,
+     "recall@5": 0.1429,
+     "resolution_bearing@5": 0.8,
+     "sufficient_rate": 0.017
+    },
+    "multi_turn": {
+     "n": 167,
+     "recall@5": 0.1333,
+     "resolution_bearing@5": 0.7904,
+     "sufficient_rate": 0.03
+    },
+    "first_turn": {
+     "n": 333,
+     "recall@5": 0.2308,
+     "resolution_bearing@5": 0.7688,
+     "sufficient_rate": 0.057
+    },
+    "customer_seen_in_kb": {
+     "n": 81,
+     "recall@5": 0.1,
+     "resolution_bearing@5": 0.7654,
+     "sufficient_rate": 0.037
+    }
+   }
+  }
+ },
+ "weight_search": [
+  {
+   "weights": {
+    "w_customer": 0.35,
+    "w_reply": 0.25,
+    "w_intent": 0.1,
+    "w_resolution": 0.2,
+    "w_quality": 0.05,
+    "w_outcome": 0.01,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.25,
+    "w_reply": 0.25,
+    "w_intent": 0.1,
+    "w_resolution": 0.2,
+    "w_quality": 0.05,
+    "w_outcome": 0.01,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.45,
+    "w_reply": 0.25,
+    "w_intent": 0.1,
+    "w_resolution": 0.2,
+    "w_quality": 0.05,
+    "w_outcome": 0.01,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.35,
+    "w_reply": 0.15,
+    "w_intent": 0.1,
+    "w_resolution": 0.2,
+    "w_quality": 0.05,
+    "w_outcome": 0.01,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.35,
+    "w_reply": 0.35,
+    "w_intent": 0.1,
+    "w_resolution": 0.2,
+    "w_quality": 0.05,
+    "w_outcome": 0.01,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.35,
+    "w_reply": 0.25,
+    "w_intent": 0.1,
+    "w_resolution": 0.1,
+    "w_quality": 0.05,
+    "w_outcome": 0.01,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.923,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.714
+  },
+  {
+   "weights": {
+    "w_customer": 0.35,
+    "w_reply": 0.25,
+    "w_intent": 0.1,
+    "w_resolution": 0.3,
+    "w_quality": 0.05,
+    "w_outcome": 0.01,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.35,
+    "w_reply": 0.25,
+    "w_intent": 0.1,
+    "w_resolution": 0.2,
+    "w_quality": 0.05,
+    "w_outcome": 0.0,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.35,
+    "w_reply": 0.25,
+    "w_intent": 0.1,
+    "w_resolution": 0.2,
+    "w_quality": 0.05,
+    "w_outcome": 0.02,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.25,
+    "w_reply": 0.25,
+    "w_intent": 0.1,
+    "w_resolution": 0.2,
+    "w_quality": 0.05,
+    "w_outcome": 0.01,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.45,
+    "w_reply": 0.25,
+    "w_intent": 0.1,
+    "w_resolution": 0.2,
+    "w_quality": 0.05,
+    "w_outcome": 0.01,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.35,
+    "w_reply": 0.15,
+    "w_intent": 0.1,
+    "w_resolution": 0.2,
+    "w_quality": 0.05,
+    "w_outcome": 0.01,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.35,
+    "w_reply": 0.35,
+    "w_intent": 0.1,
+    "w_resolution": 0.2,
+    "w_quality": 0.05,
+    "w_outcome": 0.01,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.35,
+    "w_reply": 0.25,
+    "w_intent": 0.1,
+    "w_resolution": 0.1,
+    "w_quality": 0.05,
+    "w_outcome": 0.01,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.923,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.714
+  },
+  {
+   "weights": {
+    "w_customer": 0.35,
+    "w_reply": 0.25,
+    "w_intent": 0.1,
+    "w_resolution": 0.3,
+    "w_quality": 0.05,
+    "w_outcome": 0.01,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.35,
+    "w_reply": 0.25,
+    "w_intent": 0.1,
+    "w_resolution": 0.2,
+    "w_quality": 0.05,
+    "w_outcome": 0.0,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  },
+  {
+   "weights": {
+    "w_customer": 0.35,
+    "w_reply": 0.25,
+    "w_intent": 0.1,
+    "w_resolution": 0.2,
+    "w_quality": 0.05,
+    "w_outcome": 0.02,
+    "w_dup": 0.15,
+    "w_dm": 0.2,
+    "w_same": 0.3,
+    "version": "rerank-v1"
+   },
+   "objective": 0.985,
+   "recall@5": 0.209,
+   "resolution_bearing@3": 0.776
+  }
+ ],
+ "selected_dual": "B2_pair_v2",
+ "final_variant": "D_B2_pair_rr_v3",
+ "handcheck_cases": [
+  {
+   "qid": "dev496796",
+   "query": "Please fix the \u201cI.t\u201d problem",
+   "intent": "keyboard_text_bug",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "WEAK",
+    "share0.7_ms3": "WEAK"
+   },
+   "clusters": [
+    [
+     "update",
+     2,
+     1.0
+    ]
+   ],
+   "top_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url> <url>"
+  },
+  {
+   "qid": "dev2906753",
+   "query": "really hate that autocorrect issue wit iphone",
+   "intent": "keyboard_text_bug",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "STRONG"
+   },
+   "clusters": [
+    [
+     "update",
+     3,
+     1.0
+    ]
+   ],
+   "top_reply": "Thanks for reaching out to us for support.iOS 11.1.1 was recently released and it includes a fix for autocorrect issues. Be sure to back up your device prior to updating, and let us know if the issue persists afterwards. How to back up: <url>"
+  },
+  {
+   "qid": "dev2910465",
+   "query": "Dear Why, oh, can\u2019t eye type the letter eye? It\u2019s driving me mad. Please SOS #I\ufe0f #aBOX",
+   "intent": "keyboard_text_bug",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "STRONG"
+   },
+   "clusters": [
+    [
+     "update",
+     4,
+     1.0
+    ]
+   ],
+   "top_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url> <url>"
+  },
+  {
+   "qid": "dev542280",
+   "query": "please make an update of the ios software to fix the worldwide iphone bug who's happening right now. Please god",
+   "intent": "general_complaint",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "STRONG"
+   },
+   "clusters": [
+    [
+     "update",
+     4,
+     1.0
+    ]
+   ],
+   "top_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>"
+  },
+  {
+   "qid": "dev517085",
+   "query": "after I installed the latest update on my phone, half the time I plug in my charger I get \u201cThis accessory may not be supported\u201d and it won\u2019t charge. What\u2019s up with that guys?? \ud83e\udd14\ud83e\udd14\ud83e\udd14",
+   "intent": "battery_power",
+   "verdicts": {
+    "share0.5_ms2": "SUFFICIENT",
+    "share0.6_ms2": "WEAK",
+    "share0.7_ms2": "WEAK",
+    "share0.6_ms3": "WEAK",
+    "share0.7_ms3": "WEAK"
+   },
+   "clusters": [
+    [
+     "restart",
+     1,
+     0.5
+    ],
+    [
+     "article",
+     1,
+     0.5
+    ]
+   ],
+   "top_reply": "We know how important it is to depend on your charger to work correctly. We can help. To start, let\u2019s unplug the iPhone and then restart it. Plug it in again and see if everything is working as expected please."
+  },
+  {
+   "qid": "dev2974487",
+   "query": "Why does my phone keep trying to change \u201cit\u201d to \u201cI.t\u201d .... I\u2019ve never typed \u201cI.t\u201d in my life",
+   "intent": "performance_crash",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "STRONG"
+   },
+   "clusters": [
+    [
+     "update",
+     4,
+     1.0
+    ]
+   ],
+   "top_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>"
+  },
+  {
+   "qid": "dev2887409",
+   "query": "yes i've been an apple music member for several years. i'm running version 10.2.1 and the issue started three days ago",
+   "intent": "apps_services",
+   "verdicts": {
+    "share0.5_ms2": "SUFFICIENT",
+    "share0.6_ms2": "WEAK",
+    "share0.7_ms2": "WEAK",
+    "share0.6_ms3": "WEAK",
+    "share0.7_ms3": "WEAK"
+   },
+   "clusters": [
+    [
+     "restart",
+     1,
+     0.5
+    ],
+    [
+     "update",
+     1,
+     0.5
+    ]
+   ],
+   "top_reply": "Got it. Let's try a force-restart. This article will help with the steps: <url>"
+  },
+  {
+   "qid": "dev450349",
+   "query": "I\u2019ve reset the keyboard and dictionary but it just started popping up again. I can try correcting it and see if it corrects it. Thanks for replying.",
+   "intent": "keyboard_text_bug",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "WEAK",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "WEAK"
+   },
+   "clusters": [
+    [
+     "update",
+     2,
+     0.667
+    ],
+    [
+     "article",
+     1,
+     0.333
+    ]
+   ],
+   "top_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>"
+  },
+  {
+   "qid": "dev601387",
+   "query": "Thanks for the clarification. I\u2019ve found a third party app that fixes this issue, but I\u2019ll be sure to leave feedback. Thanks!",
+   "intent": "apps_services",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "WEAK",
+    "share0.7_ms3": "WEAK"
+   },
+   "clusters": [
+    [
+     "update",
+     2,
+     1.0
+    ]
+   ],
+   "top_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>"
+  },
+  {
+   "qid": "dev458435",
+   "query": "This \u201c I.T \u201c thing is a lot more annoying than the \u201cI\u201d thing y\u2019all had going on",
+   "intent": "keyboard_text_bug",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "WEAK",
+    "share0.7_ms3": "WEAK"
+   },
+   "clusters": [
+    [
+     "update",
+     2,
+     1.0
+    ]
+   ],
+   "top_reply": "An update has been released to assist with this issue. If you haven\u2019t yet, please back up your device and update it to iOS 11.1.2. For more info, check out: <url>"
+  },
+  {
+   "qid": "dev538696",
+   "query": "thx you for this wonderful glitch. it makes every tweet more unique and more annoying.",
+   "intent": "performance_crash",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "WEAK",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "WEAK"
+   },
+   "clusters": [
+    [
+     "update",
+     2,
+     0.667
+    ],
+    [
+     "article",
+     1,
+     0.333
+    ]
+   ],
+   "top_reply": "We can help with that. We recently released an update to address this issue. You can back up and update using the steps here: <url>"
+  },
+  {
+   "qid": "dev487914",
+   "query": "why hasn\u2019t the I\ufe0f ? Issue been fixed yet?",
+   "intent": "general_complaint",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "STRONG"
+   },
+   "clusters": [
+    [
+     "update",
+     4,
+     1.0
+    ]
+   ],
+   "top_reply": "We're here to help. We released an update created to address this issue. Backup your iPhone and update following these steps: <url>"
+  },
+  {
+   "qid": "dev585900",
+   "query": "please sort out your bug fixes #Annoying",
+   "intent": "general_complaint",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "STRONG"
+   },
+   "clusters": [
+    [
+     "update",
+     3,
+     1.0
+    ]
+   ],
+   "top_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>"
+  },
+  {
+   "qid": "dev2914692",
+   "query": "I don\u2019t want my \u201cit\u201d to autocorrect to \u201cI.t\u201d. Please fix I.t soon. It\u2019s getting incredibly annoying.",
+   "intent": "keyboard_text_bug",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "STRONG"
+   },
+   "clusters": [
+    [
+     "update",
+     4,
+     1.0
+    ]
+   ],
+   "top_reply": "We recently released an iOS update, 11.1.2, that contains a fix for autocorrect issues. Let\u2019s be sure to back up your device prior to updating. How to back up: <url> <url>"
+  },
+  {
+   "qid": "dev592249",
+   "query": "I\u2019m assuming you guys won\u2019t fix the \u201c I.T \u201c problem either, i don\u2019t understand how this is even possible from you guys. #disappointed",
+   "intent": "keyboard_text_bug",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "WEAK",
+    "share0.7_ms3": "WEAK"
+   },
+   "clusters": [
+    [
+     "update",
+     2,
+     1.0
+    ]
+   ],
+   "top_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>"
+  },
+  {
+   "qid": "dev462049",
+   "query": "First the whole \u201cI\u201d thing now autocorrecting it to I.T fuck man get your shit together",
+   "intent": "keyboard_text_bug",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "STRONG"
+   },
+   "clusters": [
+    [
+     "update",
+     3,
+     1.0
+    ]
+   ],
+   "top_reply": "Thanks for reaching out to us for support.iOS 11.1.1 was recently released and it includes a fix for autocorrect issues. Be sure to back up your device prior to updating, and let us know if the issue persists afterwards. How to back up: <url>"
+  },
+  {
+   "qid": "dev2901961",
+   "query": "when sending the word \"it\" it autocorrects to \"I.T\"",
+   "intent": "keyboard_text_bug",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "STRONG"
+   },
+   "clusters": [
+    [
+     "update",
+     3,
+     0.75
+    ],
+    [
+     "article",
+     1,
+     0.25
+    ]
+   ],
+   "top_reply": "We've recently released an update to fix this. We do recommend creating a current backup of the data on your device before updating. Here's more about the new update: <url> Let us know if this helps. <url>"
+  },
+  {
+   "qid": "dev464729",
+   "query": "I\u2019m really kinda sick of having to retype I.T to it.... please fix these issues. A loyal Apple customer",
+   "intent": "keyboard_text_bug",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "STRONG"
+   },
+   "clusters": [
+    [
+     "update",
+     3,
+     1.0
+    ]
+   ],
+   "top_reply": "iOS 11.1.1 was recently released and it includes a fix for autocorrect issues. Be sure to back up your device prior to updating, and let us know if the issue persists afterwards. How to back up: <url>"
+  },
+  {
+   "qid": "dev518343",
+   "query": "This new iOS has to be the buggiest iteration yet. I waited to upgrade and figured would get their act together. Boy, was I wrong.",
+   "intent": "general_complaint",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "WEAK",
+    "share0.7_ms3": "WEAK"
+   },
+   "clusters": [
+    [
+     "update",
+     2,
+     1.0
+    ]
+   ],
+   "top_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>"
+  },
+  {
+   "qid": "dev2947071",
+   "query": "Dear because of your new update my phone keeps deleting rather important shit. Fix this! Sincerely a pissed off customer \ud83e\udd2c",
+   "intent": "general_complaint",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "WEAK",
+    "share0.7_ms3": "WEAK"
+   },
+   "clusters": [
+    [
+     "update",
+     2,
+     1.0
+    ]
+   ],
+   "top_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>"
+  },
+  {
+   "qid": "dev2888373",
+   "query": "I\ufe0f HATE THIS STUPID GLITCH GET YOUR SHIT TOGETHER",
+   "intent": "performance_crash",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "STRONG"
+   },
+   "clusters": [
+    [
+     "update",
+     3,
+     1.0
+    ]
+   ],
+   "top_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>"
+  },
+  {
+   "qid": "dev479427",
+   "query": "can y\u2019all fix this \u201c I.T\u201d problem, it\u2019s aggy",
+   "intent": "keyboard_text_bug",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "STRONG",
+    "share0.7_ms3": "STRONG"
+   },
+   "clusters": [
+    [
+     "update",
+     3,
+     1.0
+    ]
+   ],
+   "top_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url> <url>"
+  },
+  {
+   "qid": "dev2277937",
+   "query": "Okay now why is there a problem when we type \u201cit\u201d it corrects to I.T",
+   "intent": "keyboard_text_bug",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "WEAK",
+    "share0.7_ms3": "WEAK"
+   },
+   "clusters": [
+    [
+     "update",
+     2,
+     1.0
+    ]
+   ],
+   "top_reply": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: <url>"
+  },
+  {
+   "qid": "dev513686",
+   "query": "Please fix autocorrect bug of replacing is and it with I.S. an I.T. when you release IOS 11.2 final version",
+   "intent": "keyboard_text_bug",
+   "verdicts": {
+    "share0.5_ms2": "STRONG",
+    "share0.6_ms2": "STRONG",
+    "share0.7_ms2": "STRONG",
+    "share0.6_ms3": "WEAK",
+    "share0.7_ms3": "WEAK"
+   },
+   "clusters": [
+    [
+     "update",
+     2,
+     1.0
+    ]
+   ],
+   "top_reply": "We recently released an iOS update, 11.1.2, that contains a fix for autocorrect issues. Let\u2019s be sure to back up your device prior to updating. How to back up: <url> <url>"
+  }
+ ]
+}

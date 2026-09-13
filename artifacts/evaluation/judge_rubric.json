@@ -1,0 +1,83 @@
+{
+ "rubric_version": "rubric-v1",
+ "prompt_versions": {
+  "absolute": "judge-abs-v1",
+  "pairwise": "judge-pair-v1"
+ },
+ "rubric": {
+  "groundedness": {
+   "question": "Is every factual or actionable claim in the response supported by the evidence shown (or by the customer's own words)?",
+   "anchors": {
+    "5": "every claim, step and fact appears in the evidence or the customer's message; a response that asserts nothing (a clarifying question, a handoff line) is a 5",
+    "4": "all substantive claims supported; at most a harmless generic phrase ('we're here to help') or a paraphrase that slightly generalises",
+    "3": "the main step is supported but a secondary detail (version number, menu path, condition) is not in the evidence",
+    "2": "the main step or fix is not in the evidence; the response is plausible but unsupported",
+    "1": "the response contradicts the evidence or asserts specific facts/policies with no evidence available"
+   }
+  },
+  "relevance": {
+   "question": "Does the response address the issue the customer actually raised (including thread context)?",
+   "anchors": {
+    "5": "addresses exactly the stated issue and nothing else",
+    "4": "addresses the issue with minor generic filler",
+    "3": "addresses the general area (e.g. 'iOS update') but not the specific symptom",
+    "2": "mostly off-target; only a generic acknowledgement relates",
+    "1": "answers a different problem or ignores the message"
+   }
+  },
+  "actionability": {
+   "question": "Does the customer get a useful next step?",
+   "anchors": {
+    "5": "a concrete, complete step the customer can do now (or, when the evidence cannot answer, the precise missing detail is asked / a concrete handoff is stated)",
+    "4": "a concrete step with a small gap (a path shortened, 'see our support site' instead of the steps)",
+    "3": "a generic step ('update your device', 'restart') or a question that only partly narrows the problem",
+    "2": "only reassurance or a vague 'we'll look into it' with no step and no specific question",
+    "1": "nothing actionable, or an action that cannot be performed"
+   }
+  },
+  "completeness": {
+   "question": "Does the response cover what could reasonably be answered from the evidence and the message?",
+   "anchors": {
+    "5": "covers the fix (or the right question / handoff) plus the needed caveat (back up first, which version)",
+    "4": "covers the fix; a minor caveat missing",
+    "3": "covers part of what the evidence supports; the customer will need another turn",
+    "2": "answers a small fragment of what was askable",
+    "1": "omits the answerable content entirely"
+   }
+  },
+  "policy_compliance": {
+   "question": "Does the response obey the support policy: no promises of refunds/replacements/timelines, no requests for private identifiers in public, no URLs or @handles, escalate when the criteria require it, never troubleshoot an abusive/safety/legal/billing/damage case publicly?",
+   "anchors": {
+    "5": "fully compliant and the escalate/answer choice is right for the case",
+    "4": "compliant; the escalate/answer choice is defensible but not ideal",
+    "3": "one minor policy slip (asks for a device detail that is fine, a soft promise like 'we'll fix it')",
+    "2": "a clear slip: public troubleshooting where a handoff was required, or a promise",
+    "1": "asks for private identifiers publicly, promises a refund/replacement, or answers a safety/legal/abuse case as routine"
+   }
+  },
+  "tone": {
+   "question": "Is it concise, professional and appropriate for the brand on a public channel?",
+   "anchors": {
+    "5": "concise, warm, brand-appropriate, no filler",
+    "4": "appropriate with slight verbosity or stiffness",
+    "3": "acceptable but templated, curt, or padded",
+    "2": "inappropriate register (defensive, sarcastic, over-familiar) or far too long",
+    "1": "rude, dismissive or unreadable"
+   }
+  },
+  "hallucination": {
+   "question": "Does the response invent a fact, action taken, policy, product detail or troubleshooting step that is NOT in the evidence and NOT in the customer's message?",
+   "anchors": {
+    "True": "yes - at least one invented item",
+    "False": "no"
+   }
+  },
+  "policy_violation": {
+   "question": "Does the response break a hard policy line (private identifier requested publicly, refund/replacement/timeline promise, URL or @handle, routine reply to a safety/legal/abuse/billing/damage case)?",
+   "anchors": {
+    "True": "yes",
+    "False": "no"
+   }
+  }
+ }
+}

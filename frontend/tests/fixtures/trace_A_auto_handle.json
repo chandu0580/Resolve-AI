@@ -1,0 +1,310 @@
+{
+ "trace_id": "d205ef384a0f44c089a40e28a7616e14",
+ "started_at": "2026-09-11T05:28:20.940+00:00",
+ "finished_at": "2026-09-11T05:29:03.171+00:00",
+ "message_id": "d22349172ca3",
+ "request_id": "fixture-A",
+ "pipeline_version": "pipeline-v5.1",
+ "versions": {
+  "pipeline": "pipeline-v5.1",
+  "policy": "policy-v3.1",
+  "output_gate": "output-gate-v1",
+  "retrieval": "dense:bge-small:pair+rr+gatev3",
+  "evidence_gate": "gate-v3",
+  "rerank": "rerank-v1",
+  "classifier": "2d194e7e704f",
+  "model": "glm-5.2",
+  "config_hash": "77fe3db81c69bf09"
+ },
+ "request_meta": {
+  "channel": "web",
+  "locale": "en-US"
+ },
+ "config_hash": "77fe3db81c69bf09",
+ "prompt_versions": {
+  "risk": "risk-flags-v2",
+  "draft": "draft-v2",
+  "verify": "verify-v2",
+  "second_opinion": "intent-second-opinion-v1"
+ },
+ "events": [
+  {
+   "name": "request_received",
+   "ts": "2026-09-11T05:28:20.942+00:00",
+   "component": "api",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "has_context": false,
+    "policy_version": "policy-v3.1",
+    "gate_version": "output-gate-v1"
+   }
+  },
+  {
+   "name": "pii_redacted",
+   "ts": "2026-09-11T05:28:20.942+00:00",
+   "component": "trust",
+   "status": "ok",
+   "latency_ms": 0.11,
+   "data": {
+    "pii_counts": {}
+   }
+  },
+  {
+   "name": "injection_checked",
+   "ts": "2026-09-11T05:28:20.942+00:00",
+   "component": "trust",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "detected": false,
+    "patterns": []
+   }
+  },
+  {
+   "name": "context_built",
+   "ts": "2026-09-11T05:28:20.942+00:00",
+   "component": "context",
+   "status": "ok",
+   "latency_ms": 0.33,
+   "data": {
+    "short_reply": false,
+    "insufficient_context": false,
+    "prior_customer_turns": 0,
+    "prior_brand_turns": 0,
+    "truncated": false
+   }
+  },
+  {
+   "name": "intent_predicted",
+   "ts": "2026-09-11T05:29:02.832+00:00",
+   "component": "intent",
+   "status": "ok",
+   "latency_ms": 41889.82,
+   "data": {
+    "intent": "keyboard_text_bug",
+    "confidence": 0.9693,
+    "band": "HIGH",
+    "top3": [
+     [
+      "keyboard_text_bug",
+      0.9693
+     ],
+     [
+      "account_store_repair",
+      0.0085
+     ],
+     [
+      "apps_services",
+      0.0065
+     ]
+    ],
+    "multi_intent": false,
+    "taxonomy_gap": false
+   }
+  },
+  {
+   "name": "retrieval_started",
+   "ts": "2026-09-11T05:29:02.833+00:00",
+   "component": "retrieval",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "query_chars": 120,
+    "boost": "strong",
+    "allowed_intents": [
+     "keyboard_text_bug"
+    ]
+   }
+  },
+  {
+   "name": "retrieval_completed",
+   "ts": "2026-09-11T05:29:03.108+00:00",
+   "component": "retrieval",
+   "status": "ok",
+   "latency_ms": 275.28,
+   "data": {
+    "n_retrieved": 50,
+    "evidence_ids": [
+     "2573954",
+     "2287602",
+     "2312398",
+     "1773232",
+     "1585356"
+    ],
+    "top_similarity": 0.8940892815589905,
+    "retriever": "dense:bge-small:pair+rr+gatev3"
+   }
+  },
+  {
+   "name": "evidence_evaluated",
+   "ts": "2026-09-11T05:29:03.108+00:00",
+   "component": "evidence_gate",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "sufficient": true,
+    "reason": "strong_consistent_evidence",
+    "gate_version": "gate-v3",
+    "level": "STRONG",
+    "resolution_confidence": 0.971,
+    "consistency": "consistent",
+    "resolution_clusters": [
+     {
+      "action": "update",
+      "support": 5,
+      "share": 1.0,
+      "ids": [
+       "2573954",
+       "2287602",
+       "2312398",
+       "1773232",
+       "1585356"
+      ]
+     }
+    ],
+    "support_count": 5,
+    "conflicting": false
+   }
+  },
+  {
+   "name": "risk_flags_extracted",
+   "ts": "2026-09-11T05:29:03.131+00:00",
+   "component": "risk",
+   "status": "ok",
+   "latency_ms": 22.03,
+   "data": {
+    "source": "llm+rules",
+    "flags": [],
+    "model": "glm-5.2",
+    "schema": "compact"
+   }
+  },
+  {
+   "name": "escalation_decided",
+   "ts": "2026-09-11T05:29:03.131+00:00",
+   "component": "policy",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "decision": "auto_handle",
+    "reason_code": "none",
+    "rule": "default_auto",
+    "policy_version": "policy-v3.1",
+    "clarification_allowed": false,
+    "strategy": "troubleshoot"
+   }
+  },
+  {
+   "name": "draft_generated",
+   "ts": "2026-09-11T05:29:03.163+00:00",
+   "component": "drafter",
+   "status": "ok",
+   "latency_ms": 32.43,
+   "data": {
+    "attempt": 1,
+    "model": "glm-5.2",
+    "evidence_refs": [
+     "2287602",
+     "2573954",
+     "2312398"
+    ],
+    "chars": 272,
+    "prompt_version": "draft-v2",
+    "ask_only": false
+   }
+  },
+  {
+   "name": "response_verified",
+   "ts": "2026-09-11T05:29:03.170+00:00",
+   "component": "verifier",
+   "status": "ok",
+   "latency_ms": 6.92,
+   "data": {
+    "verified": true,
+    "severity": "none",
+    "method": "lexical+llm",
+    "issues": [],
+    "coverage": 0.706,
+    "attempt": 1
+   }
+  },
+  {
+   "name": "output_allowed",
+   "ts": "2026-09-11T05:29:03.171+00:00",
+   "component": "output_gate",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "action": "AUTO_HANDLE",
+    "blocking": [],
+    "gates": {
+     "policy_allows_automation": true,
+     "no_blocking_risk_flag": true,
+     "intent_confidence_acceptable": true,
+     "evidence_sufficient": true,
+     "response_generated": true,
+     "response_verified": true,
+     "evidence_refs_exist": true,
+     "pii_guard": true,
+     "schema_valid": true
+    }
+   }
+  },
+  {
+   "name": "response_returned",
+   "ts": "2026-09-11T05:29:03.171+00:00",
+   "component": "api",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "action": "AUTO_HANDLE",
+    "response_chars": 272,
+    "evidence_refs": [
+     "2287602",
+     "2573954",
+     "2312398"
+    ]
+   }
+  }
+ ],
+ "usage": [
+  {
+   "model": "glm-5.2",
+   "calls": 3,
+   "tokens_in": 1344,
+   "tokens_out": 1909,
+   "cache_hits": 3,
+   "estimated_cost_usd": 0.007453
+  }
+ ],
+ "final_decision": "AUTO_HANDLE",
+ "stage_status": {
+  "pii_redaction": "ok",
+  "context": "ok",
+  "intent": "ok",
+  "second_opinion": "skipped",
+  "retrieval": "ok",
+  "evidence_gate": "ok",
+  "risk": "ok",
+  "policy": "ok",
+  "draft": "ok",
+  "verification": "ok",
+  "output_gate": "ok"
+ },
+ "latency_ms": {
+  "pii_redaction": 0.11,
+  "context": 0.33,
+  "intent": 41889.82,
+  "second_opinion": 0.02,
+  "retrieval": 275.28,
+  "evidence_gate": 0.0,
+  "risk": 22.03,
+  "policy": 0.05,
+  "draft": 32.43,
+  "verification": 6.92,
+  "output_gate": 0.16,
+  "total": 42231.03
+ },
+ "error": null
+}

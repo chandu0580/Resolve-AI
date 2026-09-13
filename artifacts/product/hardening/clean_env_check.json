@@ -1,0 +1,147 @@
+{
+ "mode": "targeted re-check (current interpreter, existing embedding cache)",
+ "base_dir": "C:\\rai_clean",
+ "copied_files": 785,
+ "env_file_present": false,
+ "cache_dir_present": false,
+ "hf_home_isolated": true,
+ "model_credentials_in_env": false,
+ "base_python": "3.13.3",
+ "os": "Windows-11-10.0.26200-SP0",
+ "steps": [
+  {
+   "step": "git init (lets .gitignore classify local-only files)",
+   "command": "git init -q",
+   "exit_code": 0,
+   "seconds": 0.1,
+   "tail": []
+  },
+  {
+   "step": "pytest",
+   "command": "python.exe -m pytest -q -p no:cacheprovider",
+   "exit_code": 0,
+   "seconds": 98.7,
+   "tail": [
+    "458 passed, 2 skipped, 112 warnings in 94.68s (0:01:34)",
+    "C:\\Users\\chandu s\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (7.4.3)/charset_normalizer (3.4.2) doesn't match a supported version!",
+    "  warnings.warn(",
+    "C:\\Users\\chandu s\\AppData\\Roaming\\Python\\Python313\\site-packages\\pytest_asyncio\\plugin.py:208: PytestDeprecationWarning: The configuration option \"asyncio_default_fixture_loop_scope\" is unset.",
+    "The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: \"function\", \"class\", \"module\", \"package\", \"session\"",
+    "  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))"
+   ]
+  },
+  {
+   "step": "demo without a model key",
+   "command": "python.exe -m resolveai demo --no-llm",
+   "exit_code": 0,
+   "seconds": 17.6,
+   "tail": [
+    "  NEXT      Wait for the customer's reply (which device you're using, which software version is installed (Settings > General > About), exactly what's happening); the same pipeline runs again with the added detail.",
+    "  TRACE ID  f0f8dc000dce49a4bafe1ea3976fcb55",
+    "C:\\Users\\chandu s\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (7.4.3)/charset_normalizer (3.4.2) doesn't match a supported version!",
+    "  warnings.warn(",
+    "C:\\Users\\chandu s\\AppData\\Roaming\\Python\\Python313\\site-packages\\torch\\nn\\modules\\module.py:1790: FutureWarning: `encoder_attention_mask` is deprecated and will be removed in version 4.55.0 for `BertSdpaSelfAttention.forward`.",
+    "  return forward_call(*args, **kwargs)"
+   ]
+  },
+  {
+   "step": "final verification (golden, frozen artifacts, cached evaluation, security scan)",
+   "command": "python.exe scripts/verification/final_verification.py",
+   "exit_code": 0,
+   "seconds": 115.3,
+   "tail": [
+    " \"wall_seconds\": 114.9",
+    "}",
+    "C:\\rai_clean\\resolveai_clean_nua32qxp\\resolveai\\resolveai\\evaluation\\agreement.py:71: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`",
+    "  filled = packet[human_cols].replace(\"\", np.nan).notna().all(axis=1)",
+    "C:\\rai_clean\\resolveai_clean_nua32qxp\\resolveai\\resolveai\\evaluation\\agreement.py:72: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`",
+    "  status = {\"n_examples\": int(len(packet)), \"n_fully_rated\": int(filled.sum()), \"n_partially_rated\": int((packet[human_cols].replace(\"\", np.nan).notna().any(axis=1) & ~filled).sum())}"
+   ]
+  },
+  {
+   "step": "npm ci",
+   "command": "npm ci",
+   "exit_code": 0,
+   "seconds": 38.3,
+   "tail": [
+    "npm warn EBADENGINE Unsupported engine {",
+    "npm warn EBADENGINE   package: 'undici@8.10.2',",
+    "npm warn EBADENGINE   required: { node: '>=22.19.0' },",
+    "npm warn EBADENGINE   current: { node: 'v22.15.1', npm: '10.9.2' }",
+    "npm warn EBADENGINE }",
+    "npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options."
+   ]
+  },
+  {
+   "step": "npm run lint",
+   "command": "npm run lint",
+   "exit_code": 0,
+   "seconds": 67.9,
+   "tail": [
+    "> resolveai-console@1.0.0 lint",
+    "> eslint ."
+   ]
+  },
+  {
+   "step": "npm run typecheck",
+   "command": "npm run typecheck",
+   "exit_code": 0,
+   "seconds": 9.2,
+   "tail": [
+    "> resolveai-console@1.0.0 typecheck",
+    "> tsc --noEmit"
+   ]
+  },
+  {
+   "step": "npm test",
+   "command": "npm test",
+   "exit_code": 0,
+   "seconds": 45.0,
+   "tail": [
+    "      Tests  122 passed (122)",
+    "   Start at  12:24:48",
+    "   Duration  43.17s (environment 74%, setup 14%, tests 7%, import 3%, transform 2%)",
+    "Environment  jsdom was created 15 times \u00b7 208.82s total, 74% of tracked time",
+    "             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)",
+    "             learn more: https://vitest.dev/guide/improving-performance#test-environments"
+   ]
+  },
+  {
+   "step": "npm run build",
+   "command": "npm run build",
+   "exit_code": 0,
+   "seconds": 38.7,
+   "tail": [
+    "\u251c \u0192 /simulate",
+    "\u251c \u0192 /traces",
+    "\u251c \u0192 /traces/[traceId]",
+    "\u2514 \u0192 /trust",
+    "\u25cb  (Static)   prerendered as static content",
+    "\u0192  (Dynamic)  server-rendered on demand"
+   ]
+  }
+ ],
+ "reused": [
+  "the current Python interpreter and its installed packages (no fresh virtual environment)",
+  ".cache/embeddings (derived knowledge-base vectors)"
+ ],
+ "api": {
+  "started": true,
+  "ready_after_seconds": 5.9,
+  "resolve_status": 200,
+  "action": "CLARIFICATION_REQUIRED",
+  "reason_code": "insufficient_evidence",
+  "llm_configured": false,
+  "safe_action_without_model": true
+ },
+ "passed": true,
+ "failed_steps": [],
+ "wall_seconds": 478.4,
+ "limits": [
+  "same operating system and base Python interpreter as the development machine",
+  "pip and npm download caches on this machine may be reused (the installed environment itself is new)",
+  "network access is required for pip, npm and the embedding-model download",
+  "no model key: live drafting, the risk model and the second opinion are not exercised; the agent's deterministic fallbacks are"
+ ],
+ "temporary_directory": "deleted"
+}

@@ -1,0 +1,3189 @@
+{
+ "golden": {
+  "dataset": "FROZEN GOLDEN SET",
+  "release": {
+   "version": "1.0.0",
+   "pipeline_version": "pipeline-v6.1",
+   "config_hash": "29c9224591cc84da",
+   "run_at": "2026-09-11T13:52:58",
+   "n": 197,
+   "golden_sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9",
+   "n_boot": 1000,
+   "seed": 42,
+   "failed_rows": 0,
+   "model_calls": 303
+  },
+  "table": {
+   "B2_direct_llm": {
+    "intent_accuracy": {
+     "resolveai": 0.8477,
+     "baseline": 0.8782,
+     "resolveai_ci": {
+      "point": 0.8477,
+      "ci_low": 0.797,
+      "ci_high": 0.8985,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -0.0305,
+      "ci_low": -0.0761,
+      "ci_high": 0.0102,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "intent_macro_f1": {
+     "resolveai": 0.8538,
+     "baseline": 0.8867,
+     "resolveai_ci": {
+      "point": 0.8538,
+      "ci_low": 0.7995,
+      "ci_high": 0.9015,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -0.0329,
+      "ci_low": -0.0823,
+      "ci_high": 0.0137,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "escalation_precision": {
+     "resolveai": 0.3243,
+     "baseline": 0.7391,
+     "resolveai_ci": {
+      "point": 0.3243,
+      "ci_low": 0.2315,
+      "ci_high": 0.4107,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -0.4148,
+      "ci_low": -0.5333,
+      "ci_high": -0.3169,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "escalation_recall": {
+     "resolveai": 0.973,
+     "baseline": 0.9189,
+     "resolveai_ci": {
+      "point": 0.973,
+      "ci_low": 0.9118,
+      "ci_high": 1.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0541,
+      "ci_low": -0.0455,
+      "ci_high": 0.1579,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "escalation_f1": {
+     "resolveai": 0.4865,
+     "baseline": 0.8193,
+     "resolveai_ci": {
+      "point": 0.4865,
+      "ci_low": 0.3699,
+      "ci_high": 0.5789,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -0.3328,
+      "ci_low": -0.4428,
+      "ci_high": -0.2407,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "autonomous_rate": {
+     "resolveai": 0.0609,
+     "baseline": 0.7665,
+     "resolveai_ci": {
+      "point": 0.0609,
+      "ci_low": 0.0305,
+      "ci_high": 0.0964,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -0.7056,
+      "ci_low": -0.7665,
+      "ci_high": -0.6396,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "safe_autonomous_rate": {
+     "resolveai": 0.0609,
+     "baseline": 0.0,
+     "resolveai_ci": {
+      "point": 0.0609,
+      "ci_low": 0.0305,
+      "ci_high": 0.0964,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0609,
+      "ci_low": 0.0305,
+      "ci_high": 0.0964,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "unsafe_autonomous_count": {
+     "resolveai": 0.0,
+     "baseline": 3.0,
+     "resolveai_ci": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -3.0,
+      "ci_low": -7.0,
+      "ci_high": 0.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "unnecessary_handoffs": {
+     "resolveai": 75.0,
+     "baseline": 12.0,
+     "resolveai_ci": {
+      "point": 75.0,
+      "ci_low": 62.0,
+      "ci_high": 89.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 63.0,
+      "ci_low": 50.0,
+      "ci_high": 76.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "llm_calls_per_message": {
+     "resolveai": 1.5381,
+     "baseline": 1.0711,
+     "resolveai_ci": {
+      "point": 1.5381,
+      "ci_low": 1.401,
+      "ci_high": 1.6701,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.467,
+      "ci_low": 0.3299,
+      "ci_high": 0.5991,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "cost_usd_per_message": {
+     "resolveai": 0.0026,
+     "baseline": 0.0024,
+     "resolveai_ci": {
+      "point": 0.0026,
+      "ci_low": 0.0022,
+      "ci_high": 0.0029,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0002,
+      "ci_low": -0.0001,
+      "ci_high": 0.0005,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "judge_groundedness": {
+     "resolveai": 3.9468,
+     "baseline": 3.2268,
+     "n_resolveai": 188,
+     "n_baseline": 194,
+     "n_paired": 186,
+     "resolveai_ci": {
+      "point": 3.9468,
+      "ci_low": 3.7606,
+      "ci_high": 4.1277,
+      "n": 188,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.7527,
+      "ci_low": 0.4892,
+      "ci_high": 1.0,
+      "n": 186,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "judge_hallucination": {
+     "resolveai": 0.367,
+     "baseline": 0.5258,
+     "n_resolveai": 188,
+     "n_baseline": 194,
+     "n_paired": 186,
+     "resolveai_ci": {
+      "point": 0.367,
+      "ci_low": 0.2979,
+      "ci_high": 0.4362,
+      "n": 188,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -0.172,
+      "ci_low": -0.2474,
+      "ci_high": -0.0806,
+      "n": 186,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "judge_policy_violation": {
+     "resolveai": 0.0213,
+     "baseline": 0.0103,
+     "n_resolveai": 188,
+     "n_baseline": 194,
+     "n_paired": 186,
+     "resolveai_ci": {
+      "point": 0.0213,
+      "ci_low": 0.0053,
+      "ci_high": 0.0426,
+      "n": 188,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0161,
+      "ci_low": -0.0054,
+      "ci_high": 0.0378,
+      "n": 186,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "latency_p50_ms_as_run": {
+     "resolveai": 245.9,
+     "baseline": 6543.1,
+     "difference": null
+    }
+   },
+   "B1_simple_ml": {
+    "intent_accuracy": {
+     "resolveai": 0.8477,
+     "baseline": 0.5431,
+     "resolveai_ci": {
+      "point": 0.8477,
+      "ci_low": 0.797,
+      "ci_high": 0.8985,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.3046,
+      "ci_low": 0.2234,
+      "ci_high": 0.3858,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "intent_macro_f1": {
+     "resolveai": 0.8538,
+     "baseline": 0.5498,
+     "resolveai_ci": {
+      "point": 0.8538,
+      "ci_low": 0.7995,
+      "ci_high": 0.9015,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.304,
+      "ci_low": 0.2236,
+      "ci_high": 0.3916,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "escalation_precision": {
+     "resolveai": 0.3243,
+     "baseline": 0.4912,
+     "resolveai_ci": {
+      "point": 0.3243,
+      "ci_low": 0.2315,
+      "ci_high": 0.4107,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -0.1669,
+      "ci_low": -0.2575,
+      "ci_high": -0.0731,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "escalation_recall": {
+     "resolveai": 0.973,
+     "baseline": 0.7568,
+     "resolveai_ci": {
+      "point": 0.973,
+      "ci_low": 0.9118,
+      "ci_high": 1.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.2162,
+      "ci_low": 0.0883,
+      "ci_high": 0.3548,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "escalation_f1": {
+     "resolveai": 0.4865,
+     "baseline": 0.5957,
+     "resolveai_ci": {
+      "point": 0.4865,
+      "ci_low": 0.3699,
+      "ci_high": 0.5789,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -0.1092,
+      "ci_low": -0.2046,
+      "ci_high": -0.0051,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "autonomous_rate": {
+     "resolveai": 0.0609,
+     "baseline": 0.7107,
+     "resolveai_ci": {
+      "point": 0.0609,
+      "ci_low": 0.0305,
+      "ci_high": 0.0964,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -0.6497,
+      "ci_low": -0.7157,
+      "ci_high": -0.5838,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "safe_autonomous_rate": {
+     "resolveai": 0.0609,
+     "baseline": 0.066,
+     "resolveai_ci": {
+      "point": 0.0609,
+      "ci_low": 0.0305,
+      "ci_high": 0.0964,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -0.0051,
+      "ci_low": -0.0457,
+      "ci_high": 0.0305,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "unsafe_autonomous_count": {
+     "resolveai": 0.0,
+     "baseline": 9.0,
+     "resolveai_ci": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -9.0,
+      "ci_low": -15.0,
+      "ci_high": -4.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "unnecessary_handoffs": {
+     "resolveai": 75.0,
+     "baseline": 29.0,
+     "resolveai_ci": {
+      "point": 75.0,
+      "ci_low": 62.0,
+      "ci_high": 89.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 46.0,
+      "ci_low": 32.0,
+      "ci_high": 59.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "llm_calls_per_message": {
+     "resolveai": 1.5381,
+     "baseline": 0.0,
+     "resolveai_ci": {
+      "point": 1.5381,
+      "ci_low": 1.401,
+      "ci_high": 1.6701,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 1.5381,
+      "ci_low": 1.401,
+      "ci_high": 1.6701,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "cost_usd_per_message": {
+     "resolveai": 0.0026,
+     "baseline": 0.0,
+     "resolveai_ci": {
+      "point": 0.0026,
+      "ci_low": 0.0022,
+      "ci_high": 0.0029,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0026,
+      "ci_low": 0.0022,
+      "ci_high": 0.0029,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "judge_groundedness": {
+     "resolveai": 3.9468,
+     "baseline": 4.2841,
+     "n_resolveai": 188,
+     "n_baseline": 176,
+     "n_paired": 171,
+     "resolveai_ci": {
+      "point": 3.9468,
+      "ci_low": 3.7606,
+      "ci_high": 4.1277,
+      "n": 188,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -0.3333,
+      "ci_low": -0.6199,
+      "ci_high": -0.0468,
+      "n": 171,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "judge_hallucination": {
+     "resolveai": 0.367,
+     "baseline": 0.1705,
+     "n_resolveai": 188,
+     "n_baseline": 176,
+     "n_paired": 171,
+     "resolveai_ci": {
+      "point": 0.367,
+      "ci_low": 0.2979,
+      "ci_high": 0.4362,
+      "n": 188,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.193,
+      "ci_low": 0.1053,
+      "ci_high": 0.2808,
+      "n": 171,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "judge_policy_violation": {
+     "resolveai": 0.0213,
+     "baseline": 0.0398,
+     "n_resolveai": 188,
+     "n_baseline": 176,
+     "n_paired": 171,
+     "resolveai_ci": {
+      "point": 0.0213,
+      "ci_low": 0.0053,
+      "ci_high": 0.0426,
+      "n": 188,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -0.0234,
+      "ci_low": -0.0585,
+      "ci_high": 0.0175,
+      "n": 171,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "latency_p50_ms_as_run": {
+     "resolveai": 245.9,
+     "baseline": 114.3,
+     "difference": null
+    }
+   },
+   "phase9_final": {
+    "intent_accuracy": {
+     "resolveai": 0.8477,
+     "baseline": 0.8477,
+     "resolveai_ci": {
+      "point": 0.8477,
+      "ci_low": 0.797,
+      "ci_high": 0.8985,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "intent_macro_f1": {
+     "resolveai": 0.8538,
+     "baseline": 0.8538,
+     "resolveai_ci": {
+      "point": 0.8538,
+      "ci_low": 0.7995,
+      "ci_high": 0.9015,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "escalation_precision": {
+     "resolveai": 0.3243,
+     "baseline": 0.2927,
+     "resolveai_ci": {
+      "point": 0.3243,
+      "ci_low": 0.2315,
+      "ci_high": 0.4107,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0316,
+      "ci_low": 0.0146,
+      "ci_high": 0.0524,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "escalation_recall": {
+     "resolveai": 0.973,
+     "baseline": 0.973,
+     "resolveai_ci": {
+      "point": 0.973,
+      "ci_low": 0.9118,
+      "ci_high": 1.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "escalation_f1": {
+     "resolveai": 0.4865,
+     "baseline": 0.45,
+     "resolveai_ci": {
+      "point": 0.4865,
+      "ci_low": 0.3699,
+      "ci_high": 0.5789,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0365,
+      "ci_low": 0.0171,
+      "ci_high": 0.0572,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "autonomous_rate": {
+     "resolveai": 0.0609,
+     "baseline": 0.0457,
+     "resolveai_ci": {
+      "point": 0.0609,
+      "ci_low": 0.0305,
+      "ci_high": 0.0964,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0152,
+      "ci_low": 0.0,
+      "ci_high": 0.0355,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "safe_autonomous_rate": {
+     "resolveai": 0.0609,
+     "baseline": 0.0457,
+     "resolveai_ci": {
+      "point": 0.0609,
+      "ci_low": 0.0305,
+      "ci_high": 0.0964,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0152,
+      "ci_low": 0.0,
+      "ci_high": 0.0355,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "unsafe_autonomous_count": {
+     "resolveai": 0.0,
+     "baseline": 0.0,
+     "resolveai_ci": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "unnecessary_handoffs": {
+     "resolveai": 75.0,
+     "baseline": 87.0,
+     "resolveai_ci": {
+      "point": 75.0,
+      "ci_low": 62.0,
+      "ci_high": 89.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -12.0,
+      "ci_low": -19.0,
+      "ci_high": -6.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "llm_calls_per_message": {
+     "resolveai": 1.5381,
+     "baseline": 1.5381,
+     "resolveai_ci": {
+      "point": 1.5381,
+      "ci_low": 1.401,
+      "ci_high": 1.6701,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "cost_usd_per_message": {
+     "resolveai": 0.0026,
+     "baseline": 0.0026,
+     "resolveai_ci": {
+      "point": 0.0026,
+      "ci_low": 0.0022,
+      "ci_high": 0.0029,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "judge_groundedness": {
+     "resolveai": 3.9468,
+     "baseline": 4.1937,
+     "n_resolveai": 188,
+     "n_baseline": 191,
+     "n_paired": 188,
+     "resolveai_ci": {
+      "point": 3.9468,
+      "ci_low": 3.7606,
+      "ci_high": 4.1277,
+      "n": 188,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": -0.25,
+      "ci_low": -0.383,
+      "ci_high": -0.1383,
+      "n": 188,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "judge_hallucination": {
+     "resolveai": 0.367,
+     "baseline": 0.2827,
+     "n_resolveai": 188,
+     "n_baseline": 191,
+     "n_paired": 188,
+     "resolveai_ci": {
+      "point": 0.367,
+      "ci_low": 0.2979,
+      "ci_high": 0.4362,
+      "n": 188,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0851,
+      "ci_low": 0.0479,
+      "ci_high": 0.1277,
+      "n": 188,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": true
+     }
+    },
+    "judge_policy_violation": {
+     "resolveai": 0.0213,
+     "baseline": 0.0157,
+     "n_resolveai": 188,
+     "n_baseline": 191,
+     "n_paired": 188,
+     "resolveai_ci": {
+      "point": 0.0213,
+      "ci_low": 0.0053,
+      "ci_high": 0.0426,
+      "n": 188,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "difference": {
+      "difference": 0.0053,
+      "ci_low": 0.0,
+      "ci_high": 0.016,
+      "n": 188,
+      "n_boot": 1000,
+      "seed": 42,
+      "interval_excludes_zero": false
+     }
+    },
+    "latency_p50_ms_as_run": {
+     "resolveai": 245.9,
+     "baseline": 254.7,
+     "difference": null
+    }
+   }
+  },
+  "evidence_levels": {
+   "INSUFFICIENT": 166,
+   "WEAK": 24,
+   "STRONG": 7
+  },
+  "autonomous_replies": [
+   {
+    "gid": "g005",
+    "kind": "troubleshoot",
+    "safe": "safe_grounded_verified"
+   },
+   {
+    "gid": "g011",
+    "kind": "troubleshoot",
+    "safe": "safe_grounded_verified"
+   },
+   {
+    "gid": "g032",
+    "kind": "troubleshoot",
+    "safe": "safe_grounded_verified"
+   },
+   {
+    "gid": "g061",
+    "kind": "troubleshoot",
+    "safe": "safe_grounded_verified"
+   },
+   {
+    "gid": "g066",
+    "kind": "canned",
+    "safe": "safe_canned"
+   },
+   {
+    "gid": "g071",
+    "kind": "troubleshoot",
+    "safe": "safe_grounded_verified"
+   },
+   {
+    "gid": "g091",
+    "kind": "canned",
+    "safe": "safe_canned"
+   },
+   {
+    "gid": "g095",
+    "kind": "canned",
+    "safe": "safe_canned"
+   },
+   {
+    "gid": "g100",
+    "kind": "canned",
+    "safe": "safe_canned"
+   },
+   {
+    "gid": "g139",
+    "kind": "canned",
+    "safe": "safe_canned"
+   },
+   {
+    "gid": "g140",
+    "kind": "canned",
+    "safe": "safe_canned"
+   },
+   {
+    "gid": "g150",
+    "kind": "canned",
+    "safe": "safe_canned"
+   }
+  ],
+  "missed_escalations": [
+   {
+    "gid": "g048",
+    "gold_reason": "repeat_contact",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "insufficient_context",
+    "message": "hey can you check the dm i sent!"
+   }
+  ],
+  "retrieval_same_resolution_recall_at_5": {
+   "resolveai_phase5_pair_rerank_gate_v3": 0.2609,
+   "phase2_customer_index": 0.3478,
+   "n_ref": 46
+  },
+  "decision_changes_vs_phase9_final": [
+   {
+    "gid": "g000",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/hardware",
+    "gold_should_escalate": true,
+    "gold_reason": "hardware",
+    "gold_intent": "hardware_damage",
+    "safe_autonomous_now": false,
+    "message": "my headphone jack on my phone wasn’t working for months and today it started to work but my speaker stopped, anyway to g"
+   },
+   {
+    "gid": "g016",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "CLARIFICATION_REQUIRED/insufficient_evidence",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "performance_crash",
+    "safe_autonomous_now": false,
+    "message": "Why tf is my mac taking 20 min to start !!! Fix it this new update fvckin sucks already"
+   },
+   {
+    "gid": "g020",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "CLARIFICATION_REQUIRED/insufficient_evidence",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "keyboard_text_bug",
+    "safe_autonomous_now": false,
+    "message": "another keyboard glitch. Fix I.T"
+   },
+   {
+    "gid": "g031",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/hardware",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "battery_power",
+    "safe_autonomous_now": false,
+    "message": "Hi, are you thinking of doing anything to solve the battery problem? Got worse after every update. My iPhone 6 died beca"
+   },
+   {
+    "gid": "g045",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/hardware",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "battery_power",
+    "safe_autonomous_now": false,
+    "message": "PLEASE let users roll back to IOS10, my 5S battery now goes from 100% to 40% within a few hours (with minimal usage&no b"
+   },
+   {
+    "gid": "g066",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "AUTO_HANDLE/none",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "non_english",
+    "safe_autonomous_now": true,
+    "message": "mi teléfono se está reiniciando muy frecuentemente 😔 que sucede ?"
+   },
+   {
+    "gid": "g068",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "CLARIFICATION_REQUIRED/insufficient_evidence",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "battery_power",
+    "safe_autonomous_now": false,
+    "message": "WHY DOES MY PHONE DIE ON 25%"
+   },
+   {
+    "gid": "g070",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/hardware",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "non_english",
+    "safe_autonomous_now": false,
+    "message": "Mn mobiel heeft net letterlijk 13 minuten Apple logo uit grijs scherm gegeven word er langzamerhand een beetje heel erg "
+   },
+   {
+    "gid": "g074",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "CLARIFICATION_REQUIRED/insufficient_evidence",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "performance_crash",
+    "safe_autonomous_now": false,
+    "message": "After the latest iOS update in my mac and Iphone 7 It seems that my mac and iphone both are facing speed issues they are"
+   },
+   {
+    "gid": "g081",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/vague_hostile",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "keyboard_text_bug",
+    "safe_autonomous_now": false,
+    "message": "Can fix the mf I️ !"
+   },
+   {
+    "gid": "g087",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "CLARIFICATION_REQUIRED/insufficient_context",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "connectivity",
+    "safe_autonomous_now": false,
+    "message": "my beats are having weird audio issues"
+   },
+   {
+    "gid": "g088",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "CLARIFICATION_REQUIRED/low_confidence",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "performance_crash",
+    "safe_autonomous_now": false,
+    "message": "why ios 11.1.2 often self rebooting? It back to passcode again"
+   },
+   {
+    "gid": "g091",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "AUTO_HANDLE/none",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "non_english",
+    "safe_autonomous_now": true,
+    "message": "Apareció esto en mi Mac y no puede arrancar, se reinicia. ¿Alguien sabe que es? 🤔😢 <url>"
+   },
+   {
+    "gid": "g098",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "CLARIFICATION_REQUIRED/low_confidence",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "performance_crash",
+    "safe_autonomous_now": false,
+    "message": "upgraded to iOS 11.1.2 on my iPhone 6. Phone closes apps and goes to lock screen every few minutes. Unusable! Help!"
+   },
+   {
+    "gid": "g103",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "CLARIFICATION_REQUIRED/insufficient_evidence",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "performance_crash",
+    "safe_autonomous_now": false,
+    "message": "Something is wrong with my phone. I’m on my old phone but my new phone (the X) keep restarting like wtf"
+   },
+   {
+    "gid": "g109",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/hardware",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "battery_power",
+    "safe_autonomous_now": false,
+    "message": "we have an iPhone 6s and iPhone 7 that are turning off as though no battery then turning back on after a few minutes, he"
+   },
+   {
+    "gid": "g122",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/repeat_contact",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "battery_power",
+    "safe_autonomous_now": false,
+    "message": "is at it again - since updating my phone, my battery keeps dying. Fix this now!!"
+   },
+   {
+    "gid": "g123",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/hardware",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "performance_crash",
+    "safe_autonomous_now": false,
+    "message": "I'm having issues where my iPhone randomly shuts down and exits all applications after only 30 seconds of use... It's no"
+   },
+   {
+    "gid": "g124",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/hardware",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "performance_crash",
+    "safe_autonomous_now": false,
+    "message": "New iPhone X starts randomly resetting itself... great job"
+   },
+   {
+    "gid": "g131",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/repeat_contact",
+    "gold_should_escalate": true,
+    "gold_reason": "repeat_contact",
+    "gold_intent": "connectivity",
+    "safe_autonomous_now": false,
+    "message": "yes of course, I try to place it right for many times but it still didn't work"
+   },
+   {
+    "gid": "g138",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/insufficient_evidence",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "data_loss_sync",
+    "safe_autonomous_now": false,
+    "message": "all of the photos on my camera roll got deleted! Are you serious I’m so annoyed!!! About 1 hour ago they were all there "
+   },
+   {
+    "gid": "g139",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "AUTO_HANDLE/none",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "non_english",
+    "safe_autonomous_now": true,
+    "message": "Urgente!! Alguien me puede ayudar con este problemita? Quise actualizar no pudo y me dejo así 😱 <url>"
+   },
+   {
+    "gid": "g184",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/hardware",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "performance_crash",
+    "safe_autonomous_now": false,
+    "message": "MacBook did the \"security update\". Now runs hot and CPU using 25% of resources at idle. What gives ?"
+   },
+   {
+    "gid": "g188",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/hardware",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "non_english",
+    "safe_autonomous_now": false,
+    "message": "Se me cayó mi celular desde el tercer piso del antro y ya no quiere servir la pantalla, súper mala calidad, no aguanta n"
+   },
+   {
+    "gid": "g189",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/hardware",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "battery_power",
+    "safe_autonomous_now": false,
+    "message": "MY AIRPODS CASE WONT ChARGE WTF"
+   },
+   {
+    "gid": "g192",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "HUMAN_HANDOFF/insufficient_evidence",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "performance_crash",
+    "safe_autonomous_now": false,
+    "message": "FIX THIS \"IPHONE RESTARTING EVERY FUCKING 30 SECONDS\" SHIT 👏😡 PLZ🤧 <url>"
+   },
+   {
+    "gid": "g196",
+    "phase9_final": "HUMAN_HANDOFF/private_info",
+    "release": "CLARIFICATION_REQUIRED/low_confidence",
+    "gold_should_escalate": false,
+    "gold_reason": "none",
+    "gold_intent": "performance_crash",
+    "safe_autonomous_now": false,
+    "message": "I know my iPhone is not the only one that keeps rebooting every 30 seconds!!!!!!! 🤦🏽‍♂️🤦🏽‍♂️"
+   }
+  ],
+  "human_evaluation": {
+   "packet_rows": 50,
+   "fully_rated_rows": 0,
+   "status": "NOT COMPLETED"
+  },
+  "failure_modes": {
+   "n": 197,
+   "unnecessary_handoffs": {
+    "total": 75,
+    "by_reason_code": {
+     "insufficient_evidence": 21,
+     "repeat_contact": 12,
+     "hardware": 12,
+     "vague_hostile": 8,
+     "payment_billing": 7,
+     "safety": 5,
+     "private_info": 4,
+     "legal_media": 4,
+     "account_access": 1,
+     "none": 1
+    },
+    "examples": {
+     "insufficient_evidence": [
+      {
+       "gid": "g018",
+       "intent_gold": "apps_services",
+       "risk_flags": [],
+       "evidence_level": "INSUFFICIENT",
+       "message": "Yes, I’ve used this app for two years."
+      },
+      {
+       "gid": "g025",
+       "intent_gold": "other",
+       "risk_flags": [],
+       "evidence_level": "INSUFFICIENT",
+       "message": "Turns out it was one of Synergy 2 beta background service that was crashing and restarting over and over again. Problem fixed :)"
+      },
+      {
+       "gid": "g028",
+       "intent_gold": "other",
+       "risk_flags": [],
+       "evidence_level": "INSUFFICIENT",
+       "message": "When will we get the TV app in the UK?"
+      },
+      {
+       "gid": "g036",
+       "intent_gold": "data_loss_sync",
+       "risk_flags": [],
+       "evidence_level": "INSUFFICIENT",
+       "message": "so they’re pretty much not functional"
+      }
+     ],
+     "repeat_contact": [
+      {
+       "gid": "g004",
+       "intent_gold": "data_loss_sync",
+       "risk_flags": [
+        "repeat_contact"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "I updated my iOS and lost all my pictures from my first two days in Rome. I’m so mad st y’all"
+      },
+      {
+       "gid": "g010",
+       "intent_gold": "connectivity",
+       "risk_flags": [
+        "repeat_contact",
+        "high_frustration"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "It would be cool if would fix their shit so I dont have to restart my computer and router to connect to wifi"
+      },
+      {
+       "gid": "g015",
+       "intent_gold": "apps_services",
+       "risk_flags": [
+        "repeat_contact"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "I have an iPad Mini 4 that has automatic updates turned on but never does them automatically. Tried turning off/on. Thoughts?"
+      },
+      {
+       "gid": "g041",
+       "intent_gold": "performance_crash",
+       "risk_flags": [
+        "high_frustration"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "Okay, that let me update my phone! So we’ll see if it helps with the random shutting off/loading screen."
+      }
+     ],
+     "hardware": [
+      {
+       "gid": "g031",
+       "intent_gold": "battery_power",
+       "risk_flags": [
+        "physical_damage",
+        "high_frustration"
+       ],
+       "evidence_level": "WEAK",
+       "message": "Hi, are you thinking of doing anything to solve the battery problem? Got worse after every update. My iPhone 6 died because of you and I’m v"
+      },
+      {
+       "gid": "g045",
+       "intent_gold": "battery_power",
+       "risk_flags": [
+        "physical_damage",
+        "high_frustration"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "PLEASE let users roll back to IOS10, my 5S battery now goes from 100% to 40% within a few hours (with minimal usage&no background traffic) &"
+      },
+      {
+       "gid": "g055",
+       "intent_gold": "battery_power",
+       "risk_flags": [
+        "physical_damage"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": ". Since iOS 11 I can literally watch my battery percentage drop while looking at the screen. No apps open. No battery problems with iOS 10. "
+      },
+      {
+       "gid": "g070",
+       "intent_gold": "non_english",
+       "risk_flags": [
+        "high_impact",
+        "physical_damage",
+        "repeat_contact",
+        "high_frustration"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "Mn mobiel heeft net letterlijk 13 minuten Apple logo uit grijs scherm gegeven word er langzamerhand een beetje heel erg gek van. Heb de nieu"
+      }
+     ],
+     "vague_hostile": [
+      {
+       "gid": "g021",
+       "intent_gold": "keyboard_text_bug",
+       "risk_flags": [
+        "high_frustration"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "is worth Billions of dollars and can’t fix this it ( I.T ) problem. First it was the I crap bullshit now it’s this I.T come on get it togeth"
+      },
+      {
+       "gid": "g062",
+       "intent_gold": "general_complaint",
+       "risk_flags": [
+        "high_frustration"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "I can’t believe lied to me smh"
+      },
+      {
+       "gid": "g081",
+       "intent_gold": "keyboard_text_bug",
+       "risk_flags": [
+        "high_frustration",
+        "insufficient_context"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "Can fix the mf I️ !"
+      },
+      {
+       "gid": "g082",
+       "intent_gold": "non_english",
+       "risk_flags": [
+        "high_frustration",
+        "insufficient_context"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "امرضتونا بتحديثاتكم لاعاد تحدثون <url>"
+      }
+     ],
+     "payment_billing": [
+      {
+       "gid": "g006",
+       "intent_gold": "apps_services",
+       "risk_flags": [
+        "sensitive_action_required"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "iPhone 7 iOS 11.1.2. Settings trying to change my email signature. Click on it and crash."
+      },
+      {
+       "gid": "g013",
+       "intent_gold": "apps_services",
+       "risk_flags": [
+        "payment_billing_risk"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "I purchased the new Miguel Album It says it’s downloaded to my phone but It will not let me play the album"
+      },
+      {
+       "gid": "g050",
+       "intent_gold": "apps_services",
+       "risk_flags": [
+        "payment_billing_risk"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "Same. Frustrating."
+      },
+      {
+       "gid": "g051",
+       "intent_gold": "battery_power",
+       "risk_flags": [
+        "payment_billing_risk"
+       ],
+       "evidence_level": "WEAK",
+       "message": "<url>"
+      }
+     ],
+     "safety": [
+      {
+       "gid": "g017",
+       "intent_gold": "non_english",
+       "risk_flags": [
+        "security_concern"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "podeis verificar si es un hoax realmente por favor?"
+      },
+      {
+       "gid": "g069",
+       "intent_gold": "connectivity",
+       "risk_flags": [
+        "safety_concern"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "After your emergency patch today I can no longer connect to network shares using my credentials. What broke?"
+      },
+      {
+       "gid": "g117",
+       "intent_gold": "performance_crash",
+       "risk_flags": [
+        "security_concern",
+        "high_impact"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "iphone 6s restarting after every 2 minutes & not asking passcode. Finger print scanner is working after every restart. Isnt this security br"
+      },
+      {
+       "gid": "g145",
+       "intent_gold": "other",
+       "risk_flags": [
+        "security_concern",
+        "insufficient_context"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "is this you? <url>"
+      }
+     ],
+     "private_info": [
+      {
+       "gid": "g033",
+       "intent_gold": "general_complaint",
+       "risk_flags": [
+        "insufficient_context"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "help me fix my mac"
+      },
+      {
+       "gid": "g035",
+       "intent_gold": "account_store_repair",
+       "risk_flags": [
+        "high_impact"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "I don't want to enter credit card details into my daughters new IPhone. It's none of your business, how do I get around it?"
+      },
+      {
+       "gid": "g060",
+       "intent_gold": "other",
+       "risk_flags": [],
+       "evidence_level": "INSUFFICIENT",
+       "message": "bought iPads for the kids for Christmas (6&9). Would like to learn about security/parental controls to put on. Appointment at local Genius B"
+      },
+      {
+       "gid": "g153",
+       "intent_gold": "account_store_repair",
+       "risk_flags": [],
+       "evidence_level": "INSUFFICIENT",
+       "message": "is so annoying to have to wait multiple days to reset a password 🙄🙄🙄"
+      }
+     ],
+     "legal_media": [
+      {
+       "gid": "g040",
+       "intent_gold": "apps_services",
+       "risk_flags": [
+        "legal_or_media_threat"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "There is a glitch in the Mail app in the new #iOS 11.1.2, every time I get an email notification and press either delete or mark as read. It"
+      },
+      {
+       "gid": "g083",
+       "intent_gold": "other",
+       "risk_flags": [
+        "legal_or_media_threat"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "Thank you!"
+      },
+      {
+       "gid": "g086",
+       "intent_gold": "apps_services",
+       "risk_flags": [
+        "legal_or_media_threat",
+        "high_frustration"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "Latest update but, when I open up my music app i can’t press anything and it won’t play anything."
+      },
+      {
+       "gid": "g089",
+       "intent_gold": "performance_crash",
+       "risk_flags": [
+        "legal_or_media_threat",
+        "high_frustration"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "My Face ID is trash it won’t unlock sometimes, it freezes, the sensitivity touch thingy is really hard to press it’s stupid buggy"
+      }
+     ],
+     "account_access": [
+      {
+       "gid": "g007",
+       "intent_gold": "apps_services",
+       "risk_flags": [
+        "account_access_risk",
+        "high_frustration"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "she said she can listen to the songs unless i’m listening to apple music on my phone . we both get a message that says “looks like you’re li"
+      }
+     ],
+     "none": [
+      {
+       "gid": "g172",
+       "intent_gold": "non_english",
+       "risk_flags": [
+        "abusive_threatening",
+        "high_frustration"
+       ],
+       "evidence_level": "INSUFFICIENT",
+       "message": "o seus arrombado, começa a fazer cabo e fone decente e que não quebre com tempo de uso E PARA DE SÓ MELHORAR A PORRA DA CÂMERA, SEUS FILHA D"
+      }
+     ]
+    }
+   },
+   "missed_escalations": [
+    {
+     "gid": "g048",
+     "gold_reason": "repeat_contact",
+     "action": "CLARIFICATION_REQUIRED",
+     "reason_code": "insufficient_context",
+     "risk_flags": [],
+     "message": "hey can you check the dm i sent!"
+    }
+   ],
+   "evidence_levels": {
+    "INSUFFICIENT": 166,
+    "WEAK": 24,
+    "STRONG": 7
+   },
+   "strong_evidence_rows": [
+    {
+     "gid": "g005",
+     "intent_gold": "keyboard_text_bug",
+     "action": "AUTO_HANDLE",
+     "reason_code": "none",
+     "message": "fix the fcking I problem I’m tired of seeing question marks on my damn timeline"
+    },
+    {
+     "gid": "g011",
+     "intent_gold": "keyboard_text_bug",
+     "action": "AUTO_HANDLE",
+     "reason_code": "none",
+     "message": "Why tf is this glitch still fuckn up? what do I️ need to do. This shit is annoying. 😩"
+    },
+    {
+     "gid": "g032",
+     "intent_gold": "keyboard_text_bug",
+     "action": "AUTO_HANDLE",
+     "reason_code": "none",
+     "message": "Why does the iPhone have “I.T” as the autocorrect for “it”??!"
+    },
+    {
+     "gid": "g061",
+     "intent_gold": "keyboard_text_bug",
+     "action": "AUTO_HANDLE",
+     "reason_code": "none",
+     "message": "y’all ever gonna fix the i?"
+    },
+    {
+     "gid": "g071",
+     "intent_gold": "keyboard_text_bug",
+     "action": "AUTO_HANDLE",
+     "reason_code": "none",
+     "message": "hey there, what do I️ need to do to fix the question mark in a box and exclamation point that pops up when I️ use the “I"
+    },
+    {
+     "gid": "g144",
+     "intent_gold": "keyboard_text_bug",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "repeat_contact",
+     "message": "Ok, I’m glad fixed the weird “I” issue but now my phone is changing “it“ to “I.T” 🙄🤬 is anyone else having this issue?!"
+    },
+    {
+     "gid": "g160",
+     "intent_gold": "keyboard_text_bug",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "repeat_contact",
+     "message": "sooo... I updated my phone for my “i” to turn into an A with a question mark in a box, and my “it” to turn in “ i.t “ li"
+    }
+   ],
+   "autonomous_replies": [
+    {
+     "gid": "g005",
+     "kind": "troubleshoot",
+     "intent_gold": "keyboard_text_bug"
+    },
+    {
+     "gid": "g011",
+     "kind": "troubleshoot",
+     "intent_gold": "keyboard_text_bug"
+    },
+    {
+     "gid": "g032",
+     "kind": "troubleshoot",
+     "intent_gold": "keyboard_text_bug"
+    },
+    {
+     "gid": "g061",
+     "kind": "troubleshoot",
+     "intent_gold": "keyboard_text_bug"
+    },
+    {
+     "gid": "g066",
+     "kind": "canned",
+     "intent_gold": "non_english"
+    },
+    {
+     "gid": "g071",
+     "kind": "troubleshoot",
+     "intent_gold": "keyboard_text_bug"
+    },
+    {
+     "gid": "g091",
+     "kind": "canned",
+     "intent_gold": "non_english"
+    },
+    {
+     "gid": "g095",
+     "kind": "canned",
+     "intent_gold": "other"
+    },
+    {
+     "gid": "g100",
+     "kind": "canned",
+     "intent_gold": "non_english"
+    },
+    {
+     "gid": "g139",
+     "kind": "canned",
+     "intent_gold": "non_english"
+    },
+    {
+     "gid": "g140",
+     "kind": "canned",
+     "intent_gold": "non_english"
+    },
+    {
+     "gid": "g150",
+     "kind": "canned",
+     "intent_gold": "non_english"
+    }
+   ],
+   "intent_errors": 30,
+   "top_intent_confusions": [
+    {
+     "gold": "apps_services",
+     "predicted": "data_loss_sync",
+     "count": 4
+    },
+    {
+     "gold": "apps_services",
+     "predicted": "general_complaint",
+     "count": 2
+    },
+    {
+     "gold": "keyboard_text_bug",
+     "predicted": "general_complaint",
+     "count": 2
+    },
+    {
+     "gold": "hardware_damage",
+     "predicted": "connectivity",
+     "count": 1
+    },
+    {
+     "gold": "account_store_repair",
+     "predicted": "general_complaint",
+     "count": 1
+    },
+    {
+     "gold": "general_complaint",
+     "predicted": "account_store_repair",
+     "count": 1
+    }
+   ],
+   "judge_flagged_templates": [
+    {
+     "text": "We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.",
+     "hallucination_flags": 15
+    },
+    {
+     "text": "Thanks for the steps you've already tried. A member of our team will pick this up with you directly so we can dig deeper.",
+     "hallucination_flags": 9
+    },
+    {
+     "text": "We'd like to look at this with you. Because it involves your account details, a member of our team will follow up with you directly.",
+     "hallucination_flags": 5
+    },
+    {
+     "text": "We'd like to help. Could you tell us which software version is installed (Settings > General > About) and exactly what's happening?",
+     "hallucination_flags": 4
+    },
+    {
+     "text": "We'd like to help with the typing issue. Could you tell us which software version is installed (Settings > General > About) and whether it happens with one word",
+     "hallucination_flags": 4
+    },
+    {
+     "text": "We'd like to help find your content. Could you tell us which device you're using and whether iCloud Backup or iCloud Photos was on before the change?",
+     "hallucination_flags": 4
+    }
+   ],
+   "non_english_rows_handed_off": [
+    {
+     "gid": "g017",
+     "reason_code": "safety",
+     "message": "podeis verificar si es un hoax realmente por favor?"
+    },
+    {
+     "gid": "g070",
+     "reason_code": "hardware",
+     "message": "Mn mobiel heeft net letterlijk 13 minuten Apple logo uit grijs scherm gegeven word er langzamerhand "
+    },
+    {
+     "gid": "g082",
+     "reason_code": "vague_hostile",
+     "message": "امرضتونا بتحديثاتكم لاعاد تحدثون <url>"
+    },
+    {
+     "gid": "g143",
+     "reason_code": "payment_billing",
+     "message": "WTF por qué cojones me acaba de llegar un correo de que se me cobran 10€ para pagar mas espacio de i"
+    },
+    {
+     "gid": "g165",
+     "reason_code": "hardware",
+     "message": "Alguien sabe pxq le pasa esto a mi nuevo iPhone X ese cuadro q?😤 <url>"
+    },
+    {
+     "gid": "g172",
+     "reason_code": "none",
+     "message": "o seus arrombado, começa a fazer cabo e fone decente e que não quebre com tempo de uso E PARA DE SÓ "
+    },
+    {
+     "gid": "g188",
+     "reason_code": "hardware",
+     "message": "Se me cayó mi celular desde el tercer piso del antro y ya no quiere servir la pantalla, súper mala c"
+    }
+   ]
+  },
+  "judge_attribution": {
+   "n": 197,
+   "identical_responses": {
+    "n": 170,
+    "n_both_parsed": 164,
+    "hallucination_flags_phase9": 53,
+    "hallucination_flags_release": 53,
+    "groundedness_mean_phase9": 4.09,
+    "groundedness_mean_release": 4.09,
+    "judge_failures_phase9": 6,
+    "judge_failures_release": 6
+   },
+   "changed_responses": {
+    "n": 27,
+    "n_both_parsed": 24,
+    "hallucination_flags_phase9": 0,
+    "hallucination_flags_release": 16,
+    "groundedness_mean_phase9": 4.96,
+    "groundedness_mean_release": 3.0,
+    "judge_failures_phase9": 0,
+    "judge_failures_release": 3
+   },
+   "hallucination_flips_on_identical_responses": [],
+   "changed_by_kind_transition": {
+    "handoff -> canned": {
+     "n": 3,
+     "n_both_parsed": 0,
+     "hallucination_flags_phase9": 0,
+     "hallucination_flags_release": 0,
+     "groundedness_mean_phase9": null,
+     "groundedness_mean_release": null,
+     "judge_failures_phase9": 0,
+     "judge_failures_release": 3,
+     "gids": [
+      "g066",
+      "g091",
+      "g139"
+     ]
+    },
+    "handoff -> clarify": {
+     "n": 9,
+     "n_both_parsed": 9,
+     "hallucination_flags_phase9": 0,
+     "hallucination_flags_release": 4,
+     "groundedness_mean_phase9": 5.0,
+     "groundedness_mean_release": 3.89,
+     "judge_failures_phase9": 0,
+     "judge_failures_release": 0,
+     "gids": [
+      "g016",
+      "g020",
+      "g068",
+      "g074",
+      "g087",
+      "g088",
+      "g098",
+      "g103",
+      "g196"
+     ]
+    },
+    "handoff -> handoff": {
+     "n": 15,
+     "n_both_parsed": 15,
+     "hallucination_flags_phase9": 0,
+     "hallucination_flags_release": 12,
+     "groundedness_mean_phase9": 4.93,
+     "groundedness_mean_release": 2.47,
+     "judge_failures_phase9": 0,
+     "judge_failures_release": 0,
+     "gids": [
+      "g000",
+      "g031",
+      "g045",
+      "g070",
+      "g081",
+      "g109",
+      "g122",
+      "g123",
+      "g124",
+      "g131",
+      "g138",
+      "g184",
+      "g188",
+      "g189",
+      "g192"
+     ]
+    }
+   },
+   "release_hallucination_flags_by_response_kind": {
+    "handoff": {
+     "flags": 36,
+     "parsed": 108
+    },
+    "clarify": {
+     "flags": 33,
+     "parsed": 71
+    },
+    "troubleshoot": {
+     "flags": 0,
+     "parsed": 5
+    },
+    "canned": {
+     "flags": 0,
+     "parsed": 4
+    }
+   }
+  },
+  "by_intent": {
+   "source": "artifacts/final/evaluation/runs/final_release.jsonl (release 1.0.0, single golden run) + data/golden labels (hash-verified)",
+   "dataset": "FROZEN GOLDEN SET",
+   "n": 197,
+   "gap_rule": {
+    "min_rows": 10,
+    "max_sufficient_share": 0.1,
+    "min_handoff_share": 0.5
+   },
+   "by_intent": [
+    {
+     "intent": "apps_services",
+     "rows": 38,
+     "evidence_levels": {
+      "INSUFFICIENT": 35,
+      "WEAK": 3,
+      "SUFFICIENT": 0,
+      "STRONG": 0
+     },
+     "sufficient_share": 0.0,
+     "auto_handled": 0,
+     "clarifications": 20,
+     "handoffs": 18,
+     "handoff_share": 0.474,
+     "unnecessary_handoffs": 12,
+     "missed_escalations": 0,
+     "top_reasons": {
+      "insufficient_evidence": 11,
+      "low_confidence": 10,
+      "repeat_contact": 8
+     },
+     "knowledge_gap_candidate": false,
+     "examples": [
+      {
+       "gid": "g006",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "payment_billing",
+       "evidence_level": "INSUFFICIENT",
+       "message": "iPhone 7 iOS 11.1.2. Settings trying to change my email signature. Click on it and crash."
+      },
+      {
+       "gid": "g007",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "account_access",
+       "evidence_level": "INSUFFICIENT",
+       "message": "she said she can listen to the songs unless i’m listening to apple music on my phone . we both get a message that says “"
+      },
+      {
+       "gid": "g013",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "payment_billing",
+       "evidence_level": "INSUFFICIENT",
+       "message": "I purchased the new Miguel Album It says it’s downloaded to my phone but It will not let me play the album"
+      }
+     ]
+    },
+    {
+     "intent": "performance_crash",
+     "rows": 26,
+     "evidence_levels": {
+      "INSUFFICIENT": 19,
+      "WEAK": 7,
+      "SUFFICIENT": 0,
+      "STRONG": 0
+     },
+     "sufficient_share": 0.0,
+     "auto_handled": 0,
+     "clarifications": 17,
+     "handoffs": 9,
+     "handoff_share": 0.346,
+     "unnecessary_handoffs": 9,
+     "missed_escalations": 0,
+     "top_reasons": {
+      "low_confidence": 11,
+      "insufficient_evidence": 8,
+      "hardware": 4
+     },
+     "knowledge_gap_candidate": false,
+     "examples": [
+      {
+       "gid": "g001",
+       "action": "CLARIFICATION_REQUIRED",
+       "reason_code": "low_confidence",
+       "evidence_level": "WEAK",
+       "message": "this iOS update SUCKS!!!!!!!! Phone freezes literally every 5 minutes. Seriously considering getting rid of my iPhone."
+      },
+      {
+       "gid": "g003",
+       "action": "CLARIFICATION_REQUIRED",
+       "reason_code": "low_confidence",
+       "evidence_level": "INSUFFICIENT",
+       "message": "I did not back up before updating. Yes i have a macbook"
+      },
+      {
+       "gid": "g016",
+       "action": "CLARIFICATION_REQUIRED",
+       "reason_code": "insufficient_evidence",
+       "evidence_level": "INSUFFICIENT",
+       "message": "Why tf is my mac taking 20 min to start !!! Fix it this new update fvckin sucks already"
+      }
+     ]
+    },
+    {
+     "intent": "other",
+     "rows": 20,
+     "evidence_levels": {
+      "INSUFFICIENT": 20,
+      "WEAK": 0,
+      "SUFFICIENT": 0,
+      "STRONG": 0
+     },
+     "sufficient_share": 0.0,
+     "auto_handled": 1,
+     "clarifications": 4,
+     "handoffs": 15,
+     "handoff_share": 0.75,
+     "unnecessary_handoffs": 15,
+     "missed_escalations": 1,
+     "top_reasons": {
+      "insufficient_evidence": 11,
+      "repeat_contact": 2,
+      "insufficient_context": 2
+     },
+     "knowledge_gap_candidate": true,
+     "examples": [
+      {
+       "gid": "g025",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "insufficient_evidence",
+       "evidence_level": "INSUFFICIENT",
+       "message": "Turns out it was one of Synergy 2 beta background service that was crashing and restarting over and over again. Problem "
+      },
+      {
+       "gid": "g028",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "insufficient_evidence",
+       "evidence_level": "INSUFFICIENT",
+       "message": "When will we get the TV app in the UK?"
+      },
+      {
+       "gid": "g046",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "insufficient_evidence",
+       "evidence_level": "INSUFFICIENT",
+       "message": ">> Looking to buy a macbook air as a student >> unfortunately your toll free is been busy for 20 mins now suggest a best"
+      }
+     ]
+    },
+    {
+     "intent": "data_loss_sync",
+     "rows": 17,
+     "evidence_levels": {
+      "INSUFFICIENT": 14,
+      "WEAK": 3,
+      "SUFFICIENT": 0,
+      "STRONG": 0
+     },
+     "sufficient_share": 0.0,
+     "auto_handled": 0,
+     "clarifications": 8,
+     "handoffs": 9,
+     "handoff_share": 0.529,
+     "unnecessary_handoffs": 8,
+     "missed_escalations": 0,
+     "top_reasons": {
+      "insufficient_evidence": 11,
+      "repeat_contact": 4,
+      "insufficient_context": 1
+     },
+     "knowledge_gap_candidate": true,
+     "examples": [
+      {
+       "gid": "g004",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "repeat_contact",
+       "evidence_level": "INSUFFICIENT",
+       "message": "I updated my iOS and lost all my pictures from my first two days in Rome. I’m so mad st y’all"
+      },
+      {
+       "gid": "g036",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "insufficient_evidence",
+       "evidence_level": "INSUFFICIENT",
+       "message": "so they’re pretty much not functional"
+      },
+      {
+       "gid": "g064",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "repeat_contact",
+       "evidence_level": "INSUFFICIENT",
+       "message": "I restored my new iPhone X and my photos and videos didn’t transfer over any reason why? Also my speaker is making a wei"
+      }
+     ]
+    },
+    {
+     "intent": "account_store_repair",
+     "rows": 16,
+     "evidence_levels": {
+      "INSUFFICIENT": 16,
+      "WEAK": 0,
+      "SUFFICIENT": 0,
+      "STRONG": 0
+     },
+     "sufficient_share": 0.0,
+     "auto_handled": 0,
+     "clarifications": 0,
+     "handoffs": 16,
+     "handoff_share": 1.0,
+     "unnecessary_handoffs": 2,
+     "missed_escalations": 0,
+     "top_reasons": {
+      "private_info": 8,
+      "payment_billing": 5,
+      "account_access": 3
+     },
+     "knowledge_gap_candidate": true,
+     "examples": [
+      {
+       "gid": "g002",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "private_info",
+       "evidence_level": "INSUFFICIENT",
+       "message": "all most 22 days has passed & no outcome in my case (<PHONE>)."
+      },
+      {
+       "gid": "g008",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "payment_billing",
+       "evidence_level": "INSUFFICIENT",
+       "message": "Hi, I got replacement EarPods and the guy told me yesterday I don’t have to send them back to you guys, but I have a ret"
+      },
+      {
+       "gid": "g012",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "private_info",
+       "evidence_level": "INSUFFICIENT",
+       "message": "What happens to technical support in Brazil? They lied to me! Of all the companies the only one not expecting this was ."
+      }
+     ]
+    },
+    {
+     "intent": "keyboard_text_bug",
+     "rows": 16,
+     "evidence_levels": {
+      "INSUFFICIENT": 5,
+      "WEAK": 4,
+      "SUFFICIENT": 0,
+      "STRONG": 7
+     },
+     "sufficient_share": 0.438,
+     "auto_handled": 5,
+     "clarifications": 4,
+     "handoffs": 7,
+     "handoff_share": 0.438,
+     "unnecessary_handoffs": 6,
+     "missed_escalations": 0,
+     "top_reasons": {
+      "insufficient_evidence": 5,
+      "vague_hostile": 3,
+      "repeat_contact": 2
+     },
+     "knowledge_gap_candidate": false,
+     "examples": [
+      {
+       "gid": "g020",
+       "action": "CLARIFICATION_REQUIRED",
+       "reason_code": "insufficient_evidence",
+       "evidence_level": "WEAK",
+       "message": "another keyboard glitch. Fix I.T"
+      },
+      {
+       "gid": "g021",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "vague_hostile",
+       "evidence_level": "INSUFFICIENT",
+       "message": "is worth Billions of dollars and can’t fix this it ( I.T ) problem. First it was the I crap bullshit now it’s this I.T c"
+      },
+      {
+       "gid": "g043",
+       "action": "CLARIFICATION_REQUIRED",
+       "reason_code": "insufficient_evidence",
+       "evidence_level": "INSUFFICIENT",
+       "message": "Remember when on iPhones every time you pressed “I” it brought up some weird characters? Now it’s happening when you spe"
+      }
+     ]
+    },
+    {
+     "intent": "battery_power",
+     "rows": 16,
+     "evidence_levels": {
+      "INSUFFICIENT": 9,
+      "WEAK": 7,
+      "SUFFICIENT": 0,
+      "STRONG": 0
+     },
+     "sufficient_share": 0.0,
+     "auto_handled": 0,
+     "clarifications": 7,
+     "handoffs": 9,
+     "handoff_share": 0.562,
+     "unnecessary_handoffs": 8,
+     "missed_escalations": 0,
+     "top_reasons": {
+      "insufficient_evidence": 6,
+      "hardware": 5,
+      "low_confidence": 2
+     },
+     "knowledge_gap_candidate": true,
+     "examples": [
+      {
+       "gid": "g014",
+       "action": "CLARIFICATION_REQUIRED",
+       "reason_code": "insufficient_evidence",
+       "evidence_level": "INSUFFICIENT",
+       "message": "Hi, how can I check my iPhone's battery health? Any way without going to an Apple Store?"
+      },
+      {
+       "gid": "g031",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "hardware",
+       "evidence_level": "WEAK",
+       "message": "Hi, are you thinking of doing anything to solve the battery problem? Got worse after every update. My iPhone 6 died beca"
+      },
+      {
+       "gid": "g038",
+       "action": "CLARIFICATION_REQUIRED",
+       "reason_code": "insufficient_evidence",
+       "evidence_level": "WEAK",
+       "message": "Dear why is it when a new IOS update comes out after new phone released, battery life NEVER stays the same. Dies faster."
+      }
+     ]
+    },
+    {
+     "intent": "connectivity",
+     "rows": 14,
+     "evidence_levels": {
+      "INSUFFICIENT": 14,
+      "WEAK": 0,
+      "SUFFICIENT": 0,
+      "STRONG": 0
+     },
+     "sufficient_share": 0.0,
+     "auto_handled": 0,
+     "clarifications": 7,
+     "handoffs": 7,
+     "handoff_share": 0.5,
+     "unnecessary_handoffs": 2,
+     "missed_escalations": 0,
+     "top_reasons": {
+      "repeat_contact": 6,
+      "insufficient_evidence": 4,
+      "low_confidence": 2
+     },
+     "knowledge_gap_candidate": true,
+     "examples": [
+      {
+       "gid": "g009",
+       "action": "CLARIFICATION_REQUIRED",
+       "reason_code": "insufficient_evidence",
+       "evidence_level": "INSUFFICIENT",
+       "message": "after a few days updating to iOS 11.1.1, my WiFi connection is short-reaching area."
+      },
+      {
+       "gid": "g010",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "repeat_contact",
+       "evidence_level": "INSUFFICIENT",
+       "message": "It would be cool if would fix their shit so I dont have to restart my computer and router to connect to wifi"
+      },
+      {
+       "gid": "g024",
+       "action": "CLARIFICATION_REQUIRED",
+       "reason_code": "insufficient_evidence",
+       "evidence_level": "INSUFFICIENT",
+       "message": "Thanks I love plugging your dongle into my phone and getting the message, \"This device accessory is not supported\" ?????"
+      }
+     ]
+    },
+    {
+     "intent": "general_complaint",
+     "rows": 14,
+     "evidence_levels": {
+      "INSUFFICIENT": 14,
+      "WEAK": 0,
+      "SUFFICIENT": 0,
+      "STRONG": 0
+     },
+     "sufficient_share": 0.0,
+     "auto_handled": 0,
+     "clarifications": 7,
+     "handoffs": 7,
+     "handoff_share": 0.5,
+     "unnecessary_handoffs": 6,
+     "missed_escalations": 0,
+     "top_reasons": {
+      "insufficient_context": 5,
+      "vague_hostile": 5,
+      "low_confidence": 2
+     },
+     "knowledge_gap_candidate": true,
+     "examples": [
+      {
+       "gid": "g033",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "private_info",
+       "evidence_level": "INSUFFICIENT",
+       "message": "help me fix my mac"
+      },
+      {
+       "gid": "g037",
+       "action": "CLARIFICATION_REQUIRED",
+       "reason_code": "insufficient_context",
+       "evidence_level": "INSUFFICIENT",
+       "message": "Hi. please help <url>"
+      },
+      {
+       "gid": "g062",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "vague_hostile",
+       "evidence_level": "INSUFFICIENT",
+       "message": "I can’t believe lied to me smh"
+      }
+     ]
+    },
+    {
+     "intent": "non_english",
+     "rows": 13,
+     "evidence_levels": {
+      "INSUFFICIENT": 13,
+      "WEAK": 0,
+      "SUFFICIENT": 0,
+      "STRONG": 0
+     },
+     "sufficient_share": 0.0,
+     "auto_handled": 6,
+     "clarifications": 0,
+     "handoffs": 7,
+     "handoff_share": 0.538,
+     "unnecessary_handoffs": 7,
+     "missed_escalations": 0,
+     "top_reasons": {
+      "hardware": 3,
+      "safety": 1,
+      "vague_hostile": 1
+     },
+     "knowledge_gap_candidate": true,
+     "examples": [
+      {
+       "gid": "g017",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "safety",
+       "evidence_level": "INSUFFICIENT",
+       "message": "podeis verificar si es un hoax realmente por favor?"
+      },
+      {
+       "gid": "g070",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "hardware",
+       "evidence_level": "INSUFFICIENT",
+       "message": "Mn mobiel heeft net letterlijk 13 minuten Apple logo uit grijs scherm gegeven word er langzamerhand een beetje heel erg "
+      },
+      {
+       "gid": "g082",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "vague_hostile",
+       "evidence_level": "INSUFFICIENT",
+       "message": "امرضتونا بتحديثاتكم لاعاد تحدثون <url>"
+      }
+     ]
+    },
+    {
+     "intent": "hardware_damage",
+     "rows": 7,
+     "evidence_levels": {
+      "INSUFFICIENT": 7,
+      "WEAK": 0,
+      "SUFFICIENT": 0,
+      "STRONG": 0
+     },
+     "sufficient_share": 0.0,
+     "auto_handled": 0,
+     "clarifications": 0,
+     "handoffs": 7,
+     "handoff_share": 1.0,
+     "unnecessary_handoffs": 0,
+     "missed_escalations": 0,
+     "top_reasons": {
+      "hardware": 4,
+      "safety": 3
+     },
+     "knowledge_gap_candidate": false,
+     "examples": [
+      {
+       "gid": "g000",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "hardware",
+       "evidence_level": "INSUFFICIENT",
+       "message": "my headphone jack on my phone wasn’t working for months and today it started to work but my speaker stopped, anyway to g"
+      },
+      {
+       "gid": "g072",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "safety",
+       "evidence_level": "INSUFFICIENT",
+       "message": "My lightening cable just started to smoke"
+      },
+      {
+       "gid": "g092",
+       "action": "HUMAN_HANDOFF",
+       "reason_code": "hardware",
+       "evidence_level": "INSUFFICIENT",
+       "message": "my iPad Pro touch screen stopped working not had it 12 months but no receipt - I'm screwed aren't I"
+      }
+     ]
+    }
+   ],
+   "note": "Counts are from 197 annotated tweets of one 2017 AppleSupport burst; small per-intent counts. A gap candidate marks where the knowledge base rarely supports an answer and humans receive most cases."
+  }
+ },
+ "dev_experiments": {
+  "dataset": "DEV EXPERIMENTS",
+  "risk_corroboration": {
+   "decision": {
+    "candidate": "P10: model-raised needs_private_info counts only with the deterministic private-info rule",
+    "accepted": true,
+    "risk_corroborate": [
+     "needs_private_info"
+    ],
+    "risk_schema": "compact",
+    "decision": "accept and enable in the release configuration",
+    "evidence": [
+     "artifacts/final/risk_experiment/report.md",
+     "artifacts/final/risk_experiment/report.json",
+     "artifacts/final/risk_experiment/runs.jsonl",
+     "data/dev/phase9_risk_labels.json"
+    ],
+    "labels": "AI annotator, not human",
+    "preregistration_sha256": "9fce79eaf5a9097ab7a665880aa4c394bfd06a6484c7eb25e6b89450e733f245",
+    "golden_touched": false
+   },
+   "report": {
+    "n_dev_rows": 240,
+    "n_labelled_rows": 76,
+    "labels_provenance": "AI annotator (Claude, the same agent that implemented the Phase 9 candidates), NOT a human. Labels follow data/golden/ANNOTATION_GUIDE.md v1.1, Label 2 (should_escalate) and Label 3 (escalation_reason). Assigned blind: only message, context and predicted intent were shown; no variant decision was visible while labelling. Treat as a dev-set proxy, never as ground truth; the golden set remains the only evaluation of record.",
+    "live_model_calls": 0,
+    "status": "complete",
+    "model": {
+     "calls": 153,
+     "fallback_rate": 0.0065,
+     "rows_model_raised_needs_private_info": 26,
+     "of_which_rule_corroborated": 0
+    },
+    "outcomes_240": {
+     "V0": {
+      "HANDOFF": 153,
+      "CLARIFY": 85,
+      "AUTO_CANDIDATE": 2
+     },
+     "P10": {
+      "HANDOFF": 144,
+      "CLARIFY": 93,
+      "AUTO_CANDIDATE": 3
+     }
+    },
+    "scores_on_labelled_rows": {
+     "V0": {
+      "tp": 25,
+      "fp": 41,
+      "fn": 1,
+      "tn": 9,
+      "precision": 0.379,
+      "recall": 0.962,
+      "f1": 0.543,
+      "fn_reasons": {
+       "repeat_contact": 1
+      },
+      "auto_candidates_on_should_escalate_rows": 0
+     },
+     "P10": {
+      "tp": 25,
+      "fp": 32,
+      "fn": 1,
+      "tn": 18,
+      "precision": 0.439,
+      "recall": 0.962,
+      "f1": 0.602,
+      "fn_reasons": {
+       "repeat_contact": 1
+      },
+      "auto_candidates_on_should_escalate_rows": 0
+     }
+    }
+   }
+  }
+ },
+ "performance": {
+  "dataset": "PERFORMANCE PROFILE (dev pool, not golden)",
+  "protocol": "no_model      AgentConfig(use_llm=False): redaction, context, classifier, retrieval, gate, rules, policy, clarify/handoff\n  cached_model  the configured model behind the SHA-256 response cache; an unmeasured warm pass fills the cache, the measured pass replays it\n  live_random   NO cache, the production request budget (45 s), n_live random fresh DEV messages: the representative traffic mix\n  live_draft    NO cache, 45 s budget, DEV messages selected because the no-model pass found SUFFICIENT or STRONG evidence, the only\n                messages that can reach drafting. Conditional on the evidence gate and dominated by one issue, so NOT representative; it\n                exists to measure draft and verification latency. If no request drafts, the report says so instead of estimating.\nBefore every measured pass the embedding memo and the query-vector cache are cleared (the Phase 9 profiler artifact).\nPer mode: total and per-stage p50 / p95, p99 only when n >= 100 (otherwise the maximum is shown), model calls, live calls, cache hits,\ninput and output tokens, estimated cost at the list price the orchestrator uses, and how many requests drafted and verified with the model\n(a canned template marks verification \"ok\" with 0 ms, so a model-verified request is one whose verification stage took time).",
+  "machine_note": "single local CPU process; the model runs behind a remote OpenAI-compatible proxy",
+  "price_per_million_tokens_usd": {
+   "input": 1.0,
+   "output": 3.2,
+   "note": "GLM-5.2 list price; the proxy's real billing is unknown"
+  },
+  "live_draft_selection": {
+   "scanned": 1357,
+   "selected": 20,
+   "rule": "no-model evidence level SUFFICIENT or STRONG"
+  },
+  "profiles": {
+   "no_model": {
+    "n": 100,
+    "total_ms": {
+     "n": 100,
+     "p50": 172.6,
+     "p95": 374.0,
+     "p99": 456.9,
+     "max": 494.3,
+     "mean": 195.8
+    },
+    "stages_ms": {
+     "pii_redaction": {
+      "n": 100,
+      "p50": 0.1,
+      "p95": 0.4,
+      "p99": 0.8,
+      "max": 1.4,
+      "mean": 0.2
+     },
+     "context": {
+      "n": 100,
+      "p50": 0.2,
+      "p95": 0.6,
+      "p99": 0.8,
+      "max": 1.5,
+      "mean": 0.2
+     },
+     "intent": {
+      "n": 100,
+      "p50": 84.2,
+      "p95": 189.4,
+      "p99": 272.2,
+      "max": 291.7,
+      "mean": 95.5
+     },
+     "second_opinion": {
+      "n": 100,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     },
+     "retrieval": {
+      "n": 100,
+      "p50": 97.4,
+      "p95": 198.5,
+      "p99": 304.9,
+      "max": 325.1,
+      "mean": 97.3
+     },
+     "evidence_gate": {
+      "n": 100,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     },
+     "risk": {
+      "n": 100,
+      "p50": 0.9,
+      "p95": 2.2,
+      "p99": 2.7,
+      "max": 2.7,
+      "mean": 1.0
+     },
+     "policy": {
+      "n": 100,
+      "p50": 0.0,
+      "p95": 0.1,
+      "p99": 0.2,
+      "max": 0.3,
+      "mean": 0.0
+     },
+     "draft": {
+      "n": 100,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.1,
+      "max": 0.1,
+      "mean": 0.0
+     },
+     "verification": {
+      "n": 100,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     },
+     "output_gate": {
+      "n": 100,
+      "p50": 0.0,
+      "p95": 0.1,
+      "p99": 0.1,
+      "max": 0.1,
+      "mean": 0.0
+     },
+     "handoff": {
+      "n": 35,
+      "p50": 0.2,
+      "p95": 0.3,
+      "p99": null,
+      "max": 0.6,
+      "mean": 0.2
+     },
+     "total": {
+      "n": 100,
+      "p50": 172.6,
+      "p95": 374.0,
+      "p99": 456.9,
+      "max": 494.3,
+      "mean": 195.8
+     }
+    },
+    "mean_llm_calls": 0.0,
+    "live_calls_total": 0,
+    "cache_hit_rate": null,
+    "cost_usd_per_request": {
+     "mean": 0.0,
+     "p50": 0.0,
+     "p95": 0.0
+    },
+    "timeouts": 0,
+    "retries": 0,
+    "budget_exhausted": 0,
+    "model_drafted_and_verified": 0,
+    "actions": {
+     "CLARIFICATION_REQUIRED": 62,
+     "HUMAN_HANDOFF": 35,
+     "AUTO_HANDLE": 3
+    }
+   },
+   "cached_model": {
+    "n": 100,
+    "total_ms": {
+     "n": 100,
+     "p50": 256.3,
+     "p95": 635.1,
+     "p99": 1127.1,
+     "max": 3757.7,
+     "mean": 324.1
+    },
+    "stages_ms": {
+     "pii_redaction": {
+      "n": 100,
+      "p50": 0.1,
+      "p95": 0.4,
+      "p99": 1.3,
+      "max": 6.1,
+      "mean": 0.2
+     },
+     "context": {
+      "n": 100,
+      "p50": 0.2,
+      "p95": 0.7,
+      "p99": 1.3,
+      "max": 2.7,
+      "mean": 0.3
+     },
+     "intent": {
+      "n": 100,
+      "p50": 109.8,
+      "p95": 281.7,
+      "p99": 1065.6,
+      "max": 2485.6,
+      "mean": 159.2
+     },
+     "second_opinion": {
+      "n": 100,
+      "p50": 14.1,
+      "p95": 37.5,
+      "p99": 42.2,
+      "max": 68.5,
+      "mean": 13.5
+     },
+     "retrieval": {
+      "n": 100,
+      "p50": 124.1,
+      "p95": 246.6,
+      "p99": 536.4,
+      "max": 1237.5,
+      "mean": 135.2
+     },
+     "evidence_gate": {
+      "n": 100,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     },
+     "risk": {
+      "n": 100,
+      "p50": 14.5,
+      "p95": 30.9,
+      "p99": 64.2,
+      "max": 68.8,
+      "mean": 13.4
+     },
+     "policy": {
+      "n": 100,
+      "p50": 0.0,
+      "p95": 0.1,
+      "p99": 0.1,
+      "max": 0.2,
+      "mean": 0.0
+     },
+     "draft": {
+      "n": 100,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.2,
+      "max": 1.8,
+      "mean": 0.0
+     },
+     "verification": {
+      "n": 100,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.1,
+      "max": 12.8,
+      "mean": 0.1
+     },
+     "output_gate": {
+      "n": 100,
+      "p50": 0.0,
+      "p95": 0.1,
+      "p99": 0.3,
+      "max": 0.5,
+      "mean": 0.0
+     },
+     "handoff": {
+      "n": 63,
+      "p50": 0.2,
+      "p95": 0.5,
+      "p99": null,
+      "max": 1.0,
+      "mean": 0.2
+     },
+     "total": {
+      "n": 100,
+      "p50": 256.3,
+      "p95": 635.1,
+      "p99": 1127.1,
+      "max": 3757.7,
+      "mean": 324.1
+     }
+    },
+    "mean_llm_calls": 1.66,
+    "live_calls_total": 0,
+    "cache_hit_rate": 1.0,
+    "cost_usd_per_request": {
+     "mean": 0.002702,
+     "p50": 0.002641,
+     "p95": 0.006288
+    },
+    "timeouts": 0,
+    "retries": 0,
+    "budget_exhausted": 0,
+    "model_drafted_and_verified": 1,
+    "actions": {
+     "HUMAN_HANDOFF": 63,
+     "CLARIFICATION_REQUIRED": 34,
+     "AUTO_HANDLE": 3
+    }
+   },
+   "live_random": {
+    "n": 40,
+    "total_ms": {
+     "n": 40,
+     "p50": 4166.9,
+     "p95": 14210.6,
+     "p99": null,
+     "max": 19498.1,
+     "mean": 5418.1
+    },
+    "stages_ms": {
+     "pii_redaction": {
+      "n": 40,
+      "p50": 0.1,
+      "p95": 0.4,
+      "p99": null,
+      "max": 0.8,
+      "mean": 0.1
+     },
+     "context": {
+      "n": 40,
+      "p50": 0.1,
+      "p95": 0.5,
+      "p99": null,
+      "max": 0.6,
+      "mean": 0.2
+     },
+     "intent": {
+      "n": 40,
+      "p50": 77.0,
+      "p95": 111.2,
+      "p99": null,
+      "max": 598.5,
+      "mean": 84.8
+     },
+     "second_opinion": {
+      "n": 40,
+      "p50": 1279.5,
+      "p95": 6421.0,
+      "p99": null,
+      "max": 9046.5,
+      "mean": 1989.9
+     },
+     "retrieval": {
+      "n": 40,
+      "p50": 74.7,
+      "p95": 231.3,
+      "p99": null,
+      "max": 898.4,
+      "mean": 108.9
+     },
+     "evidence_gate": {
+      "n": 40,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": null,
+      "max": 0.0,
+      "mean": 0.0
+     },
+     "risk": {
+      "n": 40,
+      "p50": 2413.2,
+      "p95": 12167.4,
+      "p99": null,
+      "max": 13048.7,
+      "mean": 3232.5
+     },
+     "policy": {
+      "n": 40,
+      "p50": 0.0,
+      "p95": 0.1,
+      "p99": null,
+      "max": 0.1,
+      "mean": 0.0
+     },
+     "draft": {
+      "n": 40,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": null,
+      "max": 0.0,
+      "mean": 0.0
+     },
+     "verification": {
+      "n": 40,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": null,
+      "max": 0.0,
+      "mean": 0.0
+     },
+     "output_gate": {
+      "n": 40,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": null,
+      "max": 0.1,
+      "mean": 0.0
+     },
+     "handoff": {
+      "n": 21,
+      "p50": 0.2,
+      "p95": 0.2,
+      "p99": null,
+      "max": 0.3,
+      "mean": 0.2
+     },
+     "total": {
+      "n": 40,
+      "p50": 4166.9,
+      "p95": 14210.6,
+      "p99": null,
+      "max": 19498.1,
+      "mean": 5418.1
+     }
+    },
+    "mean_llm_calls": 1.675,
+    "live_calls_total": 67,
+    "cache_hit_rate": 0.0,
+    "cost_usd_per_request": {
+     "mean": 0.002972,
+     "p50": 0.002203,
+     "p95": 0.008264
+    },
+    "timeouts": 0,
+    "retries": 0,
+    "budget_exhausted": 0,
+    "model_drafted_and_verified": 0,
+    "actions": {
+     "HUMAN_HANDOFF": 21,
+     "CLARIFICATION_REQUIRED": 19
+    }
+   },
+   "live_draft": {
+    "n": 20,
+    "total_ms": {
+     "n": 20,
+     "p50": 6277.1,
+     "p95": 18224.0,
+     "p99": null,
+     "max": 32619.5,
+     "mean": 7674.6
+    },
+    "stages_ms": {
+     "pii_redaction": {
+      "n": 20,
+      "p50": 0.1,
+      "p95": 0.4,
+      "p99": null,
+      "max": 1.0,
+      "mean": 0.2
+     },
+     "context": {
+      "n": 20,
+      "p50": 0.1,
+      "p95": 0.5,
+      "p99": null,
+      "max": 0.7,
+      "mean": 0.2
+     },
+     "intent": {
+      "n": 20,
+      "p50": 106.2,
+      "p95": 238.3,
+      "p99": null,
+      "max": 330.9,
+      "mean": 118.7
+     },
+     "second_opinion": {
+      "n": 20,
+      "p50": 0.0,
+      "p95": 2938.7,
+      "p99": null,
+      "max": 6085.2,
+      "mean": 717.6
+     },
+     "retrieval": {
+      "n": 20,
+      "p50": 106.0,
+      "p95": 274.1,
+      "p99": null,
+      "max": 462.3,
+      "mean": 130.5
+     },
+     "evidence_gate": {
+      "n": 20,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": null,
+      "max": 0.0,
+      "mean": 0.0
+     },
+     "risk": {
+      "n": 20,
+      "p50": 2574.9,
+      "p95": 5871.2,
+      "p99": null,
+      "max": 6278.4,
+      "mean": 2535.3
+     },
+     "policy": {
+      "n": 20,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": null,
+      "max": 0.1,
+      "mean": 0.0
+     },
+     "draft": {
+      "n": 20,
+      "p50": 0.0,
+      "p95": 11509.2,
+      "p99": null,
+      "max": 12107.5,
+      "mean": 2146.7
+     },
+     "verification": {
+      "n": 20,
+      "p50": 0.0,
+      "p95": 3830.8,
+      "p99": null,
+      "max": 8286.3,
+      "mean": 1137.6
+     },
+     "output_gate": {
+      "n": 20,
+      "p50": 0.1,
+      "p95": 0.2,
+      "p99": null,
+      "max": 0.2,
+      "mean": 0.1
+     },
+     "handoff": {
+      "n": 8,
+      "p50": 0.2,
+      "p95": 0.2,
+      "p99": null,
+      "max": 0.3,
+      "mean": 0.2
+     },
+     "total": {
+      "n": 20,
+      "p50": 6277.1,
+      "p95": 18224.0,
+      "p99": null,
+      "max": 32619.5,
+      "mean": 7674.6
+     }
+    },
+    "mean_llm_calls": 2.4,
+    "live_calls_total": 48,
+    "cache_hit_rate": 0.0,
+    "cost_usd_per_request": {
+     "mean": 0.004426,
+     "p50": 0.0036,
+     "p95": 0.012688
+    },
+    "timeouts": 0,
+    "retries": 0,
+    "budget_exhausted": 0,
+    "model_drafted_and_verified": 8,
+    "actions": {
+     "AUTO_HANDLE": 8,
+     "CLARIFICATION_REQUIRED": 4,
+     "HUMAN_HANDOFF": 8
+    }
+   }
+  }
+ },
+ "checks": {
+  "adversarial_suite": {
+   "n_cases": 20,
+   "passed": 20,
+   "failed": 0,
+   "model": "scripted double (tests/test_phase9_adversarial.py::Model); knowledge base, classifier, policy, gates, API and trace store are real"
+  },
+  "api_smoke": {
+   "profile": "production",
+   "n_checks": 23,
+   "passed": 23,
+   "failed": []
+  },
+  "verification": {
+   "passed": true,
+   "started": "2026-09-11T14:38:09",
+   "golden": {
+    "verified": true,
+    "rows": 197,
+    "sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9"
+   },
+   "frozen_artifacts": {
+    "checked": 353,
+    "changed": 0,
+    "missing_committable": 0,
+    "missing_gitignored_local_only": 0,
+    "new_files_in_frozen_locations": 0,
+    "passed": true
+   },
+   "security_scan": {
+    "passed": true,
+    "committable_files": 659,
+    "committable_mb": 54.4,
+    "trace_records_scanned": 755,
+    "trace_records_with_pii": 0,
+    "env_committable": false,
+    "note": "re-run after the clean-clone fixes added committable files (the Traces pages, attempt records); the other checks are from the full verification run"
+   }
+  },
+  "clean_environment": {
+   "mode": "targeted re-check (current interpreter, existing embedding cache)",
+   "passed": true,
+   "failed_steps": [],
+   "os": "Windows-11-10.0.26200-SP0"
+  }
+ },
+ "limitations": [
+  "The golden set is 197 annotated tweets from one 2017 AppleSupport burst; per-intent counts are small and the intervals are wide.",
+  "Second annotator labels came from an AI annotator, not a person; the 50-row human rating packet has 0 completed ratings.",
+  "Groundedness and hallucination scores come from an LLM judge, not from people.",
+  "Confidence intervals are bootstrap intervals (1,000 resamples, seed 42) over one run; the golden set was run once and never tuned on.",
+  "Latency was measured on a single shared local CPU process with the model behind a remote proxy; cost uses list prices, not real billing."
+ ],
+ "provenance": {
+  "source": "artifacts/final (release 1.0.0) and artifacts/product/release_by_intent.json; served as stored, nothing recomputed",
+  "text": "example messages are PII-redacted and truncated before they are served"
+ }
+}

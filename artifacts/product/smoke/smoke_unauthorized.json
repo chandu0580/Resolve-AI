@@ -1,0 +1,79 @@
+{
+ "mode": "unauthorized",
+ "base": "http://127.0.0.1:3201",
+ "started": "2026-09-11T11:53:52.527Z",
+ "browser": "msedge 152.0.4191.66",
+ "scenarios": [],
+ "routes": [
+  {
+   "name": "unauthorized-overview",
+   "route": "/",
+   "status": 200,
+   "h1": "Overview",
+   "alerts": [
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea",
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea"
+   ]
+  },
+  {
+   "name": "unauthorized-traces",
+   "route": "/traces",
+   "status": 200,
+   "h1": "Traces",
+   "alerts": [
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea"
+   ]
+  },
+  {
+   "name": "unauthorized-simulate",
+   "route": "/simulate",
+   "status": 200,
+   "h1": "Demo simulator",
+   "alerts": [
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea"
+   ]
+  },
+  {
+   "name": "unauthorized-agents",
+   "route": "/agents",
+   "status": 200,
+   "h1": "Agent configuration",
+   "alerts": [
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea"
+   ]
+  },
+  {
+   "name": "unauthorized-knowledge",
+   "route": "/knowledge",
+   "status": 200,
+   "h1": "Knowledge Center",
+   "alerts": [
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea",
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea",
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea"
+   ]
+  }
+ ],
+ "interactions": [],
+ "axe": [
+  {
+   "name": "unauthorized-overview",
+   "url": "http://127.0.0.1:3201/",
+   "violations": []
+  }
+ ],
+ "overflow": [],
+ "consoleErrors": [],
+ "failures": [],
+ "finished": "2026-09-11T11:54:05.174Z",
+ "summary": {
+  "routes": 5,
+  "scenarios": 0,
+  "scenarioFailures": 0,
+  "interactionsFailed": [],
+  "axeViolations": 0,
+  "pagesWithOverflow": 0,
+  "consoleErrors": 0,
+  "failures": 0
+ }
+}

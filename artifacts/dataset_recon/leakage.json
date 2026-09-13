@@ -1,0 +1,22 @@
+{
+  "time_split_holdout_customers_seen_before_cut": 0.3019289379770247,
+  "customer_exact_dup_share": 0.0562794771637937,
+  "top_duplicated_customer_texts": {
+    "": 14404,
+    "thank you": 1894,
+    "thanks": 1735,
+    "done": 1618,
+    "thank you!": 1415,
+    "yes": 1312,
+    "thanks!": 1045,
+    "sent": 841
+  },
+  "brand_reply_token_overlap_with_customer": {
+    "mean": 0.06956576445136192,
+    "share_gt_0.5": 0.00465
+  },
+  "brand_reply_exact_dup_share": 0.2044923919169149,
+  "tweet_id_vs_time_note": "spearman(tweet_id, created_at)=0.33: ids were assigned by the dataset author in crawl order, not chronologically; any split by id or row order is a random split, not a temporal one.",
+  "top3_days_share_of_inbound": 0.0647159690553587,
+  "non_first_turn_share_inbound": 0.4880192581427363
+}

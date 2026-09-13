@@ -1,0 +1,31 @@
+{
+  "full_pairs": 105760,
+  "split": {
+    "kb": 96817,
+    "holdout": 8943
+  },
+  "holdout_window": [
+    "2017-11-28 00:00:28+00:00",
+    "2017-12-03 23:03:13+00:00"
+  ],
+  "first_turn_share": 0.7072,
+  "dm_handoff_share": 0.5253,
+  "has_followup_share": 0.2936,
+  "outcome": {
+    "none": 97277,
+    "positive": 5595,
+    "negative": 2561,
+    "mixed": 327
+  },
+  "pii_redacted_rows": 194,
+  "context_truncated_rows": 362,
+  "holdout_customer_seen_in_kb_share": 0.1561,
+  "subsample": {
+    "rows": 20000,
+    "split": {
+      "kb": 18000,
+      "holdout": 2000
+    },
+    "path": "C:\\projects\\ResolveAI\\data\\processed\\apple_pairs.csv"
+  }
+}

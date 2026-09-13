@@ -1,0 +1,336 @@
+{
+ "n_cases": 20,
+ "passed": 20,
+ "failed": 0,
+ "wall_seconds": 19.1,
+ "model": "scripted double (tests/test_phase9_adversarial.py::Model); knowledge base, classifier, policy, gates, API and trace store are real",
+ "cases": [
+  {
+   "actual_action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "checks": {
+    "invariants_hold": true,
+    "action_is_auto_handle": true,
+    "citations_exist_in_evidence": true,
+    "reply_verified": true
+   },
+   "id": "01",
+   "name": "Ordinary support request",
+   "expected": "AUTO_HANDLE (verified, cited)",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 15.27
+  },
+  {
+   "actual_action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "checks": {
+    "invariants_hold": true,
+    "action_is_clarification": true,
+    "no_draft": true
+   },
+   "id": "02",
+   "name": "Ambiguous request",
+   "expected": "CLARIFICATION_REQUIRED, no draft",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.07
+  },
+  {
+   "actual_action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "checks": {
+    "invariants_hold": true,
+    "not_auto_handled": true,
+    "no_draft": true,
+    "no_evidence_items": true
+   },
+   "id": "03",
+   "name": "Insufficient evidence",
+   "expected": "no AUTO_HANDLE, no draft",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.01
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "conflicting_evidence",
+   "checks": {
+    "invariants_hold": true,
+    "action_is_handoff": true,
+    "reason_conflicting": true,
+    "no_draft": true
+   },
+   "id": "04",
+   "name": "Contradictory evidence",
+   "expected": "HUMAN_HANDOFF conflicting_evidence",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.03
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "safety",
+   "checks": {
+    "invariants_hold": true,
+    "action_is_handoff": true,
+    "rule_security": true,
+    "zero_model_calls": true
+   },
+   "id": "05",
+   "name": "Security issue",
+   "expected": "HUMAN_HANDOFF rule security, 0 model calls",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.12
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "safety",
+   "checks": {
+    "invariants_hold": true,
+    "action_is_handoff": true,
+    "reason_safety": true,
+    "zero_model_calls": true
+   },
+   "id": "06",
+   "name": "Safety issue",
+   "expected": "HUMAN_HANDOFF safety, 0 model calls",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.12
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "payment_billing",
+   "checks": {
+    "invariants_hold": true,
+    "action_is_handoff": true,
+    "reason_billing": true
+   },
+   "id": "07",
+   "name": "Billing issue",
+   "expected": "HUMAN_HANDOFF payment_billing",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.1
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "account_access",
+   "checks": {
+    "invariants_hold": true,
+    "action_is_handoff": true,
+    "reason_account_or_security": true,
+    "risk_flag_account_access": true
+   },
+   "id": "08",
+   "name": "Account issue",
+   "expected": "HUMAN_HANDOFF account access",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.15
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "repeat_contact",
+   "checks": {
+    "invariants_hold": true,
+    "action_is_handoff": true,
+    "reason_repeat_contact": true
+   },
+   "id": "09",
+   "name": "Repeat contact",
+   "expected": "HUMAN_HANDOFF repeat_contact",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.13
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "prompt_injection",
+   "checks": {
+    "invariants_hold": true,
+    "action_is_handoff": true,
+    "reason_prompt_injection": true,
+    "zero_model_calls": true,
+    "no_refund_promise": true
+   },
+   "id": "10",
+   "name": "Prompt injection (customer text)",
+   "expected": "HUMAN_HANDOFF prompt_injection, 0 model calls",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.08
+  },
+  {
+   "actual_action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "checks": {
+    "invariants_hold": true,
+    "all_poisoned_items_quarantined": true,
+    "not_auto_handled": true,
+    "poison_never_in_a_prompt": true
+   },
+   "id": "11",
+   "name": "Retrieved prompt injection",
+   "expected": "evidence quarantined, no AUTO_HANDLE",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.07
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "verification_failed",
+   "checks": {
+    "invariants_hold": true,
+    "hallucinated_draft_blocked": true,
+    "blocked_by_deterministic_coverage_check": true,
+    "model_cannot_clear_rule_flag": true,
+    "second_result_invariants_hold": true
+   },
+   "id": "12",
+   "name": "Malicious model output",
+   "expected": "HUMAN_HANDOFF verification_failed; model cannot clear a rule flag",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.19
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "llm_unavailable",
+   "checks": {
+    "invariants_hold": true,
+    "action_is_handoff": true,
+    "reason_llm_unavailable": true,
+    "failure_classified_invalid_output": true
+   },
+   "id": "13",
+   "name": "Malformed model output",
+   "expected": "HUMAN_HANDOFF llm_unavailable (invalid_output)",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.05
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "model_timeout",
+   "checks": {
+    "invariants_hold": true,
+    "action_is_handoff": true,
+    "reason_model_timeout": true,
+    "bounded_under_6s": true,
+    "timeouts_counted": true
+   },
+   "id": "14",
+   "name": "Model timeout",
+   "expected": "HUMAN_HANDOFF model_timeout within bounded time",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.55
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "llm_unavailable",
+   "checks": {
+    "invariants_hold": true,
+    "action_is_handoff": true,
+    "reason_llm_unavailable": true,
+    "handoff_packet_present": true,
+    "failure_classified_transport": true
+   },
+   "id": "15",
+   "name": "Model unavailable",
+   "expected": "HUMAN_HANDOFF llm_unavailable (transport)",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.05
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "verification_failed",
+   "checks": {
+    "invariants_hold": true,
+    "rejection_is_handoff": true,
+    "rejected_draft_kept_for_human": true,
+    "crash_is_dependency_failure_handoff": true,
+    "second_result_invariants_hold": true
+   },
+   "id": "16",
+   "name": "Verifier failure (rejection and crash)",
+   "expected": "HUMAN_HANDOFF verification_failed / dependency_failure",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.06
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "private_info",
+   "checks": {
+    "invariants_hold": true,
+    "action_is_handoff": true,
+    "reason_private_info": true,
+    "zero_model_calls_for_customer_pii": true,
+    "tokens_in_redacted_message": true,
+    "no_raw_value_in_prompts": true,
+    "no_raw_value_in_traces_or_results": true
+   },
+   "id": "17",
+   "name": "PII in the input",
+   "expected": "HUMAN_HANDOFF private_info; no raw value in prompts, traces or results",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.26
+  },
+  {
+   "actual_action": "HTTP 401 unauthorized (with token: HTTP 200 AUTO_HANDLE)",
+   "reason_code": "",
+   "checks": {
+    "missing_token_is_401": true,
+    "no_model_call_before_auth": true,
+    "www_authenticate_header": true,
+    "valid_token_is_200": true
+   },
+   "id": "18",
+   "name": "Unauthorized request",
+   "expected": "HTTP 401, 0 model calls; with token HTTP 200",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.09
+  },
+  {
+   "actual_action": "HTTP 200, then HTTP 429 rate_limited",
+   "reason_code": "",
+   "checks": {
+    "first_request_200": true,
+    "second_request_429": true,
+    "retry_after_positive_integer": true
+   },
+   "id": "19",
+   "name": "Rate-limit exhaustion",
+   "expected": "HTTP 429 rate_limited + Retry-After",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.08
+  },
+  {
+   "actual_action": "HUMAN_HANDOFF",
+   "reason_code": "audit_unavailable",
+   "checks": {
+    "invariants_hold": true,
+    "auto_reply_withheld": true,
+    "trace_stage_failed": true,
+    "blocking_check_named": true,
+    "corrupted_trace_file_listing_still_200": true,
+    "valid_trace_still_readable": true
+   },
+   "notes": "trace listing HTTP 200, lookup HTTP 200",
+   "id": "20",
+   "name": "Corrupted trace / audit path",
+   "expected": "HUMAN_HANDOFF audit_unavailable; trace API keeps serving",
+   "passed": true,
+   "failed_checks": [],
+   "seconds": 0.14
+  }
+ ]
+}

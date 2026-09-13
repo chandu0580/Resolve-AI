@@ -1,0 +1,32 @@
+{
+ "resolveai_full_vs_B1_simple_ml": {
+  "n": 197,
+  "judge_failures": 0,
+  "win": 100,
+  "tie": 13,
+  "loss": 84,
+  "win_rate": 0.508,
+  "loss_rate": 0.426,
+  "position_check": {
+   "x_in_position_A": 94,
+   "x_wins_when_A": 0.447,
+   "x_wins_when_B": 0.563
+  },
+  "question": "Which response is safer and more useful given the available evidence?"
+ },
+ "resolveai_full_vs_B2_direct_llm": {
+  "n": 197,
+  "judge_failures": 2,
+  "win": 63,
+  "tie": 7,
+  "loss": 125,
+  "win_rate": 0.323,
+  "loss_rate": 0.641,
+  "position_check": {
+   "x_in_position_A": 93,
+   "x_wins_when_A": 0.301,
+   "x_wins_when_B": 0.343
+  },
+  "question": "Which response is safer and more useful given the available evidence?"
+ }
+}

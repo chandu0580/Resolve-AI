@@ -1,0 +1,518 @@
+{
+ "source": "artifacts/final/evaluation/runs/final_release.jsonl (release 1.0.0, single golden run) + data/golden labels (hash-verified)",
+ "dataset": "FROZEN GOLDEN SET",
+ "n": 197,
+ "gap_rule": {
+  "min_rows": 10,
+  "max_sufficient_share": 0.1,
+  "min_handoff_share": 0.5
+ },
+ "by_intent": [
+  {
+   "intent": "apps_services",
+   "rows": 38,
+   "evidence_levels": {
+    "INSUFFICIENT": 35,
+    "WEAK": 3,
+    "SUFFICIENT": 0,
+    "STRONG": 0
+   },
+   "sufficient_share": 0.0,
+   "auto_handled": 0,
+   "clarifications": 20,
+   "handoffs": 18,
+   "handoff_share": 0.474,
+   "unnecessary_handoffs": 12,
+   "missed_escalations": 0,
+   "top_reasons": {
+    "insufficient_evidence": 11,
+    "low_confidence": 10,
+    "repeat_contact": 8
+   },
+   "knowledge_gap_candidate": false,
+   "examples": [
+    {
+     "gid": "g006",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "payment_billing",
+     "evidence_level": "INSUFFICIENT",
+     "message": "iPhone 7 iOS 11.1.2. Settings trying to change my email signature. Click on it and crash."
+    },
+    {
+     "gid": "g007",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "account_access",
+     "evidence_level": "INSUFFICIENT",
+     "message": "she said she can listen to the songs unless i’m listening to apple music on my phone . we both get a message that says “"
+    },
+    {
+     "gid": "g013",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "payment_billing",
+     "evidence_level": "INSUFFICIENT",
+     "message": "I purchased the new Miguel Album It says it’s downloaded to my phone but It will not let me play the album"
+    }
+   ]
+  },
+  {
+   "intent": "performance_crash",
+   "rows": 26,
+   "evidence_levels": {
+    "INSUFFICIENT": 19,
+    "WEAK": 7,
+    "SUFFICIENT": 0,
+    "STRONG": 0
+   },
+   "sufficient_share": 0.0,
+   "auto_handled": 0,
+   "clarifications": 17,
+   "handoffs": 9,
+   "handoff_share": 0.346,
+   "unnecessary_handoffs": 9,
+   "missed_escalations": 0,
+   "top_reasons": {
+    "low_confidence": 11,
+    "insufficient_evidence": 8,
+    "hardware": 4
+   },
+   "knowledge_gap_candidate": false,
+   "examples": [
+    {
+     "gid": "g001",
+     "action": "CLARIFICATION_REQUIRED",
+     "reason_code": "low_confidence",
+     "evidence_level": "WEAK",
+     "message": "this iOS update SUCKS!!!!!!!! Phone freezes literally every 5 minutes. Seriously considering getting rid of my iPhone."
+    },
+    {
+     "gid": "g003",
+     "action": "CLARIFICATION_REQUIRED",
+     "reason_code": "low_confidence",
+     "evidence_level": "INSUFFICIENT",
+     "message": "I did not back up before updating. Yes i have a macbook"
+    },
+    {
+     "gid": "g016",
+     "action": "CLARIFICATION_REQUIRED",
+     "reason_code": "insufficient_evidence",
+     "evidence_level": "INSUFFICIENT",
+     "message": "Why tf is my mac taking 20 min to start !!! Fix it this new update fvckin sucks already"
+    }
+   ]
+  },
+  {
+   "intent": "other",
+   "rows": 20,
+   "evidence_levels": {
+    "INSUFFICIENT": 20,
+    "WEAK": 0,
+    "SUFFICIENT": 0,
+    "STRONG": 0
+   },
+   "sufficient_share": 0.0,
+   "auto_handled": 1,
+   "clarifications": 4,
+   "handoffs": 15,
+   "handoff_share": 0.75,
+   "unnecessary_handoffs": 15,
+   "missed_escalations": 1,
+   "top_reasons": {
+    "insufficient_evidence": 11,
+    "repeat_contact": 2,
+    "insufficient_context": 2
+   },
+   "knowledge_gap_candidate": true,
+   "examples": [
+    {
+     "gid": "g025",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "insufficient_evidence",
+     "evidence_level": "INSUFFICIENT",
+     "message": "Turns out it was one of Synergy 2 beta background service that was crashing and restarting over and over again. Problem "
+    },
+    {
+     "gid": "g028",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "insufficient_evidence",
+     "evidence_level": "INSUFFICIENT",
+     "message": "When will we get the TV app in the UK?"
+    },
+    {
+     "gid": "g046",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "insufficient_evidence",
+     "evidence_level": "INSUFFICIENT",
+     "message": ">> Looking to buy a macbook air as a student >> unfortunately your toll free is been busy for 20 mins now suggest a best"
+    }
+   ]
+  },
+  {
+   "intent": "data_loss_sync",
+   "rows": 17,
+   "evidence_levels": {
+    "INSUFFICIENT": 14,
+    "WEAK": 3,
+    "SUFFICIENT": 0,
+    "STRONG": 0
+   },
+   "sufficient_share": 0.0,
+   "auto_handled": 0,
+   "clarifications": 8,
+   "handoffs": 9,
+   "handoff_share": 0.529,
+   "unnecessary_handoffs": 8,
+   "missed_escalations": 0,
+   "top_reasons": {
+    "insufficient_evidence": 11,
+    "repeat_contact": 4,
+    "insufficient_context": 1
+   },
+   "knowledge_gap_candidate": true,
+   "examples": [
+    {
+     "gid": "g004",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "repeat_contact",
+     "evidence_level": "INSUFFICIENT",
+     "message": "I updated my iOS and lost all my pictures from my first two days in Rome. I’m so mad st y’all"
+    },
+    {
+     "gid": "g036",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "insufficient_evidence",
+     "evidence_level": "INSUFFICIENT",
+     "message": "so they’re pretty much not functional"
+    },
+    {
+     "gid": "g064",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "repeat_contact",
+     "evidence_level": "INSUFFICIENT",
+     "message": "I restored my new iPhone X and my photos and videos didn’t transfer over any reason why? Also my speaker is making a wei"
+    }
+   ]
+  },
+  {
+   "intent": "account_store_repair",
+   "rows": 16,
+   "evidence_levels": {
+    "INSUFFICIENT": 16,
+    "WEAK": 0,
+    "SUFFICIENT": 0,
+    "STRONG": 0
+   },
+   "sufficient_share": 0.0,
+   "auto_handled": 0,
+   "clarifications": 0,
+   "handoffs": 16,
+   "handoff_share": 1.0,
+   "unnecessary_handoffs": 2,
+   "missed_escalations": 0,
+   "top_reasons": {
+    "private_info": 8,
+    "payment_billing": 5,
+    "account_access": 3
+   },
+   "knowledge_gap_candidate": true,
+   "examples": [
+    {
+     "gid": "g002",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "private_info",
+     "evidence_level": "INSUFFICIENT",
+     "message": "all most 22 days has passed & no outcome in my case (<PHONE>)."
+    },
+    {
+     "gid": "g008",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "payment_billing",
+     "evidence_level": "INSUFFICIENT",
+     "message": "Hi, I got replacement EarPods and the guy told me yesterday I don’t have to send them back to you guys, but I have a ret"
+    },
+    {
+     "gid": "g012",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "private_info",
+     "evidence_level": "INSUFFICIENT",
+     "message": "What happens to technical support in Brazil? They lied to me! Of all the companies the only one not expecting this was ."
+    }
+   ]
+  },
+  {
+   "intent": "keyboard_text_bug",
+   "rows": 16,
+   "evidence_levels": {
+    "INSUFFICIENT": 5,
+    "WEAK": 4,
+    "SUFFICIENT": 0,
+    "STRONG": 7
+   },
+   "sufficient_share": 0.438,
+   "auto_handled": 5,
+   "clarifications": 4,
+   "handoffs": 7,
+   "handoff_share": 0.438,
+   "unnecessary_handoffs": 6,
+   "missed_escalations": 0,
+   "top_reasons": {
+    "insufficient_evidence": 5,
+    "vague_hostile": 3,
+    "repeat_contact": 2
+   },
+   "knowledge_gap_candidate": false,
+   "examples": [
+    {
+     "gid": "g020",
+     "action": "CLARIFICATION_REQUIRED",
+     "reason_code": "insufficient_evidence",
+     "evidence_level": "WEAK",
+     "message": "another keyboard glitch. Fix I.T"
+    },
+    {
+     "gid": "g021",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "vague_hostile",
+     "evidence_level": "INSUFFICIENT",
+     "message": "is worth Billions of dollars and can’t fix this it ( I.T ) problem. First it was the I crap bullshit now it’s this I.T c"
+    },
+    {
+     "gid": "g043",
+     "action": "CLARIFICATION_REQUIRED",
+     "reason_code": "insufficient_evidence",
+     "evidence_level": "INSUFFICIENT",
+     "message": "Remember when on iPhones every time you pressed “I” it brought up some weird characters? Now it’s happening when you spe"
+    }
+   ]
+  },
+  {
+   "intent": "battery_power",
+   "rows": 16,
+   "evidence_levels": {
+    "INSUFFICIENT": 9,
+    "WEAK": 7,
+    "SUFFICIENT": 0,
+    "STRONG": 0
+   },
+   "sufficient_share": 0.0,
+   "auto_handled": 0,
+   "clarifications": 7,
+   "handoffs": 9,
+   "handoff_share": 0.562,
+   "unnecessary_handoffs": 8,
+   "missed_escalations": 0,
+   "top_reasons": {
+    "insufficient_evidence": 6,
+    "hardware": 5,
+    "low_confidence": 2
+   },
+   "knowledge_gap_candidate": true,
+   "examples": [
+    {
+     "gid": "g014",
+     "action": "CLARIFICATION_REQUIRED",
+     "reason_code": "insufficient_evidence",
+     "evidence_level": "INSUFFICIENT",
+     "message": "Hi, how can I check my iPhone's battery health? Any way without going to an Apple Store?"
+    },
+    {
+     "gid": "g031",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "hardware",
+     "evidence_level": "WEAK",
+     "message": "Hi, are you thinking of doing anything to solve the battery problem? Got worse after every update. My iPhone 6 died beca"
+    },
+    {
+     "gid": "g038",
+     "action": "CLARIFICATION_REQUIRED",
+     "reason_code": "insufficient_evidence",
+     "evidence_level": "WEAK",
+     "message": "Dear why is it when a new IOS update comes out after new phone released, battery life NEVER stays the same. Dies faster."
+    }
+   ]
+  },
+  {
+   "intent": "connectivity",
+   "rows": 14,
+   "evidence_levels": {
+    "INSUFFICIENT": 14,
+    "WEAK": 0,
+    "SUFFICIENT": 0,
+    "STRONG": 0
+   },
+   "sufficient_share": 0.0,
+   "auto_handled": 0,
+   "clarifications": 7,
+   "handoffs": 7,
+   "handoff_share": 0.5,
+   "unnecessary_handoffs": 2,
+   "missed_escalations": 0,
+   "top_reasons": {
+    "repeat_contact": 6,
+    "insufficient_evidence": 4,
+    "low_confidence": 2
+   },
+   "knowledge_gap_candidate": true,
+   "examples": [
+    {
+     "gid": "g009",
+     "action": "CLARIFICATION_REQUIRED",
+     "reason_code": "insufficient_evidence",
+     "evidence_level": "INSUFFICIENT",
+     "message": "after a few days updating to iOS 11.1.1, my WiFi connection is short-reaching area."
+    },
+    {
+     "gid": "g010",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "repeat_contact",
+     "evidence_level": "INSUFFICIENT",
+     "message": "It would be cool if would fix their shit so I dont have to restart my computer and router to connect to wifi"
+    },
+    {
+     "gid": "g024",
+     "action": "CLARIFICATION_REQUIRED",
+     "reason_code": "insufficient_evidence",
+     "evidence_level": "INSUFFICIENT",
+     "message": "Thanks I love plugging your dongle into my phone and getting the message, \"This device accessory is not supported\" ?????"
+    }
+   ]
+  },
+  {
+   "intent": "general_complaint",
+   "rows": 14,
+   "evidence_levels": {
+    "INSUFFICIENT": 14,
+    "WEAK": 0,
+    "SUFFICIENT": 0,
+    "STRONG": 0
+   },
+   "sufficient_share": 0.0,
+   "auto_handled": 0,
+   "clarifications": 7,
+   "handoffs": 7,
+   "handoff_share": 0.5,
+   "unnecessary_handoffs": 6,
+   "missed_escalations": 0,
+   "top_reasons": {
+    "insufficient_context": 5,
+    "vague_hostile": 5,
+    "low_confidence": 2
+   },
+   "knowledge_gap_candidate": true,
+   "examples": [
+    {
+     "gid": "g033",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "private_info",
+     "evidence_level": "INSUFFICIENT",
+     "message": "help me fix my mac"
+    },
+    {
+     "gid": "g037",
+     "action": "CLARIFICATION_REQUIRED",
+     "reason_code": "insufficient_context",
+     "evidence_level": "INSUFFICIENT",
+     "message": "Hi. please help <url>"
+    },
+    {
+     "gid": "g062",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "vague_hostile",
+     "evidence_level": "INSUFFICIENT",
+     "message": "I can’t believe lied to me smh"
+    }
+   ]
+  },
+  {
+   "intent": "non_english",
+   "rows": 13,
+   "evidence_levels": {
+    "INSUFFICIENT": 13,
+    "WEAK": 0,
+    "SUFFICIENT": 0,
+    "STRONG": 0
+   },
+   "sufficient_share": 0.0,
+   "auto_handled": 6,
+   "clarifications": 0,
+   "handoffs": 7,
+   "handoff_share": 0.538,
+   "unnecessary_handoffs": 7,
+   "missed_escalations": 0,
+   "top_reasons": {
+    "hardware": 3,
+    "safety": 1,
+    "vague_hostile": 1
+   },
+   "knowledge_gap_candidate": true,
+   "examples": [
+    {
+     "gid": "g017",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "safety",
+     "evidence_level": "INSUFFICIENT",
+     "message": "podeis verificar si es un hoax realmente por favor?"
+    },
+    {
+     "gid": "g070",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "hardware",
+     "evidence_level": "INSUFFICIENT",
+     "message": "Mn mobiel heeft net letterlijk 13 minuten Apple logo uit grijs scherm gegeven word er langzamerhand een beetje heel erg "
+    },
+    {
+     "gid": "g082",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "vague_hostile",
+     "evidence_level": "INSUFFICIENT",
+     "message": "امرضتونا بتحديثاتكم لاعاد تحدثون <url>"
+    }
+   ]
+  },
+  {
+   "intent": "hardware_damage",
+   "rows": 7,
+   "evidence_levels": {
+    "INSUFFICIENT": 7,
+    "WEAK": 0,
+    "SUFFICIENT": 0,
+    "STRONG": 0
+   },
+   "sufficient_share": 0.0,
+   "auto_handled": 0,
+   "clarifications": 0,
+   "handoffs": 7,
+   "handoff_share": 1.0,
+   "unnecessary_handoffs": 0,
+   "missed_escalations": 0,
+   "top_reasons": {
+    "hardware": 4,
+    "safety": 3
+   },
+   "knowledge_gap_candidate": false,
+   "examples": [
+    {
+     "gid": "g000",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "hardware",
+     "evidence_level": "INSUFFICIENT",
+     "message": "my headphone jack on my phone wasn’t working for months and today it started to work but my speaker stopped, anyway to g"
+    },
+    {
+     "gid": "g072",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "safety",
+     "evidence_level": "INSUFFICIENT",
+     "message": "My lightening cable just started to smoke"
+    },
+    {
+     "gid": "g092",
+     "action": "HUMAN_HANDOFF",
+     "reason_code": "hardware",
+     "evidence_level": "INSUFFICIENT",
+     "message": "my iPad Pro touch screen stopped working not had it 12 months but no receipt - I'm screwed aren't I"
+    }
+   ]
+  }
+ ],
+ "note": "Counts are from 197 annotated tweets of one 2017 AppleSupport burst; small per-intent counts. A gap candidate marks where the knowledge base rarely supports an answer and humans receive most cases."
+}

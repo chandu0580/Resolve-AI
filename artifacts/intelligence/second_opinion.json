@@ -1,0 +1,75 @@
+{
+ "smoke_dev_30": {
+  "n": 30,
+  "consulted": 28,
+  "applied": 7,
+  "accuracy_classifier": 0.6,
+  "accuracy_with_second_opinion": 0.8333,
+  "consulted_subset": {
+   "n": 28,
+   "classifier": 0.5714,
+   "with_second_opinion": 0.8214,
+   "llm_alone": 0.963
+  },
+  "slices": {
+   "short": {
+    "n": 6,
+    "classifier": 0.5,
+    "with_second_opinion": 0.8333
+   }
+  },
+  "changes": {
+   "n": 7,
+   "fixed": 7,
+   "broke": 0
+  },
+  "seconds": 136.1
+ },
+ "golden_197": {
+  "n": 197,
+  "consulted": 144,
+  "applied": 33,
+  "accuracy_classifier": 0.6142,
+  "accuracy_with_second_opinion": 0.736,
+  "consulted_subset": {
+   "n": 144,
+   "classifier": 0.5,
+   "with_second_opinion": 0.6667,
+   "llm_alone": 0.8864
+  },
+  "slices": {
+   "short": {
+    "n": 45,
+    "classifier": 0.4,
+    "with_second_opinion": 0.6222
+   },
+   "multi_turn": {
+    "n": 48,
+    "classifier": 0.4792,
+    "with_second_opinion": 0.4792
+   },
+   "multi_intent": {
+    "n": 10,
+    "classifier": 0.6,
+    "with_second_opinion": 0.7
+   }
+  },
+  "changes": {
+   "n": 33,
+   "fixed": 27,
+   "broke": 3
+  },
+  "seconds": 663.7
+ },
+ "usage": {
+  "calls": 189,
+  "live_calls": 189,
+  "cache_hits": 0,
+  "tokens_in": 95127,
+  "tokens_out": 34951,
+  "latency_ms": 774082.4928999895,
+  "errors": 0,
+  "fallbacks": 13
+ },
+ "policy": "consult at LOW/MEDIUM band; adopt LLM intent only if in classifier top-3"
+}

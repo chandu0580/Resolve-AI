@@ -1,0 +1,200 @@
+{
+ "mode": "api-down",
+ "base": "http://127.0.0.1:3000",
+ "started": "2026-09-12T09:10:21.330Z",
+ "browser": "msedge 152.0.4191.66",
+ "scenarios": [],
+ "routes": [
+  {
+   "name": "api-down-overview",
+   "route": "/",
+   "status": 200,
+   "h1": "Overview",
+   "alerts": [
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol",
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol",
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol"
+   ],
+   "timing": {
+    "ttfbMs": 171,
+    "domContentLoadedMs": 322,
+    "loadMs": 577,
+    "htmlKB": 13,
+    "domNodes": 434
+   }
+  },
+  {
+   "name": "api-down-traces",
+   "route": "/traces",
+   "status": 200,
+   "h1": "Audit Log",
+   "alerts": [
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol"
+   ],
+   "timing": {
+    "ttfbMs": 33,
+    "domContentLoadedMs": 89,
+    "loadMs": 101,
+    "htmlKB": 7,
+    "domNodes": 167
+   }
+  },
+  {
+   "name": "api-down-evaluation",
+   "route": "/evaluation",
+   "status": 200,
+   "h1": "Evaluation Center",
+   "alerts": [
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol",
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol"
+   ],
+   "timing": {
+    "ttfbMs": 35,
+    "domContentLoadedMs": 67,
+    "loadMs": 80,
+    "htmlKB": 7,
+    "domNodes": 174
+   }
+  },
+  {
+   "name": "api-down-analytics",
+   "route": "/analytics",
+   "status": 200,
+   "h1": "Analytics",
+   "alerts": [
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol"
+   ],
+   "timing": {
+    "ttfbMs": 33,
+    "domContentLoadedMs": 61,
+    "loadMs": 76,
+    "htmlKB": 6,
+    "domNodes": 159
+   }
+  },
+  {
+   "name": "api-down-simulate",
+   "route": "/simulate",
+   "status": 200,
+   "h1": "Agent Playground",
+   "alerts": [
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol"
+   ],
+   "timing": {
+    "ttfbMs": 34,
+    "domContentLoadedMs": 80,
+    "loadMs": 114,
+    "htmlKB": 9,
+    "domNodes": 287
+   }
+  },
+  {
+   "name": "api-down-agents",
+   "route": "/agents",
+   "status": 200,
+   "h1": "Agent configuration",
+   "alerts": [
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol"
+   ],
+   "timing": {
+    "ttfbMs": 25,
+    "domContentLoadedMs": 57,
+    "loadMs": 70,
+    "htmlKB": 7,
+    "domNodes": 159
+   }
+  },
+  {
+   "name": "api-down-settings",
+   "route": "/settings",
+   "status": 200,
+   "h1": "Settings",
+   "alerts": [
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol"
+   ],
+   "timing": {
+    "ttfbMs": 36,
+    "domContentLoadedMs": 66,
+    "loadMs": 90,
+    "htmlKB": 9,
+    "domNodes": 257
+   }
+  },
+  {
+   "name": "api-down-trust",
+   "route": "/trust",
+   "status": 200,
+   "h1": "Trust & Safety",
+   "alerts": [
+    "ResolveAI API unavailableThe console could not reach the FastAPI service.API message: The ResolveAI API is not reachable.Start the backend with `python -m resol"
+   ],
+   "timing": {
+    "ttfbMs": 37,
+    "domContentLoadedMs": 72,
+    "loadMs": 110,
+    "htmlKB": 14,
+    "domNodes": 513
+   }
+  }
+ ],
+ "interactions": [
+  {
+   "name": "sidebar agent status shows API unavailable",
+   "ok": true
+  }
+ ],
+ "axe": [
+  {
+   "name": "api-down-overview",
+   "url": "http://127.0.0.1:3000/",
+   "violations": []
+  }
+ ],
+ "overflow": [],
+ "consoleErrors": [
+  {
+   "url": "http://127.0.0.1:3000/",
+   "text": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+  },
+  {
+   "url": "http://127.0.0.1:3000/traces",
+   "text": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+  },
+  {
+   "url": "http://127.0.0.1:3000/evaluation",
+   "text": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+  },
+  {
+   "url": "http://127.0.0.1:3000/analytics",
+   "text": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+  },
+  {
+   "url": "http://127.0.0.1:3000/simulate",
+   "text": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+  },
+  {
+   "url": "http://127.0.0.1:3000/agents",
+   "text": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+  },
+  {
+   "url": "http://127.0.0.1:3000/settings",
+   "text": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+  },
+  {
+   "url": "http://127.0.0.1:3000/trust",
+   "text": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+  }
+ ],
+ "failures": [],
+ "finished": "2026-09-12T09:10:35.693Z",
+ "summary": {
+  "routes": 8,
+  "scenarios": 0,
+  "scenarioFailures": 0,
+  "interactionsFailed": [],
+  "axeViolations": 0,
+  "pagesWithOverflow": 0,
+  "consoleErrors": 8,
+  "failures": 0
+ }
+}

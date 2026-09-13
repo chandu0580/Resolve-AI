@@ -1,0 +1,454 @@
+{
+ "mode": "full",
+ "base": "http://127.0.0.1:3100",
+ "started": "2026-09-11T09:03:39.767Z",
+ "browser": "msedge 152.0.4191.66",
+ "scenarios": [
+  {
+   "id": "A",
+   "ok": true,
+   "ms": 4657,
+   "decision": "Decision: Auto handle",
+   "expectation": [
+    "Decision is auto-handled (matches)"
+   ],
+   "traceId": "960f487793ae440fbbbf02e24bf6c9e4"
+  },
+  {
+   "id": "B",
+   "ok": true,
+   "ms": 1125,
+   "decision": "Decision: Clarification required",
+   "expectation": [
+    "Decision is clarification (matches)",
+    "Reason is insufficient_context or low_confidence (matches)",
+    "Clarification packet present (matches)"
+   ],
+   "traceId": "f4caf31e1e2743fc91900533bc0d16a9"
+  },
+  {
+   "id": "C",
+   "ok": true,
+   "ms": 1115,
+   "decision": "Decision: Human handoff",
+   "expectation": [
+    "Decision is human handoff (matches)",
+    "Reason is safety or account_access (matches)",
+    "At most 0 model calls (matches)",
+    "Handoff packet present (matches)"
+   ],
+   "traceId": "dc8f182d041f433890b27adf688be3db"
+  },
+  {
+   "id": "D",
+   "ok": true,
+   "ms": 1810,
+   "decision": "Decision: Clarification required",
+   "expectation": [
+    "Decision is clarification (matches)",
+    "Reason is insufficient_evidence (matches)",
+    "Clarification packet present (matches)"
+   ],
+   "traceId": "da82bf25db184cab914a892e4d4de969"
+  },
+  {
+   "id": "E",
+   "ok": true,
+   "ms": 1023,
+   "decision": "Decision: Human handoff",
+   "expectation": [
+    "Decision is human handoff (matches)",
+    "Reason is prompt_injection (matches)",
+    "At most 0 model calls (matches)",
+    "Handoff packet present (matches)"
+   ],
+   "traceId": "27fe73a530274407b63601246e044562"
+  },
+  {
+   "id": "G",
+   "ok": true,
+   "ms": 515,
+   "decision": "Decision: Human handoff",
+   "expectation": [
+    "Decision is not auto-handled (matches)"
+   ],
+   "traceId": "954ad4c30b0642da958b527947670a08"
+  },
+  {
+   "id": "custom-billing",
+   "ok": true,
+   "ms": 497,
+   "decision": "Decision: Human handoff",
+   "traceId": "fb994bd33e574bcca4674387c66daf41"
+  }
+ ],
+ "routes": [
+  {
+   "name": "simulate-empty",
+   "route": "/simulate",
+   "status": 200,
+   "h1": "Try ResolveAI",
+   "alerts": []
+  },
+  {
+   "name": "overview",
+   "route": "/",
+   "status": 200,
+   "h1": "Overview",
+   "alerts": []
+  },
+  {
+   "name": "conversations",
+   "route": "/conversations",
+   "status": 200,
+   "h1": "Conversations",
+   "alerts": []
+  },
+  {
+   "name": "conversation-A-workspace",
+   "route": "/conversations/960f487793ae440fbbbf02e24bf6c9e4",
+   "status": 200,
+   "h1": "Conversation 960f4877",
+   "alerts": []
+  },
+  {
+   "name": "conversation-D-clarification",
+   "route": "/conversations/da82bf25db184cab914a892e4d4de969",
+   "status": 200,
+   "h1": "Conversation da82bf25",
+   "alerts": []
+  },
+  {
+   "name": "handoffs",
+   "route": "/handoffs",
+   "status": 200,
+   "h1": "Handoff Center",
+   "alerts": []
+  },
+  {
+   "name": "handoff-C-detail",
+   "route": "/handoffs/dc8f182d041f433890b27adf688be3db",
+   "status": 200,
+   "h1": "Handoff dc8f182d",
+   "alerts": []
+  },
+  {
+   "name": "knowledge",
+   "route": "/knowledge",
+   "status": 200,
+   "h1": "Historical customer-support corpus",
+   "alerts": []
+  },
+  {
+   "name": "traces",
+   "route": "/traces",
+   "status": 200,
+   "h1": "Traces",
+   "alerts": []
+  },
+  {
+   "name": "trace-A-timeline",
+   "route": "/traces/960f487793ae440fbbbf02e24bf6c9e4",
+   "status": 200,
+   "h1": "Trace 960f487793ae",
+   "alerts": []
+  },
+  {
+   "name": "trace-E-injection",
+   "route": "/traces/27fe73a530274407b63601246e044562",
+   "status": 200,
+   "h1": "Trace 27fe73a53027",
+   "alerts": []
+  },
+  {
+   "name": "evaluation",
+   "route": "/evaluation",
+   "status": 200,
+   "h1": "Evaluation",
+   "alerts": []
+  },
+  {
+   "name": "trust",
+   "route": "/trust",
+   "status": 200,
+   "h1": "Trust controls",
+   "alerts": []
+  },
+  {
+   "name": "error-unknown-trace",
+   "route": "/traces/00000000000000000000000000000000",
+   "status": 200,
+   "h1": "Trace 000000000000",
+   "alerts": [
+    "Trace not foundNo trace with this id exists in the API's trace store. Traces live in local files; a different trace directory or a cleaned store has no record o"
+   ]
+  },
+  {
+   "name": "error-invalid-trace-id",
+   "route": "/traces/not-a-trace-id",
+   "status": 200,
+   "h1": "Trace not-a-trace-",
+   "alerts": [
+    "Invalid trace idA trace id is 32 lowercase hexadecimal characters.Check the link or paste the full id.invalid_trace_id · HTTP 400 · request b132be98dd0147a1ba0e"
+   ]
+  },
+  {
+   "name": "error-404",
+   "route": "/this-page-does-not-exist",
+   "status": 404,
+   "h1": "Page not found",
+   "alerts": []
+  },
+  {
+   "name": "conversation-C-trace-only",
+   "route": "/conversations/dc8f182d041f433890b27adf688be3db",
+   "status": 200,
+   "h1": "Conversation dc8f182d",
+   "alerts": []
+  },
+  {
+   "name": "tablet-overview",
+   "route": "/",
+   "status": 200,
+   "h1": "Overview",
+   "alerts": []
+  },
+  {
+   "name": "tablet-conversation-A",
+   "route": "/conversations/960f487793ae440fbbbf02e24bf6c9e4",
+   "status": 200,
+   "h1": "Conversation 960f4877",
+   "alerts": []
+  },
+  {
+   "name": "tablet-conversations",
+   "route": "/conversations",
+   "status": 200,
+   "h1": "Conversations",
+   "alerts": []
+  },
+  {
+   "name": "tablet-evaluation",
+   "route": "/evaluation",
+   "status": 200,
+   "h1": "Evaluation",
+   "alerts": []
+  },
+  {
+   "name": "narrow-overview",
+   "route": "/",
+   "status": 200,
+   "h1": "Overview",
+   "alerts": []
+  },
+  {
+   "name": "narrow-conversation-A",
+   "route": "/conversations/960f487793ae440fbbbf02e24bf6c9e4",
+   "status": 200,
+   "h1": "Conversation 960f4877",
+   "alerts": []
+  },
+  {
+   "name": "narrow-conversations",
+   "route": "/conversations",
+   "status": 200,
+   "h1": "Conversations",
+   "alerts": []
+  },
+  {
+   "name": "narrow-evaluation",
+   "route": "/evaluation",
+   "status": 200,
+   "h1": "Evaluation",
+   "alerts": []
+  },
+  {
+   "name": "mobile-overview",
+   "route": "/",
+   "status": 200,
+   "h1": "Overview",
+   "alerts": []
+  },
+  {
+   "name": "mobile-conversation-A",
+   "route": "/conversations/960f487793ae440fbbbf02e24bf6c9e4",
+   "status": 200,
+   "h1": "Conversation 960f4877",
+   "alerts": []
+  },
+  {
+   "name": "mobile-conversations",
+   "route": "/conversations",
+   "status": 200,
+   "h1": "Conversations",
+   "alerts": []
+  },
+  {
+   "name": "mobile-evaluation",
+   "route": "/evaluation",
+   "status": 200,
+   "h1": "Evaluation",
+   "alerts": []
+  }
+ ],
+ "interactions": [
+  {
+   "name": "conversation filter updates URL",
+   "ok": true,
+   "url": "http://127.0.0.1:3100/conversations?filter=handoff"
+  },
+  {
+   "name": "evidence card expands",
+   "ok": true
+  },
+  {
+   "name": "trace stage expands",
+   "ok": true
+  },
+  {
+   "name": "copy handoff summary",
+   "ok": true,
+   "chars": 1205
+  },
+  {
+   "name": "search by trace id opens the trace",
+   "ok": true
+  },
+  {
+   "name": "skip link is first tab stop",
+   "ok": true,
+   "focused": "Skip to content"
+  },
+  {
+   "name": "mobile navigation opens and closes with Escape",
+   "ok": true
+  }
+ ],
+ "axe": [
+  {
+   "name": "simulate-empty",
+   "url": "http://127.0.0.1:3100/simulate",
+   "violations": []
+  },
+  {
+   "name": "overview",
+   "url": "http://127.0.0.1:3100/",
+   "violations": []
+  },
+  {
+   "name": "conversations",
+   "url": "http://127.0.0.1:3100/conversations",
+   "violations": []
+  },
+  {
+   "name": "conversation-A-workspace",
+   "url": "http://127.0.0.1:3100/conversations/960f487793ae440fbbbf02e24bf6c9e4",
+   "violations": []
+  },
+  {
+   "name": "conversation-D-clarification",
+   "url": "http://127.0.0.1:3100/conversations/da82bf25db184cab914a892e4d4de969",
+   "violations": []
+  },
+  {
+   "name": "handoffs",
+   "url": "http://127.0.0.1:3100/handoffs",
+   "violations": []
+  },
+  {
+   "name": "handoff-C-detail",
+   "url": "http://127.0.0.1:3100/handoffs/dc8f182d041f433890b27adf688be3db",
+   "violations": []
+  },
+  {
+   "name": "knowledge",
+   "url": "http://127.0.0.1:3100/knowledge",
+   "violations": []
+  },
+  {
+   "name": "traces",
+   "url": "http://127.0.0.1:3100/traces",
+   "violations": []
+  },
+  {
+   "name": "trace-A-timeline",
+   "url": "http://127.0.0.1:3100/traces/960f487793ae440fbbbf02e24bf6c9e4",
+   "violations": []
+  },
+  {
+   "name": "trace-E-injection",
+   "url": "http://127.0.0.1:3100/traces/27fe73a530274407b63601246e044562",
+   "violations": []
+  },
+  {
+   "name": "evaluation",
+   "url": "http://127.0.0.1:3100/evaluation",
+   "violations": []
+  },
+  {
+   "name": "trust",
+   "url": "http://127.0.0.1:3100/trust",
+   "violations": []
+  },
+  {
+   "name": "error-unknown-trace",
+   "url": "http://127.0.0.1:3100/traces/00000000000000000000000000000000",
+   "violations": []
+  },
+  {
+   "name": "conversation-C-trace-only",
+   "url": "http://127.0.0.1:3100/conversations/dc8f182d041f433890b27adf688be3db",
+   "violations": []
+  },
+  {
+   "name": "tablet-overview",
+   "url": "http://127.0.0.1:3100/",
+   "violations": []
+  },
+  {
+   "name": "tablet-conversation-A",
+   "url": "http://127.0.0.1:3100/conversations/960f487793ae440fbbbf02e24bf6c9e4",
+   "violations": []
+  },
+  {
+   "name": "narrow-overview",
+   "url": "http://127.0.0.1:3100/",
+   "violations": []
+  },
+  {
+   "name": "narrow-conversation-A",
+   "url": "http://127.0.0.1:3100/conversations/960f487793ae440fbbbf02e24bf6c9e4",
+   "violations": []
+  },
+  {
+   "name": "mobile-overview",
+   "url": "http://127.0.0.1:3100/",
+   "violations": []
+  },
+  {
+   "name": "mobile-conversation-A",
+   "url": "http://127.0.0.1:3100/conversations/960f487793ae440fbbbf02e24bf6c9e4",
+   "violations": []
+  }
+ ],
+ "overflow": [],
+ "consoleErrors": [
+  {
+   "url": "http://127.0.0.1:3100/this-page-does-not-exist",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  }
+ ],
+ "failures": [],
+ "traceStoreEmptyAtStart": false,
+ "finished": "2026-09-11T09:06:26.093Z",
+ "summary": {
+  "routes": 29,
+  "scenarios": 7,
+  "scenarioFailures": 0,
+  "interactionsFailed": [],
+  "axeViolations": 0,
+  "pagesWithOverflow": 0,
+  "consoleErrors": 1,
+  "failures": 0
+ }
+}

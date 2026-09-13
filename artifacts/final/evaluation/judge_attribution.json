@@ -1,0 +1,433 @@
+{
+ "n": 197,
+ "identical_responses": {
+  "n": 170,
+  "n_both_parsed": 164,
+  "hallucination_flags_phase9": 53,
+  "hallucination_flags_release": 53,
+  "groundedness_mean_phase9": 4.09,
+  "groundedness_mean_release": 4.09,
+  "judge_failures_phase9": 6,
+  "judge_failures_release": 6
+ },
+ "changed_responses": {
+  "n": 27,
+  "n_both_parsed": 24,
+  "hallucination_flags_phase9": 0,
+  "hallucination_flags_release": 16,
+  "groundedness_mean_phase9": 4.96,
+  "groundedness_mean_release": 3.0,
+  "judge_failures_phase9": 0,
+  "judge_failures_release": 3
+ },
+ "hallucination_flips_on_identical_responses": [],
+ "changed_by_kind_transition": {
+  "handoff -> canned": {
+   "n": 3,
+   "n_both_parsed": 0,
+   "hallucination_flags_phase9": 0,
+   "hallucination_flags_release": 0,
+   "groundedness_mean_phase9": null,
+   "groundedness_mean_release": null,
+   "judge_failures_phase9": 0,
+   "judge_failures_release": 3,
+   "gids": [
+    "g066",
+    "g091",
+    "g139"
+   ]
+  },
+  "handoff -> clarify": {
+   "n": 9,
+   "n_both_parsed": 9,
+   "hallucination_flags_phase9": 0,
+   "hallucination_flags_release": 4,
+   "groundedness_mean_phase9": 5.0,
+   "groundedness_mean_release": 3.89,
+   "judge_failures_phase9": 0,
+   "judge_failures_release": 0,
+   "gids": [
+    "g016",
+    "g020",
+    "g068",
+    "g074",
+    "g087",
+    "g088",
+    "g098",
+    "g103",
+    "g196"
+   ]
+  },
+  "handoff -> handoff": {
+   "n": 15,
+   "n_both_parsed": 15,
+   "hallucination_flags_phase9": 0,
+   "hallucination_flags_release": 12,
+   "groundedness_mean_phase9": 4.93,
+   "groundedness_mean_release": 2.47,
+   "judge_failures_phase9": 0,
+   "judge_failures_release": 0,
+   "gids": [
+    "g000",
+    "g031",
+    "g045",
+    "g070",
+    "g081",
+    "g109",
+    "g122",
+    "g123",
+    "g124",
+    "g131",
+    "g138",
+    "g184",
+    "g188",
+    "g189",
+    "g192"
+   ]
+  }
+ },
+ "release_hallucination_flags_by_response_kind": {
+  "handoff": {
+   "flags": 36,
+   "parsed": 108
+  },
+  "clarify": {
+   "flags": 33,
+   "parsed": 71
+  },
+  "troubleshoot": {
+   "flags": 0,
+   "parsed": 5
+  },
+  "canned": {
+   "flags": 0,
+   "parsed": 4
+  }
+ },
+ "changed_rows": [
+  {
+   "gid": "g000",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/hardware/handoff",
+   "gold_should_escalate": true,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 2,
+   "release_response": "We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.",
+   "judge_note_release": "Response invents 'damage' not stated by customer, ignores the actual question about escaping headphone mode, and offers vague 'repair options' unsupported by evidence."
+  },
+  {
+   "gid": "g016",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "CLARIFICATION_REQUIRED/insufficient_evidence/clarify",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 3,
+   "release_response": "We'd like to help. Could you tell us which software version is installed (Settings > General > About) and whether it happens in one app or everywhere?",
+   "judge_note_release": "Asks for version and app scope, supported by E2/E3, but the menu path 'Settings > General > About' is not in evidence and may be inaccurate for macOS, constituting a hallucinated product detail."
+  },
+  {
+   "gid": "g020",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "CLARIFICATION_REQUIRED/insufficient_evidence/clarify",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 3,
+   "release_response": "We'd like to help with the typing issue. Could you tell us which software version is installed (Settings > General > About) and whether it happens with one word",
+   "judge_note_release": "Clarifying questions are grounded, but the menu path 'Settings > General > About' is not in evidence (evidence cites Software Update). Known fix (iOS 11.1.1 update) is omitted, reducing completeness."
+  },
+  {
+   "gid": "g031",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/hardware/handoff",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 4,
+   "grounded_release": 2,
+   "release_response": "We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.",
+   "judge_note_release": "Response invents 'damage' and 'repair options' not in evidence; customer raised battery issues, not physical damage. Evidence shows AppleSupport asks for iOS version. Vague handoff, no concrete step."
+  },
+  {
+   "gid": "g045",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/hardware/handoff",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 1,
+   "release_response": "We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.",
+   "judge_note_release": "Response invents 'damage' and 'repair options' not mentioned by customer. Customer raised battery drain after iOS update, not physical damage. Completely off-target and hallucinated."
+  },
+  {
+   "gid": "g066",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "AUTO_HANDLE/none/canned",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": null,
+   "grounded_phase9": 4,
+   "grounded_release": null,
+   "release_response": "We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact",
+   "judge_note_release": ""
+  },
+  {
+   "gid": "g068",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "CLARIFICATION_REQUIRED/insufficient_evidence/clarify",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 3,
+   "release_response": "We'd like to help with the battery. Could you tell us which device you're using, which software version is installed (Settings > General > About) and when it st",
+   "judge_note_release": "Asking iOS version matches E3/E4, but the menu path 'Settings > General > About' is not in evidence, lowering groundedness and triggering hallucination. Otherwise relevant, actionable, and compliant."
+  },
+  {
+   "gid": "g070",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/hardware/handoff",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 2,
+   "release_response": "We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.",
+   "judge_note_release": "Customer describes a boot loop, not 'damage'; 'repair options' is unsupported. Evidence consistently shows a language-handoff URL for Dutch messages, which was omitted entirely."
+  },
+  {
+   "gid": "g074",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "CLARIFICATION_REQUIRED/insufficient_evidence/clarify",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": false,
+   "grounded_phase9": 5,
+   "grounded_release": 5,
+   "release_response": "We'd like to help. Could you tell us which software version is installed (Settings > General > About) and whether it happens in one app or everywhere?",
+   "judge_note_release": "Menu path from E3, app-scope question from E1. Addresses lagging after iOS update. Doesn't explicitly acknowledge both Mac and iPhone, but asks useful clarifying questions. Concise and compliant."
+  },
+  {
+   "gid": "g081",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/vague_hostile/handoff",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": false,
+   "grounded_phase9": 5,
+   "grounded_release": 5,
+   "release_response": "We'd like to help with this. A member of our team will follow up with you directly.",
+   "judge_note_release": "Generic handoff with no factual claims, so groundedness is 5. But evidence provides a concrete fix (update to iOS 11.1.1) that the response entirely omits, making it low relevance, actionability, and "
+  },
+  {
+   "gid": "g087",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "CLARIFICATION_REQUIRED/insufficient_context/clarify",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": false,
+   "grounded_phase9": 5,
+   "grounded_release": 5,
+   "release_response": "We'd like to help. Could you tell us which device you're using and exactly what's happening?",
+   "judge_note_release": "Clarifying question matches evidence patterns (E4, E5). Asks for device and symptom details, which is the right next step. Concise and brand-appropriate. Could also ask for Beats model per E4."
+  },
+  {
+   "gid": "g088",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "CLARIFICATION_REQUIRED/low_confidence/clarify",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": false,
+   "grounded_phase9": 5,
+   "grounded_release": 5,
+   "release_response": "We'd like to help. Could you tell us which device you're using and exactly what's happening?",
+   "judge_note_release": "Evidence covers autocorrect fixes, not rebooting. Candidate wisely asks clarifying questions instead of misapplying autocorrect fix. Grounded and relevant, but completeness is limited since no trouble"
+  },
+  {
+   "gid": "g091",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "AUTO_HANDLE/none/canned",
+   "gold_should_escalate": false,
+   "halluc_phase9": true,
+   "halluc_release": null,
+   "grounded_phase9": 3,
+   "grounded_release": null,
+   "release_response": "We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact",
+   "judge_note_release": ""
+  },
+  {
+   "gid": "g098",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "CLARIFICATION_REQUIRED/low_confidence/clarify",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": false,
+   "grounded_phase9": 5,
+   "grounded_release": 5,
+   "release_response": "We'd like to help. Could you tell us whether it happens in one app or everywhere?",
+   "judge_note_release": "Clarifying question asserts nothing, so grounded. Relevant but generic—customer already gave model and iOS version, and evidence shows brand asks multiple diagnostic questions (what appears on screen,"
+  },
+  {
+   "gid": "g103",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "CLARIFICATION_REQUIRED/insufficient_evidence/clarify",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 3,
+   "release_response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and whether it happens in one a",
+   "judge_note_release": "Questions about device, iOS version, and app-specificity are supported by E1, E3, E4, E5. However, the menu path 'Settings > General > About' is not found in any evidence, making it an unsupported pro"
+  },
+  {
+   "gid": "g109",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/hardware/handoff",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 1,
+   "release_response": "We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.",
+   "judge_note_release": "Customer reported phones turning off/on, not damage. Response invents 'damage' and offers repair options unsupported by evidence. Evidence shows troubleshooting steps or version questions were appropr"
+  },
+  {
+   "gid": "g122",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/repeat_contact/handoff",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 2,
+   "release_response": "Thanks for the steps you've already tried. A member of our team will pick this up with you directly so we can dig deeper.",
+   "judge_note_release": "Response invents that customer 'already tried steps'—they never said this. Handoff is concrete but skips evidence-backed troubleshooting steps and clarifying questions available for battery drain afte"
+  },
+  {
+   "gid": "g123",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/hardware/handoff",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 1,
+   "release_response": "We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.",
+   "judge_note_release": "Customer describes a software issue (apps exiting, shutdowns), not physical damage. Response invents 'damage' and 'repair options' unsupported by evidence, ignoring the actual troubleshooting path sho"
+  },
+  {
+   "gid": "g124",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/hardware/handoff",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 2,
+   "release_response": "We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.",
+   "judge_note_release": "Customer reported random resets, not damage. Response invents damage, offers repair options unsupported by evidence, and promises follow-up instead of troubleshooting per evidence patterns."
+  },
+  {
+   "gid": "g131",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/repeat_contact/handoff",
+   "gold_should_escalate": true,
+   "halluc_phase9": false,
+   "halluc_release": false,
+   "grounded_phase9": 5,
+   "grounded_release": 5,
+   "release_response": "Thanks for the steps you've already tried. A member of our team will pick this up with you directly so we can dig deeper.",
+   "judge_note_release": "Handoff is grounded and relevant; evidence lacks SIM-specific fixes so escalation is defensible. However, the handoff is vague—no DM invitation or concrete next step—leaving the customer unsure what t"
+  },
+  {
+   "gid": "g138",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/insufficient_evidence/handoff",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 5,
+   "release_response": "We'd like to help with this. A member of our team will follow up with you directly.",
+   "judge_note_release": "Generic handoff with no concrete step or question; evidence shows Apple asks clarifying questions or directs to Photos specialists. 'Team will follow up directly' is a soft promise not supported by ev"
+  },
+  {
+   "gid": "g139",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "AUTO_HANDLE/none/canned",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": null,
+   "grounded_phase9": 5,
+   "grounded_release": null,
+   "release_response": "We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact",
+   "judge_note_release": ""
+  },
+  {
+   "gid": "g184",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/hardware/handoff",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 1,
+   "release_response": "We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.",
+   "judge_note_release": "Customer reports CPU/heat issues after an update, not physical damage. Response invents 'damage' and offers 'repair options,' addressing an entirely different problem with no basis in evidence."
+  },
+  {
+   "gid": "g188",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/hardware/handoff",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 2,
+   "release_response": "We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.",
+   "judge_note_release": "Invents team follow-up and repair options absent from evidence. Evidence pattern directs Spanish speakers to a support URL; candidate omits it. Vague handoff, soft promise of repair."
+  },
+  {
+   "gid": "g189",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/hardware/handoff",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": true,
+   "grounded_phase9": 5,
+   "grounded_release": 1,
+   "release_response": "We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.",
+   "judge_note_release": "Fabricates 'damage' never mentioned; customer reported a charging issue. Evidence supports troubleshooting steps, not repair handoff. Ignores actual problem entirely."
+  },
+  {
+   "gid": "g192",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "HUMAN_HANDOFF/insufficient_evidence/handoff",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": false,
+   "grounded_phase9": 5,
+   "grounded_release": 5,
+   "release_response": "We'd like to help with this. A member of our team will follow up with you directly.",
+   "judge_note_release": "Generic handoff with no troubleshooting questions despite evidence showing brand typically asks clarifying details like iOS version. Compliant but incomplete and not actionable."
+  },
+  {
+   "gid": "g196",
+   "phase9": "HUMAN_HANDOFF/private_info/handoff",
+   "release": "CLARIFICATION_REQUIRED/low_confidence/clarify",
+   "gold_should_escalate": false,
+   "halluc_phase9": false,
+   "halluc_release": false,
+   "grounded_phase9": 5,
+   "grounded_release": 3,
+   "release_response": "We'd like to help. Could you tell us which software version is installed (Settings > General > About) and exactly what's happening?",
+   "judge_note_release": "Relevant and actionable, but the Settings > General > About menu path is not in the evidence; evidence shows asking for iPhone model and iOS version, which the candidate partially covers."
+  }
+ ]
+}

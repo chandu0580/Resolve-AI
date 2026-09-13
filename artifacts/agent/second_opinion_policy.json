@@ -1,0 +1,55 @@
+{
+  "policy": "llm_conf_0.7",
+  "selected_on": "smoke_human_30 accuracy, tie-break silver_high_dev",
+  "results": {
+    "top3": {
+      "smoke_human_30": {
+        "n": 30,
+        "accuracy": 0.8333,
+        "classifier_only": 0.6
+      },
+      "silver_high_dev": {
+        "n": 120,
+        "accuracy": 0.7417,
+        "classifier_only": 0.8
+      }
+    },
+    "low_any_medium_top3": {
+      "smoke_human_30": {
+        "n": 30,
+        "accuracy": 0.9,
+        "classifier_only": 0.6
+      },
+      "silver_high_dev": {
+        "n": 120,
+        "accuracy": 0.6833,
+        "classifier_only": 0.8
+      }
+    },
+    "llm_conf_0.7": {
+      "smoke_human_30": {
+        "n": 30,
+        "accuracy": 0.9333,
+        "classifier_only": 0.6
+      },
+      "silver_high_dev": {
+        "n": 120,
+        "accuracy": 0.6583,
+        "classifier_only": 0.8
+      }
+    },
+    "agree_top2": {
+      "smoke_human_30": {
+        "n": 30,
+        "accuracy": 0.7667,
+        "classifier_only": 0.6
+      },
+      "silver_high_dev": {
+        "n": 120,
+        "accuracy": 0.7333,
+        "classifier_only": 0.8
+      }
+    }
+  },
+  "consult_when": "confidence_band in (LOW, MEDIUM)"
+}

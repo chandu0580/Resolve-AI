@@ -1,0 +1,472 @@
+{
+ "request_id": "fixture-B",
+ "trace_id": "02b02709968a431bad2a6657043d2044",
+ "action": "CLARIFICATION_REQUIRED",
+ "outcome": {
+  "action": "CLARIFICATION_REQUIRED",
+  "what_happened": "Asked the customer one clarifying question instead of answering.",
+  "why": "The message does not state a concrete issue yet. Evidence gate: INSUFFICIENT (insufficient_query).",
+  "evidence_basis": "5 similar historical cases retrieved; top similarity 0.84; evidence INSUFFICIENT (insufficient_query); resolution clusters: article x1, update x1; resolution confidence 0.00.",
+  "next_step": "Wait for the customer's reply (which device you're using, which software version is installed (Settings > General > About), exactly what's happening); the same pipeline runs again with the added detail.",
+  "reason_code": "insufficient_context",
+  "rule": "insufficient_context",
+  "policy_version": "policy-v3.1",
+  "autonomous_response_allowed": false,
+  "output_gate": {
+   "policy_allows_automation": false,
+   "no_blocking_risk_flag": true,
+   "intent_confidence_acceptable": false,
+   "evidence_sufficient": false,
+   "response_generated": false,
+   "response_verified": false,
+   "evidence_refs_exist": false,
+   "pii_guard": false,
+   "schema_valid": false
+  },
+  "blocking_checks": [
+   "policy_allows_automation",
+   "intent_confidence_acceptable",
+   "evidence_sufficient",
+   "response_generated",
+   "response_verified",
+   "evidence_refs_exist",
+   "pii_guard",
+   "schema_valid"
+  ]
+ },
+ "response": {
+  "kind": "clarifying_question",
+  "text": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?",
+  "sent_automatically": false,
+  "evidence_refs": [],
+  "draft_attempts": 0
+ },
+ "intent": {
+  "intent": "keyboard_text_bug",
+  "confidence": 0.2705,
+  "top3": [
+   [
+    "keyboard_text_bug",
+    0.2705
+   ],
+   [
+    "performance_crash",
+    0.21
+   ],
+   [
+    "apps_services",
+    0.1559
+   ]
+  ],
+  "method": "embed_lr",
+  "confidence_band": "LOW",
+  "calibrated": true,
+  "calibration": {
+   "method": "temperature",
+   "temperature": 1.5,
+   "dev_ece": 0.0355
+  },
+  "secondary_intents": [
+   "performance_crash"
+  ],
+  "multi_intent": true,
+  "insufficient_context": true,
+  "taxonomy_gap": false,
+  "context_used": false,
+  "second_opinion": null,
+  "second_opinion_applied": false
+ },
+ "evidence": {
+  "query": "my phone is acting weird",
+  "query_intent": null,
+  "retriever": "dense:bge-small:pair+rr+gatev3",
+  "items": [
+   {
+    "evidence_id": "1635180",
+    "thread_id": "1635181",
+    "source_row_id": "1635181",
+    "customer_message": "Hey wanna tell me why my phone does this. “ I️ I️ I️ I️ I️ I️ I️”",
+    "brand_reply": "Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>",
+    "created_at": "2017-11-05 18:27:01+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 1,
+    "ranks": {
+     "pair": 4
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.8354216814041138,
+     "cos_reply": 0.0,
+     "cos_pair": 0.8018465638160706,
+     "rrf": 0.041666666666666664,
+     "outcome_bonus": 0.0,
+     "rerank": 0.7156592294454575,
+     "final": 0.7156592294454575
+    },
+    "quality": {
+     "semantic_relevance": 0.8354216814041138,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "general_complaint",
+     "resolution_relevance": true,
+     "action_class": "update",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "1631257",
+    "thread_id": "1631258",
+    "source_row_id": "1631258",
+    "customer_message": "why is my phone doing this and how do I fix it? <url>",
+    "brand_reply": "We'd like to help! Let's try the steps outlined in this article: <url>",
+    "created_at": "2017-11-05 16:35:54+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 2,
+    "ranks": {
+     "pair": 45
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.8878511786460876,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7727367877960205,
+     "rrf": 0.015384615384615385,
+     "outcome_bonus": 0.0,
+     "rerank": 0.7112321094751358,
+     "final": 0.7112321094751358
+    },
+    "quality": {
+     "semantic_relevance": 0.8878511786460876,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "general_complaint",
+     "resolution_relevance": true,
+     "action_class": "article",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "2031711",
+    "thread_id": "2031712",
+    "source_row_id": "2031712",
+    "customer_message": "Bro my phone was not acting up with the letter i until today wtf",
+    "brand_reply": "Here’s what you can do to work around the issue until it’s fixed in a future software update: <url> <url>",
+    "created_at": "2017-11-07 04:56:38+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 3,
+    "ranks": {
+     "pair": 49
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.8091328144073486,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7719433307647705,
+     "rrf": 0.014492753623188406,
+     "outcome_bonus": 0.0,
+     "rerank": 0.6996323177337647,
+     "final": 0.6996323177337647
+    },
+    "quality": {
+     "semantic_relevance": 0.8091328144073486,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "keyboard_text_bug",
+     "resolution_relevance": true,
+     "action_class": "update",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "1708441",
+    "thread_id": "1708443",
+    "source_row_id": "1708443",
+    "customer_message": "Phone alternates between black, Apple logo, and sometimes a horizontal line. It’s being doing this for 3 hrs now.",
+    "brand_reply": "Attempt the steps in this article, and let us know your results: <url>",
+    "created_at": "2017-11-07 00:20:43+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 4,
+    "ranks": {
+     "pair": 11
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.8249329328536987,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7915398478507996,
+     "rrf": 0.03225806451612903,
+     "outcome_bonus": 0.0,
+     "rerank": 0.6939114884614944,
+     "final": 0.6939114884614944
+    },
+    "quality": {
+     "semantic_relevance": 0.8249329328536987,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "connectivity",
+     "resolution_relevance": true,
+     "action_class": "article",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "1670624",
+    "thread_id": "1670625",
+    "source_row_id": "1670625",
+    "customer_message": "WHY IS MY PHONE DOING THIS 👉🏼 i️ i️ i️",
+    "brand_reply": "Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>",
+    "created_at": "2017-11-06 03:42:14+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 5,
+    "ranks": {
+     "pair": 18
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.8547366857528687,
+     "cos_reply": 0.0,
+     "cos_pair": 0.7854664921760559,
+     "rrf": 0.02631578947368421,
+     "outcome_bonus": 0.0,
+     "rerank": 0.5683244630575179,
+     "final": 0.5683244630575179
+    },
+    "quality": {
+     "semantic_relevance": 0.8547366857528687,
+     "lexical_relevance": 0.0,
+     "intent_match": null,
+     "candidate_intent": "general_complaint",
+     "resolution_relevance": true,
+     "action_class": "update",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   }
+  ],
+  "n_retrieved": 50,
+  "n_relevant": 5,
+  "sufficient": false,
+  "sufficiency_reason": "insufficient_query",
+  "sufficiency_level": "INSUFFICIENT",
+  "resolution_confidence": 0.0,
+  "consistency": "mixed_resolution",
+  "resolution_candidates": [
+   {
+    "action_class": "article",
+    "representative_reply": "We'd like to help! Let's try the steps outlined in this article: <url>",
+    "representative_id": "1631257",
+    "evidence_ids": [
+     "1631257"
+    ],
+    "support_count": 1,
+    "mean_similarity": 0.888,
+    "positive_outcomes": 0,
+    "share": 0.5
+   },
+   {
+    "action_class": "update",
+    "representative_reply": "Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>",
+    "representative_id": "1670624",
+    "evidence_ids": [
+     "1670624"
+    ],
+    "support_count": 1,
+    "mean_similarity": 0.855,
+    "positive_outcomes": 0,
+    "share": 0.5
+   }
+  ],
+  "signals": {
+   "n_retrieved": 5,
+   "n_relevant": 5,
+   "query_content_tokens": 3,
+   "query_symptom_tokens": 0,
+   "top_similarity": 0.8354216814041138,
+   "similarity_margin": 0.026288866996765137,
+   "intent_agreement": 0.6,
+   "modal_intent": "general_complaint",
+   "query_intent_agreement": null,
+   "support_count": 2,
+   "resolution_bearing": 0,
+   "action_classes": {
+    "article": 1,
+    "update": 1
+   },
+   "conflicting": true,
+   "same_customer_count": 0
+  },
+  "gate_version": "gate-v3",
+  "latency_ms": 74.89420000001701
+ },
+ "risk": {
+  "safety_concern": false,
+  "security_concern": false,
+  "privacy_concern": false,
+  "account_access_risk": false,
+  "payment_billing_risk": false,
+  "legal_or_media_threat": false,
+  "abusive_threatening": false,
+  "high_impact": false,
+  "needs_private_info": false,
+  "physical_damage": false,
+  "repeat_contact": false,
+  "sensitive_action_required": false,
+  "high_frustration": false,
+  "prompt_injection": false,
+  "is_actionable": true,
+  "insufficient_context": true,
+  "conflicting_evidence": false,
+  "summary": "Customer reports their phone is behaving unexpectedly.",
+  "source": "llm+rules"
+ },
+ "verification": null,
+ "clarification": {
+  "reason_code": "insufficient_context",
+  "why": "The message does not state a concrete issue yet. Evidence gate: INSUFFICIENT (insufficient_query).",
+  "evidence_level": "INSUFFICIENT",
+  "evidence_reason": "insufficient_query",
+  "missing_information": [
+   "which device you're using",
+   "which software version is installed (Settings > General > About)",
+   "exactly what's happening"
+  ],
+  "already_provided": [],
+  "question": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?",
+  "intent_hypothesis": "keyboard_text_bug",
+  "intent_confidence": 0.271,
+  "confidence_band": "LOW",
+  "alternatives": [
+   "performance_crash",
+   "apps_services"
+  ],
+  "evidence_summary": "5 similar historical cases retrieved; top similarity 0.84; evidence INSUFFICIENT (insufficient_query); resolution clusters: article x1, update x1; resolution confidence 0.00.",
+  "trace_id": "02b02709968a431bad2a6657043d2044",
+  "policy_version": "policy-v3.1"
+ },
+ "handoff": null,
+ "conversation": {
+  "message": {
+   "message_id": "3949c92a85de",
+   "text": "my phone is acting weird",
+   "pii_counts": {},
+   "language_hint": null,
+   "received_at": null
+  },
+  "context": {
+   "turns": [],
+   "truncated": false
+  }
+ },
+ "versions": {
+  "pipeline": "pipeline-v5.1",
+  "policy": "policy-v3.1",
+  "output_gate": "output-gate-v1",
+  "retrieval": "dense:bge-small:pair+rr+gatev3",
+  "evidence_gate": "gate-v3",
+  "rerank": "rerank-v1",
+  "classifier": "2d194e7e704f",
+  "prompts": {
+   "risk": "risk-flags-v2",
+   "draft": "draft-v2",
+   "verify": "verify-v2",
+   "second_opinion": "intent-second-opinion-v1"
+  },
+  "model": "glm-5.2",
+  "config_hash": "77fe3db81c69bf09"
+ },
+ "stage_status": {
+  "pii_redaction": "ok",
+  "context": "ok",
+  "intent": "ok",
+  "second_opinion": "skipped",
+  "retrieval": "ok",
+  "evidence_gate": "ok",
+  "risk": "ok",
+  "policy": "ok",
+  "draft": "skipped",
+  "verification": "skipped",
+  "output_gate": "ok"
+ },
+ "latency_ms": {
+  "pii_redaction": 0.09,
+  "context": 0.11,
+  "intent": 85.06,
+  "second_opinion": 0.01,
+  "retrieval": 75.08,
+  "evidence_gate": 0.0,
+  "risk": 4.98,
+  "policy": 0.08,
+  "draft": 0.0,
+  "verification": 0.0,
+  "output_gate": 0.05,
+  "total": 169.98
+ },
+ "usage": {
+  "llm_calls": 1,
+  "live_calls": 0,
+  "cache_hits": 1,
+  "tokens_in": 319,
+  "tokens_out": 409,
+  "estimated_cost_usd": 0.001628,
+  "fallbacks": 0
+ }
+}

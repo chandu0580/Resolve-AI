@@ -1,0 +1,48 @@
+{
+ "golden_sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9",
+ "golden_rows": 197,
+ "inputs": {
+  "artifacts/evaluation/judge_config.json": "499e56666ed728bf4e2b3c6909201e62e25f91960b8e60811fe4106b8d6d4a2d",
+  "artifacts/evaluation/judge_results.jsonl": "2aea26e040a527c7095d26dd65702f8cb6e484cdebed5baa6063e1d5fc0bbd3e",
+  "artifacts/evaluation/offline_ablations.json": "3d52e5129ae04c9e2edcff74089f17280fc0dc5f484fe99562b2358bd315e07c",
+  "artifacts/evaluation/pairwise_results.jsonl": "244894af2b011ad784089402f74e8ff00ef7076944f07ab1d5de1fee70996983",
+  "artifacts/evaluation/runs/B0_trivial.jsonl": "bbeddf6d0eae3aee0aa31f5027b0e08a4600e35c7dd5be43aa44e0983e2aebb6",
+  "artifacts/evaluation/runs/B0_trivial_always_handoff.jsonl": "5820774087a29bcf9c6392c4514131832a2b672b7bf97f67ca51c9fa54a95a52",
+  "artifacts/evaluation/runs/B1_simple_ml.jsonl": "71f114c6b7c3f50c0184b40d9de1ca61a17c6df92359375a95b7281143e08550",
+  "artifacts/evaluation/runs/B2_direct_llm.jsonl": "25271a9ce1077bb18099d460cca9df487652c9b104a2cc0620f91c7df6ce906b",
+  "artifacts/evaluation/runs/minus_resolution_rerank.jsonl": "9f83ae5de09ab8dd6e36cb58a8582d5a47f5ef761e9b8348c310a948c677a4da",
+  "artifacts/evaluation/runs/minus_retrieval.jsonl": "5bf2b89a134f45bdb6be891322db3449031001e67343b2c6d0f45d6e4983f7c6",
+  "artifacts/evaluation/runs/minus_risk_llm.jsonl": "87872ceeccf4d5222406b3b7577971cfe36de6ee091f42cb660fdeda958306c4",
+  "artifacts/evaluation/runs/minus_second_opinion.jsonl": "2417d494e907fc8df7aae39959ba2bb2cd56178a821a0f71e647e1d80a0697e6",
+  "artifacts/evaluation/runs/offline_weak_drafts.jsonl": "a5f6714494bf6e88e3e1ce68b611c9d66069795bace0003b0a6dd50c7ff69d37",
+  "artifacts/evaluation/runs/resolveai_full.jsonl": "e201a7964cb61b4fd818ef5a85cb65e0fa20e7b050dc70e012b00e10613e7277",
+  "data/human_eval/human_scoring_packet.csv": "e838cb1347adeef32c421a0346246ca97726380a96e9411b3815e900df70fea6",
+  "resolveai/models/artifacts/intent_bge_lr.json": "2d194e7e704fb7a1a585ff3113e442d208845b8f6aa2bf2c5892580acd55f1b5",
+  "resolveai/retrieval/gate_v3_config.json": "3d560f4cd9a92a358adbf359afccbf2f0b726c5fd4fc59fc3bf4cca775dc7210",
+  "resolveai/retrieval/rerank_weights.json": "68f61a28be76a126fdc7d2aa338bd7ae5b594d6117fae6ec66335f962cf3b900"
+ },
+ "mode": "cached",
+ "n_boot": 1000,
+ "seed": 42,
+ "rubric_version": "rubric-v1",
+ "judge_prompt_versions": [
+  "judge-abs-v1",
+  "judge-pair-v1"
+ ],
+ "inputs_changed_since_last_run": [],
+ "runtime_seconds": 129.3,
+ "systems": [
+  "resolveai_full",
+  "B0_trivial",
+  "B0_trivial_always_handoff",
+  "B1_simple_ml",
+  "B2_direct_llm",
+  "minus_second_opinion",
+  "minus_resolution_rerank",
+  "minus_risk_llm",
+  "minus_retrieval"
+ ],
+ "judge_rows": 931,
+ "pairwise_rows": 394,
+ "human_study": "RATED"
+}

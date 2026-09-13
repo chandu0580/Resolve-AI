@@ -1,0 +1,263 @@
+{
+ "machine_note": "local CPU (no GPU); BGE-small embeddings; GLM-5.2 through the configured OpenAI-compatible endpoint",
+ "agent_cold_load_s": 4.2,
+ "deterministic_in_process": {
+  "n": 40,
+  "client_ms": {
+   "p50": 132.4,
+   "p95": 643.5
+  },
+  "agent_ms": {
+   "p50": 88.8,
+   "p95": 617.3
+  },
+  "api_overhead_ms": {
+   "p50": 39.9,
+   "p95": 68.1,
+   "max": 76.2
+  },
+  "stages_ms": {
+   "context": {
+    "p50": 0.1,
+    "p95": 1.3
+   },
+   "draft": {
+    "p50": 0.0,
+    "p95": 0.0
+   },
+   "evidence_gate": {
+    "p50": 0.0,
+    "p95": 0.0
+   },
+   "handoff": {
+    "p50": 0.2,
+    "p95": 0.8
+   },
+   "intent": {
+    "p50": 0.7,
+    "p95": 341.6
+   },
+   "output_gate": {
+    "p50": 0.0,
+    "p95": 0.2
+   },
+   "pii_redaction": {
+    "p50": 0.1,
+    "p95": 0.6
+   },
+   "policy": {
+    "p50": 0.0,
+    "p95": 0.1
+   },
+   "retrieval": {
+    "p50": 71.9,
+    "p95": 315.1
+   },
+   "risk": {
+    "p50": 0.6,
+    "p95": 2.2
+   },
+   "second_opinion": {
+    "p50": 0.0,
+    "p95": 0.0
+   },
+   "total": {
+    "p50": 88.8,
+    "p95": 617.3
+   },
+   "verification": {
+    "p50": 0.0,
+    "p95": 0.0
+   }
+  },
+  "actions": {
+   "CLARIFICATION_REQUIRED": 20,
+   "HUMAN_HANDOFF": 20
+  }
+ },
+ "llm_live_first_pass": {
+  "n": 8,
+  "client_ms": {
+   "p50": 4880.9,
+   "p95": 31813.3
+  },
+  "agent_ms": {
+   "p50": 4838.9,
+   "p95": 31746.0
+  },
+  "api_overhead_ms": {
+   "p50": 42.3,
+   "p95": 91.1,
+   "max": 113.8
+  },
+  "stages_ms": {
+   "context": {
+    "p50": 0.1,
+    "p95": 0.3
+   },
+   "draft": {
+    "p50": 0.0,
+    "p95": 10202.8
+   },
+   "evidence_gate": {
+    "p50": 0.0,
+    "p95": 0.0
+   },
+   "handoff": {
+    "p50": 0.3,
+    "p95": 0.5
+   },
+   "intent": {
+    "p50": 307.3,
+    "p95": 2646.4
+   },
+   "output_gate": {
+    "p50": 0.1,
+    "p95": 0.5
+   },
+   "pii_redaction": {
+    "p50": 0.1,
+    "p95": 15.2
+   },
+   "policy": {
+    "p50": 0.0,
+    "p95": 1.0
+   },
+   "retrieval": {
+    "p50": 298.6,
+    "p95": 1497.7
+   },
+   "risk": {
+    "p50": 1963.2,
+    "p95": 4998.3
+   },
+   "second_opinion": {
+    "p50": 0.0,
+    "p95": 960.2
+   },
+   "total": {
+    "p50": 4838.9,
+    "p95": 31746.0
+   },
+   "verification": {
+    "p50": 0.0,
+    "p95": 21700.5
+   }
+  },
+  "actions": {
+   "AUTO_HANDLE": 2,
+   "HUMAN_HANDOFF": 5,
+   "CLARIFICATION_REQUIRED": 1
+  }
+ },
+ "llm_cache_served_second_pass": {
+  "n": 8,
+  "client_ms": {
+   "p50": 145.1,
+   "p95": 251.0
+  },
+  "agent_ms": {
+   "p50": 113.5,
+   "p95": 213.7
+  },
+  "api_overhead_ms": {
+   "p50": 29.2,
+   "p95": 38.6,
+   "max": 40.3
+  },
+  "stages_ms": {
+   "context": {
+    "p50": 0.1,
+    "p95": 0.3
+   },
+   "draft": {
+    "p50": 0.0,
+    "p95": 56.3
+   },
+   "evidence_gate": {
+    "p50": 0.0,
+    "p95": 0.0
+   },
+   "handoff": {
+    "p50": 0.2,
+    "p95": 0.2
+   },
+   "intent": {
+    "p50": 0.4,
+    "p95": 0.9
+   },
+   "output_gate": {
+    "p50": 0.0,
+    "p95": 0.2
+   },
+   "pii_redaction": {
+    "p50": 0.1,
+    "p95": 0.4
+   },
+   "policy": {
+    "p50": 0.0,
+    "p95": 0.1
+   },
+   "retrieval": {
+    "p50": 64.3,
+    "p95": 110.2
+   },
+   "risk": {
+    "p50": 30.0,
+    "p95": 46.7
+   },
+   "second_opinion": {
+    "p50": 0.0,
+    "p95": 22.0
+   },
+   "total": {
+    "p50": 113.5,
+    "p95": 213.7
+   },
+   "verification": {
+    "p50": 0.0,
+    "p95": 27.6
+   }
+  },
+  "actions": {
+   "AUTO_HANDLE": 2,
+   "HUMAN_HANDOFF": 5,
+   "CLARIFICATION_REQUIRED": 1
+  }
+ },
+ "llm_usage_total": {
+  "calls": 24,
+  "live_calls": 12,
+  "cache_hits": 12,
+  "tokens_in": 5402,
+  "tokens_out": 5961,
+  "latency_ms": 70857.40980000037,
+  "errors": 0,
+  "fallbacks": 2,
+  "cached_tokens_in": 5402,
+  "cached_tokens_out": 5961
+ },
+ "deterministic_over_http": {
+  "startup_until_ready_s": 33.6,
+  "health": {
+   "status": "ok",
+   "service": "resolveai",
+   "version": "0.7.0",
+   "env": "test",
+   "uptime_s": 30.5
+  },
+  "n": 24,
+  "client_ms": {
+   "p50": 73.1,
+   "p95": 586.0
+  },
+  "agent_ms": {
+   "p50": 55.1,
+   "p95": 571.9
+  },
+  "http_api_overhead_ms": {
+   "p50": 12.0,
+   "p95": 21.2
+  }
+ }
+}

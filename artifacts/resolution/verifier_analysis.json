@@ -1,0 +1,45 @@
+{
+ "n_drafts": 26,
+ "n_blocked": 12,
+ "n_blocked_labelled": 12,
+ "labels": {
+  "FALSE_BLOCK": 5,
+  "TRUE_BLOCK": 6,
+  "UNCERTAIN": 1
+ },
+ "true_block_rate": 0.5,
+ "false_block_rate": 0.417,
+ "uncertain_rate": 0.083,
+ "by_blocking_check": {
+  "llm_support_check": {
+   "FALSE_BLOCK": 5,
+   "TRUE_BLOCK": 3
+  },
+  "evidence_refs": {
+   "TRUE_BLOCK": 2
+  },
+  "evidence_coverage": {
+   "TRUE_BLOCK": 1
+  },
+  "draft_failed": {
+   "UNCERTAIN": 1
+  }
+ },
+ "by_arm": {
+  "A_v1": {
+   "FALSE_BLOCK": 1,
+   "TRUE_BLOCK": 6
+  },
+  "B_v2": {
+   "FALSE_BLOCK": 4,
+   "UNCERTAIN": 1
+  }
+ },
+ "passed_sample": {
+  "n": 12,
+  "labels": {
+   "TRUE_PASS": 12
+  }
+ },
+ "annotator": "AI annotator (Claude) reading draft + cited evidence; not a human study"
+}

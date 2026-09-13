@@ -1,0 +1,8 @@
+{
+ "n_messages": 19953,
+ "n_flagged": 0,
+ "flag_rate": 0.0,
+ "by_pattern": {},
+ "flagged_examples": [],
+ "note": "every flag on this historical traffic is a false positive by construction (2017 Twitter support, no AI assistant to attack); golden rows excluded"
+}

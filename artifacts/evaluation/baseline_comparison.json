@@ -1,0 +1,740 @@
+{
+ "systems": {
+  "resolveai_full": {
+   "description": "resolveai_full",
+   "intent": {
+    "accuracy": 0.8477,
+    "macro_f1": 0.8538
+   },
+   "escalation": {
+    "precision": 0.2869,
+    "recall": 0.9459,
+    "f1": 0.4403,
+    "fp": 87,
+    "fn": 2
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.0457,
+    "clarification_rate": 0.335,
+    "handoff_rate": 0.6193,
+    "safe_auto_handle_count": 9,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 5,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 151
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 117.3,
+    "p95_latency_ms": 241.8,
+    "llm_calls_per_message": 1.553,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 667.7,
+    "tokens_out_per_message": 606.5,
+    "estimated_cost_usd_per_message": 0.002608,
+    "failed_calls": 0
+   },
+   "judge": {
+    "groundedness": 4.284,
+    "relevance": 3.361,
+    "actionability": 2.928,
+    "completeness": 2.567,
+    "policy_compliance": 4.485,
+    "tone": 4.376
+   },
+   "judge_rates": {
+    "groundedness_share_ge4": 0.778,
+    "relevance_share_ge4": 0.438,
+    "actionability_share_ge4": 0.356,
+    "completeness_share_ge4": 0.155,
+    "policy_compliance_share_ge4": 0.933,
+    "tone_share_ge4": 0.938,
+    "hallucination": 0.216,
+    "policy_violation": 0.015
+   }
+  },
+  "B0_trivial": {
+   "description": "majority silver intent; modal DM reply; never escalates (always-handoff variant for escalation reference)",
+   "intent": {
+    "accuracy": 0.0812,
+    "macro_f1": 0.0137
+   },
+   "escalation": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "fp": 0,
+    "fn": 37
+   },
+   "autonomy": {
+    "auto_handle_rate": 1.0,
+    "clarification_rate": 0.0,
+    "handoff_rate": 0.0,
+    "safe_auto_handle_count": 0,
+    "unsafe_auto_handle_count": 37,
+    "grounded_auto_handle_count": 0,
+    "correct_non_autonomous_count": 0,
+    "unnecessary_non_autonomous_count": 0
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 0.0,
+    "p95_latency_ms": 0.0,
+    "llm_calls_per_message": 0.0,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 0.0,
+    "tokens_out_per_message": 0.0,
+    "estimated_cost_usd_per_message": 0.0,
+    "failed_calls": 0
+   },
+   "judge": {
+    "groundedness": 4.985,
+    "relevance": 3.259,
+    "actionability": 3.782,
+    "completeness": 2.787,
+    "policy_compliance": 4.858,
+    "tone": 4.437
+   },
+   "judge_rates": {
+    "groundedness_share_ge4": 1.0,
+    "relevance_share_ge4": 0.487,
+    "actionability_share_ge4": 0.751,
+    "completeness_share_ge4": 0.132,
+    "policy_compliance_share_ge4": 0.995,
+    "tone_share_ge4": 0.898,
+    "hallucination": 0.0,
+    "policy_violation": 0.005
+   }
+  },
+  "B0_trivial_always_handoff": {
+   "description": "B0_trivial_always_handoff",
+   "intent": {
+    "accuracy": 0.0812,
+    "macro_f1": 0.0137
+   },
+   "escalation": {
+    "precision": 0.1878,
+    "recall": 1.0,
+    "f1": 0.3162,
+    "fp": 160,
+    "fn": 0
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.0,
+    "clarification_rate": 0.0,
+    "handoff_rate": 1.0,
+    "safe_auto_handle_count": 0,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 0,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 160
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 0.0,
+    "p95_latency_ms": 0.0,
+    "llm_calls_per_message": 0.0,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 0.0,
+    "tokens_out_per_message": 0.0,
+    "estimated_cost_usd_per_message": 0.0,
+    "failed_calls": 0
+   },
+   "judge": null,
+   "judge_rates": null
+  },
+  "B1_simple_ml": {
+   "description": "TF-IDF+LR (silver train, C on silver dev); nearest-neighbour historical reply (BGE-small customer index); rule escalation",
+   "intent": {
+    "accuracy": 0.5431,
+    "macro_f1": 0.5498
+   },
+   "escalation": {
+    "precision": 0.4912,
+    "recall": 0.7568,
+    "f1": 0.5957,
+    "fp": 29,
+    "fn": 9
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.7107,
+    "clarification_rate": 0.0,
+    "handoff_rate": 0.2893,
+    "safe_auto_handle_count": 13,
+    "unsafe_auto_handle_count": 9,
+    "grounded_auto_handle_count": 0,
+    "correct_non_autonomous_count": 28,
+    "unnecessary_non_autonomous_count": 29
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 114.3,
+    "p95_latency_ms": 197.7,
+    "llm_calls_per_message": 0.0,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 0.0,
+    "tokens_out_per_message": 0.0,
+    "estimated_cost_usd_per_message": 0.0,
+    "failed_calls": 0
+   },
+   "judge": {
+    "groundedness": 4.284,
+    "relevance": 3.108,
+    "actionability": 3.142,
+    "completeness": 2.574,
+    "policy_compliance": 4.568,
+    "tone": 4.153
+   },
+   "judge_rates": {
+    "groundedness_share_ge4": 0.795,
+    "relevance_share_ge4": 0.386,
+    "actionability_share_ge4": 0.443,
+    "completeness_share_ge4": 0.239,
+    "policy_compliance_share_ge4": 0.926,
+    "tone_share_ge4": 0.79,
+    "hallucination": 0.17,
+    "policy_violation": 0.04
+   }
+  },
+  "B2_direct_llm": {
+   "description": "GLM-5.2 single call (direct-llm-baseline-v1) with taxonomy definitions + guide escalation criteria + full thread; no retrieval/evidence/verifier",
+   "intent": {
+    "accuracy": 0.8782,
+    "macro_f1": 0.8867
+   },
+   "escalation": {
+    "precision": 0.7391,
+    "recall": 0.9189,
+    "f1": 0.8193,
+    "fp": 12,
+    "fn": 3
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.7665,
+    "clarification_rate": 0.0,
+    "handoff_rate": 0.2335,
+    "safe_auto_handle_count": 0,
+    "unsafe_auto_handle_count": 3,
+    "grounded_auto_handle_count": 0,
+    "correct_non_autonomous_count": 34,
+    "unnecessary_non_autonomous_count": 12
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 6543.1,
+    "p95_latency_ms": 21539.1,
+    "llm_calls_per_message": 1.071,
+    "live_calls_per_message": 1.071,
+    "tokens_in_per_message": 678.9,
+    "tokens_out_per_message": 527.3,
+    "estimated_cost_usd_per_message": 0.002366,
+    "failed_calls": 1
+   },
+   "judge": {
+    "groundedness": 3.227,
+    "relevance": 4.629,
+    "actionability": 4.077,
+    "completeness": 3.505,
+    "policy_compliance": 4.943,
+    "tone": 4.851
+   },
+   "judge_rates": {
+    "groundedness_share_ge4": 0.443,
+    "relevance_share_ge4": 0.928,
+    "actionability_share_ge4": 0.861,
+    "completeness_share_ge4": 0.469,
+    "policy_compliance_share_ge4": 0.99,
+    "tone_share_ge4": 1.0,
+    "hallucination": 0.526,
+    "policy_violation": 0.01
+   }
+  },
+  "minus_second_opinion": {
+   "description": "minus_second_opinion",
+   "intent": {
+    "accuracy": 0.6142,
+    "macro_f1": 0.6182
+   },
+   "escalation": {
+    "precision": 0.3,
+    "recall": 0.973,
+    "f1": 0.4586,
+    "fp": 84,
+    "fn": 1
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.0457,
+    "clarification_rate": 0.3452,
+    "handoff_rate": 0.6091,
+    "safe_auto_handle_count": 9,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 5,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 151
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 221.4,
+    "p95_latency_ms": 437.7,
+    "llm_calls_per_message": 0.797,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 287.8,
+    "tokens_out_per_message": 452.0,
+    "estimated_cost_usd_per_message": 0.001734,
+    "failed_calls": 0
+   },
+   "judge": null,
+   "judge_rates": null
+  },
+  "minus_resolution_rerank": {
+   "description": "minus_resolution_rerank",
+   "intent": {
+    "accuracy": 0.8477,
+    "macro_f1": 0.8538
+   },
+   "escalation": {
+    "precision": 0.2778,
+    "recall": 0.9459,
+    "f1": 0.4294,
+    "fp": 91,
+    "fn": 2
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.0558,
+    "clarification_rate": 0.3046,
+    "handoff_rate": 0.6396,
+    "safe_auto_handle_count": 11,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 7,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 149
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 38.9,
+    "p95_latency_ms": 79.7,
+    "llm_calls_per_message": 1.538,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 659.1,
+    "tokens_out_per_message": 584.8,
+    "estimated_cost_usd_per_message": 0.00253,
+    "failed_calls": 0
+   },
+   "judge": null,
+   "judge_rates": null
+  },
+  "minus_risk_llm": {
+   "description": "minus_risk_llm",
+   "intent": {
+    "accuracy": 0.8477,
+    "macro_f1": 0.8538
+   },
+   "escalation": {
+    "precision": 0.3649,
+    "recall": 0.7297,
+    "f1": 0.4865,
+    "fp": 47,
+    "fn": 10
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.0914,
+    "clarification_rate": 0.533,
+    "handoff_rate": 0.3756,
+    "safe_auto_handle_count": 18,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 5,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 142
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 36.4,
+    "p95_latency_ms": 81.9,
+    "llm_calls_per_message": 0.858,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 422.4,
+    "tokens_out_per_message": 197.0,
+    "estimated_cost_usd_per_message": 0.001053,
+    "failed_calls": 0
+   },
+   "judge": null,
+   "judge_rates": null
+  },
+  "minus_retrieval": {
+   "description": "minus_retrieval",
+   "intent": {
+    "accuracy": 0.8477,
+    "macro_f1": 0.8538
+   },
+   "escalation": {
+    "precision": 0.2869,
+    "recall": 0.9459,
+    "f1": 0.4403,
+    "fp": 87,
+    "fn": 2
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.0203,
+    "clarification_rate": 0.3604,
+    "handoff_rate": 0.6193,
+    "safe_auto_handle_count": 4,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 0,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 156
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 4.3,
+    "p95_latency_ms": 8.9,
+    "llm_calls_per_message": 1.487,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 639.1,
+    "tokens_out_per_message": 574.7,
+    "estimated_cost_usd_per_message": 0.002478,
+    "failed_calls": 0
+   },
+   "judge": null,
+   "judge_rates": null
+  }
+ },
+ "paired_differences_vs_resolveai": {
+  "resolveai_full_minus_B0_trivial": {
+   "intent_macro_f1": {
+    "difference": 0.8401,
+    "ci_low": 0.7854,
+    "ci_high": 0.887,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   },
+   "escalation_f1": {
+    "difference": 0.4403,
+    "ci_low": 0.3312,
+    "ci_high": 0.5301,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   },
+   "escalation_recall": {
+    "difference": 0.9459,
+    "ci_low": 0.8621,
+    "ci_high": 1.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   },
+   "safe_auto_rate": {
+    "difference": 0.0457,
+    "ci_low": 0.0203,
+    "ci_high": 0.0761,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   }
+  },
+  "resolveai_full_minus_B0_trivial_always_handoff": {
+   "intent_macro_f1": {
+    "difference": 0.8401,
+    "ci_low": 0.7854,
+    "ci_high": 0.887,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   },
+   "escalation_f1": {
+    "difference": 0.1241,
+    "ci_low": 0.077,
+    "ci_high": 0.1662,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   },
+   "escalation_recall": {
+    "difference": -0.0541,
+    "ci_low": -0.1379,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "safe_auto_rate": {
+    "difference": 0.0457,
+    "ci_low": 0.0203,
+    "ci_high": 0.0761,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   }
+  },
+  "resolveai_full_minus_B1_simple_ml": {
+   "intent_macro_f1": {
+    "difference": 0.304,
+    "ci_low": 0.2236,
+    "ci_high": 0.3916,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   },
+   "escalation_f1": {
+    "difference": -0.1554,
+    "ci_low": -0.2504,
+    "ci_high": -0.0544,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   },
+   "escalation_recall": {
+    "difference": 0.1891,
+    "ci_low": 0.0334,
+    "ci_high": 0.3415,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   },
+   "safe_auto_rate": {
+    "difference": -0.0203,
+    "ci_low": -0.0609,
+    "ci_high": 0.0203,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   }
+  },
+  "resolveai_full_minus_B2_direct_llm": {
+   "intent_macro_f1": {
+    "difference": -0.0329,
+    "ci_low": -0.0823,
+    "ci_high": 0.0137,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "escalation_f1": {
+    "difference": -0.379,
+    "ci_low": -0.4867,
+    "ci_high": -0.2875,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   },
+   "escalation_recall": {
+    "difference": 0.027,
+    "ci_low": -0.0883,
+    "ci_high": 0.1396,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "safe_auto_rate": {
+    "difference": 0.0457,
+    "ci_low": 0.0203,
+    "ci_high": 0.0761,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   }
+  },
+  "resolveai_full_minus_minus_second_opinion": {
+   "intent_macro_f1": {
+    "difference": 0.2356,
+    "ci_low": 0.1747,
+    "ci_high": 0.3026,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   },
+   "escalation_f1": {
+    "difference": -0.0183,
+    "ci_low": -0.048,
+    "ci_high": 0.0049,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "escalation_recall": {
+    "difference": -0.0271,
+    "ci_low": -0.0882,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "safe_auto_rate": {
+    "difference": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   }
+  },
+  "resolveai_full_minus_minus_resolution_rerank": {
+   "intent_macro_f1": {
+    "difference": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "escalation_f1": {
+    "difference": 0.0109,
+    "ci_low": 0.0024,
+    "ci_high": 0.0231,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   },
+   "escalation_recall": {
+    "difference": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "safe_auto_rate": {
+    "difference": -0.0102,
+    "ci_low": -0.0305,
+    "ci_high": 0.0102,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   }
+  },
+  "resolveai_full_minus_minus_risk_llm": {
+   "intent_macro_f1": {
+    "difference": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "escalation_f1": {
+    "difference": -0.0462,
+    "ci_low": -0.1279,
+    "ci_high": 0.0364,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "escalation_recall": {
+    "difference": 0.2162,
+    "ci_low": 0.0882,
+    "ci_high": 0.3715,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   },
+   "safe_auto_rate": {
+    "difference": -0.0457,
+    "ci_low": -0.0761,
+    "ci_high": -0.0203,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   }
+  },
+  "resolveai_full_minus_minus_retrieval": {
+   "intent_macro_f1": {
+    "difference": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "escalation_f1": {
+    "difference": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "escalation_recall": {
+    "difference": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "safe_auto_rate": {
+    "difference": 0.0254,
+    "ci_low": 0.0051,
+    "ci_high": 0.0508,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   }
+  }
+ },
+ "pairwise_judge": {
+  "resolveai_full_vs_B1_simple_ml": {
+   "n": 197,
+   "judge_failures": 0,
+   "win": 100,
+   "tie": 13,
+   "loss": 84,
+   "win_rate": 0.508,
+   "loss_rate": 0.426,
+   "position_check": {
+    "x_in_position_A": 94,
+    "x_wins_when_A": 0.447,
+    "x_wins_when_B": 0.563
+   },
+   "question": "Which response is safer and more useful given the available evidence?"
+  },
+  "resolveai_full_vs_B2_direct_llm": {
+   "n": 197,
+   "judge_failures": 2,
+   "win": 63,
+   "tie": 7,
+   "loss": 125,
+   "win_rate": 0.323,
+   "loss_rate": 0.641,
+   "position_check": {
+    "x_in_position_A": 93,
+    "x_wins_when_A": 0.301,
+    "x_wins_when_B": 0.343
+   },
+   "question": "Which response is safer and more useful given the available evidence?"
+  }
+ },
+ "protocol": "all systems receive the PII-redacted current message and the prior thread turns; ResolveAI truncates context to 2 customer + 1 brand turns, baselines get all turns; only ResolveAI and B1 see historical evidence (the architectural difference under test)"
+}

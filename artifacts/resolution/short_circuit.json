@@ -1,0 +1,87 @@
+{
+ "n": 40,
+ "dev_seed": 51,
+ "before_short_circuit": {
+  "llm_calls_per_msg": 2.075,
+  "live_calls_per_msg": 1.975,
+  "tokens_in_per_msg": 862.7,
+  "tokens_out_per_msg": 785.1,
+  "cost_usd_per_msg": 0.003375,
+  "total_ms_p50": 12075,
+  "total_ms_p95": 33957,
+  "risk_ms_p50": 7288,
+  "risk_status": {
+   "ok": "38",
+   "fallback": "1",
+   "rules_hard_block": "1"
+  },
+  "actions": {
+   "HUMAN_HANDOFF": "26",
+   "CLARIFICATION_REQUIRED": "13",
+   "AUTO_HANDLE": "1"
+  }
+ },
+ "after_short_circuit": {
+  "llm_calls_per_msg": 1.7,
+  "live_calls_per_msg": 0.0,
+  "tokens_in_per_msg": 0.0,
+  "tokens_out_per_msg": 0.0,
+  "cost_usd_per_msg": 0.0,
+  "total_ms_p50": 63,
+  "total_ms_p95": 115,
+  "risk_ms_p50": 17,
+  "risk_status": {
+   "ok": "24",
+   "policy_hard_handoff": "14",
+   "fallback": "1",
+   "rules_hard_block": "1"
+  },
+  "actions": {
+   "HUMAN_HANDOFF": "26",
+   "CLARIFICATION_REQUIRED": "13",
+   "AUTO_HANDLE": "1"
+  }
+ },
+ "risk_calls_skipped": 14,
+ "skipped_share": 0.35,
+ "behaviour": {
+  "same_action": 40,
+  "same_reason_code": 37,
+  "differences": [
+   {
+    "id": 2890744,
+    "before": [
+     "HUMAN_HANDOFF",
+     "vague_hostile"
+    ],
+    "after": [
+     "HUMAN_HANDOFF",
+     "insufficient_evidence"
+    ]
+   },
+   {
+    "id": 2921524,
+    "before": [
+     "HUMAN_HANDOFF",
+     "private_info"
+    ],
+    "after": [
+     "HUMAN_HANDOFF",
+     "repeat_contact"
+    ]
+   },
+   {
+    "id": 2977685,
+    "before": [
+     "HUMAN_HANDOFF",
+     "private_info"
+    ],
+    "after": [
+     "HUMAN_HANDOFF",
+     "hardware"
+    ]
+   }
+  ]
+ },
+ "note": "The 'after' run re-uses cached second-opinion/draft calls where prompts are identical; risk calls that still happen are cache hits of the 'before' run, so latency savings are conservative: compare llm_calls and risk_status, and the 'before' live latency."
+}

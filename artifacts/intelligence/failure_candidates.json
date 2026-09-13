@@ -1,0 +1,3544 @@
+{
+ "n_wrong": 76,
+ "top_confusions": [
+  [
+   [
+    "data_loss_sync",
+    "apps_services"
+   ],
+   6
+  ],
+  [
+   [
+    "other",
+    "account_store_repair"
+   ],
+   4
+  ],
+  [
+   [
+    "apps_services",
+    "keyboard_text_bug"
+   ],
+   4
+  ],
+  [
+   [
+    "apps_services",
+    "battery_power"
+   ],
+   3
+  ],
+  [
+   [
+    "other",
+    "apps_services"
+   ],
+   3
+  ],
+  [
+   [
+    "general_complaint",
+    "keyboard_text_bug"
+   ],
+   3
+  ],
+  [
+   [
+    "apps_services",
+    "general_complaint"
+   ],
+   3
+  ],
+  [
+   [
+    "general_complaint",
+    "apps_services"
+   ],
+   3
+  ],
+  [
+   [
+    "hardware_damage",
+    "battery_power"
+   ],
+   2
+  ],
+  [
+   [
+    "performance_crash",
+    "general_complaint"
+   ],
+   2
+  ],
+  [
+   [
+    "account_store_repair",
+    "data_loss_sync"
+   ],
+   2
+  ],
+  [
+   [
+    "general_complaint",
+    "account_store_repair"
+   ],
+   2
+  ],
+  [
+   [
+    "performance_crash",
+    "hardware_damage"
+   ],
+   2
+  ],
+  [
+   [
+    "keyboard_text_bug",
+    "general_complaint"
+   ],
+   2
+  ],
+  [
+   [
+    "apps_services",
+    "connectivity"
+   ],
+   2
+  ]
+ ],
+ "categories": {
+  "short_message": [
+   "g028",
+   "g033",
+   "g036",
+   "g037",
+   "g039",
+   "g050",
+   "g051",
+   "g056",
+   "g062",
+   "g073",
+   "g077",
+   "g079",
+   "g081",
+   "g087",
+   "g105",
+   "g106",
+   "g107",
+   "g113",
+   "g120",
+   "g125",
+   "g142",
+   "g161",
+   "g162",
+   "g167",
+   "g169",
+   "g174",
+   "g189"
+  ],
+  "multi_turn_short_reply": [
+   "g039",
+   "g050",
+   "g051",
+   "g073",
+   "g120",
+   "g161",
+   "g167"
+  ],
+  "gold_other_missed": [
+   "g025",
+   "g028",
+   "g046",
+   "g057",
+   "g059",
+   "g060",
+   "g076",
+   "g113",
+   "g149",
+   "g161",
+   "g190"
+  ],
+  "gold_general_complaint": [
+   "g033",
+   "g037",
+   "g062",
+   "g063",
+   "g085",
+   "g101",
+   "g116",
+   "g142",
+   "g169"
+  ],
+  "pred_general_complaint": [
+   "g016",
+   "g030",
+   "g036",
+   "g050",
+   "g073",
+   "g081",
+   "g087",
+   "g107",
+   "g135",
+   "g174"
+  ],
+  "keyboard_overpredicted": [
+   "g037",
+   "g056",
+   "g062",
+   "g105",
+   "g106",
+   "g113",
+   "g131",
+   "g162",
+   "g169",
+   "g176",
+   "g182"
+  ],
+  "app_vs_device_scope": [
+   "g029"
+  ],
+  "data_loss_confusions": [
+   "g003",
+   "g019",
+   "g036",
+   "g075",
+   "g078",
+   "g093",
+   "g108",
+   "g110",
+   "g120",
+   "g126",
+   "g130",
+   "g167",
+   "g178"
+  ],
+  "high_confidence_wrong": [
+   "g050",
+   "g060",
+   "g120",
+   "g148"
+  ],
+  "low_confidence_wrong": [
+   "g000",
+   "g002",
+   "g003",
+   "g015",
+   "g019",
+   "g025",
+   "g029",
+   "g030",
+   "g033",
+   "g037",
+   "g039",
+   "g051",
+   "g056",
+   "g063",
+   "g072",
+   "g077",
+   "g079",
+   "g081",
+   "g085",
+   "g093",
+   "g097",
+   "g101",
+   "g105",
+   "g106",
+   "g107",
+   "g114",
+   "g115",
+   "g116",
+   "g117",
+   "g121",
+   "g128",
+   "g130",
+   "g133",
+   "g142",
+   "g149",
+   "g157",
+   "g162",
+   "g166",
+   "g176",
+   "g178",
+   "g182",
+   "g186",
+   "g190"
+  ],
+  "multi_intent_gold": [
+   "g077",
+   "g110",
+   "g114",
+   "g117"
+  ],
+  "insufficient_context_gold": [
+   "g033",
+   "g037",
+   "g062",
+   "g063",
+   "g085",
+   "g101",
+   "g113",
+   "g116",
+   "g142",
+   "g169"
+  ],
+  "taxonomy_gap_gold": [
+   "g015",
+   "g029",
+   "g056",
+   "g128",
+   "g166"
+  ]
+ },
+ "records": [
+  {
+   "gid": "g000",
+   "gold": "hardware_damage",
+   "predA": "battery_power",
+   "confA": 0.1966,
+   "predB": "battery_power",
+   "confB": 0.1966,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "battery_power",
+     0.1966
+    ],
+    [
+     "hardware_damage",
+     0.1588
+    ],
+    [
+     "account_store_repair",
+     0.155
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g002",
+   "gold": "account_store_repair",
+   "predA": "apps_services",
+   "confA": 0.2601,
+   "predB": "apps_services",
+   "confB": 0.2601,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "battery_power",
+    "account_store_repair"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.2601
+    ],
+    [
+     "battery_power",
+     0.2091
+    ],
+    [
+     "account_store_repair",
+     0.209
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g003",
+   "gold": "performance_crash",
+   "predA": "data_loss_sync",
+   "confA": 0.2299,
+   "predB": "data_loss_sync",
+   "confB": 0.2299,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "data_loss_sync",
+     0.2299
+    ],
+    [
+     "account_store_repair",
+     0.1835
+    ],
+    [
+     "keyboard_text_bug",
+     0.152
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g011",
+   "gold": "keyboard_text_bug",
+   "predA": "performance_crash",
+   "confA": 0.681,
+   "predB": "performance_crash",
+   "confB": 0.681,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "performance_crash",
+     0.681
+    ],
+    [
+     "general_complaint",
+     0.1139
+    ],
+    [
+     "keyboard_text_bug",
+     0.1017
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g015",
+   "gold": "apps_services",
+   "predA": "battery_power",
+   "confA": 0.2014,
+   "predB": "battery_power",
+   "confB": 0.2014,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "battery_power",
+     0.2014
+    ],
+    [
+     "apps_services",
+     0.156
+    ],
+    [
+     "account_store_repair",
+     0.1368
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": true,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g016",
+   "gold": "performance_crash",
+   "predA": "general_complaint",
+   "confA": 0.5326,
+   "predB": "general_complaint",
+   "confB": 0.5326,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "general_complaint",
+     0.5326
+    ],
+    [
+     "performance_crash",
+     0.2398
+    ],
+    [
+     "battery_power",
+     0.0743
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g019",
+   "gold": "account_store_repair",
+   "predA": "data_loss_sync",
+   "confA": 0.3288,
+   "predB": "data_loss_sync",
+   "confB": 0.3288,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "account_store_repair"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "data_loss_sync",
+     0.3288
+    ],
+    [
+     "account_store_repair",
+     0.3066
+    ],
+    [
+     "hardware_damage",
+     0.1071
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g025",
+   "gold": "other",
+   "predA": "apps_services",
+   "confA": 0.1912,
+   "predB": "apps_services",
+   "confB": 0.1912,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.1912
+    ],
+    [
+     "performance_crash",
+     0.1753
+    ],
+    [
+     "general_complaint",
+     0.1737
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g028",
+   "gold": "other",
+   "predA": "apps_services",
+   "confA": 0.5882,
+   "predB": "apps_services",
+   "confB": 0.5882,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "other"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.5882
+    ],
+    [
+     "other",
+     0.3001
+    ],
+    [
+     "connectivity",
+     0.0528
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": true,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g029",
+   "gold": "apps_services",
+   "predA": "performance_crash",
+   "confA": 0.2929,
+   "predB": "performance_crash",
+   "confB": 0.2929,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "general_complaint"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "performance_crash",
+     0.2929
+    ],
+    [
+     "general_complaint",
+     0.2369
+    ],
+    [
+     "keyboard_text_bug",
+     0.1594
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": true,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g030",
+   "gold": "performance_crash",
+   "predA": "general_complaint",
+   "confA": 0.3535,
+   "predB": "general_complaint",
+   "confB": 0.3535,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "general_complaint",
+     0.3535
+    ],
+    [
+     "apps_services",
+     0.1585
+    ],
+    [
+     "performance_crash",
+     0.143
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g033",
+   "gold": "general_complaint",
+   "predA": "account_store_repair",
+   "confA": 0.2763,
+   "predB": "account_store_repair",
+   "confB": 0.2763,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": true,
+   "pred_insufficient_context": true,
+   "pred_multi": true,
+   "secondary": [
+    "keyboard_text_bug"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "account_store_repair",
+     0.2763
+    ],
+    [
+     "keyboard_text_bug",
+     0.2407
+    ],
+    [
+     "general_complaint",
+     0.1696
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": true,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g036",
+   "gold": "data_loss_sync",
+   "predA": "general_complaint",
+   "confA": 0.608,
+   "predB": "general_complaint",
+   "confB": 0.608,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "general_complaint",
+     0.608
+    ],
+    [
+     "performance_crash",
+     0.0972
+    ],
+    [
+     "battery_power",
+     0.0829
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": true,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g037",
+   "gold": "general_complaint",
+   "predA": "keyboard_text_bug",
+   "confA": 0.3147,
+   "predB": "keyboard_text_bug",
+   "confB": 0.3147,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": true,
+   "pred_insufficient_context": true,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "keyboard_text_bug",
+     0.3147
+    ],
+    [
+     "other",
+     0.1981
+    ],
+    [
+     "general_complaint",
+     0.1256
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": true,
+    "taxonomy_gap": false,
+    "evidence_unavailable": true,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g039",
+   "gold": "apps_services",
+   "predA": "other",
+   "confA": 0.1946,
+   "predB": "apps_services",
+   "confB": 0.7112,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": true,
+   "context_used": true,
+   "short_reply": true,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.7112
+    ],
+    [
+     "data_loss_sync",
+     0.0874
+    ],
+    [
+     "performance_crash",
+     0.0639
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": true,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g046",
+   "gold": "other",
+   "predA": "account_store_repair",
+   "confA": 0.5091,
+   "predB": "account_store_repair",
+   "confB": 0.5091,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "account_store_repair",
+     0.5091
+    ],
+    [
+     "other",
+     0.1322
+    ],
+    [
+     "apps_services",
+     0.1301
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g050",
+   "gold": "apps_services",
+   "predA": "general_complaint",
+   "confA": 0.7624,
+   "predB": "keyboard_text_bug",
+   "confB": 0.2222,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": true,
+   "short_reply": true,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "keyboard_text_bug",
+     0.2222
+    ],
+    [
+     "account_store_repair",
+     0.1602
+    ],
+    [
+     "general_complaint",
+     0.1542
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g051",
+   "gold": "battery_power",
+   "predA": "other",
+   "confA": 0.1946,
+   "predB": "battery_power",
+   "confB": 0.969,
+   "bandB": "HIGH",
+   "correctA": false,
+   "correctB": true,
+   "context_used": true,
+   "short_reply": true,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "battery_power",
+     0.969
+    ],
+    [
+     "performance_crash",
+     0.0118
+    ],
+    [
+     "general_complaint",
+     0.0055
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": true,
+    "customer_seen_in_kb": true,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g056",
+   "gold": "apps_services",
+   "predA": "keyboard_text_bug",
+   "confA": 0.1903,
+   "predB": "keyboard_text_bug",
+   "confB": 0.1903,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "keyboard_text_bug",
+     0.1903
+    ],
+    [
+     "account_store_repair",
+     0.1351
+    ],
+    [
+     "general_complaint",
+     0.1336
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": true,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": true,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g057",
+   "gold": "other",
+   "predA": "apps_services",
+   "confA": 0.6519,
+   "predB": "apps_services",
+   "confB": 0.6519,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.6519
+    ],
+    [
+     "performance_crash",
+     0.0698
+    ],
+    [
+     "hardware_damage",
+     0.069
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g059",
+   "gold": "other",
+   "predA": "account_store_repair",
+   "confA": 0.6483,
+   "predB": "account_store_repair",
+   "confB": 0.6483,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "account_store_repair",
+     0.6483
+    ],
+    [
+     "data_loss_sync",
+     0.0973
+    ],
+    [
+     "connectivity",
+     0.0653
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g060",
+   "gold": "other",
+   "predA": "account_store_repair",
+   "confA": 0.8818,
+   "predB": "account_store_repair",
+   "confB": 0.8818,
+   "bandB": "HIGH",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "account_store_repair",
+     0.8818
+    ],
+    [
+     "other",
+     0.0406
+    ],
+    [
+     "apps_services",
+     0.0287
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g062",
+   "gold": "general_complaint",
+   "predA": "keyboard_text_bug",
+   "confA": 0.4992,
+   "predB": "keyboard_text_bug",
+   "confB": 0.4992,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "general_complaint"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "keyboard_text_bug",
+     0.4992
+    ],
+    [
+     "general_complaint",
+     0.2979
+    ],
+    [
+     "hardware_damage",
+     0.0512
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": true,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g063",
+   "gold": "general_complaint",
+   "predA": "apps_services",
+   "confA": 0.2975,
+   "predB": "apps_services",
+   "confB": 0.2975,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.2975
+    ],
+    [
+     "performance_crash",
+     0.1961
+    ],
+    [
+     "other",
+     0.1472
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": true,
+    "taxonomy_gap": false,
+    "evidence_unavailable": true,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g072",
+   "gold": "hardware_damage",
+   "predA": "battery_power",
+   "confA": 0.3734,
+   "predB": "battery_power",
+   "confB": 0.3734,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "battery_power",
+     0.3734
+    ],
+    [
+     "hardware_damage",
+     0.1671
+    ],
+    [
+     "general_complaint",
+     0.1544
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g073",
+   "gold": "battery_power",
+   "predA": "general_complaint",
+   "confA": 0.576,
+   "predB": "battery_power",
+   "confB": 0.6778,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": true,
+   "context_used": true,
+   "short_reply": true,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "battery_power",
+     0.6778
+    ],
+    [
+     "keyboard_text_bug",
+     0.1079
+    ],
+    [
+     "general_complaint",
+     0.1037
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g075",
+   "gold": "data_loss_sync",
+   "predA": "connectivity",
+   "confA": 0.6572,
+   "predB": "connectivity",
+   "confB": 0.6572,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "connectivity",
+     0.6572
+    ],
+    [
+     "data_loss_sync",
+     0.1334
+    ],
+    [
+     "general_complaint",
+     0.0488
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g076",
+   "gold": "other",
+   "predA": "connectivity",
+   "confA": 0.4801,
+   "predB": "connectivity",
+   "confB": 0.4801,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "connectivity",
+     0.4801
+    ],
+    [
+     "keyboard_text_bug",
+     0.1037
+    ],
+    [
+     "data_loss_sync",
+     0.0966
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g077",
+   "gold": "battery_power",
+   "predA": "performance_crash",
+   "confA": 0.3617,
+   "predB": "performance_crash",
+   "confB": 0.3617,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "battery_power"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "performance_crash",
+     0.3617
+    ],
+    [
+     "battery_power",
+     0.2236
+    ],
+    [
+     "hardware_damage",
+     0.1229
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": true,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g078",
+   "gold": "data_loss_sync",
+   "predA": "apps_services",
+   "confA": 0.6255,
+   "predB": "apps_services",
+   "confB": 0.6255,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.6255
+    ],
+    [
+     "account_store_repair",
+     0.2357
+    ],
+    [
+     "data_loss_sync",
+     0.0535
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g079",
+   "gold": "performance_crash",
+   "predA": "hardware_damage",
+   "confA": 0.3928,
+   "predB": "hardware_damage",
+   "confB": 0.3928,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "hardware_damage",
+     0.3928
+    ],
+    [
+     "performance_crash",
+     0.1746
+    ],
+    [
+     "connectivity",
+     0.1408
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g081",
+   "gold": "keyboard_text_bug",
+   "predA": "general_complaint",
+   "confA": 0.3992,
+   "predB": "general_complaint",
+   "confB": 0.3992,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": true,
+   "pred_insufficient_context": true,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "general_complaint",
+     0.3992
+    ],
+    [
+     "keyboard_text_bug",
+     0.1965
+    ],
+    [
+     "hardware_damage",
+     0.0757
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g085",
+   "gold": "general_complaint",
+   "predA": "apps_services",
+   "confA": 0.1923,
+   "predB": "apps_services",
+   "confB": 0.1923,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.1923
+    ],
+    [
+     "data_loss_sync",
+     0.17
+    ],
+    [
+     "general_complaint",
+     0.1619
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": true,
+    "taxonomy_gap": false,
+    "evidence_unavailable": true,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g087",
+   "gold": "connectivity",
+   "predA": "general_complaint",
+   "confA": 0.55,
+   "predB": "general_complaint",
+   "confB": 0.55,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "general_complaint",
+     0.55
+    ],
+    [
+     "keyboard_text_bug",
+     0.1549
+    ],
+    [
+     "apps_services",
+     0.0948
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": true,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g093",
+   "gold": "data_loss_sync",
+   "predA": "apps_services",
+   "confA": 0.242,
+   "predB": "apps_services",
+   "confB": 0.242,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "data_loss_sync",
+    "keyboard_text_bug"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.242
+    ],
+    [
+     "data_loss_sync",
+     0.2388
+    ],
+    [
+     "keyboard_text_bug",
+     0.2129
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g097",
+   "gold": "apps_services",
+   "predA": "connectivity",
+   "confA": 0.2071,
+   "predB": "connectivity",
+   "confB": 0.2071,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "data_loss_sync"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "connectivity",
+     0.2071
+    ],
+    [
+     "data_loss_sync",
+     0.2056
+    ],
+    [
+     "performance_crash",
+     0.1712
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g098",
+   "gold": "performance_crash",
+   "predA": "hardware_damage",
+   "confA": 0.4454,
+   "predB": "hardware_damage",
+   "confB": 0.4454,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "apps_services"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "hardware_damage",
+     0.4454
+    ],
+    [
+     "apps_services",
+     0.2567
+    ],
+    [
+     "performance_crash",
+     0.1323
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g101",
+   "gold": "general_complaint",
+   "predA": "account_store_repair",
+   "confA": 0.2088,
+   "predB": "account_store_repair",
+   "confB": 0.2088,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "account_store_repair",
+     0.2088
+    ],
+    [
+     "non_english",
+     0.1397
+    ],
+    [
+     "connectivity",
+     0.1268
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": true,
+    "taxonomy_gap": false,
+    "evidence_unavailable": true,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g105",
+   "gold": "battery_power",
+   "predA": "keyboard_text_bug",
+   "confA": 0.3214,
+   "predB": "keyboard_text_bug",
+   "confB": 0.3214,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "general_complaint"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "keyboard_text_bug",
+     0.3214
+    ],
+    [
+     "general_complaint",
+     0.2925
+    ],
+    [
+     "other",
+     0.0975
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g106",
+   "gold": "apps_services",
+   "predA": "keyboard_text_bug",
+   "confA": 0.3095,
+   "predB": "keyboard_text_bug",
+   "confB": 0.3095,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": true,
+   "pred_insufficient_context": true,
+   "pred_multi": true,
+   "secondary": [
+    "apps_services"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "keyboard_text_bug",
+     0.3095
+    ],
+    [
+     "apps_services",
+     0.2541
+    ],
+    [
+     "data_loss_sync",
+     0.1464
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": true,
+    "customer_seen_in_kb": true,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g107",
+   "gold": "apps_services",
+   "predA": "general_complaint",
+   "confA": 0.28,
+   "predB": "general_complaint",
+   "confB": 0.28,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "keyboard_text_bug"
+   ],
+   "pred_gap": true,
+   "top3B": [
+    [
+     "general_complaint",
+     0.28
+    ],
+    [
+     "keyboard_text_bug",
+     0.2127
+    ],
+    [
+     "performance_crash",
+     0.1473
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": true,
+    "customer_seen_in_kb": true,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g108",
+   "gold": "apps_services",
+   "predA": "data_loss_sync",
+   "confA": 0.5057,
+   "predB": "data_loss_sync",
+   "confB": 0.5057,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "data_loss_sync",
+     0.5057
+    ],
+    [
+     "connectivity",
+     0.1416
+    ],
+    [
+     "apps_services",
+     0.1076
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g110",
+   "gold": "data_loss_sync",
+   "predA": "apps_services",
+   "confA": 0.4716,
+   "predB": "apps_services",
+   "confB": 0.4716,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "data_loss_sync"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.4716
+    ],
+    [
+     "data_loss_sync",
+     0.2433
+    ],
+    [
+     "performance_crash",
+     0.0761
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": true,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g113",
+   "gold": "other",
+   "predA": "keyboard_text_bug",
+   "confA": 0.4021,
+   "predB": "keyboard_text_bug",
+   "confB": 0.4021,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": true,
+   "pred_insufficient_context": true,
+   "pred_multi": true,
+   "secondary": [
+    "general_complaint"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "keyboard_text_bug",
+     0.4021
+    ],
+    [
+     "general_complaint",
+     0.2195
+    ],
+    [
+     "non_english",
+     0.0891
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": true,
+    "taxonomy_gap": false,
+    "evidence_unavailable": true,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g114",
+   "gold": "apps_services",
+   "predA": "hardware_damage",
+   "confA": 0.3014,
+   "predB": "hardware_damage",
+   "confB": 0.3014,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "hardware_damage",
+     0.3014
+    ],
+    [
+     "battery_power",
+     0.1922
+    ],
+    [
+     "performance_crash",
+     0.1912
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": true,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g115",
+   "gold": "apps_services",
+   "predA": "battery_power",
+   "confA": 0.2054,
+   "predB": "battery_power",
+   "confB": 0.2054,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "battery_power",
+     0.2054
+    ],
+    [
+     "hardware_damage",
+     0.1432
+    ],
+    [
+     "performance_crash",
+     0.1408
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": true,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g116",
+   "gold": "general_complaint",
+   "predA": "connectivity",
+   "confA": 0.1846,
+   "predB": "connectivity",
+   "confB": 0.1846,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "connectivity",
+     0.1846
+    ],
+    [
+     "apps_services",
+     0.1843
+    ],
+    [
+     "keyboard_text_bug",
+     0.1771
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": true,
+    "taxonomy_gap": false,
+    "evidence_unavailable": true,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g117",
+   "gold": "performance_crash",
+   "predA": "account_store_repair",
+   "confA": 0.2102,
+   "predB": "account_store_repair",
+   "confB": 0.2102,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "account_store_repair",
+     0.2102
+    ],
+    [
+     "apps_services",
+     0.1859
+    ],
+    [
+     "keyboard_text_bug",
+     0.1399
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": true,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g120",
+   "gold": "data_loss_sync",
+   "predA": "apps_services",
+   "confA": 0.8535,
+   "predB": "apps_services",
+   "confB": 0.612,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": true,
+   "short_reply": true,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.612
+    ],
+    [
+     "data_loss_sync",
+     0.2256
+    ],
+    [
+     "account_store_repair",
+     0.0635
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g121",
+   "gold": "apps_services",
+   "predA": "battery_power",
+   "confA": 0.256,
+   "predB": "battery_power",
+   "confB": 0.256,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "hardware_damage",
+    "performance_crash"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "battery_power",
+     0.256
+    ],
+    [
+     "hardware_damage",
+     0.2502
+    ],
+    [
+     "performance_crash",
+     0.2107
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g123",
+   "gold": "performance_crash",
+   "predA": "battery_power",
+   "confA": 0.5047,
+   "predB": "battery_power",
+   "confB": 0.5047,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "battery_power",
+     0.5047
+    ],
+    [
+     "performance_crash",
+     0.1815
+    ],
+    [
+     "apps_services",
+     0.1703
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g125",
+   "gold": "keyboard_text_bug",
+   "predA": "apps_services",
+   "confA": 0.5438,
+   "predB": "apps_services",
+   "confB": 0.5438,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.5438
+    ],
+    [
+     "other",
+     0.1979
+    ],
+    [
+     "keyboard_text_bug",
+     0.0555
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g126",
+   "gold": "data_loss_sync",
+   "predA": "apps_services",
+   "confA": 0.5678,
+   "predB": "apps_services",
+   "confB": 0.5678,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.5678
+    ],
+    [
+     "data_loss_sync",
+     0.21
+    ],
+    [
+     "general_complaint",
+     0.0813
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g128",
+   "gold": "connectivity",
+   "predA": "performance_crash",
+   "confA": 0.2704,
+   "predB": "performance_crash",
+   "confB": 0.2704,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "performance_crash",
+     0.2704
+    ],
+    [
+     "connectivity",
+     0.1887
+    ],
+    [
+     "keyboard_text_bug",
+     0.1024
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": true,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": true,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g130",
+   "gold": "data_loss_sync",
+   "predA": "apps_services",
+   "confA": 0.3764,
+   "predB": "apps_services",
+   "confB": 0.3764,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "data_loss_sync"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.3764
+    ],
+    [
+     "data_loss_sync",
+     0.287
+    ],
+    [
+     "keyboard_text_bug",
+     0.1334
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": true,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g131",
+   "gold": "connectivity",
+   "predA": "keyboard_text_bug",
+   "confA": 0.4215,
+   "predB": "keyboard_text_bug",
+   "confB": 0.4215,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "keyboard_text_bug",
+     0.4215
+    ],
+    [
+     "account_store_repair",
+     0.1904
+    ],
+    [
+     "performance_crash",
+     0.1367
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g133",
+   "gold": "hardware_damage",
+   "predA": "account_store_repair",
+   "confA": 0.2587,
+   "predB": "account_store_repair",
+   "confB": 0.2587,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "general_complaint"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "account_store_repair",
+     0.2587
+    ],
+    [
+     "general_complaint",
+     0.2055
+    ],
+    [
+     "apps_services",
+     0.1306
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g135",
+   "gold": "apps_services",
+   "predA": "general_complaint",
+   "confA": 0.471,
+   "predB": "general_complaint",
+   "confB": 0.471,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "general_complaint",
+     0.471
+    ],
+    [
+     "keyboard_text_bug",
+     0.2301
+    ],
+    [
+     "performance_crash",
+     0.119
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g142",
+   "gold": "general_complaint",
+   "predA": "apps_services",
+   "confA": 0.247,
+   "predB": "apps_services",
+   "confB": 0.247,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.247
+    ],
+    [
+     "hardware_damage",
+     0.151
+    ],
+    [
+     "data_loss_sync",
+     0.1186
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": true,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": true,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g148",
+   "gold": "apps_services",
+   "predA": "connectivity",
+   "confA": 0.7727,
+   "predB": "connectivity",
+   "confB": 0.7727,
+   "bandB": "HIGH",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "connectivity",
+     0.7727
+    ],
+    [
+     "apps_services",
+     0.1548
+    ],
+    [
+     "keyboard_text_bug",
+     0.0179
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g149",
+   "gold": "other",
+   "predA": "battery_power",
+   "confA": 0.291,
+   "predB": "battery_power",
+   "confB": 0.291,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "battery_power",
+     0.291
+    ],
+    [
+     "other",
+     0.1147
+    ],
+    [
+     "keyboard_text_bug",
+     0.0977
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g157",
+   "gold": "account_store_repair",
+   "predA": "connectivity",
+   "confA": 0.2398,
+   "predB": "connectivity",
+   "confB": 0.2398,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "data_loss_sync"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "connectivity",
+     0.2398
+    ],
+    [
+     "data_loss_sync",
+     0.2034
+    ],
+    [
+     "non_english",
+     0.1241
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g161",
+   "gold": "other",
+   "predA": "account_store_repair",
+   "confA": 0.4082,
+   "predB": "non_english",
+   "confB": 0.4917,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": true,
+   "short_reply": true,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "non_english",
+     0.4917
+    ],
+    [
+     "battery_power",
+     0.1919
+    ],
+    [
+     "performance_crash",
+     0.0649
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g162",
+   "gold": "apps_services",
+   "predA": "keyboard_text_bug",
+   "confA": 0.2528,
+   "predB": "keyboard_text_bug",
+   "confB": 0.2528,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "keyboard_text_bug",
+     0.2528
+    ],
+    [
+     "connectivity",
+     0.1493
+    ],
+    [
+     "other",
+     0.1158
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g166",
+   "gold": "connectivity",
+   "predA": "apps_services",
+   "confA": 0.3364,
+   "predB": "apps_services",
+   "confB": 0.3364,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "connectivity"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.3364
+    ],
+    [
+     "connectivity",
+     0.3273
+    ],
+    [
+     "performance_crash",
+     0.1817
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": true,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g167",
+   "gold": "data_loss_sync",
+   "predA": "other",
+   "confA": 0.6435,
+   "predB": "apps_services",
+   "confB": 0.4213,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": true,
+   "short_reply": true,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "data_loss_sync"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.4213
+    ],
+    [
+     "data_loss_sync",
+     0.353
+    ],
+    [
+     "general_complaint",
+     0.0655
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g169",
+   "gold": "general_complaint",
+   "predA": "keyboard_text_bug",
+   "confA": 0.4076,
+   "predB": "keyboard_text_bug",
+   "confB": 0.4076,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "general_complaint"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "keyboard_text_bug",
+     0.4076
+    ],
+    [
+     "general_complaint",
+     0.2047
+    ],
+    [
+     "apps_services",
+     0.0705
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": true,
+    "taxonomy_gap": false,
+    "evidence_unavailable": true,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g174",
+   "gold": "keyboard_text_bug",
+   "predA": "general_complaint",
+   "confA": 0.6399,
+   "predB": "general_complaint",
+   "confB": 0.6399,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": true,
+   "pred_insufficient_context": true,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "general_complaint",
+     0.6399
+    ],
+    [
+     "keyboard_text_bug",
+     0.2639
+    ],
+    [
+     "data_loss_sync",
+     0.0202
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g176",
+   "gold": "performance_crash",
+   "predA": "keyboard_text_bug",
+   "confA": 0.3475,
+   "predB": "keyboard_text_bug",
+   "confB": 0.3475,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "hardware_damage"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "keyboard_text_bug",
+     0.3475
+    ],
+    [
+     "hardware_damage",
+     0.2396
+    ],
+    [
+     "apps_services",
+     0.14
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g178",
+   "gold": "account_store_repair",
+   "predA": "data_loss_sync",
+   "confA": 0.3525,
+   "predB": "data_loss_sync",
+   "confB": 0.3525,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "apps_services",
+    "keyboard_text_bug"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "data_loss_sync",
+     0.3525
+    ],
+    [
+     "apps_services",
+     0.2438
+    ],
+    [
+     "keyboard_text_bug",
+     0.2304
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g182",
+   "gold": "apps_services",
+   "predA": "keyboard_text_bug",
+   "confA": 0.2636,
+   "predB": "keyboard_text_bug",
+   "confB": 0.2636,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "apps_services"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "keyboard_text_bug",
+     0.2636
+    ],
+    [
+     "apps_services",
+     0.2578
+    ],
+    [
+     "connectivity",
+     0.1285
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g184",
+   "gold": "performance_crash",
+   "predA": "battery_power",
+   "confA": 0.5407,
+   "predB": "battery_power",
+   "confB": 0.5407,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "battery_power",
+     0.5407
+    ],
+    [
+     "general_complaint",
+     0.156
+    ],
+    [
+     "performance_crash",
+     0.1417
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g186",
+   "gold": "apps_services",
+   "predA": "account_store_repair",
+   "confA": 0.3698,
+   "predB": "account_store_repair",
+   "confB": 0.3698,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": true,
+   "secondary": [
+    "apps_services",
+    "other"
+   ],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "account_store_repair",
+     0.3698
+    ],
+    [
+     "apps_services",
+     0.2088
+    ],
+    [
+     "other",
+     0.2036
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g189",
+   "gold": "battery_power",
+   "predA": "account_store_repair",
+   "confA": 0.7497,
+   "predB": "account_store_repair",
+   "confB": 0.7497,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "account_store_repair",
+     0.7497
+    ],
+    [
+     "battery_power",
+     0.0651
+    ],
+    [
+     "general_complaint",
+     0.0441
+    ]
+   ],
+   "slices": {
+    "short": true,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  },
+  {
+   "gid": "g190",
+   "gold": "other",
+   "predA": "performance_crash",
+   "confA": 0.161,
+   "predB": "performance_crash",
+   "confB": 0.161,
+   "bandB": "LOW",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "performance_crash",
+     0.161
+    ],
+    [
+     "apps_services",
+     0.1448
+    ],
+    [
+     "battery_power",
+     0.1298
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": true,
+    "multi_turn": false,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": true
+   }
+  },
+  {
+   "gid": "g191",
+   "gold": "battery_power",
+   "predA": "apps_services",
+   "confA": 0.7089,
+   "predB": "apps_services",
+   "confB": 0.7089,
+   "bandB": "MEDIUM",
+   "correctA": false,
+   "correctB": false,
+   "context_used": false,
+   "short_reply": false,
+   "pred_insufficient_context": false,
+   "pred_multi": false,
+   "secondary": [],
+   "pred_gap": false,
+   "top3B": [
+    [
+     "apps_services",
+     0.7089
+    ],
+    [
+     "other",
+     0.0784
+    ],
+    [
+     "performance_crash",
+     0.0641
+    ]
+   ],
+   "slices": {
+    "short": false,
+    "first_turn": false,
+    "multi_turn": true,
+    "multi_intent": false,
+    "insufficient_context": false,
+    "taxonomy_gap": false,
+    "evidence_unavailable": false,
+    "customer_seen_in_kb": false,
+    "low_confidence": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "before": {
+  "share_query_embedding": false,
+  "n": 40,
+  "total_p50": 93.3,
+  "total_p95": 124.5,
+  "intent_p50": 44.5,
+  "retrieval_p50": 34.8
+ },
+ "after": {
+  "share_query_embedding": true,
+  "n": 40,
+  "total_p50": 89.5,
+  "total_p95": 191.5,
+  "intent_p50": 46.9,
+  "retrieval_p50": 22.4
+ },
+ "improvement_total_p50_ms": 3.8,
+ "note": "deterministic path (no LLM): context + classifier + retrieval + policy + gate; the shared vector removes one BGE-small encode per message"
+}

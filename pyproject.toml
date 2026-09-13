@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resolveai"
+version = "1.0.0"
+description = "AppleSupport AI support agent on the Customer Support on Twitter dataset (Hiver take-home)"
+requires-python = ">=3.11"
+dynamic = ["dependencies"]
+
+[tool.setuptools.packages.find]
+include = ["resolveai*"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: needs a live LLM endpoint; skipped unless RESOLVEAI_INTEGRATION=1"]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 160
+target-version = "py311"
+exclude = ["artifacts", "data", ".cache", "scripts/phase0"]   # phase0 = one-off reconnaissance notebooks-as-scripts
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "UP038"]   # E501: long lines allowed at 160; UP038: isinstance tuple style is fine

@@ -1,0 +1,489 @@
+{
+ "request_id": "fixture-A",
+ "trace_id": "d205ef384a0f44c089a40e28a7616e14",
+ "action": "AUTO_HANDLE",
+ "outcome": {
+  "action": "AUTO_HANDLE",
+  "what_happened": "Answered automatically with a verified reply grounded in 3 historical case(s).",
+  "why": "Clear 'keyboard_text_bug' issue with grounded troubleshooting steps and no risk flags. Evidence STRONG; verifier passed (evidence coverage 0.71); every output-gate check passed.",
+  "evidence_basis": "Cited cases: 2287602 (update, similarity 0.86, rank 2); 2573954 (update, similarity 0.89, rank 1); 2312398 (update, similarity 0.89, rank 3). 5 similar historical cases retrieved; top similarity 0.89; evidence STRONG (strong_consistent_evidence); resolution clusters: update x5; resolution confidence 0.97.",
+  "next_step": "Send the reply; re-open the case if the customer reports the fix did not work.",
+  "reason_code": "none",
+  "rule": "default_auto",
+  "policy_version": "policy-v3.1",
+  "autonomous_response_allowed": true,
+  "output_gate": {
+   "policy_allows_automation": true,
+   "no_blocking_risk_flag": true,
+   "intent_confidence_acceptable": true,
+   "evidence_sufficient": true,
+   "response_generated": true,
+   "response_verified": true,
+   "evidence_refs_exist": true,
+   "pii_guard": true,
+   "schema_valid": true
+  },
+  "blocking_checks": []
+ },
+ "response": {
+  "kind": "auto_reply",
+  "text": "Let's be sure your iPhone has the latest iOS installed. It includes fixes for autocorrect issues. You can check in Settings > General > About. We recommend backing up first, then installing the update. You can find the steps on our support site. Let us know if this helps!",
+  "sent_automatically": true,
+  "evidence_refs": [
+   {
+    "evidence_id": "2287602",
+    "thread_id": "2287603",
+    "source_row_id": "2287603",
+    "created_at": "2017-11-12 01:41:57+00:00",
+    "rank": 2,
+    "similarity": 0.862,
+    "retrieval_source": "pair",
+    "action_class": "update",
+    "resolution_bearing": true,
+    "outcome": "none"
+   },
+   {
+    "evidence_id": "2573954",
+    "thread_id": "2573955",
+    "source_row_id": "2573955",
+    "created_at": "2017-11-16 19:12:49+00:00",
+    "rank": 1,
+    "similarity": 0.894,
+    "retrieval_source": "pair",
+    "action_class": "update",
+    "resolution_bearing": true,
+    "outcome": "none"
+   },
+   {
+    "evidence_id": "2312398",
+    "thread_id": "2312400",
+    "source_row_id": "2312400",
+    "created_at": "2017-11-12 21:17:02+00:00",
+    "rank": 3,
+    "similarity": 0.885,
+    "retrieval_source": "pair",
+    "action_class": "update",
+    "resolution_bearing": true,
+    "outcome": "negative"
+   }
+  ],
+  "draft_attempts": 1
+ },
+ "intent": {
+  "intent": "keyboard_text_bug",
+  "confidence": 0.9693,
+  "top3": [
+   [
+    "keyboard_text_bug",
+    0.9693
+   ],
+   [
+    "account_store_repair",
+    0.0085
+   ],
+   [
+    "apps_services",
+    0.0065
+   ]
+  ],
+  "method": "embed_lr",
+  "confidence_band": "HIGH",
+  "calibrated": true,
+  "calibration": {
+   "method": "temperature",
+   "temperature": 1.5,
+   "dev_ece": 0.0355
+  },
+  "secondary_intents": [],
+  "multi_intent": false,
+  "insufficient_context": false,
+  "taxonomy_gap": false,
+  "context_used": false,
+  "second_opinion": null,
+  "second_opinion_applied": false
+ },
+ "evidence": {
+  "query": "My iPhone keeps changing \"it\" to \"I.T\" whenever I type. How do fix this autocorrect bug? typing letter question mark box",
+  "query_intent": "keyboard_text_bug",
+  "retriever": "dense:bge-small:pair+rr+gatev3",
+  "items": [
+   {
+    "evidence_id": "2573954",
+    "thread_id": "2573955",
+    "source_row_id": "2573955",
+    "customer_message": "every time i type the letter ‘I’ it autocorrects it to: I️",
+    "brand_reply": "We've recently released an update to fix this. We do recommend creating a current backup of the data on your device before updating. Here's more about the new update: <url> Let us know if this helps. <url>",
+    "created_at": "2017-11-16 19:12:49+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 1,
+    "ranks": {
+     "pair": 24,
+     "boost_plain": 1,
+     "boost_intent": 1
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.8940892815589905,
+     "cos_reply": 0.0,
+     "cos_pair": 0.8588752150535583,
+     "rrf": 0.022727272727272728,
+     "outcome_bonus": 0.0,
+     "rerank": 0.8740000523090362,
+     "final": 0.09523809523809523
+    },
+    "quality": {
+     "semantic_relevance": 0.8940892815589905,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "keyboard_text_bug",
+     "resolution_relevance": true,
+     "action_class": "update",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "2287602",
+    "thread_id": "2287603",
+    "source_row_id": "2287603",
+    "customer_message": "how do I fix the “I.t” I just want to type “it” 😭😭",
+    "brand_reply": "Let's be sure we've got iOS 11.1.1 installed. It was released recently and includes some fixes for autocorrect issues. You can check that in Settings > General > About. If not, you can backup and install it now. How to back up: <url>",
+    "created_at": "2017-11-12 01:41:57+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 2,
+    "ranks": {
+     "pair": 22,
+     "boost_plain": 2,
+     "boost_intent": 2
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.8616318106651306,
+     "cos_reply": 0.0,
+     "cos_pair": 0.8603752255439758,
+     "rrf": 0.023809523809523808,
+     "outcome_bonus": 0.0,
+     "rerank": 0.8659149401187898,
+     "final": 0.09090909090909091
+    },
+    "quality": {
+     "semantic_relevance": 0.8616318106651306,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "keyboard_text_bug",
+     "resolution_relevance": true,
+     "action_class": "update",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "2312398",
+    "thread_id": "2312400",
+    "source_row_id": "2312400",
+    "customer_message": "WHY DOES AUTOCORRECT ALWAYS CHANGE \"it\" to \"I.T\" !?!?!?",
+    "brand_reply": "We want to help you with this issue. If you haven’t yet, please back up your device and update it to the latest version iOS 11.1.1.",
+    "created_at": "2017-11-12 21:17:02+00:00",
+    "outcome": "negative",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 3,
+    "ranks": {
+     "pair": 5,
+     "boost_plain": 3,
+     "boost_intent": 3
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.885057806968689,
+     "cos_reply": 0.0,
+     "cos_pair": 0.8849580883979797,
+     "rrf": 0.04,
+     "outcome_bonus": 0.0,
+     "rerank": 0.8646597545385359,
+     "final": 0.08695652173913043
+    },
+    "quality": {
+     "semantic_relevance": 0.885057806968689,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "keyboard_text_bug",
+     "resolution_relevance": true,
+     "action_class": "update",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "1773232",
+    "thread_id": "1773234",
+    "source_row_id": "1773234",
+    "customer_message": "This iPhone bug whenever I️ type the letter i (as in abcdefgh-i-jk...) is driving me nuts! please fix this!",
+    "brand_reply": "Here’s what you can do to work around the issue until it’s fixed in a future software update: <url>",
+    "created_at": "2017-11-08 00:03:01+00:00",
+    "outcome": "positive",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 4,
+    "ranks": {
+     "pair": 16,
+     "boost_plain": 4,
+     "boost_intent": 4
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.8814731240272522,
+     "cos_reply": 0.0,
+     "cos_pair": 0.8638719320297241,
+     "rrf": 0.027777777777777776,
+     "outcome_bonus": 0.0,
+     "rerank": 0.8572835764169694,
+     "final": 0.08333333333333333
+    },
+    "quality": {
+     "semantic_relevance": 0.8814731240272522,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "keyboard_text_bug",
+     "resolution_relevance": true,
+     "action_class": "update",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   },
+   {
+    "evidence_id": "1585356",
+    "thread_id": "1585357",
+    "source_row_id": "1585357",
+    "customer_message": "why is “I” on my iPhone autocorrecting to an A and a box with a question mark in it?",
+    "brand_reply": "Thanks for reaching out. This workaround will help until this issue is resolved in a future update: <url>",
+    "created_at": "2017-11-04 17:16:47+00:00",
+    "outcome": "none",
+    "dm_handoff": false,
+    "substantive": true,
+    "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+    "retrieval_source": "pair",
+    "rank": 5,
+    "ranks": {
+     "pair": 14,
+     "boost_plain": 5,
+     "boost_intent": 5
+    },
+    "scores": {
+     "bm25": 0.0,
+     "dense": 0.8950860500335693,
+     "cos_reply": 0.0,
+     "cos_pair": 0.8639749884605408,
+     "rrf": 0.029411764705882353,
+     "outcome_bonus": 0.0,
+     "rerank": 0.8527238646268844,
+     "final": 0.08
+    },
+    "quality": {
+     "semantic_relevance": 0.8950860500335693,
+     "lexical_relevance": 0.0,
+     "intent_match": true,
+     "candidate_intent": "keyboard_text_bug",
+     "resolution_relevance": true,
+     "action_class": "update",
+     "temporal_eligible": true,
+     "same_customer": false,
+     "quality": "strong"
+    },
+    "source": {
+     "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+     "brand": "AppleSupport",
+     "preprocessing_version": "2.0",
+     "kb_hash": "a7cb62f5f61976fc0cf258f0"
+    }
+   }
+  ],
+  "n_retrieved": 50,
+  "n_relevant": 5,
+  "sufficient": true,
+  "sufficiency_reason": "strong_consistent_evidence",
+  "sufficiency_level": "STRONG",
+  "resolution_confidence": 0.971,
+  "consistency": "consistent",
+  "resolution_candidates": [
+   {
+    "action_class": "update",
+    "representative_reply": "Let's be sure we've got iOS 11.1.1 installed. It was released recently and includes some fixes for autocorrect issues. You can check that in Settings > General > About. If not, you can backup and install it now. How to back up: <url>",
+    "representative_id": "2287602",
+    "evidence_ids": [
+     "2573954",
+     "2287602",
+     "2312398",
+     "1773232",
+     "1585356"
+    ],
+    "support_count": 5,
+    "mean_similarity": 0.883,
+    "positive_outcomes": 1,
+    "share": 1.0
+   }
+  ],
+  "signals": {
+   "n_retrieved": 5,
+   "n_relevant": 5,
+   "query_content_tokens": 15,
+   "query_symptom_tokens": 8,
+   "top_similarity": 0.8940892815589905,
+   "similarity_margin": 0.009031474590301514,
+   "intent_agreement": 1.0,
+   "modal_intent": "keyboard_text_bug",
+   "query_intent_agreement": 1.0,
+   "support_count": 5,
+   "resolution_bearing": 1,
+   "action_classes": {
+    "update": 5
+   },
+   "conflicting": false,
+   "same_customer_count": 0
+  },
+  "gate_version": "gate-v3",
+  "latency_ms": 93.36700000039855
+ },
+ "risk": {
+  "safety_concern": false,
+  "security_concern": false,
+  "privacy_concern": false,
+  "account_access_risk": false,
+  "payment_billing_risk": false,
+  "legal_or_media_threat": false,
+  "abusive_threatening": false,
+  "high_impact": false,
+  "needs_private_info": false,
+  "physical_damage": false,
+  "repeat_contact": false,
+  "sensitive_action_required": false,
+  "high_frustration": false,
+  "prompt_injection": false,
+  "is_actionable": true,
+  "insufficient_context": false,
+  "conflicting_evidence": false,
+  "summary": "Customer is asking how to fix an autocorrect issue on their iPhone where the word 'it' is changed to 'I.T'.",
+  "source": "llm+rules"
+ },
+ "verification": {
+  "verified": true,
+  "issues": [],
+  "severity": "none",
+  "evidence_refs": [
+   "2287602",
+   "2573954",
+   "2312398"
+  ],
+  "coverage": 0.706,
+  "method": "lexical+llm",
+  "attempts": 1
+ },
+ "clarification": null,
+ "handoff": null,
+ "conversation": {
+  "message": {
+   "message_id": "d22349172ca3",
+   "text": "My iPhone keeps changing \"it\" to \"I.T\" whenever I type. How do I fix this autocorrect bug?",
+   "pii_counts": {},
+   "language_hint": null,
+   "received_at": null
+  },
+  "context": {
+   "turns": [],
+   "truncated": false
+  }
+ },
+ "versions": {
+  "pipeline": "pipeline-v5.1",
+  "policy": "policy-v3.1",
+  "output_gate": "output-gate-v1",
+  "retrieval": "dense:bge-small:pair+rr+gatev3",
+  "evidence_gate": "gate-v3",
+  "rerank": "rerank-v1",
+  "classifier": "2d194e7e704f",
+  "prompts": {
+   "risk": "risk-flags-v2",
+   "draft": "draft-v2",
+   "verify": "verify-v2",
+   "second_opinion": "intent-second-opinion-v1"
+  },
+  "model": "glm-5.2",
+  "config_hash": "77fe3db81c69bf09"
+ },
+ "stage_status": {
+  "pii_redaction": "ok",
+  "context": "ok",
+  "intent": "ok",
+  "second_opinion": "skipped",
+  "retrieval": "ok",
+  "evidence_gate": "ok",
+  "risk": "ok",
+  "policy": "ok",
+  "draft": "ok",
+  "verification": "ok",
+  "output_gate": "ok"
+ },
+ "latency_ms": {
+  "pii_redaction": 0.11,
+  "context": 0.33,
+  "intent": 41889.82,
+  "second_opinion": 0.02,
+  "retrieval": 275.28,
+  "evidence_gate": 0.0,
+  "risk": 22.03,
+  "policy": 0.05,
+  "draft": 32.43,
+  "verification": 6.92,
+  "output_gate": 0.16,
+  "total": 42231.03
+ },
+ "usage": {
+  "llm_calls": 3,
+  "live_calls": 0,
+  "cache_hits": 3,
+  "tokens_in": 1344,
+  "tokens_out": 1909,
+  "estimated_cost_usd": 0.007453,
+  "fallbacks": 0
+ }
+}

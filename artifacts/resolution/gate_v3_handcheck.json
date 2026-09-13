@@ -1,0 +1,37 @@
+{
+ "labels": {
+  "dev496796": "RESOLVES",
+  "dev2906753": "RESOLVES",
+  "dev2910465": "RESOLVES",
+  "dev542280": "PARTIAL",
+  "dev517085": "PARTIAL",
+  "dev2974487": "RESOLVES",
+  "dev2887409": "WRONG",
+  "dev450349": "PARTIAL",
+  "dev601387": "WRONG",
+  "dev458435": "RESOLVES",
+  "dev538696": "RESOLVES",
+  "dev487914": "RESOLVES",
+  "dev585900": "WRONG",
+  "dev2914692": "RESOLVES",
+  "dev592249": "RESOLVES",
+  "dev462049": "RESOLVES",
+  "dev2901961": "RESOLVES",
+  "dev464729": "RESOLVES",
+  "dev518343": "WRONG",
+  "dev2947071": "WRONG",
+  "dev2888373": "RESOLVES",
+  "dev479427": "RESOLVES",
+  "dev2277937": "RESOLVES",
+  "dev513686": "RESOLVES"
+ },
+ "annotator": "AI annotator (Claude), reading query + top resolution + the brand's actual reply; not a human study",
+ "rubric": "RESOLVES = the top resolution plausibly fixes the stated symptom; PARTIAL = right area but conditional/incomplete or the message is a follow-up; WRONG = the message states no concrete symptom (vague complaint, closure) or the fix is unrelated",
+ "wrong_cases": {
+  "dev2887409": "follow-up without the symptom; force-restart unrelated (brand actually advised updating)",
+  "dev601387": "closure ('Thanks!'), no issue",
+  "dev585900": "vague 'sort out your bug fixes'",
+  "dev518343": "vague 'buggiest iteration'",
+  "dev2947071": "'deleting important stuff' is not the autocorrect bug"
+ }
+}

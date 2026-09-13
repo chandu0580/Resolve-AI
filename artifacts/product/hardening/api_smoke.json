@@ -1,0 +1,162 @@
+{
+ "profile": "production",
+ "port": 8100,
+ "rate_limits": {
+  "resolve_per_minute": 6,
+  "read_per_minute": 25,
+  "auth_failures_per_minute": 6
+ },
+ "tokens": "generated per run, in memory only; never written",
+ "n_checks": 23,
+ "passed": 23,
+ "failed": [],
+ "wall_seconds": 23.8,
+ "checks": [
+  {
+   "check": "server becomes ready (production profile)",
+   "expected": "GET /ready 200",
+   "actual": "ready=True after 7s",
+   "pass": true
+  },
+  {
+   "check": "health is public",
+   "expected": "200",
+   "actual": 200,
+   "pass": true
+  },
+  {
+   "check": "anonymous readiness shows component booleans only",
+   "expected": "200, {name: {ok}}",
+   "actual": "200, keys=['components', 'ready']",
+   "pass": true
+  },
+  {
+   "check": "missing token -> 401 with WWW-Authenticate",
+   "expected": "401 unauthorized",
+   "actual": "401 unauthorized www-authenticate=True",
+   "pass": true
+  },
+  {
+   "check": "wrong token -> 401",
+   "expected": "401 unauthorized",
+   "actual": "401 unauthorized",
+   "pass": true
+  },
+  {
+   "check": "authentication runs before body validation",
+   "expected": "401 (not 400/422)",
+   "actual": 401,
+   "pass": true
+  },
+  {
+   "check": "read token can read /config; no secret in it",
+   "expected": "200, 0 secret values",
+   "actual": "200, 0 secret values",
+   "pass": true
+  },
+  {
+   "check": "read-only token on /resolve -> 403",
+   "expected": "403 forbidden",
+   "actual": "403 forbidden",
+   "pass": true
+  },
+  {
+   "check": "resolve with operator token -> 200 with one of three actions",
+   "expected": "200 AUTO_HANDLE | CLARIFICATION_REQUIRED | HUMAN_HANDOFF",
+   "actual": "200 AUTO_HANDLE reason=none",
+   "pass": true
+  },
+  {
+   "check": "request id kept in body and header",
+   "expected": "final-smoke-0001",
+   "actual": "body=final-smoke-0001 header=final-smoke-0001",
+   "pass": true
+  },
+  {
+   "check": "automatic reply carries citations and verification",
+   "expected": "evidence_refs >= 1, verified",
+   "actual": "refs=3 verified=True",
+   "pass": true
+  },
+  {
+   "check": "spoofed evidence field -> 422 without echoing it",
+   "expected": "422 validation_error, value absent",
+   "actual": "422 validation_error echoed=False",
+   "pass": true
+  },
+  {
+   "check": "last turn not from the customer -> 400",
+   "expected": "400 invalid_conversation",
+   "actual": "400 invalid_conversation",
+   "pass": true
+  },
+  {
+   "check": "prompt injection -> handoff, 0 model calls",
+   "expected": "200 HUMAN_HANDOFF prompt_injection, llm_calls 0",
+   "actual": "200 HUMAN_HANDOFF prompt_injection calls=0",
+   "pass": true
+  },
+  {
+   "check": "PII redacted in the response",
+   "expected": "200, raw email and phone absent, tokens present",
+   "actual": "200 raw_present=False tokens=True action=HUMAN_HANDOFF",
+   "pass": true
+  },
+  {
+   "check": "trace lookup (first resolve) holds no customer text",
+   "expected": "200, no raw message or PII",
+   "actual": "200 raw_text=False",
+   "pass": true
+  },
+  {
+   "check": "trace lookup (PII resolve) holds no customer text",
+   "expected": "200, no raw message or PII",
+   "actual": "200 raw_text=False",
+   "pass": true
+  },
+  {
+   "check": "invalid trace id -> 400",
+   "expected": "400 invalid_trace_id",
+   "actual": "400 invalid_trace_id",
+   "pass": true
+  },
+  {
+   "check": "interactive docs disabled in production",
+   "expected": "404 / 404",
+   "actual": "404 / 404",
+   "pass": true
+  },
+  {
+   "check": "resolve rate limit -> 429 + Retry-After",
+   "expected": "429 rate_limited, Retry-After >= 1",
+   "actual": "statuses=[200, 429] rate_limited retry-after=44",
+   "pass": true
+  },
+  {
+   "check": "read rate limit -> 429 + Retry-After",
+   "expected": "429 rate_limited, Retry-After >= 1",
+   "actual": "after 20 reads: 429 retry-after=44",
+   "pass": true
+  },
+  {
+   "check": "failed-authentication limit -> 429",
+   "expected": "401 ... then 429",
+   "actual": "statuses=[401, 401, 401, 429] retry-after=44",
+   "pass": true
+  },
+  {
+   "check": "server log holds no token, key or raw customer text",
+   "expected": "all counts 0",
+   "actual": {
+    "api_token": 0,
+    "read_token": 0,
+    "llm_api_key": 0,
+    "raw_email": 0,
+    "raw_phone": 0,
+    "customer_message_text": 0
+   },
+   "pass": true
+  }
+ ],
+ "server_log": "captured under .cache/final_api_smoke/ (gitignored) and scanned; not committed"
+}

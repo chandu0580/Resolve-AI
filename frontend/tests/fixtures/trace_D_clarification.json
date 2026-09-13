@@ -1,0 +1,285 @@
+{
+ "trace_id": "f777f74a1ccd45bfb2265e5601a66555",
+ "started_at": "2026-09-11T05:29:03.769+00:00",
+ "finished_at": "2026-09-11T05:29:03.998+00:00",
+ "message_id": "1241ef818680",
+ "request_id": "fixture-D",
+ "pipeline_version": "pipeline-v5.1",
+ "versions": {
+  "pipeline": "pipeline-v5.1",
+  "policy": "policy-v3.1",
+  "output_gate": "output-gate-v1",
+  "retrieval": "dense:bge-small:pair+rr+gatev3",
+  "evidence_gate": "gate-v3",
+  "rerank": "rerank-v1",
+  "classifier": "2d194e7e704f",
+  "model": "glm-5.2",
+  "config_hash": "77fe3db81c69bf09"
+ },
+ "request_meta": {
+  "channel": "web",
+  "locale": "en-US"
+ },
+ "config_hash": "77fe3db81c69bf09",
+ "prompt_versions": {
+  "risk": "risk-flags-v2",
+  "draft": "draft-v2",
+  "verify": "verify-v2",
+  "second_opinion": "intent-second-opinion-v1"
+ },
+ "events": [
+  {
+   "name": "request_received",
+   "ts": "2026-09-11T05:29:03.769+00:00",
+   "component": "api",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "has_context": false,
+    "policy_version": "policy-v3.1",
+    "gate_version": "output-gate-v1"
+   }
+  },
+  {
+   "name": "pii_redacted",
+   "ts": "2026-09-11T05:29:03.770+00:00",
+   "component": "trust",
+   "status": "ok",
+   "latency_ms": 0.06,
+   "data": {
+    "pii_counts": {}
+   }
+  },
+  {
+   "name": "injection_checked",
+   "ts": "2026-09-11T05:29:03.770+00:00",
+   "component": "trust",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "detected": false,
+    "patterns": []
+   }
+  },
+  {
+   "name": "context_built",
+   "ts": "2026-09-11T05:29:03.770+00:00",
+   "component": "context",
+   "status": "ok",
+   "latency_ms": 0.09,
+   "data": {
+    "short_reply": false,
+    "insufficient_context": false,
+    "prior_customer_turns": 0,
+    "prior_brand_turns": 0,
+    "truncated": false
+   }
+  },
+  {
+   "name": "intent_predicted",
+   "ts": "2026-09-11T05:29:03.853+00:00",
+   "component": "intent",
+   "status": "ok",
+   "latency_ms": 83.53,
+   "data": {
+    "intent": "battery_power",
+    "confidence": 0.9409,
+    "band": "HIGH",
+    "top3": [
+     [
+      "battery_power",
+      0.9409
+     ],
+     [
+      "performance_crash",
+      0.0222
+     ],
+     [
+      "general_complaint",
+      0.0087
+     ]
+    ],
+    "multi_intent": false,
+    "taxonomy_gap": false
+   }
+  },
+  {
+   "name": "retrieval_started",
+   "ts": "2026-09-11T05:29:03.854+00:00",
+   "component": "retrieval",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "query_chars": 81,
+    "boost": "strong",
+    "allowed_intents": [
+     "battery_power"
+    ]
+   }
+  },
+  {
+   "name": "retrieval_completed",
+   "ts": "2026-09-11T05:29:03.972+00:00",
+   "component": "retrieval",
+   "status": "ok",
+   "latency_ms": 118.53,
+   "data": {
+    "n_retrieved": 50,
+    "evidence_ids": [
+     "50073",
+     "245357",
+     "1394014",
+     "2424348",
+     "1903504"
+    ],
+    "top_similarity": 0.8274126648902893,
+    "retriever": "dense:bge-small:pair+rr+gatev3"
+   }
+  },
+  {
+   "name": "evidence_evaluated",
+   "ts": "2026-09-11T05:29:03.972+00:00",
+   "component": "evidence_gate",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "sufficient": false,
+    "reason": "weak_similarity",
+    "gate_version": "gate-v3",
+    "level": "INSUFFICIENT",
+    "resolution_confidence": 0.2,
+    "consistency": "no_resolution",
+    "resolution_clusters": [],
+    "support_count": 0,
+    "conflicting": false
+   }
+  },
+  {
+   "name": "risk_flags_extracted",
+   "ts": "2026-09-11T05:29:03.998+00:00",
+   "component": "risk",
+   "status": "ok",
+   "latency_ms": 24.89,
+   "data": {
+    "source": "llm+rules",
+    "flags": [],
+    "model": "glm-5.2",
+    "schema": "compact"
+   }
+  },
+  {
+   "name": "escalation_decided",
+   "ts": "2026-09-11T05:29:03.998+00:00",
+   "component": "policy",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "decision": "escalate",
+    "reason_code": "insufficient_evidence",
+    "rule": "evidence_gate",
+    "policy_version": "policy-v3.1",
+    "clarification_allowed": true,
+    "strategy": "clarify"
+   }
+  },
+  {
+   "name": "decision_made",
+   "ts": "2026-09-11T05:29:03.998+00:00",
+   "component": "output_gate",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "action": "CLARIFICATION_REQUIRED",
+    "blocking": [
+     "policy_allows_automation",
+     "evidence_sufficient",
+     "response_generated",
+     "response_verified",
+     "evidence_refs_exist",
+     "pii_guard",
+     "schema_valid"
+    ],
+    "gates": {
+     "policy_allows_automation": false,
+     "no_blocking_risk_flag": true,
+     "intent_confidence_acceptable": true,
+     "evidence_sufficient": false,
+     "response_generated": false,
+     "response_verified": false,
+     "evidence_refs_exist": false,
+     "pii_guard": false,
+     "schema_valid": false
+    }
+   }
+  },
+  {
+   "name": "clarification_created",
+   "ts": "2026-09-11T05:29:03.998+00:00",
+   "component": "clarify",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "reason_code": "insufficient_evidence",
+    "missing": [
+     "what you've already tried"
+    ],
+    "already_provided": [
+     "device",
+     "version",
+     "timing"
+    ]
+   }
+  },
+  {
+   "name": "response_returned",
+   "ts": "2026-09-11T05:29:03.998+00:00",
+   "component": "api",
+   "status": "ok",
+   "latency_ms": 0.0,
+   "data": {
+    "action": "CLARIFICATION_REQUIRED",
+    "response_chars": 80,
+    "evidence_refs": []
+   }
+  }
+ ],
+ "usage": [
+  {
+   "model": "glm-5.2",
+   "calls": 1,
+   "tokens_in": 332,
+   "tokens_out": 634,
+   "cache_hits": 1,
+   "estimated_cost_usd": 0.002361
+  }
+ ],
+ "final_decision": "CLARIFICATION_REQUIRED",
+ "stage_status": {
+  "pii_redaction": "ok",
+  "context": "ok",
+  "intent": "ok",
+  "second_opinion": "skipped",
+  "retrieval": "ok",
+  "evidence_gate": "ok",
+  "risk": "ok",
+  "policy": "ok",
+  "draft": "skipped",
+  "verification": "skipped",
+  "output_gate": "ok"
+ },
+ "latency_ms": {
+  "pii_redaction": 0.06,
+  "context": 0.09,
+  "intent": 83.53,
+  "second_opinion": 0.0,
+  "retrieval": 118.53,
+  "evidence_gate": 0.0,
+  "risk": 24.89,
+  "policy": 0.05,
+  "draft": 0.0,
+  "verification": 0.0,
+  "output_gate": 0.03,
+  "total": 229.29
+ },
+ "error": null
+}

@@ -1,0 +1,37 @@
+{
+ "minus_verifier": {
+  "source": "Phase 5 dev drafting A/B (26 drafts, AI-audited) + golden run",
+  "dev_drafts": 25,
+  "dev_blocked": 11,
+  "dev_true_blocks_that_would_ship": 6,
+  "dev_true_block_ids": [
+   "101285:A_v1",
+   "506568:A_v1",
+   "481855:A_v1",
+   "599108:A_v1",
+   "589479:A_v1",
+   "2977723:A_v1"
+  ],
+  "dev_false_blocks": 5,
+  "golden_drafts_blocked_by_verifier": 0,
+  "golden_blocked_gids": [],
+  "reading": "without the verifier, every dev draft would ship: the hand-audit found 6 of 26 carried invented steps/actions or no evidence reference; on golden all 5 troubleshooting drafts passed, so the verifier changed nothing there (n=5)"
+ },
+ "minus_gate_weak_rows": {
+  "n_weak_rows": 15,
+  "drafts_failed": 1,
+  "drafts_verified": 10,
+  "on_gold_should_escalate": 0,
+  "judged": 14,
+  "judge_means": {
+   "groundedness": 4.5,
+   "relevance": 4.79,
+   "actionability": 4.21,
+   "completeness": 3.64,
+   "policy_compliance": 4.93,
+   "tone": 4.86
+  },
+  "hallucination_rate": 0.071,
+  "note": "gate verdict overridden inside this script only; production never drafts on WEAK evidence"
+ }
+}

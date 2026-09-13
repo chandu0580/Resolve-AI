@@ -1,0 +1,154 @@
+{
+ "n": 240,
+ "seed": 51,
+ "model_skipped_hard_handoff": 87,
+ "variants": {
+  "V0": {
+   "outcomes": {
+    "HANDOFF": 153,
+    "CLARIFY": 85,
+    "AUTO_CANDIDATE": 2
+   },
+   "reasons": {
+    "repeat_contact": 38,
+    "private_info": 38,
+    "account_access": 8,
+    "payment_billing": 25,
+    "hardware": 14,
+    "insufficient_evidence": 57,
+    "low_confidence": 38,
+    "none": 2,
+    "insufficient_context": 10,
+    "safety": 7,
+    "taxonomy_gap_risk": 1,
+    "legal_media": 1,
+    "vague_hostile": 1
+   }
+  },
+  "V1": {
+   "outcomes": {
+    "CLARIFY": 144,
+    "HANDOFF": 87,
+    "AUTO_CANDIDATE": 9
+   },
+   "reasons": {
+    "low_confidence": 63,
+    "private_info": 14,
+    "account_access": 5,
+    "payment_billing": 17,
+    "insufficient_evidence": 80,
+    "insufficient_context": 20,
+    "none": 9,
+    "repeat_contact": 19,
+    "hardware": 8,
+    "legal_media": 1,
+    "safety": 4
+   }
+  },
+  "V2": {
+   "outcomes": {
+    "CLARIFY": 127,
+    "HANDOFF": 108,
+    "AUTO_CANDIDATE": 5
+   },
+   "reasons": {
+    "low_confidence": 56,
+    "private_info": 14,
+    "account_access": 8,
+    "payment_billing": 25,
+    "insufficient_evidence": 77,
+    "insufficient_context": 18,
+    "none": 5,
+    "repeat_contact": 19,
+    "hardware": 8,
+    "safety": 7,
+    "taxonomy_gap_risk": 1,
+    "legal_media": 1,
+    "vague_hostile": 1
+   }
+  },
+  "V3": {
+   "outcomes": {
+    "HANDOFF": 141,
+    "CLARIFY": 95,
+    "AUTO_CANDIDATE": 4
+   },
+   "reasons": {
+    "repeat_contact": 35,
+    "private_info": 41,
+    "account_access": 7,
+    "payment_billing": 23,
+    "insufficient_evidence": 57,
+    "insufficient_context": 11,
+    "none": 4,
+    "low_confidence": 46,
+    "hardware": 8,
+    "safety": 6,
+    "legal_media": 1,
+    "vague_hostile": 1
+   }
+  },
+  "V4": {
+   "outcomes": {
+    "CLARIFY": 135,
+    "HANDOFF": 99,
+    "AUTO_CANDIDATE": 6
+   },
+   "reasons": {
+    "low_confidence": 57,
+    "private_info": 14,
+    "account_access": 7,
+    "payment_billing": 23,
+    "insufficient_evidence": 79,
+    "insufficient_context": 19,
+    "none": 6,
+    "repeat_contact": 19,
+    "hardware": 8,
+    "safety": 6,
+    "legal_media": 1,
+    "vague_hostile": 1
+   }
+  }
+ },
+ "model_v2": {
+  "calls": 153,
+  "fallback_rate": 0.0065,
+  "latency_ms_p50": 3655.0,
+  "latency_ms_p95": 9944.79999999999,
+  "flag_counts": {
+   "repeat_contact": 28,
+   "physical_damage": 16,
+   "high_frustration": 44,
+   "needs_private_info": 26,
+   "high_impact": 12,
+   "sensitive_action_required": 4,
+   "safety_concern": 1,
+   "privacy_concern": 1,
+   "security_concern": 2,
+   "account_access_risk": 3,
+   "abusive_threatening": 2,
+   "payment_billing_risk": 4
+  }
+ },
+ "model_v3": {
+  "calls": 153,
+  "fallback_rate": 0.0131,
+  "latency_ms_p50": 3453.0,
+  "latency_ms_p95": 9318.5,
+  "flag_counts": {
+   "repeat_contact": 24,
+   "needs_private_info": 34,
+   "high_frustration": 34,
+   "sensitive_action_required": 3,
+   "privacy_concern": 1,
+   "security_concern": 2,
+   "account_access_risk": 2,
+   "high_impact": 6,
+   "physical_damage": 1,
+   "abusive_threatening": 2,
+   "payment_billing_risk": 3
+  }
+ },
+ "disagreement_rows": 76,
+ "wall_seconds": 560.4
+}

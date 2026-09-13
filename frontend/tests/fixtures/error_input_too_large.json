@@ -1,0 +1,9 @@
+{
+ "error_code": "input_too_large",
+ "message": "The conversation exceeds the configured input limits; nothing was processed.",
+ "request_id": "34d8a030d4b1492e8aa42463f57023e3",
+ "trace_id": null,
+ "details": [
+  "customer message has 2500 characters (max 2000)"
+ ]
+}

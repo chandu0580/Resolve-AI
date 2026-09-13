@@ -1,0 +1,1890 @@
+[
+ {
+  "qid": "g000",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 85,
+  "top_ids": [
+   "1175565",
+   "208976",
+   "1474732",
+   "235813",
+   "886591"
+  ],
+  "top_scores": [
+   0.06036,
+   0.05086,
+   0.04762,
+   0.04688,
+   0.04581
+  ],
+  "top_cos": [
+   0.741,
+   0.749,
+   0.832,
+   0.721,
+   0.722
+  ],
+  "top_actions": [
+   "other",
+   "ask_info",
+   "ask_info",
+   "article",
+   "other"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.740776538848877,
+  "support_count": 0,
+  "conflicting": true,
+  "intent_agreement": 0.6,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "hardware_damage"
+ },
+ {
+  "qid": "g005",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 84,
+  "top_ids": [
+   "1774891",
+   "2343853",
+   "1680810",
+   "1677901",
+   "1689374"
+  ],
+  "top_scores": [
+   0.07988,
+   0.07045,
+   0.06364,
+   0.05886,
+   0.05159
+  ],
+  "top_cos": [
+   0.902,
+   0.882,
+   0.862,
+   0.873,
+   0.854
+  ],
+  "top_actions": [
+   "update",
+   "update",
+   "update",
+   "update",
+   "update"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": true,
+  "sufficient": true,
+  "reason": "strong_consistent_evidence",
+  "top_similarity": 0.9015358686447144,
+  "support_count": 5,
+  "conflicting": false,
+  "intent_agreement": 1.0,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "keyboard_text_bug"
+ },
+ {
+  "qid": "g019",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 88,
+  "top_ids": [
+   "2295717",
+   "1960423",
+   "1170321",
+   "1450125",
+   "44629"
+  ],
+  "top_scores": [
+   0.09091,
+   0.07988,
+   0.07037,
+   0.0702,
+   0.05159
+  ],
+  "top_cos": [
+   0.819,
+   0.767,
+   0.771,
+   0.772,
+   0.778
+  ],
+  "top_actions": [
+   "other",
+   "article",
+   "article",
+   "article",
+   "other"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": true,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.8187593221664429,
+  "support_count": 0,
+  "conflicting": false,
+  "intent_agreement": 0.6,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "account_store_repair"
+ },
+ {
+  "qid": "g024",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 88,
+  "top_ids": [
+   "1706854",
+   "2647165",
+   "2306648",
+   "2592229",
+   "2477543"
+  ],
+  "top_scores": [
+   0.09524,
+   0.08893,
+   0.08167,
+   0.07051,
+   0.05256
+  ],
+  "top_cos": [
+   0.9,
+   0.838,
+   0.836,
+   0.771,
+   0.793
+  ],
+  "top_actions": [
+   "ask_info",
+   "ask_info",
+   "ask_info",
+   "restart",
+   "other"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "insufficient_resolution_evidence",
+  "top_similarity": 0.8995979428291321,
+  "support_count": 1,
+  "conflicting": false,
+  "intent_agreement": 0.6,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "connectivity"
+ },
+ {
+  "qid": "g025",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 100,
+  "top_ids": [
+   "307174",
+   "1395717",
+   "1689398",
+   "1202009",
+   "1145064"
+  ],
+  "top_scores": [
+   0.04348,
+   0.04167,
+   0.04,
+   0.03846,
+   0.03704
+  ],
+  "top_cos": [
+   0.607,
+   0.819,
+   0.635,
+   0.813,
+   0.811
+  ],
+  "top_actions": [
+   "other",
+   "ask_info",
+   "other",
+   "other",
+   "update"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": true,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.606701672077179,
+  "support_count": 0,
+  "conflicting": false,
+  "intent_agreement": 0.4,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": true,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": false
+  },
+  "intent": "other"
+ },
+ {
+  "qid": "g028",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 79,
+  "top_ids": [
+   "1328640",
+   "1144275",
+   "2385150",
+   "151511",
+   "718099"
+  ],
+  "top_scores": [
+   0.08893,
+   0.0702,
+   0.06731,
+   0.06458,
+   0.06277
+  ],
+  "top_cos": [
+   0.718,
+   0.686,
+   0.661,
+   0.68,
+   0.631
+  ],
+  "top_actions": [
+   "ask_info",
+   "article",
+   "other",
+   "update",
+   "other"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": true,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.7180066108703613,
+  "support_count": 0,
+  "conflicting": true,
+  "intent_agreement": 0.6,
+  "slices": {
+   "customer_seen_in_kb": true,
+   "short": true,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "other"
+ },
+ {
+  "qid": "g032",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 90,
+  "top_ids": [
+   "2312398",
+   "2683455",
+   "2798396",
+   "2144105",
+   "1537678"
+  ],
+  "top_scores": [
+   0.08333,
+   0.07448,
+   0.04,
+   0.03846,
+   0.03704
+  ],
+  "top_cos": [
+   0.891,
+   0.887,
+   0.909,
+   0.9,
+   0.897
+  ],
+  "top_actions": [
+   "update",
+   "update",
+   "ask_info",
+   "update",
+   "article"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": true,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": true,
+  "reason": "strong_consistent_evidence",
+  "top_similarity": 0.890609860420227,
+  "support_count": 5,
+  "conflicting": false,
+  "intent_agreement": 0.8,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "keyboard_text_bug"
+ },
+ {
+  "qid": "g046",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 95,
+  "top_ids": [
+   "1153834",
+   "644141",
+   "1305215",
+   "1404835",
+   "1772556"
+  ],
+  "top_scores": [
+   0.0693,
+   0.04348,
+   0.04348,
+   0.04167,
+   0.04
+  ],
+  "top_cos": [
+   0.753,
+   0.681,
+   0.767,
+   0.765,
+   0.671
+  ],
+  "top_actions": [
+   "ask_info",
+   "article",
+   "other",
+   "article",
+   "ask_info"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": true,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.7531522512435913,
+  "support_count": 0,
+  "conflicting": true,
+  "intent_agreement": 0.6,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "other"
+ },
+ {
+  "qid": "g047",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 75,
+  "top_ids": [
+   "961405",
+   "1475854",
+   "2280673",
+   "2770783",
+   "2371051"
+  ],
+  "top_scores": [
+   0.07152,
+   0.06602,
+   0.06549,
+   0.06016,
+   0.05616
+  ],
+  "top_cos": [
+   0.894,
+   0.877,
+   0.918,
+   0.806,
+   0.806
+  ],
+  "top_actions": [
+   "ask_info",
+   "other",
+   "other",
+   "other",
+   "other"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": true,
+  "reason": "strong_consistent_evidence",
+  "top_similarity": 0.8944486379623413,
+  "support_count": 3,
+  "conflicting": false,
+  "intent_agreement": 1.0,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": true,
+   "multi_turn": true,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": false
+  },
+  "intent": "other"
+ },
+ {
+  "qid": "g058",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 94,
+  "top_ids": [
+   "2288038",
+   "2286766",
+   "2304645",
+   "2136600",
+   "2295751"
+  ],
+  "top_scores": [
+   0.05031,
+   0.04626,
+   0.04545,
+   0.04167,
+   0.04
+  ],
+  "top_cos": [
+   0.759,
+   0.746,
+   0.801,
+   0.73,
+   0.789
+  ],
+  "top_actions": [
+   "ask_info",
+   "other",
+   "other",
+   "ask_info",
+   "other"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.7586190104484558,
+  "support_count": 0,
+  "conflicting": false,
+  "intent_agreement": 0.4,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "account_store_repair"
+ },
+ {
+  "qid": "g059",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 92,
+  "top_ids": [
+   "668552",
+   "2283928",
+   "2382845",
+   "919190",
+   "1168438"
+  ],
+  "top_scores": [
+   0.09307,
+   0.0911,
+   0.075,
+   0.06703,
+   0.06389
+  ],
+  "top_cos": [
+   0.728,
+   0.71,
+   0.707,
+   0.649,
+   0.678
+  ],
+  "top_actions": [
+   "article",
+   "other",
+   "article",
+   "update",
+   "ask_info"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.7284356355667114,
+  "support_count": 0,
+  "conflicting": true,
+  "intent_agreement": 1.0,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": true,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": false
+  },
+  "intent": "other"
+ },
+ {
+  "qid": "g061",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 90,
+  "top_ids": [
+   "2283193",
+   "1707699",
+   "2131195",
+   "2364434",
+   "1754185"
+  ],
+  "top_scores": [
+   0.0821,
+   0.06548,
+   0.05974,
+   0.04762,
+   0.04545
+  ],
+  "top_cos": [
+   0.897,
+   0.877,
+   0.838,
+   0.741,
+   0.895
+  ],
+  "top_actions": [
+   "update",
+   "update",
+   "update",
+   "ask_info",
+   "update"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": true,
+  "sufficient": true,
+  "reason": "strong_consistent_evidence",
+  "top_similarity": 0.8973848223686218,
+  "support_count": 3,
+  "conflicting": false,
+  "intent_agreement": 0.8,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": true,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "keyboard_text_bug"
+ },
+ {
+  "qid": "g075",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 84,
+  "top_ids": [
+   "2652577",
+   "825127",
+   "2447582",
+   "2322512",
+   "388536"
+  ],
+  "top_scores": [
+   0.09307,
+   0.0821,
+   0.06559,
+   0.06203,
+   0.05818
+  ],
+  "top_cos": [
+   0.716,
+   0.718,
+   0.694,
+   0.681,
+   0.668
+  ],
+  "top_actions": [
+   "article",
+   "other",
+   "article",
+   "other",
+   "other"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.7162846326828003,
+  "support_count": 0,
+  "conflicting": false,
+  "intent_agreement": 0.4,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "data_loss_sync"
+ },
+ {
+  "qid": "g089",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 97,
+  "top_ids": [
+   "2121752",
+   "1868484",
+   "2287210",
+   "2622661",
+   "1439419"
+  ],
+  "top_scores": [
+   0.04762,
+   0.04545,
+   0.04348,
+   0.04147,
+   0.04
+  ],
+  "top_cos": [
+   0.725,
+   0.805,
+   0.805,
+   0.788,
+   0.673
+  ],
+  "top_actions": [
+   "other",
+   "ask_info",
+   "article",
+   "other",
+   "settings"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.7254132032394409,
+  "support_count": 0,
+  "conflicting": true,
+  "intent_agreement": 0.2,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": true,
+   "multi_intent": true,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": false
+  },
+  "intent": "performance_crash"
+ },
+ {
+  "qid": "g095",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 75,
+  "top_ids": [
+   "2306718",
+   "1475854",
+   "2770783",
+   "2371051",
+   "2570449"
+  ],
+  "top_scores": [
+   0.08466,
+   0.07275,
+   0.07177,
+   0.06731,
+   0.06674
+  ],
+  "top_cos": [
+   1.0,
+   0.939,
+   0.882,
+   0.882,
+   0.926
+  ],
+  "top_actions": [
+   "other",
+   "other",
+   "other",
+   "other",
+   "other"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": true,
+  "reason": "strong_consistent_evidence",
+  "top_similarity": 1.0,
+  "support_count": 5,
+  "conflicting": false,
+  "intent_agreement": 1.0,
+  "slices": {
+   "customer_seen_in_kb": true,
+   "short": true,
+   "multi_turn": true,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": false
+  },
+  "intent": "other"
+ },
+ {
+  "qid": "g099",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 96,
+  "top_ids": [
+   "1656595",
+   "1692554",
+   "2519496",
+   "1701978",
+   "2283125"
+  ],
+  "top_scores": [
+   0.05726,
+   0.04762,
+   0.04762,
+   0.04348,
+   0.04124
+  ],
+  "top_cos": [
+   0.768,
+   0.815,
+   0.723,
+   0.805,
+   0.764
+  ],
+  "top_actions": [
+   "other",
+   "update",
+   "update",
+   "update",
+   "update"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": true,
+  "any_substantive": true,
+  "duplicate": true,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.7677419781684875,
+  "support_count": 0,
+  "conflicting": false,
+  "intent_agreement": 0.8,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": true,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": false
+  },
+  "intent": "keyboard_text_bug"
+ },
+ {
+  "qid": "g119",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 87,
+  "top_ids": [
+   "937448",
+   "1516633",
+   "1655466",
+   "637540",
+   "2534816"
+  ],
+  "top_scores": [
+   0.07571,
+   0.05303,
+   0.04877,
+   0.04545,
+   0.04348
+  ],
+  "top_cos": [
+   0.75,
+   0.729,
+   0.723,
+   0.754,
+   0.64
+  ],
+  "top_actions": [
+   "ask_info",
+   "update",
+   "ask_info",
+   "update",
+   "other"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.7499587535858154,
+  "support_count": 0,
+  "conflicting": true,
+  "intent_agreement": 0.4,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "other"
+ },
+ {
+  "qid": "g123",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 100,
+  "top_ids": [
+   "949663",
+   "371903",
+   "1748845",
+   "2237257",
+   "1145087"
+  ],
+  "top_scores": [
+   0.04545,
+   0.04348,
+   0.04348,
+   0.03846,
+   0.03704
+  ],
+  "top_cos": [
+   0.833,
+   0.612,
+   0.832,
+   0.685,
+   0.823
+  ],
+  "top_actions": [
+   "other",
+   "update",
+   "ask_info",
+   "article",
+   "other"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": true,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.83284592628479,
+  "support_count": 0,
+  "conflicting": true,
+  "intent_agreement": 0.4,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "performance_crash"
+ },
+ {
+  "qid": "g125",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 86,
+  "top_ids": [
+   "2008418",
+   "360285",
+   "1166858",
+   "708006",
+   "989699"
+  ],
+  "top_scores": [
+   0.05433,
+   0.05417,
+   0.05132,
+   0.04545,
+   0.04002
+  ],
+  "top_cos": [
+   0.824,
+   0.846,
+   0.886,
+   0.909,
+   0.844
+  ],
+  "top_actions": [
+   "other",
+   "other",
+   "settings",
+   "other",
+   "other"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.8242576122283936,
+  "support_count": 2,
+  "conflicting": false,
+  "intent_agreement": 1.0,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": true,
+   "multi_turn": true,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": false
+  },
+  "intent": "keyboard_text_bug"
+ },
+ {
+  "qid": "g132",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 91,
+  "top_ids": [
+   "756534",
+   "2299193",
+   "151441",
+   "1466900",
+   "1460587"
+  ],
+  "top_scores": [
+   0.08013,
+   0.07703,
+   0.06564,
+   0.0548,
+   0.04598
+  ],
+  "top_cos": [
+   0.803,
+   0.84,
+   0.763,
+   0.768,
+   0.758
+  ],
+  "top_actions": [
+   "other",
+   "other",
+   "other",
+   "other",
+   "article"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.8034135699272156,
+  "support_count": 0,
+  "conflicting": false,
+  "intent_agreement": 0.6,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "account_store_repair"
+ },
+ {
+  "qid": "g134",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 94,
+  "top_ids": [
+   "1503001",
+   "2686646",
+   "2619754",
+   "2975812",
+   "300125"
+  ],
+  "top_scores": [
+   0.06762,
+   0.05897,
+   0.05515,
+   0.04762,
+   0.04545
+  ],
+  "top_cos": [
+   0.735,
+   0.741,
+   0.754,
+   0.767,
+   0.612
+  ],
+  "top_actions": [
+   "article",
+   "restart",
+   "article",
+   "ask_info",
+   "settings"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.7353838682174683,
+  "support_count": 0,
+  "conflicting": true,
+  "intent_agreement": 0.4,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "apps_services"
+ },
+ {
+  "qid": "g147",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 90,
+  "top_ids": [
+   "1339747",
+   "2321960",
+   "1009073",
+   "242569",
+   "2519361"
+  ],
+  "top_scores": [
+   0.07879,
+   0.06273,
+   0.05831,
+   0.05794,
+   0.05183
+  ],
+  "top_cos": [
+   0.792,
+   0.821,
+   0.8,
+   0.783,
+   0.79
+  ],
+  "top_actions": [
+   "article",
+   "ask_info",
+   "update",
+   "article",
+   "settings"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.7917287945747375,
+  "support_count": 0,
+  "conflicting": true,
+  "intent_agreement": 1.0,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "connectivity"
+ },
+ {
+  "qid": "g148",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 93,
+  "top_ids": [
+   "1655466",
+   "328081",
+   "644210",
+   "2446362",
+   "165749"
+  ],
+  "top_scores": [
+   0.08392,
+   0.06762,
+   0.06762,
+   0.04348,
+   0.04167
+  ],
+  "top_cos": [
+   0.791,
+   0.836,
+   0.763,
+   0.805,
+   0.634
+  ],
+  "top_actions": [
+   "ask_info",
+   "ask_info",
+   "article",
+   "other",
+   "other"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.7914875745773315,
+  "support_count": 0,
+  "conflicting": true,
+  "intent_agreement": 0.6,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "apps_services"
+ },
+ {
+  "qid": "g156",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 90,
+  "top_ids": [
+   "2013858",
+   "146718",
+   "1589356",
+   "1406211",
+   "1568231"
+  ],
+  "top_scores": [
+   0.0911,
+   0.07919,
+   0.05974,
+   0.05551,
+   0.05493
+  ],
+  "top_cos": [
+   0.825,
+   0.801,
+   0.752,
+   0.778,
+   0.755
+  ],
+  "top_actions": [
+   "other",
+   "other",
+   "ask_info",
+   "other",
+   "other"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.8251689672470093,
+  "support_count": 0,
+  "conflicting": false,
+  "intent_agreement": 1.0,
+  "slices": {
+   "customer_seen_in_kb": true,
+   "short": true,
+   "multi_turn": true,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": false
+  },
+  "intent": "other"
+ },
+ {
+  "qid": "g161",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 92,
+  "top_ids": [
+   "1070513",
+   "2555340",
+   "1789786",
+   "2779325",
+   "308584"
+  ],
+  "top_scores": [
+   0.07465,
+   0.04348,
+   0.04,
+   0.03846,
+   0.03448
+  ],
+  "top_cos": [
+   0.802,
+   0.729,
+   0.604,
+   0.588,
+   0.765
+  ],
+  "top_actions": [
+   "article",
+   "article",
+   "article",
+   "reset",
+   "other"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": true,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.8022551536560059,
+  "support_count": 0,
+  "conflicting": false,
+  "intent_agreement": 0.4,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": true,
+   "multi_turn": true,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": false
+  },
+  "intent": "other"
+ },
+ {
+  "qid": "g162",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 77,
+  "top_ids": [
+   "2406579",
+   "2350755",
+   "2276358",
+   "1082988",
+   "749800"
+  ],
+  "top_scores": [
+   0.0755,
+   0.07292,
+   0.05441,
+   0.03704,
+   0.03571
+  ],
+  "top_cos": [
+   0.75,
+   0.714,
+   0.704,
+   0.487,
+   0.535
+  ],
+  "top_actions": [
+   "other",
+   "update",
+   "article",
+   "other",
+   "other"
+  ],
+  "intent_represented": false,
+  "resolution_bearing": true,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.749546468257904,
+  "support_count": 0,
+  "conflicting": false,
+  "intent_agreement": 0.6,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": true,
+   "multi_turn": true,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": false
+  },
+  "intent": "apps_services"
+ },
+ {
+  "qid": "g169",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 94,
+  "top_ids": [
+   "724007",
+   "2205880",
+   "1286442",
+   "1657751",
+   "938093"
+  ],
+  "top_scores": [
+   0.0787,
+   0.06941,
+   0.04762,
+   0.04545,
+   0.03704
+  ],
+  "top_cos": [
+   0.958,
+   0.952,
+   0.796,
+   0.737,
+   0.942
+  ],
+  "top_actions": [
+   "ask_info",
+   "other",
+   "article",
+   "update",
+   "article"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": true,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "conflicting_evidence",
+  "top_similarity": 0.9579593539237976,
+  "support_count": 3,
+  "conflicting": true,
+  "intent_agreement": 0.8,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": true,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": true,
+   "first_turn": true
+  },
+  "intent": "general_complaint"
+ },
+ {
+  "qid": "g174",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 93,
+  "top_ids": [
+   "1577361",
+   "1773661",
+   "2321407",
+   "2369502",
+   "2442781"
+  ],
+  "top_scores": [
+   0.07143,
+   0.07024,
+   0.04545,
+   0.04348,
+   0.04167
+  ],
+  "top_cos": [
+   0.827,
+   0.797,
+   0.826,
+   0.729,
+   0.818
+  ],
+  "top_actions": [
+   "article",
+   "update",
+   "update",
+   "restart",
+   "update"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": true,
+  "sufficient": false,
+  "reason": "weak_similarity",
+  "top_similarity": 0.8274221420288086,
+  "support_count": 0,
+  "conflicting": false,
+  "intent_agreement": 0.6,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": true,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "keyboard_text_bug"
+ },
+ {
+  "qid": "g187",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 95,
+  "top_ids": [
+   "759844",
+   "2436007",
+   "2110917",
+   "1359155",
+   "2414322"
+  ],
+  "top_scores": [
+   0.08608,
+   0.04545,
+   0.04,
+   0.0381,
+   0.03448
+  ],
+  "top_cos": [
+   0.939,
+   0.78,
+   0.643,
+   0.867,
+   0.88
+  ],
+  "top_actions": [
+   "update",
+   "ask_info",
+   "other",
+   "ask_info",
+   "settings"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "conflicting_evidence",
+  "top_similarity": 0.9387820959091187,
+  "support_count": 3,
+  "conflicting": true,
+  "intent_agreement": 0.8,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "battery_power"
+ },
+ {
+  "qid": "g193",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 94,
+  "top_ids": [
+   "1031467",
+   "855444",
+   "2296187",
+   "946683",
+   "816429"
+  ],
+  "top_scores": [
+   0.05184,
+   0.04545,
+   0.04545,
+   0.04167,
+   0.03448
+  ],
+  "top_cos": [
+   0.888,
+   0.903,
+   0.778,
+   0.854,
+   0.884
+  ],
+  "top_actions": [
+   "ask_info",
+   "ask_info",
+   "update",
+   "update",
+   "update"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": true,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": true,
+  "reason": "strong_consistent_evidence",
+  "top_similarity": 0.8876996636390686,
+  "support_count": 4,
+  "conflicting": false,
+  "intent_agreement": 1.0,
+  "slices": {
+   "customer_seen_in_kb": true,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "performance_crash"
+ },
+ {
+  "qid": "g195",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 83,
+  "top_ids": [
+   "1674680",
+   "1557609",
+   "2584309",
+   "2149074",
+   "2134896"
+  ],
+  "top_scores": [
+   0.08348,
+   0.06549,
+   0.06481,
+   0.06364,
+   0.04665
+  ],
+  "top_cos": [
+   0.861,
+   0.861,
+   0.859,
+   0.879,
+   0.849
+  ],
+  "top_actions": [
+   "update",
+   "other",
+   "update",
+   "update",
+   "update"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": true,
+  "sufficient": true,
+  "reason": "strong_consistent_evidence",
+  "top_similarity": 0.8611488938331604,
+  "support_count": 4,
+  "conflicting": false,
+  "intent_agreement": 1.0,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "keyboard_text_bug"
+ },
+ {
+  "qid": "g196",
+  "has_ref": true,
+  "hit_rank": null,
+  "hits_sens": {
+   "0.4": false,
+   "0.5": false,
+   "0.6": false
+  },
+  "n_retrieved": 97,
+  "top_ids": [
+   "2519335",
+   "1184011",
+   "2282715",
+   "387607",
+   "1411729"
+  ],
+  "top_scores": [
+   0.08712,
+   0.05538,
+   0.04762,
+   0.04348,
+   0.04167
+  ],
+  "top_cos": [
+   0.865,
+   0.831,
+   0.637,
+   0.87,
+   0.72
+  ],
+  "top_actions": [
+   "other",
+   "update",
+   "update",
+   "update",
+   "other"
+  ],
+  "intent_represented": true,
+  "resolution_bearing": false,
+  "any_substantive": true,
+  "duplicate": false,
+  "sufficient": false,
+  "reason": "insufficient_resolution_evidence",
+  "top_similarity": 0.864673376083374,
+  "support_count": 2,
+  "conflicting": false,
+  "intent_agreement": 0.4,
+  "slices": {
+   "customer_seen_in_kb": false,
+   "short": false,
+   "multi_turn": false,
+   "multi_intent": false,
+   "taxonomy_gap": false,
+   "insufficient_context": false,
+   "first_turn": true
+  },
+  "intent": "performance_crash"
+ }
+]

@@ -1,0 +1,237 @@
+{
+ "same_resolution_recall": {
+  "protocol": "reply-side TF-IDF >= 0.5 between the golden row's own historical reply and each substantive KB reply; label-free; scorable on 46 of 197 golden rows",
+  "phase2_customer_index_gate_v2": {
+   "recall@1": 0.2174,
+   "recall@3": 0.2826,
+   "recall@5": 0.3478,
+   "mrr": 0.2652,
+   "n_ref": 46
+  },
+  "phase5_pair_rerank_gate_v3": {
+   "recall@1": 0.1522,
+   "recall@3": 0.2609,
+   "recall@5": 0.2609,
+   "mrr": 0.1957,
+   "n_ref": 46
+  },
+  "all_phase5_variants_golden": {
+   "A_customer_v2": {
+    "recall@5": 0.3478,
+    "mrr": 0.2652,
+    "resolution_bearing@1": 0.1777,
+    "resolution_bearing@3": 0.3706,
+    "sufficient_rate": 0.0711
+   },
+   "B_reply_v2": {
+    "recall@5": 0.0,
+    "mrr": 0.0,
+    "resolution_bearing@1": 0.1168,
+    "resolution_bearing@3": 0.2437,
+    "sufficient_rate": 0.0
+   },
+   "B2_pair_v2": {
+    "recall@5": 0.3478,
+    "mrr": 0.2844,
+    "resolution_bearing@1": 0.2234,
+    "resolution_bearing@3": 0.3909,
+    "sufficient_rate": 0.0457
+   },
+   "C_dual_customer_reply_v2": {
+    "recall@5": 0.2826,
+    "mrr": 0.2337,
+    "resolution_bearing@1": 0.1168,
+    "resolution_bearing@3": 0.3147,
+    "sufficient_rate": 0.0051
+   },
+   "C2_dual_customer_pair_v2": {
+    "recall@5": 0.3478,
+    "mrr": 0.2899,
+    "resolution_bearing@1": 0.198,
+    "resolution_bearing@3": 0.3604,
+    "sufficient_rate": 0.066
+   },
+   "D_B2_pair_rr_v3": {
+    "recall@5": 0.2609,
+    "mrr": 0.1957,
+    "resolution_bearing@1": 0.7563,
+    "resolution_bearing@3": 0.7563,
+    "sufficient_rate": 0.0305
+   }
+  },
+  "phase2_variants_golden": {
+   "bm25": {
+    "recall@1": 0.2391,
+    "recall@5": 0.2609,
+    "mrr": 0.25
+   },
+   "dense:minilm": {
+    "recall@1": 0.2391,
+    "recall@5": 0.3261,
+    "mrr": 0.2725
+   },
+   "dense:bge-small": {
+    "recall@1": 0.2174,
+    "recall@5": 0.3261,
+    "mrr": 0.2533
+   },
+   "hybrid:minilm": {
+    "recall@1": 0.2826,
+    "recall@5": 0.2826,
+    "mrr": 0.2826
+   },
+   "hybrid:bge-small": {
+    "recall@1": 0.2826,
+    "recall@5": 0.3043,
+    "mrr": 0.2935
+   },
+   "hybrid:minilm+outcome": {
+    "recall@1": 0.2826,
+    "recall@5": 0.2826,
+    "mrr": 0.2826
+   },
+   "hybrid:bge-small+outcome": {
+    "recall@1": 0.2826,
+    "recall@5": 0.3043,
+    "mrr": 0.2935
+   },
+   "hybrid:bge-small+subst": {
+    "recall@1": 0.2826,
+    "recall@5": 0.3043,
+    "mrr": 0.2935
+   },
+   "hybrid:bge-small+outcome+subst": {
+    "recall@1": 0.2826,
+    "recall@5": 0.3043,
+    "mrr": 0.2935
+   },
+   "hybrid:minilm+outcome+subst": {
+    "recall@1": 0.2826,
+    "recall@5": 0.3043,
+    "mrr": 0.287
+   },
+   "dense:bge-small+subst": {
+    "recall@1": 0.2174,
+    "recall@5": 0.3478,
+    "mrr": 0.2652
+   },
+   "dense:minilm+subst": {
+    "recall@1": 0.2609,
+    "recall@5": 0.3261,
+    "mrr": 0.288
+   }
+  }
+ },
+ "resolution_bearing_rank": {
+  "definition": "a substantive reply whose non-question sentences state an instruction or released fix (is_resolution_bearing); a lexical predicate, NOT a relevance label",
+  "phase2_customer_index": {
+   "resolution_bearing@1": 0.1777,
+   "resolution_bearing@3": 0.3706,
+   "resolution_bearing@5": 0.4467,
+   "resolution_mrr": 0.2765
+  },
+  "phase5_pair_rerank": {
+   "resolution_bearing@1": 0.7563,
+   "resolution_bearing@3": 0.7563,
+   "resolution_bearing@5": 0.7614,
+   "resolution_mrr": 0.7574
+  }
+ },
+ "same_intent_retrieval": {
+  "phase2": 0.6244,
+  "phase5": 0.731,
+  "definition": "share of golden rows with >= 1 top-5 item whose weak-keyword intent equals the gold intent"
+ },
+ "evidence_sufficiency_agent_run": {
+  "levels": {
+   "INSUFFICIENT": 166,
+   "WEAK": 24,
+   "STRONG": 7
+  },
+  "sufficient_rate": 0.0355
+ },
+ "gate_precision_estimate": {
+  "source": "24 DEV cases hand-checked by an AI annotator (Claude), NOT human ground truth",
+  "chosen": "share0.6_ms3",
+  "table": {
+   "share0.5_ms2": {
+    "n_sufficient": 24,
+    "coverage": 0.048,
+    "labels": {
+     "RESOLVES": 16,
+     "PARTIAL": 3,
+     "ASK": 0,
+     "WRONG": 5,
+     "UNLABELLED": 0
+    },
+    "precision_resolves": 0.667,
+    "precision_resolves_or_partial": 0.792
+   },
+   "share0.6_ms2": {
+    "n_sufficient": 22,
+    "coverage": 0.044,
+    "labels": {
+     "RESOLVES": 16,
+     "PARTIAL": 2,
+     "ASK": 0,
+     "WRONG": 4,
+     "UNLABELLED": 0
+    },
+    "precision_resolves": 0.727,
+    "precision_resolves_or_partial": 0.818
+   },
+   "share0.7_ms2": {
+    "n_sufficient": 20,
+    "coverage": 0.04,
+    "labels": {
+     "RESOLVES": 15,
+     "PARTIAL": 1,
+     "ASK": 0,
+     "WRONG": 4,
+     "UNLABELLED": 0
+    },
+    "precision_resolves": 0.75,
+    "precision_resolves_or_partial": 0.8
+   },
+   "share0.6_ms3": {
+    "n_sufficient": 14,
+    "coverage": 0.028,
+    "labels": {
+     "RESOLVES": 11,
+     "PARTIAL": 2,
+     "ASK": 0,
+     "WRONG": 1,
+     "UNLABELLED": 0
+    },
+    "precision_resolves": 0.786,
+    "precision_resolves_or_partial": 0.929
+   },
+   "share0.7_ms3": {
+    "n_sufficient": 12,
+    "coverage": 0.024,
+    "labels": {
+     "RESOLVES": 10,
+     "PARTIAL": 1,
+     "ASK": 0,
+     "WRONG": 1,
+     "UNLABELLED": 0
+    },
+    "precision_resolves": 0.833,
+    "precision_resolves_or_partial": 0.917
+   }
+  },
+  "automatic_judge_precision": "0 for every gate setting (judge limitation, as in Phase 2)"
+ },
+ "coverage": {
+  "kb_rows": 17875,
+  "golden_rows_with_reference": 46,
+  "golden_rows_sufficient_agent_run": 7
+ },
+ "limitations": [
+  "46 scorable references: recall@5 differences under ~0.1 are not distinguishable",
+  "the TF-IDF judge rewards ask-info replies and cannot see paraphrases",
+  "resolution-bearing is a lexical predicate over the reply, not a judgement that the reply fits the query",
+  "gate precision is AI-annotated on 24 dev cases; the golden set was never used for calibration",
+  "the KB and golden are dominated by the Nov-2017 autocorrect burst: nearly every STRONG verdict is that bug"
+ ]
+}

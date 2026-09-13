@@ -1,0 +1,352 @@
+{
+ "ex61130a1c": {
+  "gid": "g145",
+  "system": "resolveai_full",
+  "stratum": "resolveai_handoff",
+  "action": "HUMAN_HANDOFF",
+  "response_kind": "handoff"
+ },
+ "ex04f99ade": {
+  "gid": "g065",
+  "system": "B1_simple_ml",
+  "stratum": "difficult_rows",
+  "action": "HUMAN_HANDOFF",
+  "response_kind": "handoff"
+ },
+ "ex3579be49": {
+  "gid": "g011",
+  "system": "resolveai_full",
+  "stratum": "resolveai_auto",
+  "action": "AUTO_HANDLE",
+  "response_kind": "troubleshoot"
+ },
+ "ex36a91c41": {
+  "gid": "g152",
+  "system": "B1_simple_ml",
+  "stratum": "B1_simple_ml_judged_low",
+  "action": "AUTO_HANDLE",
+  "response_kind": "copy"
+ },
+ "ex30e074ee": {
+  "gid": "g018",
+  "system": "resolveai_full",
+  "stratum": "resolveai_handoff",
+  "action": "HUMAN_HANDOFF",
+  "response_kind": "handoff"
+ },
+ "exf847b080": {
+  "gid": "g065",
+  "system": "resolveai_full",
+  "stratum": "difficult_rows",
+  "action": "HUMAN_HANDOFF",
+  "response_kind": "handoff"
+ },
+ "ex67522283": {
+  "gid": "g185",
+  "system": "B1_simple_ml",
+  "stratum": "B1_simple_ml_judged_high",
+  "action": "AUTO_HANDLE",
+  "response_kind": "copy"
+ },
+ "exaa53c772": {
+  "gid": "g176",
+  "system": "resolveai_full",
+  "stratum": "resolveai_clarify",
+  "action": "CLARIFICATION_REQUIRED",
+  "response_kind": "clarify"
+ },
+ "exb75bc04a": {
+  "gid": "g113",
+  "system": "resolveai_full",
+  "stratum": "difficult_rows",
+  "action": "CLARIFICATION_REQUIRED",
+  "response_kind": "clarify"
+ },
+ "ex2b64f55b": {
+  "gid": "g095",
+  "system": "resolveai_full",
+  "stratum": "resolveai_auto",
+  "action": "AUTO_HANDLE",
+  "response_kind": "canned"
+ },
+ "exb0aa2ec1": {
+  "gid": "g088",
+  "system": "B2_direct_llm",
+  "stratum": "B2_direct_llm_judged_low",
+  "action": "AUTO_HANDLE",
+  "response_kind": "llm_direct"
+ },
+ "ex2db71298": {
+  "gid": "g032",
+  "system": "resolveai_full",
+  "stratum": "resolveai_auto",
+  "action": "AUTO_HANDLE",
+  "response_kind": "troubleshoot"
+ },
+ "ex6d588182": {
+  "gid": "g108",
+  "system": "B1_simple_ml",
+  "stratum": "B1_simple_ml_judged_low",
+  "action": "AUTO_HANDLE",
+  "response_kind": "copy"
+ },
+ "excb07e3f8": {
+  "gid": "g146",
+  "system": "B1_simple_ml",
+  "stratum": "difficult_rows",
+  "action": "AUTO_HANDLE",
+  "response_kind": "copy"
+ },
+ "ex7b2956a0": {
+  "gid": "g005",
+  "system": "resolveai_full",
+  "stratum": "resolveai_auto",
+  "action": "AUTO_HANDLE",
+  "response_kind": "troubleshoot"
+ },
+ "ex1b0c2f96": {
+  "gid": "g142",
+  "system": "B2_direct_llm",
+  "stratum": "B2_direct_llm_judged_high",
+  "action": "AUTO_HANDLE",
+  "response_kind": "llm_direct"
+ },
+ "ex1a00d908": {
+  "gid": "g083",
+  "system": "B2_direct_llm",
+  "stratum": "B2_direct_llm_judged_high",
+  "action": "AUTO_HANDLE",
+  "response_kind": "llm_direct"
+ },
+ "ex075a8969": {
+  "gid": "g026",
+  "system": "resolveai_full",
+  "stratum": "resolveai_clarify",
+  "action": "CLARIFICATION_REQUIRED",
+  "response_kind": "clarify"
+ },
+ "ex39bc40ba": {
+  "gid": "g133",
+  "system": "B1_simple_ml",
+  "stratum": "B1_simple_ml_judged_high",
+  "action": "HUMAN_HANDOFF",
+  "response_kind": "handoff"
+ },
+ "exd7216461": {
+  "gid": "g061",
+  "system": "resolveai_full",
+  "stratum": "resolveai_auto",
+  "action": "AUTO_HANDLE",
+  "response_kind": "troubleshoot"
+ },
+ "ex233b18a5": {
+  "gid": "g004",
+  "system": "B1_simple_ml",
+  "stratum": "B1_simple_ml_judged_low",
+  "action": "HUMAN_HANDOFF",
+  "response_kind": "handoff"
+ },
+ "ex87bb3218": {
+  "gid": "g057",
+  "system": "B1_simple_ml",
+  "stratum": "B1_simple_ml_judged_high",
+  "action": "AUTO_HANDLE",
+  "response_kind": "copy"
+ },
+ "ex0a913a82": {
+  "gid": "g076",
+  "system": "B2_direct_llm",
+  "stratum": "B2_direct_llm_judged_low",
+  "action": "AUTO_HANDLE",
+  "response_kind": "llm_direct"
+ },
+ "ex4d151220": {
+  "gid": "g090",
+  "system": "B2_direct_llm",
+  "stratum": "B2_direct_llm_judged_high",
+  "action": "AUTO_HANDLE",
+  "response_kind": "llm_direct"
+ },
+ "ex0abb5c27": {
+  "gid": "g071",
+  "system": "resolveai_full",
+  "stratum": "resolveai_auto",
+  "action": "AUTO_HANDLE",
+  "response_kind": "troubleshoot"
+ },
+ "exc2b19f7d": {
+  "gid": "g054",
+  "system": "resolveai_full",
+  "stratum": "resolveai_clarify",
+  "action": "CLARIFICATION_REQUIRED",
+  "response_kind": "clarify"
+ },
+ "exd8d95272": {
+  "gid": "g101",
+  "system": "resolveai_full",
+  "stratum": "resolveai_handoff",
+  "action": "HUMAN_HANDOFF",
+  "response_kind": "handoff"
+ },
+ "ex1cf64bfa": {
+  "gid": "g103",
+  "system": "resolveai_full",
+  "stratum": "resolveai_handoff",
+  "action": "HUMAN_HANDOFF",
+  "response_kind": "handoff"
+ },
+ "ex13e58acd": {
+  "gid": "g150",
+  "system": "resolveai_full",
+  "stratum": "resolveai_auto",
+  "action": "AUTO_HANDLE",
+  "response_kind": "canned"
+ },
+ "ex59d6868f": {
+  "gid": "g100",
+  "system": "resolveai_full",
+  "stratum": "resolveai_auto",
+  "action": "AUTO_HANDLE",
+  "response_kind": "canned"
+ },
+ "ex23896bca": {
+  "gid": "g033",
+  "system": "resolveai_full",
+  "stratum": "random_fill",
+  "action": "HUMAN_HANDOFF",
+  "response_kind": "handoff"
+ },
+ "exb047608c": {
+  "gid": "g052",
+  "system": "B2_direct_llm",
+  "stratum": "B2_direct_llm_judged_low",
+  "action": "AUTO_HANDLE",
+  "response_kind": "llm_direct"
+ },
+ "ex0c78db74": {
+  "gid": "g157",
+  "system": "resolveai_full",
+  "stratum": "resolveai_clarify",
+  "action": "CLARIFICATION_REQUIRED",
+  "response_kind": "clarify"
+ },
+ "exd6af732b": {
+  "gid": "g026",
+  "system": "B1_simple_ml",
+  "stratum": "random_fill",
+  "action": "AUTO_HANDLE",
+  "response_kind": "copy"
+ },
+ "ex5c8e88b5": {
+  "gid": "g142",
+  "system": "resolveai_full",
+  "stratum": "difficult_rows",
+  "action": "CLARIFICATION_REQUIRED",
+  "response_kind": "clarify"
+ },
+ "ex4bae1d5e": {
+  "gid": "g005",
+  "system": "B2_direct_llm",
+  "stratum": "B2_direct_llm_judged_low",
+  "action": "AUTO_HANDLE",
+  "response_kind": "llm_direct"
+ },
+ "ex39361d0e": {
+  "gid": "g092",
+  "system": "resolveai_full",
+  "stratum": "difficult_rows",
+  "action": "HUMAN_HANDOFF",
+  "response_kind": "handoff"
+ },
+ "ex585af068": {
+  "gid": "g140",
+  "system": "resolveai_full",
+  "stratum": "resolveai_auto",
+  "action": "AUTO_HANDLE",
+  "response_kind": "canned"
+ },
+ "exe95c4a22": {
+  "gid": "g145",
+  "system": "B1_simple_ml",
+  "stratum": "B1_simple_ml_judged_high",
+  "action": "AUTO_HANDLE",
+  "response_kind": "copy"
+ },
+ "ex61f3d1f8": {
+  "gid": "g094",
+  "system": "resolveai_full",
+  "stratum": "resolveai_clarify",
+  "action": "CLARIFICATION_REQUIRED",
+  "response_kind": "clarify"
+ },
+ "ex90b522d3": {
+  "gid": "g135",
+  "system": "B1_simple_ml",
+  "stratum": "random_fill",
+  "action": "AUTO_HANDLE",
+  "response_kind": "copy"
+ },
+ "exbaf2b751": {
+  "gid": "g168",
+  "system": "B2_direct_llm",
+  "stratum": "B2_direct_llm_judged_high",
+  "action": "AUTO_HANDLE",
+  "response_kind": "llm_direct"
+ },
+ "exf4e2af1a": {
+  "gid": "g004",
+  "system": "resolveai_full",
+  "stratum": "resolveai_handoff",
+  "action": "HUMAN_HANDOFF",
+  "response_kind": "handoff"
+ },
+ "ex60a6b5a0": {
+  "gid": "g093",
+  "system": "resolveai_full",
+  "stratum": "resolveai_clarify",
+  "action": "CLARIFICATION_REQUIRED",
+  "response_kind": "clarify"
+ },
+ "exaa03e88c": {
+  "gid": "g012",
+  "system": "B1_simple_ml",
+  "stratum": "B1_simple_ml_judged_low",
+  "action": "HUMAN_HANDOFF",
+  "response_kind": "handoff"
+ },
+ "exdf2c4f5c": {
+  "gid": "g068",
+  "system": "B1_simple_ml",
+  "stratum": "B1_simple_ml_judged_high",
+  "action": "AUTO_HANDLE",
+  "response_kind": "copy"
+ },
+ "ex411fcea8": {
+  "gid": "g088",
+  "system": "B1_simple_ml",
+  "stratum": "B1_simple_ml_judged_low",
+  "action": "AUTO_HANDLE",
+  "response_kind": "copy"
+ },
+ "ex6e2f511c": {
+  "gid": "g038",
+  "system": "B2_direct_llm",
+  "stratum": "B2_direct_llm_judged_low",
+  "action": "AUTO_HANDLE",
+  "response_kind": "llm_direct"
+ },
+ "ex70439bf9": {
+  "gid": "g194",
+  "system": "B2_direct_llm",
+  "stratum": "random_fill",
+  "action": "AUTO_HANDLE",
+  "response_kind": "llm_direct"
+ },
+ "exbfdd336a": {
+  "gid": "g156",
+  "system": "B2_direct_llm",
+  "stratum": "B2_direct_llm_judged_high",
+  "action": "AUTO_HANDLE",
+  "response_kind": "llm_direct"
+ }
+}

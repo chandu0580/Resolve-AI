@@ -1,0 +1,7 @@
+{
+ "error_code": "trace_not_found",
+ "message": "No trace with this id exists in the trace store.",
+ "request_id": "94e3b7581cc847699717903966d39ab7",
+ "trace_id": "00000000000000000000000000000000",
+ "details": null
+}

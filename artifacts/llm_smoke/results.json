@@ -1,0 +1,201 @@
+{
+  "providers": {
+    "primary": "http://<private-llm-proxy-host>:4000/v1/",
+    "gemini": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "groq": "https://api.groq.com/openai/v1"
+  },
+  "listed_models": {
+    "gemini": [
+      "antigravity-preview-05-2026",
+      "aqa",
+      "deep-research-max-preview-04-2026",
+      "deep-research-preview-04-2026",
+      "deep-research-pro-preview-12-2025",
+      "gemini-2.5-computer-use-preview-10-2025",
+      "gemini-2.5-flash",
+      "gemini-2.5-flash-image",
+      "gemini-2.5-flash-lite",
+      "gemini-2.5-flash-native-audio-latest",
+      "gemini-2.5-flash-native-audio-preview-09-2025",
+      "gemini-2.5-flash-native-audio-preview-12-2025",
+      "gemini-2.5-flash-preview-tts",
+      "gemini-2.5-pro",
+      "gemini-2.5-pro-preview-tts",
+      "gemini-3-flash-preview",
+      "gemini-3-pro-image",
+      "gemini-3-pro-image-preview",
+      "gemini-3.1-flash-image",
+      "gemini-3.1-flash-image-preview",
+      "gemini-3.1-flash-lite",
+      "gemini-3.1-flash-lite-image",
+      "gemini-3.1-flash-lite-preview",
+      "gemini-3.1-flash-live-preview",
+      "gemini-3.1-flash-tts-preview",
+      "gemini-3.1-pro-preview",
+      "gemini-3.1-pro-preview-customtools",
+      "gemini-3.5-flash",
+      "gemini-3.5-flash-lite",
+      "gemini-3.5-live-translate-preview",
+      "gemini-3.5-transcribe",
+      "gemini-3.5-transcribe-live",
+      "gemini-3.6-flash",
+      "gemini-3.7-flash",
+      "gemini-3.8-flash",
+      "gemini-embedding-001",
+      "gemini-embedding-2",
+      "gemini-embedding-2-preview",
+      "gemini-flash-latest",
+      "gemini-flash-lite-latest",
+      "gemini-omni-1.1-flash",
+      "gemini-omni-flash-preview",
+      "gemini-pro-latest",
+      "gemini-robotics-er-2-preview",
+      "gemini-robotics-er-2-streaming-preview",
+      "gemma-4-26b-a4b-it",
+      "gemma-4-31b-it",
+      "lyria-3-clip-preview",
+      "lyria-3-pro-preview",
+      "lyria-3.5",
+      "lyria-realtime-exp",
+      "nano-banana-pro-preview",
+      "veo-3.1-fast-generate-preview",
+      "veo-3.1-generate-preview",
+      "veo-3.1-lite-generate-preview"
+    ],
+    "groq": [
+      "allam-2-7b",
+      "canopylabs/orpheus-arabic-saudi",
+      "canopylabs/orpheus-v1-english",
+      "groq/compound",
+      "groq/compound-mini",
+      "meta-llama/llama-prompt-guard-2-22m",
+      "meta-llama/llama-prompt-guard-2-86m",
+      "openai/gpt-oss-120b",
+      "openai/gpt-oss-20b",
+      "openai/gpt-oss-safeguard-20b",
+      "qwen/qwen3.6-27b",
+      "qwen/qwen3.8-27b",
+      "whisper-large-v3",
+      "whisper-large-v3-turbo"
+    ],
+    "primary": [
+      "glm-5.2"
+    ]
+  },
+  "results": [
+    {
+      "model": "glm-5.2",
+      "provider": "primary",
+      "n_examples": 30,
+      "n_calls": 120,
+      "live_calls": 120,
+      "failure_rate": 0.0,
+      "schema_valid_rate": 0.95,
+      "intent_accuracy": 0.8666666666666667,
+      "evidence_grounded_rate": 0.9333333333333333,
+      "reply_compliance": 1,
+      "reply_evidence_overlap": 0.4544989215577451,
+      "escalation_accuracy": 0.5666666666666667,
+      "latency_p50_ms": 5173.7348500000735,
+      "latency_p95_ms": 10292.530499999884,
+      "tokens_in": 27366,
+      "tokens_out": 37535,
+      "cost_usd_per_100_msgs": 0.4916,
+      "sample_errors": []
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "gemini",
+      "failure_rate": 1.0,
+      "sample_errors": [
+        "PermissionDeniedError: Error code: 403 - [{'error': {'code': 403, 'message': 'Your project has been denied access. Please contact support.', 'status': 'PERMISSION_DENIED'}}]"
+      ]
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "provider": "gemini",
+      "failure_rate": 1.0,
+      "sample_errors": [
+        "PermissionDeniedError: Error code: 403 - [{'error': {'code': 403, 'message': 'Your project has been denied access. Please contact support.', 'status': 'PERMISSION_DENIED'}}]"
+      ]
+    },
+    {
+      "model": "gemini-3.8-flash",
+      "provider": "gemini",
+      "failure_rate": 1.0,
+      "sample_errors": [
+        "PermissionDeniedError: Error code: 403 - [{'error': {'code': 403, 'message': 'Your project has been denied access. Please contact support.', 'status': 'PERMISSION_DENIED'}}]"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "provider": "groq",
+      "n_examples": 30,
+      "n_calls": 120,
+      "live_calls": 120,
+      "failure_rate": 0.08333333333333333,
+      "schema_valid_rate": 0.9166666666666666,
+      "intent_accuracy": 0.7333333333333333,
+      "evidence_grounded_rate": 0.9933333333333333,
+      "reply_compliance": 0.7,
+      "reply_evidence_overlap": 0.18586421748186455,
+      "escalation_accuracy": 0.8,
+      "latency_p50_ms": 4166.7686999999205,
+      "latency_p95_ms": 5918.181099999856,
+      "tokens_in": 35216,
+      "tokens_out": 30575,
+      "cost_usd_per_100_msgs": 0.094,
+      "sample_errors": [
+        "BadRequestError: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid doc",
+        "RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0wk1pa4eb0thz7ypnkjfxsj` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7193, Requested 838. Please try again in 232.499999ms. Need more tokens? ",
+        "BadRequestError: Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "provider": "groq",
+      "n_examples": 30,
+      "n_calls": 120,
+      "live_calls": 120,
+      "failure_rate": 0.175,
+      "schema_valid_rate": 0.825,
+      "intent_accuracy": 0.7,
+      "evidence_grounded_rate": 0.9333333333333333,
+      "reply_compliance": 0.36666666666666664,
+      "reply_evidence_overlap": 0.2851851851851852,
+      "escalation_accuracy": 0.8666666666666667,
+      "latency_p50_ms": 4770.616900000277,
+      "latency_p95_ms": 6102.585900000122,
+      "tokens_in": 31879,
+      "tokens_out": 30674,
+      "cost_usd_per_100_msgs": 0.0617,
+      "sample_errors": [
+        "BadRequestError: Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}",
+        "BadRequestError: Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}",
+        "BadRequestError: Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+      ]
+    },
+    {
+      "model": "qwen/qwen3.8-27b",
+      "provider": "groq",
+      "n_examples": 30,
+      "n_calls": 120,
+      "live_calls": 120,
+      "failure_rate": 0.008333333333333333,
+      "schema_valid_rate": 0.9916666666666667,
+      "intent_accuracy": 0.8333333333333334,
+      "evidence_grounded_rate": 1.0,
+      "reply_compliance": 1,
+      "reply_evidence_overlap": 0.5734016800193271,
+      "escalation_accuracy": 0.6666666666666666,
+      "latency_p50_ms": 2478.075600000011,
+      "latency_p95_ms": 6584.272000000055,
+      "tokens_in": 28278,
+      "tokens_out": 6545,
+      "cost_usd_per_100_msgs": null,
+      "sample_errors": [
+        "RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m0wk1pa4eb0thz7ypnkjfxsj` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 894, Requested 118. Please try again in 720ms. Need more tokens? Upg"
+      ]
+    }
+  ]
+}

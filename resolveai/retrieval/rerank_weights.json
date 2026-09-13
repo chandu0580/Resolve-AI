@@ -1,0 +1,12 @@
+{
+  "w_customer": 0.35,
+  "w_reply": 0.25,
+  "w_intent": 0.1,
+  "w_resolution": 0.2,
+  "w_quality": 0.05,
+  "w_outcome": 0.01,
+  "w_dup": 0.15,
+  "w_dm": 0.2,
+  "w_same": 0.3,
+  "version": "rerank-v1"
+}

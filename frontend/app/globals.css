@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* ResolveAI design tokens. Light, restrained, high-contrast. Status is always paired with text or an icon, never colour alone. */
+@theme {
+  --font-sans: ui-sans-serif, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  --color-canvas: #f7f7f4;
+  --color-surface: #ffffff;
+  --color-subtle: #f1f1ec;
+  --color-line: #e6e5df;
+  --color-line-strong: #cdccc3;
+
+  --color-ink: #1a1c19;
+  --color-ink-2: #3f443d;
+  --color-ink-3: #5d6359;
+
+  --color-brand-50: #eaf1ea;
+  --color-brand-100: #d5e5d8;
+  --color-brand-500: #3d7a57;
+  --color-brand-600: #2f6b4a;
+  --color-brand-700: #245239;
+  --color-brand-900: #1e3a2b;
+
+  --color-success: #2f6b4a;
+  --color-success-bg: #e8f1ea;
+  --color-success-line: #bcd8c4;
+  --color-warning: #8a5a12;
+  --color-warning-bg: #fbf3e3;
+  --color-warning-line: #ecd7a6;
+  --color-info: #1e4fb8;
+  --color-info-bg: #eef3fd;
+  --color-info-line: #bcd0f5;
+  --color-danger: #a33a52;
+  --color-danger-bg: #fbecef;
+  --color-danger-line: #eec6d0;
+  --color-neutral: #55594f;
+  --color-neutral-bg: #f1f1ec;
+  --color-neutral-line: #e0dfd8;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  body {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: var(--color-brand-100);
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

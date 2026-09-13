@@ -1,0 +1,31 @@
+{
+ "ready": true,
+ "components": {
+  "agent": {
+   "state": "loaded"
+  },
+  "knowledge_base": {
+   "ok": true,
+   "rows": 17875,
+   "dense_indexes": 2
+  },
+  "intent_classifier": {
+   "ok": true,
+   "artifact": "2d194e7e704f"
+  },
+  "evidence_gate": {
+   "ok": true,
+   "version": "gate-v3",
+   "policy": "policy-v3.1"
+  },
+  "llm": {
+   "status": "configured",
+   "model": "glm-5.2",
+   "checked_live": false,
+   "note": "readiness never calls the model; if it is down the agent falls back to handoff"
+  },
+  "trace_store": {
+   "ok": true
+  }
+ }
+}

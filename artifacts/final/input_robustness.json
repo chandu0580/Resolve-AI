@@ -1,0 +1,1005 @@
+{
+ "generated_at": "2026-09-12T13:49:17",
+ "agent_cases": 53,
+ "api_cases": 15,
+ "crashes": 0,
+ "failures": [],
+ "passed": true,
+ "by_class": {
+  "empty": {
+   "CLARIFICATION_REQUIRED": 2
+  },
+  "whitespace": {
+   "CLARIFICATION_REQUIRED": 2
+  },
+  "punctuation": {
+   "CLARIFICATION_REQUIRED": 4
+  },
+  "very_short": {
+   "AUTO_HANDLE": 3,
+   "CLARIFICATION_REQUIRED": 1
+  },
+  "greeting": {
+   "AUTO_HANDLE": 4
+  },
+  "casing": {
+   "CLARIFICATION_REQUIRED": 4,
+   "HUMAN_HANDOFF": 3
+  },
+  "emoji": {
+   "CLARIFICATION_REQUIRED": 2,
+   "HUMAN_HANDOFF": 1
+  },
+  "typos": {
+   "AUTO_HANDLE": 1,
+   "CLARIFICATION_REQUIRED": 1
+  },
+  "unicode": {
+   "CLARIFICATION_REQUIRED": 4
+  },
+  "non_english": {
+   "AUTO_HANDLE": 4
+  },
+  "very_long": {
+   "CLARIFICATION_REQUIRED": 2
+  },
+  "duplicate": {
+   "CLARIFICATION_REQUIRED": 2
+  },
+  "quoted_history": {
+   "CLARIFICATION_REQUIRED": 1,
+   "HUMAN_HANDOFF": 1
+  },
+  "short_reply": {
+   "CLARIFICATION_REQUIRED": 3
+  },
+  "injection": {
+   "HUMAN_HANDOFF": 4
+  },
+  "pii": {
+   "HUMAN_HANDOFF": 2
+  },
+  "human_request": {
+   "HUMAN_HANDOFF": 1
+  },
+  "safety": {
+   "HUMAN_HANDOFF": 1
+  }
+ },
+ "rows": [
+  {
+   "class": "empty",
+   "case": "empty string",
+   "chars": 0,
+   "ok": true,
+   "ms": 14729.6,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "empty",
+   "case": "single space",
+   "chars": 1,
+   "ok": true,
+   "ms": 18.0,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "whitespace",
+   "case": "spaces and tabs",
+   "chars": 9,
+   "ok": true,
+   "ms": 17.7,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "whitespace",
+   "case": "newlines only",
+   "chars": 3,
+   "ok": true,
+   "ms": 17.5,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "punctuation",
+   "case": "question marks",
+   "chars": 3,
+   "ok": true,
+   "ms": 54.3,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "general_complaint",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "punctuation",
+   "case": "repeated punctuation",
+   "chars": 10,
+   "ok": true,
+   "ms": 66.7,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "punctuation",
+   "case": "mixed punctuation",
+   "chars": 10,
+   "ok": true,
+   "ms": 62.1,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "general_complaint",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "punctuation",
+   "case": "single dot",
+   "chars": 1,
+   "ok": true,
+   "ms": 54.5,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "very_short",
+   "case": "one letter",
+   "chars": 1,
+   "ok": true,
+   "ms": 58.3,
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "rule": "canned:acknowledgement",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "Thanks for letting us know. If anything else comes up, we're here to help."
+  },
+  {
+   "class": "very_short",
+   "case": "two letters",
+   "chars": 2,
+   "ok": true,
+   "ms": 54.1,
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "rule": "canned:acknowledgement",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "Thanks for letting us know. If anything else comes up, we're here to help."
+  },
+  {
+   "class": "very_short",
+   "case": "help",
+   "chars": 4,
+   "ok": true,
+   "ms": 63.8,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "keyboard_text_bug",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "very_short",
+   "case": "bare yes with no thread",
+   "chars": 3,
+   "ok": true,
+   "ms": 54.1,
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "rule": "canned:acknowledgement",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "Thanks for letting us know. If anything else comes up, we're here to help."
+  },
+  {
+   "class": "greeting",
+   "case": "hi",
+   "chars": 2,
+   "ok": true,
+   "ms": 38.8,
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "rule": "canned:greeting",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 0,
+   "llm_calls": 0,
+   "response": "Hi! What can we help you with today?"
+  },
+  {
+   "class": "greeting",
+   "case": "hey bro",
+   "chars": 7,
+   "ok": true,
+   "ms": 40.9,
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "rule": "canned:greeting",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 0,
+   "llm_calls": 0,
+   "response": "Hi! What can we help you with today?"
+  },
+  {
+   "class": "greeting",
+   "case": "good morning",
+   "chars": 12,
+   "ok": true,
+   "ms": 42.6,
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "rule": "canned:greeting",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 0,
+   "llm_calls": 0,
+   "response": "Hi! What can we help you with today?"
+  },
+  {
+   "class": "greeting",
+   "case": "thanks",
+   "chars": 6,
+   "ok": true,
+   "ms": 54.2,
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "rule": "canned:other",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "You're welcome! If anything else comes up, we're here to help."
+  },
+  {
+   "class": "casing",
+   "case": "all lower",
+   "chars": 40,
+   "ok": true,
+   "ms": 72.8,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "rule": "evidence_gate",
+   "intent": "battery_power",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with the battery. Could you tell us which software version is installed (Settings > General > About)?"
+  },
+  {
+   "class": "casing",
+   "case": "ALL UPPER",
+   "chars": 40,
+   "ok": true,
+   "ms": 68.8,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "rule": "evidence_gate",
+   "intent": "battery_power",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with the battery. Could you tell us which software version is installed (Settings > General > About)?"
+  },
+  {
+   "class": "casing",
+   "case": "Title Case",
+   "chars": 40,
+   "ok": true,
+   "ms": 61.8,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "rule": "evidence_gate",
+   "intent": "battery_power",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with the battery. Could you tell us which software version is installed (Settings > General > About)?"
+  },
+  {
+   "class": "casing",
+   "case": "aLtErNaTiNg",
+   "chars": 40,
+   "ok": true,
+   "ms": 71.8,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "rule": "evidence_gate",
+   "intent": "battery_power",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with the battery. Could you tell us which software version is installed (Settings > General > About)?"
+  },
+  {
+   "class": "casing",
+   "case": "shouting a complaint",
+   "chars": 13,
+   "ok": true,
+   "ms": 63.3,
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "account_access",
+   "rule": "account_access",
+   "intent": "account_store_repair",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "To keep your account safe we need to help with this privately. A member of our team will follow up with you directly."
+  },
+  {
+   "class": "casing",
+   "case": "lower complaint",
+   "chars": 13,
+   "ok": true,
+   "ms": 60.2,
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "account_access",
+   "rule": "account_access",
+   "intent": "account_store_repair",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "To keep your account safe we need to help with this privately. A member of our team will follow up with you directly."
+  },
+  {
+   "class": "casing",
+   "case": "mixed complaint",
+   "chars": 13,
+   "ok": true,
+   "ms": 59.5,
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "account_access",
+   "rule": "account_access",
+   "intent": "account_store_repair",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "To keep your account safe we need to help with this privately. A member of our team will follow up with you directly."
+  },
+  {
+   "class": "emoji",
+   "case": "emoji only",
+   "chars": 3,
+   "ok": true,
+   "ms": 45.7,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "emoji",
+   "case": "emoji with issue",
+   "chars": 25,
+   "ok": true,
+   "ms": 55.5,
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "private_info",
+   "rule": "private_info",
+   "intent": "account_store_repair",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to look into this with you. Because we'll need some details about your device or account, a member of our team will follow up with you directly."
+  },
+  {
+   "class": "emoji",
+   "case": "zwj family sequence",
+   "chars": 7,
+   "ok": true,
+   "ms": 47.6,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "typos",
+   "case": "heavy typos",
+   "chars": 49,
+   "ok": true,
+   "ms": 70.1,
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "rule": "canned:non_english",
+   "intent": "non_english",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact"
+  },
+  {
+   "class": "typos",
+   "case": "no spaces",
+   "chars": 18,
+   "ok": true,
+   "ms": 55.8,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "unicode",
+   "case": "fullwidth latin",
+   "chars": 23,
+   "ok": true,
+   "ms": 97.1,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "unicode",
+   "case": "combining accents and an RTL mark",
+   "chars": 25,
+   "ok": true,
+   "ms": 57.2,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "rule": "evidence_gate",
+   "intent": "battery_power",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with the battery. Could you tell us which device you're using, which software version is installed (Settings > General > About) and when it started?"
+  },
+  {
+   "class": "unicode",
+   "case": "zero-width joiners inside words",
+   "chars": 25,
+   "ok": true,
+   "ms": 57.5,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "rule": "evidence_gate",
+   "intent": "battery_power",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with the battery. Could you tell us which device you're using, which software version is installed (Settings > General > About) and when it started?"
+  },
+  {
+   "class": "unicode",
+   "case": "control characters",
+   "chars": 25,
+   "ok": true,
+   "ms": 41.0,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "rule": "evidence_gate",
+   "intent": "battery_power",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with the battery. Could you tell us which software version is installed (Settings > General > About) and when it started?"
+  },
+  {
+   "class": "non_english",
+   "case": "spanish",
+   "chars": 49,
+   "ok": true,
+   "ms": 49.0,
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "rule": "canned:non_english",
+   "intent": "non_english",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact"
+  },
+  {
+   "class": "non_english",
+   "case": "hindi",
+   "chars": 30,
+   "ok": true,
+   "ms": 50.0,
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "rule": "canned:non_latin_script",
+   "intent": "apps_services",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact"
+  },
+  {
+   "class": "non_english",
+   "case": "japanese",
+   "chars": 15,
+   "ok": true,
+   "ms": 46.0,
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "rule": "canned:non_latin_script",
+   "intent": "non_english",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact"
+  },
+  {
+   "class": "non_english",
+   "case": "arabic",
+   "chars": 21,
+   "ok": true,
+   "ms": 53.8,
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "rule": "canned:non_latin_script",
+   "intent": "non_english",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact"
+  },
+  {
+   "class": "very_long",
+   "case": "4k characters",
+   "chars": 4000,
+   "ok": true,
+   "ms": 462.3,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "rule": "evidence_gate",
+   "intent": "battery_power",
+   "evidence": "WEAK",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with the battery. Could you tell us what you've already tried?"
+  },
+  {
+   "class": "very_long",
+   "case": "one long word",
+   "chars": 3000,
+   "ok": true,
+   "ms": 250.4,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "rule": "insufficient_context",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which device you're using, which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "duplicate",
+   "case": "same sentence repeated",
+   "chars": 300,
+   "ok": true,
+   "ms": 129.1,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "low_confidence",
+   "rule": "low_confidence",
+   "intent": "battery_power",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us which software version is installed (Settings > General > About) and exactly what's happening?"
+  },
+  {
+   "class": "duplicate",
+   "case": "identical turn repeated in the thread",
+   "chars": 23,
+   "ok": true,
+   "ms": 44.9,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "rule": "evidence_gate",
+   "intent": "battery_power",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with the battery. Could you tell us which software version is installed (Settings > General > About) and when it started?"
+  },
+  {
+   "class": "quoted_history",
+   "case": "quoted brand reply",
+   "chars": 72,
+   "ok": true,
+   "ms": 90.1,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "rule": "evidence_gate",
+   "intent": "performance_crash",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help. Could you tell us whether it happens in one app or everywhere?"
+  },
+  {
+   "class": "quoted_history",
+   "case": "pasted transcript",
+   "chars": 76,
+   "ok": true,
+   "ms": 81.0,
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "private_info",
+   "rule": "private_info",
+   "intent": "account_store_repair",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to look into this with you. Because we'll need some details about your device or account, a member of our team will follow up with you directly."
+  },
+  {
+   "class": "short_reply",
+   "case": "still happening",
+   "chars": 15,
+   "ok": true,
+   "ms": 79.6,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "rule": "evidence_gate",
+   "intent": "battery_power",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with the battery. Could you tell us what you've already tried?"
+  },
+  {
+   "class": "short_reply",
+   "case": "that didn't work",
+   "chars": 16,
+   "ok": true,
+   "ms": 92.1,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "rule": "evidence_gate",
+   "intent": "battery_power",
+   "evidence": "WEAK",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with the battery. Could you tell us what you've already tried?"
+  },
+  {
+   "class": "short_reply",
+   "case": "bare yes in a thread",
+   "chars": 3,
+   "ok": true,
+   "ms": 83.2,
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_evidence",
+   "rule": "evidence_gate",
+   "intent": "battery_power",
+   "evidence": "WEAK",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with the battery. Could you tell us what you've already tried?"
+  },
+  {
+   "class": "injection",
+   "case": "direct override",
+   "chars": 62,
+   "ok": true,
+   "ms": 73.9,
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "prompt_injection",
+   "rule": "prompt_injection",
+   "intent": "keyboard_text_bug",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with your device or account. A member of our team will follow up with you directly."
+  },
+  {
+   "class": "injection",
+   "case": "obfuscated override",
+   "chars": 51,
+   "ok": true,
+   "ms": 69.2,
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "prompt_injection",
+   "rule": "prompt_injection",
+   "intent": "keyboard_text_bug",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with your device or account. A member of our team will follow up with you directly."
+  },
+  {
+   "class": "injection",
+   "case": "injection after a real issue",
+   "chars": 88,
+   "ok": true,
+   "ms": 56.0,
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "prompt_injection",
+   "rule": "prompt_injection",
+   "intent": "battery_power",
+   "evidence": "WEAK",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to help with your device or account. A member of our team will follow up with you directly."
+  },
+  {
+   "class": "injection",
+   "case": "injection inside quoted history",
+   "chars": 50,
+   "ok": true,
+   "ms": 81.0,
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "private_info",
+   "rule": "private_info",
+   "intent": "account_store_repair",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to look into this with you. Because we'll need some details about your device or account, a member of our team will follow up with you directly."
+  },
+  {
+   "class": "pii",
+   "case": "email and phone",
+   "chars": 74,
+   "ok": true,
+   "ms": 52.9,
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "private_info",
+   "rule": "private_info",
+   "intent": "account_store_repair",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to look into this with you. Because we'll need some details about your device or account, a member of our team will follow up with you directly."
+  },
+  {
+   "class": "pii",
+   "case": "order and serial",
+   "chars": 51,
+   "ok": true,
+   "ms": 50.5,
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "payment_billing",
+   "rule": "payment_billing",
+   "intent": "account_store_repair",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to look at this with you. Because it involves your account details, a member of our team will follow up with you directly."
+  },
+  {
+   "class": "human_request",
+   "case": "asks for a person",
+   "chars": 28,
+   "ok": true,
+   "ms": 42.8,
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "human_requested",
+   "rule": "human_requested",
+   "intent": "other",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "Of course. A member of our team will pick this up with you directly."
+  },
+  {
+   "class": "safety",
+   "case": "safety wording",
+   "chars": 44,
+   "ok": true,
+   "ms": 76.2,
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "hardware",
+   "rule": "hardware",
+   "intent": "battery_power",
+   "evidence": "INSUFFICIENT",
+   "n_retrieved": 50,
+   "llm_calls": 0,
+   "response": "We'd like to look at this with you. A member of our team will follow up with you directly about repair options."
+  }
+ ],
+ "api": [
+  {
+   "class": "api",
+   "case": "empty text rejected by the schema",
+   "status": 422,
+   "expected": [
+    422
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "whitespace-only text reaches the agent",
+   "status": 200,
+   "expected": [
+    200
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "no turns rejected",
+   "status": 422,
+   "expected": [
+    422
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "missing conversation field",
+   "status": 422,
+   "expected": [
+    422
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "unknown top-level field rejected",
+   "status": 422,
+   "expected": [
+    422
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "unknown turn field rejected",
+   "status": 422,
+   "expected": [
+    422
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "bad role rejected",
+   "status": 422,
+   "expected": [
+    422
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "last turn must be the customer's",
+   "status": 400,
+   "expected": [
+    400
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "text over the configured limit",
+   "status": 413,
+   "expected": [
+    413,
+    422
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "text over the schema cap",
+   "status": 422,
+   "expected": [
+    422
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "too many turns",
+   "status": 422,
+   "expected": [
+    422,
+    413
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "null conversation",
+   "status": 422,
+   "expected": [
+    422
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "conversation sent as a string",
+   "status": 422,
+   "expected": [
+    422
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "raw customer id rejected by the metadata pattern",
+   "status": 422,
+   "expected": [
+    422
+   ],
+   "ok": true
+  },
+  {
+   "class": "api",
+   "case": "bad locale rejected",
+   "status": 422,
+   "expected": [
+    422
+   ],
+   "ok": true
+  }
+ ]
+}

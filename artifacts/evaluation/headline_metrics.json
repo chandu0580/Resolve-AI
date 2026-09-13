@@ -1,0 +1,75 @@
+{
+ "system": "resolveai_full",
+ "n": 197,
+ "golden_sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9",
+ "intent_accuracy": {
+  "point": 0.8477,
+  "ci_low": 0.797,
+  "ci_high": 0.8985,
+  "n": 197,
+  "n_boot": 1000,
+  "seed": 42
+ },
+ "intent_macro_f1": {
+  "point": 0.8538,
+  "ci_low": 0.7995,
+  "ci_high": 0.9015,
+  "n": 197,
+  "n_boot": 1000,
+  "seed": 42
+ },
+ "escalation_recall": {
+  "point": 0.9459,
+  "ci_low": 0.8621,
+  "ci_high": 1.0,
+  "n": 197,
+  "n_boot": 1000,
+  "seed": 42
+ },
+ "escalation_f1": {
+  "point": 0.4403,
+  "ci_low": 0.3312,
+  "ci_high": 0.5301,
+  "n": 197,
+  "n_boot": 1000,
+  "seed": 42
+ },
+ "escalation_precision": 0.2869,
+ "missed_escalations": 2,
+ "false_escalations": 87,
+ "auto_handle_rate": 0.0457,
+ "clarification_rate": 0.335,
+ "handoff_rate": 0.6193,
+ "safe_auto_handle_rate": {
+  "point": 0.0457,
+  "ci_low": 0.0203,
+  "ci_high": 0.0761,
+  "n": 197,
+  "n_boot": 1000,
+  "seed": 42
+ },
+ "safe_auto_handle_count": 9,
+ "unsafe_auto_handle_count": 0,
+ "grounded_auto_handle_count": 5,
+ "judge": {
+  "groundedness": 4.284,
+  "relevance": 3.361,
+  "actionability": 2.928,
+  "completeness": 2.567,
+  "policy_compliance": 4.485,
+  "tone": 4.376
+ },
+ "judge_hallucination_rate": 0.216,
+ "cost_latency": {
+  "n": 197,
+  "p50_latency_ms": 117.3,
+  "p95_latency_ms": 241.8,
+  "llm_calls_per_message": 1.553,
+  "live_calls_per_message": 0.0,
+  "tokens_in_per_message": 667.7,
+  "tokens_out_per_message": 606.5,
+  "estimated_cost_usd_per_message": 0.002608,
+  "failed_calls": 0
+ },
+ "caveat": "see misleading_headline.md; intervals are 95% bootstrap (seed 42)"
+}

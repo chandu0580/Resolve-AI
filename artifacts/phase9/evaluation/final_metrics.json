@@ -1,0 +1,2537 @@
+{
+ "columns": [
+  "Baseline B1 (simple ML)",
+  "Baseline B2 (direct LLM)",
+  "Phase 5 (evaluated in Phase 6)",
+  "Phase 8 = Phase 9 final"
+ ],
+ "systems": [
+  "B1_simple_ml",
+  "B2_direct_llm",
+  "resolveai_full",
+  "phase9_final"
+ ],
+ "reports": {
+  "B1_simple_ml": {
+   "system": "B1_simple_ml",
+   "n": 197,
+   "failed": 0,
+   "intent": {
+    "n": 197,
+    "accuracy": 0.5431,
+    "macro_f1": 0.5498,
+    "macro_f1_present_classes_only": 0.5498,
+    "per_class": {
+     "battery_power": {
+      "precision": 0.5,
+      "recall": 0.5625,
+      "f1": 0.5294,
+      "support": 16,
+      "predicted": 18
+     },
+     "performance_crash": {
+      "precision": 0.4545,
+      "recall": 0.1923,
+      "f1": 0.2703,
+      "support": 26,
+      "predicted": 11
+     },
+     "keyboard_text_bug": {
+      "precision": 0.5,
+      "recall": 0.8125,
+      "f1": 0.619,
+      "support": 16,
+      "predicted": 26
+     },
+     "connectivity": {
+      "precision": 0.6,
+      "recall": 0.4286,
+      "f1": 0.5,
+      "support": 14,
+      "predicted": 10
+     },
+     "data_loss_sync": {
+      "precision": 0.6667,
+      "recall": 0.4706,
+      "f1": 0.5517,
+      "support": 17,
+      "predicted": 12
+     },
+     "apps_services": {
+      "precision": 0.75,
+      "recall": 0.4737,
+      "f1": 0.5806,
+      "support": 38,
+      "predicted": 24
+     },
+     "account_store_repair": {
+      "precision": 0.65,
+      "recall": 0.8125,
+      "f1": 0.7222,
+      "support": 16,
+      "predicted": 20
+     },
+     "hardware_damage": {
+      "precision": 0.4167,
+      "recall": 0.7143,
+      "f1": 0.5263,
+      "support": 7,
+      "predicted": 12
+     },
+     "general_complaint": {
+      "precision": 0.2258,
+      "recall": 0.5,
+      "f1": 0.3111,
+      "support": 14,
+      "predicted": 31
+     },
+     "non_english": {
+      "precision": 0.8125,
+      "recall": 1.0,
+      "f1": 0.8966,
+      "support": 13,
+      "predicted": 16
+     },
+     "other": {
+      "precision": 0.5882,
+      "recall": 0.5,
+      "f1": 0.5405,
+      "support": 20,
+      "predicted": 17
+     }
+    },
+    "confusion": {
+     "labels": [
+      "battery_power",
+      "performance_crash",
+      "keyboard_text_bug",
+      "connectivity",
+      "data_loss_sync",
+      "apps_services",
+      "account_store_repair",
+      "hardware_damage",
+      "general_complaint",
+      "non_english",
+      "other"
+     ],
+     "matrix": [
+      [
+       9,
+       1,
+       0,
+       0,
+       0,
+       0,
+       2,
+       0,
+       2,
+       1,
+       1
+      ],
+      [
+       5,
+       5,
+       0,
+       1,
+       1,
+       1,
+       0,
+       3,
+       8,
+       0,
+       2
+      ],
+      [
+       0,
+       0,
+       13,
+       0,
+       0,
+       0,
+       0,
+       0,
+       2,
+       0,
+       1
+      ],
+      [
+       2,
+       1,
+       4,
+       6,
+       0,
+       0,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       2,
+       0,
+       8,
+       3,
+       0,
+       0,
+       3,
+       0,
+       1
+      ],
+      [
+       1,
+       4,
+       2,
+       2,
+       1,
+       18,
+       0,
+       3,
+       5,
+       1,
+       1
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       13,
+       1,
+       2,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       1,
+       0,
+       0,
+       0,
+       1,
+       5,
+       0,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       2,
+       1,
+       1,
+       0,
+       1,
+       0,
+       7,
+       0,
+       1
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       13,
+       0
+      ],
+      [
+       0,
+       0,
+       2,
+       0,
+       1,
+       2,
+       2,
+       0,
+       2,
+       1,
+       10
+      ]
+     ]
+    },
+    "bootstrap": {
+     "macro_f1": {
+      "point": 0.5498,
+      "ci_low": 0.4718,
+      "ci_high": 0.6146,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "accuracy": {
+      "point": 0.5431,
+      "ci_low": 0.4721,
+      "ci_high": 0.6142,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    }
+   },
+   "escalation": {
+    "n": 197,
+    "gold_positive": 37,
+    "gold_negative": 160,
+    "tp": 28,
+    "fp": 29,
+    "fn": 9,
+    "tn": 131,
+    "precision": 0.4912,
+    "recall": 0.7568,
+    "f1": 0.5957,
+    "false_escalation_rate": 0.1812,
+    "missed_escalation_rate": 0.2432,
+    "confusion_gold_x_pred": [
+     [
+      131,
+      29
+     ],
+     [
+      9,
+      28
+     ]
+    ],
+    "cost_weighted": {
+     "missed_cost_1x": {
+      "total_cost": 38.0,
+      "cost_per_row": 0.1929,
+      "cost_sensitive_accuracy": 0.8071,
+      "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+     },
+     "missed_cost_3x": {
+      "total_cost": 56.0,
+      "cost_per_row": 0.2843,
+      "cost_sensitive_accuracy": 0.9052,
+      "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+     },
+     "missed_cost_5x": {
+      "total_cost": 74.0,
+      "cost_per_row": 0.3756,
+      "cost_sensitive_accuracy": 0.9249,
+      "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+     }
+    },
+    "bootstrap": {
+     "f1": {
+      "point": 0.5957,
+      "ci_low": 0.4598,
+      "ci_high": 0.7059,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "recall": {
+      "point": 0.7568,
+      "ci_low": 0.6129,
+      "ci_high": 0.889,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "false_negatives": [
+     {
+      "gid": "g029",
+      "gold_reason": "repeat_contact",
+      "action": "AUTO_HANDLE",
+      "reason_code": "",
+      "message": "Command is working. The problem is in the software, not in the hardware. I restarted a few times and the problema remains."
+     },
+     {
+      "gid": "g048",
+      "gold_reason": "repeat_contact",
+      "action": "AUTO_HANDLE",
+      "reason_code": "",
+      "message": "hey can you check the dm i sent!"
+     },
+     {
+      "gid": "g108",
+      "gold_reason": "repeat_contact",
+      "action": "AUTO_HANDLE",
+      "reason_code": "",
+      "message": "Both have Keychain and Home turned on in iCloud settings. Tried turning off/on, rebooting. No change."
+     },
+     {
+      "gid": "g118",
+      "gold_reason": "vague_hostile",
+      "action": "AUTO_HANDLE",
+      "reason_code": "",
+      "message": "Hey WHO is the responsible about your shit quality control? Our beloved osx is a buggy shitty unstable unusable crap now."
+     },
+     {
+      "gid": "g121",
+      "gold_reason": "repeat_contact",
+      "action": "AUTO_HANDLE",
+      "reason_code": "",
+      "message": "Can\u2019t recall exactly. At least 3x before today. Today was the first time closing the app didn\u2019t solve the problem. I closed, but when I reopened, screen went wh"
+     },
+     {
+      "gid": "g131",
+      "gold_reason": "repeat_contact",
+      "action": "AUTO_HANDLE",
+      "reason_code": "",
+      "message": "yes of course, I try to place it right for many times but it still didn't work"
+     },
+     {
+      "gid": "g141",
+      "gold_reason": "repeat_contact",
+      "action": "AUTO_HANDLE",
+      "reason_code": "",
+      "message": "I cleared my Safari history and cache as suggested but these keep popping up on my phone every time I go to view a local news article or an article on . I can\u2019t"
+     },
+     {
+      "gid": "g151",
+      "gold_reason": "hardware",
+      "action": "AUTO_HANDLE",
+      "reason_code": "",
+      "message": "So the speaker in my phone blew out. What the fuck I didn\u2019t pay an exorbitant amount of money for this thing to have the speaker blow on me"
+     },
+     {
+      "gid": "g152",
+      "gold_reason": "repeat_contact",
+      "action": "AUTO_HANDLE",
+      "reason_code": "",
+      "message": "I can\u2019t sync up with anything"
+     }
+    ]
+   },
+   "autonomy": {
+    "n": 197,
+    "auto_handle_rate": 0.7107,
+    "clarification_rate": 0.0,
+    "handoff_rate": 0.2893,
+    "auto_handle_count": 140,
+    "safe_auto_handle_count": 13,
+    "safe_auto_handle_rate": 0.066,
+    "safe_share_of_auto": 0.0929,
+    "unsafe_auto_handle_count": 9,
+    "grounded_auto_handle_count": 0,
+    "correct_non_autonomous_count": 28,
+    "unnecessary_non_autonomous_count": 29,
+    "autonomy_outcomes": {
+     "not_autonomous": 57,
+     "unverified_copy": 116,
+     "safe_canned": 13,
+     "unsafe_gold_should_escalate": 9,
+     "canned_on_non_canned_intent": 1,
+     "wrong_template": 1
+    },
+    "failed_rows": 0,
+    "definition": "safe = AUTO_HANDLE on a gold should_escalate=false row AND (verified troubleshooting reply with evidence refs OR the intent-appropriate canned template on a non_english/other row)",
+    "bootstrap": {
+     "safe_auto_handle_rate": {
+      "point": 0.066,
+      "ci_low": 0.0355,
+      "ci_high": 0.1066,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    }
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 114.3,
+    "p95_latency_ms": 197.7,
+    "llm_calls_per_message": 0.0,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 0.0,
+    "tokens_out_per_message": 0.0,
+    "estimated_cost_usd_per_message": 0.0,
+    "failed_calls": 0
+   },
+   "calibration": {
+    "n": 197,
+    "ece": 0.1074,
+    "bins": [
+     {
+      "bin": "[0.0, 0.2)",
+      "n": 5,
+      "mean_confidence": 0.177,
+      "accuracy": 0.2
+     },
+     {
+      "bin": "[0.2, 0.4)",
+      "n": 44,
+      "mean_confidence": 0.307,
+      "accuracy": 0.182
+     },
+     {
+      "bin": "[0.4, 0.6)",
+      "n": 36,
+      "mean_confidence": 0.497,
+      "accuracy": 0.417
+     },
+     {
+      "bin": "[0.6, 0.8)",
+      "n": 36,
+      "mean_confidence": 0.706,
+      "accuracy": 0.417
+     },
+     {
+      "bin": "[0.8, 1.0]",
+      "n": 76,
+      "mean_confidence": 0.924,
+      "accuracy": 0.895
+     }
+    ]
+   },
+   "selective_prediction": [
+    {
+     "threshold": 0.0,
+     "coverage": 1.0,
+     "n": 197,
+     "accuracy": 0.543
+    },
+    {
+     "threshold": 0.3,
+     "coverage": 0.873,
+     "n": 172,
+     "accuracy": 0.587
+    },
+    {
+     "threshold": 0.4,
+     "coverage": 0.751,
+     "n": 148,
+     "accuracy": 0.662
+    },
+    {
+     "threshold": 0.5,
+     "coverage": 0.665,
+     "n": 131,
+     "accuracy": 0.679
+    },
+    {
+     "threshold": 0.6,
+     "coverage": 0.569,
+     "n": 112,
+     "accuracy": 0.741
+    },
+    {
+     "threshold": 0.7,
+     "coverage": 0.503,
+     "n": 99,
+     "accuracy": 0.768
+    },
+    {
+     "threshold": 0.75,
+     "coverage": 0.442,
+     "n": 87,
+     "accuracy": 0.839
+    },
+    {
+     "threshold": 0.8,
+     "coverage": 0.386,
+     "n": 76,
+     "accuracy": 0.895
+    },
+    {
+     "threshold": 0.9,
+     "coverage": 0.259,
+     "n": 51,
+     "accuracy": 0.902
+    }
+   ],
+   "accuracy_by_band": {}
+  },
+  "B2_direct_llm": {
+   "system": "B2_direct_llm",
+   "n": 197,
+   "failed": 1,
+   "intent": {
+    "n": 197,
+    "accuracy": 0.8782,
+    "macro_f1": 0.8867,
+    "macro_f1_present_classes_only": 0.8867,
+    "per_class": {
+     "battery_power": {
+      "precision": 0.9375,
+      "recall": 0.9375,
+      "f1": 0.9375,
+      "support": 16,
+      "predicted": 16
+     },
+     "performance_crash": {
+      "precision": 0.8276,
+      "recall": 0.9231,
+      "f1": 0.8727,
+      "support": 26,
+      "predicted": 29
+     },
+     "keyboard_text_bug": {
+      "precision": 1.0,
+      "recall": 0.8125,
+      "f1": 0.8966,
+      "support": 16,
+      "predicted": 13
+     },
+     "connectivity": {
+      "precision": 0.8125,
+      "recall": 0.9286,
+      "f1": 0.8667,
+      "support": 14,
+      "predicted": 16
+     },
+     "data_loss_sync": {
+      "precision": 0.85,
+      "recall": 1.0,
+      "f1": 0.9189,
+      "support": 17,
+      "predicted": 20
+     },
+     "apps_services": {
+      "precision": 0.9677,
+      "recall": 0.7895,
+      "f1": 0.8696,
+      "support": 38,
+      "predicted": 31
+     },
+     "account_store_repair": {
+      "precision": 1.0,
+      "recall": 0.9375,
+      "f1": 0.9677,
+      "support": 16,
+      "predicted": 15
+     },
+     "hardware_damage": {
+      "precision": 0.875,
+      "recall": 1.0,
+      "f1": 0.9333,
+      "support": 7,
+      "predicted": 8
+     },
+     "general_complaint": {
+      "precision": 0.5455,
+      "recall": 0.8571,
+      "f1": 0.6667,
+      "support": 14,
+      "predicted": 22
+     },
+     "non_english": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 13,
+      "predicted": 13
+     },
+     "other": {
+      "precision": 1.0,
+      "recall": 0.7,
+      "f1": 0.8235,
+      "support": 20,
+      "predicted": 14
+     }
+    },
+    "confusion": {
+     "labels": [
+      "battery_power",
+      "performance_crash",
+      "keyboard_text_bug",
+      "connectivity",
+      "data_loss_sync",
+      "apps_services",
+      "account_store_repair",
+      "hardware_damage",
+      "general_complaint",
+      "non_english",
+      "other"
+     ],
+     "matrix": [
+      [
+       15,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       24,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       13,
+       0,
+       0,
+       0,
+       0,
+       0,
+       2,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       13,
+       0,
+       0,
+       0,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       17,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       2,
+       0,
+       1,
+       3,
+       30,
+       0,
+       0,
+       2,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       1,
+       0,
+       0,
+       15,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       7,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       2,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       12,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       13,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       0,
+       0,
+       0,
+       0,
+       4,
+       0,
+       14
+      ]
+     ]
+    },
+    "bootstrap": {
+     "macro_f1": {
+      "point": 0.8867,
+      "ci_low": 0.8354,
+      "ci_high": 0.9267,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "accuracy": {
+      "point": 0.8782,
+      "ci_low": 0.8274,
+      "ci_high": 0.9188,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    }
+   },
+   "escalation": {
+    "n": 197,
+    "gold_positive": 37,
+    "gold_negative": 160,
+    "tp": 34,
+    "fp": 12,
+    "fn": 3,
+    "tn": 148,
+    "precision": 0.7391,
+    "recall": 0.9189,
+    "f1": 0.8193,
+    "false_escalation_rate": 0.075,
+    "missed_escalation_rate": 0.0811,
+    "confusion_gold_x_pred": [
+     [
+      148,
+      12
+     ],
+     [
+      3,
+      34
+     ]
+    ],
+    "cost_weighted": {
+     "missed_cost_1x": {
+      "total_cost": 15.0,
+      "cost_per_row": 0.0761,
+      "cost_sensitive_accuracy": 0.9239,
+      "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+     },
+     "missed_cost_3x": {
+      "total_cost": 21.0,
+      "cost_per_row": 0.1066,
+      "cost_sensitive_accuracy": 0.9645,
+      "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+     },
+     "missed_cost_5x": {
+      "total_cost": 27.0,
+      "cost_per_row": 0.1371,
+      "cost_sensitive_accuracy": 0.9726,
+      "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+     }
+    },
+    "bootstrap": {
+     "f1": {
+      "point": 0.8193,
+      "ci_low": 0.7187,
+      "ci_high": 0.9001,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "recall": {
+      "point": 0.9189,
+      "ci_low": 0.8275,
+      "ci_high": 1.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "false_negatives": [
+     {
+      "gid": "g121",
+      "gold_reason": "repeat_contact",
+      "action": "AUTO_HANDLE",
+      "reason_code": "none",
+      "message": "Can\u2019t recall exactly. At least 3x before today. Today was the first time closing the app didn\u2019t solve the problem. I closed, but when I reopened, screen went wh"
+     },
+     {
+      "gid": "g152",
+      "gold_reason": "repeat_contact",
+      "action": "AUTO_HANDLE",
+      "reason_code": "none",
+      "message": "I can\u2019t sync up with anything"
+     },
+     {
+      "gid": "g191",
+      "gold_reason": "repeat_contact",
+      "action": "AUTO_HANDLE",
+      "reason_code": "none",
+      "message": "it\u2019s been 5-6 days when i updated to 11.1.2 and all the apps are on their latest version. So what\u2019s next?"
+     }
+    ]
+   },
+   "autonomy": {
+    "n": 197,
+    "auto_handle_rate": 0.7665,
+    "clarification_rate": 0.0,
+    "handoff_rate": 0.2335,
+    "auto_handle_count": 151,
+    "safe_auto_handle_count": 0,
+    "safe_auto_handle_rate": 0.0,
+    "safe_share_of_auto": 0.0,
+    "unsafe_auto_handle_count": 3,
+    "grounded_auto_handle_count": 0,
+    "correct_non_autonomous_count": 34,
+    "unnecessary_non_autonomous_count": 12,
+    "autonomy_outcomes": {
+     "not_autonomous": 46,
+     "unverified_llm_direct": 148,
+     "unsafe_gold_should_escalate": 3
+    },
+    "failed_rows": 1,
+    "definition": "safe = AUTO_HANDLE on a gold should_escalate=false row AND (verified troubleshooting reply with evidence refs OR the intent-appropriate canned template on a non_english/other row)",
+    "bootstrap": {
+     "safe_auto_handle_rate": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    }
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 6543.1,
+    "p95_latency_ms": 21539.1,
+    "llm_calls_per_message": 1.071,
+    "live_calls_per_message": 1.071,
+    "tokens_in_per_message": 678.9,
+    "tokens_out_per_message": 527.3,
+    "estimated_cost_usd_per_message": 0.002366,
+    "failed_calls": 1
+   }
+  },
+  "resolveai_full": {
+   "system": "resolveai_full",
+   "n": 197,
+   "failed": 0,
+   "intent": {
+    "n": 197,
+    "accuracy": 0.8477,
+    "macro_f1": 0.8538,
+    "macro_f1_present_classes_only": 0.8538,
+    "per_class": {
+     "battery_power": {
+      "precision": 0.8824,
+      "recall": 0.9375,
+      "f1": 0.9091,
+      "support": 16,
+      "predicted": 17
+     },
+     "performance_crash": {
+      "precision": 0.8571,
+      "recall": 0.9231,
+      "f1": 0.8889,
+      "support": 26,
+      "predicted": 28
+     },
+     "keyboard_text_bug": {
+      "precision": 0.8125,
+      "recall": 0.8125,
+      "f1": 0.8125,
+      "support": 16,
+      "predicted": 16
+     },
+     "connectivity": {
+      "precision": 0.7647,
+      "recall": 0.9286,
+      "f1": 0.8387,
+      "support": 14,
+      "predicted": 17
+     },
+     "data_loss_sync": {
+      "precision": 0.7895,
+      "recall": 0.8824,
+      "f1": 0.8333,
+      "support": 17,
+      "predicted": 19
+     },
+     "apps_services": {
+      "precision": 0.9062,
+      "recall": 0.7632,
+      "f1": 0.8286,
+      "support": 38,
+      "predicted": 32
+     },
+     "account_store_repair": {
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1": 0.875,
+      "support": 16,
+      "predicted": 16
+     },
+     "hardware_damage": {
+      "precision": 1.0,
+      "recall": 0.8571,
+      "f1": 0.9231,
+      "support": 7,
+      "predicted": 6
+     },
+     "general_complaint": {
+      "precision": 0.5556,
+      "recall": 0.7143,
+      "f1": 0.625,
+      "support": 14,
+      "predicted": 18
+     },
+     "non_english": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 13,
+      "predicted": 13
+     },
+     "other": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "support": 20,
+      "predicted": 15
+     }
+    },
+    "confusion": {
+     "labels": [
+      "battery_power",
+      "performance_crash",
+      "keyboard_text_bug",
+      "connectivity",
+      "data_loss_sync",
+      "apps_services",
+      "account_store_repair",
+      "hardware_damage",
+      "general_complaint",
+      "non_english",
+      "other"
+     ],
+     "matrix": [
+      [
+       15,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       1,
+       24,
+       0,
+       0,
+       0,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       13,
+       0,
+       0,
+       0,
+       0,
+       0,
+       2,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       13,
+       0,
+       0,
+       0,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       15,
+       1,
+       0,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       1,
+       1,
+       4,
+       29,
+       0,
+       0,
+       2,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       1,
+       0,
+       0,
+       14,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       1,
+       0,
+       0,
+       0,
+       6,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       1,
+       0,
+       0,
+       1,
+       1,
+       0,
+       10,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       13,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       1,
+       0,
+       0,
+       1,
+       0,
+       1,
+       0,
+       15
+      ]
+     ]
+    },
+    "bootstrap": {
+     "macro_f1": {
+      "point": 0.8538,
+      "ci_low": 0.7995,
+      "ci_high": 0.9015,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "accuracy": {
+      "point": 0.8477,
+      "ci_low": 0.797,
+      "ci_high": 0.8985,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    }
+   },
+   "escalation": {
+    "n": 197,
+    "gold_positive": 37,
+    "gold_negative": 160,
+    "tp": 35,
+    "fp": 87,
+    "fn": 2,
+    "tn": 73,
+    "precision": 0.2869,
+    "recall": 0.9459,
+    "f1": 0.4403,
+    "false_escalation_rate": 0.5437,
+    "missed_escalation_rate": 0.0541,
+    "confusion_gold_x_pred": [
+     [
+      73,
+      87
+     ],
+     [
+      2,
+      35
+     ]
+    ],
+    "cost_weighted": {
+     "missed_cost_1x": {
+      "total_cost": 89.0,
+      "cost_per_row": 0.4518,
+      "cost_sensitive_accuracy": 0.5482,
+      "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+     },
+     "missed_cost_3x": {
+      "total_cost": 93.0,
+      "cost_per_row": 0.4721,
+      "cost_sensitive_accuracy": 0.8426,
+      "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+     },
+     "missed_cost_5x": {
+      "total_cost": 97.0,
+      "cost_per_row": 0.4924,
+      "cost_sensitive_accuracy": 0.9015,
+      "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+     }
+    },
+    "bootstrap": {
+     "f1": {
+      "point": 0.4403,
+      "ci_low": 0.3312,
+      "ci_high": 0.5301,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "recall": {
+      "point": 0.9459,
+      "ci_low": 0.8621,
+      "ci_high": 1.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "false_negatives": [
+     {
+      "gid": "g048",
+      "gold_reason": "repeat_contact",
+      "action": "CLARIFICATION_REQUIRED",
+      "reason_code": "insufficient_context",
+      "message": "hey can you check the dm i sent!"
+     },
+     {
+      "gid": "g157",
+      "gold_reason": "private_info",
+      "action": "CLARIFICATION_REQUIRED",
+      "reason_code": "low_confidence",
+      "message": "thanks to ur senior developers I am stranded in Thailand without cellular access on my iPhoneX \ud83d\ude21\ud83e\udd2c\ud83d\ude29\ud83d\ude24 case <PHONE> they erroneously transferred my # back to my 7."
+     }
+    ]
+   },
+   "autonomy": {
+    "n": 197,
+    "auto_handle_rate": 0.0457,
+    "clarification_rate": 0.335,
+    "handoff_rate": 0.6193,
+    "auto_handle_count": 9,
+    "safe_auto_handle_count": 9,
+    "safe_auto_handle_rate": 0.0457,
+    "safe_share_of_auto": 1.0,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 5,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 151,
+    "autonomy_outcomes": {
+     "not_autonomous": 188,
+     "safe_grounded_verified": 5,
+     "safe_canned": 4
+    },
+    "failed_rows": 0,
+    "definition": "safe = AUTO_HANDLE on a gold should_escalate=false row AND (verified troubleshooting reply with evidence refs OR the intent-appropriate canned template on a non_english/other row)",
+    "bootstrap": {
+     "safe_auto_handle_rate": {
+      "point": 0.0457,
+      "ci_low": 0.0203,
+      "ci_high": 0.0761,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    }
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 117.3,
+    "p95_latency_ms": 241.8,
+    "llm_calls_per_message": 1.553,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 667.7,
+    "tokens_out_per_message": 606.5,
+    "estimated_cost_usd_per_message": 0.002608,
+    "failed_calls": 0
+   },
+   "calibration": {
+    "n": 197,
+    "ece": 0.2845,
+    "bins": [
+     {
+      "bin": "[0.0, 0.2)",
+      "n": 8,
+      "mean_confidence": 0.188,
+      "accuracy": 0.75
+     },
+     {
+      "bin": "[0.2, 0.4)",
+      "n": 60,
+      "mean_confidence": 0.308,
+      "accuracy": 0.75
+     },
+     {
+      "bin": "[0.4, 0.6)",
+      "n": 38,
+      "mean_confidence": 0.509,
+      "accuracy": 0.842
+     },
+     {
+      "bin": "[0.6, 0.8)",
+      "n": 52,
+      "mean_confidence": 0.698,
+      "accuracy": 0.904
+     },
+     {
+      "bin": "[0.8, 1.0]",
+      "n": 39,
+      "mean_confidence": 0.905,
+      "accuracy": 0.949
+     }
+    ]
+   },
+   "selective_prediction": [
+    {
+     "threshold": 0.0,
+     "coverage": 1.0,
+     "n": 197,
+     "accuracy": 0.848
+    },
+    {
+     "threshold": 0.3,
+     "coverage": 0.827,
+     "n": 163,
+     "accuracy": 0.877
+    },
+    {
+     "threshold": 0.4,
+     "coverage": 0.655,
+     "n": 129,
+     "accuracy": 0.899
+    },
+    {
+     "threshold": 0.5,
+     "coverage": 0.579,
+     "n": 114,
+     "accuracy": 0.904
+    },
+    {
+     "threshold": 0.6,
+     "coverage": 0.462,
+     "n": 91,
+     "accuracy": 0.923
+    },
+    {
+     "threshold": 0.7,
+     "coverage": 0.325,
+     "n": 64,
+     "accuracy": 0.938
+    },
+    {
+     "threshold": 0.75,
+     "coverage": 0.269,
+     "n": 53,
+     "accuracy": 0.925
+    },
+    {
+     "threshold": 0.8,
+     "coverage": 0.198,
+     "n": 39,
+     "accuracy": 0.949
+    },
+    {
+     "threshold": 0.9,
+     "coverage": 0.096,
+     "n": 19,
+     "accuracy": 1.0
+    }
+   ],
+   "accuracy_by_band": {
+    "HIGH": {
+     "n": 53,
+     "accuracy": 0.925
+    },
+    "MEDIUM": {
+     "n": 106,
+     "accuracy": 0.849
+    },
+    "LOW": {
+     "n": 38,
+     "accuracy": 0.737
+    }
+   }
+  },
+  "phase9_final": {
+   "system": "phase9_final",
+   "n": 197,
+   "failed": 0,
+   "intent": {
+    "n": 197,
+    "accuracy": 0.8477,
+    "macro_f1": 0.8538,
+    "macro_f1_present_classes_only": 0.8538,
+    "per_class": {
+     "battery_power": {
+      "precision": 0.8824,
+      "recall": 0.9375,
+      "f1": 0.9091,
+      "support": 16,
+      "predicted": 17
+     },
+     "performance_crash": {
+      "precision": 0.8571,
+      "recall": 0.9231,
+      "f1": 0.8889,
+      "support": 26,
+      "predicted": 28
+     },
+     "keyboard_text_bug": {
+      "precision": 0.8125,
+      "recall": 0.8125,
+      "f1": 0.8125,
+      "support": 16,
+      "predicted": 16
+     },
+     "connectivity": {
+      "precision": 0.7647,
+      "recall": 0.9286,
+      "f1": 0.8387,
+      "support": 14,
+      "predicted": 17
+     },
+     "data_loss_sync": {
+      "precision": 0.7895,
+      "recall": 0.8824,
+      "f1": 0.8333,
+      "support": 17,
+      "predicted": 19
+     },
+     "apps_services": {
+      "precision": 0.9062,
+      "recall": 0.7632,
+      "f1": 0.8286,
+      "support": 38,
+      "predicted": 32
+     },
+     "account_store_repair": {
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1": 0.875,
+      "support": 16,
+      "predicted": 16
+     },
+     "hardware_damage": {
+      "precision": 1.0,
+      "recall": 0.8571,
+      "f1": 0.9231,
+      "support": 7,
+      "predicted": 6
+     },
+     "general_complaint": {
+      "precision": 0.5556,
+      "recall": 0.7143,
+      "f1": 0.625,
+      "support": 14,
+      "predicted": 18
+     },
+     "non_english": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 13,
+      "predicted": 13
+     },
+     "other": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "support": 20,
+      "predicted": 15
+     }
+    },
+    "confusion": {
+     "labels": [
+      "battery_power",
+      "performance_crash",
+      "keyboard_text_bug",
+      "connectivity",
+      "data_loss_sync",
+      "apps_services",
+      "account_store_repair",
+      "hardware_damage",
+      "general_complaint",
+      "non_english",
+      "other"
+     ],
+     "matrix": [
+      [
+       15,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       1,
+       24,
+       0,
+       0,
+       0,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       13,
+       0,
+       0,
+       0,
+       0,
+       0,
+       2,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       13,
+       0,
+       0,
+       0,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       15,
+       1,
+       0,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       1,
+       1,
+       4,
+       29,
+       0,
+       0,
+       2,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       1,
+       0,
+       0,
+       14,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       1,
+       0,
+       0,
+       0,
+       6,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       1,
+       0,
+       0,
+       1,
+       1,
+       0,
+       10,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       13,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       1,
+       0,
+       0,
+       1,
+       0,
+       1,
+       0,
+       15
+      ]
+     ]
+    },
+    "bootstrap": {
+     "macro_f1": {
+      "point": 0.8538,
+      "ci_low": 0.7995,
+      "ci_high": 0.9015,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "accuracy": {
+      "point": 0.8477,
+      "ci_low": 0.797,
+      "ci_high": 0.8985,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    }
+   },
+   "escalation": {
+    "n": 197,
+    "gold_positive": 37,
+    "gold_negative": 160,
+    "tp": 36,
+    "fp": 87,
+    "fn": 1,
+    "tn": 73,
+    "precision": 0.2927,
+    "recall": 0.973,
+    "f1": 0.45,
+    "false_escalation_rate": 0.5437,
+    "missed_escalation_rate": 0.027,
+    "confusion_gold_x_pred": [
+     [
+      73,
+      87
+     ],
+     [
+      1,
+      36
+     ]
+    ],
+    "cost_weighted": {
+     "missed_cost_1x": {
+      "total_cost": 88.0,
+      "cost_per_row": 0.4467,
+      "cost_sensitive_accuracy": 0.5533,
+      "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+     },
+     "missed_cost_3x": {
+      "total_cost": 90.0,
+      "cost_per_row": 0.4569,
+      "cost_sensitive_accuracy": 0.8477,
+      "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+     },
+     "missed_cost_5x": {
+      "total_cost": 92.0,
+      "cost_per_row": 0.467,
+      "cost_sensitive_accuracy": 0.9066,
+      "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+     }
+    },
+    "bootstrap": {
+     "f1": {
+      "point": 0.45,
+      "ci_low": 0.3403,
+      "ci_high": 0.5395,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "recall": {
+      "point": 0.973,
+      "ci_low": 0.9118,
+      "ci_high": 1.0,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "false_negatives": [
+     {
+      "gid": "g048",
+      "gold_reason": "repeat_contact",
+      "action": "CLARIFICATION_REQUIRED",
+      "reason_code": "insufficient_context",
+      "message": "hey can you check the dm i sent!"
+     }
+    ]
+   },
+   "autonomy": {
+    "n": 197,
+    "auto_handle_rate": 0.0457,
+    "clarification_rate": 0.3299,
+    "handoff_rate": 0.6244,
+    "auto_handle_count": 9,
+    "safe_auto_handle_count": 9,
+    "safe_auto_handle_rate": 0.0457,
+    "safe_share_of_auto": 1.0,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 5,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 151,
+    "autonomy_outcomes": {
+     "not_autonomous": 188,
+     "safe_grounded_verified": 5,
+     "safe_canned": 4
+    },
+    "failed_rows": 0,
+    "definition": "safe = AUTO_HANDLE on a gold should_escalate=false row AND (verified troubleshooting reply with evidence refs OR the intent-appropriate canned template on a non_english/other row)",
+    "bootstrap": {
+     "safe_auto_handle_rate": {
+      "point": 0.0457,
+      "ci_low": 0.0203,
+      "ci_high": 0.0761,
+      "n": 197,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    }
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 254.7,
+    "p95_latency_ms": 862.6,
+    "llm_calls_per_message": 1.538,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 662.3,
+    "tokens_out_per_message": 592.6,
+    "estimated_cost_usd_per_message": 0.002559,
+    "failed_calls": 0
+   },
+   "calibration": {
+    "n": 197,
+    "ece": 0.2845,
+    "bins": [
+     {
+      "bin": "[0.0, 0.2)",
+      "n": 8,
+      "mean_confidence": 0.188,
+      "accuracy": 0.75
+     },
+     {
+      "bin": "[0.2, 0.4)",
+      "n": 60,
+      "mean_confidence": 0.308,
+      "accuracy": 0.75
+     },
+     {
+      "bin": "[0.4, 0.6)",
+      "n": 38,
+      "mean_confidence": 0.509,
+      "accuracy": 0.842
+     },
+     {
+      "bin": "[0.6, 0.8)",
+      "n": 52,
+      "mean_confidence": 0.698,
+      "accuracy": 0.904
+     },
+     {
+      "bin": "[0.8, 1.0]",
+      "n": 39,
+      "mean_confidence": 0.905,
+      "accuracy": 0.949
+     }
+    ]
+   },
+   "selective_prediction": [
+    {
+     "threshold": 0.0,
+     "coverage": 1.0,
+     "n": 197,
+     "accuracy": 0.848
+    },
+    {
+     "threshold": 0.3,
+     "coverage": 0.827,
+     "n": 163,
+     "accuracy": 0.877
+    },
+    {
+     "threshold": 0.4,
+     "coverage": 0.655,
+     "n": 129,
+     "accuracy": 0.899
+    },
+    {
+     "threshold": 0.5,
+     "coverage": 0.579,
+     "n": 114,
+     "accuracy": 0.904
+    },
+    {
+     "threshold": 0.6,
+     "coverage": 0.462,
+     "n": 91,
+     "accuracy": 0.923
+    },
+    {
+     "threshold": 0.7,
+     "coverage": 0.325,
+     "n": 64,
+     "accuracy": 0.938
+    },
+    {
+     "threshold": 0.75,
+     "coverage": 0.269,
+     "n": 53,
+     "accuracy": 0.925
+    },
+    {
+     "threshold": 0.8,
+     "coverage": 0.198,
+     "n": 39,
+     "accuracy": 0.949
+    },
+    {
+     "threshold": 0.9,
+     "coverage": 0.096,
+     "n": 19,
+     "accuracy": 1.0
+    }
+   ],
+   "accuracy_by_band": {
+    "HIGH": {
+     "n": 53,
+     "accuracy": 0.925
+    },
+    "MEDIUM": {
+     "n": 106,
+     "accuracy": 0.849
+    },
+    "LOW": {
+     "n": 38,
+     "accuracy": 0.737
+    }
+   }
+  }
+ },
+ "judge": {
+  "judge_model": "glm-5.2",
+  "systems": {
+   "B1_simple_ml": {
+    "n_scored": 197,
+    "n_parsed": 176,
+    "judge_failures": 21,
+    "means": {
+     "groundedness": 4.284,
+     "relevance": 3.108,
+     "actionability": 3.142,
+     "completeness": 2.574,
+     "policy_compliance": 4.568,
+     "tone": 4.153
+    },
+    "bootstrap": {
+     "groundedness": {
+      "point": 4.2841,
+      "ci_low": 4.0851,
+      "ci_high": 4.4602,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "relevance": {
+      "point": 3.108,
+      "ci_low": 2.892,
+      "ci_high": 3.3068,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "actionability": {
+      "point": 3.142,
+      "ci_low": 2.9773,
+      "ci_high": 3.3068,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "completeness": {
+      "point": 2.5739,
+      "ci_low": 2.392,
+      "ci_high": 2.7273,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_compliance": {
+      "point": 4.5682,
+      "ci_low": 4.4602,
+      "ci_high": 4.6705,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "tone": {
+      "point": 4.1534,
+      "ci_low": 4.0341,
+      "ci_high": 4.2558,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "hallucination": {
+      "point": 0.1705,
+      "ci_low": 0.1192,
+      "ci_high": 0.233,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_violation": {
+      "point": 0.0398,
+      "ci_low": 0.0114,
+      "ci_high": 0.0682,
+      "n": 176,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "rates": {
+     "groundedness_share_ge4": 0.795,
+     "relevance_share_ge4": 0.386,
+     "actionability_share_ge4": 0.443,
+     "completeness_share_ge4": 0.239,
+     "policy_compliance_share_ge4": 0.926,
+     "tone_share_ge4": 0.79,
+     "hallucination": 0.17,
+     "policy_violation": 0.04
+    },
+    "by_response_kind": {
+     "handoff": {
+      "n": 53,
+      "groundedness": 4.94,
+      "relevance": 2.83,
+      "actionability": 2.57,
+      "completeness": 2.13,
+      "policy_compliance": 4.26,
+      "tone": 4.09,
+      "hallucination": 0.019
+     },
+     "copy": {
+      "n": 117,
+      "groundedness": 4.05,
+      "relevance": 3.24,
+      "actionability": 3.38,
+      "completeness": 2.76,
+      "policy_compliance": 4.79,
+      "tone": 4.18,
+      "hallucination": 0.214
+     },
+     "canned": {
+      "n": 6,
+      "groundedness": 3.0,
+      "relevance": 3.0,
+      "actionability": 3.67,
+      "completeness": 2.83,
+      "policy_compliance": 3.0,
+      "tone": 4.17,
+      "hallucination": 0.667
+     }
+    }
+   },
+   "B2_direct_llm": {
+    "n_scored": 197,
+    "n_parsed": 194,
+    "judge_failures": 3,
+    "means": {
+     "groundedness": 3.227,
+     "relevance": 4.629,
+     "actionability": 4.077,
+     "completeness": 3.505,
+     "policy_compliance": 4.943,
+     "tone": 4.851
+    },
+    "bootstrap": {
+     "groundedness": {
+      "point": 3.2268,
+      "ci_low": 3.0155,
+      "ci_high": 3.4383,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "relevance": {
+      "point": 4.6289,
+      "ci_low": 4.5256,
+      "ci_high": 4.7216,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "actionability": {
+      "point": 4.0773,
+      "ci_low": 3.9845,
+      "ci_high": 4.1701,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "completeness": {
+      "point": 3.5052,
+      "ci_low": 3.3969,
+      "ci_high": 3.5981,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_compliance": {
+      "point": 4.9433,
+      "ci_low": 4.8918,
+      "ci_high": 4.9845,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "tone": {
+      "point": 4.8505,
+      "ci_low": 4.804,
+      "ci_high": 4.8969,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "hallucination": {
+      "point": 0.5258,
+      "ci_low": 0.4536,
+      "ci_high": 0.5929,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_violation": {
+      "point": 0.0103,
+      "ci_low": 0.0,
+      "ci_high": 0.0258,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "rates": {
+     "groundedness_share_ge4": 0.443,
+     "relevance_share_ge4": 0.928,
+     "actionability_share_ge4": 0.861,
+     "completeness_share_ge4": 0.469,
+     "policy_compliance_share_ge4": 0.99,
+     "tone_share_ge4": 1.0,
+     "hallucination": 0.526,
+     "policy_violation": 0.01
+    },
+    "by_response_kind": {
+     "handoff": {
+      "n": 46,
+      "groundedness": 4.78,
+      "relevance": 4.74,
+      "actionability": 4.02,
+      "completeness": 3.61,
+      "policy_compliance": 4.93,
+      "tone": 4.93,
+      "hallucination": 0.043
+     },
+     "llm_direct": {
+      "n": 148,
+      "groundedness": 2.74,
+      "relevance": 4.59,
+      "actionability": 4.09,
+      "completeness": 3.47,
+      "policy_compliance": 4.95,
+      "tone": 4.82,
+      "hallucination": 0.676
+     }
+    }
+   },
+   "resolveai_full": {
+    "n_scored": 197,
+    "n_parsed": 194,
+    "judge_failures": 3,
+    "means": {
+     "groundedness": 4.284,
+     "relevance": 3.361,
+     "actionability": 2.928,
+     "completeness": 2.567,
+     "policy_compliance": 4.485,
+     "tone": 4.376
+    },
+    "bootstrap": {
+     "groundedness": {
+      "point": 4.2835,
+      "ci_low": 4.1237,
+      "ci_high": 4.4381,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "relevance": {
+      "point": 3.3608,
+      "ci_low": 3.2062,
+      "ci_high": 3.5206,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "actionability": {
+      "point": 2.9278,
+      "ci_low": 2.7834,
+      "ci_high": 3.0876,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "completeness": {
+      "point": 2.567,
+      "ci_low": 2.4433,
+      "ci_high": 2.6959,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_compliance": {
+      "point": 4.4845,
+      "ci_low": 4.3969,
+      "ci_high": 4.5773,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "tone": {
+      "point": 4.3763,
+      "ci_low": 4.2835,
+      "ci_high": 4.4639,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "hallucination": {
+      "point": 0.2165,
+      "ci_low": 0.1598,
+      "ci_high": 0.2733,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_violation": {
+      "point": 0.0155,
+      "ci_low": 0.0,
+      "ci_high": 0.0361,
+      "n": 194,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "rates": {
+     "groundedness_share_ge4": 0.778,
+     "relevance_share_ge4": 0.438,
+     "actionability_share_ge4": 0.356,
+     "completeness_share_ge4": 0.155,
+     "policy_compliance_share_ge4": 0.933,
+     "tone_share_ge4": 0.938,
+     "hallucination": 0.216,
+     "policy_violation": 0.015
+    },
+    "by_response_kind": {
+     "handoff": {
+      "n": 119,
+      "groundedness": 4.33,
+      "relevance": 3.13,
+      "actionability": 2.53,
+      "completeness": 2.26,
+      "policy_compliance": 4.17,
+      "tone": 4.27,
+      "hallucination": 0.218
+     },
+     "clarify": {
+      "n": 66,
+      "groundedness": 4.17,
+      "relevance": 3.61,
+      "actionability": 3.53,
+      "completeness": 2.95,
+      "policy_compliance": 4.98,
+      "tone": 4.55,
+      "hallucination": 0.242
+     },
+     "troubleshoot": {
+      "n": 5,
+      "groundedness": 4.2,
+      "relevance": 5.0,
+      "actionability": 4.0,
+      "completeness": 3.8,
+      "policy_compliance": 5.0,
+      "tone": 4.8,
+      "hallucination": 0.0
+     },
+     "canned": {
+      "n": 4,
+      "groundedness": 5.0,
+      "relevance": 4.0,
+      "actionability": 3.5,
+      "completeness": 3.75,
+      "policy_compliance": 5.0,
+      "tone": 4.25,
+      "hallucination": 0.0
+     }
+    }
+   },
+   "phase9_final": {
+    "n_scored": 197,
+    "n_parsed": 191,
+    "judge_failures": 6,
+    "means": {
+     "groundedness": 4.194,
+     "relevance": 3.393,
+     "actionability": 2.948,
+     "completeness": 2.565,
+     "policy_compliance": 4.466,
+     "tone": 4.424
+    },
+    "bootstrap": {
+     "groundedness": {
+      "point": 4.1937,
+      "ci_low": 4.0262,
+      "ci_high": 4.356,
+      "n": 191,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "relevance": {
+      "point": 3.3927,
+      "ci_low": 3.225,
+      "ci_high": 3.5707,
+      "n": 191,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "actionability": {
+      "point": 2.9476,
+      "ci_low": 2.801,
+      "ci_high": 3.1047,
+      "n": 191,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "completeness": {
+      "point": 2.5654,
+      "ci_low": 2.4346,
+      "ci_high": 2.6911,
+      "n": 191,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_compliance": {
+      "point": 4.466,
+      "ci_low": 4.3717,
+      "ci_high": 4.555,
+      "n": 191,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "tone": {
+      "point": 4.4241,
+      "ci_low": 4.3351,
+      "ci_high": 4.5131,
+      "n": 191,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "hallucination": {
+      "point": 0.2827,
+      "ci_low": 0.2251,
+      "ci_high": 0.3455,
+      "n": 191,
+      "n_boot": 1000,
+      "seed": 42
+     },
+     "policy_violation": {
+      "point": 0.0157,
+      "ci_low": 0.0,
+      "ci_high": 0.0366,
+      "n": 191,
+      "n_boot": 1000,
+      "seed": 42
+     }
+    },
+    "rates": {
+     "groundedness_share_ge4": 0.723,
+     "relevance_share_ge4": 0.461,
+     "actionability_share_ge4": 0.372,
+     "completeness_share_ge4": 0.178,
+     "policy_compliance_share_ge4": 0.927,
+     "tone_share_ge4": 0.942,
+     "hallucination": 0.283,
+     "policy_violation": 0.016
+    },
+    "by_response_kind": {
+     "handoff": {
+      "n": 120,
+      "groundedness": 4.36,
+      "relevance": 3.16,
+      "actionability": 2.55,
+      "completeness": 2.28,
+      "policy_compliance": 4.18,
+      "tone": 4.28,
+      "hallucination": 0.208
+     },
+     "clarify": {
+      "n": 62,
+      "groundedness": 3.82,
+      "relevance": 3.68,
+      "actionability": 3.6,
+      "completeness": 2.94,
+      "policy_compliance": 4.94,
+      "tone": 4.68,
+      "hallucination": 0.468
+     },
+     "troubleshoot": {
+      "n": 5,
+      "groundedness": 4.2,
+      "relevance": 5.0,
+      "actionability": 4.0,
+      "completeness": 3.8,
+      "policy_compliance": 5.0,
+      "tone": 4.8,
+      "hallucination": 0.0
+     },
+     "canned": {
+      "n": 4,
+      "groundedness": 5.0,
+      "relevance": 4.0,
+      "actionability": 3.5,
+      "completeness": 3.75,
+      "policy_compliance": 5.0,
+      "tone": 4.25,
+      "hallucination": 0.0
+     }
+    }
+   }
+  }
+ },
+ "paired_vs_phase9_final": {
+  "phase9_final_minus_resolveai_full": {
+   "intent_macro_f1": {
+    "difference": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "escalation_f1": {
+    "difference": 0.0097,
+    "ci_low": 0.0,
+    "ci_high": 0.0315,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "escalation_recall": {
+    "difference": 0.0271,
+    "ci_low": 0.0,
+    "ci_high": 0.0909,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "safe_auto_rate": {
+    "difference": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   }
+  },
+  "phase9_final_minus_B2_direct_llm": {
+   "intent_macro_f1": {
+    "difference": -0.0329,
+    "ci_low": -0.0823,
+    "ci_high": 0.0137,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "escalation_f1": {
+    "difference": -0.3693,
+    "ci_low": -0.4763,
+    "ci_high": -0.2765,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   },
+   "escalation_recall": {
+    "difference": 0.0541,
+    "ci_low": -0.0455,
+    "ci_high": 0.1579,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": false
+   },
+   "safe_auto_rate": {
+    "difference": 0.0457,
+    "ci_low": 0.0203,
+    "ci_high": 0.0761,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42,
+    "interval_excludes_zero": true
+   }
+  }
+ },
+ "action_changes_phase5_to_phase9": [
+  {
+   "gid": "g002",
+   "phase5": "HUMAN_HANDOFF/repeat_contact",
+   "phase9": "HUMAN_HANDOFF/private_info",
+   "gold_should_escalate": true,
+   "gold_reason": "private_info",
+   "gold_intent": "account_store_repair",
+   "message": "all most 22 days has passed & no outcome in my case (<PHONE>)."
+  },
+  {
+   "gid": "g157",
+   "phase5": "CLARIFICATION_REQUIRED/low_confidence",
+   "phase9": "HUMAN_HANDOFF/private_info",
+   "gold_should_escalate": true,
+   "gold_reason": "private_info",
+   "gold_intent": "account_store_repair",
+   "message": "thanks to ur senior developers I am stranded in Thailand without cellular access on my iPhoneX \ud83d\ude21\ud83e\udd2c\ud83d\ude29\ud83d\ude24 case <PHONE> they erroneously transferre"
+  }
+ ],
+ "evidence_levels": {
+  "resolveai_full": {
+   "INSUFFICIENT": 166,
+   "WEAK": 24,
+   "STRONG": 7
+  },
+  "phase9_final": {
+   "INSUFFICIENT": 166,
+   "WEAK": 24,
+   "STRONG": 7
+  }
+ },
+ "golden_sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9",
+ "n_boot": 1000,
+ "seed": 42
+}

@@ -1,0 +1,9 @@
+{
+  "relevance_floor": 0.35,
+  "support_similarity": 0.85,
+  "min_support": 3,
+  "min_intent_agreement": 0.4,
+  "min_query_tokens": 3,
+  "top_k": 5,
+  "version": "gate-v2"
+}

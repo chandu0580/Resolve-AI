@@ -1,0 +1,19 @@
+{
+ "note": "post-hoc exploratory variant evaluated on golden after the pre-specified A/B comparison; NOT deployed",
+ "results": {
+  "A_message_only": {
+   "accuracy": 0.6142,
+   "short_reply_n": 22,
+   "short_reply_acc": 0.4091,
+   "short_with_issue_n": 12,
+   "short_with_issue_acc": 0.4167
+  },
+  "B2_issue_text_for_short_replies": {
+   "accuracy": 0.6091,
+   "short_reply_n": 22,
+   "short_reply_acc": 0.3636,
+   "short_with_issue_n": 12,
+   "short_with_issue_acc": 0.3333
+  }
+ }
+}

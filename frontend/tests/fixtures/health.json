@@ -1,0 +1,7 @@
+{
+ "status": "ok",
+ "service": "resolveai",
+ "version": "0.7.0",
+ "env": "test",
+ "uptime_s": 49.0
+}

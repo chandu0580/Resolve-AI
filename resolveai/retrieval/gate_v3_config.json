@@ -1,0 +1,12 @@
+{
+  "support_similarity": 0.85,
+  "min_support": 3,
+  "min_top_share": 0.6,
+  "t_weak": 0.35,
+  "t_sufficient": 0.55,
+  "t_strong": 0.75,
+  "min_query_tokens": 3,
+  "require_symptom_term": true,
+  "relevance_floor": 0.55,
+  "version": "gate-v3"
+}

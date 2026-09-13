@@ -1,0 +1,50 @@
+{
+  "Tesco": {
+    "pairs": 38468,
+    "has_customer_followup": 0.28709576791099095,
+    "followup_positive": 0.3161897863093082,
+    "followup_negative": 0.0447301702281782
+  },
+  "SouthwestAir": {
+    "pairs": 28828,
+    "has_customer_followup": 0.29270154016927985,
+    "followup_positive": 0.280872244607727,
+    "followup_negative": 0.04776013273287509
+  },
+  "hulu_support": {
+    "pairs": 21681,
+    "has_customer_followup": 0.3456943867902772,
+    "followup_positive": 0.2808539026017345,
+    "followup_negative": 0.10073382254836558
+  },
+  "SpotifyCares": {
+    "pairs": 43092,
+    "has_customer_followup": 0.3170658126798478,
+    "followup_positive": 0.28353948620361563,
+    "followup_negative": 0.07846007465417551
+  },
+  "AmazonHelp": {
+    "pairs": 168814,
+    "has_customer_followup": 0.49905813498880425,
+    "followup_positive": 0.11749833823948343,
+    "followup_negative": 0.06393030101604785
+  },
+  "AppleSupport": {
+    "pairs": 106646,
+    "has_customer_followup": 0.29396320537104065,
+    "followup_positive": 0.20845295055821372,
+    "followup_negative": 0.09859649122807018
+  },
+  "British_Airways": {
+    "pairs": 29290,
+    "has_customer_followup": 0.3423694093547286,
+    "followup_positive": 0.28889110490626246,
+    "followup_negative": 0.07967690466693259
+  },
+  "XboxSupport": {
+    "pairs": 23235,
+    "has_customer_followup": 0.37602754465246396,
+    "followup_positive": 0.20808057685704476,
+    "followup_negative": 0.12441341421540575
+  }
+}

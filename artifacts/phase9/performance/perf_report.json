@@ -1,0 +1,466 @@
+{
+ "protocol": "(the same ResolveAI orchestrator the API uses; traces off so disk writes are not measured):\n  no_model      AgentConfig(use_llm=False): redaction, context, classifier, retrieval, gate, rules, policy, clarify/handoff\n  cached_model  the configured model behind the SHA-256 response cache; one unmeasured warm pass fills the cache, the\n                measured pass is served from it (what a cache-served evaluation run measures)\n  live_model    the configured model with NO cache and the API's request budget (45 s), n_live fresh messages\nPer mode: p50 / p95 / p99 of every stage and of the total, model calls, embedding computations per request.",
+ "machine_note": "single local CPU process; the model runs behind a remote OpenAI-compatible proxy",
+ "no_model": {
+  "n": 60,
+  "stages_ms": {
+   "pii_redaction": {
+    "n": 60,
+    "p50": 0.1,
+    "p95": 0.3,
+    "p99": 0.4,
+    "mean": 0.1
+   },
+   "context": {
+    "n": 60,
+    "p50": 0.1,
+    "p95": 0.4,
+    "p99": 0.6,
+    "mean": 0.2
+   },
+   "intent": {
+    "n": 60,
+    "p50": 49.3,
+    "p95": 92.4,
+    "p99": 133.1,
+    "mean": 52.2
+   },
+   "second_opinion": {
+    "n": 60,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "mean": 0.0
+   },
+   "retrieval": {
+    "n": 60,
+    "p50": 63.5,
+    "p95": 96.0,
+    "p99": 120.2,
+    "mean": 58.5
+   },
+   "evidence_gate": {
+    "n": 60,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "mean": 0.0
+   },
+   "risk": {
+    "n": 60,
+    "p50": 0.6,
+    "p95": 1.8,
+    "p99": 2.0,
+    "mean": 0.8
+   },
+   "policy": {
+    "n": 60,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.1,
+    "mean": 0.0
+   },
+   "draft": {
+    "n": 60,
+    "p50": 0.0,
+    "p95": 0.1,
+    "p99": 0.1,
+    "mean": 0.0
+   },
+   "verification": {
+    "n": 60,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "mean": 0.0
+   },
+   "output_gate": {
+    "n": 60,
+    "p50": 0.0,
+    "p95": 0.1,
+    "p99": 0.1,
+    "mean": 0.0
+   },
+   "handoff": {
+    "n": 23,
+    "p50": 0.1,
+    "p95": 0.2,
+    "p99": 0.3,
+    "mean": 0.2
+   },
+   "total": {
+    "n": 60,
+    "p50": 110.1,
+    "p95": 191.2,
+    "p99": 255.1,
+    "mean": 112.8
+   }
+  },
+  "wall_ms": {
+   "n": 60,
+   "p50": 110.3,
+   "p95": 191.5,
+   "p99": 255.3,
+   "mean": 113.0
+  },
+  "llm_calls_per_request": {
+   "n": 60,
+   "p50": 0.0,
+   "p95": 0.0,
+   "p99": 0.0,
+   "mean": 0.0
+  },
+  "live_calls_per_request": {
+   "n": 60,
+   "p50": 0.0,
+   "p95": 0.0,
+   "p99": 0.0,
+   "mean": 0.0
+  },
+  "embedding_computations_per_request": {
+   "n": 60,
+   "p50": 2.0,
+   "p95": 2.0,
+   "p99": 2.0,
+   "mean": 1.7
+  },
+  "embedding_lookups_per_request": {
+   "n": 60,
+   "p50": 2.0,
+   "p95": 2.0,
+   "p99": 2.0,
+   "mean": 1.7
+  },
+  "timeouts": 0,
+  "retries": 0,
+  "budget_exhausted": 0,
+  "actions": {
+   "AUTO_HANDLE": 4,
+   "CLARIFICATION_REQUIRED": 33,
+   "HUMAN_HANDOFF": 23
+  },
+  "reasons": {
+   "none": 4,
+   "low_confidence": 8,
+   "insufficient_evidence": 27,
+   "hardware": 5,
+   "insufficient_context": 4,
+   "private_info": 2,
+   "payment_billing": 5,
+   "repeat_contact": 4,
+   "safety": 1
+  },
+  "risk_status": {
+   "skipped": 60
+  }
+ },
+ "cached_model": {
+  "n": 60,
+  "stages_ms": {
+   "pii_redaction": {
+    "n": 60,
+    "p50": 0.1,
+    "p95": 0.3,
+    "p99": 0.4,
+    "mean": 0.1
+   },
+   "context": {
+    "n": 60,
+    "p50": 0.1,
+    "p95": 0.5,
+    "p99": 0.6,
+    "mean": 0.2
+   },
+   "intent": {
+    "n": 60,
+    "p50": 55.1,
+    "p95": 106.9,
+    "p99": 128.4,
+    "mean": 59.8
+   },
+   "second_opinion": {
+    "n": 60,
+    "p50": 1.6,
+    "p95": 3.6,
+    "p99": 4.5,
+    "mean": 1.6
+   },
+   "retrieval": {
+    "n": 60,
+    "p50": 61.3,
+    "p95": 143.6,
+    "p99": 157.3,
+    "mean": 69.9
+   },
+   "evidence_gate": {
+    "n": 60,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "mean": 0.0
+   },
+   "risk": {
+    "n": 60,
+    "p50": 2.0,
+    "p95": 5.7,
+    "p99": 7.8,
+    "mean": 2.5
+   },
+   "policy": {
+    "n": 60,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.1,
+    "mean": 0.0
+   },
+   "draft": {
+    "n": 60,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "mean": 0.0
+   },
+   "verification": {
+    "n": 60,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "mean": 0.0
+   },
+   "output_gate": {
+    "n": 60,
+    "p50": 0.0,
+    "p95": 0.1,
+    "p99": 0.1,
+    "mean": 0.0
+   },
+   "handoff": {
+    "n": 39,
+    "p50": 0.2,
+    "p95": 0.3,
+    "p99": 0.5,
+    "mean": 0.2
+   },
+   "total": {
+    "n": 60,
+    "p50": 125.7,
+    "p95": 239.6,
+    "p99": 273.5,
+    "mean": 135.6
+   }
+  },
+  "wall_ms": {
+   "n": 60,
+   "p50": 126.1,
+   "p95": 239.8,
+   "p99": 273.8,
+   "mean": 135.9
+  },
+  "llm_calls_per_request": {
+   "n": 60,
+   "p50": 2.0,
+   "p95": 3.0,
+   "p99": 4.0,
+   "mean": 1.8
+  },
+  "live_calls_per_request": {
+   "n": 60,
+   "p50": 0.0,
+   "p95": 0.0,
+   "p99": 0.0,
+   "mean": 0.0
+  },
+  "embedding_computations_per_request": {
+   "n": 60,
+   "p50": 2.0,
+   "p95": 2.0,
+   "p99": 2.0,
+   "mean": 1.7
+  },
+  "embedding_lookups_per_request": {
+   "n": 60,
+   "p50": 2.0,
+   "p95": 2.0,
+   "p99": 2.0,
+   "mean": 1.7
+  },
+  "timeouts": 0,
+  "retries": 0,
+  "budget_exhausted": 0,
+  "actions": {
+   "HUMAN_HANDOFF": 39,
+   "CLARIFICATION_REQUIRED": 20,
+   "AUTO_HANDLE": 1
+  },
+  "reasons": {
+   "payment_billing": 8,
+   "low_confidence": 8,
+   "none": 1,
+   "insufficient_evidence": 14,
+   "repeat_contact": 9,
+   "vague_hostile": 1,
+   "private_info": 10,
+   "account_access": 1,
+   "safety": 1,
+   "hardware": 5,
+   "insufficient_context": 2
+  },
+  "risk_status": {
+   "ok": 43,
+   "skipped": 17
+  }
+ },
+ "live_model": {
+  "n": 20,
+  "stages_ms": {
+   "pii_redaction": {
+    "n": 20,
+    "p50": 0.1,
+    "p95": 0.4,
+    "p99": 0.5,
+    "mean": 0.2
+   },
+   "context": {
+    "n": 20,
+    "p50": 0.2,
+    "p95": 0.7,
+    "p99": 0.9,
+    "mean": 0.2
+   },
+   "intent": {
+    "n": 20,
+    "p50": 75.6,
+    "p95": 141.5,
+    "p99": 286.0,
+    "mean": 89.1
+   },
+   "second_opinion": {
+    "n": 20,
+    "p50": 1911.4,
+    "p95": 5986.6,
+    "p99": 6766.7,
+    "mean": 2207.7
+   },
+   "retrieval": {
+    "n": 20,
+    "p50": 81.6,
+    "p95": 308.0,
+    "p99": 342.2,
+    "mean": 98.3
+   },
+   "evidence_gate": {
+    "n": 20,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "mean": 0.0
+   },
+   "risk": {
+    "n": 20,
+    "p50": 535.7,
+    "p95": 5184.7,
+    "p99": 12926.0,
+    "mean": 2069.7
+   },
+   "policy": {
+    "n": 20,
+    "p50": 0.0,
+    "p95": 0.1,
+    "p99": 0.2,
+    "mean": 0.0
+   },
+   "draft": {
+    "n": 20,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "mean": 0.0
+   },
+   "verification": {
+    "n": 20,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "mean": 0.0
+   },
+   "output_gate": {
+    "n": 20,
+    "p50": 0.0,
+    "p95": 0.1,
+    "p99": 0.1,
+    "mean": 0.0
+   },
+   "handoff": {
+    "n": 13,
+    "p50": 0.2,
+    "p95": 0.3,
+    "p99": 0.3,
+    "mean": 0.2
+   },
+   "total": {
+    "n": 20,
+    "p50": 3602.5,
+    "p95": 8102.0,
+    "p99": 14452.6,
+    "mean": 4467.0
+   }
+  },
+  "wall_ms": {
+   "n": 20,
+   "p50": 3602.7,
+   "p95": 8102.3,
+   "p99": 14452.9,
+   "mean": 4467.2
+  },
+  "llm_calls_per_request": {
+   "n": 20,
+   "p50": 1.0,
+   "p95": 3.0,
+   "p99": 3.0,
+   "mean": 1.5
+  },
+  "live_calls_per_request": {
+   "n": 20,
+   "p50": 1.0,
+   "p95": 3.0,
+   "p99": 3.0,
+   "mean": 1.5
+  },
+  "embedding_computations_per_request": {
+   "n": 20,
+   "p50": 2.0,
+   "p95": 2.0,
+   "p99": 2.0,
+   "mean": 1.6
+  },
+  "embedding_lookups_per_request": {
+   "n": 20,
+   "p50": 2.0,
+   "p95": 2.0,
+   "p99": 2.0,
+   "mean": 1.7
+  },
+  "timeouts": 0,
+  "retries": 0,
+  "budget_exhausted": 0,
+  "actions": {
+   "HUMAN_HANDOFF": 13,
+   "CLARIFICATION_REQUIRED": 7
+  },
+  "reasons": {
+   "safety": 1,
+   "insufficient_evidence": 8,
+   "private_info": 4,
+   "repeat_contact": 2,
+   "low_confidence": 2,
+   "account_access": 1,
+   "payment_billing": 1,
+   "insufficient_context": 1
+  },
+  "risk_status": {
+   "ok": 10,
+   "skipped": 10
+  }
+ },
+ "live_model_note": "kept from the previous run of this script: fresh messages whose embeddings were computed, 45 s budget; only no_model and cached_model were re-measured after the embedding-memo fix"
+}

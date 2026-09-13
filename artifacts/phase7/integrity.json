@@ -1,0 +1,8 @@
+{
+ "files_checked": 115,
+ "changed": [],
+ "missing": [],
+ "golden_sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9",
+ "golden_matches_freeze_manifest": true,
+ "passed": true
+}

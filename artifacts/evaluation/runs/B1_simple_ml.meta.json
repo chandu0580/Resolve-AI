@@ -1,0 +1,18 @@
+{
+ "system": "B1_simple_ml",
+ "description": "TF-IDF+LR (silver train, C on silver dev); nearest-neighbour historical reply (BGE-small customer index); rule escalation",
+ "classifier": {
+  "train_rows": 10795,
+  "bands": [
+   "HIGH",
+   "MEDIUM"
+  ],
+  "C": 8.0,
+  "dev_macro_f1_silver": 0.641,
+  "dev_rows": 800
+ },
+ "n": 197,
+ "failed": 0,
+ "wall_seconds": 72.3,
+ "golden_sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9"
+}

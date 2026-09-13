@@ -1,0 +1,18 @@
+{
+ "candidate": "P10: model-raised needs_private_info counts only with the deterministic private-info rule",
+ "accepted": true,
+ "risk_corroborate": [
+  "needs_private_info"
+ ],
+ "risk_schema": "compact",
+ "decision": "accept and enable in the release configuration",
+ "evidence": [
+  "artifacts/final/risk_experiment/report.md",
+  "artifacts/final/risk_experiment/report.json",
+  "artifacts/final/risk_experiment/runs.jsonl",
+  "data/dev/phase9_risk_labels.json"
+ ],
+ "labels": "AI annotator, not human",
+ "preregistration_sha256": "9fce79eaf5a9097ab7a665880aa4c394bfd06a6484c7eb25e6b89450e733f245",
+ "golden_touched": false
+}

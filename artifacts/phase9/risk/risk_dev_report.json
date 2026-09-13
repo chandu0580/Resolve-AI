@@ -1,0 +1,219 @@
+{
+ "n_dev_rows": 240,
+ "n_disagreement_rows": 76,
+ "labels_provenance": "AI annotator (Claude, the same agent that implemented the Phase 9 candidates), NOT a human. Labels follow data/golden/ANNOTATION_GUIDE.md v1.1, Label 2 (should_escalate) and Label 3 (escalation_reason). Assigned blind: only message, context and predicted intent were shown; no variant decision was visible while labelling. Treat as a dev-set proxy, never as ground truth; the golden set remains the only evaluation of record.",
+ "scored_on_disagreement_rows": {
+  "V0": {
+   "tp": 25,
+   "fp": 41,
+   "fn": 1,
+   "tn": 9,
+   "fn_reasons": {
+    "repeat_contact": 1
+   },
+   "outcomes": {
+    "HANDOFF": 153,
+    "CLARIFY": 85,
+    "AUTO_CANDIDATE": 2
+   }
+  },
+  "V1": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 26,
+   "tn": 50,
+   "fn_reasons": {
+    "repeat_contact": 22,
+    "hardware": 3,
+    "private_info": 1
+   },
+   "outcomes": {
+    "CLARIFY": 144,
+    "HANDOFF": 87,
+    "AUTO_CANDIDATE": 9
+   }
+  },
+  "V2": {
+   "tp": 3,
+   "fp": 18,
+   "fn": 23,
+   "tn": 32,
+   "fn_reasons": {
+    "repeat_contact": 20,
+    "hardware": 3
+   },
+   "outcomes": {
+    "CLARIFY": 127,
+    "HANDOFF": 108,
+    "AUTO_CANDIDATE": 5
+   }
+  },
+  "V3": {
+   "tp": 24,
+   "fp": 30,
+   "fn": 2,
+   "tn": 20,
+   "fn_reasons": {
+    "hardware": 1,
+    "repeat_contact": 1
+   },
+   "outcomes": {
+    "HANDOFF": 141,
+    "CLARIFY": 95,
+    "AUTO_CANDIDATE": 4
+   }
+  },
+  "V4": {
+   "tp": 3,
+   "fp": 9,
+   "fn": 23,
+   "tn": 41,
+   "fn_reasons": {
+    "repeat_contact": 20,
+    "hardware": 3
+   },
+   "outcomes": {
+    "CLARIFY": 135,
+    "HANDOFF": 99,
+    "AUTO_CANDIDATE": 6
+   }
+  }
+ },
+ "candidates": {
+  "V2": {
+   "delta_fp": -23,
+   "delta_fn": 22,
+   "new_misses": [
+    "103252",
+    "2889421",
+    "2890789",
+    "2893361",
+    "2894735",
+    "2896110",
+    "2909308",
+    "2926433",
+    "2977685",
+    "449504",
+    "457218",
+    "464731",
+    "488055",
+    "503636",
+    "513609",
+    "518298",
+    "553496",
+    "556236",
+    "567634",
+    "584839",
+    "94765",
+    "96959"
+   ],
+   "new_protected_misses": [],
+   "handoffs_removed": 45,
+   "removed_correctly": 23,
+   "removed_correctly_wilson95": [
+    0.37,
+    0.65
+   ],
+   "fallback_rate": 0.0065,
+   "checks": {
+    "no_new_protected_misses": true,
+    "at_most_one_new_miss": false,
+    "at_least_3_fewer_unnecessary_handoffs": true,
+    "fallback_within_5pp": true
+   },
+   "accepted": false
+  },
+  "V3": {
+   "delta_fp": -11,
+   "delta_fn": 1,
+   "new_misses": [
+    "2896110",
+    "553496"
+   ],
+   "new_protected_misses": [],
+   "handoffs_removed": 22,
+   "removed_correctly": 20,
+   "removed_correctly_wilson95": [
+    0.722,
+    0.975
+   ],
+   "fallback_rate": 0.0131,
+   "checks": {
+    "no_new_protected_misses": true,
+    "at_most_one_new_miss": false,
+    "at_least_3_fewer_unnecessary_handoffs": true,
+    "fallback_within_5pp": true
+   },
+   "accepted": false
+  },
+  "V4": {
+   "delta_fp": -32,
+   "delta_fn": 22,
+   "new_misses": [
+    "103252",
+    "2889421",
+    "2890789",
+    "2893361",
+    "2894735",
+    "2896110",
+    "2909308",
+    "2926433",
+    "2977685",
+    "449504",
+    "457218",
+    "464731",
+    "503636",
+    "513609",
+    "518298",
+    "518391",
+    "553496",
+    "556236",
+    "567634",
+    "584839",
+    "94765",
+    "96959"
+   ],
+   "new_protected_misses": [],
+   "handoffs_removed": 55,
+   "removed_correctly": 33,
+   "removed_correctly_wilson95": [
+    0.468,
+    0.719
+   ],
+   "fallback_rate": 0.0131,
+   "checks": {
+    "no_new_protected_misses": true,
+    "at_most_one_new_miss": false,
+    "at_least_3_fewer_unnecessary_handoffs": true,
+    "fallback_within_5pp": true
+   },
+   "accepted": false
+  }
+ },
+ "accepted": [],
+ "selected": null,
+ "false_positive_patterns_v0": {
+  "private_info <- model-only flags ['needs_private_info']": 7,
+  "repeat_contact <- model-only flags ['repeat_contact']": 5,
+  "private_info <- model-only flags ['high_impact', 'needs_private_info']": 5,
+  "private_info <- model-only flags ['needs_private_info', 'physical_damage']": 4,
+  "hardware <- model-only flags ['physical_damage']": 3,
+  "payment_billing <- model-only flags ['payment_billing_risk']": 2,
+  "payment_billing <- model-only flags ['needs_private_info', 'sensitive_action_required']": 1,
+  "payment_billing <- model-only flags ['high_frustration', 'sensitive_action_required']": 1,
+  "safety <- model-only flags ['high_frustration', 'safety_concern']": 1,
+  "taxonomy_gap_risk <- model-only flags ['high_frustration']": 1,
+  "safety <- model-only flags ['high_frustration', 'privacy_concern', 'security_concern']": 1,
+  "account_access <- model-only flags ['account_access_risk', 'high_frustration']": 1,
+  "safety <- model-only flags ['high_impact', 'security_concern']": 1,
+  "private_info <- model-only flags ['needs_private_info', 'repeat_contact']": 1,
+  "account_access <- model-only flags ['account_access_risk']": 1,
+  "private_info <- model-only flags ['abusive_threatening', 'needs_private_info', 'physical_damage']": 1,
+  "vague_hostile <- model-only flags []": 1,
+  "payment_billing <- model-only flags ['high_frustration', 'payment_billing_risk', 'repeat_contact']": 1,
+  "insufficient_evidence <- model-only flags ['high_impact']": 1,
+  "payment_billing <- model-only flags ['high_frustration', 'physical_damage', 'repeat_contact', 'sensitive_action_required']": 1,
+  "payment_billing <- model-only flags ['high_frustration', 'high_impact', 'needs_private_info', 'physical_damage', 'repeat_contact', 'sensitive_action_required']": 1
+ },
+ "acceptance_rule": ", fixed in this file before any experiment result existed. A candidate (V2, V3, V4) is ACCEPTED only if ALL hold:\n  1. no new missed escalation whose gold reason is safety, legal_media or private_info       (safety first)\n  2. at most one new missed escalation in total                                              (recall floor)\n  3. at least 3 fewer unnecessary handoffs than V0 (production)                              (a real improvement, not noise)\n  4. its model fallback rate is no more than 5 percentage points above the production prompt's\nAmong accepted candidates the one with the largest reduction in unnecessary handoffs wins; ties go to the smaller change\n(V2: no prompt change < V3: prompt change < V4: both). If none is accepted, production behaviour is kept."
+}

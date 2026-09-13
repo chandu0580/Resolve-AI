@@ -1,0 +1,51 @@
+{
+  "holdout_rows": 8943,
+  "sampled": 197,
+  "strata": {
+    "multi_turn": 40,
+    "short": 20,
+    "intent:general_complaint": 20,
+    "intent:performance_crash": 15,
+    "intent:apps_services": 12,
+    "intent:battery_power": 12,
+    "intent:hardware_damage": 11,
+    "intent:data_loss_sync": 11,
+    "intent:account_store_repair": 10,
+    "intent:connectivity": 9,
+    "intent:keyboard_text_bug": 9,
+    "intent:non_english": 9,
+    "edge:safety": 4,
+    "edge:pii": 3,
+    "edge:abuse_no_symptom": 3,
+    "edge:non_english": 3,
+    "edge:legal": 3,
+    "edge:closure": 3
+  },
+  "weak_label_distribution_holdout": {
+    "general_complaint": 0.381,
+    "performance_crash": 0.168,
+    "battery_power": 0.095,
+    "apps_services": 0.09,
+    "hardware_damage": 0.071,
+    "data_loss_sync": 0.061,
+    "account_store_repair": 0.043,
+    "connectivity": 0.04,
+    "keyboard_text_bug": 0.031,
+    "non_english": 0.023
+  },
+  "weak_label_distribution_sample": {
+    "general_complaint": 0.32,
+    "performance_crash": 0.137,
+    "apps_services": 0.096,
+    "hardware_damage": 0.081,
+    "non_english": 0.076,
+    "battery_power": 0.071,
+    "keyboard_text_bug": 0.056,
+    "data_loss_sync": 0.056,
+    "account_store_repair": 0.056,
+    "connectivity": 0.051
+  },
+  "multi_turn_share": 0.244,
+  "customer_seen_in_kb_share": 0.127,
+  "seed": 42
+}

@@ -1,0 +1,89 @@
+{
+  "source": {
+    "name": "Customer Support on Twitter",
+    "provider": "Kaggle thoughtvector/customer-support-on-twitter",
+    "version": "10",
+    "file": "twcs.csv",
+    "license": "CC BY-NC-SA 4.0 (per Kaggle listing)"
+  },
+  "raw_sha256": "cd297fcfa1bf6f99938be242e8e578980bc6d1b96adc8691abec9a39175b03c0",
+  "brand": "AppleSupport",
+  "preprocessing_version": "2.0",
+  "seed": 42,
+  "row_counts": {
+    "full_pairs": 105760,
+    "full_split": {
+      "kb": 96817,
+      "holdout": 8943
+    },
+    "subsample": 20000,
+    "subsample_split": {
+      "kb": 18000,
+      "holdout": 2000
+    }
+  },
+  "split_boundaries": {
+    "kb_max_created_at": "2017-11-27 23:58:38+00:00",
+    "holdout_min_created_at": "2017-11-28 00:00:28+00:00",
+    "holdout_max_created_at": "2017-12-03 23:01:39+00:00",
+    "rule": "temporal: holdout = final 5 calendar days; kb strictly earlier"
+  },
+  "pii": {
+    "subsample": {
+      "rows_with_pii": 34,
+      "tokens_by_type": {
+        "PHONE": 25,
+        "LONG_ID": 7,
+        "CARD": 2
+      }
+    },
+    "full": {
+      "rows_with_pii": 194,
+      "tokens_by_type": {
+        "PHONE": 130,
+        "CARD": 6,
+        "LONG_ID": 62
+      }
+    }
+  },
+  "outcome_signal": {
+    "subsample": {
+      "none": 18436,
+      "positive": 1014,
+      "negative": 480,
+      "mixed": 70
+    },
+    "note": "weak signal; rerank bonus only (hand-check precision: positive 0.72, negative 1.00)"
+  },
+  "holdout_customer_seen_in_kb_share": 0.1575,
+  "artifacts": {
+    "apple_pairs.csv": {
+      "sha256": "1ed11788f12c8f08cebaca7535a56ba4ffb1837e00adc373b8f845773ff82d3f",
+      "bytes": 8009234,
+      "committed": true
+    },
+    "full_apple_pairs.csv": {
+      "sha256": "97f76ffff2a31383c7ea8af7087ae83ebed452c6ad451fb875fa307ae7900aa0",
+      "bytes": 42196261,
+      "committed": false
+    }
+  },
+  "columns": [
+    "customer_tweet_id",
+    "brand_tweet_id",
+    "customer_author",
+    "created_at",
+    "customer_message",
+    "pii_redacted",
+    "brand_reply",
+    "context",
+    "n_context_turns",
+    "context_truncated",
+    "is_first_turn",
+    "dm_handoff",
+    "followup",
+    "outcome",
+    "split",
+    "customer_seen_in_kb"
+  ]
+}

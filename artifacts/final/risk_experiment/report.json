@@ -1,0 +1,283 @@
+{
+ "preregistration_sha256": "9fce79eaf5a9097ab7a665880aa4c394bfd06a6484c7eb25e6b89450e733f245",
+ "n_dev_rows": 240,
+ "n_labelled_rows": 76,
+ "labels_provenance": "AI annotator (Claude, the same agent that implemented the Phase 9 candidates), NOT a human. Labels follow data/golden/ANNOTATION_GUIDE.md v1.1, Label 2 (should_escalate) and Label 3 (escalation_reason). Assigned blind: only message, context and predicted intent were shown; no variant decision was visible while labelling. Treat as a dev-set proxy, never as ground truth; the golden set remains the only evaluation of record.",
+ "live_model_calls": 0,
+ "cache_hits": 406,
+ "wall_seconds": 111.6,
+ "validity": {
+  "v0_reproduces_phase9": true,
+  "v0_mismatches": [],
+  "changed_handoff_rows": [
+   "2888444",
+   "2945748",
+   "491499",
+   "509528",
+   "539898",
+   "539979",
+   "568452",
+   "585938",
+   "96921"
+  ],
+  "unlabelled_changed_rows": []
+ },
+ "model": {
+  "calls": 153,
+  "fallback_rate": 0.0065,
+  "rows_model_raised_needs_private_info": 26,
+  "of_which_rule_corroborated": 0
+ },
+ "outcomes_240": {
+  "V0": {
+   "HANDOFF": 153,
+   "CLARIFY": 85,
+   "AUTO_CANDIDATE": 2
+  },
+  "P10": {
+   "HANDOFF": 144,
+   "CLARIFY": 93,
+   "AUTO_CANDIDATE": 3
+  }
+ },
+ "status": "complete",
+ "scores_on_labelled_rows": {
+  "V0": {
+   "tp": 25,
+   "fp": 41,
+   "fn": 1,
+   "tn": 9,
+   "precision": 0.379,
+   "recall": 0.962,
+   "f1": 0.543,
+   "fn_reasons": {
+    "repeat_contact": 1
+   },
+   "auto_candidates_on_should_escalate_rows": 0
+  },
+  "P10": {
+   "tp": 25,
+   "fp": 32,
+   "fn": 1,
+   "tn": 18,
+   "precision": 0.439,
+   "recall": 0.962,
+   "f1": 0.602,
+   "fn_reasons": {
+    "repeat_contact": 1
+   },
+   "auto_candidates_on_should_escalate_rows": 0
+  }
+ },
+ "phase9_variants_on_labelled_rows": {
+  "V0": {
+   "tp": 25,
+   "fp": 41,
+   "fn": 1,
+   "tn": 9,
+   "precision": 0.379,
+   "recall": 0.962,
+   "f1": 0.543,
+   "fn_reasons": {
+    "repeat_contact": 1
+   },
+   "auto_candidates_on_should_escalate_rows": 0
+  },
+  "V1": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 26,
+   "tn": 50,
+   "precision": null,
+   "recall": 0.0,
+   "f1": 0.0,
+   "fn_reasons": {
+    "repeat_contact": 22,
+    "hardware": 3,
+    "private_info": 1
+   },
+   "auto_candidates_on_should_escalate_rows": 0
+  },
+  "V2": {
+   "tp": 3,
+   "fp": 18,
+   "fn": 23,
+   "tn": 32,
+   "precision": 0.143,
+   "recall": 0.115,
+   "f1": 0.128,
+   "fn_reasons": {
+    "repeat_contact": 20,
+    "hardware": 3
+   },
+   "auto_candidates_on_should_escalate_rows": 0
+  },
+  "V3": {
+   "tp": 24,
+   "fp": 30,
+   "fn": 2,
+   "tn": 20,
+   "precision": 0.444,
+   "recall": 0.923,
+   "f1": 0.6,
+   "fn_reasons": {
+    "hardware": 1,
+    "repeat_contact": 1
+   },
+   "auto_candidates_on_should_escalate_rows": 0
+  },
+  "V4": {
+   "tp": 3,
+   "fp": 9,
+   "fn": 23,
+   "tn": 41,
+   "precision": 0.25,
+   "recall": 0.115,
+   "f1": 0.158,
+   "fn_reasons": {
+    "repeat_contact": 20,
+    "hardware": 3
+   },
+   "auto_candidates_on_should_escalate_rows": 0
+  }
+ },
+ "candidate": {
+  "definition": "V0 with AgentConfig.risk_corroborate = ('needs_private_info',)",
+  "delta_fp": -9,
+  "delta_fn": 0,
+  "new_misses": [],
+  "new_protected_misses": [],
+  "handoffs_removed": 9,
+  "removed_correctly": 9,
+  "removed_correctly_wilson95": [
+   0.701,
+   1.0
+  ],
+  "handoffs_added": 0,
+  "removed_handoffs_now": {
+   "CLARIFY": 8,
+   "AUTO_CANDIDATE": 1
+  },
+  "checks": {
+   "no_new_protected_misses": true,
+   "at_most_one_new_miss": true,
+   "at_least_3_fewer_unnecessary_handoffs": true,
+   "fallback_within_5pp": true
+  },
+  "accepted": true
+ },
+ "changed_rows": [
+  {
+   "id": "2888444",
+   "v0": "HANDOFF/private_info",
+   "p10": "CLARIFY/low_confidence",
+   "gold_should_escalate": false,
+   "gold_reason": "none",
+   "label_note": "",
+   "model_flags": [
+    "needs_private_info"
+   ],
+   "message": "hey your iPhone X keeps randomly crashing when I\u2019m doing things fix it much appreciated thanks."
+  },
+  {
+   "id": "2945748",
+   "v0": "HANDOFF/private_info",
+   "p10": "CLARIFY/insufficient_evidence",
+   "gold_should_escalate": false,
+   "gold_reason": "none",
+   "label_note": "",
+   "model_flags": [
+    "needs_private_info"
+   ],
+   "message": "my phone is constantly restarting since the last update, how can this be solved please ????"
+  },
+  {
+   "id": "491499",
+   "v0": "HANDOFF/private_info",
+   "p10": "CLARIFY/low_confidence",
+   "gold_should_escalate": false,
+   "gold_reason": "none",
+   "label_note": "",
+   "model_flags": [
+    "high_frustration",
+    "needs_private_info"
+   ],
+   "message": "ain\u2019t shit! And DEFINITELY isn\u2019t shit!! I\u2019ve had my iPhone 7 Plus for mmm..6 months and every app freezes for 10 minutes"
+  },
+  {
+   "id": "509528",
+   "v0": "HANDOFF/private_info",
+   "p10": "CLARIFY/low_confidence",
+   "gold_should_escalate": false,
+   "gold_reason": "none",
+   "label_note": "",
+   "model_flags": [
+    "needs_private_info"
+   ],
+   "message": "I have two devices keeping reboot like this pic. <url>"
+  },
+  {
+   "id": "539898",
+   "v0": "HANDOFF/private_info",
+   "p10": "AUTO_CANDIDATE/none",
+   "gold_should_escalate": false,
+   "gold_reason": "none",
+   "label_note": "non_english is always false",
+   "model_flags": [
+    "high_impact",
+    "needs_private_info"
+   ],
+   "message": "Ini iphone 6s knapa restart terus?? Ganggu kerja!!"
+  },
+  {
+   "id": "539979",
+   "v0": "HANDOFF/private_info",
+   "p10": "CLARIFY/low_confidence",
+   "gold_should_escalate": false,
+   "gold_reason": "none",
+   "label_note": "",
+   "model_flags": [
+    "high_impact",
+    "needs_private_info"
+   ],
+   "message": "Oh by the way it\u2019s an iPhone 7 iOS 11.1.2"
+  },
+  {
+   "id": "568452",
+   "v0": "HANDOFF/private_info",
+   "p10": "CLARIFY/low_confidence",
+   "gold_should_escalate": false,
+   "gold_reason": "none",
+   "label_note": "",
+   "model_flags": [
+    "needs_private_info"
+   ],
+   "message": "Dear , thanks for (apparently) putting me in your beta program for iOS 11. Where do I send a list of the bugs I\u2019ve found"
+  },
+  {
+   "id": "585938",
+   "v0": "HANDOFF/private_info",
+   "p10": "CLARIFY/insufficient_evidence",
+   "gold_should_escalate": false,
+   "gold_reason": "none",
+   "label_note": "",
+   "model_flags": [
+    "needs_private_info"
+   ],
+   "message": "my iPhone 6s crashes every sec #fixmyphone"
+  },
+  {
+   "id": "96921",
+   "v0": "HANDOFF/private_info",
+   "p10": "CLARIFY/insufficient_evidence",
+   "gold_should_escalate": false,
+   "gold_reason": "none",
+   "label_note": "",
+   "model_flags": [
+    "needs_private_info"
+   ],
+   "message": "I trained to get a medal. Can not calculate the activity app \ud83d\ude2c itself was an average of 47.2"
+  }
+ ],
+ "acceptance_rule": "Phase 9 rule, unchanged: no new protected (safety/legal_media/private_info) miss; at most one new miss; >= 3 fewer unnecessary handoffs; fallback within 5 pp"
+}

@@ -1,0 +1,84 @@
+{
+ "golden_rows": 197,
+ "evaluated_pipeline": "pipeline-v6.1 / policy-v3.1",
+ "current_pipeline": "pipeline-v6.3 / policy-v3.3",
+ "method": "deterministic input-level check of which golden rows reach a code path changed in the final product pass; the golden run was not repeated, no model was called and no annotation was read",
+ "counts": {
+  "frustration_flag_removed": 6,
+  "greeting_only": 0,
+  "human_request": 0,
+  "closure_now_matches": 0,
+  "ack_in_thread_no_longer_closure": 0,
+  "short_reply_status_changed": 0,
+  "short_reply_classified_with_issue": 12,
+  "injection_detection_changed": 0,
+  "non_english_low_confidence_no_longer_redirected": 3,
+  "bare_acknowledgement_wording_changed": 0,
+  "non_latin_script_now_redirected": 1,
+  "greeting_addressee_widened": 0
+ },
+ "n_rows_touching_any_change": 21,
+ "rows_touching_any_change": [
+  "g007",
+  "g039",
+  "g047",
+  "g050",
+  "g051",
+  "g053",
+  "g070",
+  "g073",
+  "g082",
+  "g083",
+  "g095",
+  "g100",
+  "g120",
+  "g138",
+  "g157",
+  "g161",
+  "g164",
+  "g167",
+  "g168",
+  "g172",
+  "g196"
+ ],
+ "gids": {
+  "frustration_flag_removed": [
+   "g007",
+   "g138",
+   "g157",
+   "g168",
+   "g172",
+   "g196"
+  ],
+  "greeting_only": [],
+  "human_request": [],
+  "closure_now_matches": [],
+  "ack_in_thread_no_longer_closure": [],
+  "short_reply_status_changed": [],
+  "short_reply_classified_with_issue": [
+   "g039",
+   "g047",
+   "g050",
+   "g051",
+   "g053",
+   "g073",
+   "g083",
+   "g095",
+   "g120",
+   "g161",
+   "g164",
+   "g167"
+  ],
+  "injection_detection_changed": [],
+  "non_english_low_confidence_no_longer_redirected": [
+   "g070",
+   "g082",
+   "g100"
+  ],
+  "bare_acknowledgement_wording_changed": [],
+  "non_latin_script_now_redirected": [
+   "g082"
+  ],
+  "greeting_addressee_widened": []
+ }
+}

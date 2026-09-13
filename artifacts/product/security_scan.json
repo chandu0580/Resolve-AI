@@ -1,0 +1,58 @@
+{
+ "committable_files": 747,
+ "committable_bytes": 81514255,
+ "committable_mb": 81.5,
+ "largest_files": [
+  {
+   "file": "data/processed/apple_pairs.csv",
+   "mb": 8.01
+  },
+  {
+   "file": "artifacts/product/smoke/screenshots/narrow-evaluation.png",
+   "mb": 1.15
+  },
+  {
+   "file": "artifacts/product/smoke/screenshots/evaluation.png",
+   "mb": 1.15
+  },
+  {
+   "file": "artifacts/product/smoke/screenshots/tablet-evaluation.png",
+   "mb": 1.11
+  },
+  {
+   "file": "artifacts/product/smoke/screenshots/mobile-knowledge.png",
+   "mb": 0.99
+  },
+  {
+   "file": "artifacts/product/smoke/screenshots/knowledge.png",
+   "mb": 0.97
+  },
+  {
+   "file": "artifacts/product/smoke/screenshots/narrow-knowledge.png",
+   "mb": 0.95
+  },
+  {
+   "file": "artifacts/product/smoke/screenshots/mobile-evaluation.png",
+   "mb": 0.94
+  },
+  {
+   "file": "artifacts/product/smoke/screenshots/tablet-knowledge.png",
+   "mb": 0.88
+  },
+  {
+   "file": "artifacts/product/smoke/screenshots/simulate-result-C-security-handoff.png",
+   "mb": 0.84
+  }
+ ],
+ "env_secret_variables_checked": [
+  "GEMINI_API_KEY",
+  "GROQ_API_KEY",
+  "LLM_API_KEY"
+ ],
+ "trace_files_scanned": 5,
+ "trace_records_scanned": 763,
+ "trace_records_with_pii": 0,
+ ".env_committable": false,
+ "findings": [],
+ "passed": true
+}

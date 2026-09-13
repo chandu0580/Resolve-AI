@@ -1,0 +1,352 @@
+{
+ "agent": {
+  "name": "ResolveAI",
+  "state": "loaded",
+  "brand": "AppleSupport",
+  "versions": {
+   "pipeline": "pipeline-v6.3",
+   "policy": "policy-v3.3",
+   "output_gate": "output-gate-v1",
+   "retrieval": "dense:bge-small:pair+rr+gatev3",
+   "evidence_gate": "gate-v3",
+   "rerank": "rerank-v1",
+   "classifier": "2d194e7e704f",
+   "prompts": {
+    "risk": "risk-flags-v2",
+    "draft": "draft-v2",
+    "verify": "verify-v2",
+    "second_opinion": "intent-second-opinion-v1"
+   },
+   "model": null,
+   "config_hash": "f200775140004379"
+  },
+  "model": {
+   "configured": false,
+   "enabled": false,
+   "name": null,
+   "role": "proposes intent second opinions, risk flags, drafts and verification verdicts; never decides escalation"
+  }
+ },
+ "active": {
+  "label": "ACTIVE CONFIGURATION",
+  "agent_config": {
+   "use_llm": false,
+   "use_second_opinion": true,
+   "use_llm_verifier": true,
+   "max_draft_attempts": 2,
+   "share_query_embedding": true,
+   "write_traces": true,
+   "risk_short_circuit": true,
+   "use_risk_llm": true,
+   "risk_schema": "compact",
+   "risk_corroborate": [
+    "needs_private_info"
+   ],
+   "draft_version": "v2"
+  },
+  "retrieval": {
+   "method": "dense",
+   "model": "BAAI/bge-small-en-v1.5",
+   "paths": [
+    "pair"
+   ],
+   "rrf_k": 20,
+   "candidate_k": 50,
+   "top_k": 5,
+   "outcome_bonus": {
+    "positive": 0.0004,
+    "substantive": 0.0002,
+    "negative": -0.0003,
+    "dm_handoff": -0.0002,
+    "enabled": false
+   },
+   "substantive_first": true,
+   "rerank": "resolution",
+   "gate": "v3",
+   "embedding_model": "BAAI/bge-small-en-v1.5"
+  },
+  "evidence_gate": {
+   "support_similarity": 0.85,
+   "min_support": 3,
+   "min_top_share": 0.6,
+   "t_weak": 0.35,
+   "t_sufficient": 0.55,
+   "t_strong": 0.75,
+   "min_query_tokens": 3,
+   "require_symptom_term": true,
+   "relevance_floor": 0.55,
+   "version": "gate-v3"
+  },
+  "rerank_weights": {
+   "w_customer": 0.35,
+   "w_reply": 0.25,
+   "w_intent": 0.1,
+   "w_resolution": 0.2,
+   "w_quality": 0.05,
+   "w_outcome": 0.01,
+   "w_dup": 0.15,
+   "w_dm": 0.2,
+   "w_same": 0.3,
+   "version": "rerank-v1"
+  },
+  "second_opinion_policy": "llm_conf_0.7",
+  "request_budget_s": 60.0
+ },
+ "evaluated": {
+  "label": "EVALUATION CONFIGURATION",
+  "source": "artifacts/final/evaluation/runs/final_release.meta.json",
+  "agent_config": {
+   "use_llm": true,
+   "use_second_opinion": true,
+   "use_llm_verifier": true,
+   "max_draft_attempts": 2,
+   "share_query_embedding": true,
+   "write_traces": false,
+   "risk_short_circuit": true,
+   "use_risk_llm": true,
+   "risk_schema": "compact",
+   "risk_corroborate": [
+    "needs_private_info"
+   ],
+   "draft_version": "v2"
+  },
+  "pipeline_version": "pipeline-v6.1",
+  "config_hash": "29c9224591cc84da",
+  "differences": [
+   {
+    "field": "use_llm",
+    "active": false,
+    "evaluated": true,
+    "note": null
+   },
+   {
+    "field": "write_traces",
+    "active": true,
+    "evaluated": false,
+    "note": "traces are written by the API; the evaluation run does not write traces"
+   },
+   {
+    "field": "pipeline_version",
+    "active": "pipeline-v6.3",
+    "evaluated": "pipeline-v6.1",
+    "note": "live behaviour changed after the release evaluation (greetings, requests for a person, short replies, capitalization); the golden run was not repeated, so evaluation numbers describe the evaluated pipeline. 21 of 197 golden rows reach a changed code path (behaviour_change_impact.json)."
+   }
+  ]
+ },
+ "policy": {
+  "version": "policy-v3.3",
+  "confidence_floor": 0.45,
+  "always_handoff_intents": [
+   "account_store_repair",
+   "hardware_damage"
+  ],
+  "brand_turns_without_progress": 2,
+  "clarifiable_evidence_reasons": [
+   "ambiguous_intent",
+   "insufficient_query",
+   "insufficient_resolution_evidence",
+   "mixed_resolution",
+   "no_relevant_evidence",
+   "weak_resolution_evidence",
+   "weak_similarity"
+  ],
+  "rules": [
+   {
+    "rule": "safety",
+    "reason_code": "safety",
+    "outcome": "handoff",
+    "when": "Safety concern (injury, smoke, self-harm or threat)."
+   },
+   {
+    "rule": "prompt_injection",
+    "reason_code": "prompt_injection",
+    "outcome": "handoff",
+    "when": "The message tries to instruct the assistant, reveal its configuration or supply evidence."
+   },
+   {
+    "rule": "security",
+    "reason_code": "safety",
+    "outcome": "handoff",
+    "when": "Possible account security or device compromise."
+   },
+   {
+    "rule": "legal",
+    "reason_code": "legal_media",
+    "outcome": "handoff",
+    "when": "Legal action, press or a regulator is mentioned."
+   },
+   {
+    "rule": "abusive",
+    "reason_code": "abusive_threatening",
+    "outcome": "handoff",
+    "when": "Abusive or threatening message with no actionable issue."
+   },
+   {
+    "rule": "canned:greeting",
+    "reason_code": "none",
+    "outcome": "template_reply",
+    "when": "Only a greeting (\"hi\", \"hello\"): a fixed greeting asking what the customer needs; nothing is retrieved or drafted."
+   },
+   {
+    "rule": "account_access",
+    "reason_code": "account_access",
+    "outcome": "handoff",
+    "when": "Account access or identity verification is involved."
+   },
+   {
+    "rule": "payment_billing",
+    "reason_code": "payment_billing",
+    "outcome": "handoff",
+    "when": "Billing, refund, order or another sensitive account action."
+   },
+   {
+    "rule": "private_info",
+    "reason_code": "private_info",
+    "outcome": "handoff",
+    "when": "Account, store or repair issue, or private identifiers are needed (a model-only flag needs the deterministic rule)."
+   },
+   {
+    "rule": "hardware",
+    "reason_code": "hardware",
+    "outcome": "handoff",
+    "when": "Hardware damage or a physical-damage flag."
+   },
+   {
+    "rule": "repeat_contact",
+    "reason_code": "repeat_contact",
+    "outcome": "handoff",
+    "when": "The customer already tried the standard steps, or the thread is deep without progress."
+   },
+   {
+    "rule": "human_requested",
+    "reason_code": "human_requested",
+    "outcome": "handoff",
+    "when": "The customer explicitly asks to talk to a person."
+   },
+   {
+    "rule": "vague_hostile",
+    "reason_code": "vague_hostile",
+    "outcome": "handoff",
+    "when": "Frustrated customer with no concrete symptom."
+   },
+   {
+    "rule": "canned:other",
+    "reason_code": "none",
+    "outcome": "template_reply",
+    "when": "The customer thanks the team: a fixed \"you're welcome\"."
+   },
+   {
+    "rule": "canned:acknowledgement",
+    "reason_code": "none",
+    "outcome": "template_reply",
+    "when": "A bare acknowledgement (\"ok\", \"yes\") that answers no open question in the thread: a fixed closing line."
+   },
+   {
+    "rule": "canned:non_latin_script",
+    "reason_code": "none",
+    "outcome": "template_reply",
+    "when": "Most of the message's letters are outside the Latin script (Japanese, Arabic, Hindi, ...): fixed language redirect, read off the characters rather than predicted."
+   },
+   {
+    "rule": "insufficient_context",
+    "reason_code": "insufficient_context",
+    "outcome": "clarify",
+    "when": "The message does not state the issue."
+   },
+   {
+    "rule": "other_non_closure",
+    "reason_code": "insufficient_evidence",
+    "outcome": "handoff",
+    "when": "Not a troubleshooting request (product question, suggestion or off-topic)."
+   },
+   {
+    "rule": "general_complaint_clarify",
+    "reason_code": "insufficient_context",
+    "outcome": "clarify",
+    "when": "A complaint with no concrete symptom: ask what is happening."
+   },
+   {
+    "rule": "taxonomy_gap",
+    "reason_code": "taxonomy_gap_risk",
+    "outcome": "handoff",
+    "when": "Outside the supported taxonomy and carrying risk."
+   },
+   {
+    "rule": "low_confidence",
+    "reason_code": "low_confidence",
+    "outcome": "clarify",
+    "when": "Intent confidence below 0.45 or in the LOW band."
+   },
+   {
+    "rule": "canned:non_english",
+    "reason_code": "none",
+    "outcome": "template_reply",
+    "when": "Non-English message the classifier is confident about: fixed language redirect template. A LOW-confidence guess is caught by `low_confidence` above and asks the customer to restate instead."
+   },
+   {
+    "rule": "conflicting_evidence",
+    "reason_code": "conflicting_evidence",
+    "outcome": "handoff",
+    "when": "Historical cases prescribe different resolutions."
+   },
+   {
+    "rule": "evidence_gate",
+    "reason_code": "insufficient_evidence",
+    "outcome": "clarify_or_handoff",
+    "when": "Evidence is not SUFFICIENT or STRONG (clarify when the gap is clarifiable and nothing is high-impact)."
+   },
+   {
+    "rule": "grounding_gate",
+    "reason_code": "grounding_failed",
+    "outcome": "handoff",
+    "when": "The drafted reply could not be verified against the evidence."
+   },
+   {
+    "rule": "llm_fallback",
+    "reason_code": "llm_unavailable",
+    "outcome": "handoff",
+    "when": "The drafting model was unavailable."
+   },
+   {
+    "rule": "default_auto",
+    "reason_code": "none",
+    "outcome": "auto_reply",
+    "when": "Clear issue, sufficient evidence, no risk flags: draft, verify and pass the output gate."
+   }
+  ],
+  "order": "first matching rule wins"
+ },
+ "allowed_actions": [
+  {
+   "action": "AUTO_HANDLE",
+   "label": "Auto-handled",
+   "response_kinds": [
+    "auto_reply",
+    "template_reply"
+   ],
+   "requires": "Sufficient or strong evidence, no risk flags, a policy rule that allows autonomy, a verified draft and every output-gate check passing (or a fixed template)."
+  },
+  {
+   "action": "CLARIFICATION_REQUIRED",
+   "label": "Clarification",
+   "response_kinds": [
+    "clarifying_question"
+   ],
+   "requires": "A policy rule that allows clarification: the issue is unstated, confidence is low, or the evidence gap is clarifiable and nothing is high-impact."
+  },
+  {
+   "action": "HUMAN_HANDOFF",
+   "label": "Human handoff",
+   "response_kinds": [
+    "handoff_notice"
+   ],
+   "requires": "Any hard-block risk, sensitive or private action, repeated contact, conflicting or insufficient evidence that cannot be clarified, a failed verification or an unavailable model."
+  }
+ ],
+ "not_allowed": [
+  "Refunds, orders, account changes or any other action on a customer account",
+  "Sending a message to a real channel (every response is returned to the caller, not sent)",
+  "Replying without evidence that passed the evidence gate",
+  "Letting the model decide escalation (the policy is deterministic)"
+ ]
+}

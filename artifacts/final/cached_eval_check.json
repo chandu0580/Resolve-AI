@@ -1,0 +1,64 @@
+{
+ "evaluate_exit_code": 0,
+ "runtime_seconds": 416.7,
+ "compared": {
+  "headline_metrics.json": {
+   "identical": true,
+   "differences": [],
+   "n_differences": 0
+  },
+  "intent_report.json": {
+   "identical": true,
+   "differences": [],
+   "n_differences": 0
+  },
+  "escalation_report.json": {
+   "identical": true,
+   "differences": [],
+   "n_differences": 0
+  },
+  "autonomy_report.json": {
+   "identical": true,
+   "differences": [],
+   "n_differences": 0
+  },
+  "reply_quality.json": {
+   "identical": true,
+   "differences": [],
+   "n_differences": 0
+  },
+  "pairwise_results.json": {
+   "identical": true,
+   "differences": [],
+   "n_differences": 0
+  },
+  "slice_analysis.json": {
+   "identical": true,
+   "differences": [],
+   "n_differences": 0
+  },
+  "baseline_comparison.json": {
+   "identical": true,
+   "differences": [],
+   "n_differences": 0
+  },
+  "judge_agreement.json": {
+   "identical": true,
+   "differences": [],
+   "n_differences": 0
+  },
+  "retrieval_report.json": {
+   "identical": true,
+   "differences": [],
+   "n_differences": 0
+  },
+  "judge_rubric.json": {
+   "identical": true,
+   "differences": [],
+   "n_differences": 0
+  }
+ },
+ "all_identical": true,
+ "frozen_artifacts_touched": false,
+ "note": "evaluate.py executed unchanged except for its output folder and the skipped narrative step; scratch copies deleted afterwards"
+}

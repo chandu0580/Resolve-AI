@@ -1,0 +1,195 @@
+[
+ {
+  "gid": "g005",
+  "message": "fix the fcking I problem I\u2019m tired of seeing question marks on my damn timeline",
+  "intent": "keyboard_text_bug",
+  "evidence_level": "STRONG",
+  "resolution_confidence": 0.97,
+  "clusters": [
+   [
+    "update",
+    3,
+    1.0
+   ]
+  ],
+  "response": "Here's what you can do to work around the issue until it's fixed in a future software update: follow the steps on our support site. We've also released an iOS update that contains a fix for autocorrect issues. Be sure to back up your device prior to updating.",
+  "evidence_refs": [
+   "1746001",
+   "2193441"
+  ],
+  "verified": true,
+  "coverage": 0.812,
+  "gold_should_escalate": false,
+  "trace_id": "fd5c2a4a27954503b9bc3eecd5731b1d"
+ },
+ {
+  "gid": "g011",
+  "message": "Why tf is this glitch still fuckn up? what do I\ufe0f need to do. This shit is annoying. \ud83d\ude29",
+  "intent": "keyboard_text_bug",
+  "evidence_level": "STRONG",
+  "resolution_confidence": 0.909,
+  "clusters": [
+   [
+    "update",
+    4,
+    0.8
+   ],
+   [
+    "article",
+    1,
+    0.2
+   ]
+  ],
+  "response": "We understand how frustrating this is. Here's what you can do to work around the issue until it's fixed in a future software update: check the steps on our support site. Let us know if that helps!",
+  "evidence_refs": [
+   "2152213"
+  ],
+  "verified": true,
+  "coverage": 0.538,
+  "gold_should_escalate": false,
+  "trace_id": "ab53d6fe44f24dab8f67743dbadd653c"
+ },
+ {
+  "gid": "g032",
+  "message": "Why does the iPhone have \u201cI.T\u201d as the autocorrect for \u201cit\u201d??!",
+  "intent": "keyboard_text_bug",
+  "evidence_level": "STRONG",
+  "resolution_confidence": 0.895,
+  "clusters": [
+   [
+    "update",
+    3,
+    0.75
+   ],
+   [
+    "article",
+    1,
+    0.25
+   ]
+  ],
+  "response": "We've recently released an update to fix this. We do recommend creating a current backup of your data on your device before updating. Let us know if this helps.",
+  "evidence_refs": [
+   "2573954"
+  ],
+  "verified": true,
+  "coverage": 1.0,
+  "gold_should_escalate": false,
+  "trace_id": "a0a6999651074bc39cb97a2afed75084"
+ },
+ {
+  "gid": "g061",
+  "message": "y\u2019all ever gonna fix the i?",
+  "intent": "keyboard_text_bug",
+  "evidence_level": "STRONG",
+  "resolution_confidence": 0.968,
+  "clusters": [
+   [
+    "update",
+    4,
+    1.0
+   ]
+  ],
+  "response": "Thanks for reaching out. We know how important it is to have this resolved. To start, have you updated your device to iOS 11.1.1? You can update by following the steps on our support site.",
+  "evidence_refs": [
+   "2321411"
+  ],
+  "verified": true,
+  "coverage": 0.889,
+  "gold_should_escalate": false,
+  "trace_id": "ffdc39439ebd4a83b0db0c227411e550"
+ },
+ {
+  "gid": "g071",
+  "message": "hey there, what do I\ufe0f need to do to fix the question mark in a box and exclamation point that pops up when I\ufe0f use the \u201cI\ufe0f\u201d word?? #QTA",
+  "intent": "keyboard_text_bug",
+  "evidence_level": "STRONG",
+  "resolution_confidence": 0.867,
+  "clusters": [
+   [
+    "update",
+    2,
+    0.667
+   ],
+   [
+    "article",
+    1,
+    0.333
+   ]
+  ],
+  "response": "Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update. You can find the steps on our support site.",
+  "evidence_refs": [
+   "1768839"
+  ],
+  "verified": true,
+  "coverage": 0.778,
+  "gold_should_escalate": false,
+  "trace_id": "b4b774782d244935a7177e7dee4a7130"
+ },
+ {
+  "gid": "g095",
+  "message": "Thank you!!",
+  "intent": "other",
+  "evidence_level": "INSUFFICIENT",
+  "resolution_confidence": 0.2,
+  "clusters": [],
+  "response": "You're welcome! If anything else comes up, we're here to help.",
+  "evidence_refs": [],
+  "verified": true,
+  "coverage": 1.0,
+  "gold_should_escalate": false,
+  "trace_id": "f226e6c7c7994aefa9a3923ab231dbda"
+ },
+ {
+  "gid": "g100",
+  "message": "Que se passe-t-il avec #Apple music ?? Impossible de se connecter. \u00c9cran blanc.. <url>",
+  "intent": "non_english",
+  "evidence_level": "INSUFFICIENT",
+  "resolution_confidence": 0.2,
+  "clusters": [],
+  "response": "We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact",
+  "evidence_refs": [],
+  "verified": true,
+  "coverage": 1.0,
+  "gold_should_escalate": false,
+  "trace_id": "1006270be26c47bfbd354bc0c325f734"
+ },
+ {
+  "gid": "g140",
+  "message": "tengo el iPhone 7 plus, no me permiten ni descargar el archivo iPSW",
+  "intent": "non_english",
+  "evidence_level": "INSUFFICIENT",
+  "resolution_confidence": 0.0,
+  "clusters": [],
+  "response": "We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact",
+  "evidence_refs": [],
+  "verified": true,
+  "coverage": 1.0,
+  "gold_should_escalate": false,
+  "trace_id": "c40587d8744b442f8fdcd46431a24844"
+ },
+ {
+  "gid": "g150",
+  "message": "Fallas en Mail y Contactos con actualizaci\u00f3n MacOS High Sierra. Mail me borr\u00f3 las \"firmas\" de todas las cuentas. En Contactos mientras doy de alta un nuevo contacto se sale de la pantalla de captura",
+  "intent": "non_english",
+  "evidence_level": "INSUFFICIENT",
+  "resolution_confidence": 0.2,
+  "clusters": [],
+  "response": "We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact",
+  "evidence_refs": [],
+  "verified": true,
+  "coverage": 1.0,
+  "gold_should_escalate": false,
+  "trace_id": "1aaf9e75c9f746e0b3551e41fe4dc31e"
+ },
+ {
+  "gid": "g172",
+  "message": "o seus arrombado, come\u00e7a a fazer cabo e fone decente e que n\u00e3o quebre com tempo de uso E PARA DE S\u00d3 MELHORAR A PORRA DA C\u00c2MERA, SEUS FILHA DA PUTA <url>",
+  "intent": "non_english",
+  "evidence_level": "INSUFFICIENT",
+  "action": "HUMAN_HANDOFF",
+  "reason_code": "none",
+  "draft_rejected": "We offer support via Twitter in English. You can get help in your preferred language here: support.apple.com/contact",
+  "verification_issues": [],
+  "trace_id": "318c87e46cd141bb9df8b1464b824929"
+ }
+]

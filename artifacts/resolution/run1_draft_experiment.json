@@ -1,0 +1,48 @@
+{
+ "n_cases": 13,
+ "levels": {
+  "STRONG": "13"
+ },
+ "A_v1": {
+  "n": 13,
+  "draft_failed": 2,
+  "verifier_block_rate": 0.538,
+  "evidence_support_rate": 0.769,
+  "llm_unsupported_rate": 0.231,
+  "ask_only_rate": 0.077,
+  "actionable_resolution_rate": 0.615,
+  "mentions_top_cluster_action": 0.769,
+  "verified_and_actionable": 0.462,
+  "mean_coverage": 0.518,
+  "retry_rate": 0.0,
+  "blocking_checks": {
+   "llm_support_check": "3",
+   "evidence_refs": "2",
+   "draft_failed": "2"
+  },
+  "latency_ms_p50": 12865,
+  "tokens_out_mean": 880.8,
+  "calls_mean": 1.92
+ },
+ "B_v2": {
+  "n": 13,
+  "draft_failed": 6,
+  "verifier_block_rate": 0.538,
+  "evidence_support_rate": 1.0,
+  "llm_unsupported_rate": 0.0,
+  "ask_only_rate": 0.0,
+  "actionable_resolution_rate": 0.538,
+  "mentions_top_cluster_action": 0.538,
+  "verified_and_actionable": 0.462,
+  "mean_coverage": 0.479,
+  "retry_rate": 0.0,
+  "blocking_checks": {
+   "draft_failed": "6",
+   "no_pii": "1"
+  },
+  "latency_ms_p50": 17403,
+  "tokens_out_mean": 1229.5,
+  "calls_mean": 2.0
+ },
+ "protocol": "DEV holdout cases (seed SEED+7) disjoint from golden; same evidence set for both arms; same verifier (lexical + GLM support check); calls include the verifier"
+}

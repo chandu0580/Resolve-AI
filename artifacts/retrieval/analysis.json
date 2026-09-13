@@ -1,0 +1,172 @@
+{
+  "selected": "hybrid:bge-small+subst",
+  "reference_coverage": {
+    "golden": 197,
+    "substantive_own_reply": 117,
+    "substantive_with_kb_match_at_tau": 46,
+    "substantive_but_unmatchable_in_kb": 71,
+    "dm_or_short_own_reply": 80
+  },
+  "bootstrap_ci_95": {
+    "bm25": null,
+    "dense:minilm": null,
+    "dense:bge-small": null,
+    "hybrid:minilm": null,
+    "hybrid:bge-small": null,
+    "hybrid:minilm+outcome": null,
+    "hybrid:bge-small+outcome": null,
+    "hybrid:bge-small+subst": {
+      "1": [
+        0.152,
+        0.413
+      ],
+      "3": [
+        0.174,
+        0.435
+      ],
+      "5": [
+        0.174,
+        0.457
+      ],
+      "sufficient_rate": [
+        0.081,
+        0.168
+      ],
+      "gate_precision": [
+        0.0,
+        0.0
+      ]
+    },
+    "hybrid:bge-small+outcome+subst": null,
+    "hybrid:minilm+outcome+subst": null
+  },
+  "failure_categories": {
+    "very_short": 10,
+    "lexical_mismatch": 0,
+    "semantic_mismatch": 0,
+    "ambiguous_intent": 9,
+    "multi_intent": 1,
+    "rare_intent": 1,
+    "contradictory_cases": 12,
+    "noisy_language": 9,
+    "customer_specific": 7,
+    "taxonomy_gap": 0,
+    "insufficient_context": 1,
+    "deep_rank_only": 0
+  },
+  "failure_examples": {
+    "very_short": [
+      "g028",
+      "g047",
+      "g061",
+      "g095",
+      "g125",
+      "g156"
+    ],
+    "lexical_mismatch": [],
+    "semantic_mismatch": [],
+    "ambiguous_intent": [
+      "g025",
+      "g058",
+      "g075",
+      "g089",
+      "g119",
+      "g123"
+    ],
+    "multi_intent": [
+      "g089"
+    ],
+    "rare_intent": [
+      "g000"
+    ],
+    "contradictory_cases": [
+      "g000",
+      "g028",
+      "g046",
+      "g059",
+      "g089",
+      "g119"
+    ],
+    "noisy_language": [
+      "g005",
+      "g032",
+      "g058",
+      "g099",
+      "g174",
+      "g187"
+    ],
+    "customer_specific": [
+      "g019",
+      "g028",
+      "g058",
+      "g095",
+      "g132",
+      "g156"
+    ],
+    "taxonomy_gap": [],
+    "insufficient_context": [
+      "g169"
+    ],
+    "deep_rank_only": []
+  },
+  "uncategorised_misses": [
+    "g024"
+  ],
+  "n_misses": 32,
+  "gate": {
+    "reasons": {
+      "weak_similarity": 143,
+      "strong_consistent_evidence": 24,
+      "conflicting_evidence": 17,
+      "insufficient_resolution_evidence": 13
+    },
+    "sufficient_by_intent": {
+      "account_store_repair": {
+        "n": 16,
+        "sufficient": 0.0
+      },
+      "apps_services": {
+        "n": 38,
+        "sufficient": 0.053
+      },
+      "battery_power": {
+        "n": 16,
+        "sufficient": 0.312
+      },
+      "connectivity": {
+        "n": 14,
+        "sufficient": 0.0
+      },
+      "data_loss_sync": {
+        "n": 17,
+        "sufficient": 0.059
+      },
+      "general_complaint": {
+        "n": 14,
+        "sufficient": 0.071
+      },
+      "hardware_damage": {
+        "n": 7,
+        "sufficient": 0.0
+      },
+      "keyboard_text_bug": {
+        "n": 16,
+        "sufficient": 0.625
+      },
+      "non_english": {
+        "n": 13,
+        "sufficient": 0.0
+      },
+      "other": {
+        "n": 20,
+        "sufficient": 0.15
+      },
+      "performance_crash": {
+        "n": 26,
+        "sufficient": 0.077
+      }
+    },
+    "precision_hit@5_given_sufficient": 0.0,
+    "sufficient_without_reference": 17
+  }
+}

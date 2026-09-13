@@ -1,0 +1,572 @@
+{
+ "n": 197,
+ "unnecessary_handoffs": {
+  "total": 75,
+  "by_reason_code": {
+   "insufficient_evidence": 21,
+   "repeat_contact": 12,
+   "hardware": 12,
+   "vague_hostile": 8,
+   "payment_billing": 7,
+   "safety": 5,
+   "private_info": 4,
+   "legal_media": 4,
+   "account_access": 1,
+   "none": 1
+  },
+  "examples": {
+   "insufficient_evidence": [
+    {
+     "gid": "g018",
+     "intent_gold": "apps_services",
+     "risk_flags": [],
+     "evidence_level": "INSUFFICIENT",
+     "message": "Yes, I’ve used this app for two years."
+    },
+    {
+     "gid": "g025",
+     "intent_gold": "other",
+     "risk_flags": [],
+     "evidence_level": "INSUFFICIENT",
+     "message": "Turns out it was one of Synergy 2 beta background service that was crashing and restarting over and over again. Problem fixed :)"
+    },
+    {
+     "gid": "g028",
+     "intent_gold": "other",
+     "risk_flags": [],
+     "evidence_level": "INSUFFICIENT",
+     "message": "When will we get the TV app in the UK?"
+    },
+    {
+     "gid": "g036",
+     "intent_gold": "data_loss_sync",
+     "risk_flags": [],
+     "evidence_level": "INSUFFICIENT",
+     "message": "so they’re pretty much not functional"
+    }
+   ],
+   "repeat_contact": [
+    {
+     "gid": "g004",
+     "intent_gold": "data_loss_sync",
+     "risk_flags": [
+      "repeat_contact"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "I updated my iOS and lost all my pictures from my first two days in Rome. I’m so mad st y’all"
+    },
+    {
+     "gid": "g010",
+     "intent_gold": "connectivity",
+     "risk_flags": [
+      "repeat_contact",
+      "high_frustration"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "It would be cool if would fix their shit so I dont have to restart my computer and router to connect to wifi"
+    },
+    {
+     "gid": "g015",
+     "intent_gold": "apps_services",
+     "risk_flags": [
+      "repeat_contact"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "I have an iPad Mini 4 that has automatic updates turned on but never does them automatically. Tried turning off/on. Thoughts?"
+    },
+    {
+     "gid": "g041",
+     "intent_gold": "performance_crash",
+     "risk_flags": [
+      "high_frustration"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "Okay, that let me update my phone! So we’ll see if it helps with the random shutting off/loading screen."
+    }
+   ],
+   "hardware": [
+    {
+     "gid": "g031",
+     "intent_gold": "battery_power",
+     "risk_flags": [
+      "physical_damage",
+      "high_frustration"
+     ],
+     "evidence_level": "WEAK",
+     "message": "Hi, are you thinking of doing anything to solve the battery problem? Got worse after every update. My iPhone 6 died because of you and I’m v"
+    },
+    {
+     "gid": "g045",
+     "intent_gold": "battery_power",
+     "risk_flags": [
+      "physical_damage",
+      "high_frustration"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "PLEASE let users roll back to IOS10, my 5S battery now goes from 100% to 40% within a few hours (with minimal usage&no background traffic) &"
+    },
+    {
+     "gid": "g055",
+     "intent_gold": "battery_power",
+     "risk_flags": [
+      "physical_damage"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": ". Since iOS 11 I can literally watch my battery percentage drop while looking at the screen. No apps open. No battery problems with iOS 10. "
+    },
+    {
+     "gid": "g070",
+     "intent_gold": "non_english",
+     "risk_flags": [
+      "high_impact",
+      "physical_damage",
+      "repeat_contact",
+      "high_frustration"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "Mn mobiel heeft net letterlijk 13 minuten Apple logo uit grijs scherm gegeven word er langzamerhand een beetje heel erg gek van. Heb de nieu"
+    }
+   ],
+   "vague_hostile": [
+    {
+     "gid": "g021",
+     "intent_gold": "keyboard_text_bug",
+     "risk_flags": [
+      "high_frustration"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "is worth Billions of dollars and can’t fix this it ( I.T ) problem. First it was the I crap bullshit now it’s this I.T come on get it togeth"
+    },
+    {
+     "gid": "g062",
+     "intent_gold": "general_complaint",
+     "risk_flags": [
+      "high_frustration"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "I can’t believe lied to me smh"
+    },
+    {
+     "gid": "g081",
+     "intent_gold": "keyboard_text_bug",
+     "risk_flags": [
+      "high_frustration",
+      "insufficient_context"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "Can fix the mf I️ !"
+    },
+    {
+     "gid": "g082",
+     "intent_gold": "non_english",
+     "risk_flags": [
+      "high_frustration",
+      "insufficient_context"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "امرضتونا بتحديثاتكم لاعاد تحدثون <url>"
+    }
+   ],
+   "payment_billing": [
+    {
+     "gid": "g006",
+     "intent_gold": "apps_services",
+     "risk_flags": [
+      "sensitive_action_required"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "iPhone 7 iOS 11.1.2. Settings trying to change my email signature. Click on it and crash."
+    },
+    {
+     "gid": "g013",
+     "intent_gold": "apps_services",
+     "risk_flags": [
+      "payment_billing_risk"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "I purchased the new Miguel Album It says it’s downloaded to my phone but It will not let me play the album"
+    },
+    {
+     "gid": "g050",
+     "intent_gold": "apps_services",
+     "risk_flags": [
+      "payment_billing_risk"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "Same. Frustrating."
+    },
+    {
+     "gid": "g051",
+     "intent_gold": "battery_power",
+     "risk_flags": [
+      "payment_billing_risk"
+     ],
+     "evidence_level": "WEAK",
+     "message": "<url>"
+    }
+   ],
+   "safety": [
+    {
+     "gid": "g017",
+     "intent_gold": "non_english",
+     "risk_flags": [
+      "security_concern"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "podeis verificar si es un hoax realmente por favor?"
+    },
+    {
+     "gid": "g069",
+     "intent_gold": "connectivity",
+     "risk_flags": [
+      "safety_concern"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "After your emergency patch today I can no longer connect to network shares using my credentials. What broke?"
+    },
+    {
+     "gid": "g117",
+     "intent_gold": "performance_crash",
+     "risk_flags": [
+      "security_concern",
+      "high_impact"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "iphone 6s restarting after every 2 minutes & not asking passcode. Finger print scanner is working after every restart. Isnt this security br"
+    },
+    {
+     "gid": "g145",
+     "intent_gold": "other",
+     "risk_flags": [
+      "security_concern",
+      "insufficient_context"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "is this you? <url>"
+    }
+   ],
+   "private_info": [
+    {
+     "gid": "g033",
+     "intent_gold": "general_complaint",
+     "risk_flags": [
+      "insufficient_context"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "help me fix my mac"
+    },
+    {
+     "gid": "g035",
+     "intent_gold": "account_store_repair",
+     "risk_flags": [
+      "high_impact"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "I don't want to enter credit card details into my daughters new IPhone. It's none of your business, how do I get around it?"
+    },
+    {
+     "gid": "g060",
+     "intent_gold": "other",
+     "risk_flags": [],
+     "evidence_level": "INSUFFICIENT",
+     "message": "bought iPads for the kids for Christmas (6&9). Would like to learn about security/parental controls to put on. Appointment at local Genius B"
+    },
+    {
+     "gid": "g153",
+     "intent_gold": "account_store_repair",
+     "risk_flags": [],
+     "evidence_level": "INSUFFICIENT",
+     "message": "is so annoying to have to wait multiple days to reset a password 🙄🙄🙄"
+    }
+   ],
+   "legal_media": [
+    {
+     "gid": "g040",
+     "intent_gold": "apps_services",
+     "risk_flags": [
+      "legal_or_media_threat"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "There is a glitch in the Mail app in the new #iOS 11.1.2, every time I get an email notification and press either delete or mark as read. It"
+    },
+    {
+     "gid": "g083",
+     "intent_gold": "other",
+     "risk_flags": [
+      "legal_or_media_threat"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "Thank you!"
+    },
+    {
+     "gid": "g086",
+     "intent_gold": "apps_services",
+     "risk_flags": [
+      "legal_or_media_threat",
+      "high_frustration"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "Latest update but, when I open up my music app i can’t press anything and it won’t play anything."
+    },
+    {
+     "gid": "g089",
+     "intent_gold": "performance_crash",
+     "risk_flags": [
+      "legal_or_media_threat",
+      "high_frustration"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "My Face ID is trash it won’t unlock sometimes, it freezes, the sensitivity touch thingy is really hard to press it’s stupid buggy"
+    }
+   ],
+   "account_access": [
+    {
+     "gid": "g007",
+     "intent_gold": "apps_services",
+     "risk_flags": [
+      "account_access_risk",
+      "high_frustration"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "she said she can listen to the songs unless i’m listening to apple music on my phone . we both get a message that says “looks like you’re li"
+    }
+   ],
+   "none": [
+    {
+     "gid": "g172",
+     "intent_gold": "non_english",
+     "risk_flags": [
+      "abusive_threatening",
+      "high_frustration"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "o seus arrombado, começa a fazer cabo e fone decente e que não quebre com tempo de uso E PARA DE SÓ MELHORAR A PORRA DA CÂMERA, SEUS FILHA D"
+    }
+   ]
+  }
+ },
+ "missed_escalations": [
+  {
+   "gid": "g048",
+   "gold_reason": "repeat_contact",
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "risk_flags": [],
+   "message": "hey can you check the dm i sent!"
+  }
+ ],
+ "evidence_levels": {
+  "INSUFFICIENT": 166,
+  "WEAK": 24,
+  "STRONG": 7
+ },
+ "strong_evidence_rows": [
+  {
+   "gid": "g005",
+   "intent_gold": "keyboard_text_bug",
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "message": "fix the fcking I problem I’m tired of seeing question marks on my damn timeline"
+  },
+  {
+   "gid": "g011",
+   "intent_gold": "keyboard_text_bug",
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "message": "Why tf is this glitch still fuckn up? what do I️ need to do. This shit is annoying. 😩"
+  },
+  {
+   "gid": "g032",
+   "intent_gold": "keyboard_text_bug",
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "message": "Why does the iPhone have “I.T” as the autocorrect for “it”??!"
+  },
+  {
+   "gid": "g061",
+   "intent_gold": "keyboard_text_bug",
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "message": "y’all ever gonna fix the i?"
+  },
+  {
+   "gid": "g071",
+   "intent_gold": "keyboard_text_bug",
+   "action": "AUTO_HANDLE",
+   "reason_code": "none",
+   "message": "hey there, what do I️ need to do to fix the question mark in a box and exclamation point that pops up when I️ use the “I"
+  },
+  {
+   "gid": "g144",
+   "intent_gold": "keyboard_text_bug",
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "repeat_contact",
+   "message": "Ok, I’m glad fixed the weird “I” issue but now my phone is changing “it“ to “I.T” 🙄🤬 is anyone else having this issue?!"
+  },
+  {
+   "gid": "g160",
+   "intent_gold": "keyboard_text_bug",
+   "action": "HUMAN_HANDOFF",
+   "reason_code": "repeat_contact",
+   "message": "sooo... I updated my phone for my “i” to turn into an A with a question mark in a box, and my “it” to turn in “ i.t “ li"
+  }
+ ],
+ "autonomous_replies": [
+  {
+   "gid": "g005",
+   "kind": "troubleshoot",
+   "intent_gold": "keyboard_text_bug"
+  },
+  {
+   "gid": "g011",
+   "kind": "troubleshoot",
+   "intent_gold": "keyboard_text_bug"
+  },
+  {
+   "gid": "g032",
+   "kind": "troubleshoot",
+   "intent_gold": "keyboard_text_bug"
+  },
+  {
+   "gid": "g061",
+   "kind": "troubleshoot",
+   "intent_gold": "keyboard_text_bug"
+  },
+  {
+   "gid": "g066",
+   "kind": "canned",
+   "intent_gold": "non_english"
+  },
+  {
+   "gid": "g071",
+   "kind": "troubleshoot",
+   "intent_gold": "keyboard_text_bug"
+  },
+  {
+   "gid": "g091",
+   "kind": "canned",
+   "intent_gold": "non_english"
+  },
+  {
+   "gid": "g095",
+   "kind": "canned",
+   "intent_gold": "other"
+  },
+  {
+   "gid": "g100",
+   "kind": "canned",
+   "intent_gold": "non_english"
+  },
+  {
+   "gid": "g139",
+   "kind": "canned",
+   "intent_gold": "non_english"
+  },
+  {
+   "gid": "g140",
+   "kind": "canned",
+   "intent_gold": "non_english"
+  },
+  {
+   "gid": "g150",
+   "kind": "canned",
+   "intent_gold": "non_english"
+  }
+ ],
+ "intent_errors": 30,
+ "top_intent_confusions": [
+  {
+   "gold": "apps_services",
+   "predicted": "data_loss_sync",
+   "count": 4
+  },
+  {
+   "gold": "apps_services",
+   "predicted": "general_complaint",
+   "count": 2
+  },
+  {
+   "gold": "keyboard_text_bug",
+   "predicted": "general_complaint",
+   "count": 2
+  },
+  {
+   "gold": "hardware_damage",
+   "predicted": "connectivity",
+   "count": 1
+  },
+  {
+   "gold": "account_store_repair",
+   "predicted": "general_complaint",
+   "count": 1
+  },
+  {
+   "gold": "general_complaint",
+   "predicted": "account_store_repair",
+   "count": 1
+  }
+ ],
+ "judge_flagged_templates": [
+  {
+   "text": "We're sorry to hear about the damage. A member of our team will follow up with you directly to look at repair options.",
+   "hallucination_flags": 15
+  },
+  {
+   "text": "Thanks for the steps you've already tried. A member of our team will pick this up with you directly so we can dig deeper.",
+   "hallucination_flags": 9
+  },
+  {
+   "text": "We'd like to look at this with you. Because it involves your account details, a member of our team will follow up with you directly.",
+   "hallucination_flags": 5
+  },
+  {
+   "text": "We'd like to help. Could you tell us which software version is installed (Settings > General > About) and exactly what's happening?",
+   "hallucination_flags": 4
+  },
+  {
+   "text": "We'd like to help with the typing issue. Could you tell us which software version is installed (Settings > General > About) and whether it happens with one word",
+   "hallucination_flags": 4
+  },
+  {
+   "text": "We'd like to help find your content. Could you tell us which device you're using and whether iCloud Backup or iCloud Photos was on before the change?",
+   "hallucination_flags": 4
+  }
+ ],
+ "non_english_rows_handed_off": [
+  {
+   "gid": "g017",
+   "reason_code": "safety",
+   "message": "podeis verificar si es un hoax realmente por favor?"
+  },
+  {
+   "gid": "g070",
+   "reason_code": "hardware",
+   "message": "Mn mobiel heeft net letterlijk 13 minuten Apple logo uit grijs scherm gegeven word er langzamerhand "
+  },
+  {
+   "gid": "g082",
+   "reason_code": "vague_hostile",
+   "message": "امرضتونا بتحديثاتكم لاعاد تحدثون <url>"
+  },
+  {
+   "gid": "g143",
+   "reason_code": "payment_billing",
+   "message": "WTF por qué cojones me acaba de llegar un correo de que se me cobran 10€ para pagar mas espacio de i"
+  },
+  {
+   "gid": "g165",
+   "reason_code": "hardware",
+   "message": "Alguien sabe pxq le pasa esto a mi nuevo iPhone X ese cuadro q?😤 <url>"
+  },
+  {
+   "gid": "g172",
+   "reason_code": "none",
+   "message": "o seus arrombado, começa a fazer cabo e fone decente e que não quebre com tempo de uso E PARA DE SÓ "
+  },
+  {
+   "gid": "g188",
+   "reason_code": "hardware",
+   "message": "Se me cayó mi celular desde el tercer piso del antro y ya no quiere servir la pantalla, súper mala c"
+  }
+ ]
+}

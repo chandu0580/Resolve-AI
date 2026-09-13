@@ -1,0 +1,28 @@
+{
+ "n": 50,
+ "seed": 42,
+ "systems": {
+  "resolveai_full": 25,
+  "B1_simple_ml": 14,
+  "B2_direct_llm": 11
+ },
+ "strata": {
+  "resolveai_handoff": 5,
+  "difficult_rows": 6,
+  "resolveai_auto": 9,
+  "B1_simple_ml_judged_low": 5,
+  "B1_simple_ml_judged_high": 5,
+  "resolveai_clarify": 6,
+  "B2_direct_llm_judged_low": 5,
+  "B2_direct_llm_judged_high": 5,
+  "random_fill": 4
+ },
+ "actions": {
+  "HUMAN_HANDOFF": 12,
+  "AUTO_HANDLE": 30,
+  "CLARIFICATION_REQUIRED": 8
+ },
+ "judge_scores_used_for_stratification": true,
+ "packet_sha256": "1bd5a91d916779b060c413714d12781105a18a9e6cf5c21b69b3a0dd6b45810a",
+ "human_columns_filled_by": "human reviewer (completed 2026-09-13)"
+}

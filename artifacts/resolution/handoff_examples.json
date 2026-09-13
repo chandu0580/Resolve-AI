@@ -1,0 +1,2024 @@
+[
+ {
+  "gid": "g000",
+  "reason": "private_info",
+  "packet": {
+   "summary": "Customer now: my headphone jack on my phone wasn\u2019t working for months and today it started to work but my speaker stopped, anyway to get it off of headphones when nothing is plugged in to it?. Predicted intent connectivity (MEDIUM). Risk flags: needs_private_info, physical_damage. Escalated: Resolving this needs account, order, case or device identifiers that must be shared privately.",
+   "customer_issue": "my headphone jack on my phone wasn\u2019t working for months and today it started to work but my speaker stopped, anyway to get it off of headphones when nothing is plugged in to it?",
+   "intent": "connectivity",
+   "confidence": 0.1966,
+   "confidence_band": "MEDIUM",
+   "alternatives": [
+    "hardware_damage",
+    "account_store_repair"
+   ],
+   "risk": {
+    "safety_concern": false,
+    "security_concern": false,
+    "privacy_concern": false,
+    "account_access_risk": false,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": true,
+    "physical_damage": true,
+    "repeat_contact": false,
+    "sensitive_action_required": false,
+    "high_frustration": false,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "Customer reports phone stuck in headphone mode with speaker not working despite nothing being plugged in.",
+    "source": "llm+rules"
+   },
+   "reason": {
+    "decision": "escalate",
+    "reason_code": "private_info",
+    "reason": "Resolving this needs account, order, case or device identifiers that must be shared privately.",
+    "rule": "private_info",
+    "policy_version": "policy-v3",
+    "clarification_allowed": false
+   },
+   "evidence_summary": "5 similar historical cases retrieved (0 with a substantive reply); top similarity 0.81; gate: INSUFFICIENT (weak_similarity), resolution confidence 0.20, 0 resolution cluster(s)",
+   "historical_examples": [
+    {
+     "evidence_id": "2526339",
+     "thread_id": "2526340",
+     "customer_message": "My airpods were working fine yesterday and then when i went to go listen to music on then today there was no light on the inside of the case and they didn\u2019t connect to my phone I\u2019ve had these for just over 1 month",
+     "brand_reply": "Thanks for reaching out to us for support. We would love to help you. Please DM us so that we can look into this together. <url>",
+     "outcome": "none",
+     "similarity": 0.806,
+     "action_class": "dm_handoff"
+    },
+    {
+     "evidence_id": "1890302",
+     "thread_id": "1890303",
+     "customer_message": "my headphones (lightning connector) have broke! I only got them with my new iPhone7 in June. Do they come with a warranty?",
+     "brand_reply": "Our products come with a one-year limited warranty. What country are you in? Let us know in DM; we\u2019ll get you the best options. <url>",
+     "outcome": "none",
+     "similarity": 0.754,
+     "action_class": "dm_handoff"
+    },
+    {
+     "evidence_id": "1783103",
+     "thread_id": "1783104",
+     "customer_message": "my Bluetooth headphones even my original iPhone headphone stops working properly (sound too low)after updating to IOS 11",
+     "brand_reply": "Thanks for reaching out about your audio. We understand you cannot use any headphones. What about speakerphone? Send us a DM. <url>",
+     "outcome": "none",
+     "similarity": 0.739,
+     "action_class": "dm_handoff"
+    },
+    {
+     "evidence_id": "2533273",
+     "thread_id": "2533274",
+     "customer_message": "I updated to the new IOS and left my bluetooth headphones plugged in; In conclusion i messed the hearing settings up. HEEEEELLLLP",
+     "brand_reply": "We'd like to help. Let's take this to DM and we'll explore ways to provide you assistance. <url>",
+     "outcome": "none",
+     "similarity": 0.752,
+     "action_class": "dm_handoff"
+    },
+    {
+     "evidence_id": "309971",
+     "thread_id": "309972",
+     "customer_message": "\u00a3150 and a 5 week wait for AirPods. Finally arrived and they don\u2019t work properly. Connect but no sound. Help please.",
+     "brand_reply": "Hi. We're here for you. DM us and we can take a closer look there. <url>",
+     "outcome": "none",
+     "similarity": 0.713,
+     "action_class": "dm_handoff"
+    }
+   ],
+   "evidence_sufficient": false,
+   "evidence_reason": "weak_similarity",
+   "evidence_level": "INSUFFICIENT",
+   "resolution_confidence": 0.2,
+   "resolution_candidates": [],
+   "recommended_next_action": "Move to DM and collect the identifiers listed under unresolved questions.",
+   "unresolved_questions": [
+    "Which device model?",
+    "Which software version?",
+    "When did it start (before/after an update)?"
+   ],
+   "suggested_opening": "We'd like to look into this with you. Because we'll need some details about your device or account, a member of our team will follow up with you directly.",
+   "draft_if_any": null,
+   "trace_id": "c79efb1402494b68bc8ad2ee99319ded",
+   "policy_version": "policy-v3",
+   "evidence": [
+    {
+     "evidence_id": "2526339",
+     "thread_id": "2526340",
+     "source_row_id": "2526340",
+     "customer_message": "My airpods were working fine yesterday and then when i went to go listen to music on then today there was no light on the inside of the case and they didn\u2019t connect to my phone I\u2019ve had these for just over 1 month",
+     "brand_reply": "Thanks for reaching out to us for support. We would love to help you. Please DM us so that we can look into this together. <url>",
+     "created_at": "2017-11-16 02:59:25+00:00",
+     "outcome": "none",
+     "dm_handoff": true,
+     "substantive": false,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 1,
+     "ranks": {
+      "pair": 2,
+      "boost_plain": 19,
+      "boost_intent": 1
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8058636784553528,
+      "cos_reply": 0.0,
+      "cos_pair": 0.7815330624580383,
+      "rrf": 0.045454545454545456,
+      "outcome_bonus": 0.0,
+      "rerank": 0.390785553073883,
+      "final": 0.029051670471052088
+     },
+     "quality": {
+      "semantic_relevance": 0.8058636784553528,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "connectivity",
+      "resolution_relevance": false,
+      "action_class": "dm_handoff",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1890302",
+     "thread_id": "1890303",
+     "source_row_id": "1890303",
+     "customer_message": "my headphones (lightning connector) have broke! I only got them with my new iPhone7 in June. Do they come with a warranty?",
+     "brand_reply": "Our products come with a one-year limited warranty. What country are you in? Let us know in DM; we\u2019ll get you the best options. <url>",
+     "created_at": "2017-10-22 16:54:40+00:00",
+     "outcome": "none",
+     "dm_handoff": true,
+     "substantive": false,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 2,
+     "ranks": {
+      "pair": 30,
+      "boost_plain": 20,
+      "boost_intent": 2
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7544633150100708,
+      "cos_reply": 0.0,
+      "cos_pair": 0.7515542507171631,
+      "rrf": 0.02,
+      "outcome_bonus": 0.0,
+      "rerank": 0.36580072293281557,
+      "final": 0.028629032258064516
+     },
+     "quality": {
+      "semantic_relevance": 0.7544633150100708,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "connectivity",
+      "resolution_relevance": false,
+      "action_class": "dm_handoff",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1783103",
+     "thread_id": "1783104",
+     "source_row_id": "1783104",
+     "customer_message": "my Bluetooth headphones even my original iPhone headphone stops working properly (sound too low)after updating to IOS 11",
+     "brand_reply": "Thanks for reaching out about your audio. We understand you cannot use any headphones. What about speakerphone? Send us a DM. <url>",
+     "created_at": "2017-10-11 01:55:10+00:00",
+     "outcome": "none",
+     "dm_handoff": true,
+     "substantive": false,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 3,
+     "ranks": {
+      "pair": 7,
+      "boost_plain": 21,
+      "boost_intent": 3
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7386484146118164,
+      "cos_reply": 0.0,
+      "cos_pair": 0.7732009887695312,
+      "rrf": 0.037037037037037035,
+      "outcome_bonus": 0.0,
+      "rerank": 0.3654771923065186,
+      "final": 0.02821869488536155
+     },
+     "quality": {
+      "semantic_relevance": 0.7386484146118164,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "connectivity",
+      "resolution_relevance": false,
+      "action_class": "dm_handoff",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2533273",
+     "thread_id": "2533274",
+     "source_row_id": "2533274",
+     "customer_message": "I updated to the new IOS and left my bluetooth headphones plugged in; In conclusion i messed the hearing settings up. HEEEEELLLLP",
+     "brand_reply": "We'd like to help. Let's take this to DM and we'll explore ways to provide you assistance. <url>",
+     "created_at": "2017-10-30 05:10:40+00:00",
+     "outcome": "none",
+     "dm_handoff": true,
+     "substantive": false,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 4,
+     "ranks": {
+      "pair": 28,
+      "boost_plain": 22,
+      "boost_intent": 4
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7519174814224243,
+      "cos_reply": 0.0,
+      "cos_pair": 0.7537845373153687,
+      "rrf": 0.020833333333333332,
+      "outcome_bonus": 0.0,
+      "rerank": 0.3616172528266906,
+      "final": 0.027820121951219513
+     },
+     "quality": {
+      "semantic_relevance": 0.7519174814224243,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "connectivity",
+      "resolution_relevance": false,
+      "action_class": "dm_handoff",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "309971",
+     "thread_id": "309972",
+     "source_row_id": "309972",
+     "customer_message": "\u00a3150 and a 5 week wait for AirPods. Finally arrived and they don\u2019t work properly. Connect but no sound. Help please.",
+     "brand_reply": "Hi. We're here for you. DM us and we can take a closer look there. <url>",
+     "created_at": "2017-10-06 22:59:21+00:00",
+     "outcome": "none",
+     "dm_handoff": true,
+     "substantive": false,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 5,
+     "ranks": {
+      "pair": 50,
+      "boost_plain": 23,
+      "boost_intent": 5
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.712643027305603,
+      "cos_reply": 0.0,
+      "cos_pair": 0.7383372783660889,
+      "rrf": 0.014285714285714285,
+      "outcome_bonus": 0.0,
+      "rerank": 0.34150937914848317,
+      "final": 0.027432808155699723
+     },
+     "quality": {
+      "semantic_relevance": 0.712643027305603,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "connectivity",
+      "resolution_relevance": false,
+      "action_class": "dm_handoff",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "gid": "g002",
+  "reason": "repeat_contact",
+  "packet": {
+   "summary": "Customer now: all most 22 days has passed & no outcome in my case (<PHONE>).. Predicted intent general_complaint (MEDIUM). Risk flags: repeat_contact, high_frustration. Escalated: Customer has already tried the standard steps or the thread is deep without progress; public troubleshooting is unlikely to help.",
+   "customer_issue": "all most 22 days has passed & no outcome in my case (<PHONE>).",
+   "intent": "general_complaint",
+   "confidence": 0.2601,
+   "confidence_band": "MEDIUM",
+   "alternatives": [
+    "battery_power",
+    "account_store_repair"
+   ],
+   "risk": {
+    "safety_concern": false,
+    "security_concern": false,
+    "privacy_concern": false,
+    "account_access_risk": false,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": false,
+    "repeat_contact": true,
+    "sensitive_action_required": false,
+    "high_frustration": true,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "Customer reports waiting nearly 22 days with no resolution on an existing support case.",
+    "source": "llm+rules"
+   },
+   "reason": {
+    "decision": "escalate",
+    "reason_code": "repeat_contact",
+    "reason": "Customer has already tried the standard steps or the thread is deep without progress; public troubleshooting is unlikely to help.",
+    "rule": "repeat_contact",
+    "policy_version": "policy-v3",
+    "clarification_allowed": false
+   },
+   "evidence_summary": "5 similar historical cases retrieved (4 with a substantive reply); top similarity 0.73; gate: INSUFFICIENT (insufficient_query), resolution confidence 0.00, 0 resolution cluster(s)",
+   "historical_examples": [
+    {
+     "evidence_id": "2141589",
+     "thread_id": "2141587",
+     "customer_message": "I have done everything and it\u2019s not working still",
+     "brand_reply": "We always want to make sure you get a great experience from us. Please contact our billing support: <url>",
+     "outcome": "none",
+     "similarity": 0.732,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "2113917",
+     "thread_id": "2113920",
+     "customer_message": "30 mins on phone. no joy",
+     "brand_reply": "We can assist here as well. What can we help with?",
+     "outcome": "positive",
+     "similarity": 0.724,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "1187752",
+     "thread_id": "1187753",
+     "customer_message": "I\u2019ve had no service for a week straight and I\u2019ve only had this phone for a year and two months.",
+     "brand_reply": "That's not what we like to here. Let's partner together to resolve this. Look here: <url>",
+     "outcome": "none",
+     "similarity": 0.714,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "1106625",
+     "thread_id": "1106626",
+     "customer_message": "but that text/call never comes. The link to check the status just sends me back to request a reset again from scratch.",
+     "brand_reply": "Thanks for reaching out. Take a look at this helpful article here: <url>",
+     "outcome": "none",
+     "similarity": 0.706,
+     "action_class": "article"
+    },
+    {
+     "evidence_id": "2523451",
+     "thread_id": "2519374",
+     "customer_message": "My phone doesn't even ring anymore. It just pops up that I've missed a call",
+     "brand_reply": "Hello! Have you checked the side of the phone to ensure the mute button isn't set?",
+     "outcome": "none",
+     "similarity": 0.706,
+     "action_class": "other"
+    }
+   ],
+   "evidence_sufficient": false,
+   "evidence_reason": "insufficient_query",
+   "evidence_level": "INSUFFICIENT",
+   "resolution_confidence": 0.0,
+   "resolution_candidates": [],
+   "recommended_next_action": "Read the thread first; do not repeat the steps already tried; consider a case or callback.",
+   "unresolved_questions": [
+    "Which device model?",
+    "Which software version?"
+   ],
+   "suggested_opening": "Thanks for the steps you've already tried. A member of our team will pick this up with you directly so we can dig deeper.",
+   "draft_if_any": null,
+   "trace_id": "f9a9e4b41638438f80dab75b59732cd6",
+   "policy_version": "policy-v3",
+   "evidence": [
+    {
+     "evidence_id": "2141589",
+     "thread_id": "2141587",
+     "source_row_id": "2141587",
+     "customer_message": "I have done everything and it\u2019s not working still",
+     "brand_reply": "We always want to make sure you get a great experience from us. Please contact our billing support: <url>",
+     "created_at": "2017-11-08 23:40:52+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 1,
+     "ranks": {
+      "pair": 24,
+      "boost_plain": 2,
+      "boost_intent": 1
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7322118282318115,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6793658137321472,
+      "rrf": 0.022727272727272728,
+      "outcome_bonus": 0.0,
+      "rerank": 0.5370655933141708,
+      "final": 0.03252247488101534
+     },
+     "quality": {
+      "semantic_relevance": 0.7322118282318115,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "general_complaint",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2113917",
+     "thread_id": "2113920",
+     "source_row_id": "2113920",
+     "customer_message": "30 mins on phone. no joy",
+     "brand_reply": "We can assist here as well. What can we help with?",
+     "created_at": "2017-11-08 14:48:21+00:00",
+     "outcome": "positive",
+     "dm_handoff": false,
+     "substantive": false,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 2,
+     "ranks": {
+      "pair": 23,
+      "boost_plain": 3,
+      "boost_intent": 2
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7238922119140625,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6799431443214417,
+      "rrf": 0.023255813953488372,
+      "outcome_bonus": 0.0,
+      "rerank": 0.5285480602502822,
+      "final": 0.03200204813108039
+     },
+     "quality": {
+      "semantic_relevance": 0.7238922119140625,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "general_complaint",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1187752",
+     "thread_id": "1187753",
+     "source_row_id": "1187753",
+     "customer_message": "I\u2019ve had no service for a week straight and I\u2019ve only had this phone for a year and two months.",
+     "brand_reply": "That's not what we like to here. Let's partner together to resolve this. Look here: <url>",
+     "created_at": "2017-10-24 23:57:22+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 3,
+     "ranks": {
+      "pair": 32,
+      "boost_plain": 4,
+      "boost_intent": 3
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7140750885009766,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6765766143798828,
+      "rrf": 0.019230769230769232,
+      "outcome_bonus": 0.0,
+      "rerank": 0.5283204345703124,
+      "final": 0.03149801587301587
+     },
+     "quality": {
+      "semantic_relevance": 0.7140750885009766,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "general_complaint",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1106625",
+     "thread_id": "1106626",
+     "source_row_id": "1106626",
+     "customer_message": "but that text/call never comes. The link to check the status just sends me back to request a reset again from scratch.",
+     "brand_reply": "Thanks for reaching out. Take a look at this helpful article here: <url>",
+     "created_at": "2017-10-24 00:37:05+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 4,
+     "ranks": {
+      "pair": 17,
+      "boost_plain": 5,
+      "boost_intent": 4
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7062897086143494,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6829651594161987,
+      "rrf": 0.02702702702702703,
+      "outcome_bonus": 0.0,
+      "rerank": 0.5254426878690719,
+      "final": 0.031009615384615385
+     },
+     "quality": {
+      "semantic_relevance": 0.7062897086143494,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "general_complaint",
+      "resolution_relevance": false,
+      "action_class": "article",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2523451",
+     "thread_id": "2519374",
+     "source_row_id": "2519374",
+     "customer_message": "My phone doesn't even ring anymore. It just pops up that I've missed a call",
+     "brand_reply": "Hello! Have you checked the side of the phone to ensure the mute button isn't set?",
+     "created_at": "2017-11-16 01:35:16+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 5,
+     "ranks": {
+      "pair": 49,
+      "boost_plain": 6,
+      "boost_intent": 5
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7058067321777344,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6706428527832031,
+      "rrf": 0.014492753623188406,
+      "outcome_bonus": 0.0,
+      "rerank": 0.5232430694580077,
+      "final": 0.030536130536130537
+     },
+     "quality": {
+      "semantic_relevance": 0.7058067321777344,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "general_complaint",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "gid": "g006",
+  "reason": "payment_billing",
+  "packet": {
+   "summary": "Customer earlier: found a bug <url>; Brand earlier: It looks like your video hasn't come through on our end, but we'd like to help regardless. What's happening exactly in your device and which model do you have? Also, which exact iOS version is install\u2026; Customer now: iPhone 7 iOS 11.1.2. Settings trying to change my email signature. Click on it and crash.. Predicted intent apps_services (MEDIUM). Risk flags: sensitive_action_required. Escalated: Billing, refund, order or account changes need a human with account access.",
+   "customer_issue": "iPhone 7 iOS 11.1.2. Settings trying to change my email signature. Click on it and crash.",
+   "intent": "apps_services",
+   "confidence": 0.6109,
+   "confidence_band": "MEDIUM",
+   "alternatives": [
+    "keyboard_text_bug",
+    "account_store_repair"
+   ],
+   "risk": {
+    "safety_concern": false,
+    "security_concern": false,
+    "privacy_concern": false,
+    "account_access_risk": false,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": false,
+    "repeat_contact": false,
+    "sensitive_action_required": true,
+    "high_frustration": false,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "",
+    "source": "rules"
+   },
+   "reason": {
+    "decision": "escalate",
+    "reason_code": "payment_billing",
+    "reason": "Billing, refund, order or account changes need a human with account access.",
+    "rule": "payment_billing",
+    "policy_version": "policy-v3",
+    "clarification_allowed": false
+   },
+   "evidence_summary": "5 similar historical cases retrieved (5 with a substantive reply); top similarity 0.72; gate: INSUFFICIENT (weak_similarity), resolution confidence 0.20, 0 resolution cluster(s)",
+   "historical_examples": [
+    {
+     "evidence_id": "2205943",
+     "thread_id": "2205944",
+     "customer_message": "Dear , can you please fix this bug because my I\u2019s are still acting up. I\u2019m a college student trying to secure a job, and my emails look like clip art rather than paragraphs.",
+     "brand_reply": "An update has been released to assist with this issue. If you haven\u2019t yet, please back up your device and update it to the latest version iOS 11.1.1. For more info, check out: <url>",
+     "outcome": "none",
+     "similarity": 0.719,
+     "action_class": "update"
+    },
+    {
+     "evidence_id": "2207510",
+     "thread_id": "2207511",
+     "customer_message": "get the fucking \u201cI\ufe0f\u201d issue fixed. I\u2019m over writing professional emails that make me look like an idiot because of you.",
+     "brand_reply": "iOS 11.1.1 was recently released and it includes a fix for autocorrect issues. Be sure to back up your device prior to updating, and let us know if the issue persists afterwards. How to back up: <url>",
+     "outcome": "none",
+     "similarity": 0.706,
+     "action_class": "update"
+    },
+    {
+     "evidence_id": "2622767",
+     "thread_id": "2622768",
+     "customer_message": "Trying to write a professional email is impossible when my I\u2019s come out all stupid, wtf!!!",
+     "brand_reply": "iOS 11.1.2 was recently released and it includes a fix for autocorrect issues. Be sure to back up your device prior to updating, and let us know if the issue persists afterwards. How to back up: <url>",
+     "outcome": "none",
+     "similarity": 0.683,
+     "action_class": "update"
+    },
+    {
+     "evidence_id": "1007775",
+     "thread_id": "1007777",
+     "customer_message": "My email no longer works (amongst other things) on my iPhone since I updated to IOS 11.0.3 \ud83d\ude10 is there a patch ? #ios11",
+     "brand_reply": "Let\u2019s team up on this situation with your email. What email provider do you use? Are you unable to both send and receive email?",
+     "outcome": "positive",
+     "similarity": 0.802,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "1420125",
+     "thread_id": "1420123",
+     "customer_message": "I managed to re-add but the issue persists. It does not show any email. I'm on iPhone 6 iOS 11.1",
+     "brand_reply": "You mentioned that this issue had been going on for a while; do you recall when it initially began? Did it happen before iOS 11?",
+     "outcome": "positive",
+     "similarity": 0.77,
+     "action_class": "update"
+    }
+   ],
+   "evidence_sufficient": false,
+   "evidence_reason": "weak_similarity",
+   "evidence_level": "INSUFFICIENT",
+   "resolution_confidence": 0.2,
+   "resolution_candidates": [],
+   "recommended_next_action": "Move to DM, confirm order/subscription details in the billing system, then resolve.",
+   "unresolved_questions": [
+    "Which device model?",
+    "Which software version?",
+    "Which app or service exactly?"
+   ],
+   "suggested_opening": "We'd like to look at this with you. Because it involves your account details, a member of our team will follow up with you directly.",
+   "draft_if_any": null,
+   "trace_id": "fbf751a1e4a6439e95380f1a97994c8e",
+   "policy_version": "policy-v3",
+   "evidence": [
+    {
+     "evidence_id": "2205943",
+     "thread_id": "2205944",
+     "source_row_id": "2205944",
+     "customer_message": "Dear , can you please fix this bug because my I\u2019s are still acting up. I\u2019m a college student trying to secure a job, and my emails look like clip art rather than paragraphs.",
+     "brand_reply": "An update has been released to assist with this issue. If you haven\u2019t yet, please back up your device and update it to the latest version iOS 11.1.1. For more info, check out: <url>",
+     "created_at": "2017-11-09 17:37:44+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 1,
+     "ranks": {
+      "pair": 44,
+      "boost_plain": 1,
+      "boost_intent": 1
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7187968492507935,
+      "cos_reply": 0.0,
+      "cos_pair": 0.7666016817092896,
+      "rrf": 0.015625,
+      "outcome_bonus": 0.0,
+      "rerank": 0.7870793176651001,
+      "final": 0.03278688524590164
+     },
+     "quality": {
+      "semantic_relevance": 0.7187968492507935,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": true,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2207510",
+     "thread_id": "2207511",
+     "source_row_id": "2207511",
+     "customer_message": "get the fucking \u201cI\ufe0f\u201d issue fixed. I\u2019m over writing professional emails that make me look like an idiot because of you.",
+     "brand_reply": "iOS 11.1.1 was recently released and it includes a fix for autocorrect issues. Be sure to back up your device prior to updating, and let us know if the issue persists afterwards. How to back up: <url>",
+     "created_at": "2017-11-10 01:31:49+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 2,
+     "ranks": {
+      "pair": 45,
+      "boost_plain": 2,
+      "boost_intent": 2
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7057464122772217,
+      "cos_reply": 0.0,
+      "cos_pair": 0.7662880420684814,
+      "rrf": 0.015384615384615385,
+      "outcome_bonus": 0.0,
+      "rerank": 0.7844332548141479,
+      "final": 0.03225806451612903
+     },
+     "quality": {
+      "semantic_relevance": 0.7057464122772217,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": true,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2622767",
+     "thread_id": "2622768",
+     "source_row_id": "2622768",
+     "customer_message": "Trying to write a professional email is impossible when my I\u2019s come out all stupid, wtf!!!",
+     "brand_reply": "iOS 11.1.2 was recently released and it includes a fix for autocorrect issues. Be sure to back up your device prior to updating, and let us know if the issue persists afterwards. How to back up: <url>",
+     "created_at": "2017-11-17 13:43:53+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 3,
+     "ranks": {
+      "pair": 7,
+      "boost_plain": 3,
+      "boost_intent": 3
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.6826934814453125,
+      "cos_reply": 0.0,
+      "cos_pair": 0.7909221649169922,
+      "rrf": 0.037037037037037035,
+      "outcome_bonus": 0.0,
+      "rerank": 0.7825232597351073,
+      "final": 0.031746031746031744
+     },
+     "quality": {
+      "semantic_relevance": 0.6826934814453125,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": true,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1007775",
+     "thread_id": "1007777",
+     "source_row_id": "1007777",
+     "customer_message": "My email no longer works (amongst other things) on my iPhone since I updated to IOS 11.0.3 \ud83d\ude10 is there a patch ? #ios11",
+     "brand_reply": "Let\u2019s team up on this situation with your email. What email provider do you use? Are you unable to both send and receive email?",
+     "created_at": "2017-10-22 19:33:14+00:00",
+     "outcome": "positive",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 4,
+     "ranks": {
+      "pair": 21,
+      "boost_plain": 10,
+      "boost_intent": 4
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8022438287734985,
+      "cos_reply": 0.0,
+      "cos_pair": 0.7751142978668213,
+      "rrf": 0.024390243902439025,
+      "outcome_bonus": 0.0,
+      "rerank": 0.5978139145374298,
+      "final": 0.029910714285714284
+     },
+     "quality": {
+      "semantic_relevance": 0.8022438287734985,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1420125",
+     "thread_id": "1420123",
+     "source_row_id": "1420123",
+     "customer_message": "I managed to re-add but the issue persists. It does not show any email. I'm on iPhone 6 iOS 11.1",
+     "brand_reply": "You mentioned that this issue had been going on for a while; do you recall when it initially began? Did it happen before iOS 11?",
+     "created_at": "2017-11-02 08:44:17+00:00",
+     "outcome": "positive",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 5,
+     "ranks": {
+      "pair": 14,
+      "boost_plain": 11,
+      "boost_intent": 5
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7700974345207214,
+      "cos_reply": 0.0,
+      "cos_pair": 0.7807976007461548,
+      "rrf": 0.029411764705882353,
+      "outcome_bonus": 0.0,
+      "rerank": 0.5880835022687911,
+      "final": 0.02946912242686891
+     },
+     "quality": {
+      "semantic_relevance": 0.7700974345207214,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": false,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "gid": "g007",
+  "reason": "account_access",
+  "packet": {
+   "summary": "Customer earlier: why can\u2019t my sister listen to music she bought on itunes when i have individual apple music ? / we\u2019re both using the same apple id. she doesn\u2019t have an apple music so she\u2019s just listening to a song she BOUGHT on itunes yesterday . i pay for individual apple music monthly . w; Brand earlier: Thanks. Does she get an error message when she tries to play the song?; Customer now: she said she can listen to the songs unless i\u2019m listening to apple music on my phone . we both get a message that says \u201clooks like you\u2019re listening on another device\u201d. Predicted intent apps_services (HIGH). Risk flags: account_access_risk, high_frustration. Escalated: Account access or identity verification is involved; must move to a private, verified channel.",
+   "customer_issue": "she said she can listen to the songs unless i\u2019m listening to apple music on my phone . we both get a message that says \u201clooks like you\u2019re listening on another device\u201d",
+   "intent": "apps_services",
+   "confidence": 0.7796,
+   "confidence_band": "HIGH",
+   "alternatives": [
+    "connectivity",
+    "hardware_damage"
+   ],
+   "risk": {
+    "safety_concern": false,
+    "security_concern": false,
+    "privacy_concern": false,
+    "account_access_risk": true,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": false,
+    "repeat_contact": false,
+    "sensitive_action_required": false,
+    "high_frustration": true,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "",
+    "source": "rules"
+   },
+   "reason": {
+    "decision": "escalate",
+    "reason_code": "account_access",
+    "reason": "Account access or identity verification is involved; must move to a private, verified channel.",
+    "rule": "account_access",
+    "policy_version": "policy-v3",
+    "clarification_allowed": false
+   },
+   "evidence_summary": "5 similar historical cases retrieved (5 with a substantive reply); top similarity 0.83; gate: INSUFFICIENT (weak_similarity), resolution confidence 0.20, 0 resolution cluster(s)",
+   "historical_examples": [
+    {
+     "evidence_id": "1520465",
+     "thread_id": "1520467",
+     "customer_message": "why is Apple Music saying I\u2019m listening on more than 1 device when I\u2019m not!",
+     "brand_reply": "We'd like to help. What device are you using Apple Music with?",
+     "outcome": "none",
+     "similarity": 0.827,
+     "action_class": "ask_info"
+    },
+    {
+     "evidence_id": "1295128",
+     "thread_id": "1295129",
+     "customer_message": "I am also having issues with Apple Music. My family can\u2019t access our family share #applemusic",
+     "brand_reply": "We\u2019re investigating and will update our System Status page as more info becomes available: <url>",
+     "outcome": "none",
+     "similarity": 0.791,
+     "action_class": "update"
+    },
+    {
+     "evidence_id": "1266514",
+     "thread_id": "1266515",
+     "customer_message": "Bruh wtf is wrong with my Apple Music wont add new music. if yalls don\u2019t fix I\u2019m switching back to",
+     "brand_reply": "We want to get your Apple Music working again. To start, can you tell us which iPhone and iOS version you're using?",
+     "outcome": "none",
+     "similarity": 0.781,
+     "action_class": "ask_info"
+    },
+    {
+     "evidence_id": "935940",
+     "thread_id": "935942",
+     "customer_message": "got the new ios, now I can\u2019t use apple music..what the fuck I dont pay you fuckers for this type of inconvenience",
+     "brand_reply": "Let's look into this together. Can you tell us what happens when you try using the music app?",
+     "outcome": "none",
+     "similarity": 0.776,
+     "action_class": "ask_info"
+    },
+    {
+     "evidence_id": "671336",
+     "thread_id": "671337",
+     "customer_message": "my apple music isn\u2019t playing songs I\u2019ve previously downloaded to my phone. They will stream but I can\u2019t download.",
+     "brand_reply": "Thanks for reaching out, we're here to help. What happens when you try to play songs that you've previously downloaded? Did you get an error message? If so, what was the message?",
+     "outcome": "none",
+     "similarity": 0.761,
+     "action_class": "ask_info"
+    }
+   ],
+   "evidence_sufficient": false,
+   "evidence_reason": "weak_similarity",
+   "evidence_level": "INSUFFICIENT",
+   "resolution_confidence": 0.2,
+   "resolution_candidates": [],
+   "recommended_next_action": "Move to DM, verify identity per the account-recovery procedure, then act.",
+   "unresolved_questions": [
+    "Which device model?",
+    "Which software version?",
+    "Which app or service exactly?"
+   ],
+   "suggested_opening": "To keep your account safe we need to help with this privately. A member of our team will follow up with you directly.",
+   "draft_if_any": null,
+   "trace_id": "52837592d8f447b6a6edd402eb920995",
+   "policy_version": "policy-v3",
+   "evidence": [
+    {
+     "evidence_id": "1520465",
+     "thread_id": "1520467",
+     "source_row_id": "1520467",
+     "customer_message": "why is Apple Music saying I\u2019m listening on more than 1 device when I\u2019m not!",
+     "brand_reply": "We'd like to help. What device are you using Apple Music with?",
+     "created_at": "2017-11-03 11:18:17+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 1,
+     "ranks": {
+      "pair": 1,
+      "boost_plain": 1,
+      "boost_intent": 1
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.8274616599082947,
+      "cos_reply": 0.0,
+      "cos_pair": 0.8011486530303955,
+      "rrf": 0.047619047619047616,
+      "outcome_bonus": 0.0,
+      "rerank": 0.596348744225502,
+      "final": 0.09523809523809523
+     },
+     "quality": {
+      "semantic_relevance": 0.8274616599082947,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": false,
+      "action_class": "ask_info",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1295128",
+     "thread_id": "1295129",
+     "source_row_id": "1295129",
+     "customer_message": "I am also having issues with Apple Music. My family can\u2019t access our family share #applemusic",
+     "brand_reply": "We\u2019re investigating and will update our System Status page as more info becomes available: <url>",
+     "created_at": "2017-10-26 20:23:37+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 2,
+     "ranks": {
+      "pair": 4,
+      "boost_plain": 2,
+      "boost_intent": 2
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7913931608200073,
+      "cos_reply": 0.0,
+      "cos_pair": 0.785824716091156,
+      "rrf": 0.041666666666666664,
+      "outcome_bonus": 0.0,
+      "rerank": 0.5959437853097915,
+      "final": 0.09090909090909091
+     },
+     "quality": {
+      "semantic_relevance": 0.7913931608200073,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": false,
+      "action_class": "update",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1266514",
+     "thread_id": "1266515",
+     "source_row_id": "1266515",
+     "customer_message": "Bruh wtf is wrong with my Apple Music wont add new music. if yalls don\u2019t fix I\u2019m switching back to",
+     "brand_reply": "We want to get your Apple Music working again. To start, can you tell us which iPhone and iOS version you're using?",
+     "created_at": "2017-10-26 05:19:45+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 3,
+     "ranks": {
+      "pair": 30,
+      "boost_plain": 3,
+      "boost_intent": 3
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7811273336410522,
+      "cos_reply": 0.0,
+      "cos_pair": 0.7709836959838867,
+      "rrf": 0.02,
+      "outcome_bonus": 0.0,
+      "rerank": 0.5781404907703399,
+      "final": 0.08695652173913043
+     },
+     "quality": {
+      "semantic_relevance": 0.7811273336410522,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": false,
+      "action_class": "ask_info",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "935940",
+     "thread_id": "935942",
+     "source_row_id": "935942",
+     "customer_message": "got the new ios, now I can\u2019t use apple music..what the fuck I dont pay you fuckers for this type of inconvenience",
+     "brand_reply": "Let's look into this together. Can you tell us what happens when you try using the music app?",
+     "created_at": "2017-10-21 11:32:45+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 4,
+     "ranks": {
+      "pair": 7,
+      "boost_plain": 4,
+      "boost_intent": 4
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.7758354544639587,
+      "cos_reply": 0.0,
+      "cos_pair": 0.781451940536499,
+      "rrf": 0.037037037037037035,
+      "outcome_bonus": 0.0,
+      "rerank": 0.5766053941965104,
+      "final": 0.08333333333333333
+     },
+     "quality": {
+      "semantic_relevance": 0.7758354544639587,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": false,
+      "action_class": "ask_info",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "671336",
+     "thread_id": "671337",
+     "source_row_id": "671337",
+     "customer_message": "my apple music isn\u2019t playing songs I\u2019ve previously downloaded to my phone. They will stream but I can\u2019t download.",
+     "brand_reply": "Thanks for reaching out, we're here to help. What happens when you try to play songs that you've previously downloaded? Did you get an error message? If so, what was the message?",
+     "created_at": "2017-11-23 00:33:07+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 5,
+     "ranks": {
+      "pair": 44,
+      "boost_plain": 5,
+      "boost_intent": 5
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.761232316493988,
+      "cos_reply": 0.0,
+      "cos_pair": 0.7660908699035645,
+      "rrf": 0.015625,
+      "outcome_bonus": 0.0,
+      "rerank": 0.5765040282487869,
+      "final": 0.08
+     },
+     "quality": {
+      "semantic_relevance": 0.761232316493988,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": false,
+      "action_class": "ask_info",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "strong"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "gid": "g017",
+  "reason": "safety",
+  "packet": {
+   "summary": "Customer earlier: Acabo de recibir un Email \u201caparentemente\u201d legitimo pero que me huele a hoax #applephishing #apple <url>; Customer now: podeis verificar si es un hoax realmente por favor?. Predicted intent non_english (HIGH). Risk flags: security_concern. Escalated: Possible account security or device compromise; a human must verify before any advice is given.",
+   "customer_issue": "podeis verificar si es un hoax realmente por favor?",
+   "intent": "non_english",
+   "confidence": 0.919,
+   "confidence_band": "HIGH",
+   "alternatives": [
+    "other",
+    "account_store_repair"
+   ],
+   "risk": {
+    "safety_concern": false,
+    "security_concern": true,
+    "privacy_concern": false,
+    "account_access_risk": false,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": false,
+    "repeat_contact": false,
+    "sensitive_action_required": false,
+    "high_frustration": false,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "Customer received a suspicious email that may be an Apple phishing attempt and asks support to verify its legitimacy.",
+    "source": "llm+rules"
+   },
+   "reason": {
+    "decision": "escalate",
+    "reason_code": "safety",
+    "reason": "Possible account security or device compromise; a human must verify before any advice is given.",
+    "rule": "security",
+    "policy_version": "policy-v3",
+    "clarification_allowed": false
+   },
+   "evidence_summary": "5 similar historical cases retrieved (5 with a substantive reply); top similarity 0.69; gate: INSUFFICIENT (insufficient_query), resolution confidence 0.00, 0 resolution cluster(s)",
+   "historical_examples": [
+    {
+     "evidence_id": "1078257",
+     "thread_id": "1078259",
+     "customer_message": "Me pod\u00e9is ayudar con este error?? Me sigue ocurriendo a pesar de haber reiniciado el m\u00f3vil",
+     "brand_reply": "We offer support via Twitter in English. Get help in Spanish here: <url> or join <url>",
+     "outcome": "none",
+     "similarity": 0.692,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "1552536",
+     "thread_id": "1552537",
+     "customer_message": "Hola ! Me lleg\u00f3 un mail con esta compra que NO realic\u00e9. \ud83d\ude15 Necesito el IP desde donde se origin\u00f3 la misma. <url>",
+     "brand_reply": "Hey there! Questions about purchases should be directed towards our iTunes Support team: <url>",
+     "outcome": "none",
+     "similarity": 0.695,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "2593256",
+     "thread_id": "2593257",
+     "customer_message": "ya actualic\u00e9 la app y sigo con el mismo problema \ud83e\udd37\ud83c\udffb\u200d\u2642\ufe0f \u00bfqu\u00e9 pasa? <url>",
+     "brand_reply": "We offer support via Twitter in English. Get help in Spanish here: <url> or join <url>",
+     "outcome": "none",
+     "similarity": 0.691,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "944345",
+     "thread_id": "944348",
+     "customer_message": "A ver , Siri est\u00e1 \u00faltimamente m\u00e1s tonta de lo normal. No hay manera de crear un recordatorio. Reconoce lo que le digo pero...\u2b07\ufe0f <url>",
+     "brand_reply": "We offer support via Twitter in English. Get help in Spanish here: <url> or join <url>",
+     "outcome": "positive",
+     "similarity": 0.651,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "2284961",
+     "thread_id": "2284962",
+     "customer_message": "Confiar ue Apple te d\u00e9 una sesi\u00f3n personalizada a la hora que te ha marcado es una aut\u00e9ntica quimera. Hay alguien ah\u00ed? Llevo esperando media hora y aqu\u00ed seguimos con la ventana abierta <url>",
+     "brand_reply": "We offer support via Twitter in English. Get help in Spanish here: <url> or join <url>",
+     "outcome": "none",
+     "similarity": 0.666,
+     "action_class": "other"
+    }
+   ],
+   "evidence_sufficient": false,
+   "evidence_reason": "insufficient_query",
+   "evidence_level": "INSUFFICIENT",
+   "resolution_confidence": 0.0,
+   "resolution_candidates": [],
+   "recommended_next_action": "Respond personally and immediately; follow the safety escalation procedure before any troubleshooting.",
+   "unresolved_questions": [
+    "Which device model?",
+    "Which software version?"
+   ],
+   "suggested_opening": "Thanks for telling us, and we're sorry you're dealing with this. A member of our team will take this up with you directly right away.",
+   "draft_if_any": null,
+   "trace_id": "c54e0c96280a48678811420da6e4128f",
+   "policy_version": "policy-v3",
+   "evidence": [
+    {
+     "evidence_id": "1078257",
+     "thread_id": "1078259",
+     "source_row_id": "1078259",
+     "customer_message": "Me pod\u00e9is ayudar con este error?? Me sigue ocurriendo a pesar de haber reiniciado el m\u00f3vil",
+     "brand_reply": "We offer support via Twitter in English. Get help in Spanish here: <url> or join <url>",
+     "created_at": "2017-10-23 16:57:22+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 1,
+     "ranks": {
+      "pair": 1,
+      "boost_plain": 1,
+      "boost_intent": 1
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.6915620565414429,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6860034465789795,
+      "rrf": 0.047619047619047616,
+      "outcome_bonus": 0.0,
+      "rerank": 0.5224975814342498,
+      "final": 0.09523809523809523
+     },
+     "quality": {
+      "semantic_relevance": 0.6915620565414429,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "non_english",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1552536",
+     "thread_id": "1552537",
+     "source_row_id": "1552537",
+     "customer_message": "Hola ! Me lleg\u00f3 un mail con esta compra que NO realic\u00e9. \ud83d\ude15 Necesito el IP desde donde se origin\u00f3 la misma. <url>",
+     "brand_reply": "Hey there! Questions about purchases should be directed towards our iTunes Support team: <url>",
+     "created_at": "2017-11-04 00:41:14+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 2,
+     "ranks": {
+      "pair": 28,
+      "boost_plain": 2,
+      "boost_intent": 2
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.6954746842384338,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6623178124427795,
+      "rrf": 0.020833333333333332,
+      "outcome_bonus": 0.0,
+      "rerank": 0.5187955925941468,
+      "final": 0.09090909090909091
+     },
+     "quality": {
+      "semantic_relevance": 0.6954746842384338,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "non_english",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2593256",
+     "thread_id": "2593257",
+     "source_row_id": "2593257",
+     "customer_message": "ya actualic\u00e9 la app y sigo con el mismo problema \ud83e\udd37\ud83c\udffb\u200d\u2642\ufe0f \u00bfqu\u00e9 pasa? <url>",
+     "brand_reply": "We offer support via Twitter in English. Get help in Spanish here: <url> or join <url>",
+     "created_at": "2017-11-17 01:40:28+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 3,
+     "ranks": {
+      "pair": 5,
+      "boost_plain": 6,
+      "boost_intent": 3
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.6912405490875244,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6727638244628906,
+      "rrf": 0.04,
+      "outcome_bonus": 0.0,
+      "rerank": 0.3690751482963561,
+      "final": 0.08193979933110368
+     },
+     "quality": {
+      "semantic_relevance": 0.6912405490875244,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "non_english",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "944345",
+     "thread_id": "944348",
+     "source_row_id": "944348",
+     "customer_message": "A ver , Siri est\u00e1 \u00faltimamente m\u00e1s tonta de lo normal. No hay manera de crear un recordatorio. Reconoce lo que le digo pero...\u2b07\ufe0f <url>",
+     "brand_reply": "We offer support via Twitter in English. Get help in Spanish here: <url> or join <url>",
+     "created_at": "2017-10-21 08:23:40+00:00",
+     "outcome": "positive",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 4,
+     "ranks": {
+      "pair": 16,
+      "boost_plain": 7,
+      "boost_intent": 4
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.65064537525177,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6652212738990784,
+      "rrf": 0.027777777777777776,
+      "outcome_bonus": 0.0,
+      "rerank": 0.3629811998128891,
+      "final": 0.07870370370370369
+     },
+     "quality": {
+      "semantic_relevance": 0.65064537525177,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "non_english",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "2284961",
+     "thread_id": "2284962",
+     "source_row_id": "2284962",
+     "customer_message": "Confiar ue Apple te d\u00e9 una sesi\u00f3n personalizada a la hora que te ha marcado es una aut\u00e9ntica quimera. Hay alguien ah\u00ed? Llevo esperando media hora y aqu\u00ed seguimos con la ventana abierta <url>",
+     "brand_reply": "We offer support via Twitter in English. Get help in Spanish here: <url> or join <url>",
+     "created_at": "2017-11-11 08:35:39+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 5,
+     "ranks": {
+      "pair": 2,
+      "boost_plain": 8,
+      "boost_intent": 5
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.6664787530899048,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6797357797622681,
+      "rrf": 0.045454545454545456,
+      "outcome_bonus": 0.0,
+      "rerank": 0.3621515085220337,
+      "final": 0.0757142857142857
+     },
+     "quality": {
+      "semantic_relevance": 0.6664787530899048,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "non_english",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "gid": "g018",
+  "reason": "insufficient_evidence",
+  "packet": {
+   "summary": "Customer earlier: why don\u2019t the activity rings on my Apple Watch sync with the Workout app for walking!?!!?; Brand earlier: Let's look into this together. When you start walking do you start the workout in the Workout app? Here's an article to help with this: <url>; Customer now: Yes, I\u2019ve used this app for two years.. Predicted intent data_loss_sync (MEDIUM). Risk flags: none. Escalated: No sufficiently similar historical resolution was found; a human should handle this rather than an ungrounded reply.",
+   "customer_issue": "Yes, I\u2019ve used this app for two years.",
+   "intent": "data_loss_sync",
+   "confidence": 0.666,
+   "confidence_band": "MEDIUM",
+   "alternatives": [
+    "other",
+    "account_store_repair"
+   ],
+   "risk": {
+    "safety_concern": false,
+    "security_concern": false,
+    "privacy_concern": false,
+    "account_access_risk": false,
+    "payment_billing_risk": false,
+    "legal_or_media_threat": false,
+    "abusive_threatening": false,
+    "high_impact": false,
+    "needs_private_info": false,
+    "physical_damage": false,
+    "repeat_contact": false,
+    "sensitive_action_required": false,
+    "high_frustration": false,
+    "is_actionable": true,
+    "insufficient_context": false,
+    "conflicting_evidence": false,
+    "summary": "",
+    "source": "rules"
+   },
+   "reason": {
+    "decision": "escalate",
+    "reason_code": "insufficient_evidence",
+    "reason": "No sufficiently similar historical resolution was found; a human should handle this rather than an ungrounded reply.",
+    "rule": "evidence_gate",
+    "policy_version": "policy-v3",
+    "clarification_allowed": false
+   },
+   "evidence_summary": "5 similar historical cases retrieved (4 with a substantive reply); top similarity 0.64; gate: INSUFFICIENT (weak_similarity), resolution confidence 0.20, 0 resolution cluster(s)",
+   "historical_examples": [
+    {
+     "evidence_id": "1466137",
+     "thread_id": "1466139",
+     "customer_message": "This is the second time I\u2019ve deleted and reinstalled. It seems to be refreshing the timeline for now.",
+     "brand_reply": "To verify, have you checked to make sure the app is updated from the App Store?",
+     "outcome": "positive",
+     "similarity": 0.639,
+     "action_class": "other"
+    },
+    {
+     "evidence_id": "1776389",
+     "thread_id": "1776387",
+     "customer_message": "Yes I have, I have even deleted apps and still the notification won't disappear",
+     "brand_reply": "Thank you for letting us know that. Please DM us with which iPhone you have. <url>",
+     "outcome": "none",
+     "similarity": 0.639,
+     "action_class": "dm_handoff"
+    },
+    {
+     "evidence_id": "1141030",
+     "thread_id": "1141032",
+     "customer_message": "Yes, it happens constantly and has done through several software updates. It's a great app otherwise!",
+     "brand_reply": "So we're on the same page, can you tell us what iOS version you're using? Also, does restarting the device help?",
+     "outcome": "positive",
+     "similarity": 0.694,
+     "action_class": "ask_info"
+    },
+    {
+     "evidence_id": "1709305",
+     "thread_id": "1709303",
+     "customer_message": "No I haven\u2019t. I\u2019m using iPhone 7 Plus",
+     "brand_reply": "Any issues browsing in Safari? What about trying a restart: <url>",
+     "outcome": "none",
+     "similarity": 0.665,
+     "action_class": "restart"
+    },
+    {
+     "evidence_id": "1586827",
+     "thread_id": "1586825",
+     "customer_message": "Well that seems to have worked so far. Thanks for the response \ud83d\udc4d\ud83c\udffb\ud83d\udc4d\ud83c\udffb I am happy I can use I again...",
+     "brand_reply": "We're glad you're able to use it as well. Please feel free to reach out to us anytime you need assistance.",
+     "outcome": "none",
+     "similarity": 0.66,
+     "action_class": "other"
+    }
+   ],
+   "evidence_sufficient": false,
+   "evidence_reason": "weak_similarity",
+   "evidence_level": "INSUFFICIENT",
+   "resolution_confidence": 0.2,
+   "resolution_candidates": [],
+   "recommended_next_action": "No proven historical resolution matched; troubleshoot from first principles and record the outcome.",
+   "unresolved_questions": [
+    "Which device model?",
+    "Which software version?"
+   ],
+   "suggested_opening": "We'd like to help with this. A member of our team will follow up with you directly.",
+   "draft_if_any": null,
+   "trace_id": "972472ddb9274775afcd43f28113fad2",
+   "policy_version": "policy-v3",
+   "evidence": [
+    {
+     "evidence_id": "1466137",
+     "thread_id": "1466139",
+     "source_row_id": "1466139",
+     "customer_message": "This is the second time I\u2019ve deleted and reinstalled. It seems to be refreshing the timeline for now.",
+     "brand_reply": "To verify, have you checked to make sure the app is updated from the App Store?",
+     "created_at": "2017-11-02 17:15:38+00:00",
+     "outcome": "positive",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 1,
+     "ranks": {
+      "pair": 15,
+      "boost_plain": 1,
+      "boost_intent": 1
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.639183521270752,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6283243894577026,
+      "rrf": 0.02857142857142857,
+      "outcome_bonus": 0.0,
+      "rerank": 0.4990453298091888,
+      "final": 0.03278688524590164
+     },
+     "quality": {
+      "semantic_relevance": 0.639183521270752,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "data_loss_sync",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1776389",
+     "thread_id": "1776387",
+     "source_row_id": "1776387",
+     "customer_message": "Yes I have, I have even deleted apps and still the notification won't disappear",
+     "brand_reply": "Thank you for letting us know that. Please DM us with which iPhone you have. <url>",
+     "created_at": "2017-10-18 02:39:22+00:00",
+     "outcome": "none",
+     "dm_handoff": true,
+     "substantive": false,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 2,
+     "ranks": {
+      "pair": 18,
+      "boost_plain": 19,
+      "boost_intent": 2
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.6391671895980835,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6243351697921753,
+      "rrf": 0.02631578947368421,
+      "outcome_bonus": 0.0,
+      "rerank": 0.288342308807373,
+      "final": 0.02878726010616578
+     },
+     "quality": {
+      "semantic_relevance": 0.6391671895980835,
+      "lexical_relevance": 0.0,
+      "intent_match": true,
+      "candidate_intent": "data_loss_sync",
+      "resolution_relevance": false,
+      "action_class": "dm_handoff",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1141030",
+     "thread_id": "1141032",
+     "source_row_id": "1141032",
+     "customer_message": "Yes, it happens constantly and has done through several software updates. It's a great app otherwise!",
+     "brand_reply": "So we're on the same page, can you tell us what iOS version you're using? Also, does restarting the device help?",
+     "created_at": "2017-10-24 13:29:43+00:00",
+     "outcome": "positive",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 3,
+     "ranks": {
+      "pair": 6,
+      "boost_plain": 2
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.6935048699378967,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6385393142700195,
+      "rrf": 0.038461538461538464,
+      "outcome_bonus": 0.0,
+      "rerank": 0.4240115330457687,
+      "final": 0.016129032258064516
+     },
+     "quality": {
+      "semantic_relevance": 0.6935048699378967,
+      "lexical_relevance": 0.0,
+      "intent_match": false,
+      "candidate_intent": "apps_services",
+      "resolution_relevance": false,
+      "action_class": "ask_info",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1709305",
+     "thread_id": "1709303",
+     "source_row_id": "1709303",
+     "customer_message": "No I haven\u2019t. I\u2019m using iPhone 7 Plus",
+     "brand_reply": "Any issues browsing in Safari? What about trying a restart: <url>",
+     "created_at": "2017-11-07 01:06:56+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 4,
+     "ranks": {
+      "pair": 42,
+      "boost_plain": 3
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.6653959155082703,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6104339957237244,
+      "rrf": 0.016129032258064516,
+      "outcome_bonus": 0.0,
+      "rerank": 0.40474706935882565,
+      "final": 0.015873015873015872
+     },
+     "quality": {
+      "semantic_relevance": 0.6653959155082703,
+      "lexical_relevance": 0.0,
+      "intent_match": false,
+      "candidate_intent": "general_complaint",
+      "resolution_relevance": false,
+      "action_class": "restart",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    },
+    {
+     "evidence_id": "1586827",
+     "thread_id": "1586825",
+     "source_row_id": "1586825",
+     "customer_message": "Well that seems to have worked so far. Thanks for the response \ud83d\udc4d\ud83c\udffb\ud83d\udc4d\ud83c\udffb I am happy I can use I again...",
+     "brand_reply": "We're glad you're able to use it as well. Please feel free to reach out to us anytime you need assistance.",
+     "created_at": "2017-11-04 19:29:19+00:00",
+     "outcome": "none",
+     "dm_handoff": false,
+     "substantive": true,
+     "retrieval_method": "dense:bge-small:pair+rr+gatev3",
+     "retrieval_source": "pair",
+     "rank": 5,
+     "ranks": {
+      "pair": 4,
+      "boost_plain": 4
+     },
+     "scores": {
+      "bm25": 0.0,
+      "dense": 0.6603400111198425,
+      "cos_reply": 0.0,
+      "cos_pair": 0.6439112424850464,
+      "rrf": 0.041666666666666664,
+      "outcome_bonus": 0.0,
+      "rerank": 0.40314681451320644,
+      "final": 0.015625
+     },
+     "quality": {
+      "semantic_relevance": 0.6603400111198425,
+      "lexical_relevance": 0.0,
+      "intent_match": false,
+      "candidate_intent": "general_complaint",
+      "resolution_relevance": false,
+      "action_class": "other",
+      "temporal_eligible": true,
+      "same_customer": false,
+      "quality": "usable"
+     },
+     "source": {
+      "dataset": "kaggle:thoughtvector/customer-support-on-twitter:v10",
+      "brand": "AppleSupport",
+      "preprocessing_version": "2.0",
+      "kb_hash": "a7cb62f5f61976fc0cf258f0"
+     }
+    }
+   ]
+  }
+ }
+]

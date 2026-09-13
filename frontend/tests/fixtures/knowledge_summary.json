@@ -1,0 +1,126 @@
+{
+ "dataset": "KNOWLEDGE BASE",
+ "rows": 17875,
+ "substantive": 8088,
+ "dm_handoff": 9415,
+ "resolution_bearing": 2869,
+ "resolution_bearing_substantive": 2256,
+ "date_range": {
+  "min": "2017-01-10 21:38:36+00:00",
+  "max": "2017-11-27 23:58:38+00:00"
+ },
+ "by_weak_intent": [
+  {
+   "intent": "general_complaint",
+   "rows": 7500,
+   "resolution_bearing": 1447,
+   "resolution_bearing_share": 0.193,
+   "dm_handoff_share": 0.505
+  },
+  {
+   "intent": "performance_crash",
+   "rows": 2529,
+   "resolution_bearing": 369,
+   "resolution_bearing_share": 0.146,
+   "dm_handoff_share": 0.594
+  },
+  {
+   "intent": "battery_power",
+   "rows": 2297,
+   "resolution_bearing": 153,
+   "resolution_bearing_share": 0.067,
+   "dm_handoff_share": 0.67
+  },
+  {
+   "intent": "apps_services",
+   "rows": 1333,
+   "resolution_bearing": 101,
+   "resolution_bearing_share": 0.076,
+   "dm_handoff_share": 0.433
+  },
+  {
+   "intent": "keyboard_text_bug",
+   "rows": 1253,
+   "resolution_bearing": 565,
+   "resolution_bearing_share": 0.451,
+   "dm_handoff_share": 0.447
+  },
+  {
+   "intent": "connectivity",
+   "rows": 824,
+   "resolution_bearing": 70,
+   "resolution_bearing_share": 0.085,
+   "dm_handoff_share": 0.45
+  },
+  {
+   "intent": "data_loss_sync",
+   "rows": 654,
+   "resolution_bearing": 37,
+   "resolution_bearing_share": 0.057,
+   "dm_handoff_share": 0.532
+  },
+  {
+   "intent": "account_store_repair",
+   "rows": 647,
+   "resolution_bearing": 53,
+   "resolution_bearing_share": 0.082,
+   "dm_handoff_share": 0.566
+  },
+  {
+   "intent": "hardware_damage",
+   "rows": 448,
+   "resolution_bearing": 28,
+   "resolution_bearing_share": 0.062,
+   "dm_handoff_share": 0.603
+  },
+  {
+   "intent": "non_english",
+   "rows": 390,
+   "resolution_bearing": 46,
+   "resolution_bearing_share": 0.118,
+   "dm_handoff_share": 0.249
+  }
+ ],
+ "reply_action_classes": {
+  "dm_handoff": 7825,
+  "other": 3143,
+  "update": 3068,
+  "ask_info": 1684,
+  "article": 1663,
+  "restart": 229,
+  "settings": 173,
+  "reset": 90
+ },
+ "outcome_signals": {
+  "none": 16512,
+  "positive": 886,
+  "negative": 417,
+  "mixed": 60
+ },
+ "manifest": {
+  "corpus_hash": "a7cb62f5f61976fc0cf258f0",
+  "preprocessing_version": "2.0",
+  "kb_max_created_at": "2017-11-27 23:58:38+00:00",
+  "holdout_min_created_at": "2017-11-28 00:00:28+00:00",
+  "min_reply_chars": 40,
+  "substantive_chars": 60
+ },
+ "indexes": {
+  "dense": [
+   "BAAI/bge-small-en-v1.5",
+   "BAAI/bge-small-en-v1.5|pair"
+  ],
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "search_path": [
+   "pair"
+  ]
+ },
+ "definitions": {
+  "resolution_bearing": "a non-question sentence in the brand reply states an instruction or a released fix (resolveai.retrieval.resolution.is_resolution_bearing)",
+  "substantive": "not a move-to-DM reply and at least 60 characters",
+  "dm_handoff": "the brand reply only moves the customer to a private channel",
+  "weak_intent": "keyword intent of the historical customer message (weak label, not the production classifier)",
+  "outcome_signals": "weak regex signal from the customer's follow-up; a bonus signal, never a label"
+ },
+ "source": "knowledge-base rows loaded by the running agent (kb temporal split only; every golden example is later)"
+}

@@ -1,0 +1,1039 @@
+{
+ "resolveai_full": {
+  "n": 197,
+  "gold_positive": 37,
+  "gold_negative": 160,
+  "tp": 35,
+  "fp": 87,
+  "fn": 2,
+  "tn": 73,
+  "precision": 0.2869,
+  "recall": 0.9459,
+  "f1": 0.4403,
+  "false_escalation_rate": 0.5437,
+  "missed_escalation_rate": 0.0541,
+  "confusion_gold_x_pred": [
+   [
+    73,
+    87
+   ],
+   [
+    2,
+    35
+   ]
+  ],
+  "cost_weighted": {
+   "missed_cost_1x": {
+    "total_cost": 89.0,
+    "cost_per_row": 0.4518,
+    "cost_sensitive_accuracy": 0.5482,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_3x": {
+    "total_cost": 93.0,
+    "cost_per_row": 0.4721,
+    "cost_sensitive_accuracy": 0.8426,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_5x": {
+    "total_cost": 97.0,
+    "cost_per_row": 0.4924,
+    "cost_sensitive_accuracy": 0.9015,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   }
+  },
+  "bootstrap": {
+   "f1": {
+    "point": 0.4403,
+    "ci_low": 0.3312,
+    "ci_high": 0.5301,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   },
+   "recall": {
+    "point": 0.9459,
+    "ci_low": 0.8621,
+    "ci_high": 1.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "false_negatives": [
+   {
+    "gid": "g048",
+    "gold_reason": "repeat_contact",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "insufficient_context",
+    "message": "hey can you check the dm i sent!"
+   },
+   {
+    "gid": "g157",
+    "gold_reason": "private_info",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "low_confidence",
+    "message": "thanks to ur senior developers I am stranded in Thailand without cellular access on my iPhoneX \ud83d\ude21\ud83e\udd2c\ud83d\ude29\ud83d\ude24 case <PHONE> they erroneously transferred my # back to my 7."
+   }
+  ]
+ },
+ "B0_trivial": {
+  "n": 197,
+  "gold_positive": 37,
+  "gold_negative": 160,
+  "tp": 0,
+  "fp": 0,
+  "fn": 37,
+  "tn": 160,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "false_escalation_rate": 0.0,
+  "missed_escalation_rate": 1.0,
+  "confusion_gold_x_pred": [
+   [
+    160,
+    0
+   ],
+   [
+    37,
+    0
+   ]
+  ],
+  "cost_weighted": {
+   "missed_cost_1x": {
+    "total_cost": 37.0,
+    "cost_per_row": 0.1878,
+    "cost_sensitive_accuracy": 0.8122,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_3x": {
+    "total_cost": 111.0,
+    "cost_per_row": 0.5635,
+    "cost_sensitive_accuracy": 0.8122,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_5x": {
+    "total_cost": 185.0,
+    "cost_per_row": 0.9391,
+    "cost_sensitive_accuracy": 0.8122,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   }
+  },
+  "bootstrap": {
+   "f1": {
+    "point": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   },
+   "recall": {
+    "point": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "false_negatives": [
+   {
+    "gid": "g000",
+    "gold_reason": "hardware",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "my headphone jack on my phone wasn\u2019t working for months and today it started to work but my speaker stopped, anyway to get it off of headphones when nothing is "
+   },
+   {
+    "gid": "g002",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "all most 22 days has passed & no outcome in my case (<PHONE>)."
+   },
+   {
+    "gid": "g008",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Hi, I got replacement EarPods and the guy told me yesterday I don\u2019t have to send them back to you guys, but I have a return shipping label. Do I send them to Ap"
+   },
+   {
+    "gid": "g012",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "What happens to technical support in Brazil? They lied to me! Of all the companies the only one not expecting this was . Brazil fail! repair number <LONG_ID>. I"
+   },
+   {
+    "gid": "g019",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Yo I have been trying to recover my account since nov 20th and cannot access my account whatsoever and cant use my phone help"
+   },
+   {
+    "gid": "g029",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Command is working. The problem is in the software, not in the hardware. I restarted a few times and the problema remains."
+   },
+   {
+    "gid": "g044",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "apple store is contimuosly saying \"the Payment has been rejected. Confirm Payment information. We have done so and it is still saying the same thing. Help."
+   },
+   {
+    "gid": "g048",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "hey can you check the dm i sent!"
+   },
+   {
+    "gid": "g049",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "what's wrong with you guys, I ordered 7 plus gold, and got 7 jet black. How can you beso irresponsible."
+   },
+   {
+    "gid": "g058",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "every month I keep getting the same alert about billing and normally it\u2019s because I over pay but this month I didn\u2019t buy anything from any game and I still got "
+   },
+   {
+    "gid": "g065",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Yes today when I went to Apple for help everything worked once connected to the Apple store WiFi and as soon as I left it started acting stupid again"
+   },
+   {
+    "gid": "g072",
+    "gold_reason": "safety",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "My lightening cable just started to smoke"
+   },
+   {
+    "gid": "g092",
+    "gold_reason": "hardware",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "my iPad Pro touch screen stopped working not had it 12 months but no receipt - I'm screwed aren't I"
+   },
+   {
+    "gid": "g096",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "No, it just opens to a blank screen. The icon still tells me I have VM or missed calls. <url>"
+   },
+   {
+    "gid": "g099",
+    "gold_reason": "safety",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "AGAIN W THE FUCKING \u201cI\u201d SHIT FIX THIS SHIT OR I WILL FUCKING KILL MYSELF I SWEAR TO KIRA"
+   },
+   {
+    "gid": "g104",
+    "gold_reason": "hardware",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "I have iOS 11.1.2 The screen works but there are the vertical and horizontal lines across my screen that make it difficult to see. Near the top of the screen so"
+   },
+   {
+    "gid": "g108",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Both have Keychain and Home turned on in iCloud settings. Tried turning off/on, rebooting. No change."
+   },
+   {
+    "gid": "g111",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "what gives? iCloud not working or down and I can\u2019t access 8000 of my photos or 10,000 of my songs! Yes, I reset and logged out and in."
+   },
+   {
+    "gid": "g118",
+    "gold_reason": "vague_hostile",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Hey WHO is the responsible about your shit quality control? Our beloved osx is a buggy shitty unstable unusable crap now."
+   },
+   {
+    "gid": "g121",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Can\u2019t recall exactly. At least 3x before today. Today was the first time closing the app didn\u2019t solve the problem. I closed, but when I reopened, screen went wh"
+   },
+   {
+    "gid": "g127",
+    "gold_reason": "hardware",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "how do I get my iPhone seven repaired or replaces its under warranty and its not been working how do I get in touch with you"
+   },
+   {
+    "gid": "g131",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "yes of course, I try to place it right for many times but it still didn't work"
+   },
+   {
+    "gid": "g132",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Hi, I cancelled a subscription for FilmMaker Pro on the App Store, but I have still been charged \u00a344.99 for a whole year?"
+   },
+   {
+    "gid": "g133",
+    "gold_reason": "safety",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "I have an open case and it is falling on deaf ears. My 17 MBP keeps frying (smoke & all) my USB SD card readers. Please help!"
+   },
+   {
+    "gid": "g137",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Still no response from you! Since I\u2019ve updated to iOS 11 I can not connect to unsecured networks. It\u2019s a know issue. What are you doing to fix it? Tried on my f"
+   },
+   {
+    "gid": "g141",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "I cleared my Safari history and cache as suggested but these keep popping up on my phone every time I go to view a local news article or an article on . I can\u2019t"
+   },
+   {
+    "gid": "g151",
+    "gold_reason": "hardware",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "So the speaker in my phone blew out. What the fuck I didn\u2019t pay an exorbitant amount of money for this thing to have the speaker blow on me"
+   },
+   {
+    "gid": "g152",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "I can\u2019t sync up with anything"
+   },
+   {
+    "gid": "g155",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Angry\ud83e\udd2c\ud83e\udd2c, phoned apple care on the 14th November, problem with my watch, said you would send out a box for me to send watch back, never received it, phoned again"
+   },
+   {
+    "gid": "g157",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "thanks to ur senior developers I am stranded in Thailand without cellular access on my iPhoneX \ud83d\ude21\ud83e\udd2c\ud83d\ude29\ud83d\ude24 case <PHONE> they erroneously transferred my # back to my 7."
+   },
+   {
+    "gid": "g159",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "what genius decided you should have a verification code sent to an apple device to make an appt? I need an appt because my apple device DOESN'T WORK."
+   },
+   {
+    "gid": "g162",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "We tried that but didn\u2019t find it."
+   },
+   {
+    "gid": "g166",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "With apple maps and google maps, my location \u201cindicator\u201d does not keep up with what my actual location is (i.e. the blue \u201cdot\u201d appears stuck when driving from o"
+   },
+   {
+    "gid": "g171",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Hey , I'm trying to schedule a service appointment for a black screen, requires a two-factor authentication that is being sent to the same phone that doesn't wo"
+   },
+   {
+    "gid": "g177",
+    "gold_reason": "safety",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Just finished working out and realized my wrist is tender.....my Apple Watch burned me! Ugh I don't think this is normal?!?! #Apple #AppleWatch #burn #notnormal"
+   },
+   {
+    "gid": "g178",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Forget that it is a different email. A email address I\u2019m not even logged in with"
+   },
+   {
+    "gid": "g191",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "it\u2019s been 5-6 days when i updated to 11.1.2 and all the apps are on their latest version. So what\u2019s next?"
+   }
+  ]
+ },
+ "B0_trivial_always_handoff": {
+  "n": 197,
+  "gold_positive": 37,
+  "gold_negative": 160,
+  "tp": 37,
+  "fp": 160,
+  "fn": 0,
+  "tn": 0,
+  "precision": 0.1878,
+  "recall": 1.0,
+  "f1": 0.3162,
+  "false_escalation_rate": 1.0,
+  "missed_escalation_rate": 0.0,
+  "confusion_gold_x_pred": [
+   [
+    0,
+    160
+   ],
+   [
+    0,
+    37
+   ]
+  ],
+  "cost_weighted": {
+   "missed_cost_1x": {
+    "total_cost": 160.0,
+    "cost_per_row": 0.8122,
+    "cost_sensitive_accuracy": 0.1878,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_3x": {
+    "total_cost": 160.0,
+    "cost_per_row": 0.8122,
+    "cost_sensitive_accuracy": 0.7293,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_5x": {
+    "total_cost": 160.0,
+    "cost_per_row": 0.8122,
+    "cost_sensitive_accuracy": 0.8376,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   }
+  },
+  "bootstrap": {
+   "f1": {
+    "point": 0.3162,
+    "ci_low": 0.2332,
+    "ci_high": 0.3852,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   },
+   "recall": {
+    "point": 1.0,
+    "ci_low": 1.0,
+    "ci_high": 1.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "false_negatives": []
+ },
+ "B1_simple_ml": {
+  "n": 197,
+  "gold_positive": 37,
+  "gold_negative": 160,
+  "tp": 28,
+  "fp": 29,
+  "fn": 9,
+  "tn": 131,
+  "precision": 0.4912,
+  "recall": 0.7568,
+  "f1": 0.5957,
+  "false_escalation_rate": 0.1812,
+  "missed_escalation_rate": 0.2432,
+  "confusion_gold_x_pred": [
+   [
+    131,
+    29
+   ],
+   [
+    9,
+    28
+   ]
+  ],
+  "cost_weighted": {
+   "missed_cost_1x": {
+    "total_cost": 38.0,
+    "cost_per_row": 0.1929,
+    "cost_sensitive_accuracy": 0.8071,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_3x": {
+    "total_cost": 56.0,
+    "cost_per_row": 0.2843,
+    "cost_sensitive_accuracy": 0.9052,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_5x": {
+    "total_cost": 74.0,
+    "cost_per_row": 0.3756,
+    "cost_sensitive_accuracy": 0.9249,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   }
+  },
+  "bootstrap": {
+   "f1": {
+    "point": 0.5957,
+    "ci_low": 0.4598,
+    "ci_high": 0.7059,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   },
+   "recall": {
+    "point": 0.7568,
+    "ci_low": 0.6129,
+    "ci_high": 0.889,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "false_negatives": [
+   {
+    "gid": "g029",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Command is working. The problem is in the software, not in the hardware. I restarted a few times and the problema remains."
+   },
+   {
+    "gid": "g048",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "hey can you check the dm i sent!"
+   },
+   {
+    "gid": "g108",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Both have Keychain and Home turned on in iCloud settings. Tried turning off/on, rebooting. No change."
+   },
+   {
+    "gid": "g118",
+    "gold_reason": "vague_hostile",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Hey WHO is the responsible about your shit quality control? Our beloved osx is a buggy shitty unstable unusable crap now."
+   },
+   {
+    "gid": "g121",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Can\u2019t recall exactly. At least 3x before today. Today was the first time closing the app didn\u2019t solve the problem. I closed, but when I reopened, screen went wh"
+   },
+   {
+    "gid": "g131",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "yes of course, I try to place it right for many times but it still didn't work"
+   },
+   {
+    "gid": "g141",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "I cleared my Safari history and cache as suggested but these keep popping up on my phone every time I go to view a local news article or an article on . I can\u2019t"
+   },
+   {
+    "gid": "g151",
+    "gold_reason": "hardware",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "So the speaker in my phone blew out. What the fuck I didn\u2019t pay an exorbitant amount of money for this thing to have the speaker blow on me"
+   },
+   {
+    "gid": "g152",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "I can\u2019t sync up with anything"
+   }
+  ]
+ },
+ "B2_direct_llm": {
+  "n": 197,
+  "gold_positive": 37,
+  "gold_negative": 160,
+  "tp": 34,
+  "fp": 12,
+  "fn": 3,
+  "tn": 148,
+  "precision": 0.7391,
+  "recall": 0.9189,
+  "f1": 0.8193,
+  "false_escalation_rate": 0.075,
+  "missed_escalation_rate": 0.0811,
+  "confusion_gold_x_pred": [
+   [
+    148,
+    12
+   ],
+   [
+    3,
+    34
+   ]
+  ],
+  "cost_weighted": {
+   "missed_cost_1x": {
+    "total_cost": 15.0,
+    "cost_per_row": 0.0761,
+    "cost_sensitive_accuracy": 0.9239,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_3x": {
+    "total_cost": 21.0,
+    "cost_per_row": 0.1066,
+    "cost_sensitive_accuracy": 0.9645,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_5x": {
+    "total_cost": 27.0,
+    "cost_per_row": 0.1371,
+    "cost_sensitive_accuracy": 0.9726,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   }
+  },
+  "bootstrap": {
+   "f1": {
+    "point": 0.8193,
+    "ci_low": 0.7187,
+    "ci_high": 0.9001,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   },
+   "recall": {
+    "point": 0.9189,
+    "ci_low": 0.8275,
+    "ci_high": 1.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "false_negatives": [
+   {
+    "gid": "g121",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "none",
+    "message": "Can\u2019t recall exactly. At least 3x before today. Today was the first time closing the app didn\u2019t solve the problem. I closed, but when I reopened, screen went wh"
+   },
+   {
+    "gid": "g152",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "none",
+    "message": "I can\u2019t sync up with anything"
+   },
+   {
+    "gid": "g191",
+    "gold_reason": "repeat_contact",
+    "action": "AUTO_HANDLE",
+    "reason_code": "none",
+    "message": "it\u2019s been 5-6 days when i updated to 11.1.2 and all the apps are on their latest version. So what\u2019s next?"
+   }
+  ]
+ },
+ "minus_second_opinion": {
+  "n": 197,
+  "gold_positive": 37,
+  "gold_negative": 160,
+  "tp": 36,
+  "fp": 84,
+  "fn": 1,
+  "tn": 76,
+  "precision": 0.3,
+  "recall": 0.973,
+  "f1": 0.4586,
+  "false_escalation_rate": 0.525,
+  "missed_escalation_rate": 0.027,
+  "confusion_gold_x_pred": [
+   [
+    76,
+    84
+   ],
+   [
+    1,
+    36
+   ]
+  ],
+  "cost_weighted": {
+   "missed_cost_1x": {
+    "total_cost": 85.0,
+    "cost_per_row": 0.4315,
+    "cost_sensitive_accuracy": 0.5685,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_3x": {
+    "total_cost": 87.0,
+    "cost_per_row": 0.4416,
+    "cost_sensitive_accuracy": 0.8528,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_5x": {
+    "total_cost": 89.0,
+    "cost_per_row": 0.4518,
+    "cost_sensitive_accuracy": 0.9096,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   }
+  },
+  "bootstrap": {
+   "f1": {
+    "point": 0.4586,
+    "ci_low": 0.3529,
+    "ci_high": 0.5445,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   },
+   "recall": {
+    "point": 0.973,
+    "ci_low": 0.9091,
+    "ci_high": 1.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "false_negatives": [
+   {
+    "gid": "g157",
+    "gold_reason": "private_info",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "low_confidence",
+    "message": "thanks to ur senior developers I am stranded in Thailand without cellular access on my iPhoneX \ud83d\ude21\ud83e\udd2c\ud83d\ude29\ud83d\ude24 case <PHONE> they erroneously transferred my # back to my 7."
+   }
+  ]
+ },
+ "minus_resolution_rerank": {
+  "n": 197,
+  "gold_positive": 37,
+  "gold_negative": 160,
+  "tp": 35,
+  "fp": 91,
+  "fn": 2,
+  "tn": 69,
+  "precision": 0.2778,
+  "recall": 0.9459,
+  "f1": 0.4294,
+  "false_escalation_rate": 0.5687,
+  "missed_escalation_rate": 0.0541,
+  "confusion_gold_x_pred": [
+   [
+    69,
+    91
+   ],
+   [
+    2,
+    35
+   ]
+  ],
+  "cost_weighted": {
+   "missed_cost_1x": {
+    "total_cost": 93.0,
+    "cost_per_row": 0.4721,
+    "cost_sensitive_accuracy": 0.5279,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_3x": {
+    "total_cost": 97.0,
+    "cost_per_row": 0.4924,
+    "cost_sensitive_accuracy": 0.8359,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_5x": {
+    "total_cost": 101.0,
+    "cost_per_row": 0.5127,
+    "cost_sensitive_accuracy": 0.8975,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   }
+  },
+  "bootstrap": {
+   "f1": {
+    "point": 0.4294,
+    "ci_low": 0.3221,
+    "ci_high": 0.5176,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   },
+   "recall": {
+    "point": 0.9459,
+    "ci_low": 0.8621,
+    "ci_high": 1.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "false_negatives": [
+   {
+    "gid": "g048",
+    "gold_reason": "repeat_contact",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "insufficient_context",
+    "message": "hey can you check the dm i sent!"
+   },
+   {
+    "gid": "g157",
+    "gold_reason": "private_info",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "low_confidence",
+    "message": "thanks to ur senior developers I am stranded in Thailand without cellular access on my iPhoneX \ud83d\ude21\ud83e\udd2c\ud83d\ude29\ud83d\ude24 case <PHONE> they erroneously transferred my # back to my 7."
+   }
+  ]
+ },
+ "minus_risk_llm": {
+  "n": 197,
+  "gold_positive": 37,
+  "gold_negative": 160,
+  "tp": 27,
+  "fp": 47,
+  "fn": 10,
+  "tn": 113,
+  "precision": 0.3649,
+  "recall": 0.7297,
+  "f1": 0.4865,
+  "false_escalation_rate": 0.2938,
+  "missed_escalation_rate": 0.2703,
+  "confusion_gold_x_pred": [
+   [
+    113,
+    47
+   ],
+   [
+    10,
+    27
+   ]
+  ],
+  "cost_weighted": {
+   "missed_cost_1x": {
+    "total_cost": 57.0,
+    "cost_per_row": 0.2893,
+    "cost_sensitive_accuracy": 0.7107,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_3x": {
+    "total_cost": 77.0,
+    "cost_per_row": 0.3909,
+    "cost_sensitive_accuracy": 0.8697,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_5x": {
+    "total_cost": 97.0,
+    "cost_per_row": 0.4924,
+    "cost_sensitive_accuracy": 0.9015,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   }
+  },
+  "bootstrap": {
+   "f1": {
+    "point": 0.4865,
+    "ci_low": 0.354,
+    "ci_high": 0.6032,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   },
+   "recall": {
+    "point": 0.7297,
+    "ci_low": 0.5714,
+    "ci_high": 0.871,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "false_negatives": [
+   {
+    "gid": "g000",
+    "gold_reason": "hardware",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "low_confidence",
+    "message": "my headphone jack on my phone wasn\u2019t working for months and today it started to work but my speaker stopped, anyway to get it off of headphones when nothing is "
+   },
+   {
+    "gid": "g002",
+    "gold_reason": "private_info",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "insufficient_context",
+    "message": "all most 22 days has passed & no outcome in my case (<PHONE>)."
+   },
+   {
+    "gid": "g029",
+    "gold_reason": "repeat_contact",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "low_confidence",
+    "message": "Command is working. The problem is in the software, not in the hardware. I restarted a few times and the problema remains."
+   },
+   {
+    "gid": "g048",
+    "gold_reason": "repeat_contact",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "insufficient_context",
+    "message": "hey can you check the dm i sent!"
+   },
+   {
+    "gid": "g096",
+    "gold_reason": "repeat_contact",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "low_confidence",
+    "message": "No, it just opens to a blank screen. The icon still tells me I have VM or missed calls. <url>"
+   },
+   {
+    "gid": "g108",
+    "gold_reason": "repeat_contact",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "insufficient_evidence",
+    "message": "Both have Keychain and Home turned on in iCloud settings. Tried turning off/on, rebooting. No change."
+   },
+   {
+    "gid": "g118",
+    "gold_reason": "vague_hostile",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "insufficient_context",
+    "message": "Hey WHO is the responsible about your shit quality control? Our beloved osx is a buggy shitty unstable unusable crap now."
+   },
+   {
+    "gid": "g131",
+    "gold_reason": "repeat_contact",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "low_confidence",
+    "message": "yes of course, I try to place it right for many times but it still didn't work"
+   },
+   {
+    "gid": "g141",
+    "gold_reason": "repeat_contact",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "low_confidence",
+    "message": "I cleared my Safari history and cache as suggested but these keep popping up on my phone every time I go to view a local news article or an article on . I can\u2019t"
+   },
+   {
+    "gid": "g157",
+    "gold_reason": "private_info",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "low_confidence",
+    "message": "thanks to ur senior developers I am stranded in Thailand without cellular access on my iPhoneX \ud83d\ude21\ud83e\udd2c\ud83d\ude29\ud83d\ude24 case <PHONE> they erroneously transferred my # back to my 7."
+   }
+  ]
+ },
+ "minus_retrieval": {
+  "n": 197,
+  "gold_positive": 37,
+  "gold_negative": 160,
+  "tp": 35,
+  "fp": 87,
+  "fn": 2,
+  "tn": 73,
+  "precision": 0.2869,
+  "recall": 0.9459,
+  "f1": 0.4403,
+  "false_escalation_rate": 0.5437,
+  "missed_escalation_rate": 0.0541,
+  "confusion_gold_x_pred": [
+   [
+    73,
+    87
+   ],
+   [
+    2,
+    35
+   ]
+  ],
+  "cost_weighted": {
+   "missed_cost_1x": {
+    "total_cost": 89.0,
+    "cost_per_row": 0.4518,
+    "cost_sensitive_accuracy": 0.5482,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_3x": {
+    "total_cost": 93.0,
+    "cost_per_row": 0.4721,
+    "cost_sensitive_accuracy": 0.8426,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   },
+   "missed_cost_5x": {
+    "total_cost": 97.0,
+    "cost_per_row": 0.4924,
+    "cost_sensitive_accuracy": 0.9015,
+    "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
+   }
+  },
+  "bootstrap": {
+   "f1": {
+    "point": 0.4403,
+    "ci_low": 0.3312,
+    "ci_high": 0.5301,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   },
+   "recall": {
+    "point": 0.9459,
+    "ci_low": 0.8621,
+    "ci_high": 1.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "false_negatives": [
+   {
+    "gid": "g048",
+    "gold_reason": "repeat_contact",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "insufficient_context",
+    "message": "hey can you check the dm i sent!"
+   },
+   {
+    "gid": "g157",
+    "gold_reason": "private_info",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "low_confidence",
+    "message": "thanks to ur senior developers I am stranded in Thailand without cellular access on my iPhoneX \ud83d\ude21\ud83e\udd2c\ud83d\ude29\ud83d\ude24 case <PHONE> they erroneously transferred my # back to my 7."
+   }
+  ]
+ }
+}

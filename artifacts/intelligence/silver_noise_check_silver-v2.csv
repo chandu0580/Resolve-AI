@@ -1,0 +1,61 @@
+customer_tweet_id,message,silver,band,confidence,human,correct
+2261581,What’s wrong with the iPhone period? Mine keep glitching and it’s making me mad🤦🏽‍♀️ <url>,general_complaint,LOW,0.3,performance_crash,False
+1526977,"i regret updating my iOS. The lil question mark in a box whenever I type ""I"" is for the birds. Fix it",keyboard_text_bug,HIGH,0.95,keyboard_text_bug,True
+1924716,Anyone else rip a flap of skin off their fingers when switching out the charger extension cord? No? Just me that’s incompetent? 😫,general_complaint,LOW,0.3,other,False
+2774292,"Understandable. I was using Microsoft Word. My laptop updated to the newest system and when it came back on, my work was gone! Interesting thing is that it reco",general_complaint,LOW,0.3,data_loss_sync,False
+1585322,I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ WANT ANSWERS,keyboard_text_bug,HIGH,0.95,keyboard_text_bug,True
+1583003,Hurry up and fix this “?” box bs,keyboard_text_bug,HIGH,0.95,keyboard_text_bug,True
+2202159,When is going to ship out the #iOS11 update that will give back the speed my #iPhone once had? So slow since 11.0.,performance_crash,HIGH,0.95,performance_crash,True
+1761120,But my phone screen is cracked to the point where I cannot see anything lol,hardware_damage,HIGH,0.95,hardware_damage,True
+1979944,ay man yall wrong for freezing my phone and deleting all my messages!,general_complaint,LOW,0.3,performance_crash,False
+1217562,"my iphone was slow with the new ios update, is there any solution?",performance_crash,HIGH,0.95,performance_crash,True
+430135,It’s version 11.0.1 The only issue is my home WiFi and only in my bedroom,connectivity,HIGH,0.95,connectivity,True
+2299868,"Only podcasts were effected. I was using the second to most recent version, I updated after it happened in the vain hopes it was a glitch an update could fix. I",performance_crash,HIGH,0.897,apps_services,False
+2562325,I have an issue with my FaceTime Live Photos,apps_services,HIGH,0.856,apps_services,True
+1834694,"Hey , #ios11 has been great so far. My battery dies about 3 times/day, phone freezes half the day, and nothing works!",battery_power,HIGH,0.95,battery_power,True
+2060155,hey you're charging me 5.99 again! I did not purchase anything from your store recently!!!,account_store_repair,HIGH,0.95,account_store_repair,True
+387637,"El nuevo #iOS11.0.2 es horrible, el #iPhone se pone ardiendo y la batería ... bueno, de la batería mejor ni hablar...",non_english,HIGH,0.95,non_english,True
+1681698,", iOS needs a way to turn off cellular data roaming while in airplane mode.",connectivity,HIGH,0.883,other,False
+1657754,Hi only like 1/2 my emojis are loading since the update cc,general_complaint,LOW,0.3,keyboard_text_bug,False
+2057307,this last update is total bullshit 11.0.3! My battery is draining so fast and I have cut off everything that runs in the background. Also I’m sick I’m looking a,battery_power,HIGH,0.949,battery_power,True
+2303444,Dear - thanks for your #iphone #ios update which now not only made my phone work even worse but also erased all my music. #killingme,general_complaint,LOW,0.3,data_loss_sync,False
+2060172,IOS 11 so trash. My phone intermittently restarts itself and it’s a iPhone 7 Plus. Battery life is worse. 🚮🚮🚮,battery_power,HIGH,0.922,performance_crash,False
+854596,your iOS 11.0.3 works bad. Reaallllyyy bad!!!,general_complaint,MEDIUM,0.662,general_complaint,True
+2834443,pls help! I purchased this album but I can't listen to it 😭 <url>,general_complaint,MEDIUM,0.654,apps_services,False
+2779285,Thank you for that. Didn't realize it was public. I removed tweet. How would she connect with you?,connectivity,MEDIUM,0.665,other,False
+2040124,What a joke tried updating software now cannot use iPod!!! DO NOT UPDATE TO 11.1!!!!!!!!!!!!,general_complaint,MEDIUM,0.705,performance_crash,False
+2284831,Why you concest ignoring me,general_complaint,MEDIUM,0.696,general_complaint,True
+957613,Why is it that some of my imported excel files get this error(Safari) even after editing them on iOS? <url>,apps_services,HIGH,0.91,apps_services,True
+1018324,I’ve noticed it most when I try to in messaging and photos. Like if I try to send a pic. But it happens randomly as well. :(,general_complaint,LOW,0.3,general_complaint,True
+1691697,Just wondering if you could fix the glitch so that we can actually type the letter that comes after H,performance_crash,MEDIUM,0.729,keyboard_text_bug,False
+2366207,That iOS update fixed my iPhone’s keyboard but evicerated its battery life. 😾,keyboard_text_bug,MEDIUM,0.617,battery_power,False
+1451567,I’m really really excited to pick up my iPhone X from Covent Garden tomorrow... but not sure I can make my allotted time slot any more! Can I come earlier/later,other,MEDIUM,0.686,account_store_repair,False
+2405030,how do I update from iOS 11 beta??? <url>,general_complaint,LOW,0.3,apps_services,False
+855413,Hey - any plan to sort out the date settings on search ads? This month/last month would be a handy addition to this drop down <url>,other,MEDIUM,0.657,other,True
+1551789,how can I️ fix this?! Every time I️ try and type the letter “i” this pops up <url>,keyboard_text_bug,HIGH,0.95,keyboard_text_bug,True
+2001541,Wowwww all my Apple Watch data is gone and I'm really ready to fight this is on top of the immense amount of fuckups lately,general_complaint,MEDIUM,0.655,data_loss_sync,False
+370347,I reset and resinstalled macos high sierra because my iMac stopped at power up but the problem did not resolve. How can I do?,account_store_repair,MEDIUM,0.661,performance_crash,False
+1924498,fix this problem I️ I️ I️ I️ I️ I️ I️ !!!!!,keyboard_text_bug,HIGH,0.95,keyboard_text_bug,True
+2093810,What’s going on guys? This bug thing is getting really weird now lol.,general_complaint,MEDIUM,0.69,general_complaint,True
+1461640,Why when I️ click the letter “I” some weird shit pop up,keyboard_text_bug,HIGH,0.95,keyboard_text_bug,True
+1713026,I️ think this is an issue. I️ think this needs to be fixed,keyboard_text_bug,HIGH,0.95,keyboard_text_bug,True
+2004971,I forgot my iPhone passcode... How can I reset my phone?,general_complaint,LOW,0.3,account_store_repair,False
+2668960,I’m still not receiving calls.,general_complaint,LOW,0.3,connectivity,False
+1720750,I️ just wanna know what’s going on here,keyboard_text_bug,HIGH,0.95,general_complaint,False
+1756423,face id should unlock the phone without having to swipe up ! something to include in the next ios update 🙄 #iphonex,general_complaint,LOW,0.3,other,False
+1557803,5th Gen touch with iOS 9.3.5,general_complaint,LOW,0.3,general_complaint,True
+2241253,Hey - can you fix this “ ! A ? “ issue for me please and thanks 🙄.,general_complaint,LOW,0.3,keyboard_text_bug,False
+1821896,iPhone keeps correcting “is” to “I.S” even after a dictionary reset. Driving me crazy. Please help!!!,general_complaint,LOW,0.3,keyboard_text_bug,False
+1238230,Hello and ! There’s something wrong with #Greece ! #PlsFixGreece <url>,general_complaint,LOW,0.3,apps_services,False
+2524579,"Good thing no one talks anymore, can’t make phone calls with my telephone. This fn update. is going to shit.😔",general_complaint,LOW,0.3,connectivity,False
+2621260,"Upgraded to the newest version this morning, so it was occurring in the previous version.",general_complaint,LOW,0.3,general_complaint,True
+374798,Still doesn't work well. Sometimes there is no sound at all when making a call.,general_complaint,LOW,0.3,apps_services,False
+1830366,how do I get rid of os11 on iPhone 7?,general_complaint,LOW,0.3,apps_services,False
+783466,iOS 11 tá bugado no iPhone 6 <url>,general_complaint,LOW,0.3,non_english,False
+325894,Yep it works fine on voice memo,general_complaint,LOW,0.3,general_complaint,True
+2780669,It was 11.1.1 but just updated to 11.1.2 but happened before where software was up to date,general_complaint,LOW,0.3,general_complaint,True
+1395674,"Yes, I’ve been on the phone to your support team and they can’t understand how it’s happening..multiple resets but the fault is still there",general_complaint,LOW,0.3,general_complaint,True
+2852306,help! My iPhone won’t turn on 😭,battery_power,HIGH,0.893,battery_power,True
+436487,Mac 10.13 & iPhone 6s iOS 11.0.1.,general_complaint,LOW,0.3,general_complaint,True
+2623978,Where can I report a major issue with your phones predictive text?,general_complaint,LOW,0.3,keyboard_text_bug,False
+1392464,also seems to be having the same problem. I can understand why u haven’t replied yet. <url>,general_complaint,LOW,0.3,general_complaint,True

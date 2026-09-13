@@ -1,0 +1,277 @@
+{
+  "protocol": {
+    "relevance": "resolution-match: substantive KB reply with reply-side TF-IDF cosine >= tau to the query's own historical reply",
+    "tau": 0.5,
+    "tau_sensitivity": [
+      0.4,
+      0.5,
+      0.6
+    ],
+    "query": "customer_message only (context not used as query in this phase)",
+    "dev": {
+      "n": 500,
+      "source": "holdout rows not in golden, seed 42"
+    },
+    "golden": {
+      "n": 197,
+      "sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9",
+      "evaluated_once_per_config": true
+    }
+  },
+  "kb": {
+    "n_rows": 17875,
+    "n_substantive": 8088,
+    "preprocessing_version": "2.0",
+    "subsample_sha256": "1ed11788f12c8f08cebaca7535a56ba4ffb1837e00adc373b8f845773ff82d3f",
+    "corpus_hash": "a7cb62f5f61976fc0cf258f0",
+    "kb_max_created_at": "2017-11-27 23:58:38+00:00",
+    "holdout_min_created_at": "2017-11-28 00:00:28+00:00",
+    "min_reply_chars": 40,
+    "substantive_chars": 60
+  },
+  "timings_s": {
+    "bm25_build_s": 0.5,
+    "embed_minilm_s": 0.0,
+    "embed_minilm_cached": 1.0,
+    "load_minilm_s": 0.0,
+    "embed_bge-small_s": 0.0,
+    "embed_bge-small_cached": 1.0,
+    "load_bge-small_s": 0.0
+  },
+  "configs": {
+    "bm25": {
+      "method": "bm25",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "rrf_k": 60,
+      "candidate_k": 50,
+      "top_k": 5,
+      "outcome_bonus": {
+        "positive": 0.0004,
+        "substantive": 0.0002,
+        "negative": -0.0003,
+        "dm_handoff": -0.0002,
+        "enabled": false
+      },
+      "substantive_first": false
+    },
+    "dense:minilm": {
+      "method": "dense",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "rrf_k": 60,
+      "candidate_k": 50,
+      "top_k": 5,
+      "outcome_bonus": {
+        "positive": 0.0004,
+        "substantive": 0.0002,
+        "negative": -0.0003,
+        "dm_handoff": -0.0002,
+        "enabled": false
+      },
+      "substantive_first": false
+    },
+    "dense:bge-small": {
+      "method": "dense",
+      "model": "BAAI/bge-small-en-v1.5",
+      "rrf_k": 60,
+      "candidate_k": 50,
+      "top_k": 5,
+      "outcome_bonus": {
+        "positive": 0.0004,
+        "substantive": 0.0002,
+        "negative": -0.0003,
+        "dm_handoff": -0.0002,
+        "enabled": false
+      },
+      "substantive_first": false
+    },
+    "hybrid:minilm": {
+      "method": "hybrid",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "rrf_k": 60,
+      "candidate_k": 50,
+      "top_k": 5,
+      "outcome_bonus": {
+        "positive": 0.0004,
+        "substantive": 0.0002,
+        "negative": -0.0003,
+        "dm_handoff": -0.0002,
+        "enabled": false
+      },
+      "substantive_first": false
+    },
+    "hybrid:bge-small": {
+      "method": "hybrid",
+      "model": "BAAI/bge-small-en-v1.5",
+      "rrf_k": 60,
+      "candidate_k": 50,
+      "top_k": 5,
+      "outcome_bonus": {
+        "positive": 0.0004,
+        "substantive": 0.0002,
+        "negative": -0.0003,
+        "dm_handoff": -0.0002,
+        "enabled": false
+      },
+      "substantive_first": false
+    },
+    "hybrid:minilm+outcome": {
+      "method": "hybrid",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "rrf_k": 60,
+      "candidate_k": 50,
+      "top_k": 5,
+      "outcome_bonus": {
+        "positive": 0.0004,
+        "substantive": 0.0002,
+        "negative": -0.0003,
+        "dm_handoff": -0.0002,
+        "enabled": true
+      },
+      "substantive_first": false
+    },
+    "hybrid:bge-small+outcome": {
+      "method": "hybrid",
+      "model": "BAAI/bge-small-en-v1.5",
+      "rrf_k": 60,
+      "candidate_k": 50,
+      "top_k": 5,
+      "outcome_bonus": {
+        "positive": 0.0004,
+        "substantive": 0.0002,
+        "negative": -0.0003,
+        "dm_handoff": -0.0002,
+        "enabled": true
+      },
+      "substantive_first": false
+    },
+    "hybrid:bge-small+subst": {
+      "method": "hybrid",
+      "model": "BAAI/bge-small-en-v1.5",
+      "rrf_k": 60,
+      "candidate_k": 50,
+      "top_k": 5,
+      "outcome_bonus": {
+        "positive": 0.0004,
+        "substantive": 0.0002,
+        "negative": -0.0003,
+        "dm_handoff": -0.0002,
+        "enabled": false
+      },
+      "substantive_first": true
+    },
+    "hybrid:bge-small+outcome+subst": {
+      "method": "hybrid",
+      "model": "BAAI/bge-small-en-v1.5",
+      "rrf_k": 60,
+      "candidate_k": 50,
+      "top_k": 5,
+      "outcome_bonus": {
+        "positive": 0.0004,
+        "substantive": 0.0002,
+        "negative": -0.0003,
+        "dm_handoff": -0.0002,
+        "enabled": true
+      },
+      "substantive_first": true
+    },
+    "hybrid:minilm+outcome+subst": {
+      "method": "hybrid",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "rrf_k": 60,
+      "candidate_k": 50,
+      "top_k": 5,
+      "outcome_bonus": {
+        "positive": 0.0004,
+        "substantive": 0.0002,
+        "negative": -0.0003,
+        "dm_handoff": -0.0002,
+        "enabled": true
+      },
+      "substantive_first": true
+    },
+    "dense:bge-small+subst": {
+      "method": "dense",
+      "model": "BAAI/bge-small-en-v1.5",
+      "rrf_k": 60,
+      "candidate_k": 50,
+      "top_k": 5,
+      "substantive_first": true,
+      "outcome_bonus": {
+        "positive": 0.0004,
+        "substantive": 0.0002,
+        "negative": -0.0003,
+        "dm_handoff": -0.0002,
+        "enabled": false
+      }
+    },
+    "dense:minilm+subst": {
+      "method": "dense",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "rrf_k": 60,
+      "candidate_k": 50,
+      "top_k": 5,
+      "substantive_first": true,
+      "outcome_bonus": {
+        "positive": 0.0004,
+        "substantive": 0.0002,
+        "negative": -0.0003,
+        "dm_handoff": -0.0002,
+        "enabled": false
+      }
+    }
+  },
+  "rrf_k_sensitivity_dev": {
+    "20": {
+      "recall@5": 0.209,
+      "mrr": 0.1766
+    },
+    "60": {
+      "recall@5": 0.209,
+      "mrr": 0.1754
+    },
+    "100": {
+      "recall@5": 0.209,
+      "mrr": 0.1754
+    }
+  },
+  "selected": {
+    "config": "hybrid:bge-small+subst",
+    "rrf_k": 20,
+    "selection_rule": "highest DEV recall@5, then MRR, then any_substantive@5; golden used once for reporting"
+  },
+  "gate": {
+    "relevance_floor": 0.35,
+    "support_similarity": 0.85,
+    "min_support": 3,
+    "min_intent_agreement": 0.4,
+    "top_k": 5,
+    "version": "gate-v1"
+  },
+  "gate_tuning": {
+    "relevance_floor": 0.35,
+    "support_similarity": 0.85,
+    "min_support": 3,
+    "min_intent_agreement": 0.4,
+    "precision": 0.4,
+    "coverage": 0.1,
+    "n_sufficient_with_ref": 5
+  },
+  "bm25": {
+    "k1": 1.5,
+    "b": 0.75,
+    "tokenizer": "see resolveai/retrieval/bm25.py"
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.3",
+    "cpu_count": 8,
+    "processor": "AMD64 Family 23 Model 160 Stepping 0, AuthenticAMD"
+  },
+  "seed": 42,
+  "total_runtime_s": 939.2,
+  "code_hash": "a949dcaf2ff2d5a3",
+  "extra_configs_evaluated_once": [
+    "dense:bge-small+subst",
+    "dense:minilm+subst"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+ "system": "final_release",
+ "agent_config": {
+  "use_llm": true,
+  "use_second_opinion": true,
+  "use_llm_verifier": true,
+  "max_draft_attempts": 2,
+  "share_query_embedding": true,
+  "write_traces": false,
+  "risk_short_circuit": true,
+  "use_risk_llm": true,
+  "risk_schema": "compact",
+  "risk_corroborate": [
+   "needs_private_info"
+  ],
+  "draft_version": "v2"
+ },
+ "pipeline_version": "pipeline-v6.1",
+ "config_hash": "29c9224591cc84da",
+ "n": 197,
+ "failed": 0,
+ "live_calls": 0,
+ "model_calls": 303,
+ "wall_seconds": 89.4,
+ "golden_sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9",
+ "run_at": "2026-09-11T13:52:58",
+ "decision": "artifacts/final/risk_experiment/decision.json"
+}

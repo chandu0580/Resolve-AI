@@ -1,0 +1,341 @@
+{
+ "n": 197,
+ "system": {
+  "retriever": "dense:bge-small:pair+rr+gatev3",
+  "gate": "gate-v3",
+  "policy": "policy-v3",
+  "risk_schema": "compact",
+  "draft": "v2",
+  "second_opinion_policy": "llm_conf_0.7"
+ },
+ "intent": {
+  "accuracy": 0.8477,
+  "macro_f1": 0.8538,
+  "second_opinion_applied": 63
+ },
+ "escalation": {
+  "precision": 0.2869,
+  "recall": 0.9459,
+  "f1": 0.4403,
+  "confusion_gold_x_pred": [
+   [
+    73,
+    87
+   ],
+   [
+    2,
+    35
+   ]
+  ],
+  "note": "positive = HUMAN_HANDOFF; gold positive = should_escalate. CLARIFICATION counts as not-handoff.",
+  "non_autonomous_as_positive": {
+   "precision": 0.1968,
+   "recall": 1.0,
+   "f1": 0.3289
+  }
+ },
+ "rates": {
+  "AUTO_HANDLE": 0.0457,
+  "CLARIFICATION_REQUIRED": 0.335,
+  "HUMAN_HANDOFF": 0.6193,
+  "insufficient_evidence_rate": 0.9645,
+  "evidence_levels": {
+   "INSUFFICIENT": 166,
+   "WEAK": 24,
+   "STRONG": 7
+  },
+  "evidence_reasons": {
+   "weak_similarity": 111,
+   "insufficient_resolution_evidence": 17,
+   "insufficient_query": 55,
+   "strong_consistent_evidence": 7,
+   "weak_resolution_evidence": 7
+  },
+  "consistency": {
+   "no_resolution": 177,
+   "consistent": 20
+  },
+  "reason_codes": {
+   "private_info": 35,
+   "low_confidence": 27,
+   "repeat_contact": 24,
+   "none": 10,
+   "payment_billing": 12,
+   "account_access": 4,
+   "insufficient_evidence": 49,
+   "safety": 9,
+   "vague_hostile": 8,
+   "insufficient_context": 9,
+   "legal_media": 4,
+   "hardware": 6
+  },
+  "risk_status": {
+   "ok": 122,
+   "policy_hard_handoff": 63,
+   "rules_hard_block": 10,
+   "fallback": 2
+  },
+  "retrieval_sources_top5": {
+   "pair": 985
+  }
+ },
+ "response": {
+  "auto_replies": 9,
+  "auto_canned": 4,
+  "auto_troubleshoot": 5,
+  "drafts_generated": 5,
+  "verified_share_of_drafts": 1.0,
+  "mean_evidence_coverage_auto": 0.803,
+  "auto_with_evidence_refs": 5,
+  "ask_only_auto_replies": 0,
+  "redraft_share": 0.2,
+  "verification_issue_counts": {},
+  "auto_on_gold_should_escalate": 0,
+  "risk_fallbacks": 2
+ },
+ "invariants": {
+  "auto_without_sufficient_evidence_or_canned": 0,
+  "auto_troubleshoot_without_refs": 0,
+  "auto_unverified": 0,
+  "auto_with_hard_risk_flag": 0,
+  "auto_on_gold_should_escalate": 0,
+  "responses_with_unredacted_pii": 0,
+  "gold_hash_verified": true
+ },
+ "autonomy_utility": {
+  "counts": {
+   "safe_auto_resolution": 9,
+   "unsafe_auto": 0,
+   "correct_non_autonomous": 37,
+   "unnecessary_non_autonomous": 151
+  },
+  "definition": "utility = safe_auto - w*unsafe_auto - c*unnecessary_non_autonomous (per 197 rows); w = escalation-cost weight, c = cost of a needless human touch. Sensitivity view, not business facts.",
+  "table": {
+   "w=1.0,c=0.1": -6.1,
+   "w=1.0,c=0.3": -36.3,
+   "w=3.0,c=0.1": -6.1,
+   "w=3.0,c=0.3": -36.3,
+   "w=5.0,c=0.1": -6.1,
+   "w=5.0,c=0.3": -36.3
+  },
+  "baselines": {
+   "always_handoff w=1.0,c=0.1": -16.0,
+   "always_handoff w=1.0,c=0.3": -48.0,
+   "always_handoff w=3.0,c=0.1": -16.0,
+   "always_handoff w=3.0,c=0.3": -48.0,
+   "always_handoff w=5.0,c=0.1": -16.0,
+   "always_handoff w=5.0,c=0.3": -48.0,
+   "never_escalate(auto all) w=1.0": 123.0,
+   "never_escalate(auto all) w=3.0": 49.0,
+   "never_escalate(auto all) w=5.0": -25.0
+  }
+ },
+ "slices": {
+  "short": {
+   "n": 45,
+   "auto_rate": 0.044,
+   "clarify_rate": 0.311,
+   "handoff_rate": 0.644,
+   "sufficient_rate": 0.022,
+   "intent_acc": 0.689,
+   "escalation_recall": 0.667
+  },
+  "multi_turn": {
+   "n": 48,
+   "auto_rate": 0.062,
+   "clarify_rate": 0.125,
+   "handoff_rate": 0.812,
+   "sufficient_rate": 0.021,
+   "intent_acc": 0.854,
+   "escalation_recall": 1.0
+  },
+  "multi_intent": {
+   "n": 10,
+   "auto_rate": 0.0,
+   "clarify_rate": 0.5,
+   "handoff_rate": 0.5,
+   "sufficient_rate": 0.0,
+   "intent_acc": 0.8,
+   "escalation_recall": 1.0
+  },
+  "insufficient_context": {
+   "n": 18,
+   "auto_rate": 0.0,
+   "clarify_rate": 0.556,
+   "handoff_rate": 0.444,
+   "sufficient_rate": 0.0,
+   "intent_acc": 0.667,
+   "escalation_recall": 0.5
+  },
+  "taxonomy_gap": {
+   "n": 7,
+   "auto_rate": 0.0,
+   "clarify_rate": 0.429,
+   "handoff_rate": 0.571,
+   "sufficient_rate": 0.0,
+   "intent_acc": 1.0,
+   "escalation_recall": 1.0
+  },
+  "customer_seen_in_kb": {
+   "n": 25,
+   "auto_rate": 0.04,
+   "clarify_rate": 0.4,
+   "handoff_rate": 0.56,
+   "sufficient_rate": 0.0,
+   "intent_acc": 0.8,
+   "escalation_recall": 0.857
+  }
+ },
+ "latency_ms": {
+  "context": {
+   "p50": 0.2,
+   "p95": 0.5,
+   "n": 197
+  },
+  "intent": {
+   "p50": 86.4,
+   "p95": 183.1,
+   "n": 197
+  },
+  "second_opinion": {
+   "p50": 15.5,
+   "p95": 5689.1,
+   "n": 197
+  },
+  "retrieval": {
+   "p50": 87.6,
+   "p95": 211.4,
+   "n": 197
+  },
+  "risk": {
+   "p50": 5037.3,
+   "p95": 22032.1,
+   "n": 197
+  },
+  "policy": {
+   "p50": 0.0,
+   "p95": 0.1,
+   "n": 197
+  },
+  "draft": {
+   "p50": 0.0,
+   "p95": 0.0,
+   "n": 197
+  },
+  "verification": {
+   "p50": 0.0,
+   "p95": 0.0,
+   "n": 197
+  },
+  "output_gate": {
+   "p50": 0.0,
+   "p95": 0.1,
+   "n": 197
+  },
+  "handoff": {
+   "p50": 0.1,
+   "p95": 0.2,
+   "n": 122
+  },
+  "total": {
+   "p50": 5855.0,
+   "p95": 25054.8,
+   "n": 197
+  }
+ },
+ "usage": {
+  "llm_calls_per_message": 1.553,
+  "live_calls_per_message": 0.873,
+  "cache_hit_rate": 0.4379,
+  "tokens_in_per_message": 326.7,
+  "tokens_out_per_message": 488.5,
+  "estimated_cost_usd_per_message": 0.00189,
+  "fallbacks": 4,
+  "calls_by_action": {
+   "HUMAN_HANDOFF": 1.23,
+   "CLARIFICATION_REQUIRED": 1.94,
+   "AUTO_HANDLE": 3.11
+  },
+  "wall_seconds": 1474.2,
+  "risk_calls_skipped_by_policy": 63,
+  "risk_calls_skipped_by_rules": 10
+ },
+ "phase4_to_phase5": {
+  "AUTO_HANDLE": {
+   "phase4": 0.0508,
+   "phase5": 0.0457
+  },
+  "CLARIFICATION_REQUIRED": {
+   "phase4": 0.3655,
+   "phase5": 0.335
+  },
+  "HUMAN_HANDOFF": {
+   "phase4": 0.5838,
+   "phase5": 0.6193
+  },
+  "insufficient_evidence_rate": {
+   "phase4": 0.9391,
+   "phase5": 0.9645
+  },
+  "intent_accuracy": {
+   "phase4": 0.8325,
+   "phase5": 0.8477
+  },
+  "intent_macro_f1": {
+   "phase4": 0.8423,
+   "phase5": 0.8538
+  },
+  "escalation_recall": {
+   "phase4": 0.9459,
+   "phase5": 0.9459
+  },
+  "escalation_precision": {
+   "phase4": 0.3043,
+   "phase5": 0.2869
+  },
+  "auto_replies": {
+   "phase4": 10,
+   "phase5": 9
+  },
+  "auto_with_evidence_refs": {
+   "phase4": 3,
+   "phase5": 5
+  },
+  "drafts_generated": {
+   "phase4": 12,
+   "phase5": 5
+  },
+  "verified_share_of_drafts": {
+   "phase4": 0.8333,
+   "phase5": 1.0
+  },
+  "auto_on_gold_should_escalate": {
+   "phase4": 0,
+   "phase5": 0
+  },
+  "llm_calls_per_message": {
+   "phase4": 2.31,
+   "phase5": 1.553
+  },
+  "tokens_out_per_message": {
+   "phase4": 69.8,
+   "phase5": 488.5
+  },
+  "estimated_cost_usd_per_message": {
+   "phase4": 0.000266,
+   "phase5": 0.00189
+  },
+  "fallbacks": {
+   "phase4": 45,
+   "phase5": 4
+  },
+  "total_p50_ms": {
+   "phase4": 118.1,
+   "phase5": 5855.0
+  },
+  "total_p95_ms": {
+   "phase4": 277.7,
+   "phase5": 25054.8
+  }
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "mode": "unauthorized",
+ "base": "http://127.0.0.1:3000",
+ "started": "2026-09-12T09:09:55.978Z",
+ "browser": "msedge 152.0.4191.66",
+ "scenarios": [],
+ "routes": [
+  {
+   "name": "unauthorized-overview",
+   "route": "/",
+   "status": 200,
+   "h1": "Overview",
+   "alerts": [
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea",
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea"
+   ],
+   "timing": {
+    "ttfbMs": 708,
+    "domContentLoadedMs": 896,
+    "loadMs": 1026,
+    "htmlKB": 14,
+    "domNodes": 467
+   }
+  },
+  {
+   "name": "unauthorized-traces",
+   "route": "/traces",
+   "status": 200,
+   "h1": "Audit Log",
+   "alerts": [
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea"
+   ],
+   "timing": {
+    "ttfbMs": 49,
+    "domContentLoadedMs": 110,
+    "loadMs": 132,
+    "htmlKB": 7,
+    "domNodes": 174
+   }
+  },
+  {
+   "name": "unauthorized-simulate",
+   "route": "/simulate",
+   "status": 200,
+   "h1": "Agent Playground",
+   "alerts": [
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea"
+   ],
+   "timing": {
+    "ttfbMs": 71,
+    "domContentLoadedMs": 122,
+    "loadMs": 157,
+    "htmlKB": 9,
+    "domNodes": 294
+   }
+  },
+  {
+   "name": "unauthorized-agents",
+   "route": "/agents",
+   "status": 200,
+   "h1": "Agent configuration",
+   "alerts": [
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea"
+   ],
+   "timing": {
+    "ttfbMs": 45,
+    "domContentLoadedMs": 84,
+    "loadMs": 96,
+    "htmlKB": 7,
+    "domNodes": 166
+   }
+  },
+  {
+   "name": "unauthorized-knowledge",
+   "route": "/knowledge",
+   "status": 200,
+   "h1": "Knowledge Center",
+   "alerts": [
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea",
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea",
+    "Not authorizedThe ResolveAI API requires credentials and the console's request was rejected.API message: Missing or invalid credentials. Send Authorization: Bea"
+   ],
+   "timing": {
+    "ttfbMs": 51,
+    "domContentLoadedMs": 91,
+    "loadMs": 119,
+    "htmlKB": 9,
+    "domNodes": 234
+   }
+  }
+ ],
+ "interactions": [],
+ "axe": [
+  {
+   "name": "unauthorized-overview",
+   "url": "http://127.0.0.1:3000/",
+   "violations": []
+  }
+ ],
+ "overflow": [],
+ "consoleErrors": [],
+ "failures": [],
+ "finished": "2026-09-12T09:10:06.878Z",
+ "summary": {
+  "routes": 5,
+  "scenarios": 0,
+  "scenarioFailures": 0,
+  "interactionsFailed": [],
+  "axeViolations": 0,
+  "pagesWithOverflow": 0,
+  "consoleErrors": 0,
+  "failures": 0
+ }
+}

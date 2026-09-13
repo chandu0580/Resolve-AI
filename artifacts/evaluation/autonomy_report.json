@@ -1,0 +1,893 @@
+{
+ "resolveai_full": {
+  "n": 197,
+  "auto_handle_rate": 0.0457,
+  "clarification_rate": 0.335,
+  "handoff_rate": 0.6193,
+  "auto_handle_count": 9,
+  "safe_auto_handle_count": 9,
+  "safe_auto_handle_rate": 0.0457,
+  "safe_share_of_auto": 1.0,
+  "unsafe_auto_handle_count": 0,
+  "grounded_auto_handle_count": 5,
+  "correct_non_autonomous_count": 37,
+  "unnecessary_non_autonomous_count": 151,
+  "autonomy_outcomes": {
+   "not_autonomous": 188,
+   "safe_grounded_verified": 5,
+   "safe_canned": 4
+  },
+  "failed_rows": 0,
+  "definition": "safe = AUTO_HANDLE on a gold should_escalate=false row AND (verified troubleshooting reply with evidence refs OR the intent-appropriate canned template on a non_english/other row)",
+  "bootstrap": {
+   "safe_auto_handle_rate": {
+    "point": 0.0457,
+    "ci_low": 0.0203,
+    "ci_high": 0.0761,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "by_gold_intent": {
+   "battery_power": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 6,
+    "HUMAN_HANDOFF": 10,
+    "CHANNEL_REDIRECT": 0
+   },
+   "performance_crash": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 11,
+    "HUMAN_HANDOFF": 15,
+    "CHANNEL_REDIRECT": 0
+   },
+   "keyboard_text_bug": {
+    "AUTO_HANDLE": 5,
+    "CLARIFICATION_REQUIRED": 3,
+    "HUMAN_HANDOFF": 8,
+    "CHANNEL_REDIRECT": 0
+   },
+   "connectivity": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 6,
+    "HUMAN_HANDOFF": 8,
+    "CHANNEL_REDIRECT": 0
+   },
+   "data_loss_sync": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 8,
+    "HUMAN_HANDOFF": 9,
+    "CHANNEL_REDIRECT": 0
+   },
+   "apps_services": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 20,
+    "HUMAN_HANDOFF": 18,
+    "CHANNEL_REDIRECT": 0
+   },
+   "account_store_repair": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 1,
+    "HUMAN_HANDOFF": 15,
+    "CHANNEL_REDIRECT": 0
+   },
+   "hardware_damage": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 7,
+    "CHANNEL_REDIRECT": 0
+   },
+   "general_complaint": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 7,
+    "HUMAN_HANDOFF": 7,
+    "CHANNEL_REDIRECT": 0
+   },
+   "non_english": {
+    "AUTO_HANDLE": 3,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 10,
+    "CHANNEL_REDIRECT": 0
+   },
+   "other": {
+    "AUTO_HANDLE": 1,
+    "CLARIFICATION_REQUIRED": 4,
+    "HUMAN_HANDOFF": 15,
+    "CHANNEL_REDIRECT": 0
+   }
+  }
+ },
+ "B0_trivial": {
+  "n": 197,
+  "auto_handle_rate": 1.0,
+  "clarification_rate": 0.0,
+  "handoff_rate": 0.0,
+  "auto_handle_count": 197,
+  "safe_auto_handle_count": 0,
+  "safe_auto_handle_rate": 0.0,
+  "safe_share_of_auto": 0.0,
+  "unsafe_auto_handle_count": 37,
+  "grounded_auto_handle_count": 0,
+  "correct_non_autonomous_count": 0,
+  "unnecessary_non_autonomous_count": 0,
+  "autonomy_outcomes": {
+   "unsafe_gold_should_escalate": 37,
+   "canned_on_non_canned_intent": 128,
+   "wrong_template": 32
+  },
+  "failed_rows": 0,
+  "definition": "safe = AUTO_HANDLE on a gold should_escalate=false row AND (verified troubleshooting reply with evidence refs OR the intent-appropriate canned template on a non_english/other row)",
+  "bootstrap": {
+   "safe_auto_handle_rate": {
+    "point": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "by_gold_intent": {
+   "battery_power": {
+    "AUTO_HANDLE": 16,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "performance_crash": {
+    "AUTO_HANDLE": 26,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "keyboard_text_bug": {
+    "AUTO_HANDLE": 16,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "connectivity": {
+    "AUTO_HANDLE": 14,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "data_loss_sync": {
+    "AUTO_HANDLE": 17,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "apps_services": {
+    "AUTO_HANDLE": 38,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "account_store_repair": {
+    "AUTO_HANDLE": 16,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "hardware_damage": {
+    "AUTO_HANDLE": 7,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "general_complaint": {
+    "AUTO_HANDLE": 14,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "non_english": {
+    "AUTO_HANDLE": 13,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "other": {
+    "AUTO_HANDLE": 20,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   }
+  }
+ },
+ "B0_trivial_always_handoff": {
+  "n": 197,
+  "auto_handle_rate": 0.0,
+  "clarification_rate": 0.0,
+  "handoff_rate": 1.0,
+  "auto_handle_count": 0,
+  "safe_auto_handle_count": 0,
+  "safe_auto_handle_rate": 0.0,
+  "safe_share_of_auto": null,
+  "unsafe_auto_handle_count": 0,
+  "grounded_auto_handle_count": 0,
+  "correct_non_autonomous_count": 37,
+  "unnecessary_non_autonomous_count": 160,
+  "autonomy_outcomes": {
+   "not_autonomous": 197
+  },
+  "failed_rows": 0,
+  "definition": "safe = AUTO_HANDLE on a gold should_escalate=false row AND (verified troubleshooting reply with evidence refs OR the intent-appropriate canned template on a non_english/other row)",
+  "bootstrap": {
+   "safe_auto_handle_rate": {
+    "point": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "by_gold_intent": {
+   "battery_power": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 16,
+    "CHANNEL_REDIRECT": 0
+   },
+   "performance_crash": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 26,
+    "CHANNEL_REDIRECT": 0
+   },
+   "keyboard_text_bug": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 16,
+    "CHANNEL_REDIRECT": 0
+   },
+   "connectivity": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 14,
+    "CHANNEL_REDIRECT": 0
+   },
+   "data_loss_sync": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 17,
+    "CHANNEL_REDIRECT": 0
+   },
+   "apps_services": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 38,
+    "CHANNEL_REDIRECT": 0
+   },
+   "account_store_repair": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 16,
+    "CHANNEL_REDIRECT": 0
+   },
+   "hardware_damage": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 7,
+    "CHANNEL_REDIRECT": 0
+   },
+   "general_complaint": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 14,
+    "CHANNEL_REDIRECT": 0
+   },
+   "non_english": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 13,
+    "CHANNEL_REDIRECT": 0
+   },
+   "other": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 20,
+    "CHANNEL_REDIRECT": 0
+   }
+  }
+ },
+ "B1_simple_ml": {
+  "n": 197,
+  "auto_handle_rate": 0.7107,
+  "clarification_rate": 0.0,
+  "handoff_rate": 0.2893,
+  "auto_handle_count": 140,
+  "safe_auto_handle_count": 13,
+  "safe_auto_handle_rate": 0.066,
+  "safe_share_of_auto": 0.0929,
+  "unsafe_auto_handle_count": 9,
+  "grounded_auto_handle_count": 0,
+  "correct_non_autonomous_count": 28,
+  "unnecessary_non_autonomous_count": 29,
+  "autonomy_outcomes": {
+   "not_autonomous": 57,
+   "unverified_copy": 116,
+   "safe_canned": 13,
+   "unsafe_gold_should_escalate": 9,
+   "canned_on_non_canned_intent": 1,
+   "wrong_template": 1
+  },
+  "failed_rows": 0,
+  "definition": "safe = AUTO_HANDLE on a gold should_escalate=false row AND (verified troubleshooting reply with evidence refs OR the intent-appropriate canned template on a non_english/other row)",
+  "bootstrap": {
+   "safe_auto_handle_rate": {
+    "point": 0.066,
+    "ci_low": 0.0355,
+    "ci_high": 0.1066,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "by_gold_intent": {
+   "battery_power": {
+    "AUTO_HANDLE": 11,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 5,
+    "CHANNEL_REDIRECT": 0
+   },
+   "performance_crash": {
+    "AUTO_HANDLE": 20,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 6,
+    "CHANNEL_REDIRECT": 0
+   },
+   "keyboard_text_bug": {
+    "AUTO_HANDLE": 14,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 2,
+    "CHANNEL_REDIRECT": 0
+   },
+   "connectivity": {
+    "AUTO_HANDLE": 10,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 4,
+    "CHANNEL_REDIRECT": 0
+   },
+   "data_loss_sync": {
+    "AUTO_HANDLE": 13,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 4,
+    "CHANNEL_REDIRECT": 0
+   },
+   "apps_services": {
+    "AUTO_HANDLE": 28,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 10,
+    "CHANNEL_REDIRECT": 0
+   },
+   "account_store_repair": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 16,
+    "CHANNEL_REDIRECT": 0
+   },
+   "hardware_damage": {
+    "AUTO_HANDLE": 1,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 6,
+    "CHANNEL_REDIRECT": 0
+   },
+   "general_complaint": {
+    "AUTO_HANDLE": 13,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 1,
+    "CHANNEL_REDIRECT": 0
+   },
+   "non_english": {
+    "AUTO_HANDLE": 13,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "other": {
+    "AUTO_HANDLE": 17,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 3,
+    "CHANNEL_REDIRECT": 0
+   }
+  }
+ },
+ "B2_direct_llm": {
+  "n": 197,
+  "auto_handle_rate": 0.7665,
+  "clarification_rate": 0.0,
+  "handoff_rate": 0.2335,
+  "auto_handle_count": 151,
+  "safe_auto_handle_count": 0,
+  "safe_auto_handle_rate": 0.0,
+  "safe_share_of_auto": 0.0,
+  "unsafe_auto_handle_count": 3,
+  "grounded_auto_handle_count": 0,
+  "correct_non_autonomous_count": 34,
+  "unnecessary_non_autonomous_count": 12,
+  "autonomy_outcomes": {
+   "not_autonomous": 46,
+   "unverified_llm_direct": 148,
+   "unsafe_gold_should_escalate": 3
+  },
+  "failed_rows": 1,
+  "definition": "safe = AUTO_HANDLE on a gold should_escalate=false row AND (verified troubleshooting reply with evidence refs OR the intent-appropriate canned template on a non_english/other row)",
+  "bootstrap": {
+   "safe_auto_handle_rate": {
+    "point": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "by_gold_intent": {
+   "battery_power": {
+    "AUTO_HANDLE": 16,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "performance_crash": {
+    "AUTO_HANDLE": 23,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 3,
+    "CHANNEL_REDIRECT": 0
+   },
+   "keyboard_text_bug": {
+    "AUTO_HANDLE": 14,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 2,
+    "CHANNEL_REDIRECT": 0
+   },
+   "connectivity": {
+    "AUTO_HANDLE": 10,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 4,
+    "CHANNEL_REDIRECT": 0
+   },
+   "data_loss_sync": {
+    "AUTO_HANDLE": 14,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 3,
+    "CHANNEL_REDIRECT": 0
+   },
+   "apps_services": {
+    "AUTO_HANDLE": 29,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 9,
+    "CHANNEL_REDIRECT": 0
+   },
+   "account_store_repair": {
+    "AUTO_HANDLE": 2,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 14,
+    "CHANNEL_REDIRECT": 0
+   },
+   "hardware_damage": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 7,
+    "CHANNEL_REDIRECT": 0
+   },
+   "general_complaint": {
+    "AUTO_HANDLE": 12,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 2,
+    "CHANNEL_REDIRECT": 0
+   },
+   "non_english": {
+    "AUTO_HANDLE": 13,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "other": {
+    "AUTO_HANDLE": 18,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 2,
+    "CHANNEL_REDIRECT": 0
+   }
+  }
+ },
+ "minus_second_opinion": {
+  "n": 197,
+  "auto_handle_rate": 0.0457,
+  "clarification_rate": 0.3452,
+  "handoff_rate": 0.6091,
+  "auto_handle_count": 9,
+  "safe_auto_handle_count": 9,
+  "safe_auto_handle_rate": 0.0457,
+  "safe_share_of_auto": 1.0,
+  "unsafe_auto_handle_count": 0,
+  "grounded_auto_handle_count": 5,
+  "correct_non_autonomous_count": 37,
+  "unnecessary_non_autonomous_count": 151,
+  "autonomy_outcomes": {
+   "not_autonomous": 188,
+   "safe_grounded_verified": 5,
+   "safe_canned": 4
+  },
+  "failed_rows": 0,
+  "definition": "safe = AUTO_HANDLE on a gold should_escalate=false row AND (verified troubleshooting reply with evidence refs OR the intent-appropriate canned template on a non_english/other row)",
+  "bootstrap": {
+   "safe_auto_handle_rate": {
+    "point": 0.0457,
+    "ci_low": 0.0203,
+    "ci_high": 0.0761,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "by_gold_intent": {
+   "battery_power": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 7,
+    "HUMAN_HANDOFF": 9,
+    "CHANNEL_REDIRECT": 0
+   },
+   "performance_crash": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 10,
+    "HUMAN_HANDOFF": 16,
+    "CHANNEL_REDIRECT": 0
+   },
+   "keyboard_text_bug": {
+    "AUTO_HANDLE": 5,
+    "CLARIFICATION_REQUIRED": 4,
+    "HUMAN_HANDOFF": 7,
+    "CHANNEL_REDIRECT": 0
+   },
+   "connectivity": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 6,
+    "HUMAN_HANDOFF": 8,
+    "CHANNEL_REDIRECT": 0
+   },
+   "data_loss_sync": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 9,
+    "HUMAN_HANDOFF": 8,
+    "CHANNEL_REDIRECT": 0
+   },
+   "apps_services": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 18,
+    "HUMAN_HANDOFF": 20,
+    "CHANNEL_REDIRECT": 0
+   },
+   "account_store_repair": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 1,
+    "HUMAN_HANDOFF": 15,
+    "CHANNEL_REDIRECT": 0
+   },
+   "hardware_damage": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 7,
+    "CHANNEL_REDIRECT": 0
+   },
+   "general_complaint": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 7,
+    "HUMAN_HANDOFF": 7,
+    "CHANNEL_REDIRECT": 0
+   },
+   "non_english": {
+    "AUTO_HANDLE": 3,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 10,
+    "CHANNEL_REDIRECT": 0
+   },
+   "other": {
+    "AUTO_HANDLE": 1,
+    "CLARIFICATION_REQUIRED": 6,
+    "HUMAN_HANDOFF": 13,
+    "CHANNEL_REDIRECT": 0
+   }
+  }
+ },
+ "minus_resolution_rerank": {
+  "n": 197,
+  "auto_handle_rate": 0.0558,
+  "clarification_rate": 0.3046,
+  "handoff_rate": 0.6396,
+  "auto_handle_count": 11,
+  "safe_auto_handle_count": 11,
+  "safe_auto_handle_rate": 0.0558,
+  "safe_share_of_auto": 1.0,
+  "unsafe_auto_handle_count": 0,
+  "grounded_auto_handle_count": 7,
+  "correct_non_autonomous_count": 37,
+  "unnecessary_non_autonomous_count": 149,
+  "autonomy_outcomes": {
+   "not_autonomous": 186,
+   "safe_grounded_verified": 7,
+   "safe_canned": 4
+  },
+  "failed_rows": 0,
+  "definition": "safe = AUTO_HANDLE on a gold should_escalate=false row AND (verified troubleshooting reply with evidence refs OR the intent-appropriate canned template on a non_english/other row)",
+  "bootstrap": {
+   "safe_auto_handle_rate": {
+    "point": 0.0558,
+    "ci_low": 0.0254,
+    "ci_high": 0.0914,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "by_gold_intent": {
+   "battery_power": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 4,
+    "HUMAN_HANDOFF": 12,
+    "CHANNEL_REDIRECT": 0
+   },
+   "performance_crash": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 11,
+    "HUMAN_HANDOFF": 15,
+    "CHANNEL_REDIRECT": 0
+   },
+   "keyboard_text_bug": {
+    "AUTO_HANDLE": 7,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 9,
+    "CHANNEL_REDIRECT": 0
+   },
+   "connectivity": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 6,
+    "HUMAN_HANDOFF": 8,
+    "CHANNEL_REDIRECT": 0
+   },
+   "data_loss_sync": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 8,
+    "HUMAN_HANDOFF": 9,
+    "CHANNEL_REDIRECT": 0
+   },
+   "apps_services": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 19,
+    "HUMAN_HANDOFF": 19,
+    "CHANNEL_REDIRECT": 0
+   },
+   "account_store_repair": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 1,
+    "HUMAN_HANDOFF": 15,
+    "CHANNEL_REDIRECT": 0
+   },
+   "hardware_damage": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 7,
+    "CHANNEL_REDIRECT": 0
+   },
+   "general_complaint": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 7,
+    "HUMAN_HANDOFF": 7,
+    "CHANNEL_REDIRECT": 0
+   },
+   "non_english": {
+    "AUTO_HANDLE": 3,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 10,
+    "CHANNEL_REDIRECT": 0
+   },
+   "other": {
+    "AUTO_HANDLE": 1,
+    "CLARIFICATION_REQUIRED": 4,
+    "HUMAN_HANDOFF": 15,
+    "CHANNEL_REDIRECT": 0
+   }
+  }
+ },
+ "minus_risk_llm": {
+  "n": 197,
+  "auto_handle_rate": 0.0914,
+  "clarification_rate": 0.533,
+  "handoff_rate": 0.3756,
+  "auto_handle_count": 18,
+  "safe_auto_handle_count": 18,
+  "safe_auto_handle_rate": 0.0914,
+  "safe_share_of_auto": 1.0,
+  "unsafe_auto_handle_count": 0,
+  "grounded_auto_handle_count": 5,
+  "correct_non_autonomous_count": 37,
+  "unnecessary_non_autonomous_count": 142,
+  "autonomy_outcomes": {
+   "not_autonomous": 179,
+   "safe_grounded_verified": 5,
+   "safe_canned": 13
+  },
+  "failed_rows": 0,
+  "definition": "safe = AUTO_HANDLE on a gold should_escalate=false row AND (verified troubleshooting reply with evidence refs OR the intent-appropriate canned template on a non_english/other row)",
+  "bootstrap": {
+   "safe_auto_handle_rate": {
+    "point": 0.0914,
+    "ci_low": 0.0508,
+    "ci_high": 0.1371,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "by_gold_intent": {
+   "battery_power": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 12,
+    "HUMAN_HANDOFF": 4,
+    "CHANNEL_REDIRECT": 0
+   },
+   "performance_crash": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 21,
+    "HUMAN_HANDOFF": 5,
+    "CHANNEL_REDIRECT": 0
+   },
+   "keyboard_text_bug": {
+    "AUTO_HANDLE": 5,
+    "CLARIFICATION_REQUIRED": 6,
+    "HUMAN_HANDOFF": 5,
+    "CHANNEL_REDIRECT": 0
+   },
+   "connectivity": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 9,
+    "HUMAN_HANDOFF": 5,
+    "CHANNEL_REDIRECT": 0
+   },
+   "data_loss_sync": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 9,
+    "HUMAN_HANDOFF": 8,
+    "CHANNEL_REDIRECT": 0
+   },
+   "apps_services": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 27,
+    "HUMAN_HANDOFF": 11,
+    "CHANNEL_REDIRECT": 0
+   },
+   "account_store_repair": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 2,
+    "HUMAN_HANDOFF": 14,
+    "CHANNEL_REDIRECT": 0
+   },
+   "hardware_damage": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 1,
+    "HUMAN_HANDOFF": 6,
+    "CHANNEL_REDIRECT": 0
+   },
+   "general_complaint": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 12,
+    "HUMAN_HANDOFF": 2,
+    "CHANNEL_REDIRECT": 0
+   },
+   "non_english": {
+    "AUTO_HANDLE": 12,
+    "CLARIFICATION_REQUIRED": 1,
+    "HUMAN_HANDOFF": 0,
+    "CHANNEL_REDIRECT": 0
+   },
+   "other": {
+    "AUTO_HANDLE": 1,
+    "CLARIFICATION_REQUIRED": 5,
+    "HUMAN_HANDOFF": 14,
+    "CHANNEL_REDIRECT": 0
+   }
+  }
+ },
+ "minus_retrieval": {
+  "n": 197,
+  "auto_handle_rate": 0.0203,
+  "clarification_rate": 0.3604,
+  "handoff_rate": 0.6193,
+  "auto_handle_count": 4,
+  "safe_auto_handle_count": 4,
+  "safe_auto_handle_rate": 0.0203,
+  "safe_share_of_auto": 1.0,
+  "unsafe_auto_handle_count": 0,
+  "grounded_auto_handle_count": 0,
+  "correct_non_autonomous_count": 37,
+  "unnecessary_non_autonomous_count": 156,
+  "autonomy_outcomes": {
+   "not_autonomous": 193,
+   "safe_canned": 4
+  },
+  "failed_rows": 0,
+  "definition": "safe = AUTO_HANDLE on a gold should_escalate=false row AND (verified troubleshooting reply with evidence refs OR the intent-appropriate canned template on a non_english/other row)",
+  "bootstrap": {
+   "safe_auto_handle_rate": {
+    "point": 0.0203,
+    "ci_low": 0.0051,
+    "ci_high": 0.0406,
+    "n": 197,
+    "n_boot": 1000,
+    "seed": 42
+   }
+  },
+  "by_gold_intent": {
+   "battery_power": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 6,
+    "HUMAN_HANDOFF": 10,
+    "CHANNEL_REDIRECT": 0
+   },
+   "performance_crash": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 11,
+    "HUMAN_HANDOFF": 15,
+    "CHANNEL_REDIRECT": 0
+   },
+   "keyboard_text_bug": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 8,
+    "HUMAN_HANDOFF": 8,
+    "CHANNEL_REDIRECT": 0
+   },
+   "connectivity": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 6,
+    "HUMAN_HANDOFF": 8,
+    "CHANNEL_REDIRECT": 0
+   },
+   "data_loss_sync": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 8,
+    "HUMAN_HANDOFF": 9,
+    "CHANNEL_REDIRECT": 0
+   },
+   "apps_services": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 20,
+    "HUMAN_HANDOFF": 18,
+    "CHANNEL_REDIRECT": 0
+   },
+   "account_store_repair": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 1,
+    "HUMAN_HANDOFF": 15,
+    "CHANNEL_REDIRECT": 0
+   },
+   "hardware_damage": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 7,
+    "CHANNEL_REDIRECT": 0
+   },
+   "general_complaint": {
+    "AUTO_HANDLE": 0,
+    "CLARIFICATION_REQUIRED": 7,
+    "HUMAN_HANDOFF": 7,
+    "CHANNEL_REDIRECT": 0
+   },
+   "non_english": {
+    "AUTO_HANDLE": 3,
+    "CLARIFICATION_REQUIRED": 0,
+    "HUMAN_HANDOFF": 10,
+    "CHANNEL_REDIRECT": 0
+   },
+   "other": {
+    "AUTO_HANDLE": 1,
+    "CLARIFICATION_REQUIRED": 4,
+    "HUMAN_HANDOFF": 15,
+    "CHANNEL_REDIRECT": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "context_ms": {
+  "p50": 0.1,
+  "p95": 0.1
+ },
+ "classify_ms": {
+  "p50": 55.1,
+  "p95": 114.5
+ },
+ "query_ms": {
+  "p50": 0.1,
+  "p95": 0.2
+ },
+ "retrieve_ms": {
+  "p50": 51.5,
+  "p95": 105.6
+ },
+ "total": {
+  "p50": 113.0,
+  "p95": 193.1
+ },
+ "short_reply_with_context_total": {
+  "p50": 66.1,
+  "p95": 83.7
+ },
+ "note": "warm process, novel messages (query embedding NOT cached); classify and retrieve each embed the text once with BGE-small on CPU"
+}

@@ -1,0 +1,17 @@
+{
+ "rubric_version": "rubric-v1",
+ "absolute_prompt_version": "judge-abs-v1",
+ "pairwise_prompt_version": "judge-pair-v1",
+ "primary_judge": {
+  "model": "glm-5.2",
+  "temperature": 0.0,
+  "max_tokens": 1200
+ },
+ "secondary_judge": {
+  "model": "qwen/qwen3.8-27b",
+  "temperature": 0.0,
+  "max_tokens": 1200,
+  "provider": "groq",
+  "note": "second model family; subset only (rate limited)"
+ }
+}

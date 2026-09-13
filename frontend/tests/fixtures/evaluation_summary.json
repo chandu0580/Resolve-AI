@@ -1,0 +1,1851 @@
+{
+ "headline": {
+  "system": "resolveai_full",
+  "n": 197,
+  "golden_sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9",
+  "intent_accuracy": {
+   "point": 0.8477,
+   "ci_low": 0.797,
+   "ci_high": 0.8985,
+   "n": 197,
+   "n_boot": 1000,
+   "seed": 42
+  },
+  "intent_macro_f1": {
+   "point": 0.8538,
+   "ci_low": 0.7995,
+   "ci_high": 0.9015,
+   "n": 197,
+   "n_boot": 1000,
+   "seed": 42
+  },
+  "escalation_recall": {
+   "point": 0.9459,
+   "ci_low": 0.8621,
+   "ci_high": 1.0,
+   "n": 197,
+   "n_boot": 1000,
+   "seed": 42
+  },
+  "escalation_f1": {
+   "point": 0.4403,
+   "ci_low": 0.3312,
+   "ci_high": 0.5301,
+   "n": 197,
+   "n_boot": 1000,
+   "seed": 42
+  },
+  "escalation_precision": 0.2869,
+  "missed_escalations": 2,
+  "false_escalations": 87,
+  "auto_handle_rate": 0.0457,
+  "clarification_rate": 0.335,
+  "handoff_rate": 0.6193,
+  "safe_auto_handle_rate": {
+   "point": 0.0457,
+   "ci_low": 0.0203,
+   "ci_high": 0.0761,
+   "n": 197,
+   "n_boot": 1000,
+   "seed": 42
+  },
+  "safe_auto_handle_count": 9,
+  "unsafe_auto_handle_count": 0,
+  "grounded_auto_handle_count": 5,
+  "judge": {
+   "groundedness": 4.284,
+   "relevance": 3.361,
+   "actionability": 2.928,
+   "completeness": 2.567,
+   "policy_compliance": 4.485,
+   "tone": 4.376
+  },
+  "judge_hallucination_rate": 0.216,
+  "cost_latency": {
+   "n": 197,
+   "p50_latency_ms": 117.3,
+   "p95_latency_ms": 241.8,
+   "llm_calls_per_message": 1.553,
+   "live_calls_per_message": 0.0,
+   "tokens_in_per_message": 667.7,
+   "tokens_out_per_message": 606.5,
+   "estimated_cost_usd_per_message": 0.002608,
+   "failed_calls": 0
+  },
+  "caveat": "see misleading_headline.md; intervals are 95% bootstrap (seed 42)"
+ },
+ "systems": {
+  "resolveai_full": {
+   "description": "resolveai_full",
+   "intent": {
+    "accuracy": 0.8477,
+    "macro_f1": 0.8538
+   },
+   "escalation": {
+    "precision": 0.2869,
+    "recall": 0.9459,
+    "f1": 0.4403,
+    "fp": 87,
+    "fn": 2
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.0457,
+    "clarification_rate": 0.335,
+    "handoff_rate": 0.6193,
+    "safe_auto_handle_count": 9,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 5,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 151
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 117.3,
+    "p95_latency_ms": 241.8,
+    "llm_calls_per_message": 1.553,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 667.7,
+    "tokens_out_per_message": 606.5,
+    "estimated_cost_usd_per_message": 0.002608,
+    "failed_calls": 0
+   },
+   "judge": {
+    "groundedness": 4.284,
+    "relevance": 3.361,
+    "actionability": 2.928,
+    "completeness": 2.567,
+    "policy_compliance": 4.485,
+    "tone": 4.376
+   }
+  },
+  "B0_trivial": {
+   "description": "majority silver intent; modal DM reply; never escalates (always-handoff variant for escalation reference)",
+   "intent": {
+    "accuracy": 0.0812,
+    "macro_f1": 0.0137
+   },
+   "escalation": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "fp": 0,
+    "fn": 37
+   },
+   "autonomy": {
+    "auto_handle_rate": 1.0,
+    "clarification_rate": 0.0,
+    "handoff_rate": 0.0,
+    "safe_auto_handle_count": 0,
+    "unsafe_auto_handle_count": 37,
+    "grounded_auto_handle_count": 0,
+    "correct_non_autonomous_count": 0,
+    "unnecessary_non_autonomous_count": 0
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 0.0,
+    "p95_latency_ms": 0.0,
+    "llm_calls_per_message": 0.0,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 0.0,
+    "tokens_out_per_message": 0.0,
+    "estimated_cost_usd_per_message": 0.0,
+    "failed_calls": 0
+   },
+   "judge": {
+    "groundedness": 4.985,
+    "relevance": 3.259,
+    "actionability": 3.782,
+    "completeness": 2.787,
+    "policy_compliance": 4.858,
+    "tone": 4.437
+   }
+  },
+  "B0_trivial_always_handoff": {
+   "description": "B0_trivial_always_handoff",
+   "intent": {
+    "accuracy": 0.0812,
+    "macro_f1": 0.0137
+   },
+   "escalation": {
+    "precision": 0.1878,
+    "recall": 1.0,
+    "f1": 0.3162,
+    "fp": 160,
+    "fn": 0
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.0,
+    "clarification_rate": 0.0,
+    "handoff_rate": 1.0,
+    "safe_auto_handle_count": 0,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 0,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 160
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 0.0,
+    "p95_latency_ms": 0.0,
+    "llm_calls_per_message": 0.0,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 0.0,
+    "tokens_out_per_message": 0.0,
+    "estimated_cost_usd_per_message": 0.0,
+    "failed_calls": 0
+   },
+   "judge": null
+  },
+  "B1_simple_ml": {
+   "description": "TF-IDF+LR (silver train, C on silver dev); nearest-neighbour historical reply (BGE-small customer index); rule escalation",
+   "intent": {
+    "accuracy": 0.5431,
+    "macro_f1": 0.5498
+   },
+   "escalation": {
+    "precision": 0.4912,
+    "recall": 0.7568,
+    "f1": 0.5957,
+    "fp": 29,
+    "fn": 9
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.7107,
+    "clarification_rate": 0.0,
+    "handoff_rate": 0.2893,
+    "safe_auto_handle_count": 13,
+    "unsafe_auto_handle_count": 9,
+    "grounded_auto_handle_count": 0,
+    "correct_non_autonomous_count": 28,
+    "unnecessary_non_autonomous_count": 29
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 114.3,
+    "p95_latency_ms": 197.7,
+    "llm_calls_per_message": 0.0,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 0.0,
+    "tokens_out_per_message": 0.0,
+    "estimated_cost_usd_per_message": 0.0,
+    "failed_calls": 0
+   },
+   "judge": {
+    "groundedness": 4.284,
+    "relevance": 3.108,
+    "actionability": 3.142,
+    "completeness": 2.574,
+    "policy_compliance": 4.568,
+    "tone": 4.153
+   }
+  },
+  "B2_direct_llm": {
+   "description": "GLM-5.2 single call (direct-llm-baseline-v1) with taxonomy definitions + guide escalation criteria + full thread; no retrieval/evidence/verifier",
+   "intent": {
+    "accuracy": 0.8782,
+    "macro_f1": 0.8867
+   },
+   "escalation": {
+    "precision": 0.7391,
+    "recall": 0.9189,
+    "f1": 0.8193,
+    "fp": 12,
+    "fn": 3
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.7665,
+    "clarification_rate": 0.0,
+    "handoff_rate": 0.2335,
+    "safe_auto_handle_count": 0,
+    "unsafe_auto_handle_count": 3,
+    "grounded_auto_handle_count": 0,
+    "correct_non_autonomous_count": 34,
+    "unnecessary_non_autonomous_count": 12
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 6543.1,
+    "p95_latency_ms": 21539.1,
+    "llm_calls_per_message": 1.071,
+    "live_calls_per_message": 1.071,
+    "tokens_in_per_message": 678.9,
+    "tokens_out_per_message": 527.3,
+    "estimated_cost_usd_per_message": 0.002366,
+    "failed_calls": 1
+   },
+   "judge": {
+    "groundedness": 3.227,
+    "relevance": 4.629,
+    "actionability": 4.077,
+    "completeness": 3.505,
+    "policy_compliance": 4.943,
+    "tone": 4.851
+   }
+  },
+  "minus_second_opinion": {
+   "description": "minus_second_opinion",
+   "intent": {
+    "accuracy": 0.6142,
+    "macro_f1": 0.6182
+   },
+   "escalation": {
+    "precision": 0.3,
+    "recall": 0.973,
+    "f1": 0.4586,
+    "fp": 84,
+    "fn": 1
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.0457,
+    "clarification_rate": 0.3452,
+    "handoff_rate": 0.6091,
+    "safe_auto_handle_count": 9,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 5,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 151
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 221.4,
+    "p95_latency_ms": 437.7,
+    "llm_calls_per_message": 0.797,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 287.8,
+    "tokens_out_per_message": 452.0,
+    "estimated_cost_usd_per_message": 0.001734,
+    "failed_calls": 0
+   },
+   "judge": null
+  },
+  "minus_resolution_rerank": {
+   "description": "minus_resolution_rerank",
+   "intent": {
+    "accuracy": 0.8477,
+    "macro_f1": 0.8538
+   },
+   "escalation": {
+    "precision": 0.2778,
+    "recall": 0.9459,
+    "f1": 0.4294,
+    "fp": 91,
+    "fn": 2
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.0558,
+    "clarification_rate": 0.3046,
+    "handoff_rate": 0.6396,
+    "safe_auto_handle_count": 11,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 7,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 149
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 38.9,
+    "p95_latency_ms": 79.7,
+    "llm_calls_per_message": 1.538,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 659.1,
+    "tokens_out_per_message": 584.8,
+    "estimated_cost_usd_per_message": 0.00253,
+    "failed_calls": 0
+   },
+   "judge": null
+  },
+  "minus_risk_llm": {
+   "description": "minus_risk_llm",
+   "intent": {
+    "accuracy": 0.8477,
+    "macro_f1": 0.8538
+   },
+   "escalation": {
+    "precision": 0.3649,
+    "recall": 0.7297,
+    "f1": 0.4865,
+    "fp": 47,
+    "fn": 10
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.0914,
+    "clarification_rate": 0.533,
+    "handoff_rate": 0.3756,
+    "safe_auto_handle_count": 18,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 5,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 142
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 36.4,
+    "p95_latency_ms": 81.9,
+    "llm_calls_per_message": 0.858,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 422.4,
+    "tokens_out_per_message": 197.0,
+    "estimated_cost_usd_per_message": 0.001053,
+    "failed_calls": 0
+   },
+   "judge": null
+  },
+  "minus_retrieval": {
+   "description": "minus_retrieval",
+   "intent": {
+    "accuracy": 0.8477,
+    "macro_f1": 0.8538
+   },
+   "escalation": {
+    "precision": 0.2869,
+    "recall": 0.9459,
+    "f1": 0.4403,
+    "fp": 87,
+    "fn": 2
+   },
+   "autonomy": {
+    "auto_handle_rate": 0.0203,
+    "clarification_rate": 0.3604,
+    "handoff_rate": 0.6193,
+    "safe_auto_handle_count": 4,
+    "unsafe_auto_handle_count": 0,
+    "grounded_auto_handle_count": 0,
+    "correct_non_autonomous_count": 37,
+    "unnecessary_non_autonomous_count": 156
+   },
+   "cost_latency": {
+    "n": 197,
+    "p50_latency_ms": 4.3,
+    "p95_latency_ms": 8.9,
+    "llm_calls_per_message": 1.487,
+    "live_calls_per_message": 0.0,
+    "tokens_in_per_message": 639.1,
+    "tokens_out_per_message": 574.7,
+    "estimated_cost_usd_per_message": 0.002478,
+    "failed_calls": 0
+   },
+   "judge": null
+  }
+ },
+ "pairwise_judge": {
+  "resolveai_full_vs_B1_simple_ml": {
+   "n": 197,
+   "judge_failures": 0,
+   "win": 100,
+   "tie": 13,
+   "loss": 84,
+   "win_rate": 0.508,
+   "loss_rate": 0.426,
+   "position_check": {
+    "x_in_position_A": 94,
+    "x_wins_when_A": 0.447,
+    "x_wins_when_B": 0.563
+   },
+   "question": "Which response is safer and more useful given the available evidence?"
+  },
+  "resolveai_full_vs_B2_direct_llm": {
+   "n": 197,
+   "judge_failures": 2,
+   "win": 63,
+   "tie": 7,
+   "loss": 125,
+   "win_rate": 0.323,
+   "loss_rate": 0.641,
+   "position_check": {
+    "x_in_position_A": 93,
+    "x_wins_when_A": 0.301,
+    "x_wins_when_B": 0.343
+   },
+   "question": "Which response is safer and more useful given the available evidence?"
+  }
+ },
+ "human_study": "PENDING_HUMAN_RATINGS",
+ "caveats": "See artifacts/evaluation/misleading_headline.md. The evaluated system is the Phase 5 configuration; Phase 7 changes are listed in artifacts/phase7/PHASE7_REPORT.md.",
+ "agreement": {
+  "human": {
+   "n_examples": 50,
+   "n_fully_rated": 0,
+   "n_partially_rated": 0,
+   "status": "PENDING_HUMAN_RATINGS"
+  },
+  "cross_family": {
+   "n": 126,
+   "note": "'human_' columns here hold the SECOND-FAMILY judge (qwen3.8-27b), not a human; this is judge-vs-judge",
+   "per_dimension": {
+    "n": 126,
+    "ordinal": {
+     "groundedness": {
+      "n": 126,
+      "weighted_kappa": 0.822,
+      "weighted_kappa_ci": [
+       0.701,
+       0.911
+      ],
+      "spearman_rho": 0.76,
+      "spearman_p": 0.0,
+      "exact_agreement": 0.794,
+      "within_one": 0.937,
+      "mean_human": 4.079,
+      "mean_judge": 4.016,
+      "judge_minus_human": -0.063,
+      "judge_leniency": "neutral"
+     },
+     "relevance": {
+      "n": 126,
+      "weighted_kappa": 0.744,
+      "weighted_kappa_ci": [
+       0.642,
+       0.822
+      ],
+      "spearman_rho": 0.713,
+      "spearman_p": 0.0,
+      "exact_agreement": 0.556,
+      "within_one": 0.889,
+      "mean_human": 3.571,
+      "mean_judge": 3.873,
+      "judge_minus_human": 0.302,
+      "judge_leniency": "lenient"
+     },
+     "actionability": {
+      "n": 126,
+      "weighted_kappa": 0.549,
+      "weighted_kappa_ci": [
+       0.407,
+       0.667
+      ],
+      "spearman_rho": 0.532,
+      "spearman_p": 0.0,
+      "exact_agreement": 0.556,
+      "within_one": 0.841,
+      "mean_human": 3.262,
+      "mean_judge": 3.587,
+      "judge_minus_human": 0.325,
+      "judge_leniency": "lenient"
+     },
+     "completeness": {
+      "n": 126,
+      "weighted_kappa": 0.75,
+      "weighted_kappa_ci": [
+       0.649,
+       0.829
+      ],
+      "spearman_rho": 0.754,
+      "spearman_p": 0.0,
+      "exact_agreement": 0.571,
+      "within_one": 0.944,
+      "mean_human": 2.873,
+      "mean_judge": 3.127,
+      "judge_minus_human": 0.254,
+      "judge_leniency": "lenient"
+     },
+     "policy_compliance": {
+      "n": 126,
+      "weighted_kappa": 0.418,
+      "weighted_kappa_ci": [
+       0.0429,
+       0.701
+      ],
+      "spearman_rho": 0.392,
+      "spearman_p": 0.0,
+      "exact_agreement": 0.817,
+      "within_one": 0.968,
+      "mean_human": 4.81,
+      "mean_judge": 4.77,
+      "judge_minus_human": -0.04,
+      "judge_leniency": "neutral"
+     },
+     "tone": {
+      "n": 126,
+      "weighted_kappa": 0.515,
+      "weighted_kappa_ci": [
+       0.395,
+       0.6231
+      ],
+      "spearman_rho": 0.53,
+      "spearman_p": 0.0,
+      "exact_agreement": 0.611,
+      "within_one": 1.0,
+      "mean_human": 4.365,
+      "mean_judge": 4.5,
+      "judge_minus_human": 0.135,
+      "judge_leniency": "neutral"
+     }
+    },
+    "binary": {
+     "hallucination": {
+      "n": 126,
+      "cohen_kappa": 0.818,
+      "cohen_kappa_ci": [
+       0.699,
+       0.918
+      ],
+      "raw_agreement": 0.929,
+      "human_positive_rate": 0.238,
+      "judge_positive_rate": 0.294
+     },
+     "policy_violation": {
+      "n": 126,
+      "cohen_kappa": 0.485,
+      "cohen_kappa_ci": [
+       -0.016,
+       0.853
+      ],
+      "raw_agreement": 0.968,
+      "human_positive_rate": 0.04,
+      "judge_positive_rate": 0.024
+     }
+    }
+   },
+   "per_system_means_primary": {
+    "B2_direct_llm": {
+     "groundedness": 3.44,
+     "relevance": 4.63,
+     "actionability": 4.12,
+     "completeness": 3.6,
+     "policy_compliance": 4.93,
+     "tone": 4.84
+    },
+    "resolveai_full": {
+     "groundedness": 4.3,
+     "relevance": 3.58,
+     "actionability": 3.23,
+     "completeness": 2.88,
+     "policy_compliance": 4.65,
+     "tone": 4.35
+    },
+    "B1_simple_ml": {
+     "groundedness": 4.33,
+     "relevance": 3.38,
+     "actionability": 3.4,
+     "completeness": 2.88,
+     "policy_compliance": 4.72,
+     "tone": 4.3
+    }
+   },
+   "per_system_means_secondary": {
+    "B2_direct_llm": {
+     "groundedness": 3.16,
+     "relevance": 3.84,
+     "actionability": 3.28,
+     "completeness": 2.93,
+     "policy_compliance": 4.81,
+     "tone": 4.47
+    },
+    "resolveai_full": {
+     "groundedness": 4.6,
+     "relevance": 3.49,
+     "actionability": 3.33,
+     "completeness": 2.86,
+     "policy_compliance": 4.84,
+     "tone": 4.37
+    },
+    "B1_simple_ml": {
+     "groundedness": 4.5,
+     "relevance": 3.38,
+     "actionability": 3.17,
+     "completeness": 2.83,
+     "policy_compliance": 4.78,
+     "tone": 4.25
+    }
+   }
+  }
+ },
+ "retrieval": {
+  "same_resolution_recall": {
+   "protocol": "reply-side TF-IDF >= 0.5 between the golden row's own historical reply and each substantive KB reply; label-free; scorable on 46 of 197 golden rows",
+   "phase2_customer_index_gate_v2": {
+    "recall@1": 0.2174,
+    "recall@3": 0.2826,
+    "recall@5": 0.3478,
+    "mrr": 0.2652,
+    "n_ref": 46
+   },
+   "phase5_pair_rerank_gate_v3": {
+    "recall@1": 0.1522,
+    "recall@3": 0.2609,
+    "recall@5": 0.2609,
+    "mrr": 0.1957,
+    "n_ref": 46
+   },
+   "all_phase5_variants_golden": {
+    "A_customer_v2": {
+     "recall@5": 0.3478,
+     "mrr": 0.2652,
+     "resolution_bearing@1": 0.1777,
+     "resolution_bearing@3": 0.3706,
+     "sufficient_rate": 0.0711
+    },
+    "B_reply_v2": {
+     "recall@5": 0.0,
+     "mrr": 0.0,
+     "resolution_bearing@1": 0.1168,
+     "resolution_bearing@3": 0.2437,
+     "sufficient_rate": 0.0
+    },
+    "B2_pair_v2": {
+     "recall@5": 0.3478,
+     "mrr": 0.2844,
+     "resolution_bearing@1": 0.2234,
+     "resolution_bearing@3": 0.3909,
+     "sufficient_rate": 0.0457
+    },
+    "C_dual_customer_reply_v2": {
+     "recall@5": 0.2826,
+     "mrr": 0.2337,
+     "resolution_bearing@1": 0.1168,
+     "resolution_bearing@3": 0.3147,
+     "sufficient_rate": 0.0051
+    },
+    "C2_dual_customer_pair_v2": {
+     "recall@5": 0.3478,
+     "mrr": 0.2899,
+     "resolution_bearing@1": 0.198,
+     "resolution_bearing@3": 0.3604,
+     "sufficient_rate": 0.066
+    },
+    "D_B2_pair_rr_v3": {
+     "recall@5": 0.2609,
+     "mrr": 0.1957,
+     "resolution_bearing@1": 0.7563,
+     "resolution_bearing@3": 0.7563,
+     "sufficient_rate": 0.0305
+    }
+   },
+   "phase2_variants_golden": {
+    "bm25": {
+     "recall@1": 0.2391,
+     "recall@5": 0.2609,
+     "mrr": 0.25
+    },
+    "dense:minilm": {
+     "recall@1": 0.2391,
+     "recall@5": 0.3261,
+     "mrr": 0.2725
+    },
+    "dense:bge-small": {
+     "recall@1": 0.2174,
+     "recall@5": 0.3261,
+     "mrr": 0.2533
+    },
+    "hybrid:minilm": {
+     "recall@1": 0.2826,
+     "recall@5": 0.2826,
+     "mrr": 0.2826
+    },
+    "hybrid:bge-small": {
+     "recall@1": 0.2826,
+     "recall@5": 0.3043,
+     "mrr": 0.2935
+    },
+    "hybrid:minilm+outcome": {
+     "recall@1": 0.2826,
+     "recall@5": 0.2826,
+     "mrr": 0.2826
+    },
+    "hybrid:bge-small+outcome": {
+     "recall@1": 0.2826,
+     "recall@5": 0.3043,
+     "mrr": 0.2935
+    },
+    "hybrid:bge-small+subst": {
+     "recall@1": 0.2826,
+     "recall@5": 0.3043,
+     "mrr": 0.2935
+    },
+    "hybrid:bge-small+outcome+subst": {
+     "recall@1": 0.2826,
+     "recall@5": 0.3043,
+     "mrr": 0.2935
+    },
+    "hybrid:minilm+outcome+subst": {
+     "recall@1": 0.2826,
+     "recall@5": 0.3043,
+     "mrr": 0.287
+    },
+    "dense:bge-small+subst": {
+     "recall@1": 0.2174,
+     "recall@5": 0.3478,
+     "mrr": 0.2652
+    },
+    "dense:minilm+subst": {
+     "recall@1": 0.2609,
+     "recall@5": 0.3261,
+     "mrr": 0.288
+    }
+   }
+  },
+  "resolution_bearing_rank": {
+   "definition": "a substantive reply whose non-question sentences state an instruction or released fix (is_resolution_bearing); a lexical predicate, NOT a relevance label",
+   "phase2_customer_index": {
+    "resolution_bearing@1": 0.1777,
+    "resolution_bearing@3": 0.3706,
+    "resolution_bearing@5": 0.4467,
+    "resolution_mrr": 0.2765
+   },
+   "phase5_pair_rerank": {
+    "resolution_bearing@1": 0.7563,
+    "resolution_bearing@3": 0.7563,
+    "resolution_bearing@5": 0.7614,
+    "resolution_mrr": 0.7574
+   }
+  },
+  "same_intent_retrieval": {
+   "phase2": 0.6244,
+   "phase5": 0.731,
+   "definition": "share of golden rows with >= 1 top-5 item whose weak-keyword intent equals the gold intent"
+  },
+  "evidence_sufficiency_agent_run": {
+   "levels": {
+    "INSUFFICIENT": 166,
+    "WEAK": 24,
+    "STRONG": 7
+   },
+   "sufficient_rate": 0.0355
+  },
+  "gate_precision_estimate": {
+   "source": "24 DEV cases hand-checked by an AI annotator (Claude), NOT human ground truth",
+   "chosen": "share0.6_ms3",
+   "table": {
+    "share0.5_ms2": {
+     "n_sufficient": 24,
+     "coverage": 0.048,
+     "labels": {
+      "RESOLVES": 16,
+      "PARTIAL": 3,
+      "ASK": 0,
+      "WRONG": 5,
+      "UNLABELLED": 0
+     },
+     "precision_resolves": 0.667,
+     "precision_resolves_or_partial": 0.792
+    },
+    "share0.6_ms2": {
+     "n_sufficient": 22,
+     "coverage": 0.044,
+     "labels": {
+      "RESOLVES": 16,
+      "PARTIAL": 2,
+      "ASK": 0,
+      "WRONG": 4,
+      "UNLABELLED": 0
+     },
+     "precision_resolves": 0.727,
+     "precision_resolves_or_partial": 0.818
+    },
+    "share0.7_ms2": {
+     "n_sufficient": 20,
+     "coverage": 0.04,
+     "labels": {
+      "RESOLVES": 15,
+      "PARTIAL": 1,
+      "ASK": 0,
+      "WRONG": 4,
+      "UNLABELLED": 0
+     },
+     "precision_resolves": 0.75,
+     "precision_resolves_or_partial": 0.8
+    },
+    "share0.6_ms3": {
+     "n_sufficient": 14,
+     "coverage": 0.028,
+     "labels": {
+      "RESOLVES": 11,
+      "PARTIAL": 2,
+      "ASK": 0,
+      "WRONG": 1,
+      "UNLABELLED": 0
+     },
+     "precision_resolves": 0.786,
+     "precision_resolves_or_partial": 0.929
+    },
+    "share0.7_ms3": {
+     "n_sufficient": 12,
+     "coverage": 0.024,
+     "labels": {
+      "RESOLVES": 10,
+      "PARTIAL": 1,
+      "ASK": 0,
+      "WRONG": 1,
+      "UNLABELLED": 0
+     },
+     "precision_resolves": 0.833,
+     "precision_resolves_or_partial": 0.917
+    }
+   },
+   "automatic_judge_precision": "0 for every gate setting (judge limitation, as in Phase 2)"
+  },
+  "coverage": {
+   "kb_rows": 17875,
+   "golden_rows_with_reference": 46,
+   "golden_rows_sufficient_agent_run": 7
+  },
+  "limitations": [
+   "46 scorable references: recall@5 differences under ~0.1 are not distinguishable",
+   "the TF-IDF judge rewards ask-info replies and cannot see paraphrases",
+   "resolution-bearing is a lexical predicate over the reply, not a judgement that the reply fits the query",
+   "gate precision is AI-annotated on 24 dev cases; the golden set was never used for calibration",
+   "the KB and golden are dominated by the Nov-2017 autocorrect burst: nearly every STRONG verdict is that bug"
+  ]
+ },
+ "reply_quality": {
+  "primary": {
+   "judge_model": "glm-5.2",
+   "systems": {
+    "resolveai_full": {
+     "n_scored": 197,
+     "n_parsed": 194,
+     "judge_failures": 3,
+     "means": {
+      "groundedness": 4.284,
+      "relevance": 3.361,
+      "actionability": 2.928,
+      "completeness": 2.567,
+      "policy_compliance": 4.485,
+      "tone": 4.376
+     },
+     "bootstrap": {
+      "groundedness": {
+       "point": 4.2835,
+       "ci_low": 4.1237,
+       "ci_high": 4.4381,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "relevance": {
+       "point": 3.3608,
+       "ci_low": 3.2062,
+       "ci_high": 3.5206,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "actionability": {
+       "point": 2.9278,
+       "ci_low": 2.7834,
+       "ci_high": 3.0876,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "completeness": {
+       "point": 2.567,
+       "ci_low": 2.4433,
+       "ci_high": 2.6959,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_compliance": {
+       "point": 4.4845,
+       "ci_low": 4.3969,
+       "ci_high": 4.5773,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "tone": {
+       "point": 4.3763,
+       "ci_low": 4.2835,
+       "ci_high": 4.4639,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "hallucination": {
+       "point": 0.2165,
+       "ci_low": 0.1598,
+       "ci_high": 0.2733,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_violation": {
+       "point": 0.0155,
+       "ci_low": 0.0,
+       "ci_high": 0.0361,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      }
+     },
+     "rates": {
+      "groundedness_share_ge4": 0.778,
+      "relevance_share_ge4": 0.438,
+      "actionability_share_ge4": 0.356,
+      "completeness_share_ge4": 0.155,
+      "policy_compliance_share_ge4": 0.933,
+      "tone_share_ge4": 0.938,
+      "hallucination": 0.216,
+      "policy_violation": 0.015
+     },
+     "by_response_kind": {
+      "handoff": {
+       "n": 119,
+       "groundedness": 4.33,
+       "relevance": 3.13,
+       "actionability": 2.53,
+       "completeness": 2.26,
+       "policy_compliance": 4.17,
+       "tone": 4.27,
+       "hallucination": 0.218
+      },
+      "clarify": {
+       "n": 66,
+       "groundedness": 4.17,
+       "relevance": 3.61,
+       "actionability": 3.53,
+       "completeness": 2.95,
+       "policy_compliance": 4.98,
+       "tone": 4.55,
+       "hallucination": 0.242
+      },
+      "troubleshoot": {
+       "n": 5,
+       "groundedness": 4.2,
+       "relevance": 5.0,
+       "actionability": 4.0,
+       "completeness": 3.8,
+       "policy_compliance": 5.0,
+       "tone": 4.8,
+       "hallucination": 0.0
+      },
+      "canned": {
+       "n": 4,
+       "groundedness": 5.0,
+       "relevance": 4.0,
+       "actionability": 3.5,
+       "completeness": 3.75,
+       "policy_compliance": 5.0,
+       "tone": 4.25,
+       "hallucination": 0.0
+      }
+     }
+    },
+    "B0_trivial": {
+     "n_scored": 197,
+     "n_parsed": 197,
+     "judge_failures": 0,
+     "means": {
+      "groundedness": 4.985,
+      "relevance": 3.259,
+      "actionability": 3.782,
+      "completeness": 2.787,
+      "policy_compliance": 4.858,
+      "tone": 4.437
+     },
+     "bootstrap": {
+      "groundedness": {
+       "point": 4.9848,
+       "ci_low": 4.9645,
+       "ci_high": 5.0,
+       "n": 197,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "relevance": {
+       "point": 3.2589,
+       "ci_low": 3.132,
+       "ci_high": 3.3959,
+       "n": 197,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "actionability": {
+       "point": 3.7817,
+       "ci_low": 3.6751,
+       "ci_high": 3.8832,
+       "n": 197,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "completeness": {
+       "point": 2.7868,
+       "ci_low": 2.6853,
+       "ci_high": 2.8782,
+       "n": 197,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_compliance": {
+       "point": 4.8579,
+       "ci_low": 4.7868,
+       "ci_high": 4.9137,
+       "n": 197,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "tone": {
+       "point": 4.4365,
+       "ci_low": 4.3401,
+       "ci_high": 4.5279,
+       "n": 197,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "hallucination": {
+       "point": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 197,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_violation": {
+       "point": 0.0051,
+       "ci_low": 0.0,
+       "ci_high": 0.0152,
+       "n": 197,
+       "n_boot": 1000,
+       "seed": 42
+      }
+     },
+     "rates": {
+      "groundedness_share_ge4": 1.0,
+      "relevance_share_ge4": 0.487,
+      "actionability_share_ge4": 0.751,
+      "completeness_share_ge4": 0.132,
+      "policy_compliance_share_ge4": 0.995,
+      "tone_share_ge4": 0.898,
+      "hallucination": 0.0,
+      "policy_violation": 0.005
+     },
+     "by_response_kind": {
+      "canned": {
+       "n": 197,
+       "groundedness": 4.98,
+       "relevance": 3.26,
+       "actionability": 3.78,
+       "completeness": 2.79,
+       "policy_compliance": 4.86,
+       "tone": 4.44,
+       "hallucination": 0.0
+      }
+     }
+    },
+    "B1_simple_ml": {
+     "n_scored": 197,
+     "n_parsed": 176,
+     "judge_failures": 21,
+     "means": {
+      "groundedness": 4.284,
+      "relevance": 3.108,
+      "actionability": 3.142,
+      "completeness": 2.574,
+      "policy_compliance": 4.568,
+      "tone": 4.153
+     },
+     "bootstrap": {
+      "groundedness": {
+       "point": 4.2841,
+       "ci_low": 4.0851,
+       "ci_high": 4.4602,
+       "n": 176,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "relevance": {
+       "point": 3.108,
+       "ci_low": 2.892,
+       "ci_high": 3.3068,
+       "n": 176,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "actionability": {
+       "point": 3.142,
+       "ci_low": 2.9773,
+       "ci_high": 3.3068,
+       "n": 176,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "completeness": {
+       "point": 2.5739,
+       "ci_low": 2.392,
+       "ci_high": 2.7273,
+       "n": 176,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_compliance": {
+       "point": 4.5682,
+       "ci_low": 4.4602,
+       "ci_high": 4.6705,
+       "n": 176,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "tone": {
+       "point": 4.1534,
+       "ci_low": 4.0341,
+       "ci_high": 4.2558,
+       "n": 176,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "hallucination": {
+       "point": 0.1705,
+       "ci_low": 0.1192,
+       "ci_high": 0.233,
+       "n": 176,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_violation": {
+       "point": 0.0398,
+       "ci_low": 0.0114,
+       "ci_high": 0.0682,
+       "n": 176,
+       "n_boot": 1000,
+       "seed": 42
+      }
+     },
+     "rates": {
+      "groundedness_share_ge4": 0.795,
+      "relevance_share_ge4": 0.386,
+      "actionability_share_ge4": 0.443,
+      "completeness_share_ge4": 0.239,
+      "policy_compliance_share_ge4": 0.926,
+      "tone_share_ge4": 0.79,
+      "hallucination": 0.17,
+      "policy_violation": 0.04
+     },
+     "by_response_kind": {
+      "handoff": {
+       "n": 53,
+       "groundedness": 4.94,
+       "relevance": 2.83,
+       "actionability": 2.57,
+       "completeness": 2.13,
+       "policy_compliance": 4.26,
+       "tone": 4.09,
+       "hallucination": 0.019
+      },
+      "copy": {
+       "n": 117,
+       "groundedness": 4.05,
+       "relevance": 3.24,
+       "actionability": 3.38,
+       "completeness": 2.76,
+       "policy_compliance": 4.79,
+       "tone": 4.18,
+       "hallucination": 0.214
+      },
+      "canned": {
+       "n": 6,
+       "groundedness": 3.0,
+       "relevance": 3.0,
+       "actionability": 3.67,
+       "completeness": 2.83,
+       "policy_compliance": 3.0,
+       "tone": 4.17,
+       "hallucination": 0.667
+      }
+     }
+    },
+    "B2_direct_llm": {
+     "n_scored": 197,
+     "n_parsed": 194,
+     "judge_failures": 3,
+     "means": {
+      "groundedness": 3.227,
+      "relevance": 4.629,
+      "actionability": 4.077,
+      "completeness": 3.505,
+      "policy_compliance": 4.943,
+      "tone": 4.851
+     },
+     "bootstrap": {
+      "groundedness": {
+       "point": 3.2268,
+       "ci_low": 3.0155,
+       "ci_high": 3.4383,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "relevance": {
+       "point": 4.6289,
+       "ci_low": 4.5256,
+       "ci_high": 4.7216,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "actionability": {
+       "point": 4.0773,
+       "ci_low": 3.9845,
+       "ci_high": 4.1701,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "completeness": {
+       "point": 3.5052,
+       "ci_low": 3.3969,
+       "ci_high": 3.5981,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_compliance": {
+       "point": 4.9433,
+       "ci_low": 4.8918,
+       "ci_high": 4.9845,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "tone": {
+       "point": 4.8505,
+       "ci_low": 4.804,
+       "ci_high": 4.8969,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "hallucination": {
+       "point": 0.5258,
+       "ci_low": 0.4536,
+       "ci_high": 0.5929,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_violation": {
+       "point": 0.0103,
+       "ci_low": 0.0,
+       "ci_high": 0.0258,
+       "n": 194,
+       "n_boot": 1000,
+       "seed": 42
+      }
+     },
+     "rates": {
+      "groundedness_share_ge4": 0.443,
+      "relevance_share_ge4": 0.928,
+      "actionability_share_ge4": 0.861,
+      "completeness_share_ge4": 0.469,
+      "policy_compliance_share_ge4": 0.99,
+      "tone_share_ge4": 1.0,
+      "hallucination": 0.526,
+      "policy_violation": 0.01
+     },
+     "by_response_kind": {
+      "handoff": {
+       "n": 46,
+       "groundedness": 4.78,
+       "relevance": 4.74,
+       "actionability": 4.02,
+       "completeness": 3.61,
+       "policy_compliance": 4.93,
+       "tone": 4.93,
+       "hallucination": 0.043
+      },
+      "llm_direct": {
+       "n": 148,
+       "groundedness": 2.74,
+       "relevance": 4.59,
+       "actionability": 4.09,
+       "completeness": 3.47,
+       "policy_compliance": 4.95,
+       "tone": 4.82,
+       "hallucination": 0.676
+      }
+     }
+    },
+    "offline_weak_drafts": {
+     "n_scored": 14,
+     "n_parsed": 14,
+     "judge_failures": 0,
+     "means": {
+      "groundedness": 4.5,
+      "relevance": 4.786,
+      "actionability": 4.214,
+      "completeness": 3.643,
+      "policy_compliance": 4.929,
+      "tone": 4.857
+     },
+     "bootstrap": {
+      "groundedness": {
+       "point": 4.5,
+       "ci_low": 4.0,
+       "ci_high": 4.8571,
+       "n": 14,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "relevance": {
+       "point": 4.7857,
+       "ci_low": 4.4286,
+       "ci_high": 5.0,
+       "n": 14,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "actionability": {
+       "point": 4.2143,
+       "ci_low": 3.7143,
+       "ci_high": 4.6429,
+       "n": 14,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "completeness": {
+       "point": 3.6429,
+       "ci_low": 3.2857,
+       "ci_high": 3.9286,
+       "n": 14,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_compliance": {
+       "point": 4.9286,
+       "ci_low": 4.7857,
+       "ci_high": 5.0,
+       "n": 14,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "tone": {
+       "point": 4.8571,
+       "ci_low": 4.6429,
+       "ci_high": 5.0,
+       "n": 14,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "hallucination": {
+       "point": 0.0714,
+       "ci_low": 0.0,
+       "ci_high": 0.2143,
+       "n": 14,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_violation": {
+       "point": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 14,
+       "n_boot": 1000,
+       "seed": 42
+      }
+     },
+     "rates": {
+      "groundedness_share_ge4": 0.929,
+      "relevance_share_ge4": 0.929,
+      "actionability_share_ge4": 0.857,
+      "completeness_share_ge4": 0.714,
+      "policy_compliance_share_ge4": 1.0,
+      "tone_share_ge4": 1.0,
+      "hallucination": 0.071,
+      "policy_violation": 0.0
+     },
+     "by_response_kind": {
+      "troubleshoot": {
+       "n": 14,
+       "groundedness": 4.5,
+       "relevance": 4.79,
+       "actionability": 4.21,
+       "completeness": 3.64,
+       "policy_compliance": 4.93,
+       "tone": 4.86,
+       "hallucination": 0.071
+      }
+     }
+    }
+   }
+  },
+  "secondary_cross_family": {
+   "judge_model": "qwen/qwen3.8-27b",
+   "systems": {
+    "resolveai_full": {
+     "n_scored": 43,
+     "n_parsed": 43,
+     "judge_failures": 0,
+     "means": {
+      "groundedness": 4.605,
+      "relevance": 3.488,
+      "actionability": 3.326,
+      "completeness": 2.86,
+      "policy_compliance": 4.837,
+      "tone": 4.372
+     },
+     "bootstrap": {
+      "groundedness": {
+       "point": 4.6047,
+       "ci_low": 4.3256,
+       "ci_high": 4.8372,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "relevance": {
+       "point": 3.4884,
+       "ci_low": 3.1628,
+       "ci_high": 3.7907,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "actionability": {
+       "point": 3.3256,
+       "ci_low": 3.0698,
+       "ci_high": 3.5814,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "completeness": {
+       "point": 2.8605,
+       "ci_low": 2.5581,
+       "ci_high": 3.186,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_compliance": {
+       "point": 4.8372,
+       "ci_low": 4.6279,
+       "ci_high": 4.9767,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "tone": {
+       "point": 4.3721,
+       "ci_low": 4.2093,
+       "ci_high": 4.5349,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "hallucination": {
+       "point": 0.0698,
+       "ci_low": 0.0,
+       "ci_high": 0.1395,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_violation": {
+       "point": 0.0233,
+       "ci_low": 0.0,
+       "ci_high": 0.0698,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      }
+     },
+     "rates": {
+      "groundedness_share_ge4": 0.907,
+      "relevance_share_ge4": 0.558,
+      "actionability_share_ge4": 0.581,
+      "completeness_share_ge4": 0.279,
+      "policy_compliance_share_ge4": 0.977,
+      "tone_share_ge4": 0.953,
+      "hallucination": 0.07,
+      "policy_violation": 0.023
+     },
+     "by_response_kind": {
+      "handoff": {
+       "n": 19,
+       "groundedness": 4.42,
+       "relevance": 3.16,
+       "actionability": 3.16,
+       "completeness": 2.26,
+       "policy_compliance": 4.84,
+       "tone": 4.26,
+       "hallucination": 0.158
+      },
+      "troubleshoot": {
+       "n": 5,
+       "groundedness": 4.4,
+       "relevance": 4.8,
+       "actionability": 4.0,
+       "completeness": 4.0,
+       "policy_compliance": 5.0,
+       "tone": 4.4,
+       "hallucination": 0.0
+      },
+      "clarify": {
+       "n": 15,
+       "groundedness": 4.8,
+       "relevance": 3.4,
+       "actionability": 3.27,
+       "completeness": 3.0,
+       "policy_compliance": 5.0,
+       "tone": 4.53,
+       "hallucination": 0.0
+      },
+      "canned": {
+       "n": 4,
+       "groundedness": 5.0,
+       "relevance": 3.75,
+       "actionability": 3.5,
+       "completeness": 3.75,
+       "policy_compliance": 4.0,
+       "tone": 4.25,
+       "hallucination": 0.0
+      }
+     }
+    },
+    "B1_simple_ml": {
+     "n_scored": 43,
+     "n_parsed": 43,
+     "judge_failures": 0,
+     "means": {
+      "groundedness": 4.419,
+      "relevance": 3.302,
+      "actionability": 3.163,
+      "completeness": 2.791,
+      "policy_compliance": 4.605,
+      "tone": 4.209
+     },
+     "bootstrap": {
+      "groundedness": {
+       "point": 4.4186,
+       "ci_low": 3.9767,
+       "ci_high": 4.7907,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "relevance": {
+       "point": 3.3023,
+       "ci_low": 2.907,
+       "ci_high": 3.6983,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "actionability": {
+       "point": 3.1628,
+       "ci_low": 2.8372,
+       "ci_high": 3.5116,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "completeness": {
+       "point": 2.7907,
+       "ci_low": 2.4186,
+       "ci_high": 3.1628,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_compliance": {
+       "point": 4.6047,
+       "ci_low": 4.2326,
+       "ci_high": 4.907,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "tone": {
+       "point": 4.2093,
+       "ci_low": 4.0233,
+       "ci_high": 4.3721,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "hallucination": {
+       "point": 0.1395,
+       "ci_low": 0.0465,
+       "ci_high": 0.2558,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_violation": {
+       "point": 0.093,
+       "ci_low": 0.0233,
+       "ci_high": 0.186,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      }
+     },
+     "rates": {
+      "groundedness_share_ge4": 0.86,
+      "relevance_share_ge4": 0.488,
+      "actionability_share_ge4": 0.465,
+      "completeness_share_ge4": 0.256,
+      "policy_compliance_share_ge4": 0.907,
+      "tone_share_ge4": 0.907,
+      "hallucination": 0.14,
+      "policy_violation": 0.093
+     },
+     "by_response_kind": {
+      "handoff": {
+       "n": 9,
+       "groundedness": 4.56,
+       "relevance": 3.11,
+       "actionability": 2.67,
+       "completeness": 2.11,
+       "policy_compliance": 4.89,
+       "tone": 4.0,
+       "hallucination": 0.111
+      },
+      "copy": {
+       "n": 30,
+       "groundedness": 4.47,
+       "relevance": 3.43,
+       "actionability": 3.3,
+       "completeness": 3.0,
+       "policy_compliance": 4.73,
+       "tone": 4.33,
+       "hallucination": 0.133
+      },
+      "canned": {
+       "n": 4,
+       "groundedness": 3.75,
+       "relevance": 2.75,
+       "actionability": 3.25,
+       "completeness": 2.75,
+       "policy_compliance": 3.0,
+       "tone": 3.75,
+       "hallucination": 0.25
+      }
+     }
+    },
+    "B2_direct_llm": {
+     "n_scored": 43,
+     "n_parsed": 43,
+     "judge_failures": 0,
+     "means": {
+      "groundedness": 3.163,
+      "relevance": 3.837,
+      "actionability": 3.279,
+      "completeness": 2.93,
+      "policy_compliance": 4.814,
+      "tone": 4.465
+     },
+     "bootstrap": {
+      "groundedness": {
+       "point": 3.1628,
+       "ci_low": 2.6977,
+       "ci_high": 3.6047,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "relevance": {
+       "point": 3.8372,
+       "ci_low": 3.5349,
+       "ci_high": 4.1395,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "actionability": {
+       "point": 3.2791,
+       "ci_low": 2.9767,
+       "ci_high": 3.5581,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "completeness": {
+       "point": 2.9302,
+       "ci_low": 2.6279,
+       "ci_high": 3.2093,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_compliance": {
+       "point": 4.814,
+       "ci_low": 4.5349,
+       "ci_high": 5.0,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "tone": {
+       "point": 4.4651,
+       "ci_low": 4.2791,
+       "ci_high": 4.6512,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "hallucination": {
+       "point": 0.5116,
+       "ci_low": 0.3721,
+       "ci_high": 0.6744,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      },
+      "policy_violation": {
+       "point": 0.0465,
+       "ci_low": 0.0,
+       "ci_high": 0.1163,
+       "n": 43,
+       "n_boot": 1000,
+       "seed": 42
+      }
+     },
+     "rates": {
+      "groundedness_share_ge4": 0.488,
+      "relevance_share_ge4": 0.651,
+      "actionability_share_ge4": 0.465,
+      "completeness_share_ge4": 0.233,
+      "policy_compliance_share_ge4": 0.953,
+      "tone_share_ge4": 0.953,
+      "hallucination": 0.512,
+      "policy_violation": 0.047
+     },
+     "by_response_kind": {
+      "llm_direct": {
+       "n": 36,
+       "groundedness": 2.94,
+       "relevance": 3.81,
+       "actionability": 3.42,
+       "completeness": 2.97,
+       "policy_compliance": 4.78,
+       "tone": 4.44,
+       "hallucination": 0.611
+      },
+      "handoff": {
+       "n": 7,
+       "groundedness": 4.29,
+       "relevance": 4.0,
+       "actionability": 2.57,
+       "completeness": 2.71,
+       "policy_compliance": 5.0,
+       "tone": 4.57,
+       "hallucination": 0.0
+      }
+     }
+    }
+   }
+  },
+  "rubric_version": "rubric-v1",
+  "dimensions": [
+   "groundedness",
+   "relevance",
+   "actionability",
+   "completeness",
+   "policy_compliance",
+   "tone"
+  ],
+  "binary": [
+   "hallucination",
+   "policy_violation"
+  ]
+ },
+ "misleading_headline_md": "# What is misleading about the headline numbers\n\nHeadline (golden, n=197): intent macro-F1 0.854 [0.799, 0.901], escalation recall 0.946 [0.862, 1.000], safe autonomous\nresolution rate 0.046 [0.020, 0.076], judge groundedness 4.284, 0 unsafe autonomous replies.\n\n1. **197 rows, 37 escalation positives, 9 autonomous replies.** The recall interval spans 0.946 [0.862, 1.000]: one more miss moves it 2.7 points. The safe-autonomy rate is 9 events; its interval is 0.046 [0.020, 0.076]. Nothing about autonomy generalises from 5 troubleshooting replies that all concern one bug.\n2. **Class imbalance and rare classes.** apps_services has 38 rows, hardware_damage 7; macro-F1 gives each class equal weight, so one hardware_damage error costs 1.3 macro points. Per-class F1 is in intent_report.json; the weakest classes are `{\"general_complaint\": 0.625, \"keyboard_text_bug\": 0.8125, \"apps_services\": 0.8286}`.\n3. **High escalation recall is partly a conservative policy.** The always-handoff baseline has recall 1.0 and precision 0.1878. ResolveAI's precision is 0.2869: 87 of its 122 handoffs were unnecessary by the annotators' standard. Recall is bought with human time; the cost-weighted view (escalation_report.json, ratios 1x/3x/5x) is an assumption, not a business measurement.\n4. **The golden labels are adjudicated from two passes, one of them an AI** (Annotator B). Kappa 0.92/0.885 is consistency under a guide, not human-human agreement. Seven rows carry taxonomy_gap and 18 insufficient_context; those labels are the guide's fallback, not certainty.\n5. **The judge is not validated by a human yet, and it favours its own family.** Every reply-quality number comes from GLM-5.2 scoring replies that GLM-5.2 (ResolveAI, B2) or the brand's historical agents (B1) wrote. On the 126 responses also scored by qwen3.8-27b, the GLM judge rates B2's GLM-written replies higher than the second family does on relevance/actionability/completeness (per-system gaps in judge_agreement.md) while agreeing on templated and copied replies. The human packet exists; agreement is PENDING_HUMAN_RATINGS. Judge failures (27 of 802) are excluded from means.\n6. **Apple-specific, 2017, one burst.** The KB and the holdout are dominated by the November-2017 iOS 11 autocorrect bug; every STRONG evidence verdict is that bug. The taxonomy is AppleSupport's; nothing here transfers to another brand without re-annotation.\n7. **Weak proxies everywhere upstream.** Retrieval \"same-resolution\" relevance is a TF-IDF match on 46 rows; \"resolution-bearing\" is a lexical predicate; the gate's precision was hand-checked by an AI on 24 dev cases; the classifier's training labels are silver (~71% precision); the outcome signal has 0.72 precision. The headline sits on these.\n8. **Golden was reused across phases for exploratory analysis.** Phases 2-5 each evaluated golden \"once per pre-specified variant\", but failure analyses read golden rows, and the Phase 5 retrieval pass was repeated after a predicate bug. Nothing was tuned on golden; the drift risk is that design choices were made by people who had seen golden failures.\n9. **Customer identity overlap.** 15.8% of holdout customers (25 golden rows) appear earlier in the KB window; same-customer evidence is excluded from support, but their messages are not independent draws.\n10. **Cached runs hide latency.** The reported p50 for ResolveAI in this phase is a cache-served run; the live golden run in Phase 5 had p50 5855.0 ms. Cost figures use GLM list prices and the tokens the cached calls consumed when they were live.\n11. **\"Safe\" is defined by us.** A safe autonomous resolution requires a verified, referenced reply on a row the annotators did not mark for escalation, or the exact template for a closure/non-English row. It does not say the customer's problem was solved; no outcome data exists for these replies.\n13. **The headline hides that a one-prompt LLM classifies and escalates better than ResolveAI.** B2's escalation F1 is 0.8193 vs 0.4403 and its intent macro-F1 is at least as good; ResolveAI's contribution is confined to grounding, verification and abstention, which the accuracy-style headline numbers do not reward and the pairwise judge penalises.\n12. **Baselines are honest but cheap.** B1 copies historical replies (which is what the brand often did) and B2 is one prompt; a tuned few-shot prompt or a retrieval-augmented LLM without the policy layer was not tested, so \"ResolveAI beats an LLM\" is only true against the plain prompt.\n",
+ "statistical_uncertainty_md": "# Statistical uncertainty\n\nBootstrap: resample the 197 golden rows with replacement 1000 times (numpy default_rng seed 42), recompute the statistic, report the 2.5/97.5 percentiles. Paired comparisons resample the same row indices for both systems. Failed calls stay in every sample. Judge intervals resample the parsed judge rows (judge failures excluded from means but reported).\n\n| system | intent accuracy | intent macro-F1 | escalation recall | escalation F1 | safe auto rate | judge groundedness | judge hallucination |\n|---|---|---|---|---|---|---|---|\n| resolveai_full | 0.848 [0.797, 0.898] | 0.854 [0.799, 0.901] | 0.946 [0.862, 1.000] | 0.440 [0.331, 0.530] | 0.046 [0.020, 0.076] | 4.284 [4.124, 4.438] | 0.216 [0.160, 0.273] |\n| B0_trivial | 0.081 [0.046, 0.122] | 0.014 [0.008, 0.020] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 4.985 [4.965, 5.000] | 0.000 [0.000, 0.000] |\n| B0_trivial_always_handoff | 0.081 [0.046, 0.122] | 0.014 [0.008, 0.020] | 1.000 [1.000, 1.000] | 0.316 [0.233, 0.385] | 0.000 [0.000, 0.000] | n/a | n/a |\n| B1_simple_ml | 0.543 [0.472, 0.614] | 0.550 [0.472, 0.615] | 0.757 [0.613, 0.889] | 0.596 [0.460, 0.706] | 0.066 [0.035, 0.107] | 4.284 [4.085, 4.460] | 0.171 [0.119, 0.233] |\n| B2_direct_llm | 0.878 [0.827, 0.919] | 0.887 [0.835, 0.927] | 0.919 [0.828, 1.000] | 0.819 [0.719, 0.900] | 0.000 [0.000, 0.000] | 3.227 [3.015, 3.438] | 0.526 [0.454, 0.593] |\n| minus_second_opinion | 0.614 [0.548, 0.680] | 0.618 [0.546, 0.677] | 0.973 [0.909, 1.000] | 0.459 [0.353, 0.544] | 0.046 [0.020, 0.076] | n/a | n/a |\n| minus_resolution_rerank | 0.848 [0.797, 0.898] | 0.854 [0.799, 0.901] | 0.946 [0.862, 1.000] | 0.429 [0.322, 0.518] | 0.056 [0.025, 0.091] | n/a | n/a |\n| minus_risk_llm | 0.848 [0.797, 0.898] | 0.854 [0.799, 0.901] | 0.730 [0.571, 0.871] | 0.486 [0.354, 0.603] | 0.091 [0.051, 0.137] | n/a | n/a |\n| minus_retrieval | 0.848 [0.797, 0.898] | 0.854 [0.799, 0.901] | 0.946 [0.862, 1.000] | 0.440 [0.331, 0.530] | 0.020 [0.005, 0.041] | n/a | n/a |\n\nEscalation recall rests on 37 gold positives: one more missed escalation moves it by 2.7 points. Safe-auto rates rest on 9 autonomous rows. Intervals that overlap heavily are reported as not distinguishable in the reports.",
+ "provenance": {
+  "golden_rows": 197,
+  "golden_sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9",
+  "source": "frozen Phase 6 artifacts (artifacts/evaluation); served as stored, nothing recomputed"
+ }
+}

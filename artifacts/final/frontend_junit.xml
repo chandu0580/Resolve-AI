@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="93" failures="0" errors="0" time="23.5611374">
+    <testsuite name="tests/api-client.test.ts" timestamp="2026-09-11T08:35:40.641Z" hostname="LAPTOP-SCAR" tests="10" failures="0" errors="0" skipped="0" time="0.165179">
+        <testcase classname="tests/api-client.test.ts" name="typed API client &gt; returns data with the correlation headers" time="0.0344075">
+        </testcase>
+        <testcase classname="tests/api-client.test.ts" name="typed API client &gt; posts the conversation to /resolve as JSON with an optional request id" time="0.0042461">
+        </testcase>
+        <testcase classname="tests/api-client.test.ts" name="typed API client &gt; turns the API error body into an ApiError with code, message, request id and trace id" time="0.0033376">
+        </testcase>
+        <testcase classname="tests/api-client.test.ts" name="typed API client &gt; keeps validation details from a 413" time="0.002469">
+        </testcase>
+        <testcase classname="tests/api-client.test.ts" name="typed API client &gt; reports an unreachable API as api_unavailable" time="0.0022732">
+        </testcase>
+        <testcase classname="tests/api-client.test.ts" name="typed API client &gt; reports a request that exceeds its timeout as timeout" time="0.0387599">
+        </testcase>
+        <testcase classname="tests/api-client.test.ts" name="typed API client &gt; reports a caller cancellation as cancelled" time="0.0188495">
+        </testcase>
+        <testcase classname="tests/api-client.test.ts" name="typed API client &gt; reports a non-JSON body (for example an HTML proxy page) as invalid_response" time="0.047924">
+        </testcase>
+        <testcase classname="tests/api-client.test.ts" name="typed API client &gt; treats readiness 503 as a payload, not an error" time="0.0038869">
+        </testcase>
+        <testcase classname="tests/api-client.test.ts" name="typed API client &gt; load() returns the error instead of throwing, for server components" time="0.0035505">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/api-contract.test.ts" timestamp="2026-09-11T08:35:40.677Z" hostname="LAPTOP-SCAR" tests="14" failures="0" errors="0" skipped="0" time="0.0666654">
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; A auto handle is a complete ResolveResponse" time="0.007964">
+        </testcase>
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; B clarification is a complete ResolveResponse" time="0.001342">
+        </testcase>
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; C security handoff is a complete ResolveResponse" time="0.0014928">
+        </testcase>
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; D insufficient evidence is a complete ResolveResponse" time="0.0017711">
+        </testcase>
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; E prompt injection is a complete ResolveResponse" time="0.0014918">
+        </testcase>
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; F model unavailable is a complete ResolveResponse" time="0.0012508">
+        </testcase>
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; G repeat contact is a complete ResolveResponse" time="0.0012532">
+        </testcase>
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; verification failed is a complete ResolveResponse" time="0.0017414">
+        </testcase>
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; covers every decision path the UI distinguishes" time="0.002715">
+        </testcase>
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; rejects bodies that are not a ResolveResponse" time="0.0017723">
+        </testcase>
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; trace summaries carry the enriched decision fields" time="0.0114116">
+        </testcase>
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; every recorded trace event maps to a timeline stage" time="0.0049183">
+        </testcase>
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; traces never contain the customer text" time="0.0033767">
+        </testcase>
+        <testcase classname="tests/api-contract.test.ts" name="captured API responses match what the UI renders &gt; demo scenarios and the evaluation summary have the fields the UI reads" time="0.0179864">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/clarification.test.tsx" timestamp="2026-09-11T08:35:40.757Z" hostname="LAPTOP-SCAR" tests="3" failures="0" errors="0" skipped="0" time="0.5202638">
+        <testcase classname="tests/clarification.test.tsx" name="clarification packet &gt; explains why it is unsafe to resolve and what is missing" time="0.3976259">
+        </testcase>
+        <testcase classname="tests/clarification.test.tsx" name="clarification packet &gt; shows details the customer already provided, so the question does not re-ask them" time="0.109038">
+        </testcase>
+        <testcase classname="tests/clarification.test.tsx" name="clarification packet &gt; renders nothing without a clarification packet" time="0.0089877">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/decision.test.tsx" timestamp="2026-09-11T08:35:40.774Z" hostname="LAPTOP-SCAR" tests="7" failures="0" errors="0" skipped="0" time="1.937691">
+        <testcase classname="tests/decision.test.tsx" name="decision rendering &gt; shows AUTO HANDLE with the policy rule and version" time="0.9827079">
+        </testcase>
+        <testcase classname="tests/decision.test.tsx" name="decision rendering &gt; shows HUMAN HANDOFF with a human-readable reason" time="0.0837968">
+        </testcase>
+        <testcase classname="tests/decision.test.tsx" name="decision rendering &gt; shows CLARIFICATION REQUIRED" time="0.0369909">
+        </testcase>
+        <testcase classname="tests/decision.test.tsx" name="decision rendering &gt; renders evidence sufficiency as a four-step scale with an explanation, not as confidence" time="0.1856791">
+        </testcase>
+        <testcase classname="tests/decision.test.tsx" name="decision rendering &gt; explains insufficient evidence" time="0.0701648">
+        </testcase>
+        <testcase classname="tests/decision.test.tsx" name="decision rendering &gt; lists every output-gate check with text, not colour alone" time="0.2507992">
+        </testcase>
+        <testcase classname="tests/decision.test.tsx" name="decision rendering &gt; shows intent, risk and policy inputs behind the decision" time="0.3199936">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/evaluation.test.tsx" timestamp="2026-09-11T08:35:40.819Z" hostname="LAPTOP-SCAR" tests="5" failures="0" errors="0" skipped="0" time="4.9945689">
+        <testcase classname="tests/evaluation.test.tsx" name="evaluation page &gt; carries the frozen golden set warning and the misleading headline link" time="2.5584713">
+        </testcase>
+        <testcase classname="tests/evaluation.test.tsx" name="evaluation page &gt; shows headline metrics with confidence intervals from the artifacts" time="0.6528277">
+        </testcase>
+        <testcase classname="tests/evaluation.test.tsx" name="evaluation page &gt; covers intent, escalation, autonomy, retrieval, groundedness, latency, cost and baselines" time="1.6829219">
+        </testcase>
+        <testcase classname="tests/evaluation.test.tsx" name="evaluation page &gt; renders an explicit error state when the artifacts are unavailable" time="0.0845049">
+        </testcase>
+        <testcase classname="tests/evaluation.test.tsx" name="evaluation page &gt; parses the evaluation markdown, keeping the document&apos;s own list numbering" time="0.0032009">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/evidence.test.tsx" timestamp="2026-09-11T08:35:40.852Z" hostname="LAPTOP-SCAR" tests="7" failures="0" errors="0" skipped="0" time="1.7459082">
+        <testcase classname="tests/evidence.test.tsx" name="evidence rendering &gt; shows the historical customer message, the reply, relevance and resolution signal" time="0.8752499">
+        </testcase>
+        <testcase classname="tests/evidence.test.tsx" name="evidence rendering &gt; expands to explain why the case was selected, and collapses again" time="0.3843587">
+        </testcase>
+        <testcase classname="tests/evidence.test.tsx" name="evidence rendering &gt; shows the source record without exposing embeddings" time="0.1696513">
+        </testcase>
+        <testcase classname="tests/evidence.test.tsx" name="evidence rendering &gt; states selection reasons only from recorded signals" time="0.0028993">
+        </testcase>
+        <testcase classname="tests/evidence.test.tsx" name="evidence rendering &gt; marks cited cases in the evidence panel and lists resolution patterns" time="0.2797997">
+        </testcase>
+        <testcase classname="tests/evidence.test.tsx" name="evidence rendering &gt; says plainly when there is no resolution pattern" time="0.0132765">
+        </testcase>
+        <testcase classname="tests/evidence.test.tsx" name="evidence rendering &gt; has a truthful empty state when nothing was retrieved" time="0.0153952">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/handoff.test.tsx" timestamp="2026-09-11T08:35:40.961Z" hostname="LAPTOP-SCAR" tests="4" failures="0" errors="0" skipped="0" time="1.4181119">
+        <testcase classname="tests/handoff.test.tsx" name="handoff packet &gt; shows severity, queue, reason, next action and unresolved questions" time="0.5912957">
+        </testcase>
+        <testcase classname="tests/handoff.test.tsx" name="handoff packet &gt; builds a plain-text summary from the packet only" time="0.0046336">
+        </testcase>
+        <testcase classname="tests/handoff.test.tsx" name="handoff packet &gt; includes the blocked draft in the summary when verification failed" time="0.0013602">
+        </testcase>
+        <testcase classname="tests/handoff.test.tsx" name="handoff packet &gt; copies the handoff summary to the clipboard" time="0.8162788">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/proxy-route.test.ts" timestamp="2026-09-11T08:35:41.005Z" hostname="LAPTOP-SCAR" tests="4" failures="0" errors="0" skipped="0" time="0.117069">
+        <testcase classname="tests/proxy-route.test.ts" name="same-origin API forwarder &gt; forwards allowed endpoints with the query, request id, status and correlation headers" time="0.089514">
+        </testcase>
+        <testcase classname="tests/proxy-route.test.ts" name="same-origin API forwarder &gt; passes the POST body and API error statuses through unchanged" time="0.0124487">
+        </testcase>
+        <testcase classname="tests/proxy-route.test.ts" name="same-origin API forwarder &gt; does not forward paths outside the API&apos;s endpoints" time="0.0052668">
+        </testcase>
+        <testcase classname="tests/proxy-route.test.ts" name="same-origin API forwarder &gt; answers api_unavailable in the API&apos;s error shape when the backend is down" time="0.004655">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/response.test.tsx" timestamp="2026-09-11T08:35:41.054Z" hostname="LAPTOP-SCAR" tests="4" failures="0" errors="0" skipped="0" time="1.3545988">
+        <testcase classname="tests/response.test.tsx" name="response panel &gt; labels an automatic reply as a grounded, verified, simulated response" time="1.1616301">
+        </testcase>
+        <testcase classname="tests/response.test.tsx" name="response panel &gt; shows a clarification as a question, not an answer" time="0.0675644">
+        </testcase>
+        <testcase classname="tests/response.test.tsx" name="response panel &gt; shows NO CUSTOMER RESPONSE for a handoff and never implies an answer was sent" time="0.0678563">
+        </testcase>
+        <testcase classname="tests/response.test.tsx" name="response panel &gt; shows a draft blocked by verification with the verifier&apos;s issues" time="0.0512894">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/rows-store.test.ts" timestamp="2026-09-11T08:35:41.066Z" hostname="LAPTOP-SCAR" tests="7" failures="0" errors="0" skipped="0" time="0.6482946">
+        <testcase classname="tests/rows-store.test.ts" name="local result store &gt; saves, finds and clears full results" time="0.0132519">
+        </testcase>
+        <testcase classname="tests/rows-store.test.ts" name="local result store &gt; keeps at most the configured number of results, newest first, without duplicates" time="0.6130631">
+        </testcase>
+        <testcase classname="tests/rows-store.test.ts" name="local result store &gt; ignores corrupted storage" time="0.0013306">
+        </testcase>
+        <testcase classname="tests/rows-store.test.ts" name="conversation rows &gt; merges trace summaries with local results and never invents a preview" time="0.0048058">
+        </testcase>
+        <testcase classname="tests/rows-store.test.ts" name="conversation rows &gt; filters by decision, risk and evidence, and searches text and ids" time="0.0044287">
+        </testcase>
+        <testcase classname="tests/rows-store.test.ts" name="conversation rows &gt; computes live metrics only from recorded traces" time="0.005664">
+        </testcase>
+        <testcase classname="tests/rows-store.test.ts" name="conversation rows &gt; keeps the console version in step with package.json" time="0.0009461">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/simulator.test.tsx" timestamp="2026-09-11T08:35:41.077Z" hostname="LAPTOP-SCAR" tests="6" failures="0" errors="0" skipped="0" time="6.810125">
+        <testcase classname="tests/simulator.test.tsx" name="Try ResolveAI simulator &gt; is clearly labelled as a simulation and lists the API&apos;s demo scenarios" time="1.6135261">
+        </testcase>
+        <testcase classname="tests/simulator.test.tsx" name="Try ResolveAI simulator &gt; validates the message before calling the API" time="0.5887046">
+        </testcase>
+        <testcase classname="tests/simulator.test.tsx" name="Try ResolveAI simulator &gt; shows honest loading while running, then the full result, and stores it in this browser" time="1.8867052">
+        </testcase>
+        <testcase classname="tests/simulator.test.tsx" name="Try ResolveAI simulator &gt; runs a demo scenario through /resolve and compares expected with actual" time="1.6967254">
+        </testcase>
+        <testcase classname="tests/simulator.test.tsx" name="Try ResolveAI simulator &gt; shows an explicit error when the API is unavailable" time="0.4525575">
+        </testcase>
+        <testcase classname="tests/simulator.test.tsx" name="Try ResolveAI simulator &gt; refuses to render a response that is not a ResolveResponse" time="0.5652703">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/states.test.tsx" timestamp="2026-09-11T08:35:41.107Z" hostname="LAPTOP-SCAR" tests="16" failures="0" errors="0" skipped="0" time="0.7828613">
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; api_unavailable has a specific explanation" time="0.0272715">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; timeout has a specific explanation" time="0.0009631">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; invalid_response has a specific explanation" time="0.0009197">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; trace_not_found has a specific explanation" time="0.0010003">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; invalid_trace_id has a specific explanation" time="0.0013636">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; evaluation_not_available has a specific explanation" time="0.0007799">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; agent_not_ready has a specific explanation" time="0.0006932">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; input_too_large has a specific explanation" time="0.0008055">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; unauthorized has a specific explanation" time="0.0017264">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; forbidden has a specific explanation" time="0.0198565">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; rate_limited has a specific explanation" time="0.0023205">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; falls back to the API message for unknown codes" time="0.0111452">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; renders the error with its code, status and correlation ids" time="0.6208573">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; lists validation details" time="0.0422312">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; shows a model outage as a safe handoff rather than an error" time="0.0315683">
+        </testcase>
+        <testcase classname="tests/states.test.tsx" name="error and empty states &gt; renders an empty state with its explanation" time="0.0113989">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/trace.test.tsx" timestamp="2026-09-11T08:35:41.144Z" hostname="LAPTOP-SCAR" tests="6" failures="0" errors="0" skipped="0" time="2.9998005">
+        <testcase classname="tests/trace.test.tsx" name="trace timeline &gt; groups recorded events into the pipeline stages in order" time="0.0271104">
+        </testcase>
+        <testcase classname="tests/trace.test.tsx" name="trace timeline &gt; marks skipped and fallback stages from the recorded stage status" time="0.0012664">
+        </testcase>
+        <testcase classname="tests/trace.test.tsx" name="trace timeline &gt; shows status, duration and time per stage and reveals safe metadata on click" time="1.7750765">
+        </testcase>
+        <testcase classname="tests/trace.test.tsx" name="trace timeline &gt; expands every stage at once" time="0.8735164">
+        </testcase>
+        <testcase classname="tests/trace.test.tsx" name="trace timeline &gt; reconstructs the decision from a trace alone and says text is not stored" time="0.3130901">
+        </testcase>
+        <testcase classname="tests/trace.test.tsx" name="trace timeline &gt; places Phase 9 failure events on the stage that emitted them, with a failure status" time="0.0033776">
+        </testcase>
+    </testsuite>
+</testsuites>
