@@ -133,7 +133,7 @@ Not hidden, and each is stated where a reader meets the claim it qualifies:
 |---|---|---|---|
 | 1 | **Rate `data/human_eval/human_scoring_packet.csv`** per `docs/HUMAN_JUDGE_GUIDE.md` (8 columns × 50 rows), then re-run `python scripts/evaluate.py --cached` | 60–90 min | The brief explicitly asks for "evidence of how well your judge agrees with a human". Generating the ratings would be fabrication. The code path is built and proven |
 | 1b | Optional but valuable: hand-check some of the 197 golden rows yourself and record it | 1–3 h | The brief asks for **hand-labelled** examples; both current passes were AI annotators. Even a partial human pass, reported as such, would close the largest honesty gap |
-| 1c | Send the repo link and report to **anurag@hiverhq.com** (public, or private with access granted) | 5 min | The brief's submission step |
+| 1c | Send the repo link and report to the evaluation contact (public, or private with access granted) | 5 min | The brief's submission step |
 | 2 | Optional: run the **full** fresh-virtual-environment check `python scripts/verification/release_checks.py clean-env --base-dir <dir>` | ~2.8 h, unattended | The targeted variant passed in this pass; the full variant additionally proves `pip install` from a bare environment. Not re-run since this pass's changes |
 | 3 | Create the repository, commit, push and set access | 5 min | Deliberately not done by the agent |
 | 4 | Confirm `.env` stays untracked after the commit (`git status`) | 1 min | It holds a real model key |

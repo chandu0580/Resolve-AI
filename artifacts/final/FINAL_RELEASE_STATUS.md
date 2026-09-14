@@ -116,7 +116,7 @@ ResolveAI/
 |---|---|---|
 | 1 | Rate `data/human_eval/human_scoring_packet.csv` per `docs/HUMAN_JUDGE_GUIDE.md`, then re-run `python scripts/evaluate.py --cached` | 60–90 min |
 | 2 | Optionally hand-check golden rows yourself and record it, to address the "hand-labelled" wording | 1–3 h |
-| 3 | Commit, push, set repository access, and send the link to anurag@hiverhq.com | 10 min |
+| 3 | Commit, push, set repository access, and send the link to the evaluation contact | 10 min |
 
 ## Start and test commands
 

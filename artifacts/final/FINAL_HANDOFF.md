@@ -45,7 +45,7 @@ It is **already running**. Nothing to start.
 | **Backend** | http://127.0.0.1:8000 (health: `/api/v1/health`) |
 | **Profile** | `production` — authentication **required**, Swagger docs disabled (`/docs` returns 401) |
 | **Authentication** | Bearer tokens with `resolve` and `read` scopes. The console server holds the resolve token and attaches it per request; **the browser never receives a credential**, so you just open the URL and use it |
-| **Token location** | `C:\Users\chandu s\AppData\Local\Temp\claude\c--projects-ResolveAI\bc0a9e01-b062-4361-bce8-7585dd1046ee\scratchpad\smoke_tokens.env` — generated for this session, never committed |
+| **Token location** | `<temp_dir>/smoke_tokens.env` — generated ephemerally for test sessions, never committed |
 | **Environment needed** | None to use the UI. To call the API directly: `Authorization: Bearer <RESOLVEAI_API_TOKEN>` from that file |
 
 To restart later:
@@ -108,6 +108,6 @@ Only work that needs a person:
 1. **Rate the 50-row judge packet** (`docs/HUMAN_JUDGE_GUIDE.md`), then `python scripts/evaluate.py --cached`. 60–90 minutes, and
    it closes the one MISSING assignment requirement.
 2. Optionally hand-check golden rows to address the "hand-labelled" wording.
-3. Commit, push, set access, and send to anurag@hiverhq.com.
+3. Commit, push, set access, and send to the evaluation contact.
 
 No engineering work remains. Nothing has been committed or pushed.

@@ -311,9 +311,3 @@ directly (`resolveai/evaluation/agreement.py`, `bootstrap.py`) rather than taken
 annotation guide and escalation policy are written for this project.
 
 AI assistance: this repository was built with an AI coding assistant. The final golden evaluation set (197 rows) was independently hand-labelled by the human project owner via the custom labelling studio (`data/golden/golden_human_labels.csv` promoted to `data/golden/golden_final.csv`), with the prior AI-assisted annotation passes preserved in `data/golden/golden_ai_adjudicated_v11.csv` as an auditable historical artifact. Independent human ratings were also collected for the 50-example LLM-judge validation study (`data/human_eval/human_scoring_packet.csv`).
-
-## Submission Details
-
-- **Assignment**: Hiver SDE Intern Take-Home Assessment
-- **Submission Destination**: Repository link submitted to `anurag@hiverhq.com`
-- **Candidate Implementation**: Complete governed, evidence-grounded reference implementation with reproducible evaluation harness and interactive console.
