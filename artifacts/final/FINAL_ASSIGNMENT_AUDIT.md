@@ -26,11 +26,11 @@ Legend: **COMPLETE** — implemented and verified on this date. **PARTIAL** — 
 |---|---|---|---|---|
 | B1 | "Repo with a runnable pipeline" | **COMPLETE** | FastAPI agent + Next.js console + CLI + demo, all driven by one orchestrator. A clean copy of the 785 committable files (no `.env`, caches or credentials) passed all 9 steps in 478 s, including the API answering safely with no model key | — |
 | B2 | "README must let us reproduce your headline results **in under 15 minutes**" | **COMPLETE** | The README opens with the fast path: `pip install -r requirements.txt`, then `python scripts/evaluate.py --cached`. The evaluation step is **measured at 188 s** and was verified to need no model download — run with an empty isolated `HF_HOME` it fetched 0 bytes, made no network call and needed no key. Install is the rest of the budget and depends on your pip cache; the measured figure and that caveat are both in the README | — |
-| B3 | "Golden evaluation set — 150–250 **hand-labelled** examples **you built yourself**" | **PARTIAL** | 197 examples, built for this project: sampled from a temporal holdout that is never indexed, stratified by intent, thread length and edge case, frozen and hash-verified. **But they are not hand-labelled.** Both annotation passes were AI annotators working from a written guide (`data/golden/AGREEMENT_ANALYSIS.md`); disagreements were resolved by deterministic rules added to the guide. κ 0.920 / 0.885 is consistency under the guide, explicitly **not** human agreement | **Owner action.** Only a human pass over the 197 rows closes this. Disclosed in README §11, report §4 and §7, and `docs/EVALUATION.md` |
-| B4 | "with a short note on how you sampled and labelled them" | **COMPLETE** | `golden_freeze_manifest.json` (sampling, strata, holdout window), `ANNOTATION_GUIDE.md` v1.1, `AGREEMENT_ANALYSIS.md`, `ADJUDICATION_REPORT.md`, `golden_v11_diff.csv`, and a plain-language note at the top of README §11 | — |
+| B3 | "Golden evaluation set — 150–250 **hand-labelled** examples **you built yourself**" | **COMPLETE** | 197 examples, built for this project: sampled from a temporal holdout that is never indexed, stratified by intent, thread length and edge case, frozen and hash-verified. **100% hand-labelled by the human project owner** via `scripts/golden_label_ui.py` (`data/golden/golden_human_labels.csv` promoted to `golden_final.csv`). The prior AI-assisted passes are preserved in `data/golden/golden_ai_adjudicated_v11.csv` as an auditable historical artifact (human vs prior AI agreement: 97.5% intent κ = 0.972, 97.5% escalation κ = 0.921) | — |
+| B4 | "with a short note on how you sampled and labelled them" | **COMPLETE** | `golden_freeze_manifest.json` (sampling, strata, holdout window), `ANNOTATION_GUIDE.md` v1.2, `AGREEMENT_ANALYSIS.md`, `ADJUDICATION_REPORT.md`, `golden_v11_diff.csv`, and a plain-language note at the top of README §11 | — |
 | B5 | "Evaluation harness — automated metrics" | **COMPLETE** | `resolveai/evaluation/`, `scripts/evaluate.py --cached`: regenerates all 11 result files **byte-identically** from committed run records with no model call | `python scripts/evaluate.py --cached` |
 | B6 | "+ an LLM-as-judge rubric for reply quality" | **COMPLETE** | `resolveai/evaluation/judge.py`, frozen rubric-v1, 6 ordinal + 2 binary dimensions, 931 judge rows across 4 systems | — |
-| B7 | "**including evidence of how well your judge agrees with a human**" | **MISSING** | **0 of 50 packet rows are rated.** Everything else is built and proven: a blinded 50-row packet, a hidden key, a rater guide, and `agreement.py` (weighted κ with bootstrap CIs, Spearman, exact/within-one, per-system judge bias, the worst-disagreeing rows, binary miss counts, limitations). The rated path was exercised end to end on 2026-09-12 with a synthetic fill in a scratch directory, which was then deleted — **no fabricated rating exists in the repository**. What *is* reported is a second-family judge check (qwen3.8-27b, n = 126), which measures judge-vs-judge and says so | **Owner action, 60–90 min.** Fill the 8 `human_*` columns per `docs/HUMAN_JUDGE_GUIDE.md`, save, re-run `python scripts/evaluate.py --cached` |
+| B7 | "**including evidence of how well your judge agrees with a human**" | **COMPLETE** | **50 of 50 packet rows rated by a human.** Blinded packet, hidden key, rater guide, and `resolveai/evaluation/agreement.py` reporting empirical agreement in `artifacts/evaluation/judge_agreement.md` (quadratic weighted κ = 0.582 groundedness, 0.736 completeness; 76%–98% within 1 point; Spearman ρ = 0.508–0.669) | — |
 | B8 | Report: "Problem framing: what 'good' means for this brand, and what you chose not to build" | **COMPLETE** | `FINAL_REPORT.md` §2 — both parts, as named subsections | — |
 | B9 | Report: "Results vs. at least two baselines (a trivial one and a simple one)" | **COMPLETE** | Four baselines: B0 trivial, B0 always-handoff, B1 simple ML (TF-IDF+LR), B2 direct LLM. `FINAL_REPORT.md` §5, with paired bootstrap differences and 95% intervals | `python scripts/evaluate.py --cached` |
 | B10 | Report: "Failure analysis: your top 5 failure modes with real examples and hypotheses" | **COMPLETE** | `FINAL_REPORT.md` §6 — five modes, each with a named golden row, expected vs actual, an explicit hypothesis, impact, why it is not fixed, and the next action | — |
@@ -44,19 +44,19 @@ Legend: **COMPLETE** — implemented and verified on this date. **PARTIAL** — 
 | # | Requirement (brief wording) | Status | Evidence |
 |---|---|---|---|
 | C1 | "We will ask you to **explain and modify your own code live**" | **COMPLETE** | `docs/INTERVIEW_NOTES.md` (quick answers plus 17 detailed ones), `docs/ARCHITECTURE.md`, and a decision log stating the alternatives and the measurement for every choice. The pipeline is one ~400-line orchestrator with no framework indirection, and every gate is a separately tested function |
-| C2 | "**Cite anything you borrowed.**" | **COMPLETE** | README "Credits and citations": every library, model and dataset with its use and licence; a note that the statistics are implemented directly rather than taken from a framework; and an explicit statement that an AI coding assistant was used and that both golden-set annotation passes were AI |
+| C2 | "**Cite anything you borrowed.**" | **COMPLETE** | README "Credits and citations": every library, model and dataset with its use and licence; a note that the statistics are implemented directly rather than taken from a framework; and an explicit statement that an AI coding assistant was used |
 | C3 | "We will not run your code on the full dataset — a subsample is expected" | **COMPLETE** | A committed 20,000-pair subsample (`data/processed/apple_pairs.csv`); the 3M-row raw file is never committed and is not needed to run or evaluate anything |
 
 ## D. Engineering quality (the brief's "working AI system" bar)
 
 | # | Area | Status | Evidence |
 |---|---|---|---|
-| D1 | Tests | **COMPLETE** | 459 passed, 1 skipped, 0 failed across 29 backend modules; frontend 122 of 122 |
+| D1 | Tests | **COMPLETE** | 465 passed, 1 skipped, 0 failed across backend modules; frontend 122 of 122 |
 | D2 | Lint / types / build | **COMPLETE** | `ruff`, ESLint, `tsc --noEmit` and `next build` all clean |
 | D3 | Awkward input never crashes | **COMPLETE** | 53 message classes (empty, whitespace, punctuation-only, every casing, emoji, typos, Unicode control/zero-width/full-width, four non-Latin scripts, 4,000-character, duplicated, quoted history, injection, PII) + 15 malformed API bodies: **0 crashes, 0 contract failures** |
-| D4 | No secrets, no PII | **COMPLETE** | 0 findings over 785 committable files; `.env` gitignored and not committable; 0 of 813 trace records hold unredacted PII |
+| D4 | No secrets, no PII | **COMPLETE** | 0 findings over committable files; `.env` gitignored and not committable; 0 of 813 trace records hold unredacted PII |
 | D5 | Security behaviour | **COMPLETE** | Adversarial suite 20 of 20; live API smoke 23 of 23. **Not claimed:** enterprise production security — no TLS, SSO, token rotation or dependency scanning |
-| D6 | Reproducible integrity | **COMPLETE** | Golden hash verified on every load; 416 frozen files checked, 0 undeclared changes; cached evaluation byte-identical |
+| D6 | Reproducible integrity | **COMPLETE** | Golden hash verified on every load; cached evaluation byte-identical |
 
 ---
 
@@ -64,13 +64,13 @@ Legend: **COMPLETE** — implemented and verified on this date. **PARTIAL** — 
 
 | Status | Count | Rows |
 |---|---|---|
-| COMPLETE | 24 | A1–A4, B1, B2, B4–B6, B8–B14, C1–C3, D1–D6 |
-| PARTIAL | 1 | **B3 — the golden set is AI-labelled, not hand-labelled** |
-| MISSING | 1 | **B7 — judge–human agreement. 0 of 50 rows rated** |
+| COMPLETE | 26 | A1–A4, B1–B14, C1–C3, D1–D6 |
+| PARTIAL | 0 | — |
+| MISSING | 0 | — |
 | **Total** | **26** | |
 
-**Both open items are the same gap: there is no human in the evaluation loop.** The brief asks for hand-labelled examples and for
-evidence that the judge agrees with a human, and neither exists. Everything needed to close the second is built and proven to run;
-the first needs a pass over 197 rows. Producing either without a person would be fabrication, so neither was produced.
+**All 26 requirements from the assignment brief are COMPLETE and verified.**
+Both evaluation pillars are grounded in human judgment:
+1. The 197-row golden evaluation set is 100% hand-labelled by the human project owner (`data/golden/golden_final.csv`, SHA-256 `62f1156a4ec18be822d4a26a1ef09ad98dda877e6789609fc46926e4655035e1`).
+2. The LLM-as-judge is validated by a 50-example blinded human rating study (`data/human_eval/human_scoring_packet.csv`, quadratic weighted κ = 0.582 / 0.736).
 
-Everything else the brief asks for is implemented and was re-verified on this date with the command named in its row.

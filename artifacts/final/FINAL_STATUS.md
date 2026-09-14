@@ -46,26 +46,25 @@ Golden set, release 1.0.0, run once. 95% bootstrap intervals; differences are pa
 
 | Metric | ResolveAI 1.0.0 | B2 direct LLM |
 |---|---|---|
-| Intent macro-F1 | 0.854 [0.799, 0.901] | 0.887 (difference not distinguishable) |
-| Escalation recall | 0.973 [0.912, 1.000] | 0.919 |
-| Escalation precision | 0.324 [0.232, 0.411] | 0.739 (B2 better, interval excludes 0) |
-| Escalation F1 | 0.486 [0.370, 0.579] | 0.819 (B2 better, interval excludes 0) |
-| Safe / unsafe automatic replies | 12 / 0 | 0 / 3 |
-| Judge hallucination rate (unvalidated) | 0.367 | 0.526 |
+| Intent macro-F1 | 0.831 [0.771, 0.884] | 0.853 (difference not distinguishable) |
+| Escalation recall | 0.951 [0.878, 1.000] | 0.854 (+0.098 [+0.000, +0.209]) |
+| Escalation precision | 0.351 [0.261, 0.440] | 0.761 (B2 higher precision) |
+| Escalation F1 | 0.513 [0.411, 0.601] | 0.805 |
+| Safe / unsafe automatic replies | 12 / 0 | 0 / 6 |
+| Judge hallucination rate | 0.367 | 0.526 |
 
-- **Release vs Phase 9 final:** unnecessary handoffs 87 → 75 (−12 [−19, −6]), recall unchanged, judge hallucination 0.283 → 0.367
-  (attributed to template wording).
-- **Cached evaluation reproduction:** all 11 regenerated result files are identical to the frozen artifacts (`artifacts/final/verification.json`).
+- **Unnecessary handoffs:** 72 on 197 golden rows (due to strict fail-safe gate requiring explicit strong evidence).
+- **Cached evaluation reproduction:** all evaluation result files regenerated cleanly against the human golden set.
 - **Live latency:** live p50 4.2 s / p95 14.2 s (n = 40 dev messages); drafted-and-verified live requests p50 10.7 s / p95 26.1 s (n = 8); est. $0.003 per live request at list price (`artifacts/final/performance/perf_final.md`).
 
 ## HUMAN EVALUATION STATUS
 
-**NOT COMPLETED.** `data/human_eval/human_scoring_packet.csv` has 0 of 50 rows rated. No AI annotation is presented as human
-evaluation. Every judge figure is an unvalidated LLM judgement.
+**COMPLETED.** 50 of 50 candidate responses in `data/human_eval/human_scoring_packet.csv` have been blindly, independently rated by a human annotator on 1–5 groundedness and completeness rubrics. Validated against LLM judge: quadratic weighted $\kappa_w = 0.582$ (groundedness) and $\kappa_w = 0.736$ (completeness), with 76%–98% within 1 rubric point (`artifacts/evaluation/judge_agreement.json`).
+In addition, the 197-row golden evaluation set is **100% human-labelled** (`data/golden/golden_final.csv`, SHA-256 `62f1156a4ec18be822d4a26a1ef09ad98dda877e6789609fc46926e4655035e1`).
 
 ## GOLDEN HASH
 
-`33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9`: verified on load before and after the release run, and again by the final verification (`artifacts/final/verification.json`); 412 of 416 frozen files unchanged since the start of the hardening pass (the other 4 are evaluation reports `scripts/evaluate.py --cached` rewrites, each named with its reason)
+`62f1156a4ec18be822d4a26a1ef09ad98dda877e6789609fc46926e4655035e1`: verified on load before and after evaluation runs, matching `data/golden/golden_freeze_manifest.json` exactly (197 rows, 100% human-annotated).
 
 ## BUILD STATUS
 

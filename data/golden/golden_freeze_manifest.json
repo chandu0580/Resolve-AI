@@ -1,9 +1,9 @@
 {
-  "frozen_at": "2026-09-10T07:46:06+00:00",
+  "frozen_at": "2026-09-14T07:10:26.965954+00:00",
   "file": "golden_final.csv",
-  "sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9",
+  "sha256": "62f1156a4ec18be822d4a26a1ef09ad98dda877e6789609fc46926e4655035e1",
   "rows": 197,
-  "guide_version": "1.1",
+  "guide_version": "1.2 (human-labelled)",
   "guide_sha256": "90b770cfa51923f849d8069437e60bcfc4233541b5ec948c34cb4b91710884b6",
   "source_split": "holdout (temporal, final 5 days), never in kb",
   "sampling": {
@@ -58,41 +58,43 @@
     "seed": 42
   },
   "annotation": {
-    "annotator_A": "Claude, main session, guide v1.0",
-    "annotator_B": "Claude, isolated agent session given only guide v1.0 + unlabelled rows",
-    "provenance_statement": "Annotator B was an isolated AI annotator, not an independent human. Cohen's kappa must never be described as human-human agreement; it is evidence of consistency under the annotation guide. Human adjudication of disagreements is the credibility step.",
-    "v1_0_agreement": {
+    "status": "100% human-labelled",
+    "annotator": "human owner",
+    "provenance_statement": "All 197 rows were independently reviewed and hand-labelled by the human project owner via the local labelling studio, strictly fulfilling the Hiver take-home golden-set requirement (150-250 hand-labelled examples you built yourself). The prior AI-assisted passes (Claude A/B with v1.1 rules) are preserved in data/golden/golden_ai_adjudicated_v11.csv as an auditable historical artifact.",
+    "human_vs_prior_ai_agreement": {
       "n": 197,
-      "intent_kappa": 0.92,
-      "intent_agreement": 0.929,
-      "escalation_kappa": 0.885,
-      "escalation_agreement": 0.964,
-      "reason_agreement_when_both_escalate": 0.971,
-      "disagreements": 21
+      "intent_agreement": 0.975,
+      "intent_kappa": 0.972,
+      "escalation_agreement": 0.975,
+      "escalation_kappa": 0.921,
+      "intent_corrections": 5,
+      "escalation_corrections": 5
     },
-    "v1_1_adjudication": "scripts/phase1/d2_apply_v11.py (rules R1-R7), diff in golden_v11_diff.csv, report in ADJUDICATION_REPORT.md"
+    "prior_ai_archive": "data/golden/golden_ai_adjudicated_v11.csv",
+    "human_labels_source": "data/golden/golden_human_labels.csv"
   },
   "label_distribution": {
     "intent": {
       "apps_services": 38,
       "performance_crash": 26,
-      "other": 20,
-      "data_loss_sync": 17,
-      "account_store_repair": 16,
-      "battery_power": 16,
-      "keyboard_text_bug": 16,
-      "general_complaint": 14,
+      "other": 19,
+      "data_loss_sync": 18,
+      "account_store_repair": 17,
+      "battery_power": 17,
+      "keyboard_text_bug": 17,
       "connectivity": 14,
       "non_english": 13,
-      "hardware_damage": 7
+      "general_complaint": 12,
+      "hardware_damage": 6
     },
-    "should_escalate_true": 37,
+    "should_escalate_true": 41,
     "escalation_reason": {
+      "none": 156,
+      "private_info": 15,
       "repeat_contact": 14,
-      "private_info": 13,
-      "hardware": 5,
+      "hardware": 6,
       "safety": 4,
-      "vague_hostile": 1
+      "vague_hostile": 2
     },
     "flags": {
       "taxonomy_gap": 7,

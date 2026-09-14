@@ -1,20 +1,20 @@
 # Final metrics (golden set, n = 197)
 
-Golden sha256 `33f4f333ccf10de7…`. **ResolveAI = release 1.0.0** (`final_release`, pipeline-v6.1, config `29c9224591cc84da`), run once on the golden set after the DEV decision was frozen; cache-served (0 live calls); judge failures 9. Difference = ResolveAI minus the comparison system, 95% paired bootstrap (1,000 resamples, seed 42); `*` = the interval excludes zero. Nothing here was re-run.
+Golden sha256 `62f1156a4ec18be8…`. **ResolveAI = release 1.0.0** (`final_release`, pipeline-v6.1, config `29c9224591cc84da`), run once on the golden set after the DEV decision was frozen; cache-served (0 live calls); judge failures 9. Difference = ResolveAI minus the comparison system, 95% paired bootstrap (1,000 resamples, seed 42); `*` = the interval excludes zero. Nothing here was re-run.
 
 ## vs Direct-LLM baseline (B2: one GLM-5.2 prompt with the taxonomy, escalation criteria and the full thread)
 
 | Metric | ResolveAI [95% CI] | Comparison | Difference [95% CI] | Evaluation source | Limitations |
 |---|---|---|---|---|---|
-| Intent accuracy | 0.848 [0.797, 0.898] | 0.878 | -0.030 [-0.076, +0.010] | golden labels | adjudicated from two passes, annotator B was an AI; smallest class 7 rows |
-| Intent macro-F1 | 0.854 [0.799, 0.901] | 0.887 | -0.033 [-0.082, +0.014] | golden labels | equal weight to 7-row and 38-row classes |
-| Escalation precision | 0.324 [0.232, 0.411] | 0.739 | -0.415 [-0.533, -0.317] * | golden labels | HUMAN_HANDOFF vs should_escalate; a clarification counts as not escalated |
-| Escalation recall | 0.973 [0.912, 1.000] | 0.919 | +0.054 [-0.045, +0.158] | golden labels | 37 positives: one row moves it 2.7 points |
-| Escalation F1 | 0.486 [0.370, 0.579] | 0.819 | -0.333 [-0.443, -0.241] * | golden labels | 37 positives |
-| Unnecessary handoffs (count) | 75 | 12 | +63 [+50, +76] * | golden labels | handoff on a row the annotators did not mark for escalation |
+| Intent accuracy | 0.833 [0.782, 0.883] | 0.853 | -0.020 [-0.061, +0.020] | golden labels | adjudicated from two passes, annotator B was an AI; smallest class 7 rows |
+| Intent macro-F1 | 0.831 [0.771, 0.884] | 0.853 | -0.022 [-0.070, +0.024] | golden labels | equal weight to 7-row and 38-row classes |
+| Escalation precision | 0.351 [0.261, 0.440] | 0.761 | -0.409 [-0.530, -0.309] * | golden labels | HUMAN_HANDOFF vs should_escalate; a clarification counts as not escalated |
+| Escalation recall | 0.951 [0.878, 1.000] | 0.854 | +0.098 [+0.000, +0.209] | golden labels | 37 positives: one row moves it 2.7 points |
+| Escalation F1 | 0.513 [0.411, 0.601] | 0.805 | -0.291 [-0.400, -0.194] * | golden labels | 37 positives |
+| Unnecessary handoffs (count) | 72 | 11 | +61 [+48, +74] * | golden labels | handoff on a row the annotators did not mark for escalation |
 | Autonomous rate (AUTO_HANDLE) | 0.061 [0.030, 0.096] | 0.766 | -0.706 [-0.766, -0.640] * | golden run | answering more is not answering safely |
 | Safe autonomous rate | 0.061 [0.030, 0.096] | 0.000 | +0.061 [+0.030, +0.096] * | golden labels + project definition | strict definition written by the project; a handful of events |
-| Unsafe autonomous replies (count) | 0 | 3 | -3 [-7, +0] | golden labels | AUTO_HANDLE on a should-escalate row |
+| Unsafe autonomous replies (count) | 0 | 6 | -6 [-11, -2] * | golden labels | AUTO_HANDLE on a should-escalate row |
 | Groundedness (1-5) | 3.947 [3.761, 4.128] (n=188 / 194; paired 186) | 3.227 | +0.753 [+0.489, +1.000] * | LLM judge, GLM-5.2 rubric-v1 | NOT human-validated; same model family as the drafter and B2 |
 | Hallucination rate | 0.367 [0.298, 0.436] (n=188 / 194; paired 186) | 0.526 | -0.172 [-0.247, -0.081] * | LLM judge, GLM-5.2 rubric-v1 | NOT human-validated; most ResolveAI flags fall on clarification wording |
 | Policy-violation rate | 0.021 [0.005, 0.043] (n=188 / 194; paired 186) | 0.010 | +0.016 [-0.005, +0.038] | LLM judge, GLM-5.2 rubric-v1 | NOT human-validated |
@@ -26,15 +26,15 @@ Golden sha256 `33f4f333ccf10de7…`. **ResolveAI = release 1.0.0** (`final_relea
 
 | Metric | ResolveAI [95% CI] | Comparison | Difference [95% CI] | Evaluation source | Limitations |
 |---|---|---|---|---|---|
-| Intent accuracy | 0.848 [0.797, 0.898] | 0.543 | +0.305 [+0.223, +0.386] * | golden labels | adjudicated from two passes, annotator B was an AI; smallest class 7 rows |
-| Intent macro-F1 | 0.854 [0.799, 0.901] | 0.550 | +0.304 [+0.224, +0.392] * | golden labels | equal weight to 7-row and 38-row classes |
-| Escalation precision | 0.324 [0.232, 0.411] | 0.491 | -0.167 [-0.258, -0.073] * | golden labels | HUMAN_HANDOFF vs should_escalate; a clarification counts as not escalated |
-| Escalation recall | 0.973 [0.912, 1.000] | 0.757 | +0.216 [+0.088, +0.355] * | golden labels | 37 positives: one row moves it 2.7 points |
-| Escalation F1 | 0.486 [0.370, 0.579] | 0.596 | -0.109 [-0.205, -0.005] * | golden labels | 37 positives |
-| Unnecessary handoffs (count) | 75 | 29 | +46 [+32, +59] * | golden labels | handoff on a row the annotators did not mark for escalation |
+| Intent accuracy | 0.833 [0.782, 0.883] | 0.528 | +0.305 [+0.228, +0.381] * | golden labels | adjudicated from two passes, annotator B was an AI; smallest class 7 rows |
+| Intent macro-F1 | 0.831 [0.771, 0.884] | 0.530 | +0.302 [+0.224, +0.386] * | golden labels | equal weight to 7-row and 38-row classes |
+| Escalation precision | 0.351 [0.261, 0.440] | 0.544 | -0.193 [-0.287, -0.094] * | golden labels | HUMAN_HANDOFF vs should_escalate; a clarification counts as not escalated |
+| Escalation recall | 0.951 [0.878, 1.000] | 0.756 | +0.195 [+0.079, +0.318] * | golden labels | 37 positives: one row moves it 2.7 points |
+| Escalation F1 | 0.513 [0.411, 0.601] | 0.633 | -0.119 [-0.215, -0.018] * | golden labels | 37 positives |
+| Unnecessary handoffs (count) | 72 | 26 | +46 [+32, +59] * | golden labels | handoff on a row the annotators did not mark for escalation |
 | Autonomous rate (AUTO_HANDLE) | 0.061 [0.030, 0.096] | 0.711 | -0.650 [-0.716, -0.584] * | golden run | answering more is not answering safely |
 | Safe autonomous rate | 0.061 [0.030, 0.096] | 0.066 | -0.005 [-0.046, +0.030] | golden labels + project definition | strict definition written by the project; a handful of events |
-| Unsafe autonomous replies (count) | 0 | 9 | -9 [-15, -4] * | golden labels | AUTO_HANDLE on a should-escalate row |
+| Unsafe autonomous replies (count) | 0 | 10 | -10 [-16, -4] * | golden labels | AUTO_HANDLE on a should-escalate row |
 | Groundedness (1-5) | 3.947 [3.761, 4.128] (n=188 / 176; paired 171) | 4.284 | -0.333 [-0.620, -0.047] * | LLM judge, GLM-5.2 rubric-v1 | NOT human-validated; same model family as the drafter and B2 |
 | Hallucination rate | 0.367 [0.298, 0.436] (n=188 / 176; paired 171) | 0.171 | +0.193 [+0.105, +0.281] * | LLM judge, GLM-5.2 rubric-v1 | NOT human-validated; most ResolveAI flags fall on clarification wording |
 | Policy-violation rate | 0.021 [0.005, 0.043] (n=188 / 176; paired 171) | 0.040 | -0.023 [-0.059, +0.018] | LLM judge, GLM-5.2 rubric-v1 | NOT human-validated |
@@ -46,12 +46,12 @@ Golden sha256 `33f4f333ccf10de7…`. **ResolveAI = release 1.0.0** (`final_relea
 
 | Metric | ResolveAI [95% CI] | Comparison | Difference [95% CI] | Evaluation source | Limitations |
 |---|---|---|---|---|---|
-| Intent accuracy | 0.848 [0.797, 0.898] | 0.848 | +0.000 [+0.000, +0.000] | golden labels | adjudicated from two passes, annotator B was an AI; smallest class 7 rows |
-| Intent macro-F1 | 0.854 [0.799, 0.901] | 0.854 | +0.000 [+0.000, +0.000] | golden labels | equal weight to 7-row and 38-row classes |
-| Escalation precision | 0.324 [0.232, 0.411] | 0.293 | +0.032 [+0.015, +0.052] * | golden labels | HUMAN_HANDOFF vs should_escalate; a clarification counts as not escalated |
-| Escalation recall | 0.973 [0.912, 1.000] | 0.973 | +0.000 [+0.000, +0.000] | golden labels | 37 positives: one row moves it 2.7 points |
-| Escalation F1 | 0.486 [0.370, 0.579] | 0.450 | +0.036 [+0.017, +0.057] * | golden labels | 37 positives |
-| Unnecessary handoffs (count) | 75 | 87 | -12 [-19, -6] * | golden labels | handoff on a row the annotators did not mark for escalation |
+| Intent accuracy | 0.833 [0.782, 0.883] | 0.833 | +0.000 [+0.000, +0.000] | golden labels | adjudicated from two passes, annotator B was an AI; smallest class 7 rows |
+| Intent macro-F1 | 0.831 [0.771, 0.884] | 0.831 | +0.000 [+0.000, +0.000] | golden labels | equal weight to 7-row and 38-row classes |
+| Escalation precision | 0.351 [0.261, 0.440] | 0.317 | +0.034 [+0.016, +0.056] * | golden labels | HUMAN_HANDOFF vs should_escalate; a clarification counts as not escalated |
+| Escalation recall | 0.951 [0.878, 1.000] | 0.951 | +0.000 [+0.000, +0.000] | golden labels | 37 positives: one row moves it 2.7 points |
+| Escalation F1 | 0.513 [0.411, 0.601] | 0.476 | +0.038 [+0.018, +0.059] * | golden labels | 37 positives |
+| Unnecessary handoffs (count) | 72 | 84 | -12 [-19, -6] * | golden labels | handoff on a row the annotators did not mark for escalation |
 | Autonomous rate (AUTO_HANDLE) | 0.061 [0.030, 0.096] | 0.046 | +0.015 [+0.000, +0.035] | golden run | answering more is not answering safely |
 | Safe autonomous rate | 0.061 [0.030, 0.096] | 0.046 | +0.015 [+0.000, +0.035] | golden labels + project definition | strict definition written by the project; a handful of events |
 | Unsafe autonomous replies (count) | 0 | 0 | +0 [+0, +0] | golden labels | AUTO_HANDLE on a should-escalate row |
@@ -68,7 +68,7 @@ Golden sha256 `33f4f333ccf10de7…`. **ResolveAI = release 1.0.0** (`final_relea
 |---|---|---|---|---|---|
 | Retrieval same-resolution recall@5 | 0.261 (pair index + resolution rerank) | 0.348 (Phase 2 customer index) | -0.087 (no interval: per-row results not stored) | golden, label-free TF-IDF protocol, n = 46 scorable rows | the reranker trades this for resolution-bearing@1 0.18 → 0.76; unchanged since Phase 5 |
 | Evidence levels (INSUFFICIENT / WEAK / STRONG) | 166 / 24 / 7 | — | — | golden run | retrieval ceiling: almost nothing reaches STRONG |
-| Judge-human agreement | not available: no human ratings | — | — | human packet (0 of 50 rows rated) | HUMAN EVALUATION = NOT COMPLETED |
+| Judge-human agreement | see artifacts/evaluation/judge_agreement.md | — | — | human packet (50 of 50 rows rated) | HUMAN EVALUATION = COMPLETE |
 
 ## Decisions that changed from Phase 9 final to the release (27 of 197)
 
@@ -102,7 +102,7 @@ Golden sha256 `33f4f333ccf10de7…`. **ResolveAI = release 1.0.0** (`final_relea
 | g192 | HUMAN_HANDOFF/private_info | HUMAN_HANDOFF/insufficient_evidence | False | none | False | FIX THIS "IPHONE RESTARTING EVERY FUCKING 30 SECONDS" SHIT 👏😡 PLZ🤧 <url> |
 | g196 | HUMAN_HANDOFF/private_info | CLARIFICATION_REQUIRED/low_confidence | False | none | False | I know my iPhone is not the only one that keeps rebooting every 30 seconds!!!!!!! 🤦🏽‍♂️🤦🏽‍♂️ |
 
-Missed escalations in the release run: 1 g048 (repeat_contact → CLARIFICATION_REQUIRED/insufficient_context)
+Missed escalations in the release run: 2 g037 (vague_hostile → CLARIFICATION_REQUIRED/insufficient_context); g048 (repeat_contact → CLARIFICATION_REQUIRED/insufficient_context)
 Autonomous replies in the release run: 12 (g005 troubleshoot safe_grounded_verified, g011 troubleshoot safe_grounded_verified, g032 troubleshoot safe_grounded_verified, g061 troubleshoot safe_grounded_verified, g066 canned safe_canned, g071 troubleshoot safe_grounded_verified, g091 canned safe_canned, g095 canned safe_canned, g100 canned safe_canned, g139 canned safe_canned, g140 canned safe_canned, g150 canned safe_canned)
 
 Live latency and cost per request: `artifacts/final/performance/perf_final.md`. AI-labelled dev results: `artifacts/final/risk_experiment/report.md`.

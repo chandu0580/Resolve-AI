@@ -10,12 +10,12 @@
  "n_checks": 23,
  "passed": 23,
  "failed": [],
- "wall_seconds": 56.1,
+ "wall_seconds": 23.3,
  "checks": [
   {
    "check": "server becomes ready (production profile)",
    "expected": "GET /ready 200",
-   "actual": "ready=True after 15s",
+   "actual": "ready=True after 7s",
    "pass": true
   },
   {
@@ -129,19 +129,19 @@
   {
    "check": "resolve rate limit -> 429 + Retry-After",
    "expected": "429 rate_limited, Retry-After >= 1",
-   "actual": "statuses=[200, 429] rate_limited retry-after=19",
+   "actual": "statuses=[200, 429] rate_limited retry-after=44",
    "pass": true
   },
   {
    "check": "read rate limit -> 429 + Retry-After",
    "expected": "429 rate_limited, Retry-After >= 1",
-   "actual": "after 20 reads: 429 retry-after=19",
+   "actual": "after 20 reads: 429 retry-after=44",
    "pass": true
   },
   {
    "check": "failed-authentication limit -> 429",
    "expected": "401 ... then 429",
-   "actual": "statuses=[401, 401, 401, 429] retry-after=19",
+   "actual": "statuses=[401, 401, 401, 429] retry-after=44",
    "pass": true
   },
   {

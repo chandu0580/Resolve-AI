@@ -1,5 +1,5 @@
 {
- "golden_sha256": "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9",
+ "golden_sha256": "62f1156a4ec18be822d4a26a1ef09ad98dda877e6789609fc46926e4655035e1",
  "n_golden": 197,
  "n_boot": 1000,
  "seed": 42,
@@ -14,20 +14,20 @@
  "table": {
   "B2_direct_llm": {
    "intent_accuracy": {
-    "resolveai": 0.8477,
-    "baseline": 0.8782,
+    "resolveai": 0.8325,
+    "baseline": 0.8528,
     "resolveai_ci": {
-     "point": 0.8477,
-     "ci_low": 0.797,
-     "ci_high": 0.8985,
+     "point": 0.8325,
+     "ci_low": 0.7817,
+     "ci_high": 0.8832,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
     },
     "difference": {
-     "difference": -0.0305,
-     "ci_low": -0.0761,
-     "ci_high": 0.0102,
+     "difference": -0.0203,
+     "ci_low": -0.0609,
+     "ci_high": 0.0203,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
@@ -35,20 +35,20 @@
     }
    },
    "intent_macro_f1": {
-    "resolveai": 0.8538,
-    "baseline": 0.8867,
+    "resolveai": 0.8313,
+    "baseline": 0.853,
     "resolveai_ci": {
-     "point": 0.8538,
-     "ci_low": 0.7995,
-     "ci_high": 0.9015,
+     "point": 0.8313,
+     "ci_low": 0.7712,
+     "ci_high": 0.8842,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
     },
     "difference": {
-     "difference": -0.0329,
-     "ci_low": -0.0823,
-     "ci_high": 0.0137,
+     "difference": -0.0217,
+     "ci_low": -0.0701,
+     "ci_high": 0.0235,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
@@ -56,20 +56,20 @@
     }
    },
    "escalation_precision": {
-    "resolveai": 0.3243,
-    "baseline": 0.7391,
+    "resolveai": 0.3514,
+    "baseline": 0.7609,
     "resolveai_ci": {
-     "point": 0.3243,
-     "ci_low": 0.2315,
-     "ci_high": 0.4107,
+     "point": 0.3514,
+     "ci_low": 0.2613,
+     "ci_high": 0.4397,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
     },
     "difference": {
-     "difference": -0.4148,
-     "ci_low": -0.5333,
-     "ci_high": -0.3169,
+     "difference": -0.4095,
+     "ci_low": -0.5303,
+     "ci_high": -0.3086,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
@@ -77,20 +77,20 @@
     }
    },
    "escalation_recall": {
-    "resolveai": 0.973,
-    "baseline": 0.9189,
+    "resolveai": 0.9512,
+    "baseline": 0.8537,
     "resolveai_ci": {
-     "point": 0.973,
-     "ci_low": 0.9118,
+     "point": 0.9512,
+     "ci_low": 0.878,
      "ci_high": 1.0,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
     },
     "difference": {
-     "difference": 0.0541,
-     "ci_low": -0.0455,
-     "ci_high": 0.1579,
+     "difference": 0.0975,
+     "ci_low": 0.0,
+     "ci_high": 0.2094,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
@@ -98,20 +98,20 @@
     }
    },
    "escalation_f1": {
-    "resolveai": 0.4865,
-    "baseline": 0.8193,
+    "resolveai": 0.5132,
+    "baseline": 0.8046,
     "resolveai_ci": {
-     "point": 0.4865,
-     "ci_low": 0.3699,
-     "ci_high": 0.5789,
+     "point": 0.5132,
+     "ci_low": 0.4106,
+     "ci_high": 0.6013,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
     },
     "difference": {
-     "difference": -0.3328,
-     "ci_low": -0.4428,
-     "ci_high": -0.2407,
+     "difference": -0.2914,
+     "ci_low": -0.3997,
+     "ci_high": -0.1939,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
@@ -162,7 +162,7 @@
    },
    "unsafe_autonomous_count": {
     "resolveai": 0.0,
-    "baseline": 3.0,
+    "baseline": 6.0,
     "resolveai_ci": {
      "point": 0.0,
      "ci_low": 0.0,
@@ -172,30 +172,30 @@
      "seed": 42
     },
     "difference": {
-     "difference": -3.0,
-     "ci_low": -7.0,
-     "ci_high": 0.0,
+     "difference": -6.0,
+     "ci_low": -11.0,
+     "ci_high": -2.0,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
-     "interval_excludes_zero": false
+     "interval_excludes_zero": true
     }
    },
    "unnecessary_handoffs": {
-    "resolveai": 75.0,
-    "baseline": 12.0,
+    "resolveai": 72.0,
+    "baseline": 11.0,
     "resolveai_ci": {
-     "point": 75.0,
-     "ci_low": 62.0,
-     "ci_high": 89.0,
+     "point": 72.0,
+     "ci_low": 60.0,
+     "ci_high": 85.0,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
     },
     "difference": {
-     "difference": 63.0,
-     "ci_low": 50.0,
-     "ci_high": 76.0,
+     "difference": 61.0,
+     "ci_low": 48.0,
+     "ci_high": 74.0,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
@@ -324,20 +324,20 @@
   },
   "B1_simple_ml": {
    "intent_accuracy": {
-    "resolveai": 0.8477,
-    "baseline": 0.5431,
+    "resolveai": 0.8325,
+    "baseline": 0.5279,
     "resolveai_ci": {
-     "point": 0.8477,
-     "ci_low": 0.797,
-     "ci_high": 0.8985,
+     "point": 0.8325,
+     "ci_low": 0.7817,
+     "ci_high": 0.8832,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
     },
     "difference": {
      "difference": 0.3046,
-     "ci_low": 0.2234,
-     "ci_high": 0.3858,
+     "ci_low": 0.2284,
+     "ci_high": 0.3807,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
@@ -345,20 +345,20 @@
     }
    },
    "intent_macro_f1": {
-    "resolveai": 0.8538,
-    "baseline": 0.5498,
+    "resolveai": 0.8313,
+    "baseline": 0.5296,
     "resolveai_ci": {
-     "point": 0.8538,
-     "ci_low": 0.7995,
-     "ci_high": 0.9015,
+     "point": 0.8313,
+     "ci_low": 0.7712,
+     "ci_high": 0.8842,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
     },
     "difference": {
-     "difference": 0.304,
-     "ci_low": 0.2236,
-     "ci_high": 0.3916,
+     "difference": 0.3017,
+     "ci_low": 0.2239,
+     "ci_high": 0.3857,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
@@ -366,20 +366,20 @@
     }
    },
    "escalation_precision": {
-    "resolveai": 0.3243,
-    "baseline": 0.4912,
+    "resolveai": 0.3514,
+    "baseline": 0.5439,
     "resolveai_ci": {
-     "point": 0.3243,
-     "ci_low": 0.2315,
-     "ci_high": 0.4107,
+     "point": 0.3514,
+     "ci_low": 0.2613,
+     "ci_high": 0.4397,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
     },
     "difference": {
-     "difference": -0.1669,
-     "ci_low": -0.2575,
-     "ci_high": -0.0731,
+     "difference": -0.1925,
+     "ci_low": -0.2869,
+     "ci_high": -0.0938,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
@@ -387,20 +387,20 @@
     }
    },
    "escalation_recall": {
-    "resolveai": 0.973,
-    "baseline": 0.7568,
+    "resolveai": 0.9512,
+    "baseline": 0.7561,
     "resolveai_ci": {
-     "point": 0.973,
-     "ci_low": 0.9118,
+     "point": 0.9512,
+     "ci_low": 0.878,
      "ci_high": 1.0,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
     },
     "difference": {
-     "difference": 0.2162,
-     "ci_low": 0.0883,
-     "ci_high": 0.3548,
+     "difference": 0.1951,
+     "ci_low": 0.0789,
+     "ci_high": 0.3182,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
@@ -408,20 +408,20 @@
     }
    },
    "escalation_f1": {
-    "resolveai": 0.4865,
-    "baseline": 0.5957,
+    "resolveai": 0.5132,
+    "baseline": 0.6327,
     "resolveai_ci": {
-     "point": 0.4865,
-     "ci_low": 0.3699,
-     "ci_high": 0.5789,
+     "point": 0.5132,
+     "ci_low": 0.4106,
+     "ci_high": 0.6013,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
     },
     "difference": {
-     "difference": -0.1092,
-     "ci_low": -0.2046,
-     "ci_high": -0.0051,
+     "difference": -0.1195,
+     "ci_low": -0.2149,
+     "ci_high": -0.0183,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
@@ -472,7 +472,7 @@
    },
    "unsafe_autonomous_count": {
     "resolveai": 0.0,
-    "baseline": 9.0,
+    "baseline": 10.0,
     "resolveai_ci": {
      "point": 0.0,
      "ci_low": 0.0,
@@ -482,8 +482,8 @@
      "seed": 42
     },
     "difference": {
-     "difference": -9.0,
-     "ci_low": -15.0,
+     "difference": -10.0,
+     "ci_low": -16.0,
      "ci_high": -4.0,
      "n": 197,
      "n_boot": 1000,
@@ -492,12 +492,12 @@
     }
    },
    "unnecessary_handoffs": {
-    "resolveai": 75.0,
-    "baseline": 29.0,
+    "resolveai": 72.0,
+    "baseline": 26.0,
     "resolveai_ci": {
-     "point": 75.0,
-     "ci_low": 62.0,
-     "ci_high": 89.0,
+     "point": 72.0,
+     "ci_low": 60.0,
+     "ci_high": 85.0,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
@@ -634,12 +634,12 @@
   },
   "phase9_final": {
    "intent_accuracy": {
-    "resolveai": 0.8477,
-    "baseline": 0.8477,
+    "resolveai": 0.8325,
+    "baseline": 0.8325,
     "resolveai_ci": {
-     "point": 0.8477,
-     "ci_low": 0.797,
-     "ci_high": 0.8985,
+     "point": 0.8325,
+     "ci_low": 0.7817,
+     "ci_high": 0.8832,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
@@ -655,12 +655,12 @@
     }
    },
    "intent_macro_f1": {
-    "resolveai": 0.8538,
-    "baseline": 0.8538,
+    "resolveai": 0.8313,
+    "baseline": 0.8313,
     "resolveai_ci": {
-     "point": 0.8538,
-     "ci_low": 0.7995,
-     "ci_high": 0.9015,
+     "point": 0.8313,
+     "ci_low": 0.7712,
+     "ci_high": 0.8842,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
@@ -676,20 +676,20 @@
     }
    },
    "escalation_precision": {
-    "resolveai": 0.3243,
-    "baseline": 0.2927,
+    "resolveai": 0.3514,
+    "baseline": 0.3171,
     "resolveai_ci": {
-     "point": 0.3243,
-     "ci_low": 0.2315,
-     "ci_high": 0.4107,
+     "point": 0.3514,
+     "ci_low": 0.2613,
+     "ci_high": 0.4397,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
     },
     "difference": {
-     "difference": 0.0316,
-     "ci_low": 0.0146,
-     "ci_high": 0.0524,
+     "difference": 0.0343,
+     "ci_low": 0.016,
+     "ci_high": 0.0564,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
@@ -697,11 +697,11 @@
     }
    },
    "escalation_recall": {
-    "resolveai": 0.973,
-    "baseline": 0.973,
+    "resolveai": 0.9512,
+    "baseline": 0.9512,
     "resolveai_ci": {
-     "point": 0.973,
-     "ci_low": 0.9118,
+     "point": 0.9512,
+     "ci_low": 0.878,
      "ci_high": 1.0,
      "n": 197,
      "n_boot": 1000,
@@ -718,20 +718,20 @@
     }
    },
    "escalation_f1": {
-    "resolveai": 0.4865,
-    "baseline": 0.45,
+    "resolveai": 0.5132,
+    "baseline": 0.4756,
     "resolveai_ci": {
-     "point": 0.4865,
-     "ci_low": 0.3699,
-     "ci_high": 0.5789,
+     "point": 0.5132,
+     "ci_low": 0.4106,
+     "ci_high": 0.6013,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
     },
     "difference": {
-     "difference": 0.0365,
-     "ci_low": 0.0171,
-     "ci_high": 0.0572,
+     "difference": 0.0376,
+     "ci_low": 0.0176,
+     "ci_high": 0.0595,
      "n": 197,
      "n_boot": 1000,
      "seed": 42,
@@ -802,12 +802,12 @@
     }
    },
    "unnecessary_handoffs": {
-    "resolveai": 75.0,
-    "baseline": 87.0,
+    "resolveai": 72.0,
+    "baseline": 84.0,
     "resolveai_ci": {
-     "point": 75.0,
-     "ci_low": 62.0,
-     "ci_high": 89.0,
+     "point": 72.0,
+     "ci_low": 60.0,
+     "ci_high": 85.0,
      "n": 197,
      "n_boot": 1000,
      "seed": 42
@@ -1217,6 +1217,13 @@
  ],
  "missed_escalations": [
   {
+   "gid": "g037",
+   "gold_reason": "vague_hostile",
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "message": "Hi. please help <url>"
+  },
+  {
    "gid": "g048",
    "gold_reason": "repeat_contact",
    "action": "CLARIFICATION_REQUIRED",
@@ -1298,7 +1305,7 @@
  },
  "human_evaluation": {
   "packet_rows": 50,
-  "fully_rated_rows": 0,
-  "status": "NOT COMPLETED"
+  "fully_rated_rows": 50,
+  "status": "COMPLETE"
  }
 }

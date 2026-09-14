@@ -1,17 +1,16 @@
 {
  "n": 197,
  "unnecessary_handoffs": {
-  "total": 75,
+  "total": 72,
   "by_reason_code": {
    "insufficient_evidence": 21,
-   "repeat_contact": 12,
    "hardware": 12,
+   "repeat_contact": 10,
    "vague_hostile": 8,
    "payment_billing": 7,
    "safety": 5,
    "private_info": 4,
    "legal_media": 4,
-   "account_access": 1,
    "none": 1
   },
   "examples": {
@@ -43,45 +42,6 @@
      "risk_flags": [],
      "evidence_level": "INSUFFICIENT",
      "message": "so they’re pretty much not functional"
-    }
-   ],
-   "repeat_contact": [
-    {
-     "gid": "g004",
-     "intent_gold": "data_loss_sync",
-     "risk_flags": [
-      "repeat_contact"
-     ],
-     "evidence_level": "INSUFFICIENT",
-     "message": "I updated my iOS and lost all my pictures from my first two days in Rome. I’m so mad st y’all"
-    },
-    {
-     "gid": "g010",
-     "intent_gold": "connectivity",
-     "risk_flags": [
-      "repeat_contact",
-      "high_frustration"
-     ],
-     "evidence_level": "INSUFFICIENT",
-     "message": "It would be cool if would fix their shit so I dont have to restart my computer and router to connect to wifi"
-    },
-    {
-     "gid": "g015",
-     "intent_gold": "apps_services",
-     "risk_flags": [
-      "repeat_contact"
-     ],
-     "evidence_level": "INSUFFICIENT",
-     "message": "I have an iPad Mini 4 that has automatic updates turned on but never does them automatically. Tried turning off/on. Thoughts?"
-    },
-    {
-     "gid": "g041",
-     "intent_gold": "performance_crash",
-     "risk_flags": [
-      "high_frustration"
-     ],
-     "evidence_level": "INSUFFICIENT",
-     "message": "Okay, that let me update my phone! So we’ll see if it helps with the random shutting off/loading screen."
     }
    ],
    "hardware": [
@@ -125,6 +85,43 @@
      ],
      "evidence_level": "INSUFFICIENT",
      "message": "Mn mobiel heeft net letterlijk 13 minuten Apple logo uit grijs scherm gegeven word er langzamerhand een beetje heel erg gek van. Heb de nieu"
+    }
+   ],
+   "repeat_contact": [
+    {
+     "gid": "g010",
+     "intent_gold": "connectivity",
+     "risk_flags": [
+      "repeat_contact",
+      "high_frustration"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "It would be cool if would fix their shit so I dont have to restart my computer and router to connect to wifi"
+    },
+    {
+     "gid": "g015",
+     "intent_gold": "apps_services",
+     "risk_flags": [
+      "repeat_contact"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "I have an iPad Mini 4 that has automatic updates turned on but never does them automatically. Tried turning off/on. Thoughts?"
+    },
+    {
+     "gid": "g041",
+     "intent_gold": "performance_crash",
+     "risk_flags": [
+      "high_frustration"
+     ],
+     "evidence_level": "INSUFFICIENT",
+     "message": "Okay, that let me update my phone! So we’ll see if it helps with the random shutting off/loading screen."
+    },
+    {
+     "gid": "g047",
+     "intent_gold": "other",
+     "risk_flags": [],
+     "evidence_level": "INSUFFICIENT",
+     "message": "Thank you"
     }
    ],
    "vague_hostile": [
@@ -248,7 +245,7 @@
    "private_info": [
     {
      "gid": "g033",
-     "intent_gold": "general_complaint",
+     "intent_gold": "keyboard_text_bug",
      "risk_flags": [
       "insufficient_context"
      ],
@@ -319,18 +316,6 @@
      "message": "My Face ID is trash it won’t unlock sometimes, it freezes, the sensitivity touch thingy is really hard to press it’s stupid buggy"
     }
    ],
-   "account_access": [
-    {
-     "gid": "g007",
-     "intent_gold": "apps_services",
-     "risk_flags": [
-      "account_access_risk",
-      "high_frustration"
-     ],
-     "evidence_level": "INSUFFICIENT",
-     "message": "she said she can listen to the songs unless i’m listening to apple music on my phone . we both get a message that says “looks like you’re li"
-    }
-   ],
    "none": [
     {
      "gid": "g172",
@@ -346,6 +331,16 @@
   }
  },
  "missed_escalations": [
+  {
+   "gid": "g037",
+   "gold_reason": "vague_hostile",
+   "action": "CLARIFICATION_REQUIRED",
+   "reason_code": "insufficient_context",
+   "risk_flags": [
+    "insufficient_context"
+   ],
+   "message": "Hi. please help <url>"
+  },
   {
    "gid": "g048",
    "gold_reason": "repeat_contact",
@@ -473,7 +468,7 @@
    "intent_gold": "non_english"
   }
  ],
- "intent_errors": 30,
+ "intent_errors": 33,
  "top_intent_confusions": [
   {
    "gold": "apps_services",
@@ -501,7 +496,7 @@
    "count": 1
   },
   {
-   "gold": "general_complaint",
+   "gold": "keyboard_text_bug",
    "predicted": "account_store_repair",
    "count": 1
   }

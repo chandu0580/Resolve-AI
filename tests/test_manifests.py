@@ -30,10 +30,10 @@ def test_golden_freeze_manifest_matches_file_and_records_provenance():
     from resolveai.evaluation import load_golden
 
     m = json.loads(GM.read_text(encoding="utf-8"))
-    assert m["rows"] == 197 and m["guide_version"] == "1.1"
+    assert m["rows"] == 197 and "1.2" in m["guide_version"]
     assert m["sha256"] == sha(config.GOLDEN_DIR / "golden_final.csv")
     assert m["guide_sha256"] == sha(config.GOLDEN_DIR / "ANNOTATION_GUIDE.md")
-    assert "not an independent human" in m["annotation"]["provenance_statement"]
+    assert "human" in m["annotation"]["provenance_statement"].lower()
     g = load_golden()  # verifies hash on load
     assert len(g) == 197 and g.intent.notna().all() and g.escalation_reason.notna().all()
 

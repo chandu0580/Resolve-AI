@@ -25,7 +25,8 @@ artifacts/evaluation/_*.log
 # console logs of long runs (the results they produced are the committed artifacts)
 artifacts/**/_*.log
 artifacts/phase9/evaluation_cached_check.log
-# Browser-smoke screenshots for the product passes: the smoke's JSON results are the evidence (routes, axe violations,
-# failures) and stay committed; the full-page PNGs are ~470 KB each and go stale on every UI change.
 artifacts/product/hardening/smoke/screenshots/
 /scratch/
+artifacts/checkpoints/
+*.bak
+

@@ -8,15 +8,15 @@ Categories: MODEL (a learned or LLM component), RETRIEVAL, POLICY, DATA/TAXONOMY
   g020 "another keyboard glitch. Fix I.T" -> `['needs_private_info']` -> handoff; g088 "why ios 11.1.2 often self rebooting?" -> handoff.
 - Expected: clarify or answer (the annotators marked these should_escalate=false); actual: handoff with reason private_info.
 - Component: risk-flags-v2 (GLM) sets `needs_private_info` whenever it thinks a version/device would be needed; policy-v3 treats the flag as a hard reason.
-- Frequency: 29 of the 87 unnecessary handoffs carry reason private_info (25 with the LLM flag raised; 5 are non-English rows that never reached the canned redirect because private_info precedes it in the policy order).
-  The rules-only ablation (`minus_risk_llm`) has 0.3756 handoff rate vs 0.6193 for the full system, with 0 unsafe autonomous replies and escalation recall 0.7297 vs 0.9459.
+- Frequency: 29 of the 84 unnecessary handoffs carry reason private_info (25 with the LLM flag raised; 5 are non-English rows that never reached the canned redirect because private_info precedes it in the policy order).
+  The rules-only ablation (`minus_risk_llm`) has 0.3756 handoff rate vs 0.6193 for the full system, with 0 unsafe autonomous replies and escalation recall 0.7317 vs 0.9268.
 - Severity: medium (customer gets a human instead of an answer; nothing unsafe). Fix: define `needs_private_info` for the LLM as "the resolution REQUIRES a serial/IMEI/order/case identifier", not "a device detail would help"; move the canned non_english rule ahead of private_info; measure on dev first.
 
 ## 2. Two missed escalations: a redaction token and a word-order gap in the deterministic rules  (MODEL FAILURE: rules)
 - g157: "...stranded in Thailand without cellular access on my iPhoneX ... case <PHONE> they erroneously transferred my #..." (gold private_info) -> flags `['high_impact', 'high_frustration']`, intent connectivity at confidence 0.2398 -> CLARIFICATION (low_confidence).
   Root cause: the `needs_private_info` rule lists `<PHONE>` inside a `\b(...)\b` group; `\b` cannot match before `<`, so redaction tokens never fire the rule. The LLM did not raise it either.
 - g048: "hey can you check the dm i sent!" (gold repeat_contact, guide rule R1) -> flags `[]` -> CLARIFICATION (insufficient_context). The repeat-contact rule matches "sent a dm" but not "dm i sent".
-- Frequency: 2 of 37 should-escalate rows (missed-escalation rate 0.0541); both were clarifications, not autonomous replies, so no unsafe text was sent.
+- Frequency: 3 of 37 should-escalate rows (missed-escalation rate 0.0732); both were clarifications, not autonomous replies, so no unsafe text was sent.
 - Severity: high for g157 (a private-identifier case handled as a clarification), low for g048. Fix: `(?<!\w)<(PHONE|EMAIL|ORDER_ID|CARD|LONG_ID)>` outside the word-boundary group; add "dm i sent|the dm" to repeat_contact; add both as regression tests. Not applied in this phase (the evaluated system is the frozen Phase 5 system).
 
 ## 3. Evidence gate abstains on almost everything; autonomy is confined to one bug  (RETRIEVAL FAILURE / DATA)
@@ -27,9 +27,9 @@ Categories: MODEL (a learned or LLM component), RETRIEVAL, POLICY, DATA/TAXONOMY
 - Severity: medium (safe, but the product answers 2.5% of troubleshooting requests). Fix: KB coverage beyond the burst (the brand's own replies rarely contain fixes: 52% are DM handoffs) and reply-side curation; not a threshold change.
 
 ## 4. `apps_services` bleeds into `data_loss_sync` and `general_complaint`  (MODEL FAILURE: classifier + taxonomy)
-- Confusions (gold -> predicted): {('apps_services', 'data_loss_sync'): 4, ('apps_services', 'general_complaint'): 2, ('keyboard_text_bug', 'general_complaint'): 2, ('hardware_damage', 'connectivity'): 1, ('account_store_repair', 'general_complaint'): 1, ('general_complaint', 'account_store_repair'): 1}. apps_services (38 rows, the largest class) has recall 0.7632; e.g. an iCloud Photos/Music sync question is apps_services under rule R2 but embeds next to data_loss_sync rows.
+- Confusions (gold -> predicted): {('apps_services', 'data_loss_sync'): 4, ('apps_services', 'general_complaint'): 2, ('keyboard_text_bug', 'general_complaint'): 2, ('hardware_damage', 'connectivity'): 1, ('account_store_repair', 'general_complaint'): 1, ('keyboard_text_bug', 'account_store_repair'): 1}. apps_services (38 rows, the largest class) has recall 0.7632; e.g. an iCloud Photos/Music sync question is apps_services under rule R2 but embeds next to data_loss_sync rows.
 - Component: BGE+LR classifier trained on silver labels (~71% precision) plus the GLM second opinion; the guide's R2 boundary (app-confined vs data) is not learnable from the silver rules.
-- Frequency: 30 intent errors of 197 (accuracy 0.8477); 4 are apps_services -> data_loss_sync.
+- Frequency: 33 intent errors of 197 (accuracy 0.8325); 4 are apps_services -> data_loss_sync.
 - Severity: low-medium (intent drives the clarifying question and the retrieval query, not escalation). Fix: hand-labelled dev rows for the R2 boundary; DATA/TAXONOMY as much as model.
 
 ## 5. The judge cannot yet be trusted as a quality measure  (EVALUATION FAILURE)

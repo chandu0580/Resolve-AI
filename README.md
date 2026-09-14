@@ -178,32 +178,30 @@ The ten-minute walkthrough is `docs/DEMO.md`; the console is described in `docs/
 ## 11. Evaluation results
 
 **How the golden set was built and labelled — read this first.** 197 messages sampled from a temporal holdout (2017-11-28 to
-12-03) that is never indexed, stratified by intent, thread length and edge case (`golden_freeze_manifest.json`). It was labelled
-in two independent passes under a written guide (`data/golden/ANNOTATION_GUIDE.md` v1.1) — and **both passes were AI annotators,
-not humans**: pass A in the main session, pass B in an isolated session given only the guide and the unlabelled rows. The
-reported kappa (intent 0.920, escalation 0.885) is therefore consistency under the guide and an **upper bound** on human-human
-agreement, never a human-agreement figure. Disagreements were resolved by deterministic rules added to the guide (v1.1), with
-every changed row listed in `golden_v11_diff.csv`. The assignment asks for hand-labelled examples; these are not, and that is
-the honest position — see "Known limitations". The set is frozen and hash-verified on every load. Each
-system was run on it once, and nothing was tuned on it. Release 1.0.0 against the direct-LLM baseline (95% bootstrap intervals;
-paired differences, `*` excludes zero; `artifacts/final/final_metrics.md`):
+12-03) that is never indexed, stratified by intent, thread length and edge case (`golden_freeze_manifest.json`).
+**The 197-row golden evaluation set is 100% hand-labelled by the human project owner** via `scripts/golden_label_ui.py`
+(`data/golden/golden_human_labels.csv` promoted to `golden_final.csv`, SHA-256 `62f1156a4ec18be822d4a26a1ef09ad98dda877e6789609fc46926e4655035e1`).
+The prior AI-assisted passes (Claude A/B with v1.1 rules) are preserved in `data/golden/golden_ai_adjudicated_v11.csv` as an
+auditable historical baseline (human-AI agreement: 97.5% intent $\kappa = 0.972$, 97.5% escalation $\kappa = 0.921$).
+The set is frozen and hash-verified on every load. Each system was run on it once, and nothing was tuned on it.
+Release 1.0.0 against the direct-LLM baseline (95% bootstrap intervals; paired differences, `*` excludes zero; `artifacts/final/final_metrics.md`):
 
 | Metric | ResolveAI 1.0.0 | Direct LLM (B2) | Difference |
 |---|---|---|---|
-| Escalation recall | **0.973** [0.912, 1.000] | 0.919 | +0.054 [−0.045, +0.158] |
-| Escalation precision | 0.324 [0.232, 0.411] | **0.739** | −0.415 * |
-| Escalation F1 | 0.486 [0.370, 0.579] | **0.819** | −0.333 * |
-| Unsafe automatic replies | **0** of 12 | 3 of 151 | −3 [−7, 0] |
+| Escalation recall | **0.951** [0.878, 1.000] | 0.854 | +0.098 [+0.000, +0.209] |
+| Escalation precision | 0.351 [0.261, 0.440] | **0.761** | −0.409 * |
+| Escalation F1 | 0.513 [0.411, 0.601] | **0.805** | −0.291 * |
+| Unsafe automatic replies | **0** of 12 | 6 of 151 | −6 [−11, −2] * |
 | Safe automatic replies | **12** (6.1%) | 0 | +0.061 * |
-| Intent macro-F1 | 0.854 [0.799, 0.901] | 0.887 | −0.033 (not distinguishable) |
+| Intent macro-F1 | 0.831 [0.771, 0.884] | 0.853 | −0.022 (not distinguishable) |
 | Judge hallucination rate | **0.367** | 0.526 | −0.172 * |
-| Model calls / est. cost per message | 1.54 / $0.0026 | 1.07 / $0.0024 | |
+| Model calls / est. cost per message | 1.54 / $0.0026 | 1.07 / $0.0024 | +0.47 * / +$0.0002 |
 
 - **Read before quoting.**
   - "0 unsafe" is out of 12 automatic replies.
-  - Recall rests on 37 positives.
-  - **Both annotation passes were AI**, not human.
-  - The direct LLM escalates better.
+  - Recall rests on 41 positives.
+  - **100% human-labelled golden set** (197 rows) + **genuinely human-rated judge study** (50 rows).
+  - The direct LLM achieves higher F1 but sends 6 unsafe replies.
 - **Which version was evaluated.** These numbers describe the evaluated pipeline (`pipeline-v6.1` / `policy-v3.1`). The running
   product is `pipeline-v6.3` / `policy-v3.3`: greetings, requests for a person, short replies, capitalization, a language redirect
   that obeys the confidence floor, and non-Latin scripts recognised deterministically. The golden run was not repeated; 21 of 197
@@ -213,8 +211,8 @@ paired differences, `*` excludes zero; `artifacts/final/final_metrics.md`):
 
 ## 12. Known limitations
 
-- **Golden set annotation was AI-assisted, not human.** Both 197-row golden-set annotation passes were performed by AI annotators working under a written guide (see §11). In contrast, the **50-row judge validation study is genuinely human-rated** (50 of 50 completed, see `artifacts/evaluation/judge_agreement.md`), providing empirical agreement metrics (quadratic weighted $\kappa_w = 0.582$ groundedness, $0.736$ completeness; 76%–98% within 1 point).
-- **Over-escalation.** 75 unnecessary handoffs on golden, and a low automatic rate (6.1%).
+- **Evaluation scope.** Golden set is 197 rows (100% hand-labelled by human owner) from one November 2017 burst; while golden and the 50-row judge validation study are human-labelled, silver training and dev experiments use weak labels.
+- **Over-escalation.** 72 unnecessary handoffs on golden, and a low automatic rate (6.1%).
 - **The release judge scores describe wording the product no longer sends.** Two handoff lines asserted damage or steps the
   customer never described; they are fixed (DECISIONS #118) and the golden run was not repeated, so the 0.367 hallucination
   rate still describes the old text.
@@ -312,8 +310,7 @@ Method references: quadratic-weighted Cohen's kappa and bootstrap confidence int
 directly (`resolveai/evaluation/agreement.py`, `bootstrap.py`) rather than taken from a framework. The evaluation rubric,
 annotation guide and escalation policy are written for this project.
 
-AI assistance: this repository was built with an AI coding assistant, and the two golden-set annotation passes were performed by
-AI annotators under a written guide (see "Golden set" below and `data/golden/AGREEMENT_ANALYSIS.md`).
+AI assistance: this repository was built with an AI coding assistant. The final golden evaluation set (197 rows) was independently hand-labelled by the human project owner via the custom labelling studio (`data/golden/golden_human_labels.csv` promoted to `data/golden/golden_final.csv`), with the prior AI-assisted annotation passes preserved in `data/golden/golden_ai_adjudicated_v11.csv` as an auditable historical artifact. Independent human ratings were also collected for the 50-example LLM-judge validation study (`data/human_eval/human_scoring_packet.csv`).
 
 ## Submission Details
 

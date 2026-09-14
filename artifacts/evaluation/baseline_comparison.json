@@ -3,15 +3,15 @@
   "resolveai_full": {
    "description": "resolveai_full",
    "intent": {
-    "accuracy": 0.8477,
-    "macro_f1": 0.8538
+    "accuracy": 0.8325,
+    "macro_f1": 0.8313
    },
    "escalation": {
-    "precision": 0.2869,
-    "recall": 0.9459,
-    "f1": 0.4403,
-    "fp": 87,
-    "fn": 2
+    "precision": 0.3115,
+    "recall": 0.9268,
+    "f1": 0.4663,
+    "fp": 84,
+    "fn": 3
    },
    "autonomy": {
     "auto_handle_rate": 0.0457,
@@ -20,8 +20,8 @@
     "safe_auto_handle_count": 9,
     "unsafe_auto_handle_count": 0,
     "grounded_auto_handle_count": 5,
-    "correct_non_autonomous_count": 37,
-    "unnecessary_non_autonomous_count": 151
+    "correct_non_autonomous_count": 41,
+    "unnecessary_non_autonomous_count": 147
    },
    "cost_latency": {
     "n": 197,
@@ -56,22 +56,22 @@
   "B0_trivial": {
    "description": "majority silver intent; modal DM reply; never escalates (always-handoff variant for escalation reference)",
    "intent": {
-    "accuracy": 0.0812,
-    "macro_f1": 0.0137
+    "accuracy": 0.0863,
+    "macro_f1": 0.0144
    },
    "escalation": {
     "precision": 0.0,
     "recall": 0.0,
     "f1": 0.0,
     "fp": 0,
-    "fn": 37
+    "fn": 41
    },
    "autonomy": {
     "auto_handle_rate": 1.0,
     "clarification_rate": 0.0,
     "handoff_rate": 0.0,
     "safe_auto_handle_count": 0,
-    "unsafe_auto_handle_count": 37,
+    "unsafe_auto_handle_count": 41,
     "grounded_auto_handle_count": 0,
     "correct_non_autonomous_count": 0,
     "unnecessary_non_autonomous_count": 0
@@ -109,14 +109,14 @@
   "B0_trivial_always_handoff": {
    "description": "B0_trivial_always_handoff",
    "intent": {
-    "accuracy": 0.0812,
-    "macro_f1": 0.0137
+    "accuracy": 0.0863,
+    "macro_f1": 0.0144
    },
    "escalation": {
-    "precision": 0.1878,
+    "precision": 0.2081,
     "recall": 1.0,
-    "f1": 0.3162,
-    "fp": 160,
+    "f1": 0.3445,
+    "fp": 156,
     "fn": 0
    },
    "autonomy": {
@@ -126,8 +126,8 @@
     "safe_auto_handle_count": 0,
     "unsafe_auto_handle_count": 0,
     "grounded_auto_handle_count": 0,
-    "correct_non_autonomous_count": 37,
-    "unnecessary_non_autonomous_count": 160
+    "correct_non_autonomous_count": 41,
+    "unnecessary_non_autonomous_count": 156
    },
    "cost_latency": {
     "n": 197,
@@ -146,25 +146,25 @@
   "B1_simple_ml": {
    "description": "TF-IDF+LR (silver train, C on silver dev); nearest-neighbour historical reply (BGE-small customer index); rule escalation",
    "intent": {
-    "accuracy": 0.5431,
-    "macro_f1": 0.5498
+    "accuracy": 0.5279,
+    "macro_f1": 0.5296
    },
    "escalation": {
-    "precision": 0.4912,
-    "recall": 0.7568,
-    "f1": 0.5957,
-    "fp": 29,
-    "fn": 9
+    "precision": 0.5439,
+    "recall": 0.7561,
+    "f1": 0.6327,
+    "fp": 26,
+    "fn": 10
    },
    "autonomy": {
     "auto_handle_rate": 0.7107,
     "clarification_rate": 0.0,
     "handoff_rate": 0.2893,
     "safe_auto_handle_count": 13,
-    "unsafe_auto_handle_count": 9,
+    "unsafe_auto_handle_count": 10,
     "grounded_auto_handle_count": 0,
-    "correct_non_autonomous_count": 28,
-    "unnecessary_non_autonomous_count": 29
+    "correct_non_autonomous_count": 31,
+    "unnecessary_non_autonomous_count": 26
    },
    "cost_latency": {
     "n": 197,
@@ -199,25 +199,25 @@
   "B2_direct_llm": {
    "description": "GLM-5.2 single call (direct-llm-baseline-v1) with taxonomy definitions + guide escalation criteria + full thread; no retrieval/evidence/verifier",
    "intent": {
-    "accuracy": 0.8782,
-    "macro_f1": 0.8867
+    "accuracy": 0.8528,
+    "macro_f1": 0.853
    },
    "escalation": {
-    "precision": 0.7391,
-    "recall": 0.9189,
-    "f1": 0.8193,
-    "fp": 12,
-    "fn": 3
+    "precision": 0.7609,
+    "recall": 0.8537,
+    "f1": 0.8046,
+    "fp": 11,
+    "fn": 6
    },
    "autonomy": {
     "auto_handle_rate": 0.7665,
     "clarification_rate": 0.0,
     "handoff_rate": 0.2335,
     "safe_auto_handle_count": 0,
-    "unsafe_auto_handle_count": 3,
+    "unsafe_auto_handle_count": 6,
     "grounded_auto_handle_count": 0,
-    "correct_non_autonomous_count": 34,
-    "unnecessary_non_autonomous_count": 12
+    "correct_non_autonomous_count": 35,
+    "unnecessary_non_autonomous_count": 11
    },
    "cost_latency": {
     "n": 197,
@@ -252,15 +252,15 @@
   "minus_second_opinion": {
    "description": "minus_second_opinion",
    "intent": {
-    "accuracy": 0.6142,
-    "macro_f1": 0.6182
+    "accuracy": 0.6041,
+    "macro_f1": 0.6082
    },
    "escalation": {
-    "precision": 0.3,
-    "recall": 0.973,
-    "f1": 0.4586,
-    "fp": 84,
-    "fn": 1
+    "precision": 0.325,
+    "recall": 0.9512,
+    "f1": 0.4845,
+    "fp": 81,
+    "fn": 2
    },
    "autonomy": {
     "auto_handle_rate": 0.0457,
@@ -269,8 +269,8 @@
     "safe_auto_handle_count": 9,
     "unsafe_auto_handle_count": 0,
     "grounded_auto_handle_count": 5,
-    "correct_non_autonomous_count": 37,
-    "unnecessary_non_autonomous_count": 151
+    "correct_non_autonomous_count": 41,
+    "unnecessary_non_autonomous_count": 147
    },
    "cost_latency": {
     "n": 197,
@@ -289,15 +289,15 @@
   "minus_resolution_rerank": {
    "description": "minus_resolution_rerank",
    "intent": {
-    "accuracy": 0.8477,
-    "macro_f1": 0.8538
+    "accuracy": 0.8325,
+    "macro_f1": 0.8313
    },
    "escalation": {
-    "precision": 0.2778,
-    "recall": 0.9459,
-    "f1": 0.4294,
-    "fp": 91,
-    "fn": 2
+    "precision": 0.3016,
+    "recall": 0.9268,
+    "f1": 0.4551,
+    "fp": 88,
+    "fn": 3
    },
    "autonomy": {
     "auto_handle_rate": 0.0558,
@@ -306,8 +306,8 @@
     "safe_auto_handle_count": 11,
     "unsafe_auto_handle_count": 0,
     "grounded_auto_handle_count": 7,
-    "correct_non_autonomous_count": 37,
-    "unnecessary_non_autonomous_count": 149
+    "correct_non_autonomous_count": 41,
+    "unnecessary_non_autonomous_count": 145
    },
    "cost_latency": {
     "n": 197,
@@ -326,15 +326,15 @@
   "minus_risk_llm": {
    "description": "minus_risk_llm",
    "intent": {
-    "accuracy": 0.8477,
-    "macro_f1": 0.8538
+    "accuracy": 0.8325,
+    "macro_f1": 0.8313
    },
    "escalation": {
-    "precision": 0.3649,
-    "recall": 0.7297,
-    "f1": 0.4865,
-    "fp": 47,
-    "fn": 10
+    "precision": 0.4054,
+    "recall": 0.7317,
+    "f1": 0.5217,
+    "fp": 44,
+    "fn": 11
    },
    "autonomy": {
     "auto_handle_rate": 0.0914,
@@ -343,8 +343,8 @@
     "safe_auto_handle_count": 18,
     "unsafe_auto_handle_count": 0,
     "grounded_auto_handle_count": 5,
-    "correct_non_autonomous_count": 37,
-    "unnecessary_non_autonomous_count": 142
+    "correct_non_autonomous_count": 41,
+    "unnecessary_non_autonomous_count": 138
    },
    "cost_latency": {
     "n": 197,
@@ -363,15 +363,15 @@
   "minus_retrieval": {
    "description": "minus_retrieval",
    "intent": {
-    "accuracy": 0.8477,
-    "macro_f1": 0.8538
+    "accuracy": 0.8325,
+    "macro_f1": 0.8313
    },
    "escalation": {
-    "precision": 0.2869,
-    "recall": 0.9459,
-    "f1": 0.4403,
-    "fp": 87,
-    "fn": 2
+    "precision": 0.3115,
+    "recall": 0.9268,
+    "f1": 0.4663,
+    "fp": 84,
+    "fn": 3
    },
    "autonomy": {
     "auto_handle_rate": 0.0203,
@@ -380,8 +380,8 @@
     "safe_auto_handle_count": 4,
     "unsafe_auto_handle_count": 0,
     "grounded_auto_handle_count": 0,
-    "correct_non_autonomous_count": 37,
-    "unnecessary_non_autonomous_count": 156
+    "correct_non_autonomous_count": 41,
+    "unnecessary_non_autonomous_count": 152
    },
    "cost_latency": {
     "n": 197,
@@ -401,26 +401,26 @@
  "paired_differences_vs_resolveai": {
   "resolveai_full_minus_B0_trivial": {
    "intent_macro_f1": {
-    "difference": 0.8401,
-    "ci_low": 0.7854,
-    "ci_high": 0.887,
+    "difference": 0.8169,
+    "ci_low": 0.7551,
+    "ci_high": 0.8706,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
     "interval_excludes_zero": true
    },
    "escalation_f1": {
-    "difference": 0.4403,
-    "ci_low": 0.3312,
-    "ci_high": 0.5301,
+    "difference": 0.4663,
+    "ci_low": 0.366,
+    "ci_high": 0.5556,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
     "interval_excludes_zero": true
    },
    "escalation_recall": {
-    "difference": 0.9459,
-    "ci_low": 0.8621,
+    "difference": 0.9268,
+    "ci_low": 0.8378,
     "ci_high": 1.0,
     "n": 197,
     "n_boot": 1000,
@@ -439,26 +439,26 @@
   },
   "resolveai_full_minus_B0_trivial_always_handoff": {
    "intent_macro_f1": {
-    "difference": 0.8401,
-    "ci_low": 0.7854,
-    "ci_high": 0.887,
+    "difference": 0.8169,
+    "ci_low": 0.7551,
+    "ci_high": 0.8706,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
     "interval_excludes_zero": true
    },
    "escalation_f1": {
-    "difference": 0.1241,
-    "ci_low": 0.077,
-    "ci_high": 0.1662,
+    "difference": 0.1218,
+    "ci_low": 0.0707,
+    "ci_high": 0.167,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
     "interval_excludes_zero": true
    },
    "escalation_recall": {
-    "difference": -0.0541,
-    "ci_low": -0.1379,
+    "difference": -0.0732,
+    "ci_low": -0.1622,
     "ci_high": 0.0,
     "n": 197,
     "n_boot": 1000,
@@ -477,27 +477,27 @@
   },
   "resolveai_full_minus_B1_simple_ml": {
    "intent_macro_f1": {
-    "difference": 0.304,
-    "ci_low": 0.2236,
-    "ci_high": 0.3916,
+    "difference": 0.3017,
+    "ci_low": 0.2239,
+    "ci_high": 0.3857,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
     "interval_excludes_zero": true
    },
    "escalation_f1": {
-    "difference": -0.1554,
-    "ci_low": -0.2504,
-    "ci_high": -0.0544,
+    "difference": -0.1664,
+    "ci_low": -0.2639,
+    "ci_high": -0.0649,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
     "interval_excludes_zero": true
    },
    "escalation_recall": {
-    "difference": 0.1891,
-    "ci_low": 0.0334,
-    "ci_high": 0.3415,
+    "difference": 0.1707,
+    "ci_low": 0.0303,
+    "ci_high": 0.3062,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
@@ -515,27 +515,27 @@
   },
   "resolveai_full_minus_B2_direct_llm": {
    "intent_macro_f1": {
-    "difference": -0.0329,
-    "ci_low": -0.0823,
-    "ci_high": 0.0137,
+    "difference": -0.0217,
+    "ci_low": -0.0701,
+    "ci_high": 0.0235,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
     "interval_excludes_zero": false
    },
    "escalation_f1": {
-    "difference": -0.379,
-    "ci_low": -0.4867,
-    "ci_high": -0.2875,
+    "difference": -0.3383,
+    "ci_low": -0.4452,
+    "ci_high": -0.2442,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
     "interval_excludes_zero": true
    },
    "escalation_recall": {
-    "difference": 0.027,
-    "ci_low": -0.0883,
-    "ci_high": 0.1396,
+    "difference": 0.0731,
+    "ci_low": -0.0465,
+    "ci_high": 0.2,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
@@ -553,26 +553,26 @@
   },
   "resolveai_full_minus_minus_second_opinion": {
    "intent_macro_f1": {
-    "difference": 0.2356,
-    "ci_low": 0.1747,
-    "ci_high": 0.3026,
+    "difference": 0.2231,
+    "ci_low": 0.1584,
+    "ci_high": 0.2935,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
     "interval_excludes_zero": true
    },
    "escalation_f1": {
-    "difference": -0.0183,
-    "ci_low": -0.048,
-    "ci_high": 0.0049,
+    "difference": -0.0182,
+    "ci_low": -0.0476,
+    "ci_high": 0.0051,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
     "interval_excludes_zero": false
    },
    "escalation_recall": {
-    "difference": -0.0271,
-    "ci_low": -0.0882,
+    "difference": -0.0244,
+    "ci_low": -0.0811,
     "ci_high": 0.0,
     "n": 197,
     "n_boot": 1000,
@@ -600,9 +600,9 @@
     "interval_excludes_zero": false
    },
    "escalation_f1": {
-    "difference": 0.0109,
+    "difference": 0.0112,
     "ci_low": 0.0024,
-    "ci_high": 0.0231,
+    "ci_high": 0.0238,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
@@ -638,18 +638,18 @@
     "interval_excludes_zero": false
    },
    "escalation_f1": {
-    "difference": -0.0462,
-    "ci_low": -0.1279,
-    "ci_high": 0.0364,
+    "difference": -0.0554,
+    "ci_low": -0.1319,
+    "ci_high": 0.0225,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,
     "interval_excludes_zero": false
    },
    "escalation_recall": {
-    "difference": 0.2162,
-    "ci_low": 0.0882,
-    "ci_high": 0.3715,
+    "difference": 0.1951,
+    "ci_low": 0.081,
+    "ci_high": 0.3263,
     "n": 197,
     "n_boot": 1000,
     "seed": 42,

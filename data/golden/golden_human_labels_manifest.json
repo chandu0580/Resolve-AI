@@ -1,0 +1,42 @@
+{
+  "dataset_name": "ResolveAI Golden Evaluation Set (Human-Labelled)",
+  "annotator": "human owner",
+  "schema_version": "v1.2 (human-labelled)",
+  "source_split": "temporal holdout (2017-11-28 to 2017-12-03), seed 42",
+  "source_file": "data/golden/golden_final.csv",
+  "target_file": "data/golden/golden_human_labels.csv",
+  "total_rows": 197,
+  "completed_rows": 197,
+  "remaining_rows": 0,
+  "percent_complete": 100.0,
+  "is_complete": true,
+  "sha256": "285ffccfb8acf3971bda1282d880fc1167513061f9d7079b3c1bc77e5cee3ad8",
+  "last_updated_utc": "2026-09-14T06:30:23.390343+00:00",
+  "distributions": {
+    "intent": {
+      "hardware_damage": 6,
+      "performance_crash": 26,
+      "account_store_repair": 17,
+      "data_loss_sync": 18,
+      "keyboard_text_bug": 17,
+      "apps_services": 38,
+      "connectivity": 14,
+      "battery_power": 17,
+      "non_english": 13,
+      "other": 19,
+      "general_complaint": 12
+    },
+    "should_escalate": {
+      "True": 42,
+      "False": 155
+    },
+    "escalation_reason": {
+      "hardware": 6,
+      "none": 155,
+      "private_info": 16,
+      "repeat_contact": 14,
+      "vague_hostile": 2,
+      "safety": 4
+    }
+  }
+}

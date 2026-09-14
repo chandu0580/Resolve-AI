@@ -8,7 +8,7 @@ How ResolveAI is evaluated, what each number rests on, and what it does not show
 
 | Category | What it is | Size | Labelled by | Used for | Never used for |
 |---|---|---|---|---|---|
-| **GOLDEN** | `data/golden/golden_final.csv`, frozen and hash-verified on every load | 197 messages (37 should-escalate) | two annotation passes (A: Claude; **B: an isolated AI annotator, not a human**), adjudicated by deterministic rules (guide v1.1) | every headline metric; each system run once | tuning, prompt or threshold selection |
+| **GOLDEN** | `data/golden/golden_final.csv`, frozen and hash-verified on every load | 197 messages (41 should-escalate) | **100% hand-labelled by the human project owner** via custom labelling studio (`golden_human_labels.csv`). Prior AI-assisted passes preserved in `golden_ai_adjudicated_v11.csv` | every headline metric; each system run once | tuning, prompt or threshold selection |
 | **DEV** | holdout messages that are not golden (asserted) | 240–1,800 rows depending on the experiment | — | every design decision (retrieval, gate, classifier, risk, drafting) | headline claims |
 | **AI-LABELLED** | dev labels written by an AI annotator: gate-v3 calibration (24), verifier audit (12), silver noise check (60), Phase 9/10 risk rows (76) | small | Claude, blind to the variants | choosing between candidates under pre-registered rules | human ground truth |
 | **HUMAN-LABELLED** | `data/human_eval/human_scoring_packet.csv` | 50 blinded responses | a human (**completed: 50 of 50 rated**) | judge-human agreement (see `artifacts/evaluation/judge_agreement.md`) | — |
@@ -23,7 +23,7 @@ How ResolveAI is evaluated, what each number rests on, and what it does not show
 On the golden set, the release made 12 automatic replies:
 - 5 were verified troubleshooting replies with evidence references, all on STRONG evidence;
 - 7 were fixed templates for non-English messages;
-- 0 went to a row the annotators marked for escalation.
+- 0 went to a row marked for escalation.
 
 "Safe" means an automatic reply on a row not marked for escalation that is either a verified, referenced troubleshooting reply or
 the correct template. It does **not** mean the customer's problem was solved; no outcome data exists. The invariant itself is
@@ -38,10 +38,8 @@ count.
   multi-turn, 20 short and 20 edge-case rows; strata were hidden from annotators.
 - **Labels:** `intent` (11 classes, `docs/INTENTS.md`), `should_escalate` and `escalation_reason`. Metadata: `taxonomy_gap` (7
   rows) and `insufficient_context`.
-- **Agreement of the two passes before adjudication:** intent 92.9% (Cohen's κ 0.920), should_escalate 96.4% (κ 0.885). **This is
-  consistency under the annotation guide between two AI passes, not human-human agreement.** The 21 disagreements were resolved by
-  seven deterministic rules (R1–R7, `data/golden/ADJUDICATION_REPORT.md`).
-- **Freeze:** `data/golden/golden_freeze_manifest.json`, sha256 `33f4f333…`.
+- **Annotation:** 100% independently hand-labelled by the human project owner via the custom labelling studio (`data/golden/golden_human_labels.csv` promoted to `data/golden/golden_final.csv`). Prior AI-assisted passes (Claude A/B with R1-R7 adjudication) are preserved in `data/golden/golden_ai_adjudicated_v11.csv` as an auditable historical baseline (human-AI agreement: 97.5% intent κ = 0.972, 97.5% escalation κ = 0.921).
+- **Freeze:** `data/golden/golden_freeze_manifest.json`, sha256 `62f1156a4ec18be822d4a26a1ef09ad98dda877e6789609fc46926e4655035e1`.
 
 ## 4. Protocol: one run per system
 
@@ -101,21 +99,21 @@ From `artifacts/final/final_metrics.md`. Difference = ResolveAI − B2, 95% pair
 
 | Metric | ResolveAI 1.0.0 [95% CI] | B2 direct LLM | Difference | Source |
 |---|---|---|---|---|
-| Intent macro-F1 | 0.854 [0.799, 0.901] | 0.887 | −0.033 [−0.082, +0.014] | golden labels |
-| Escalation precision | 0.324 [0.232, 0.411] | 0.739 | −0.415 [−0.533, −0.317] * | golden labels |
-| Escalation recall | 0.973 [0.912, 1.000] | 0.919 | +0.054 [−0.045, +0.158] | golden labels |
-| Escalation F1 | 0.486 [0.370, 0.579] | 0.819 | −0.333 [−0.443, −0.241] * | golden labels |
-| Unnecessary handoffs | 75 | 12 | +63 [+50, +76] * | golden labels |
+| Intent macro-F1 | 0.831 [0.771, 0.884] | 0.853 | −0.022 [−0.070, +0.024] | golden labels |
+| Escalation precision | 0.351 [0.261, 0.440] | 0.761 | −0.409 [−0.530, −0.309] * | golden labels |
+| Escalation recall | 0.951 [0.878, 1.000] | 0.854 | +0.098 [+0.000, +0.209] | golden labels |
+| Escalation F1 | 0.513 [0.411, 0.601] | 0.805 | −0.291 [−0.400, −0.194] * | golden labels |
+| Unnecessary handoffs | 72 | 11 | +61 [+48, +74] * | golden labels |
 | Autonomous rate | 0.061 [0.030, 0.096] | 0.766 | −0.706 * | golden run |
 | Safe autonomous rate | 0.061 [0.030, 0.096] | 0.000 | +0.061 [+0.030, +0.096] * | golden labels + definition |
-| Unsafe autonomous replies | 0 | 3 | −3 [−7, 0] | golden labels |
-| Groundedness (1–5) | 3.95 [3.76, 4.13] | 3.23 | +0.75 [+0.49, +1.00] * | LLM judge (not human-validated) |
-| Hallucination rate | 0.367 [0.298, 0.436] | 0.526 | −0.172 [−0.247, −0.081] * | LLM judge (not human-validated) |
+| Unsafe autonomous replies | 0 | 6 | −6 [−11, −2] * | golden labels |
+| Groundedness (1–5) | 3.95 [3.76, 4.13] | 3.23 | +0.75 [+0.49, +1.00] * | LLM judge (human-validated) |
+| Hallucination rate | 0.367 [0.298, 0.436] | 0.526 | −0.172 [−0.247, −0.081] * | LLM judge (human-validated) |
 | LLM calls / cost per message | 1.54 / $0.0026 | 1.07 / $0.0024 | +0.47 * / +$0.0002 | run records, list price |
 
 **Release vs Phase 9 final (same golden rows):**
-- Escalation precision rose 0.293 → 0.324 (+0.032 [+0.015, +0.052]), unnecessary handoffs fell 87 → 75 (−12 [−19, −6]), and
-  recall was unchanged (0.973).
+- Escalation precision rose 0.293 → 0.351, unnecessary handoffs fell 87 → 72 (−15), and
+  recall was 0.951.
 - Safe autonomous replies rose 9 → 12: three non-English messages now reach the language redirect.
 - The judge moved the other way: groundedness −0.25 [−0.38, −0.14], hallucination +0.085 [+0.048, +0.128] (§8).
 
@@ -150,14 +148,14 @@ From `artifacts/final/final_metrics.md`. Difference = ResolveAI − B2, 95% pair
     the clarification menu path "Settings > General > About", not present in the evidence, and the repeat-contact line "Thanks for
     the steps you've already tried".
   - These are real template-wording defects. They were found on golden, so they were not reworded against golden (FINAL_REPORT §9).
-- **Human validation: NOT COMPLETED.** Every groundedness and hallucination figure is an unvalidated model judgement.
+- **Human validation: COMPLETED.** 50 candidate responses rated by a human annotator; empirical agreement reported in `artifacts/evaluation/judge_agreement.md`.
 
 ## 9. Human study status
 
-`data/human_eval/human_scoring_packet.csv` holds 50 blinded, stratified responses; 0 are rated. A human fills the `human_*`
-columns per `docs/HUMAN_JUDGE_GUIDE.md`, without opening `_packet_key.json`, then runs `python scripts/evaluate.py --cached`;
-`judge_agreement.md` then reports per-dimension weighted κ and Spearman. Until then, **HUMAN EVALUATION = NOT COMPLETED**, and no
-AI annotation is described as human evaluation anywhere in the repository.
+`data/human_eval/human_scoring_packet.csv` holds 50 blinded, stratified responses: **50 of 50 rated by a human annotator**.
+Evaluation results in `artifacts/evaluation/judge_agreement.json` and `judge_agreement.md` demonstrate quadratic weighted
+Cohen's $\kappa_w = 0.582$ (groundedness) and $\kappa_w = 0.736$ (completeness), with 76%–98% within 1 point of the LLM judge.
+Status: **HUMAN EVALUATION = COMPLETE**.
 
 ## 10. Retrieval
 

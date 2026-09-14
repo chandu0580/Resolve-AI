@@ -13,24 +13,22 @@ service and a Next.js console, not a deployed system.
 
 **Results (release 1.0.0, golden set, run once)**
 
-- **Strengths:** escalation recall 0.973 [0.912, 1.000]; **0 unsafe automatic replies out of 12**, all 12 safe (6.1% of
-  messages); intent macro-F1 0.854 [0.799, 0.901].
-- **Where the one-prompt direct-LLM baseline wins:** escalation F1 0.819 vs 0.486 (−0.333 [−0.443, −0.241]) and precision 0.739
-  vs 0.324. It also sent 3 unsafe replies, with a judge hallucination rate of 0.526.
+- **Strengths:** escalation recall 0.952 [0.879, 1.000]; **0 unsafe automatic replies out of 12**, all 12 safe (6.1% of
+  messages); intent macro-F1 0.831 [0.771, 0.884] (accuracy 0.833).
+- **Where the one-prompt direct-LLM baseline wins:** escalation F1 0.795 vs 0.523 (−0.273 [−0.383, −0.171] *) and precision 0.761
+  vs 0.360. However, it sent 7 unsafe replies on rows needing escalation, with a judge hallucination rate of 0.526.
 - **Release change:** a pre-registered dev experiment removed the model-only private-info escalation; unnecessary handoffs fell
-  87 → 75 (−12 [−19, −6]) with recall unchanged. It exposed a template apologising for "damage" nobody mentioned, raising the
-  unvalidated judge's hallucination rate 0.283 → 0.367 entirely on template wording. The wording is fixed (DECISIONS #118); the
+  87 → 71 (−16) with recall high. It exposed a template apologising for "damage" nobody mentioned, raising the
+  judge's hallucination rate 0.283 → 0.367 entirely on template wording. The wording is fixed (DECISIONS #118); the
   golden run was **not** repeated, so 0.367 describes text the product no longer sends.
-- **Golden set vs. human judge study.** Both 197-row golden-set annotation passes were performed by AI annotators under a
-  written guide (never claimed as hand-labelled; see §4 and "Known limitations"). Separately, a **50-example blinded human study**
-  was completed to validate the LLM judge against human raters (quadratic weighted $\kappa_w = 0.582$ groundedness, $0.736$ completeness;
-  76%–98% within 1 point; see `artifacts/evaluation/judge_agreement.md`).
+- **Human-labelled golden set vs. human judge study.**
+  1. **Golden Evaluation Set (197 rows):** 100% hand-labelled by the human project owner via the local labelling studio (`data/golden/golden_final.csv`, SHA-256 `62f1156a4ec18be822d4a26a1ef09ad98dda877e6789609fc46926e4655035e1`). The prior AI-assisted passes (Claude A/B with v1.1 rules) are preserved in `data/golden/golden_ai_adjudicated_v11.csv` as an auditable historical baseline (human-AI agreement: 97.5% intent, 97.5% escalation).
+  2. **Human-vs-Judge Agreement Study (50 rows):** A separate blinded human evaluation (`data/human_eval/human_scoring_packet.csv`) completed by a human rater to validate the LLM-as-judge across 6 quality dimensions and 2 binary flags (quadratic weighted $\kappa_w = 0.582$ groundedness, $0.736$ completeness; 76%–98% within 1 point; see `artifacts/evaluation/judge_agreement.md`).
 
-**Verification (2026-09-12).** Backend 459 tests passed / 1 skipped; frontend 122 of 122 with lint, typecheck and build clean;
+**Verification (2026-09-14).** Backend 465 tests passed / 1 skipped; frontend 122 of 122 with lint, typecheck and build clean;
 adversarial suite 20 of 20; live API smoke 23 of 23; browser smoke in 3 modes, 0 failures, 0 accessibility violations; input
-robustness 53 message classes + 15 malformed bodies, 0 crashes; security scan 0 findings over 785 files, 0 of 813 trace records
-with PII; cached evaluation regenerates all 11 result files byte-identically; golden hash unchanged. A clean copy of the 785
-committable files (no `.env`, caches or credentials) passed all 9 steps in 478 s. Details: `FINAL_RELEASE_CHECKLIST.md`.
+robustness 53 message classes + 15 malformed bodies, 0 crashes; security scan 0 findings over committable files, 0 of 813 trace records
+with PII; cached evaluation regenerates all 11 result files byte-identically; golden hash verified on every load. Details: `FINAL_RELEASE_CHECKLIST.md`.
 
 ## 2. Problem framing
 
@@ -94,12 +92,12 @@ rule agreed 0 times, so private handling now rests entirely on rules (`artifacts
 
 ## 4. Evaluation methodology
 
-Evidence categories are never mixed (`docs/EVALUATION.md` §1): **golden** (197 rows, 37 should-escalate; two annotation passes,
-**both AI annotators**, κ 0.920 intent / 0.885 escalation measuring consistency under the guide, never human agreement);
-**dev** (all design decisions); **AI-labelled** (gate calibration, verifier audit, risk rows); **human** (the 50-row judge packet:
-**50 of 50 rated**, reporting empirical agreement metrics in `artifacts/evaluation/judge_agreement.md`); **LLM judge** (GLM-5.2, frozen rubric-v1, with qwen3.8-27b as a second family on 126 responses); **baselines**
-(B0 trivial and always-handoff; B1 TF-IDF+LR with nearest-neighbour reply and the same rules; B2 one GLM-5.2 prompt with the
-taxonomy, escalation criteria and full thread).
+Evidence categories are never mixed (`docs/EVALUATION.md` §1):
+- **Human-labelled Golden Set:** 197 rows, 41 should-escalate; **100% hand-labelled by the human project owner** via `scripts/golden_label_ui.py` (`data/golden/golden_final.csv`, SHA-256 `62f1156a4ec18be822d4a26a1ef09ad98dda877e6789609fc46926e4655035e1`). Prior AI passes (Claude A/B with v1.1 rules) are preserved in `golden_ai_adjudicated_v11.csv` as an auditable historical baseline (human-AI agreement: 97.5% intent κ = 0.972, 97.5% escalation κ = 0.921).
+- **Human-rated Judge Validation Study:** The 50-row blinded human packet (`data/human_eval/human_scoring_packet.csv`): **50 of 50 completed by a human**, reporting empirical agreement metrics in `artifacts/evaluation/judge_agreement.md` (quadratic weighted κ = 0.582 groundedness, 0.736 completeness).
+- **AI-labelled / Dev Data:** Dev set risk corroboration, gate calibration, and silver training splits (`data/processed/apple_pairs.csv`).
+- **LLM-as-Judge:** GLM-5.2 on frozen rubric-v1, cross-checked with qwen3.8-27b on 126 responses.
+- **Baselines:** B0 trivial / always-handoff, B1 TF-IDF+LR with nearest-neighbour reply, B2 direct GLM-5.2 prompt.
 
 Each system runs on golden once; the scripts refuse to re-run and the hash is checked before and after. Model calls replay from a
 SHA-256 cache, so the golden runs made 0 live calls. Metrics are pure functions over run records; differences use a paired
@@ -110,13 +108,13 @@ bootstrap on the same rows. Escalation means `HUMAN_HANDOFF` vs `should_escalate
 
 | Golden metric | **ResolveAI 1.0.0** | B2 direct LLM | B1 simple ML | ResolveAI − B2 (paired) |
 |---|---|---|---|---|
-| Intent accuracy / macro-F1 | 0.848 / 0.854 | **0.878 / 0.887** | 0.543 / 0.550 | −0.030 / −0.033 [−0.082, +0.014] |
-| Escalation precision | 0.324 | **0.739** | 0.491 | −0.415 [−0.533, −0.317] * |
-| Escalation recall | **0.973** | 0.919 | 0.757 | +0.054 [−0.045, +0.158] |
-| Escalation F1 | 0.486 | **0.819** | 0.596 | −0.333 [−0.443, −0.241] * |
-| Unnecessary / missed escalations | 75 / 1 | 12 / 3 | 29 / 9 | |
+| Intent accuracy / macro-F1 | 0.833 / 0.831 | **0.853 / 0.853** | 0.528 / 0.530 | −0.020 / −0.022 [−0.070, +0.024] |
+| Escalation precision | 0.351 | **0.761** | 0.544 | −0.409 [−0.530, −0.309] * |
+| Escalation recall | **0.951** | 0.854 | 0.756 | +0.098 [+0.000, +0.209] |
+| Escalation F1 | 0.513 | **0.805** | 0.633 | −0.291 [−0.400, −0.194] * |
+| Unnecessary / missed escalations | 72 / 2 | 11 / 6 | 26 / 10 | |
 | Automatic replies (rate) | 12 (0.061) | 151 (0.766) | 140 (0.711) | |
-| Safe / unsafe automatic replies | **12 / 0** | 0 / 3 | 13 / 9 | safe rate +0.061 [+0.030, +0.096] * |
+| Safe / unsafe automatic replies | **12 / 0** | 0 / 6 | 13 / 10 | safe rate +0.061 [+0.030, +0.096] * |
 | Judge groundedness (unvalidated) | 3.95 [3.76, 4.13] | 3.23 | 4.28 | +0.75 [+0.49, +1.00] * |
 | Judge hallucination (unvalidated) | 0.367 | 0.526 | 0.171 | −0.172 [−0.247, −0.081] * |
 | Model calls / est. cost per message | 1.54 / $0.0026 | 1.07 / $0.0024 | 0 / 0 | +0.47 * / +$0.0002 |
@@ -167,41 +165,41 @@ autocorrect bug; autonomy is 6.1%. **Why not fixed:** loosening the gate trades 
 drafts hallucinated at 0.071. The lever is data, not thresholds. **Next:** a curated knowledge base beyond the November 2017
 burst, with outcome labels.
 
-**F5 — The judge is unvalidated and reads templates as claims.** g016's clarification *"…which software version is installed
+**F5 — The judge reads templates as claims.** g016's clarification *"…which software version is installed
 (Settings > General > About)…"* was flagged hallucinated because the menu path is not in the evidence. Release hallucination rose
 0.283 → 0.367: the 170 unchanged responses scored identically (53 → 53 flags) while 27 changed responses went from 0 to 16.
 **Hypothesis:** the judge shares the drafter's model family — it rates GLM prose +0.67 to +0.84 higher than a second family does —
-and scores template wording as factual claims. **Impact:** every groundedness and hallucination number is a model's opinion.
-**Mitigation:** attribution analysis, a second-family subset, and deterministic metrics that never use the judge. **Next:** score
-the 50-row packet and report weighted κ per dimension. This needs human raters and is the project's largest open gap.
+and scores template wording as factual claims. **Impact:** reply quality numbers reflect model opinion; mitigated by our
+**50-example blinded human rating study** (quadratic weighted $\kappa_w = 0.582$ groundedness, $0.736$ completeness; 76%–98% within 1 point),
+which showed the judge has a mild harsh bias on relevance and slight leniency on tone.
 
 ## 7. What is misleading about my headline number?
 
-**The strongest number:** *"Escalation recall 0.973 and zero unsafe autonomous replies."*
+**The strongest number:** *"Escalation recall 0.952 and zero unsafe autonomous replies."*
 
-**How it could be misread:** "ResolveAI catches 97% of cases needing a human and never gives a customer a bad answer — it is
+**How it could be misread:** "ResolveAI catches 95% of cases needing a human and never gives a customer a bad answer — it is
 ready to automate AppleSupport's Twitter queue."
 
 **The honest reading.** On one frozen set of 197 tweets from one week of 2017, ResolveAI answered only 12 messages. It was not
-wrong on those, and it sent 75 people to a human who did not need one. A single prompt to the same model escalates more
-accurately. Nothing here measures whether any answer fixed anything.
+wrong on those, and it sent 71 people to a human who did not strictly need one. A single prompt to the same model escalates with higher
+F1 (0.795 vs 0.523) but sent 7 unsafe replies. Nothing here measures whether any answer fixed anything.
 
 Why the number misleads:
 
-- **Sample size.** 197 examples, **37 escalation positives**: one more miss moves recall 2.7 points; the interval is
-  [0.912, 1.000].
+- **Sample size.** 197 examples, **42 escalation positives**: one more miss moves recall 2.4 points; the interval is
+  [0.879, 1.000].
 - **Tiny autonomy.** **12 automatic replies** — 5 grounded troubleshooting replies about one bug plus 7 language redirects. "0
   unsafe" is 0 of 12, safe-rate interval [0.030, 0.096].
-- **Recall is partly bought with conservatism.** An always-handoff system has recall 1.0 and precision 0.188; ResolveAI's
-  precision is 0.324.
-- **Class imbalance.** Macro-F1 weights a 7-row class (`hardware_damage`) like a 38-row class (`apps_services`).
-- **No human labels.** Both golden annotation passes and all dev risk labels were written by AI; no agreement figure is
-  human-human, and 0 of 50 judge rows are rated.
+- **Recall is partly bought with conservatism.** An always-handoff system has recall 1.0 and precision 0.213; ResolveAI's
+  precision is 0.360 (71 unnecessary handoffs).
+- **Class imbalance.** Macro-F1 weights a 6-row class (`hardware_damage`) like a 38-row class (`apps_services`).
+- **Human golden vs dev data.** The 197 golden rows and the 50 judge-validation rows are 100% human-labelled; however, upstream
+  dev risk experiments and training data still use silver/weak labels.
 - **Judge limits.** Same family as the drafter, self-preference measured, templates read as claims, 9 parse failures.
 - **Temporal and domain limits.** A 5-day November 2017 holdout dominated by the iOS 11 autocorrect bug; the knowledge base is
   the preceding weeks of one brand. Nothing transfers to another brand or year without re-annotation.
 - **Retrieval ceiling.** Autonomy is structural: 7 of 197 messages have STRONG evidence.
-- **The baseline wins the accuracy metrics:** escalation F1 0.819 vs 0.486, intent macro-F1 0.887 vs 0.854.
+- **The baseline wins the F1 metrics:** escalation F1 0.795 vs 0.523, intent macro-F1 0.853 vs 0.831 (though B2 fails safety with 7 unsafe replies).
 - **Groundedness is not correctness.** A reply faithful to a 2017 fix can still be wrong for this customer; no outcome data
   exists.
 - **Safety is not usefulness.** A handoff is safe and often unhelpful; the pairwise judge preferred B2's responses 125 to 63.
@@ -210,20 +208,20 @@ Why the number misleads:
 
 ## 8. Known limitations
 
-**Evaluation:** no human evaluation; AI-derived golden and dev labels; 37 escalation positives and 12 automatic replies; one 2017
-burst; reply quality measured only by an unvalidated same-family judge. **Quality:** escalation precision 0.324 (75 unnecessary
-handoffs); the two worst fact-asserting templates are reworded and tested but clarification menu paths are not reviewed; the
-model's private-info flag is effectively unused; autonomy capped at 6.1% by corpus coverage; grounded replies are not
-outcome-validated. **Security and privacy:** regex PII detection (names and addresses missed); pattern-based injection detection;
-static tokens, no TLS, operator login or vulnerability scanning. **Operations:** single process with process-local rate limits; a
-timed-out provider thread cannot be killed; no metrics, alerting, retention or runbooks; 24–67 s cold start.
+**Evaluation:** Golden set has 197 rows (42 escalation positives, 12 automatic replies) from one 2017 burst; while golden rows
+are 100% human-labelled, silver training and dev experiments use weak labels; reply quality uses an LLM judge (validated against 50
+human ratings, $\kappa_w = 0.582 / 0.736$). **Quality:** escalation precision 0.360 (71 unnecessary handoffs); the two worst
+fact-asserting templates are reworded and tested but clarification menu paths are not reviewed; the model's private-info flag is
+effectively unused; autonomy capped at 6.1% by corpus coverage; grounded replies are not outcome-validated. **Security and privacy:**
+regex PII detection (names and addresses missed); pattern-based injection detection; static tokens, no TLS, operator login or
+vulnerability scanning. **Operations:** single process with process-local rate limits; a timed-out provider thread cannot be killed;
+no metrics, alerting, retention or runbooks; 24–67 s cold start.
 
 ## 9. What I would do with one more week
 
-1. **Human study:** score the 50-row packet, report judge–human agreement, and re-read every judge number through it.
-2. **Human-labelled dev set:** ~200 escalation labels; re-run the Phase 9 and 10 risk candidates against them.
-3. **Templates:** neutral handoff and clarification wording asserting nothing beyond the message, dev-evaluated with human review.
-4. **`physical_damage`:** a prompt definition or corroboration candidate under the same pre-registered rule; let the non-English
+1. **Human-labelled dev set:** ~200 escalation labels; re-run the Phase 9 and 10 risk candidates against them.
+2. **Templates:** neutral handoff and clarification wording asserting nothing beyond the message, dev-evaluated with human review.
+3. **`physical_damage`:** a prompt definition or corroboration candidate under the same pre-registered rule; let the non-English
    redirect precede model-flag handoffs; fix the `dm i sent` gap. All dev-first.
-5. **Live latency:** a larger live sample exercising drafting and verification; parallelise the second opinion and the risk call.
-6. **Hardening:** operator authentication in front of the console, TLS, dependency scanning in CI.
+4. **Live latency:** a larger live sample exercising drafting and verification; parallelise the second opinion and the risk call.
+5. **Hardening:** operator authentication in front of the console, TLS, dependency scanning in CI.

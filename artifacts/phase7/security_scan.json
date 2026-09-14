@@ -1,7 +1,7 @@
 {
- "committable_files": 756,
- "committable_bytes": 55706931,
- "committable_mb": 55.7,
+ "committable_files": 761,
+ "committable_bytes": 55962918,
+ "committable_mb": 56.0,
  "largest_files": [
   {
    "file": "data/processed/apple_pairs.csv",
@@ -49,8 +49,8 @@
   "GROQ_API_KEY",
   "LLM_API_KEY"
  ],
- "trace_files_scanned": 8,
- "trace_records_scanned": 1283,
+ "trace_files_scanned": 9,
+ "trace_records_scanned": 1308,
  "trace_records_with_pii": 0,
  ".env_committable": false,
  "findings": [],

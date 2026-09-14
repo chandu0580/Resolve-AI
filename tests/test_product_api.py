@@ -24,7 +24,7 @@ from resolveai.trust.pii import contains_unredacted_pii
 
 needs_kb = pytest.mark.skipif(not ARTIFACT.exists() or not (config.PROCESSED_DIR / "apple_pairs.csv").exists(), reason="artifact or subsample missing")
 needs_release = pytest.mark.skipif(not (product.FINAL_DIR / "final_metrics.json").exists(), reason="release artifacts missing")
-GOLDEN_SHA = "33f4f333ccf10de7f628e57b5567a7930852cdf5b6d4bba872555b96b2bec3a9"
+GOLDEN_SHA = "62f1156a4ec18be822d4a26a1ef09ad98dda877e6789609fc46926e4655035e1"
 OPERATOR = "op-token-0123456789-abcdefghijklmnopqrstuvwxyz"
 READER = "reader-token-0123456789-abcdefghijklmnopqrstuv"
 ENDPOINTS = ("/api/v1/evaluation/release", "/api/v1/agent/profile", "/api/v1/knowledge/summary")
@@ -91,7 +91,7 @@ def test_release_view_serves_frozen_artifacts_separated_by_dataset(tmp_path):
     assert b["golden"]["release"]["golden_sha256"] == GOLDEN_SHA and b["golden"]["release"]["n"] == 197
     assert b["golden"]["table"] == stored["table"], "metrics are served as stored, never recomputed"
     assert b["golden"]["human_evaluation"]["fully_rated_rows"] == stored["human_evaluation"]["fully_rated_rows"]
-    assert b["golden"]["failure_modes"]["unnecessary_handoffs"]["total"] == 75
+    assert b["golden"]["failure_modes"]["unnecessary_handoffs"]["total"] == 72
     assert "changed_rows" not in (b["golden"]["judge_attribution"] or {})
     assert b["limitations"]
     for text in strings_under(b, product.TEXT_KEYS):

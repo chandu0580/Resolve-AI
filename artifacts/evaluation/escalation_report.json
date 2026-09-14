@@ -1,32 +1,32 @@
 {
  "resolveai_full": {
   "n": 197,
-  "gold_positive": 37,
-  "gold_negative": 160,
-  "tp": 35,
-  "fp": 87,
-  "fn": 2,
-  "tn": 73,
-  "precision": 0.2869,
-  "recall": 0.9459,
-  "f1": 0.4403,
-  "false_escalation_rate": 0.5437,
-  "missed_escalation_rate": 0.0541,
+  "gold_positive": 41,
+  "gold_negative": 156,
+  "tp": 38,
+  "fp": 84,
+  "fn": 3,
+  "tn": 72,
+  "precision": 0.3115,
+  "recall": 0.9268,
+  "f1": 0.4663,
+  "false_escalation_rate": 0.5385,
+  "missed_escalation_rate": 0.0732,
   "confusion_gold_x_pred": [
    [
-    73,
-    87
+    72,
+    84
    ],
    [
-    2,
-    35
+    3,
+    38
    ]
   ],
   "cost_weighted": {
    "missed_cost_1x": {
-    "total_cost": 89.0,
-    "cost_per_row": 0.4518,
-    "cost_sensitive_accuracy": 0.5482,
+    "total_cost": 87.0,
+    "cost_per_row": 0.4416,
+    "cost_sensitive_accuracy": 0.5584,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_3x": {
@@ -36,24 +36,24 @@
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_5x": {
-    "total_cost": 97.0,
-    "cost_per_row": 0.4924,
-    "cost_sensitive_accuracy": 0.9015,
+    "total_cost": 99.0,
+    "cost_per_row": 0.5025,
+    "cost_sensitive_accuracy": 0.8995,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    }
   },
   "bootstrap": {
    "f1": {
-    "point": 0.4403,
-    "ci_low": 0.3312,
-    "ci_high": 0.5301,
+    "point": 0.4663,
+    "ci_low": 0.366,
+    "ci_high": 0.5556,
     "n": 197,
     "n_boot": 1000,
     "seed": 42
    },
    "recall": {
-    "point": 0.9459,
-    "ci_low": 0.8621,
+    "point": 0.9268,
+    "ci_low": 0.8378,
     "ci_high": 1.0,
     "n": 197,
     "n_boot": 1000,
@@ -61,6 +61,13 @@
    }
   },
   "false_negatives": [
+   {
+    "gid": "g037",
+    "gold_reason": "vague_hostile",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "insufficient_context",
+    "message": "Hi. please help <url>"
+   },
    {
     "gid": "g048",
     "gold_reason": "repeat_contact",
@@ -79,12 +86,12 @@
  },
  "B0_trivial": {
   "n": 197,
-  "gold_positive": 37,
-  "gold_negative": 160,
+  "gold_positive": 41,
+  "gold_negative": 156,
   "tp": 0,
   "fp": 0,
-  "fn": 37,
-  "tn": 160,
+  "fn": 41,
+  "tn": 156,
   "precision": 0.0,
   "recall": 0.0,
   "f1": 0.0,
@@ -92,31 +99,31 @@
   "missed_escalation_rate": 1.0,
   "confusion_gold_x_pred": [
    [
-    160,
+    156,
     0
    ],
    [
-    37,
+    41,
     0
    ]
   ],
   "cost_weighted": {
    "missed_cost_1x": {
-    "total_cost": 37.0,
-    "cost_per_row": 0.1878,
-    "cost_sensitive_accuracy": 0.8122,
+    "total_cost": 41.0,
+    "cost_per_row": 0.2081,
+    "cost_sensitive_accuracy": 0.7919,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_3x": {
-    "total_cost": 111.0,
-    "cost_per_row": 0.5635,
-    "cost_sensitive_accuracy": 0.8122,
+    "total_cost": 123.0,
+    "cost_per_row": 0.6244,
+    "cost_sensitive_accuracy": 0.7919,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_5x": {
-    "total_cost": 185.0,
-    "cost_per_row": 0.9391,
-    "cost_sensitive_accuracy": 0.8122,
+    "total_cost": 205.0,
+    "cost_per_row": 1.0406,
+    "cost_sensitive_accuracy": 0.7919,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    }
   },
@@ -154,6 +161,20 @@
     "message": "all most 22 days has passed & no outcome in my case (<PHONE>)."
    },
    {
+    "gid": "g004",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "I updated my iOS and lost all my pictures from my first two days in Rome. I\u2019m so mad st y\u2019all"
+   },
+   {
+    "gid": "g007",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "she said she can listen to the songs unless i\u2019m listening to apple music on my phone . we both get a message that says \u201clooks like you\u2019re listening on another d"
+   },
+   {
     "gid": "g008",
     "gold_reason": "private_info",
     "action": "AUTO_HANDLE",
@@ -182,6 +203,13 @@
     "message": "Command is working. The problem is in the software, not in the hardware. I restarted a few times and the problema remains."
    },
    {
+    "gid": "g037",
+    "gold_reason": "vague_hostile",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Hi. please help <url>"
+   },
+   {
     "gid": "g044",
     "gold_reason": "private_info",
     "action": "AUTO_HANDLE",
@@ -208,6 +236,13 @@
     "action": "AUTO_HANDLE",
     "reason_code": "",
     "message": "every month I keep getting the same alert about billing and normally it\u2019s because I over pay but this month I didn\u2019t buy anything from any game and I still got "
+   },
+   {
+    "gid": "g064",
+    "gold_reason": "hardware",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "I restored my new iPhone X and my photos and videos didn\u2019t transfer over any reason why? Also my speaker is making a weird ticking noise not sure why maybe beca"
    },
    {
     "gid": "g065",
@@ -402,52 +437,52 @@
  },
  "B0_trivial_always_handoff": {
   "n": 197,
-  "gold_positive": 37,
-  "gold_negative": 160,
-  "tp": 37,
-  "fp": 160,
+  "gold_positive": 41,
+  "gold_negative": 156,
+  "tp": 41,
+  "fp": 156,
   "fn": 0,
   "tn": 0,
-  "precision": 0.1878,
+  "precision": 0.2081,
   "recall": 1.0,
-  "f1": 0.3162,
+  "f1": 0.3445,
   "false_escalation_rate": 1.0,
   "missed_escalation_rate": 0.0,
   "confusion_gold_x_pred": [
    [
     0,
-    160
+    156
    ],
    [
     0,
-    37
+    41
    ]
   ],
   "cost_weighted": {
    "missed_cost_1x": {
-    "total_cost": 160.0,
-    "cost_per_row": 0.8122,
-    "cost_sensitive_accuracy": 0.1878,
+    "total_cost": 156.0,
+    "cost_per_row": 0.7919,
+    "cost_sensitive_accuracy": 0.2081,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_3x": {
-    "total_cost": 160.0,
-    "cost_per_row": 0.8122,
-    "cost_sensitive_accuracy": 0.7293,
+    "total_cost": 156.0,
+    "cost_per_row": 0.7919,
+    "cost_sensitive_accuracy": 0.736,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_5x": {
-    "total_cost": 160.0,
-    "cost_per_row": 0.8122,
-    "cost_sensitive_accuracy": 0.8376,
+    "total_cost": 156.0,
+    "cost_per_row": 0.7919,
+    "cost_sensitive_accuracy": 0.8416,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    }
   },
   "bootstrap": {
    "f1": {
-    "point": 0.3162,
-    "ci_low": 0.2332,
-    "ci_high": 0.3852,
+    "point": 0.3445,
+    "ci_low": 0.2643,
+    "ci_high": 0.4177,
     "n": 197,
     "n_boot": 1000,
     "seed": 42
@@ -465,32 +500,32 @@
  },
  "B1_simple_ml": {
   "n": 197,
-  "gold_positive": 37,
-  "gold_negative": 160,
-  "tp": 28,
-  "fp": 29,
-  "fn": 9,
-  "tn": 131,
-  "precision": 0.4912,
-  "recall": 0.7568,
-  "f1": 0.5957,
-  "false_escalation_rate": 0.1812,
-  "missed_escalation_rate": 0.2432,
+  "gold_positive": 41,
+  "gold_negative": 156,
+  "tp": 31,
+  "fp": 26,
+  "fn": 10,
+  "tn": 130,
+  "precision": 0.5439,
+  "recall": 0.7561,
+  "f1": 0.6327,
+  "false_escalation_rate": 0.1667,
+  "missed_escalation_rate": 0.2439,
   "confusion_gold_x_pred": [
    [
-    131,
-    29
+    130,
+    26
    ],
    [
-    9,
-    28
+    10,
+    31
    ]
   ],
   "cost_weighted": {
    "missed_cost_1x": {
-    "total_cost": 38.0,
-    "cost_per_row": 0.1929,
-    "cost_sensitive_accuracy": 0.8071,
+    "total_cost": 36.0,
+    "cost_per_row": 0.1827,
+    "cost_sensitive_accuracy": 0.8173,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_3x": {
@@ -500,25 +535,25 @@
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_5x": {
-    "total_cost": 74.0,
-    "cost_per_row": 0.3756,
-    "cost_sensitive_accuracy": 0.9249,
+    "total_cost": 76.0,
+    "cost_per_row": 0.3858,
+    "cost_sensitive_accuracy": 0.9228,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    }
   },
   "bootstrap": {
    "f1": {
-    "point": 0.5957,
-    "ci_low": 0.4598,
-    "ci_high": 0.7059,
+    "point": 0.6327,
+    "ci_low": 0.5111,
+    "ci_high": 0.7408,
     "n": 197,
     "n_boot": 1000,
     "seed": 42
    },
    "recall": {
-    "point": 0.7568,
-    "ci_low": 0.6129,
-    "ci_high": 0.889,
+    "point": 0.7561,
+    "ci_low": 0.6098,
+    "ci_high": 0.8857,
     "n": 197,
     "n_boot": 1000,
     "seed": 42
@@ -531,6 +566,13 @@
     "action": "AUTO_HANDLE",
     "reason_code": "",
     "message": "Command is working. The problem is in the software, not in the hardware. I restarted a few times and the problema remains."
+   },
+   {
+    "gid": "g037",
+    "gold_reason": "vague_hostile",
+    "action": "AUTO_HANDLE",
+    "reason_code": "",
+    "message": "Hi. please help <url>"
    },
    {
     "gid": "g048",
@@ -592,66 +634,87 @@
  },
  "B2_direct_llm": {
   "n": 197,
-  "gold_positive": 37,
-  "gold_negative": 160,
-  "tp": 34,
-  "fp": 12,
-  "fn": 3,
-  "tn": 148,
-  "precision": 0.7391,
-  "recall": 0.9189,
-  "f1": 0.8193,
-  "false_escalation_rate": 0.075,
-  "missed_escalation_rate": 0.0811,
+  "gold_positive": 41,
+  "gold_negative": 156,
+  "tp": 35,
+  "fp": 11,
+  "fn": 6,
+  "tn": 145,
+  "precision": 0.7609,
+  "recall": 0.8537,
+  "f1": 0.8046,
+  "false_escalation_rate": 0.0705,
+  "missed_escalation_rate": 0.1463,
   "confusion_gold_x_pred": [
    [
-    148,
-    12
+    145,
+    11
    ],
    [
-    3,
-    34
+    6,
+    35
    ]
   ],
   "cost_weighted": {
    "missed_cost_1x": {
-    "total_cost": 15.0,
-    "cost_per_row": 0.0761,
-    "cost_sensitive_accuracy": 0.9239,
+    "total_cost": 17.0,
+    "cost_per_row": 0.0863,
+    "cost_sensitive_accuracy": 0.9137,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_3x": {
-    "total_cost": 21.0,
-    "cost_per_row": 0.1066,
-    "cost_sensitive_accuracy": 0.9645,
+    "total_cost": 29.0,
+    "cost_per_row": 0.1472,
+    "cost_sensitive_accuracy": 0.9509,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_5x": {
-    "total_cost": 27.0,
-    "cost_per_row": 0.1371,
-    "cost_sensitive_accuracy": 0.9726,
+    "total_cost": 41.0,
+    "cost_per_row": 0.2081,
+    "cost_sensitive_accuracy": 0.9584,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    }
   },
   "bootstrap": {
    "f1": {
-    "point": 0.8193,
-    "ci_low": 0.7187,
-    "ci_high": 0.9001,
+    "point": 0.8046,
+    "ci_low": 0.7059,
+    "ci_high": 0.887,
     "n": 197,
     "n_boot": 1000,
     "seed": 42
    },
    "recall": {
-    "point": 0.9189,
-    "ci_low": 0.8275,
-    "ci_high": 1.0,
+    "point": 0.8537,
+    "ci_low": 0.7352,
+    "ci_high": 0.9512,
     "n": 197,
     "n_boot": 1000,
     "seed": 42
    }
   },
   "false_negatives": [
+   {
+    "gid": "g004",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "none",
+    "message": "I updated my iOS and lost all my pictures from my first two days in Rome. I\u2019m so mad st y\u2019all"
+   },
+   {
+    "gid": "g007",
+    "gold_reason": "private_info",
+    "action": "AUTO_HANDLE",
+    "reason_code": "none",
+    "message": "she said she can listen to the songs unless i\u2019m listening to apple music on my phone . we both get a message that says \u201clooks like you\u2019re listening on another d"
+   },
+   {
+    "gid": "g037",
+    "gold_reason": "vague_hostile",
+    "action": "AUTO_HANDLE",
+    "reason_code": "none",
+    "message": "Hi. please help <url>"
+   },
    {
     "gid": "g121",
     "gold_reason": "repeat_contact",
@@ -677,32 +740,32 @@
  },
  "minus_second_opinion": {
   "n": 197,
-  "gold_positive": 37,
-  "gold_negative": 160,
-  "tp": 36,
-  "fp": 84,
-  "fn": 1,
-  "tn": 76,
-  "precision": 0.3,
-  "recall": 0.973,
-  "f1": 0.4586,
-  "false_escalation_rate": 0.525,
-  "missed_escalation_rate": 0.027,
+  "gold_positive": 41,
+  "gold_negative": 156,
+  "tp": 39,
+  "fp": 81,
+  "fn": 2,
+  "tn": 75,
+  "precision": 0.325,
+  "recall": 0.9512,
+  "f1": 0.4845,
+  "false_escalation_rate": 0.5192,
+  "missed_escalation_rate": 0.0488,
   "confusion_gold_x_pred": [
    [
-    76,
-    84
+    75,
+    81
    ],
    [
-    1,
-    36
+    2,
+    39
    ]
   ],
   "cost_weighted": {
    "missed_cost_1x": {
-    "total_cost": 85.0,
-    "cost_per_row": 0.4315,
-    "cost_sensitive_accuracy": 0.5685,
+    "total_cost": 83.0,
+    "cost_per_row": 0.4213,
+    "cost_sensitive_accuracy": 0.5787,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_3x": {
@@ -712,24 +775,24 @@
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_5x": {
-    "total_cost": 89.0,
-    "cost_per_row": 0.4518,
-    "cost_sensitive_accuracy": 0.9096,
+    "total_cost": 91.0,
+    "cost_per_row": 0.4619,
+    "cost_sensitive_accuracy": 0.9076,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    }
   },
   "bootstrap": {
    "f1": {
-    "point": 0.4586,
-    "ci_low": 0.3529,
-    "ci_high": 0.5445,
+    "point": 0.4845,
+    "ci_low": 0.3797,
+    "ci_high": 0.5732,
     "n": 197,
     "n_boot": 1000,
     "seed": 42
    },
    "recall": {
-    "point": 0.973,
-    "ci_low": 0.9091,
+    "point": 0.9512,
+    "ci_low": 0.8749,
     "ci_high": 1.0,
     "n": 197,
     "n_boot": 1000,
@@ -737,6 +800,13 @@
    }
   },
   "false_negatives": [
+   {
+    "gid": "g037",
+    "gold_reason": "vague_hostile",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "insufficient_context",
+    "message": "Hi. please help <url>"
+   },
    {
     "gid": "g157",
     "gold_reason": "private_info",
@@ -748,32 +818,32 @@
  },
  "minus_resolution_rerank": {
   "n": 197,
-  "gold_positive": 37,
-  "gold_negative": 160,
-  "tp": 35,
-  "fp": 91,
-  "fn": 2,
-  "tn": 69,
-  "precision": 0.2778,
-  "recall": 0.9459,
-  "f1": 0.4294,
-  "false_escalation_rate": 0.5687,
-  "missed_escalation_rate": 0.0541,
+  "gold_positive": 41,
+  "gold_negative": 156,
+  "tp": 38,
+  "fp": 88,
+  "fn": 3,
+  "tn": 68,
+  "precision": 0.3016,
+  "recall": 0.9268,
+  "f1": 0.4551,
+  "false_escalation_rate": 0.5641,
+  "missed_escalation_rate": 0.0732,
   "confusion_gold_x_pred": [
    [
-    69,
-    91
+    68,
+    88
    ],
    [
-    2,
-    35
+    3,
+    38
    ]
   ],
   "cost_weighted": {
    "missed_cost_1x": {
-    "total_cost": 93.0,
-    "cost_per_row": 0.4721,
-    "cost_sensitive_accuracy": 0.5279,
+    "total_cost": 91.0,
+    "cost_per_row": 0.4619,
+    "cost_sensitive_accuracy": 0.5381,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_3x": {
@@ -783,24 +853,24 @@
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_5x": {
-    "total_cost": 101.0,
-    "cost_per_row": 0.5127,
-    "cost_sensitive_accuracy": 0.8975,
+    "total_cost": 103.0,
+    "cost_per_row": 0.5228,
+    "cost_sensitive_accuracy": 0.8954,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    }
   },
   "bootstrap": {
    "f1": {
-    "point": 0.4294,
-    "ci_low": 0.3221,
-    "ci_high": 0.5176,
+    "point": 0.4551,
+    "ci_low": 0.3553,
+    "ci_high": 0.5434,
     "n": 197,
     "n_boot": 1000,
     "seed": 42
    },
    "recall": {
-    "point": 0.9459,
-    "ci_low": 0.8621,
+    "point": 0.9268,
+    "ci_low": 0.8378,
     "ci_high": 1.0,
     "n": 197,
     "n_boot": 1000,
@@ -808,6 +878,13 @@
    }
   },
   "false_negatives": [
+   {
+    "gid": "g037",
+    "gold_reason": "vague_hostile",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "insufficient_context",
+    "message": "Hi. please help <url>"
+   },
    {
     "gid": "g048",
     "gold_reason": "repeat_contact",
@@ -826,32 +903,32 @@
  },
  "minus_risk_llm": {
   "n": 197,
-  "gold_positive": 37,
-  "gold_negative": 160,
-  "tp": 27,
-  "fp": 47,
-  "fn": 10,
-  "tn": 113,
-  "precision": 0.3649,
-  "recall": 0.7297,
-  "f1": 0.4865,
-  "false_escalation_rate": 0.2938,
-  "missed_escalation_rate": 0.2703,
+  "gold_positive": 41,
+  "gold_negative": 156,
+  "tp": 30,
+  "fp": 44,
+  "fn": 11,
+  "tn": 112,
+  "precision": 0.4054,
+  "recall": 0.7317,
+  "f1": 0.5217,
+  "false_escalation_rate": 0.2821,
+  "missed_escalation_rate": 0.2683,
   "confusion_gold_x_pred": [
    [
-    113,
-    47
+    112,
+    44
    ],
    [
-    10,
-    27
+    11,
+    30
    ]
   ],
   "cost_weighted": {
    "missed_cost_1x": {
-    "total_cost": 57.0,
-    "cost_per_row": 0.2893,
-    "cost_sensitive_accuracy": 0.7107,
+    "total_cost": 55.0,
+    "cost_per_row": 0.2792,
+    "cost_sensitive_accuracy": 0.7208,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_3x": {
@@ -861,25 +938,25 @@
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_5x": {
-    "total_cost": 97.0,
-    "cost_per_row": 0.4924,
-    "cost_sensitive_accuracy": 0.9015,
+    "total_cost": 99.0,
+    "cost_per_row": 0.5025,
+    "cost_sensitive_accuracy": 0.8995,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    }
   },
   "bootstrap": {
    "f1": {
-    "point": 0.4865,
-    "ci_low": 0.354,
-    "ci_high": 0.6032,
+    "point": 0.5217,
+    "ci_low": 0.4037,
+    "ci_high": 0.6349,
     "n": 197,
     "n_boot": 1000,
     "seed": 42
    },
    "recall": {
-    "point": 0.7297,
-    "ci_low": 0.5714,
-    "ci_high": 0.871,
+    "point": 0.7317,
+    "ci_low": 0.5896,
+    "ci_high": 0.8571,
     "n": 197,
     "n_boot": 1000,
     "seed": 42
@@ -906,6 +983,13 @@
     "action": "CLARIFICATION_REQUIRED",
     "reason_code": "low_confidence",
     "message": "Command is working. The problem is in the software, not in the hardware. I restarted a few times and the problema remains."
+   },
+   {
+    "gid": "g037",
+    "gold_reason": "vague_hostile",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "insufficient_context",
+    "message": "Hi. please help <url>"
    },
    {
     "gid": "g048",
@@ -960,32 +1044,32 @@
  },
  "minus_retrieval": {
   "n": 197,
-  "gold_positive": 37,
-  "gold_negative": 160,
-  "tp": 35,
-  "fp": 87,
-  "fn": 2,
-  "tn": 73,
-  "precision": 0.2869,
-  "recall": 0.9459,
-  "f1": 0.4403,
-  "false_escalation_rate": 0.5437,
-  "missed_escalation_rate": 0.0541,
+  "gold_positive": 41,
+  "gold_negative": 156,
+  "tp": 38,
+  "fp": 84,
+  "fn": 3,
+  "tn": 72,
+  "precision": 0.3115,
+  "recall": 0.9268,
+  "f1": 0.4663,
+  "false_escalation_rate": 0.5385,
+  "missed_escalation_rate": 0.0732,
   "confusion_gold_x_pred": [
    [
-    73,
-    87
+    72,
+    84
    ],
    [
-    2,
-    35
+    3,
+    38
    ]
   ],
   "cost_weighted": {
    "missed_cost_1x": {
-    "total_cost": 89.0,
-    "cost_per_row": 0.4518,
-    "cost_sensitive_accuracy": 0.5482,
+    "total_cost": 87.0,
+    "cost_per_row": 0.4416,
+    "cost_sensitive_accuracy": 0.5584,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_3x": {
@@ -995,24 +1079,24 @@
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    },
    "missed_cost_5x": {
-    "total_cost": 97.0,
-    "cost_per_row": 0.4924,
-    "cost_sensitive_accuracy": 0.9015,
+    "total_cost": 99.0,
+    "cost_per_row": 0.5025,
+    "cost_sensitive_accuracy": 0.8995,
     "assumption": "false escalation = 1, missed escalation = w; not measured business costs"
    }
   },
   "bootstrap": {
    "f1": {
-    "point": 0.4403,
-    "ci_low": 0.3312,
-    "ci_high": 0.5301,
+    "point": 0.4663,
+    "ci_low": 0.366,
+    "ci_high": 0.5556,
     "n": 197,
     "n_boot": 1000,
     "seed": 42
    },
    "recall": {
-    "point": 0.9459,
-    "ci_low": 0.8621,
+    "point": 0.9268,
+    "ci_low": 0.8378,
     "ci_high": 1.0,
     "n": 197,
     "n_boot": 1000,
@@ -1020,6 +1104,13 @@
    }
   },
   "false_negatives": [
+   {
+    "gid": "g037",
+    "gold_reason": "vague_hostile",
+    "action": "CLARIFICATION_REQUIRED",
+    "reason_code": "insufficient_context",
+    "message": "Hi. please help <url>"
+   },
    {
     "gid": "g048",
     "gold_reason": "repeat_contact",
